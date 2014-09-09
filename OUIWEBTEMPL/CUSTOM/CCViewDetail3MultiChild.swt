@@ -31,34 +31,39 @@
 <!-- ---------- End Tier 3 & Tier 4 navigation ------------->
 
 <table datatable="0" summary="" width="100%" border="0"><tr><td>
-<table datatable="0" summary="" width="100%" border="0">
-<tr valign="top">
-	<td colspan="3">
-		<swe:for-each count=1 iteratorName="currentId" startValue="2">
-		<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Child Applet" property="FormattedHtml" var="Child"/>
-		</swe:for-each>
+    <table datatable="0" summary="" width="100%" border="0">
+        <tr valign="top">
+	        <td colspan="3">
+		        <swe:for-each count=1 iteratorName="currentId" startValue="2">
+		        <swe:applet hintMapType="Applet" id="swe:currentId" hintText="Child Applet" property="FormattedHtml" var="Child"/>
+		        </swe:for-each>
 		
-		<swe:for-each count=3 iteratorName="currentId" startValue="3">
-			<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
-		</swe:for-each>
-	</td>
-</tr>
+		        <swe:for-each count=3 iteratorName="currentId" startValue="3">
+			        <swe:applet hintMapType="Applet" id="swe:currentId" hintText="Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+		        </swe:for-each>
+	        </td>
+        </tr>
+        <!----------------BADLIS - List Applet strech issue fix - added below line----------------->
+    </table>
 
-<tr valign="top">
-	<td>
-		<swe:for-each count=2 iteratorName="currentId" startValue="6">
-			<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Child or Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
-		</swe:for-each>
-	</td>
+    <!----------------BADLIS - List Applet strech issue fix - added below line----------------->
+    <table datatable="0" summary="" border="0" cellspacing="0" cellpadding="0" style="width:100%;table-layout:fixed">
+        <tr valign="top">
+	        <td>
+		        <swe:for-each count=2 iteratorName="currentId" startValue="6">
+			        <swe:applet hintMapType="Applet" id="swe:currentId" hintText="Child or Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+		        </swe:for-each>
+	        </td>
 
-	<td><swe:applet-tree-list var="Grandchild"/>
-		<swe:for-each count=2 iteratorName="currentId" startValue="8">
-			<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Child or Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
-		</swe:for-each>
-	</td>
-</tr>
-</table>
-</td></tr><table datatable="0" summary="">
+	        <td><swe:applet-tree-list var="Grandchild"/>
+		        <swe:for-each count=2 iteratorName="currentId" startValue="8">
+			        <swe:applet hintMapType="Applet" id="swe:currentId" hintText="Child or Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+		        </swe:for-each>
+	        </td>
+        </tr>
+    </table>
+    </td></tr>
+<table datatable="0" summary="">
 
 <swe:include file="CCHTMLFooter.swt"/>
 

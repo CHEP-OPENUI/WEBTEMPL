@@ -53,6 +53,12 @@
 		</tr>
 		</swe:applet>
 	</swe:for-each>
+
+<!----------------BADLIS - List Applet strech issue fix - added below line----------------->
+</table>
+
+<!----------------BADLIS - List Applet strech issue fix - added below line----------------->
+<table datatable="0" summary="" border="0" cellspacing="0" cellpadding="0" style="width:100%;table-layout:fixed">
 	<tr valign="top">
 		<td>
 			<swe:for-each count=2 iteratorName="currentId" startValue="6">

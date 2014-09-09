@@ -31,7 +31,10 @@
 <div class="siebui-sub-applets">
 <table datatable="0" summary="" width="100%"><tr><td>
     <div class="siebui-view-multi-column">
-        <table datatable="0" summary="" width="100%">
+
+      <!--      <table datatable="0" summary="" width="100%">  --> <!--BADLIS - List Applet strech issue fix -->
+        <!----------------BADLIS - List Applet strech issue fix - added below line----------------->
+        <table datatable="0" summary="" style="width:100%;table-layout:fixed"> 
         <tr valign="top">
             <td colspan="3">
                 <swe:for-each count=1 iteratorName="currentId" startValue="2">
@@ -42,6 +45,12 @@
                 </swe:for-each>
             </td>
         </tr>
+
+        <!----------------BADLIS - List Applet strech issue fix - added below line----------------->
+        </table>
+
+        <!----------------BADLIS - List Applet strech issue fix - added below line----------------->
+        <table datatable="0" summary="" style="width:100%;table-layout:fixed"> 
         <tr valign="top">
             <td width="50%">
                 <swe:applet hintMapType="Applet" id="6" hintText="Child or Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
