@@ -1,0 +1,11 @@
+<!-- Template Start: XmlAppletDetail.swt -->
+<swe:form>
+   <swe:error>
+      <swe:this property="FormattedHtml"/>
+   </swe:error>	
+
+   <swe:all-controls>
+      <swe:control property="FormattedHtml"/>
+   </swe:all-controls>
+</swe:form>
+<!-- Template End: XmlAppletDetail.swt -->

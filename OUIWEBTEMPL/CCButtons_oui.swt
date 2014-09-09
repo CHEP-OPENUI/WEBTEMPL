@@ -1,0 +1,39 @@
+<!-- Template Start: CCButtons.swt -->
+<!-- Oliver: code redesign -->
+
+<swe:if condition="Web Engine State Properties, IsLowInteractive">
+  <swe:control id="580"><!-- SI only control, 580 --><span class="siebui-popup-button"><swe:this property="FormattedHtml" hintMapType="Control" hintText="New - shows only in SI"  /></span></swe:control>
+</swe:if>
+
+<swe:control id="131"><!-- CreateRecord, 131 --><span class="siebui-popup-button"><swe:this property="FormattedHtml" hintMapType="Control" hintText="New"/></span></swe:control>
+<swe:control id="132"><!-- EditRecord, 132   --><span class="siebui-popup-button"><swe:this property="FormattedHtml" hintMapType="Control" hintText="Edit" /></span></swe:control>
+<swe:control id="133"><!-- DeleteRecord, 133 --><span class="siebui-popup-button"><swe:this property="FormattedHtml" hintMapType="Control" hintText="Delete"/></span></swe:control>
+
+<swe:control id="136"><!-- Save, 136         --><span class="siebui-popup-button"><swe:this property="FormattedHtml" hintMapType="Control" hintText="Save"  /></span></swe:control>
+<swe:if condition="Web Engine State Properties, IsHighInteractive">
+  <swe:control id="599"><!-- Mvg Save, 599     --><span class="siebui-popup-button"><swe:this property="FormattedHtml" hintMapType="Control" hintText="Save - shows only in HI"  /></span></swe:control>
+</swe:if>
+<swe:control id="134"><!-- Reset, 134        --><span class="siebui-popup-button"><swe:this property="FormattedHtml" hintMapType="Control" hintText="Reset" /></span></swe:control>
+<swe:control id="135"><!-- Cancel, 135       --><span class="siebui-popup-button"><swe:this property="FormattedHtml" hintMapType="Control" hintText="Cancel"/></span></swe:control>
+
+<swe:control id="106"><!-- NewQuery, 106     --><span class="siebui-popup-button"><swe:this property="FormattedHtml" hintMapType="Control" hintText="Query" /></span></swe:control>
+<swe:control id="107"><!-- ExecuteQuery, 107 --><span class="siebui-popup-button"><swe:this property="FormattedHtml" hintMapType="Control" hintText="Go (ExecuteQuery)" /></span></swe:control>
+<swe:control id="108"><!-- CancelQuery, 108  --><span class="siebui-popup-button"><swe:this property="FormattedHtml" hintMapType="Control" hintText="Cancel (Query)" /></span></swe:control>
+<swe:control id="126"><!-- QueryAssistant,126--><span class="siebui-popup-button"><swe:this property="FormattedHtml" hintMapType="Control" hintText="Query Assistant" /></span></swe:control>
+<swe:control id="109"><!-- optional control  --><span class="siebui-popup-button"><swe:this property="FormattedHtml" hintMapType="Control"/></span></swe:control>
+<swe:control id="110"><!-- optional control  --><span class="siebui-popup-button"><swe:this property="FormattedHtml" hintMapType="Control"/></span></swe:control>
+<swe:control id="111"><!-- optional control  --><span class="siebui-popup-button"><swe:this property="FormattedHtml" hintMapType="Control"/></span></swe:control>
+
+<swe:control id="139"><!-- optional control  --><span class="siebui-popup-button"><swe:this property="FormattedHtml" hintMapType="Control"/></span></swe:control>
+<swe:control id="140"><!-- optional control  --><span class="siebui-popup-button"><swe:this property="FormattedHtml" hintMapType="Control"/></span></swe:control>
+<swe:control id="141"><!-- optional control  --><span class="siebui-popup-button"><swe:this property="FormattedHtml" hintMapType="Control"/></span></swe:control>
+<swe:control id="142"><!-- optional control  --><span class="siebui-popup-button"><swe:this property="FormattedHtml" hintMapType="Control"/></span></swe:control>
+<swe:control id="143"><!-- optional control  --><span class="siebui-popup-button"><swe:this property="FormattedHtml" hintMapType="Control"/></span></swe:control>
+					
+<swe:pageitem id="2"> <!-- Back Button       --><span class="siebui-popup-button"><swe:this property="FormattedHtml" hintText="Back" /></span></swe:pageitem>
+
+<swe:control id="125"><!-- Info-Button, 125 -->
+	<span class="siebui-popup-button"><swe:this property="FormattedHtml" hintText="Info-Button" hintMapType="Control"/></span>
+</swe:control>	
+
+<!-- Template End: CCButtons.swt -->

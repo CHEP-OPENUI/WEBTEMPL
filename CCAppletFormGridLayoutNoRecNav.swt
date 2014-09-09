@@ -1,0 +1,26 @@
+<!-- Template Start: CCAppletFormGridLayoutNoRecNav.swt -->
+
+<swe:include file="CCApplet_NamedSpacer.swt"/>	
+
+<swe:form>
+<div class="swe:this.SelectStyle">	
+<table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" class="AppletBack"><tr><td class="AppletHIFormBorder">
+	<swe:include file="CCTitle_Named.swt"/>
+		<swe:include file="CCFormButtonsTopNoRecNav.swt"/>
+
+		<swe:error type="Popup">
+			<table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="0" cellspacing="5" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/></td></tr></table>
+		</swe:error>
+
+		<swe:form-applet-layout>
+		</swe:form-applet-layout>
+	</span>
+</td></tr></table>
+</div>
+</swe:form>
+
+<!-- Template End: CCAppletFormGridLayoutNoRecNav.swt -->
+
+
+
+	

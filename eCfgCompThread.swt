@@ -1,0 +1,28 @@
+<!-- Template Start: eCfgCompThread.swt -->
+
+<!-- qa automation -->
+<div  id="cxThread" class="cxThread">
+
+<SCRIPT>
+    var iNumObjects  = 0;
+</SCRIPT>
+
+<swe:form>
+
+<swe:for-each id="250" CfgLoopType="Thread" startValue="2500" count="Dynamic" iteratorName="250Id" >
+   <swe:control id="swe:250Id" CfgFieldName="CxObjName" CfgUIControl="SetTopObj">    
+      <SCRIPT>
+         iNumObjects ++;
+         if ( 1 != iNumObjects )
+            document.write ( ">>" );
+      </SCRIPT>
+      <swe:this property="FormattedHtml"/>
+   </swe:control>
+</swe:for-each>
+
+</swe:form>
+
+</div>
+
+<!-- Template Start: eCfgCompThread.swt -->
+

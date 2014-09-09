@@ -1,0 +1,12 @@
+
+<!-- Template Start: FINSeBankingGreetingFormPlain.swt -->
+
+<swe:form>
+
+<table bgcolor="#ffffff" valign="top" width="100%" cellpadding="2" cellspacing="0" border="0">
+<swe:include file="FINSeBankingGreetingFormBody.swt"/>
+</table>
+
+</swe:form>
+<p></p>
+<!-- Template End: FINSeBankingGreetingFormPlain.swt -->

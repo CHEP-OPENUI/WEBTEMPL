@@ -1,0 +1,129 @@
+<!-- Start of CCAppletCalendarMonthly.swt-->
+
+<swe:include-script file="browser_print.js"/>
+	
+<swe:include file="CCApplet_NamedSpacer.swt"/>	
+
+<div class="swe:this.SelectStyle">
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center" class="AppletBack">
+	<tr valign="top">	
+	<td>
+	<swe:include file="CCTitle_Named.swt"/>
+				
+	<!--Button row-->	
+	<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center" >		
+		<tr class="AppletBack" align="left">
+			<td><img src="images/spacer.gif" height="22" width="5" alt=""></td>			
+			<td nowrap><!-- New Appt --><swe:control id="133" property="FormattedHtml"/></td>
+			<td nowrap><span class="minibutton"><!-- Print --><swe:control id="145" property="FormattedHtml"/></td>			
+			<td nowrap><span class="printHide"><img src="images/btn_div.gif" alt=""></span></td>
+			<td nowrap><!-- Previous --><swe:control id="131" property="FormattedHtml"/></td>
+			<td>&nbsp;</td>
+			<td nowrap><!-- Next  --><swe:control id="132" property="FormattedHtml"/></td>
+			<td>&nbsp;</td>
+			<td nowrap class="AppletTitle">
+			<!-- Date Range--><swe:calendar property="DateRange"></td>			
+			<td align="right" width="100%">&nbsp;</td>
+            <td nowrap>        					
+				<swe:form name="CalendarGotoDateForm">
+					<swe:printTable>
+				    <swe:printTr>
+	 	   			<table datatable="0" summary="" border=0 cellspacing=0 cellpadding=0><tr>
+	 	   				<td nowrap><!-- Owner Label --><b><swe:control id="101" property="FormattedHtml" hintText="Label"/></b></td>	
+						<td>&nbsp;</td>
+						<td nowrap><!-- Owner field --><swe:control id="102" property="FormattedHtml" hintText="Field" hintMapType="Control"/></td>
+						<td>&nbsp;&nbsp;&nbsp;</td>
+						<td nowrap><!-- Owner field2 --><b><swe:control id="997" property="FormattedHtml" hintText="TextBox"/></b></td>	
+						<td nowrap><!-- Owner selector --><swe:control id="996" property="FormattedHtml" hintText="Button" hintMapType="Control"/></td>
+						<td>&nbsp;&nbsp;&nbsp;</td>  
+						<td nowrap><!-- Time Zone Label --><b><swe:control id="107" property="FormattedHtml" hintText="Label"/></b></td>
+						<td>&nbsp;</td>
+						<td nowrap> <!-- Time Zone field --><swe:control id="108" property="FormattedHtml" hintText="Field" hintMapType="Control"/></td>
+						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td nowrap><!-- Date Label --><b><swe:control id="103" property="FormattedHtml"/></b></td>	
+						<td>&nbsp;</td>
+						<td nowrap><!-- Date Field (Month) --><swe:control id="105" property="FormattedHtml"/></td>
+						<td>&nbsp;</td>
+						<td nowrap><!-- Date Field (Day) --><swe:control id="104" property="FormattedHtml"/></td>
+						<td>&nbsp;</td>
+						<td nowrap><!-- Date Field (Year) --><swe:control id="106" property="FormattedHtml"/></td>
+						<td>&nbsp;&nbsp;</td>
+						<td nowrap><!-- Go --><swe:control id="130" property="FormattedHtml"/></td>
+		                <td>&nbsp;</td>		
+						<td nowrap><!-- Today --><swe:control id="998" property="FormattedHtml"/></td>		
+						<td>&nbsp;&nbsp;</td>
+				    </tr></table>              
+				    </swe:printTr>
+				    </swe:printTable>
+				</swe:form>
+			</td>
+		</tr>	
+	</table>	
+	
+	<!--Body-->
+	<table datatable="0" summary="" bgcolor="#cccccc" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" class="AppletBack"><tr><td class="AppletHIFormBorder">
+	<table datatable="0" summary="" valign="top" width="100%" cellpadding="3" cellspacing="1" border="0">
+		
+		<!-- Calendar Columns -->
+		<tr class="Header">
+		   	<td class="Header" width="17%" height="5%"><!-- Monday Label --><swe:control id="301" property="FormattedHtml"/></td>
+	
+		    <td class="Header" width="17%" height="5%"><!-- Tuesday Label --><swe:control id="302" property="FormattedHtml"/></td>
+	
+		    <td class="Header" width="17%" height="5%"><!-- Wednesday Label --><swe:control id="303" property="FormattedHtml"/></td>
+	
+		    <td class="Header" width="17%" height="5%"><!-- Thursday Label --><swe:control id="304" property="FormattedHtml"/></td>
+	
+		    <td class="Header" width="17%" height="5%"><!-- Friday Label --><swe:control id="305" property="FormattedHtml"/></td>
+	
+			<td class="Header" width="17%" height="5%"><!-- Sat/Sun Label --><swe:control id="306" property="FormattedHtml"/></td>
+		</tr>
+		<!-- End of Calendar Columns -->
+
+		<swe:calendarIntervalLoop>
+		<swe:calendarInterval>
+
+		<!-- Row1  -->
+		<tr>
+			<!-- Cell Data 1 - Monday -->
+			<swe:include file="CCCalendarMonthly_weekday.swt" />
+			<!-- End of Cell Data Monday -->			
+
+			<!-- Cell Data 2 - Tuesday -->
+			<swe:include file="CCCalendarMonthly_weekday.swt" />
+   			<!-- End of Cell Data - Tuesday -->
+
+			<!-- Cell Data 3 - Wednesday -->
+			<swe:include file="CCCalendarMonthly_weekday.swt" />
+			<!-- End of Cell Data - Wednesday -->
+			
+			<!-- Cell Data 4 - Thursday -->
+			<swe:include file="CCCalendarMonthly_weekday.swt" />			
+			<!-- End of Cell Data - Thursday -->
+			
+			<!-- Cell Data 5 - Friday -->
+			<swe:include file="CCCalendarMonthly_weekday.swt" />			
+			<!-- End of Cell Data - Friday -->			
+
+			<!-- Weekend Cell - Sat/Sun -->
+			<swe:include file="CCCalendarMonthly_weekend.swt" />	
+			<!-- End of Weekend Cell -->	
+					
+		</tr>
+		<!-- End of Row -->
+
+		</swe:calendarInterval>
+		</swe:calendarIntervalLoop>				
+		
+	</table>	
+	</td></tr></table>
+	
+	<swe:include file="CCBottomApplet.swt"/>
+		
+	
+	</span></td></tr></table>
+</swe:calendar>
+</div>
+	
+<!-- End of CCAppletCalendarMonthly.swt-->
+

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+<!-- Splash Page -->
+<wml> 
+
+<card id="splash"> 
+
+<swe:form>
+
+<onevent type="ontimer">
+
+
+<swe:pageitem id="1" property="FormattedHtml" />
+
+
+</onevent>
+
+<swe:pageitem id="2" property="DisplayName"/>
+
+<p>
+<!--swe:pageitem id="1" property="FormattedHtml" /-->
+<swe:pageitem id="3" property="DisplayName"/>
+</p>
+
+</swe:form>
+
+</card>
+</wml> 

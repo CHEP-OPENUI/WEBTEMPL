@@ -1,0 +1,23 @@
+<!-- Template Start: CCFrameContent_VD.swt -->
+<!--Content frame shows dashboard frame above view frame -->
+<swe:if condition="Web Engine State Properties, IsHighInteractive">
+<swe:frameset htmlAttr="rows='55,*' border='0' frameborder='No'">
+	<swe:frame type="AltView" name="Dashboard" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+		<swe:view name="Persistent Customer Dashboard View" id="Dashboard" />
+	</swe:frame>	 
+	<swe:frame type="View" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Yes'">
+		<swe:current-view/>
+	</swe:frame>	 
+</swe:frameset>
+</swe:if>
+<swe:if condition="Web Engine State Properties, IsLowInteractive">
+<swe:frameset htmlAttr="rows='82,*' border='0' frameborder='No'">
+	<swe:frame type="AltView" name="Dashboard" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='AUTO'">
+		<swe:view name="Persistent Customer Dashboard View" id="Dashboard" />
+	</swe:frame>	 
+	<swe:frame type="View" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Yes'">
+		<swe:current-view/>
+	</swe:frame>	 
+</swe:frameset>
+</swe:if>
+<!-- Template Start: CCFrameContent_VD.swt -->

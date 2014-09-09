@@ -1,0 +1,36 @@
+<!--  Template Start: dCCAppletListCategorizedTOC.swt -->
+<swe:control id="1" property="FormattedHtml" hintText="Anchor"/>
+<swe:include file="CCApplet_Spacer.swt"/>
+
+<table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td width="145"><hr size="1" width="145" class="TOCRule"></td>
+		<td nowrap class="TOCTitle"><swe:control id="90" property="FormattedHtml" hintText="TOC Title"/></td>
+		<td width="99%"><hr size=1 class="TOCRule"></td>
+	</tr>
+</table>
+
+<span>
+	<swe:form>
+	
+			<swe:for-each-row count="10">
+				<table datatable="0" summary="" cellpadding="0" cellspacing="0" border="0">
+					<tr valign="top">
+					    <td width="1"><swe:control id="501" property="FormattedHtml" hintText="Image" hintMapType="ListItem"/>&nbsp;</td>
+						<td><b><swe:control id="502" property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></b></td>
+					</tr>
+				</table>
+
+				<swe:for-each-child>
+					<swe:child-applet/>
+				</swe:for-each-child>
+				
+			</swe:for-each-row>					  
+
+	</swe:form>
+</span>
+
+<table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" border="0">
+	 <tr><td><hr size=1 class="TOCRule"></td></tr>
+</table>
+<!--  Template End: dCCAppletListCategorizedTOC.swt -->

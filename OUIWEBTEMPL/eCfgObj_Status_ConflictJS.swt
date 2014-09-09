@@ -1,0 +1,23 @@
+<!-- Template Start: eCfgObj_Status_ConflictJS.swt -->
+<!-- Oliver: [code redesign] -->
+
+<div class="siebui-applet cxStatusTempl">
+
+   <div class="siebui-applet-title-row">
+      <swe:control id="Status" CfgUIControl="lblStatus" CfgHtmlType="CfgLabel" property="DisplayName" />
+   </div>
+
+   <div class="siebui-applet-content">
+      <swe:control id="swe:101Id+220" DisplayMode="DontEncodeData" CfgHtmlType="CfgError" CfgJSShow="showConflict" CfgJSUpdateConflict="showConflict"/>
+
+      <div class="siebui-applet-action siebui-align-right">
+         <span class="siebui-applet-button" id="RemoveFailedRequests"><swe:control id="RemoveFailedRequests" CfgUIControl="UndoAllFailedRequest" CfgHtmlType="MiniButton" InvokeMethod="RemoveFailedRequests" /></span>
+         <span class="siebui-applet-button" id="UndoLast"><swe:control id="UndoLast" CfgUIControl="UndoLastRequest" CfgHtmlType="MiniButton" InvokeMethod="UndoLastRequest" /></span>
+         <span class="siebui-applet-button" id="GetMoreExplButton"><swe:control id="swe:IncId+555" CfgUIControl="GetMoreExplButton" CfgHtmlType="MiniButton" InvokeMethod="GetDetailExpl"/></span>
+         <span class="siebui-applet-button" id="ClearTheStatusUndo"><swe:control id="ClearTheStatusUndo" CfgUIControl="ClearTheStatusUndo" CfgHtmlType="MiniButton" InvokeMethod="ClearTheStatus"/></span>
+         <span class="siebui-applet-button" id="ClearTheStatus"><swe:control id="ClearTheStatus" CfgUIControl="ClearTheStatus" CfgHtmlType="MiniButton" InvokeMethod="ClearTheStatus"/></span>
+      </div>
+   </div>
+
+</div>
+<!-- Template End: eCfgObj_Status_ConflictJS.swt -->

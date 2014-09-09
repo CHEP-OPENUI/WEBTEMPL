@@ -1,0 +1,255 @@
+<!--  Template Start: CCAppletCalendarGanttCHartTop.swt -->
+
+<!-- Title Area (Row 1) -->
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="2" border="0" align="center">
+<tr class="AppletButtons">
+	<!-- Title Area -->
+	<swe:if-var name="Parent">			     
+		<swe:if condition="Web Engine State Properties, IsHighInteractive">		
+		<swe:switch>
+		<swe:case condition="Web Engine State Properties, IsViewPosition, 'Position:2'">
+			<td><img src="images/spacer.gif" width="1" height="1" alt=""></td>
+			<td class="AppletTitle" nowrap>
+				<swe:nav-control type="Category View" style="Select"/>
+			</td>
+		</swe:case>
+		<swe:default>
+			<td class="AppletTitle" nowrap width="100%">
+				&nbsp;
+				<swe:this property="Title"/>
+			</td>
+		</swe:default>
+		</swe:switch>
+		</swe:if>
+
+		<swe:if condition="Web Engine State Properties, IsLowInteractive">		
+			<td class="AppletTitle" nowrap width="100%">
+				&nbsp;
+				<swe:this property="Title"/>
+			</td>
+		</swe:if>
+	</swe:if-var>
+
+	<swe:if-var name="ParentWithPointer">			     
+		<swe:if condition="Web Engine State Properties, IsHighInteractive">		
+		<swe:switch>
+		<swe:case condition="Web Engine State Properties, IsViewPosition, 'Position:2'">
+			<td><img src="images/spacer.gif" width="1" height="1" alt=""></td>
+			<td class="AppletTitle" nowrap>
+				<swe:nav-control type="Category View" style="Select"/>
+			</td>
+		</swe:case>
+		<swe:default>
+			<td class="AppletTitle" nowrap width="100%">
+				&nbsp;
+				<swe:this property="Title"/>
+			</td>
+		</swe:default>
+		</swe:switch>
+		</swe:if>
+
+		<swe:if condition="Web Engine State Properties, IsLowInteractive">		
+			<td class="AppletTitle" nowrap width="100%">
+				&nbsp;
+				<swe:this property="Title"/>
+			</td>
+		</swe:if>
+	</swe:if-var>
+
+	<swe:if-var name="Child">
+		<swe:switch>
+		<swe:case condition="Web Engine State Properties, IsViewPosition, 'Position:1'">
+			<td class="AppletTitle" nowrap width="100%">
+				&nbsp;
+				<swe:this property="Title"/>
+			</td>
+		</swe:case>
+		<swe:case condition="Web Engine State Properties, IsViewPosition, 'Position:2'">
+			<td class="AppletTitle" nowrap width="100%">
+				&nbsp;
+				<swe:this property="Title"/>
+			</td>
+		</swe:case>
+		<swe:default>
+			<td class="AppletTitle" nowrap width="100%">
+				&nbsp;
+			</td>
+		</swe:default>
+		</swe:switch>
+	</swe:if-var>
+
+	<swe:if-var name="ChildWithPointer">
+		<swe:switch>
+		<swe:case condition="Web Engine State Properties, IsViewPosition, 'Position:1'">
+			<td class="AppletTitle" nowrap width="100%">
+				&nbsp;
+				<swe:this property="Title"/>
+			</td>
+		</swe:case>
+		<swe:case condition="Web Engine State Properties, IsViewPosition, 'Position:2'">
+			<td class="AppletTitle" nowrap width="100%">
+				&nbsp;
+				<swe:this property="Title"/>
+			</td>
+		</swe:case>
+		<swe:default>
+			<td class="AppletTitle" nowrap width="100%">
+				&nbsp;
+			</td>
+		</swe:default>
+		</swe:switch>
+	</swe:if-var>
+
+	<swe:if-var name="Grandchild">
+		<td class="AppletTitle" nowrap width="100%">
+			&nbsp;
+			<swe:this property="Title"/>
+		</td>
+	</swe:if-var>
+
+	<swe:if-var name="AppletFilter-No">
+		<td class="AppletTitle" nowrap width="100%">
+			&nbsp;
+			<swe:this property="Title"/>
+		</td>
+	</swe:if-var>
+
+	<!-- Legend Area -->
+	<td nowrap valign="absmiddle" class="legend">
+		<swe:control id="1500" hintText="Required Legend" hintMapType="Control">
+			<swe:this property="DisplayName"/>
+			<img src="images/icon_req.gif">
+		</swe:control>
+	</td>
+	
+	<!-- Indicator and Navigation Area -->
+
+
+	<!-- Graphical Indicator, 192 -->
+	<swe:control id="192">
+		<td nowrap>
+			<swe:this property="DisplayName" hintText="Label"/>:
+			<swe:this property="FormattedHtml" hintMapType="Control" hintText="Graphical Indicator"/>
+		</td>
+	</swe:control>
+
+	<!-- Graphical Indicator, 194 -->
+	<swe:control id="194">
+		<td nowrap>
+			<swe:this property="DisplayName" hintText="Label"/>:
+			<swe:this property="FormattedHtml" hintMapType="Control" hintText="Graphical Indicator"/>
+		</td>
+	</swe:control>
+
+	<!-- Corner -->
+	<td valign="top" align="right">
+		<swe:if-var name="Parent">			     
+		</swe:if-var>	
+
+		<swe:if-var name="ParentWithPointer">			     
+		</swe:if-var>	
+
+		<swe:if-var name="Child">			     
+		</swe:if-var>	
+
+		<swe:if-var name="ChildWithPointer">			     
+		</swe:if-var>	
+
+		<swe:if-var name="Grandchild">			     
+		</swe:if-var>	
+	</td>				
+</tr>
+</table>
+
+<!-- Applet Buttons Area (Row 2) -->
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="2" border="0" align="center">
+	<tr class="AppletBack" align="left">				
+		<!-- Other Buttons Area -->			
+		<td><img src="images/spacer.gif" width="4" height="1" alt=""></td>
+		<swe:include file="CCButtons.swt"/>											
+		
+		<!-- Toggle Bar Area -->			
+		<td>
+			<swe:include file="CCTogglebar_drop.swt"/>
+		</td>			
+
+		<!-- Query Message Area -->			
+		<td align="left" width="100%" nowrap>
+			&nbsp;<b><swe:message type="Query Message" /></b>
+		</td>
+	</tr>
+</table>		
+
+<!-- Title Area (Row 3) -->
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="2" border="0" align="center">
+   <tr class="AppletBack" align="left">
+      <!-- Other Buttons Area -->			
+		<td><img src="images/spacer.gif" width="4" height="1" alt=""></td>
+       
+      <swe:control id="231"><!-- optional control --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+      <swe:control id="232"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+      <swe:control id="233"><!-- optional control --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+
+      <swe:control id="236"><!-- optional control        --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+      <swe:if condition="Web Engine State Properties, IsHighInteractive">
+      <swe:control id="299"><!-- optional control     --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+      </swe:if>
+      <swe:control id="234"><!-- optional control       --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control" /></td></swe:control>
+      <swe:control id="235"><!-- optional control      --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+
+      <swe:control id="206"><!-- optional control     --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+      <swe:control id="207"><!-- optional control --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control" /></td></swe:control>
+      <swe:control id="208"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control" /></td></swe:control>
+      <swe:control id="226"><!-- optional control --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+      <swe:control id="209"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+      <swe:control id="210"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+      <swe:control id="211"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+
+      <swe:control id="239"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+      <swe:control id="240"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+      <swe:control id="241"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+      <swe:control id="242"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+      <swe:control id="243"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+         				
+      <swe:pageitem id="3"> <!-- Back Button       --><td nowrap><swe:this property="FormattedHtml" hintText="Back" /></td></swe:pageitem>
+
+      <swe:control id="225">
+	      <td valign="middle"><img src="images/btn_div_gray.gif" height="13" align="middle" alt=""></td>
+	      <!-- Info-Button, 125 -->
+	      <td valign="middle" nowrap>
+		      <swe:this property="FormattedHtml" hintText="Info-Button" hintMapType="Control"/>
+	      </td><td>&nbsp;</td>
+      </swe:control>	
+        
+      <!-- Corner -->
+	   <td valign="top" align="right">
+		   <swe:if-var name="Parent">			     
+		   </swe:if-var>	
+
+		   <swe:if-var name="ParentWithPointer">			     
+		   </swe:if-var>	
+
+		   <swe:if-var name="Child">			     
+		   </swe:if-var>	
+
+		   <swe:if-var name="ChildWithPointer">			     
+		   </swe:if-var>	
+
+		   <swe:if-var name="Grandchild">			     
+		   </swe:if-var>	
+	   </td>	
+	   <td width="70%"></td>	     
+   </tr>
+</table>
+
+<!-- Separator Area -->
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="1" align="center">
+	<tr class="AppletBack">
+		<td class="AppletBack"><img src="images/spacer.gif" height="1" width="1" alt=""></td>
+		<td class="AppletBlank" width="100%"><img src="images/spacer.gif" height="1" width="1" alt=""></td>
+		<td class="AppletBack"><img src="images/spacer.gif" height="1" width="1" alt=""></td>
+	</tr>
+</table>		
+
+
+<!--  Template End: CCFormButtonsTop.swt -->	

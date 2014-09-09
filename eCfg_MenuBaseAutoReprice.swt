@@ -1,0 +1,485 @@
+<!-- Template Start: eCfg_MenuBaseAutoReprice.swt -->
+
+<!-- div for qa automation -->
+<div  id="cxMenu" class="cxBaseTheme">
+
+<script>
+
+function CFGSetCurrent (iCurrent)
+{
+    window.top.currentVisible = iCurrent;
+}
+
+function CFGGetCurrent ()
+{
+    return window.top.currentVisible;
+}
+
+function CFGSetProduct (sCurrent)
+{
+    window.top.currentProduct = sCurrent;
+}
+
+function CFGGetProduct ()
+{
+    return window.top.currentProduct;
+}
+
+function CFGSetSummaryFlag (showSummary)
+{
+    window.top.showSummary = showSummary;
+}
+
+function CFGGetSummaryFlag ()
+{
+    return window.top.showSummary;
+}
+
+</script>
+
+<script>
+
+    var currentRel = 1;
+    var visibleRelArray = new Array();
+    var visibleArrayIndex = 0;
+    var relationshipMap = new Array();
+    var xPos = 0;
+    var yPos = 0;
+    var iHeight = 0;
+    var iWidth = 0;
+    var positionInit = false;
+    var summaryVisible = false;
+    var bShowSummary = false;
+    var bError = false;
+    var currentVisible = 0;
+    var sGotoTopNode = null;
+    var sGotoSummary = null;
+    var currentProduct = '<swe:control id="swe:CurrentRoot" CfgFieldName="CxObjName" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" />';
+    
+    if (top._sweclient != null)
+    {
+        var storedProduct = CFGGetProduct ();
+        
+        if (storedProduct == currentProduct)
+        {   
+            //stored product is equal to current product
+            //get stored visible relationship
+            currentVisible = CFGGetCurrent ();
+        }
+        else
+        {    //store the current product
+            CFGSetProduct (currentProduct);
+        }
+    }
+    
+    function SetCurrent (iCurrent, bTopFrameOnly)
+    {
+        if (!bTopFrameOnly)
+        {
+            currentVisible = iCurrent;
+        }
+        
+        if (top._sweclient != null)
+        {
+            CFGSetCurrent (iCurrent);
+        }
+    }
+    
+    function ChooseGroup (sHref, iCurrent)
+    {
+      
+        SetCurrent (iCurrent, true);
+        
+        window.location.replace (sHref);
+    }
+    
+    //methods for showing and hiding content
+    function SetVars ()
+    {
+        var objTopLeft = document.getElementById("Rel_0");
+        var objBotRight = document.getElementById("POSITION_REF");
+                
+        if( objTopLeft )
+        {
+            xPos = objTopLeft.offsetLeft;
+            yPos = objTopLeft.offsetTop;
+        }
+        else
+        {
+            xPos = 0;
+            yPos = 0;
+        }
+       
+        if( objBotRight )
+        {
+            iHeight = objBotRight.offsetTop - objTopLeft.offsetTop;
+            iWidth = objBotRight.offsetLeft - objTopLeft.offsetLeft;
+        }
+        else
+        {
+            iHeight = 0;
+            iWidth = 0;
+        }
+    }
+    
+    function ToggleContent (index)
+    {
+        if (positionInit == false)
+        {
+            SetVars();
+            positionInit = true;
+        }
+
+        if (currentVisible != index)
+        {
+            var objOld = document.getElementById("Rel_" + currentVisible);
+            if( objOld )
+            {
+                HideContent (objOld);
+            }
+        }
+        if( currentVisible != 0 && index != 0 )
+        {
+            var objMenu = document.getElementById("Rel_0");
+            if (objMenu)
+            {
+               HideContent (objMenu);
+            }
+        }
+        
+        var objNew = document.getElementById("Rel_" + index);
+        if( objNew )
+        {
+            ShowContent (objNew);
+            SetCurrent (index, false);
+        }
+    }
+    
+    function ShowSummary()
+    {
+        if (bError == false)
+        {
+            if (top._sweclient != null)
+            {
+                  CFGSetSummaryFlag (true);
+            }
+
+            if( sGotoSummary != null )
+            {
+                 CfgExecuteLink( sGotoSummary );
+		     return;
+            }
+
+            if (summaryLink == "")
+            {    
+                //summary is selected
+	        if (summaryVisible == false)
+                {
+                    if (positionInit == false)
+                    {
+                        SetVars ();
+                        positionInit = true;
+                    }
+                        
+                    var objSummary = document.getElementById("SUMMARY");
+                    var objOld = document.getElementById("Rel_" + currentVisible);
+
+                    if (objOld)
+                    {
+                        HideContent (objOld);
+                    }
+
+                    var objMenu = document.getElementById("Rel_0");
+
+                    if (objMenu)
+                    {
+                        HideContent (objMenu);
+                    }
+					
+                    SetCurrent (0, false);
+                    
+                    objSummary.style.left = xPos;
+                    objSummary.style.top = yPos;
+                    objSummary.style.width = iWidth;
+                    objSummary.style.height = iHeight;
+                    objSummary.style.visibility = "visible";
+                    
+                    summaryVisible = true;
+                }
+            }
+            else
+            {   
+                //select the summary
+                window.location.replace (summaryLink);
+            }
+        }
+    }
+    
+    function ShowMenu ()
+    {
+        if (bError == false)
+        {
+            if (top._sweclient != null)
+            {
+                  CFGSetSummaryFlag (false);
+            }
+
+            if( sGotoTopNode != null )
+            {
+               SetCurrent (0, false);
+               CfgExecuteLink( sGotoTopNode );
+		   
+            }
+
+            var obj;
+            
+            if (positionInit == false)
+            {
+                SetVars ();
+                positionInit = true;
+            }
+            //the map is on the bottom layer so clear everything above it
+            //if the summary is on top, remove it
+            if (summaryVisible == true)
+            {
+                obj = document.getElementById ("SUMMARY");
+                summaryVisible = false;
+            }
+            else
+            {
+                obj = document.getElementById ("Rel_" + currentVisible);
+            }
+            if( obj )
+            {
+                HideContent (obj);
+            }
+
+            SetCurrent (0, false);
+            ToggleContent (currentVisible);
+        }
+    }
+    
+    function ShowContent (obj)
+    {
+        obj.style.left = xPos;
+        obj.style.top = yPos;
+        obj.style.width = iWidth;
+        obj.style.height = iHeight;
+        obj.style.visibility = "visible";
+    }
+
+   
+    function HideContent (obj)
+    {
+        obj.style.left = -100000;
+        obj.style.top = -100000;
+        obj.style.visibility = "hidden";
+    }
+    
+    function HiLite (obj, bMouseOver)
+    {
+        if (bMouseOver == true)
+        {    //rollover
+            obj.style.color = "#333399";
+        }
+        else
+        {    //rollout
+            obj.style.color = "#6666cc";
+        }
+    }
+    
+     function onKeyPress_filterKeys (event)
+     {
+
+         var ie = (navigator.appName.indexOf ("Microsoft") > -1) && ((parseInt (navigator.appVersion) > 3) ? true : false );
+         
+         var keyCode = ie ? event.keyCode: event.which ;
+
+         if( keyCode == 13 )
+         {
+            return false;
+         }
+         else
+         {
+            return true;
+         }
+     }
+     
+     
+     function CfgDoneConfig ( )
+     {
+         // added for FR#12-18F54SF
+         // Just refresh if there is any text attribute dirty
+         if (bAttrDirty){ 
+            SWEDoRefresh(sRefreshUI);
+            return;
+         }              
+         var sWarning = CfgGetLocalString ("IDS_CXP_UI_INCOMPLETE_CONFIG");
+
+         if( sInComplete == "Y" )
+         {
+            if( confirm (sWarning))
+            {
+               SetCurrent (0, false);
+               CfgExecuteLink (sDone);
+            }
+         }
+         else
+         {
+               SetCurrent (0, false);
+               CfgExecuteLink (sDone);
+         }
+     }
+
+     // addeded the following function for FR#12-18F54SF
+     // this function sets dirty flag if onchange event is called for a text attribute
+     function OnChangeTextAttribute(csFormObj, csObj, fieldName, rowId, csFrame)  
+     {
+          bAttrDirty = true; // set the attribute dirty flag
+
+          SWESubmitForm(csFormObj, csObj, fieldName, rowId, csFrame);
+     }
+
+     function CfgCancelConfig (action)
+     {
+         SetCurrent (0, false);
+         CfgExecuteLink (sCancel);
+     }
+
+     function CfgExecuteLink (action)
+     {
+         window.location.replace (action);
+     }
+
+     function CfgGetLocalString (str)
+     {
+        //acquire handle to translatable string function
+	var appObj = (window.opener != null) ? window.opener : this;
+		
+	//HI mode acccessor
+	if (SWEIsHighInteract )	
+	{			
+            var sString = top.App ().GetLocalString (str);
+        }
+        else
+        {
+            var sString = appObj._SWEgetMessage (str);
+        }
+
+        return sString;
+     }
+
+</script>
+
+<swe:control id="swe:CFGPARAMETER" AutoReprice="Y" property="FormattedHtml" />
+
+<span class="AppletStyle5">
+<table datatable="0" summary="" width="100%" cellpadding="2" cellspacing="5" border="0" bgcolor="white" height="90%">
+<!-- Header row -->
+<tr valign="top">
+    <td width="66%" valign="top">
+        <table datatable="0" summary="" cellpadding="0" cellspacing="4" border="0" width="100%">
+        <tr>
+            <td valign="top" colspan="2">
+                <!--Product Title-->
+                <span class="eCfgProductTitle">
+                <span id="CxObjName" class="cxLabel">
+                <swe:control id="swe:CurrentRoot" CfgFieldName="CxObjName" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" />
+                </span>
+                <span id="RequireMoreChild" class="cxImg">
+                   <swe:control id="swe:RequiredFlag" CfgFieldName="RequireMoreChild" CfgUIControl="RequireMoreChild" property="FormattedHtml" />
+                </span>
+                </span>
+                <br>
+                <!--Product Threadbar-->
+                <span class="threadbar"><swe:include id="swe:Thread" CfgHtmlType="eCfg_MenuCompThread.swt" CfgNodeType="Thread" /></span>
+            </td>
+        </tr>
+        <tr>
+            <td valign="middle">
+                <b><swe:control id="TotalPrice" CfgUIControl="lblTotalPrice" property="DisplayName" /><swe:control id="StringColon" CfgUIControl="lblColon" property="DisplayName" /></b>
+                &nbsp;&nbsp;
+                <span id="Rollup Amount" class="cxLabel">
+                <swe:control id="CurrentPrice"  CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" CfgFieldName="$.Rollup Item Price" DataType="DTYPE_CURRENCY" /></span>
+                </span>
+            </td valign="middle">
+            <td align="right">
+                <table datatable="0" summary="">
+                  <tr>
+                     <td>
+                        <!-- 
+				<swe:control id="swe:ShowMenu" CfgUIControl="sShowMenu" property="FormattedHtml" /> 
+				-->
+				<SCRIPT>
+		  		var menuButtonName;
+
+		  		menuButtonName = "<swe:control id="swe:ShowMenu" CfgUIControl="sShowMenu" property="DisplayName" />";
+
+				document.write ('<input type="button"');
+				document.write (' value=');
+				document.write (menuButtonName);
+				document.write (' onClick="ShowMenu();" style="height:20;">');
+				</SCRIPT>
+                     </td>
+                     <td>
+				<!--
+                        <swe:control id="swe:ShowSummary" CfgUIControl="sShowSummary" property="FormattedHtml" />
+				-->
+				<SCRIPT>
+		  		var summaryButtonName;
+
+		  		summaryButtonName = "<swe:control id="swe:ShowSummary" CfgUIControl="sShowSummary" property="DisplayName" />";
+
+				document.write ('<input type="button"');
+				document.write (' value=');
+				document.write (summaryButtonName);
+				document.write (' onClick="ShowSummary();" style="height:20;">');
+				</SCRIPT>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+        </tr>
+        </table>
+    </td>
+    <td width="33%" valign="bottom" align="center">
+        <!-- Control Buttons -->
+        <swe:include id="TopLevelButtons" CfgHtmlType="eCfg_MenuTopLevelButtons.swt" CfgNodeType="TopLevelButtons" />
+    </td>
+</tr>
+<tr>
+    <!-- Main Content -->
+    <td valign="top" height="95%">
+        <swe:include id="swe:Status" CfgNodeType="ErrorStatus" />
+        <swe:include id="swe:Basic" />
+    </td>
+    <!-- Message box -->
+    <td>
+        <swe:include file="eCfg_MenuObj_GlobalSignal.swt" />
+    </td>
+</tr>
+</table>
+</span>
+<script>
+
+    var bShow = false;
+  
+    if (top._sweclient != null)
+    {
+         bShow = CFGGetSummaryFlag ();
+    }
+
+    if (bShowSummary == true && bShow == true )
+    {
+        ShowSummary ();
+    }
+    else
+    {
+        ToggleContent (currentVisible);
+    }
+
+</script>
+
+</div><!-- end of div id="cxMenu" -->
+
+<!-- Template End: eCfg_MenuBaseAutoReprice.swt -->

@@ -1,0 +1,105 @@
+<!-- Template Start: CCQuickPrintPopupForm.swt -->
+<swe:include file="CCStylesChoice.swt"/>
+	
+<swe:control id="1500" hintText="Required Legend" hintMapType="Control">	
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="2" border="0"><tr>	
+<td nowrap valign="absmiddle" class="legend" align="right"><img src="images/icon_req.gif"><swe:this property="DisplayName"/></td>
+</tr></table>	
+</swe:control>	
+
+<swe:form>	
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+	<tr valign="top">
+		<td class="AppletStylePopup">
+				<table datatable="0" summary="" class="AppletBack" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0">
+						<tr valign="top">
+							<td align="left">
+								<swe:error>
+									<table datatable="0" summary="" class="AppletBack" _width="100%" cellpadding="2" cellspacing="0" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/></td></tr></table>
+								</swe:error>
+								<swe:control id="91">
+						  			<!-- Inside-applet help text -->
+						  			<table datatable="0" summary="" class="AppletBack" cellpadding="4" cellspacing="0" border="0"><tr><td><swe:this property="DisplayName" hintText="Inside Applet Help Text"/></td></tr></table>
+								</swe:control>	
+								
+								<swe:control id="1001">
+									<!-- Form Section -->
+									<table datatable="0" summary="" width="100%" class="AppletBack" border="0" cellspacing="2" cellpadding="1" align="center">								
+          									<tr><td colspan="2"><swe:this property="FormattedHtml" hintText="FormSection" hintMapType="FormSection"/></td></tr>
+									</table>
+								</swe:control>									
+								
+								<table datatable="0" summary="" width="100%" class="AppletBack" border="0" cellpadding="2"  cellspacing="2">
+									<tr valign="top">
+										<td width = "50%" align="left">
+											<table datatable="0" summary="" border="0" cellspacing="0" cellpadding="0">
+												<!-- Begin Loop: Lines 1-10 -->
+												<swe:for-each startValue="1101" count="10" iteratorName="currentId">
+												<!-- New line -->
+													  <swe:control id="swe:currentId+100">				  
+													  <tr valign="top">
+														  <td class="qpLabel" nowrap></swe:control>
+															  <swe:control id="swe:currentId+100"><swe:this property="FormattedHtml" hintText="Label"/></swe:control>												  												  
+															  <swe:control id="swe:currentId+200" property="RequiredIndicator" hintText="Required"/></swe:control>													  
+														  </td>
+
+													  </tr>
+													  <tr valign="top">
+														  <td class="qpField">
+															 <swe:control id="swe:currentId+200"><swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/></swe:control>
+													  	  </td>
+													  </tr>
+													</swe:control>				
+												</swe:for-each>
+												<!-- End Loop -->
+											</table>
+										</td>
+										<td width = "50%" align="left">
+											<table datatable="0" summary="" border="0" cellspacing="0" cellpadding="0">
+												<!-- Begin Loop: Lines 1-10 -->
+												<swe:for-each startValue="2101" count="10" iteratorName="currentId">
+												<!-- New line -->
+													  <swe:control id="swe:currentId+100">				  
+													  <tr valign="top">
+														  <td class="qpLabel" nowrap></swe:control>
+															  <swe:control id="swe:currentId+100"><swe:this property="FormattedHtml" hintText="Label"/></swe:control>												  												  
+															  <swe:control id="swe:currentId+200" property="RequiredIndicator" hintText="Required"/></swe:control>													  
+														  </td>
+
+													  </tr>
+													  <tr valign="top">
+														  <td class="qpField">
+															 <swe:control id="swe:currentId+200"><swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/></swe:control>
+													  	  </td>
+													  </tr>
+													</swe:control>				
+												</swe:for-each>
+												<!-- End Loop -->
+											</table>
+										</td>		
+									</tr>	
+								</table>
+							</td>					
+						</tr>
+				</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+				<!--button row-->
+				<table datatable="0" summary="" width="100%" cellpadding="2" cellspacing="0" border="0" class="AppletStylePopup">
+					<tr class="appletbttm">	
+						<td width="100%"><img src="images/spacer.gif" valign="top" width="10" height="20" alt=""></td>
+								
+						  <swe:include file="CCButtons.swt"/>		
+						  <swe:include file="CCButtons_Popup.swt"/>
+						
+						<td><img src="images/spacer.gif" valign="top" width="10" height="20" alt=""></td>									
+					</tr>
+				</table>	
+		</td>
+	</tr>
+</table>
+</swe:form>	
+<swe:scripts/>
+<!-- Template End: CCQuickPrintPopupForm.swt -->

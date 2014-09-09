@@ -1,0 +1,16 @@
+<!-- Template Start: CCtogglebar_Drop.swt -->
+	<table datatable="0" summary="" width="100%" valign="top" align="center" cellpadding='0' cellspacing='0' border='0'>
+	
+		<swe:togglebar type="Select">
+		<tr>
+			<td><img src="images/spacer.gif" width="5" height="1" alt=""></td>
+			<td valign="middle"><img src="images/btn_div.gif" height="13" align="middle" alt=""></td>
+			<td><img src="images/spacer.gif" width="5" height="1" alt=""></td>
+			<td valign="top" nowrap><swe:control id="2" property="DisplayName" /></td>	
+			<td class="swe:class AppletTitle"><swe:this property="FormattedHtml"/></td>
+			<td width="100%"><img src="images/spacer.gif" width="5" height="1" alt=""></td>
+		</tr>		
+		</swe:togglebar>
+
+	</table>
+<!-- Template End: CCtogglebar_Drop.swt -->

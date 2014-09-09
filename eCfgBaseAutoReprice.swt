@@ -1,0 +1,231 @@
+<!-- Template Start: eCfgBaseAutoReprice.swt -->
+
+<!-- div for qa automation -->
+<div  id="cxAutoReprice" class="cxBaseTheme">
+
+<SCRIPT>
+	var ie=(navigator.appName.indexOf("Microsoft")>-1 && parseInt(navigator.appVersion)>3)?true:false;
+
+	function onKeyPress_filterKeys( event )
+	{
+	   var keyCode = ie ? event.keyCode: event.which ;
+
+	   if( keyCode == 13 )
+      	return false;
+	   else
+      	return true;
+	}
+
+     function CfgDoneConfig ( )
+     {
+         // added for FR#12-18F54SF
+         // Just refresh if there is any text attribute dirty
+         if (bAttrDirty){ 
+            SWEDoRefresh(sRefreshUI);
+            return;
+         }              
+         var sWarning = CfgGetLocalString ("IDS_CXP_UI_INCOMPLETE_CONFIG");
+
+         if( sInComplete == "Y" )
+         {
+            if( confirm (sWarning))
+            {
+               CfgExecuteLink (sDone);
+            }
+         }
+         else
+         {
+               CfgExecuteLink (sDone);
+         }
+     }
+
+     // addeded the following function for FR#12-18F54SF
+     // this function sets dirty flag if onchange event is called for a text attribute
+     function OnChangeTextAttribute(csFormObj, csObj, fieldName, rowId, csFrame)  
+     {
+          bAttrDirty = true; // set the attribute dirty flag
+
+          SWESubmitForm(csFormObj, csObj, fieldName, rowId, csFrame);
+     }
+
+     function CfgExecuteLink (action)
+     {
+         var obj = document.getElementById ("sDone");
+         if (typeof (obj) != "undefined" && obj != null)
+            obj.children[0].disabled = true; //disable anchor tag of Done button
+
+         obj = null;
+         obj = document.getElementById ("Save");
+         if (typeof (obj) != "undefined" && obj != null)
+            obj.children[0].disabled = true; //disable anchor tag of Save button
+
+         obj = null;
+         obj = document.getElementById ("Cancel");
+         if (typeof (obj) != "undefined" && obj != null)
+            obj.children[0].disabled = true; //disable anchor tag of Cancel button
+            
+         obj = null;
+         obj = document.getElementById ("FinishIt");
+         if (typeof (obj) != "undefined" && obj != null)
+            obj.children[0].disabled = true; //disable anchor tag of FinishIt button            
+            
+         obj = null;
+         obj = document.getElementById ("lblCheckErrors");
+         if (typeof (obj) != "undefined" && obj != null)
+            obj.children[0].disabled = true; //disable anchor tag of Verify button               
+                                            
+         window.location.replace (action);
+     }
+
+     function CfgGetLocalString (str)
+     {
+        //acquire handle to translatable string function
+	var appObj = (window.opener != null) ? window.opener : this;
+		
+	//HI mode acccessor
+	if (SWEIsHighInteract )	
+	{			
+            var sString = top.App ().GetLocalString (str);
+        }
+        else
+        {
+            var sString = appObj._SWEgetMessage (str);
+        }
+
+        return sString;
+     }
+
+
+</SCRIPT>
+<swe:control id="swe:CFGPARAMETER" AutoReprice="Y" property="FormattedHtml" />
+
+<span class="AppletStyle5">
+   <table datatable="0" summary="" class="AppletBack" width="95%" cellpadding="0" cellspacing="0" border="0" align="center" bgcolor="white">
+           <div   id="section1"  class="basket">
+               <tr valign="top">
+                  <td colspan=2>
+                     <table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="white">
+                        <tr>
+                           <td width="35%">
+                              <!-- Product Threadbar -->
+                              <span class="threadbar">
+                                 <swe:include id="swe:Thread" CfgHtmlType="eCfgCompThread.swt" CfgNodeType="Thread" />
+                              </span>
+                           </td>
+                           <td width="65%">
+                              <swe:include id="TopLevelButtons" CfgHtmlType="eCfgTopLevelButtons.swt" CfgNodeType="TopLevelButtons" />
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <!-- Product Title -->
+                              <span class="dCCItemTitle">
+                                 <span id="CxObjName" class="cxLabel">
+                                    <swe:control id="swe:CurrentRoot" CfgFieldName="CxObjName" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" />
+                                 </span>
+                                 <span id="RequireMoreChild" class="cxImg">
+                                    <swe:control id="swe:RequiredFlag" CfgFieldName="RequireMoreChild" CfgUIControl="RequireMoreChild" property="FormattedHtml" />
+                                 </span>
+                              </span> 
+                           </td>     
+                        </tr>                                                                                          
+                     </table>
+                  </td>
+               </tr>
+
+               <tr>
+                  <td width="120" align="center" valign="top">
+                     <SCRIPT>
+                        var sImage = '<swe:control id="swe:10" CfgFieldName=".ProductHeaderImage" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+
+                        if ( 0 == sImage.length )
+                           sImage = 'images/eCfgInvisibleSpacer.gif';
+
+                        document.write ( '<p><img border="0" alt="" src="' + sImage + '"></p>' );
+                      </SCRIPT>
+                  </td>
+                  <td >
+                     <table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="white">
+                        <tr>
+                           <td width="100" valign="top">
+                              <b>
+                                 <swe:control id="Description" CfgUIControl="lblDescription" property="DisplayName" />
+                              </b>
+                           </td>
+                           <td width="400" valign="top">
+                              <span id="Display Description" class="cxLabel">
+                                 <swe:control id="swe:Description" CfgFieldName="Display Description" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" />
+                              </span>
+                           </td>
+                           <td >&nbsp;</td>
+                        </tr>
+                        <tr>
+                           <td width="100">
+                              <b>
+                                 <swe:control id="TotalPrice" CfgUIControl="lblTotalPrice" property="DisplayName" />
+                              </b>
+                           </td>
+                           <td width="400">
+                              <span id="Rollup Amount" class="cxLabel">
+                                 <swe:control id="CurrentPrice"  CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" CfgFieldName="$.Rollup Item Price" DataType="DTYPE_CURRENCY" />
+                        </tr>
+
+                        <!-- Uncomment this to show MRC NRC Prices
+                        <tr>
+                           <td width="100">
+                              <b>
+                                 <swe:control id="NRC Subtotal" CfgUIControl="lblNRCSubTotal" property="DisplayName" />
+                              </b>
+                           </td>
+                           <td width="400">
+                              <span id="NRC Subtotal" class="cxLabel">
+                                 <swe:control id="NRC CxTotal"  CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" CfgFieldName="$.NRC CxTotal" DataType="DTYPE_CURRENCY" />
+                              </span>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td width="100">
+                              <b>
+                                 <swe:control id="MRC Subtotal" CfgUIControl="lblMRCSubTotal" property="DisplayName" />
+                              </b>
+                           </td>
+                           <td width="400">
+                              <span id="MRC Subtotal" class="cxLabel">
+                                 <swe:control id="MRC CxTotal"  CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" CfgFieldName="$.MRC CxTotal" DataType="DTYPE_CURRENCY" />
+                              </span>
+                           </td>
+                        </tr> 
+                        -->
+
+                        <tr>
+                           <td colspan="3">
+                              <!-- Message -->
+                              <swe:include id="swe:GMessage" CfgHtmlType="eCfgObj_GlobalSignal.swt" CfgNodeType="GlobalSignal"/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="3">
+                              <!-- Status -->
+                              <swe:include id="swe:Status" CfgHtmlType="eCfgObj_Status_OK.swt" CfgNodeType="ErrorStatus" />
+                           </td>
+                        </tr>
+                     </table>
+                  </td>
+               </tr>
+               </div>
+               <tr>
+                  <td colspan="2" class="AppletBorder">
+                  
+                     <!-- Main Content -->
+                     <swe:include id="swe:Basic" />
+            
+                  </td>
+              </tr>
+   </table>
+</span>
+
+</div><!-- end of div id="cxAutoReprice" -->
+
+<!-- Template End: eCfgBaseAutoReprice.swt -->
+
+

@@ -1,0 +1,132 @@
+<!-- Template Start: CCAppletTree.swt -->
+<!-- Applet with a Tree Control -->
+<!-- Use the custom html type of "Tree" for this control -->
+
+
+<table datatable="0" summary="" width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+<swe:form>
+<tr valign="top">
+<td class="AppletStyle7">
+<swe:include file="CCTitle.swt"/>
+<!-- Start Toggle -->
+	<table datatable="0" summary="" class="tier3On" width="100%" valign="top" align="center" cellpadding='0' cellspacing='0' border='0'>
+		<swe:togglebar type="Select">
+		<tr class="tier3On">
+			
+			<td nowrap class="AppletButtons" valign="top">
+				<swe:control id="102">
+					&nbsp;&nbsp;  <swe:this property="FormattedHtml" hintText="Label"/>
+				</swe:control>
+			</td>
+			
+			<td><img src="images/spacer.gif" width="5" height="1" alt=""></td>
+
+			<td valign="top"><swe:control id="2" property="DisplayName" /></td>	
+			<td><swe:this property="FormattedHtml"/></td>
+			<td width="100%"><img src="images/spacer.gif" width="5" height="1" alt=""></td>
+			<td>
+				<table datatable="0" summary="" width="100%" align="right" cellpadding="2" cellspacing="0" border="0">
+					<tr>
+						<swe:control id="142">
+							<!-- optional control -->
+							<td class="AppletButtons" valign="top" nowrap>
+								<swe:this property="FormattedHtml" hintMapType="Control"/>
+							</td>
+						</swe:control>
+   						<swe:control id="143">
+							<!-- optional control -->
+							<td class="AppletButtons" valign="top" nowrap rowspan="1">
+								<swe:this property="FormattedHtml" hintMapType="Control"/>
+							</td>
+						</swe:control>
+					</tr>
+				</table>
+			</td>			
+			
+		</tr>		
+		</swe:togglebar>
+	</table>
+<!-- End Toggle -->
+</td>
+</tr>
+</swe:form>
+</table>
+<table datatable="0" summary="" width="100%" align="center" cellpadding="0" cellspacing="0" border="0" class="AppletStyle7">
+<tr valign="top">
+<td nowrap class="AppletButtons" valign="top">
+    <swe:control id="101">
+      &nbsp;&nbsp;  <swe:this property="FormattedHtml" hintText="Label"/>
+    </swe:control>
+    
+    <swe:control id="201">
+        <swe:this property="FormattedHtml" hintText="Field"/>
+    </swe:control>
+
+</td>
+</tr>
+</table>
+<table datatable="0" summary="" width="100%" align="center" cellpadding="0" cellspacing="0" border="0" class="AppletStyle7">
+<tr valign="top">
+<td nowrap class="AppletButtons" valign="top">
+	<table datatable="0" summary="" cellspacing="2" border="0">
+	<swe:control id="132">
+      	<!-- optional control -->
+      	<!-- control 132 -->  
+        	<td>
+		<swe:this property="FormattedHtml" hintMapType="Control"/>
+        	</td>
+      </swe:control>
+      <swe:control id="133">
+      <!-- optional control -->
+		<td>
+        	<swe:this property="FormattedHtml" hintMapType="Control"/>
+		</td>
+      </swe:control>
+	</table>
+</td>
+</tr>
+</table>
+
+
+<table datatable="0" summary="" width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+
+<tr valign="top">
+    <td class="AppletStyle7">
+
+<table datatable="0" summary="" width="100%" cellpadding="2" cellspacing="0" border="0" align="0">
+<tr>
+<td class="AppletBorder">
+
+<table datatable="0" summary="" border=0 cellspacing=0 cellpadding=0 width="100%" class="AppletBack">
+	<swe:for-each-node>
+	<tr valign=top>
+		<td nowrap>
+		<swe:for-each-indent>
+			<swe:indent-img/>
+		</swe:for-each-indent>
+                <swe:node type="DisplayName" state="Active">
+			<span class="treeActive"><swe:this property="FormattedHtml"/></span>
+		</swe:node>
+		<swe:node type="DisplayName" state="Inactive">
+			<span class="treeInactive"><swe:this property="FormattedHtml"/></span>
+		</swe:node>
+		<swe:node type="FieldValue" state="Active">
+			<span class="treeActive"><swe:this property="FormattedHtml"/></span>
+		</swe:node>
+		<swe:node type="FieldValue" state="Inactive">
+			<span class="treeInactive"><swe:this property="FormattedHtml"/></span>
+		</swe:node>
+		</td>
+	</tr>
+	</swe:for-each-node>
+
+</table>
+
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+<!-- Template End: CCAppletTree.swt -->

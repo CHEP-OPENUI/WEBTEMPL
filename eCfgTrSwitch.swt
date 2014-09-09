@@ -1,0 +1,10 @@
+<!-- Template Start: eCfgTrSwitch.swt -->
+   <swe:switch>
+      <swe:case condition="Default, IsCurrentRow">
+         <tr class="listRowOn">
+      </swe:case>
+      <swe:default>
+         <tr class="listRowOff">
+      </swe:default>
+   </swe:switch>
+<!-- Template End: eCfgTrSwitch.swt -->

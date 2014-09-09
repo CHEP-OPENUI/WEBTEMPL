@@ -1,0 +1,159 @@
+<!-- Template Start: CCAppletParametricSearch.swt -->
+<swe:form>
+  <swe:if condition="Web Engine State Properties, IsPrintOff">
+    <div class="swe:this.SelectStyle">
+    </swe:if>
+    <table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" class="swe:class AppletBack">
+      <tr>
+        <td class="AppletHIFormBorder">
+          <table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="2" border="0" align="center">
+            <tr class="AppletButtons">
+              <td nowrap class="swe:class AppletTitle">
+                <!-- valign="absmiddle" nowrap -->
+                <swe:control id="90" property="DisplayName"/>
+              </td>
+              <!-- <td class="AppletTitle" width="100%" class="AppletBlank" align="right"></td>   -->
+            </tr>
+          </table>
+          <!-- Start of categories block -->
+          <table datatable="0" summary="" class="swe:class AppletBack" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr valign="middle" colspan="3">
+              <swe:include file="CCFormSearch.swt"/>
+            </tr>
+            <!-- srcCategoryList will do a for-loop over all categories -->
+            <swe:srchCategoryList>
+              <tr valign="middle">
+                <!-- Column 1 -->
+                <swe:srchCategory>
+                  <td nowrap colspan="2" rowspan="1" valign="middle">
+                    <div class="mceGridLabel" align="Right">
+                      <swe:srchCategoryText/>:
+                    </div>
+                  </td>
+                  <td colspan="1" rowspan="1" valign="middle">
+                    <div class="mceGridField">
+                      <swe:srchCategoryControl/>
+                    </div>
+                  </td>
+                </swe:srchCategory>
+                <!-- Column 2 -->
+                <swe:srchCategory>
+                  <td nowrap colspan="2" rowspan="1" valign="middle">
+                    <div class="mceGridLabel" align="right">
+                      <swe:srchCategoryText/>:
+                    </div>
+                  </td>
+                  <td colspan="1" rowspan="1" valign="middle">
+                    <div class="mceGridField">
+                      <swe:srchCategoryControl/>
+                    </div>
+                  </td>
+                </swe:srchCategory>
+                <!-- Column 3 -->
+                <swe:srchCategory>
+                  <td nowrap colspan="2" rowspan="1" valign="middle">
+                    <div class="mceGridLabel" align="right">
+                      <swe:srchCategoryText/>:
+                    </div>
+                  </td>
+                  <td colspan="1" rowspan="1" valign="middle">
+                    <div class="mceGridField">
+                      <swe:srchCategoryControl/>
+                    </div>
+                  </td>
+                </swe:srchCategory>
+                <!-- Column 4 -->
+                <swe:srchCategory>
+                  <td nowrap colspan="2" rowspan="1" valign="middle">
+                    <div class="mceGridLabel" align="right">
+                      <swe:srchCategoryText/>:
+                    </div></td>
+                    <td colspan="1" rowspan="1" valign="middle">
+                      <div class="mceGridField">
+                        <swe:srchCategoryControl/>
+                      </div>
+                    </td>
+                  </swe:srchCategory>
+                </tr>
+              </swe:srchCategoryList>
+              <!--alignment row-->
+              <tr>
+                <td colspan="2"/>
+              </tr>
+            </table>
+            <!-- End of categories block -->
+          </td>
+        </tr>
+        <tr>
+          <td class="AppletStyle2">
+            <table datatable="0" summary="" class="AppletBack" border="0" cellspacing="2" cellpadding="2">
+              <!--alignment row-->
+              <tr>
+                <td colspan="2"/>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <table datatable="0" summary="" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <swe:control id="132">
+                        <!-- EditRecord -->
+                        <td valign="middle" nowrap>
+                          <swe:this property="FormattedHtml" hintText="Menu" hintMapType="Control"/>
+                        </td>
+                      </swe:control>
+                      <swe:control id="133">
+                        <!-- DeleteRecord -->
+                        <td valign="middle" nowrap>
+                          <swe:this property="FormattedHtml" hintText="New" hintMapType="Control"/>
+                        </td>
+                      </swe:control>
+                      <swe:control id="151">
+                        <!-- optional control -->
+                        <td valign="middle" nowrap>
+                          <swe:this property="FormattedHtml" hintMapType="Control"/>
+                        </td>
+                      </swe:control>
+                      <td></td>
+                      <swe:control id="152">
+                        <!-- optional control -->
+                        <td valign="middle" nowrap>
+                          <swe:this property="FormattedHtml" hintMapType="Control"/>
+                        </td>
+                      </swe:control>
+                      <td></td>
+                      <swe:control id="153">
+                        <!-- optional control -->
+                        <td valign="middle" nowrap>
+                          <swe:this property="FormattedHtml" hintMapType="Control"/>
+                        </td>
+                      </swe:control>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <swe:error>
+                <tr>
+                  <td class="AppletStyle2">
+                    <table datatable="0" summary="" class="AppletBack" border="0" cellspacing="2" cellpadding="2">
+                      <tr><td></td>
+                      <td class="error">
+                        <swe:this property="FormattedHtml"/></td>
+                      </tr>
+                      <tr><td>
+                        </td><td></td>
+                      </tr>
+                    </table>        </td>
+                  </tr>
+                </swe:error>
+              </swe:form>
+            </table>
+          </div>
+        </span></td>
+      </tr>
+    </table>
+    <swe:if condition="Web Engine State Properties, IsPrintOff">
+    </div>
+  </swe:if>
+</swe:form>
+<!-- Template End: CCAppletParametricSearch.swt -->

@@ -1,0 +1,29 @@
+<!--  Template Start: dCCViewCollabTeamSpace.swt -->
+<!-- include code from dccHTMLheader.swt and make specific changes to it -->
+
+<swe:switch>
+  <swe:case condition="Web Engine State Properties, IsFrameless">
+    <span/>
+  </swe:case>
+
+  <swe:default>
+    <HTML dir="swe:dir">
+    <head>
+      <title><swe:this property="Title"/></title>
+      <swe:include file="CCStylesChoice.swt"/>
+    </head>
+    <body bgcolor="#ffffff" scroll="no" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+  </swe:default>
+</swe:switch>
+
+<!-- ---------- Main Content Area ---------------------------->
+
+  <swe:applet hintMapType="Applet" id="1" hintText="Applet" var="Parent">
+    <swe:this property="FormattedHtml"/>
+  </swe:applet>
+
+<!-- ---------- footer Region ------------------------>
+
+<swe:include file="dCCHTMLFooter.swt"/>
+
+<!--  Template End: dCCViewCollabTeamSpace.swt -->

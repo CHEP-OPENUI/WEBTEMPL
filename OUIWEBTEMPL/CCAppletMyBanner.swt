@@ -1,0 +1,46 @@
+<!--  Template Start: CCAppletMyBanner.swt -->
+
+<swe:layout viewDisplayMode="Layout">
+<swe:include file="CCTitle.swt"/>
+
+<swe:include-script file="D:\eService_OpenUI\siebel\eapps\public\enu\22314\scripts\3rdParty\jcarousel\lib\jquery-1.4.2.min.js"/>
+<swe:include-script file="D:\eService_OpenUI\siebel\eapps\public\enu\22314\scripts\3rdParty\jcarousel\lib\jquery.jcarousel.min.js"/>
+
+<link href="D:\eService_OpenUI\siebel\eapps\public\enu\22314\scripts\3rdParty\jcarousel\style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="D:\eService_OpenUI\siebel\eapps\public\enu\22314\scripts\3rdParty\jcarousel\lib\jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="D:\eService_OpenUI\siebel\eapps\public\enu\22314\scripts\3rdParty\jcarousel\lib\jquery.jcarousel.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="D:\eService_OpenUI\siebel\eapps\public\enu\22314\scripts\3rdParty\jcarousel\skins\tango\skin.css"/>
+
+<!-- <swe:include-script file="D:\eService_OpenUI\siebel\eapps\public\enu\22314\scripts\mycarousel.js"/> -->
+</swe:layout>
+
+
+		
+		<div id="wrap">
+			<ul id="myCarousel" class="jcarousel-skin-tango">
+			<li><img src="http://www.oracle.com/us/ocom-feature-collaborate-12-1528998.jpg" width="1480" height="285" alt="" /></li>
+			<li><img src="http://www.creativeprobers.com/CP%20Images/CB057355_LoRes.jpg" width="1480" height="285" alt="" /></li>
+    			<li><img src="http://www.eweek.com/images/stories/slideshows/112610_Tech_skills/techskills18.jpg" width="1480" height="285" alt="" /></li>
+
+ 			<li><img src="http://tamtraining.com/wp-content/uploads/2011/03/banner1.jpg" width="1480" height="285" alt="" /></li> 
+			<li><img src="http://www.integratekcorp.com/Portals/0/Imagenes/Section%20Headers/Oracle_banner.jpg" width="1480" height="285" alt="" /></li> 
+
+			</ul>
+<!--<img src="images/spacer.gif" onload="loadimage()"/>-->
+		</div>
+
+
+
+
+<!--	<ul>  -->
+	
+<!--	<li><IFrame src="http://www.oracle.com/us/ocom-feature-collaborate-12-1528998.jpg" width="1400" height="285" align="left" frameborder="0" alt="" /></li>  -->
+    	<!-- <li><IFrame src="C:\Documents and Settings\smoitra\Desktop\banner1.jpg" width="125" height="105" alt="" /></li> -->
+    	
+<!--	</ul>  -->
+
+ 
+
+<!--  Template Start: CCAppletMyBanner.swt -->

@@ -1,0 +1,182 @@
+<!-- Template Start: ermFrameViewbar_Hybrid.swt -->
+
+<HTML dir="swe:dir">
+
+<head>
+
+<title><swe:this property="Title"/></title>
+<swe:include file="CCStylesChoice.swt"/>
+</head>
+
+<BODY topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+
+<!-- Start Tier2 Nav & Toolbars-->
+<table datatable="0" summary="" height="21" class="ermTier2On" width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr class="ermTier2On">
+	   <td class="ermTier2On"><img src="images/spacer.gif" width="10" alt=""></td>
+		   <!-- Begin changes for special viewbar buttons to bring user directly to new mode -->
+		   <swe:pageitem id="21">
+		      <td class="ermTier2On">&nbsp;</td>
+		      <td class="ermTier2On" nowrap><swe:this property="FormattedHtml" />&nbsp;</td>
+		      <td class="ermTier2On">&nbsp;|</td>
+		   </swe:pageitem>
+		
+		   <swe:pageitem id="22">
+		      <td class="ermTier2On">&nbsp;</td>
+		      <td class="ermTier2On"  nowrap><swe:this property="FormattedHtml" /> &nbsp;</td>
+		      <td class="ermTier2On">&nbsp;|</td>
+		   </swe:pageitem>
+		
+		   <swe:pageitem id="23">
+		      <!--History Label-->
+		      <td class="ermTier2On"  nowrap><swe:this property="FormattedHtml" />:&nbsp;</td>		   
+		   </swe:pageitem>
+		
+		   <swe:if condition="Web Engine State Properties, IsHighInteractive">
+			   <td nowrap>
+			      <swe:toolbar name="HIMain">
+			         <swe:toolbaritem property="FormattedHtml"/>
+			      </swe:toolbar>	
+			   </td>		
+			   <td>&nbsp;</td>	
+         </swe:if>
+		
+	<!--  Show Label code starts: FR 12-1BY121M by PNIRANJA-->
+		<swe:if condition="Web Engine State Properties, IsLowInteractive">
+	      <td valign="middle"><swe:pageitem id="1" property="DisplayName" hintText="Show Label"/>&nbsp;</td>		
+	      <td>
+	         <swe:form>
+	            <swe:viewbar type="Select" mode="Context">
+	               <table datatable="0" summary="" border="0" cellpadding="0" cellspacing="0"><tr>
+	                  <td valign="middle" nowrap><swe:this property="FormattedHtml"/></td>
+	                  <td nowrap>&nbsp;&nbsp;&nbsp;<span class="divider"><img src="images/spacer.gif" align="absmiddle" width="1" height="18" alt=""></span>&nbsp;&nbsp;&nbsp;</td>
+	               </tr></table>
+	            </swe:viewbar>
+	         </swe:form>
+	      </td>
+	   </swe:if>
+	<!--  Show Label code ends: FR 12-1BY121M by PNIRANJA-->
+
+		   <swe:if condition="Web Engine State Properties, IsLowInteractive">
+			   <td nowrap>
+			      <swe:toolbar name="SIMain">
+			         <swe:toolbaritem property="FormattedHtml"/>
+			      </swe:toolbar>	
+			   </td>		
+			   <td>&nbsp;</td>	
+         </swe:if>
+		
+		   <!-- End changes for special viewbar buttons to bring user directly to new mode -->
+		
+		   <!--BEGINNING SEPARATOR FOR SEARCH CENTER/IHELP/TASK PANE START-->
+		   <td class="ermTier2On" nowrap>&nbsp;&nbsp;<span class="TBdivider divider"><img src="images/spacer.gif" align="absmiddle" width="1" height="18" alt=""></span>&nbsp;&nbsp;&nbsp;</td>
+		   <!--BEGINNING SEPARATOR FOR SEARCH CENTER/IHELP/TASK PANE END-->
+		
+		   <swe:if condition="Web Engine State Properties, IsHighInteractive">		        
+			   <td nowrap>
+				   <swe:toolbar name="SearchCenter">
+					   <swe:toolbaritem property="FormattedHtml"/>
+				   </swe:toolbar>
+			   </td>	
+			   <td class="ermTier2On">&nbsp;</td>			
+         </swe:if>
+		   <swe:if condition="Web Engine State Properties, IsLowInteractive">
+			   <swe:toolbar name="SearchCenter Hybrid">
+			      <td nowrap>
+				      <swe:toolbaritem property="FormattedHtml"/>
+			      </td>	
+			      <td class="ermTier2On">&nbsp;</td>	
+		      </swe:toolbar>
+		   </swe:if>
+
+         <!--ENDING SEPARATOR FOR SEARCH CENTER/IHELP/TASK PANE START-->
+		   <td class="ermTier2On" nowrap>&nbsp;&nbsp;<span class="TBdivider divider"><img src="images/spacer.gif" align="absmiddle" width="1" height="18" alt=""></span>&nbsp;&nbsp;&nbsp</td>
+		   <!--ENDING SEPARATOR FOR SEARCH CENTER/IHELP/TASK PANE END-->		
+		
+		   <td width="100%">&nbsp;</td>
+		
+		   <td>
+			   <swe:reportselect>
+			   </swe:reportselect>
+		   </td>
+		
+		
+		   <swe:pageitem id="33">
+		      <td class="ermTier2On" valign="middle" nowrap><swe:this property="FormattedHtml" hintText="Control" /></td>
+		      <td class="ermTier2On">&nbsp;</td>		
+		   </swe:pageitem>
+		   <swe:pageitem id="34">
+		      <td class="ermTier2On" valign="middle" nowrap><swe:this property="FormattedHtml" hintText="Control"/></td>
+		      <td class="ermTier2On">&nbsp;</td>		
+		   </swe:pageitem>	
+		
+			
+		
+		   <td class="ermTier2On">
+			   <swe:form>
+			   <swe:pdqbar>
+			      <table datatable="0" summary="" cellpadding="0" cellspacing="0" border="0">
+				      <tr>
+					      <!--Favorites Label-->
+					      <swe:pageitem id="35">
+				            <td class="ermTier2On" valign="middle" nowrap><swe:this property="FormattedHtml" />:&nbsp;</td>
+				         </swe:pageitem>
+				         <td class="ermTier2On" valign="middle">&nbsp;</td>
+				         <td class="ermTier2OnNormal" valign="middle"><swe:this property="FormattedHtml" /></td>
+			            <!--td class="ermTier2On" nowrap>&nbsp;&nbsp;&nbsp;<span class="divider"><img src="images/spacer.gif" align="absmiddle" width="1" height="18" alt=""></span>&nbsp;&nbsp;&nbsp;</td-->
+				      </tr>
+			      </table>		
+			   </swe:pdqbar>
+			   </swe:form>
+		   </td>				
+
+		   <swe:pageitem id="36">
+		      <td class="ermTier2On" valign="middle" nowrap><swe:this property="FormattedHtml" hintText="Control"/></td>
+		      <td class="ermTier2On">&nbsp;</td>		
+		   </swe:pageitem>
+		   <swe:pageitem id="37">
+		      <td class="ermTier2On" valign="middle" nowrap><swe:this property="FormattedHtml" hintText="Control"/></td>
+		      <td class="ermTier2On">&nbsp;</td>		
+		   </swe:pageitem>
+		   <swe:pageitem id="38">
+		      <td class="ermTier2On" valign="middle" nowrap><swe:this property="FormattedHtml" hintText="Search Center"/></td>
+		      <td class="ermTier2On">&nbsp;</td>		
+		   </swe:pageitem>	
+		
+		   <td>&nbsp;&nbsp;&nbsp;</td>	
+	</tr>
+</table>
+<table datatable="0" summary="" width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="100%" background="images/erm_div1.gif">&nbsp;</td>
+		<td class="ermTier2On"><img src="images/erm_div2_d.gif"></td>
+		<swe:pageitem id="100">
+		<td class="ermTier2On" nowrap background="images/erm_div3.gif">&nbsp;&nbsp;<img src="images/icon_calendar2.gif" align="absmiddle">&nbsp;<swe:this property="FormattedHtml" hintText="Control"/>&nbsp;&nbsp;</td>
+		</swe:pageitem>
+		<swe:pageitem id="101">
+		<td class="ermTier2On" nowrap background="images/erm_div3.gif">&nbsp;&nbsp;<img src="images/icon_collaborate.gif" align="absmiddle">&nbsp;<swe:this property="FormattedHtml" hintText="Control"/>&nbsp;&nbsp;</td>
+		</swe:pageitem>
+		<swe:pageitem id="102">
+		<td class="ermTier2On" nowrap background="images/erm_div3.gif">&nbsp;&nbsp;<img src="images/icon_helpdesk.gif" align="absmiddle">&nbsp;<swe:this property="FormattedHtml" hintText="Control"/>&nbsp;&nbsp;</td>
+		</swe:pageitem>
+		<swe:pageitem id="103">
+		<td class="ermTier2On" nowrap background="images/erm_div3.gif">&nbsp;&nbsp;<img src="images/icon_perfmgt.gif" align="absmiddle">&nbsp;<swe:this property="FormattedHtml" hintText="Control"/>&nbsp;&nbsp;</td>
+		</swe:pageitem>
+		<swe:pageitem id="104">
+		<td class="ermTier2On" nowrap background="images/erm_div3.gif">&nbsp;&nbsp;<img src="images/icon_infocenter.gif" align="absmiddle">&nbsp;<swe:this property="FormattedHtml" hintText="Control"/>&nbsp;&nbsp;</td>
+		</swe:pageitem>
+		<swe:pageitem id="105">
+		<td class="ermTier2On" nowrap background="images/erm_div3.gif">&nbsp;&nbsp;<img src="images/icon_employee_locator.gif" align="absmiddle">&nbsp;<swe:this property="FormattedHtml" hintText="Control"/>&nbsp;&nbsp;</td>
+		</swe:pageitem>
+		<swe:pageitem id="106">
+		<td class="ermTier2On" nowrap background="images/erm_div3.gif">&nbsp;&nbsp;<img src="images/spacer.gif" align="absmiddle" alt="">&nbsp;<swe:this property="FormattedHtml" hintText="Control"/>&nbsp;&nbsp;</td>
+		</swe:pageitem>
+	</tr>	
+</table>
+<!-- End: Tier2 Nav & Toolbars-->
+
+<swe:scripts/>
+</BODY>
+</HTML>
+
+<!-- Template End: ermFrameViewbar_Hybrid.swt -->

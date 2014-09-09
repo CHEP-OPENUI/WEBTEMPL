@@ -1,0 +1,123 @@
+<!-- Template Start: dCCPageContainer.swt -->
+<HTML dir="swe:dir">
+<head>
+<title><swe:this property="Title"/></title>
+<swe:include file="CCStylesChoice.swt"/>
+</head>
+
+<BODY bgcolor="#ffffff" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+<!---------------------------------------->
+
+<!--Begin Top Wrapping Table-->
+<table datatable="0" summary="" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td align="center">
+
+<!--Start Banner & Global Nav Header-->
+<table datatable="0" summary="" class="banner" width="100%" cellpadding='2' cellspacing='0' border='0'>
+	<tr valign="bottom">
+		<td><swe:image name="SIEBEL_LOGO" category="HTML Control Icons"/></td>
+		<td width="100%"><img src="images/spacer.gif" width="10" height="10" alt=""></td>	
+		
+		<td align="right" valign="bottom">
+			<table datatable="0" summary="" width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td nowrap>
+						<swe:pageitem id="11"><swe:this property="FormattedHtml" /><span class="bannerDiv">&nbsp;|&nbsp;</span></swe:pageitem>
+						<swe:pageitem id="12"><swe:this property="FormattedHtml" /><span class="bannerDiv">&nbsp;|&nbsp;</span></swe:pageitem>
+						<swe:pageitem id="13"><swe:this property="FormattedHtml" /><span class="bannerDiv">&nbsp;|&nbsp;</span></swe:pageitem>
+						<swe:pageitem id="14"><swe:this property="FormattedHtml" /><span class="bannerDiv">&nbsp;|&nbsp;</span></swe:pageitem>
+						<swe:pageitem id="17"><swe:this property="FormattedHtml" /><span class="bannerDiv">&nbsp;|&nbsp;</span></swe:pageitem>
+						<swe:pageitem id="18"><swe:this property="FormattedHtml" /><span class="bannerDiv">&nbsp;|&nbsp;</span></swe:pageitem>
+						<swe:pageitem id="19"><swe:this property="FormattedHtml" /><span class="bannerDiv">&nbsp;|&nbsp;</span></swe:pageitem>
+					</td>
+				</tr>
+			</table>
+		</td>				 
+	</tr>
+</table>
+
+<!-- End Banner & Global Nav Header -->
+
+<!-- Start Tier1 Nav -->
+<table datatable="0" summary="" width="100%" _class="tier1Back" height="1" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="absmiddle">
+		<td width="10" bgcolor="#000000"><img src="images/spacer.gif" width="10" height="1" alt=""></td>
+	</tr>
+</table>
+<table datatable="0" summary="" width="100%" class="tier1Back" height="23" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="absmiddle">
+		<td width="10"><img src="images/spacer.gif" width="10" height="19" alt=""></td>
+		<td valign="absmiddle" class="tier1Back" nowrap>
+			<swe:include file="dCCScreenbar_Tabs.swt"/>
+		</td>
+	</tr>
+</table>
+<table datatable="0" summary="" width="100%" class="tier2on" height="3" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="absmiddle">
+		<td width="10" class="tier2on"><img src="images/spacer.gif" width="10" height="3" alt=""></td>
+	</tr>
+</table>
+<!-- End Tier1 Nav section -->
+
+<!--Start: Toolbar row-->
+<table datatable="0" summary="" width="100%" class="tier2On" border="0" cellspacing="0" cellpadding="0">
+	<tr class="tier2On">		
+		<td width="100%" class="tier2On"><img src="images/spacer.gif" width="10" height="1" alt=""></td>
+		<swe:form>
+		<swe:toolbar name="Search">
+			<td class="tier2On"><img src="images/spacer.gif" width="10" height="21" alt=""></td>		
+			<td nowrap>
+				<swe:toolbaritem property="FormattedHtml"/>
+			</td>		
+		</swe:toolbar>
+		</swe:form>
+		<td width="10" class="tier2On"><img src="images/spacer.gif" width="10" height="1" alt=""></td>
+	</tr>
+</table>
+<!--End: Toolbar row-->
+
+<table datatable="0" summary="" width="100%" class="tier1back" height="1" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="absmiddle">
+		<td width="10" class="tier1back"><img src="images/spacer.gif" width="10" height="1" alt=""></td>
+	</tr>
+</table>
+
+</td></tr></table>
+<!--End Top Wrapping Table-->
+
+</td></tr></table>
+<!-- End Top Wrapping Table -->
+
+<!-- Start View -->
+<table datatable="0" summary="" width="100%" cellpadding="8" align="center"><tr><td>
+<swe:current-view/>
+</td></tr></table>
+<!-- End View -->
+
+<!--Page Footer-->
+<table datatable="0" summary="" width="600" cellpadding='2' cellspacing='0' border='0' align="center">
+	<tr><td>&nbsp;</td></tr>
+	<tr><td><hr size=1></td></tr>
+	<tr align="bottom">
+		<td align="center" valign="top">
+			<table datatable="0" summary="" width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td align="center"><nobr>
+						<swe:pageitem id="11"><swe:this property="FormattedHtml" /><span class="bannerDiv">&nbsp;|&nbsp;</span></swe:pageitem>
+						<swe:pageitem id="12"><swe:this property="FormattedHtml" /><span class="bannerDiv">&nbsp;|&nbsp;</span></swe:pageitem>
+						<swe:pageitem id="13"><swe:this property="FormattedHtml" /><span class="bannerDiv">&nbsp;|&nbsp;</span></swe:pageitem>
+						<swe:pageitem id="14"><swe:this property="FormattedHtml" /><span class="bannerDiv">&nbsp;|&nbsp;</span></swe:pageitem>
+						<swe:pageitem id="17"><swe:this property="FormattedHtml" /><span class="bannerDiv">&nbsp;|&nbsp;</span></swe:pageitem>
+						<swe:pageitem id="18"><swe:this property="FormattedHtml" /><span class="bannerDiv">&nbsp;|&nbsp;</span></swe:pageitem>
+						<swe:pageitem id="19"><swe:this property="FormattedHtml" /><span class="bannerDiv">&nbsp;|&nbsp;</span></swe:pageitem>
+					</nobr></td>
+				</tr>			
+			</table>
+		</td>				 
+	</tr>
+</table>
+
+<swe:scripts/>
+</BODY>
+</HTML>
+
+<!-- Template End: dCCPageContainer.swt -->

@@ -1,0 +1,45 @@
+<!-- Template Start: FINSAppletListTotalsFilter_B_EL.swt -->
+
+<swe:include file="CCApplet_NamedSpacer.swt"/>	
+
+<swe:control id="1100"><div class=CmdTxt><swe:this property="FormattedHtml" hintText="Outside Applet Help Text" hintMapType="Control"/></div><p></swe:control>
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+	<swe:form>
+	<tr valign="top">
+		<td>
+			<swe:include file="CCTitle_Named.swt"/>		
+			
+				<swe:include file="CCListButtonsTop.swt"/>
+
+<!-- Start Filter Buttons-->
+<table  bgcolor="#ffffff" width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>		
+	<swe:include file="FINSListFilterButtons.swt"/>	   
+	</tr>
+</table>
+<!-- End of Filter Buttons-->
+			
+				<swe:error type="Popup">
+					<table class="AppletBack" width="100%" cellpadding="4" cellspacing="0" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/><br>&nbsp;</td></tr></table>
+				</swe:error>
+
+				<span class="swe:this.SelectStyle">	
+				<swe:list>
+				<table bgcolor="#cccccc" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0"><tr valign="top"><td class="AppletHIListBorder">
+				<table valign="top" width="100%" cellpadding="2" cellspacing="1" border="0">
+				   <swe:include file="CCListHeaderTotals.swt"/>
+				   <swe:include file="CCListBodyTotals.swt"/>
+				</table>
+				</td></tr></table>
+				</swe:list>
+
+				<swe:include file="CCBottomApplet_NamedList.swt"/>	
+
+				</span>
+		</td>
+	</tr>
+	</swe:form>	
+</table>
+
+<!-- Template End: FINSAppletListTotalsFilter_B_EL.swt -->

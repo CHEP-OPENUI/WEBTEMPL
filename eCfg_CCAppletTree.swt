@@ -1,0 +1,46 @@
+<!-- Template Start: eCfg_CCAppletTree.swt -->
+<!-- Applet with a Configurator Tree Control -->
+<!-- Use the custom html type of "Tree" for this control -->
+
+<swe:form>
+<table datatable="0" summary="" cellpadding="2" cellspacing="0" border="0">
+	<tr><td><img src="images/spacer.gif" height="5" width="1" alt=""><td></tr>
+	<tr class="AppletButtons">	
+		<td valign="middle" nowrap><swe:menu type="Button" bitmap="MenuBttn" width="38" height="16" bgcolor="#6666cc" fgcolor="#ffffff" /></td>
+		<swe:control id="139"><td valign="middle" nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+		<swe:control id="140"><td valign="middle" nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+		<swe:control id="141"><td valign="middle" nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+		<swe:control id="142"><td valign="middle" nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+	</tr>
+	<tr><td><img src="images/spacer.gif" height="5" width="1" alt=""><td></tr>
+</table>
+
+<span class="treeBack">
+<table datatable="0" summary="" border=0 cellspacing=0 cellpadding=0>
+	
+	<swe:for-each-node>
+	<tr valign=top>
+		<td nowrap>
+		<swe:for-each-indent>
+			<swe:indent-img/>
+		</swe:for-each-indent>
+		<swe:node type="DisplayName" state="Active">
+			<span class="treeActive"><swe:this property="FormattedHtml"/></span>
+		</swe:node>
+		<swe:node type="DisplayName" state="Inactive">
+			<span class="treeInactive"><swe:this property="FormattedHtml"/></span>
+		</swe:node>
+		<swe:node type="FieldValue" state="Active">
+			<span class="treeActive"><swe:this property="FormattedHtml"/></span>
+		</swe:node>
+		<swe:node type="FieldValue" state="Inactive">
+			<span class="treeInactive"><swe:this property="FormattedHtml"/></span>
+		</swe:node>
+		</td>
+	</tr>
+	</swe:for-each-node>
+
+</table>
+</span>
+</swe:form>
+<!-- Template End: eCfg_CCAppletTree.swt -->

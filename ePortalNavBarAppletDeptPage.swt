@@ -1,0 +1,55 @@
+<swe:layout viewDisplayMode="Layout">
+<swe:include file="CCApplet_Spacer.swt"/>
+	<swe:include file="CCLayoutTitlePortal.swt"/>
+</swe:layout>
+
+<swe:layout viewDisplayMode="Show" appletDisplayMode="Show">
+<table datatable="0" summary="" width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr valign="top"><td><img src="images/spacer.gif" width="1" height="3" alt=""></td></tr></table>
+
+<swe:control id="1100">
+  <div class=CmdTxt><swe:this property="FormattedHtml" hintText="Outside Applet Help Text" hintMapType="Control"/></div><p>
+</swe:control>
+
+
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+ <swe:form>
+ <tr valign="top">
+  <td class="AppletStyle1">
+	<swe:include file="CCTitle_Portal.swt"/>
+
+	<swe:layout viewDisplayMode="Show" appletDisplaySize="Max">
+	<!-- Template Start ePortalNavBarApplet.swt -->
+
+	<!-- Begin Border -->
+	<table datatable="0" summary="" class="AppletBorder" valign="top" width="100%" cellpadding="1" cellspacing="0" border="0"><tr><td valign="top">
+
+		<table datatable="0" summary="" valign="top" width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr class="AppletBlank"><td valign="top">	
+
+	<table datatable="0" summary="" class="Row2" bgcolor="#FFFFFF" valign="top" width="100%"  cellpadding="0" cellspacing="0" border="0">
+	<tr><td class="Row2">
+	<swe:for-each-row>
+	<span class="SubviewOn">
+	<swe:control id="501">
+	<swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/>
+	</swe:control>
+	<swe:control id="502">
+	<swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/>
+	</swe:control>
+	</span>&nbsp;<BR>
+	</swe:for-each-row>
+	</td></tr></table>
+
+	<!-- Template End ePortalNavBarApplet.swt -->
+	</swe:layout>
+	
+	</td></tr>
+		</table>
+	</td></tr></table>
+	<!-- End Border -->
+
+  </td>
+ </tr>
+ </swe:form>
+</table>
+</swe:layout>

@@ -1,0 +1,99 @@
+<!-- Template Start: CCFormBody.swt -->
+
+<swe:error>
+  <tr><td colspan="4" class="FormInstruct">
+	  <table datatable="0" summary="" cellpadding="4" cellspacing="0" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/></td></tr></table>
+  </td></tr>											
+</swe:error>	
+
+<swe:control id="91">
+  <!-- Inside-applet help text -->
+  <tr><td colspan="4" class="FormInstruct">
+  <table datatable="0" summary="" cellpadding="4" cellspacing="0" border="0"><tr><td><swe:this property="DisplayName" hintText="Inside Applet Help Text"/></td></tr></table>
+  </td></tr>
+</swe:control>
+
+	<!-- Long Field line, Top -->
+	<swe:control id="1231">
+		<tr>
+			<td colspan="2">
+				<table datatable="0" summary="" width="100%" cellpadding="1">	
+					<tr valign="middle"></swe:control>
+						<swe:control id="1231"><td class="scLabel">
+							<swe:this property="RequiredIndicator" hintText="Required"/>
+							<swe:this property="FormattedHtml" hintText="Long Label"/></td>
+						<td valign="bottom" class="scField">
+						</swe:control><swe:control id="1331" property="FormattedHtml" hintText="Long Field"/>
+						<swe:control id="1231"></td>
+					</tr>								
+				</table>
+			</td>		
+		</tr>
+	</swe:control>
+
+	<tr valign="top">
+		<td>
+			<table datatable="0" summary="" border="0" cellspacing="2" cellpadding="1" align="center">
+				<!-- Begin Loop: Lines 1-30 -->
+				<swe:for-each startValue="1101" count="30" iteratorName="currentId">
+				<!-- New line -->
+					<swe:control id="swe:currentId+100">				  
+					  <tr valign="middle">
+						  <td align="right" class="scLabel">&nbsp;
+						  <swe:this property="RequiredIndicator" hintText="Required"/>
+						  <swe:this property="FormattedHtml" hintText="Label"/></td>
+						  <td valign="bottom"  class="scField">
+					</swe:control>
+						  <swe:control id="swe:currentId+200" property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/>
+					<swe:control id="swe:currentId+100">&nbsp;</td>
+					  </tr>
+					</swe:control>				
+				</swe:for-each>
+				<!-- End Loop -->
+			</table>
+		</td>
+		<td>
+			<table datatable="0" summary="" border="0" cellspacing="2" cellpadding="1">
+				<!-- Begin Loop: Lines 1-30 -->
+				<swe:for-each startValue="2101" count="30" iteratorName="currentId">
+				<!-- New line -->
+					<swe:control id="swe:currentId+100">				  
+					  <tr valign="middle">
+						  <td align="right" class="scLabel">&nbsp;
+						  <swe:this property="RequiredIndicator" hintText="Required"/>
+						  <swe:this property="FormattedHtml" hintText="Label"/></td>
+						  <td valign="bottom"  class="scField">
+					</swe:control>
+						  <swe:control id="swe:currentId+200" property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/>
+					<swe:control id="swe:currentId+100">&nbsp;</td>
+					  </tr>
+					</swe:control>				
+				</swe:for-each>
+			</table>
+		</td>		
+	</tr>
+	
+
+	
+	<!-- Long Field line, Bottom -->
+	<swe:control id="1232">
+		<tr>
+			<td colspan="2">
+				<table datatable="0" summary="" width="100%" cellpadding="1">	
+					<tr valign="middle"></swe:control>
+						<swe:control id="1232"><td class="scLabel">
+						<swe:this property="RequiredIndicator" hintText="Required"/>
+						<swe:this property="FormattedHtml" hintText="Long Label"/></td>
+						<td valign="bottom" class="scField">
+						</swe:control>
+							<swe:control id="1332" property="FormattedHtml" hintText="Long Field"/>
+						<swe:control id="1232"></td>
+					</tr>								
+				</table>
+			</td>		
+		</tr>
+	</swe:control>
+	
+
+
+<!-- Template End: CCFormBody.swt -->

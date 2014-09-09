@@ -1,0 +1,160 @@
+<!--  Template Start: FINSFrameViewbar.swt -->
+
+<HTML dir="swe:dir">
+    <head>
+        <title><swe:this property="Title"/></title>
+        <swe:include file="CCStylesChoice.swt"/>
+    </head>
+
+    <BODY class="toolbar" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+        <swe:switch>
+            <swe:case condition="Web Engine State Properties, IsMobileApplicationMode">
+                <div id="HTMLMessageBar" class="ToolbarButton">                    
+                </div> 
+                <div id="GoOffline" class="ToolbarButton">
+                    
+                </div>
+                <div id="Sync" class="ToolbarButton">
+                    
+                </div>
+                <div id="tbm_3" class="ToolbarButton">
+                    <a href="javaScript:logoff()"><img src = "images/logoutSwitch.png"></a>
+                </div>
+            </swe:case>
+            <swe:default>
+                <!--  Start Tier2 Nav & Toolbars-->
+                <div id="s_toolbar" class="Tier2ToolbarContainer">
+                    <swe:pageitem id="21">
+                       <div class="PageItem"><swe:this property="FormattedHtml" /></div>
+                    </swe:pageitem>
+                    
+                    <swe:pageitem id="22">
+                       <div class="PageItem"><swe:this property="FormattedHtml" /></div>
+                    </swe:pageitem>
+                    
+                    <swe:pageitem id="23">
+                       <!--History Label-->
+                       <div class="PageItem"><swe:this property="FormattedHtml" />:&nbsp;</div>
+                    </swe:pageitem>
+
+                    <!--div id="tb_1" class="ToolbarButton"-->
+                        <swe:toolbar name="FINS ToolBar">
+                            <swe:toolbaritem property="FormattedHtml"/>
+                        </swe:toolbar>
+
+                        <swe:toolbar name="HIMain">
+                            <swe:toolbaritem property="FormattedHtml"/>
+                        </swe:toolbar>
+                       
+                        <!--swe:toolbar name="SendMail">
+                            <swe:toolbaritem property="FormattedHtml"/>
+                        </swe:toolbar-->
+                    </div>
+                    <swe:if condition="Persistent Customer Dashboard, ShowDashboardToolbar">
+                        <!--div id="tb_2" class="ToolbarButton"-->
+                           <swe:toolbar name="Dashboard">
+                                   <swe:toolbaritem property="FormattedHtml"/>
+                           </swe:toolbar>
+                        <!--/div-->
+                    </swe:if>
+
+                    <!--BEGINNING SEPARATOR FOR SEARCH CENTER/IHELP/TASK PANE START-->
+                    <div><span class="TBdivider divider"></span></div>
+                    <!--BEGINNING SEPARATOR FOR SEARCH CENTER/IHELP/TASK PANE END-->
+
+                    <!--div id="tb_3" class="ToolbarButton"-->
+                        <swe:toolbar name="SearchToolbar">
+                            <swe:toolbaritem property="FormattedHtml"/>
+                        </swe:toolbar>
+                    <!--/div-->    
+                    <!-- TASK ASSISTANT TOOLBAR START -->
+                    <!--div id="tb_4" class="ToolbarButton"-->
+                        <swe:toolbar name="Task Assistant">
+                           <swe:toolbaritem property="FormattedHtml"/>
+                        </swe:toolbar>
+                    <!--/div-->
+                    <!-- TASK ASSISTANT TOOLBAR END -->
+
+                    <!-- TASK PANE TOOLBAR START -->
+                    <!--div id="tb_5" class="ToolbarButton"-->
+                       <swe:toolbar name="Task Pane">
+                           <swe:toolbaritem property="FormattedHtml"/>
+                       </swe:toolbar>
+                    <!--/div-->
+                    <!-- TASK PANE TOOLBAR END -->
+
+                    <!-- CHAT PANE TOOLBAR START -->
+                    <swe:if condition="Chat UI Business Service, IsChatEnabled">
+                        <!--div id="tb_6" class="ToolbarButton"-->
+                           <swe:toolbar name="Chat Pane">
+                                   <swe:toolbaritem property="FormattedHtml"/>
+                           </swe:toolbar>
+                        <!--/div-->
+                    </swe:if>
+                    <!-- CHAT PANE TOOLBAR END -->
+                    
+                    <!--ENDING SEPARATOR FOR SEARCH CENTER/IHELP/TASK PANE START-->
+                    <!--div><span class="TBdivider divider"></span></div-->
+                    <!--ENDING SEPARATOR FOR SEARCH CENTER/IHELP/TASK PANE END-->
+                    
+                    <!--div id="tb_7" class="ToolbarButton"-->
+                        <swe:toolbar name="Quick Print">
+                            <swe:toolbaritem property="FormattedHtml"/>
+                        </swe:toolbar>
+                    <!--/div-->
+                    <!--div id="tb_8" class="ToolbarButton"-->
+                        <swe:toolbar name="Synchronize">
+                            <swe:toolbaritem property="FormattedHtml"/>
+                        </swe:toolbar>
+                    <!--/div-->
+                    <!--div id="tb_9" class="ToolbarButton"-->
+                        <swe:reportselect>
+                        </swe:reportselect>
+                    <!--/div-->
+                    <!--div id="tb_11" class="ToolbarButton"-->                       
+                        <swe:toolbar name="OpenUI Reports">
+                            <swe:toolbaritem property="FormattedHtml"/>
+                        </swe:toolbar>                        
+                    <!--/div-->
+                    <!--div id="tb_10" class="ToolbarButton"-->
+                        <swe:toolbar name="XMLP Reports">
+                            <swe:toolbaritem property="FormattedHtml"/>
+                        </swe:toolbar>
+                    <!--/div-->
+                    
+                    <!--div id="tb_1" class="ToolbarButton"-->
+                        <img id='CTIToolbarParentBtn' class='ToolbarButtonOn' src='images/communications_icon.gif' alt='Toggle CTI Toolbar' title="Toggle CTI Toolbar" />
+                    <!--/div-->
+
+                    <swe:pageitem id="33">
+                        <div class="PageItem"><swe:this property="FormattedHtml" hintText="Control" /></div>
+                    </swe:pageitem>
+                    <swe:pageitem id="34">
+                        <div class="PageItem"><swe:this property="FormattedHtml" hintText="Control"/></div>
+                    </swe:pageitem>
+                    <swe:pageitem id="36">
+                        <div class="PageItem"><swe:this property="FormattedHtml" hintText="Control"/></div>
+                    </swe:pageitem>
+                    <swe:pageitem id="37">
+                        <div class="PageItem"><swe:this property="FormattedHtml" hintText="Control"/></div>
+                    </swe:pageitem>
+                    <swe:pageitem id="38">
+                        <div class="PageItem"><swe:this property="FormattedHtml" hintText="Control"/></div>
+                    </swe:pageitem>
+                <!-- /div -->
+                <!--  End Tier2 nav & Toolbars-->
+            </swe:default>
+        </swe:switch>
+        <swe:scripts/>
+    </BODY>
+    <script language="JavaScript" >
+
+    var CustomToolbar = SiebelApp.S_App.CustomToolbar;
+        if ( CustomToolbar != undefined ){
+            CustomToolbar.Init();
+        }
+
+     </script>
+</HTML>
+
+<!--  Template End: FINSFrameViewbar.swt -->

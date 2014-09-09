@@ -1,0 +1,69 @@
+<!--  Template Start: CBListButtonsHierarchy.swt -->
+
+	<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">		
+		<!-- button row-->
+		<tr class="AppletButtons">
+			<td><img src="images/spacer.gif" height="1" width="10" alt=""></td>
+			<td>
+				<table datatable="0" summary="" cellpadding="2" cellspacing="0" border="0">
+					<tr class="AppletButtons" align="left">						
+						<td width="100%"><img src="images/spacer.gif" valign="top" width="1" height="1" alt=""></td>	
+	<swe:control id="1">
+      <!-- optional control -->
+        <td valign="middle" nowrap>
+        <b><swe:this property="FormattedHtml" hintMapType="Control"/></b>
+        </td>
+      </swe:control>
+	  
+	<swe:control id="2">
+      <!-- optional control -->
+        <td valign="middle" nowrap>
+        <swe:this property="FormattedHtml" hintMapType="Control"/>
+        </td>
+      </swe:control>
+
+	<swe:control id="3">
+      <!-- optional control -->
+        <td valign="middle" nowrap>
+        <b><swe:this property="FormattedHtml" hintMapType="Control"/></b>
+        </td>
+      </swe:control>
+	  
+	<swe:control id="4">
+      <!-- optional control -->
+        <td valign="middle" nowrap>
+        <swe:this property="FormattedHtml" hintMapType="Control"/>
+        </td>
+      </swe:control>
+	  
+	  <swe:control id="5">
+      <!-- optional control -->
+        <td valign="middle" nowrap>
+        <swe:this property="FormattedHtml" hintMapType="Control"/>
+        </td>
+      </swe:control>
+	  
+
+      <swe:control id="6">
+      <!-- optional control -->
+        <td valign="middle" nowrap>
+        <swe:this property="FormattedHtml" hintMapType="Control"/>
+        </td>
+      </swe:control>
+	  
+	<swe:control id="7">
+      <!-- optional control -->
+        <td valign="middle" nowrap>
+        <swe:this property="FormattedHtml" hintMapType="Control"/>
+        </td>
+      </swe:control>
+						<td width="100%"><img src="images/spacer.gif" valign="top" width="1" height="1" alt=""></td>	
+					</tr>
+				</table>		
+			</td>			
+					
+		</tr>
+	
+	</table>
+	
+<!--  Template End: CBListButtonsHierarchy.swt -->	

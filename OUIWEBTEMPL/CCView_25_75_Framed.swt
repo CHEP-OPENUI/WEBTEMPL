@@ -1,0 +1,98 @@
+<!--  Template Start: CCView_25_75_Framed.swt -->
+<!--  Oliver: code redesign, clean up -->
+
+<HTML dir="swe:dir">
+<head></head>
+<swe:switch>
+
+	<swe:case condition="Web Engine State Properties, IsRTL">
+	<!-- RTL case -->
+
+		<swe:include file="CCHTMLHeader.swt"/>
+
+		<!-- Main Content Area -->
+		<div class="siebui-main-template2575 siebui-rtl">
+		    <!--Column 2 -->
+		    <div id="siebui-applet-2" class="siebui-main-column75">
+				<swe:applet-tree-list var="Parent"/>
+				<swe:for-each count=10 iteratorName="currentId" startValue="202">
+				<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" var="Parent">
+					<!-- start applet-->
+					<swe:this property="FormattedHtml"/>
+					<!-- end applet-->
+				</swe:applet>
+				</swe:for-each>
+		    </div>
+		    <!--Column 1 -->
+		    <div id="siebui-applet-1" class="siebui-main-column25">
+				<swe:for-each count=5 iteratorName="currentId" startValue="102">
+					<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" var="Parent">
+						<!-- start applet-->
+						<swe:this property="FormattedHtml"/>
+						<!-- end applet-->
+					</swe:applet>
+				</swe:for-each>
+				<swe:for-each count=5 iteratorName="currentId" startValue="108">
+					<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" var="Grandchild">
+						<!-- start applet-->
+						<swe:this property="FormattedHtml"/>
+						<!-- end applet-->
+					</swe:applet>
+	            </swe:for-each>	
+		    </div>
+		</div><!-- End Main Content Area -->
+
+		<swe:include file="CCHTMLFooter.swt"/>		
+
+	<!-- end of RTL case -->
+	</swe:case>
+
+
+
+	<swe:default>
+	<!-- default, non-RTL -->
+
+		<swe:include file="CCHTMLHeader.swt"/>
+
+		<!-- Main Content Area -->
+		<div class="siebui-main-template2575">
+		    <!--Column 1 -->
+		    <div id="siebui-applet-1" class="siebui-main-column25 siebui-rtl">
+				<swe:for-each count=5 iteratorName="currentId" startValue="102">
+					<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" var="Parent">
+						<!-- start applet-->
+						<swe:this property="FormattedHtml"/>
+						<!-- end applet-->
+					</swe:applet>
+				</swe:for-each>
+				<swe:for-each count=5 iteratorName="currentId" startValue="108">
+					<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" var="Grandchild">
+						<!-- start applet-->
+						<swe:this property="FormattedHtml"/>
+						<!-- end applet-->
+					</swe:applet>
+	            </swe:for-each>	
+		    </div>
+		    <!--Column 2 -->
+		    <div id="siebui-applet-2" class="siebui-main-column75 siebui-rtl">
+				<swe:applet-tree-list var="Parent"/>
+				<swe:for-each count=10 iteratorName="currentId" startValue="202">
+				<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" var="Parent">
+					<!-- start applet-->
+					<swe:this property="FormattedHtml"/>
+					<!-- end applet-->
+				</swe:applet>
+				</swe:for-each>
+		    </div>
+		</div><!-- End Main Content Area -->
+
+		<swe:include file="CCHTMLFooter.swt"/>
+
+		<!-- end of default, non-RTL -->
+	</swe:default>
+
+</swe:switch>
+<swe:scripts/>
+
+</html>
+<!--  Template End: CCView_25_75_Framed.swt -->

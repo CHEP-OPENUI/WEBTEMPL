@@ -1,0 +1,116 @@
+<!-- Template Start: eCfgCxProdNavRelationships.swt -->
+
+<div  id="cxREDRel" class="cxAppletRoot">
+
+<swe:control id="swe:CFGPARAMETER" TemplateType="CxProdNavigator" RuntimeUIStyle="disable" property="FormattedHtml" />
+
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="10" border="0">
+    <tr>
+        <td>
+            <table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="5" style="border: 1 solid #808080">
+                <tr>
+                    <td bgcolor="#C0C0C0" style="border-bottom: 1 solid #808080" width="100%" align="center">
+                        <b><BIG><BIG><BIG>
+                            <swe:control id="swe:CurrentRoot" CfgFieldName="CxObjName" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>
+                            <swe:control id="HeaderProdsAndPorts" CfgUIControl="HeaderProdsAndPorts" property="FormattedHtml"/>
+                        </BIG></BIG></BIG></b>
+                    </td>
+                </tr>    
+                
+                <tr>
+                    <td style="border-bottom: 1 solid #808080" width="100%" >
+                        <swe:include id="swe:Thread" CfgHtmlType="eCfgCompThread.swt" CfgNodeType="Thread"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <swe:control id="swe:CancelButton" CfgUIControl="Cancel" CfgHtmlType="MiniButton" InvokeMethod="CloseViewPopup" property="FormattedHtml" />
+                    </td>
+                </tr>                
+                
+                <tr><td>&nbsp;</td></tr>      
+                
+                <tr><td><swe:control id="HelpText" CfgUIControl="HelpText" property="FormattedHtml"/></td></tr>
+                
+                <tr><td>&nbsp;</td></tr>      
+                
+                <tr><td><swe:control id="RelationshipsHeader" CfgUIControl="RelationshipsHeader" property="FormattedHtml"/></td></tr>     
+
+                <tr>
+                  <td width="100%">
+                     <table datatable="0" summary="" width="100%">
+                        <tr>
+                           <td width="50%" style="border-top: 1 solid #808080">
+                              <table datatable="0" summary="" width="100%">                     
+                                 <tr>
+                                    <td style="border-right: 1 solid #808080">
+                                       <span    id="left"  class="cxPanel">
+                                       <table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0">
+                                          <swe:for-each id="130" CfgLoopType="Port" startValue="3200" count="Dynamic" iteratorName="PortId">
+                                             <swe:include file="eCfgTrSwitch.swt"/>
+                                                <td width="1%">
+                                                   <swe:control id="swe:PortId" CfgUIControl="Active Row" property="FormattedHtml"/>&nbsp;&nbsp;
+                                                </td>
+                                                <SCRIPT>
+                                                   var sIsCurrentPort = '<swe:control id="swe:PortId+1000" CfgFieldName="Selected" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+                                                   if( sIsCurrentPort )
+                                                   {  //active
+                                                      document.write ( '<td class="tier3on" style="background-color: #ffffff;" nowrap height="22">');
+                                                   }
+                                                   else
+                                                   {  //inactive
+                                                      document.write ( '<td class="tier3Off" style="background-color: #ffffff;" nowrap height="19">');
+                                                   }
+                                                </SCRIPT>
+                                                &nbsp;
+                                                <swe:control id="swe:PortId+2000"  CfgUIControl="ChangeCurrentNode" CfgHtmlType="CfgLink" 
+                                                                                 property="FormattedHtml" CfgFieldName="CxPortName"
+                                                                                 InvokeMethod="ChangeCurrentNode"/>
+                                                &nbsp;
+                                             
+                                                </td>
+                                             </tr>
+                                          </swe:for-each>
+                                       </table>
+                                       </span>
+                                    </td>
+                                    <td width="50%" valign="top">
+                                       <span    id="right"  class="cxPanel">
+                                       <table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0">
+                                          <swe:for-each id="140" CfgLoopType="CurrentPort" startValue="1" count="Dynamic" iteratorName="CurPort">
+                                             <swe:for-each id="150" CfgLoopType="Domain" startValue="4300" count="Dynamic" iteratorName="PortDomainId">                            
+                                                <swe:include file="eCfgTrSwitch.swt"/>
+                                                   <td width="1%">
+                                                      &nbsp;
+                                                   </td>
+                                                   <td width="1%">
+                                                      &nbsp;
+                                                   </td>                                    
+                                                   <td width="1%">
+                                                      &nbsp;
+                                                   </td>
+                                                   <td width="97%" colspan="2">
+                                                      <swe:control id="swe:PortDomainId+1000" CfgFieldName="CxObjName" CfgUIControl="SetTopObj" property="FormattedHtml"/>    
+                                                   </td>
+                                                </tr>
+                                             </swe:for-each>
+                                          </swe:for-each>
+                                
+                                          <tr><td>&nbsp;</td></tr>                                     
+                                       </table>
+                                       </span>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </td> 
+                        </tr>
+                     </table>
+                  </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</div>
+<!-- Template End: eCfgCxProdNavRelationships.swt -->

@@ -1,0 +1,58 @@
+<!-- Template Start: EmailRespFormInBound.swt -->
+
+<table datatable="0" summary="" width="100%" cellpadding="2" cellspacing="0" border="0" align="center"><tr><td>
+
+<table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="5" cellspacing="0" border="0">
+	
+	<tr valign="top">		
+		<td>
+		
+			<table datatable="0" summary="" width="100%">				
+				
+				<swe:for-each startValue="1121" count="6" iteratorName="currentId">
+				<!--From, To, CC, BCC, Subject-->
+				<swe:control  id="swe:currentId+100">
+				<tr>					
+					<td align="right">	
+						<span class="mceLabel" align="swe:this.TextAlignmentLabel" style="width:auto;">
+							<swe:this property="FormattedHtml" hintText="Label"/>
+						</span>
+					</td>
+				</swe:control>	
+				<swe:control  id="swe:currentId+100">
+					<td width="100%" colspan="3" valign="bottom">						
+				</swe:control>		
+				<swe:control  id="swe:currentId+200">
+					<span class="mceField"  style="width:100%;" align="swe:this.TextAlignment">
+						<swe:this property="FormattedHtml" hintText="Field"/>
+					</span>
+				</swe:control>
+				<swe:control  id="swe:currentId+100">						
+					</td>
+				</tr>
+				</swe:control>					
+				</swe:for-each>			
+						
+			</table>
+		
+		
+		</td>	
+		
+	</tr>
+	
+	<swe:control id="1131">
+	<tr valign="top">	
+		<!--Message-->
+		<td>
+			<span class="mceField" style="width:100%;" align="swe:this.TextAlignment">
+				<swe:this property="FormattedHtml" hintText="Field"/>
+			</span>
+		</td>
+	</tr>	
+	</swe:control>			
+	
+</table>
+</td></tr></table>
+
+
+<!-- Template End: EmailRespFormInBound.swt -->	

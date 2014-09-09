@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="swe:dir">
+<head>
+  <title><swe:this property="Title"/></title>
+  <link href="files/login.css" rel="stylesheet">
+  <link rel="icon" type="image/vnd.microsoft.icon" href="images/favicon.ico"/>
+  <swe:switch>
+    <swe:case condition="Web Engine State Properties, IsMobileApplicationMode">
+      <link rel="apple-touch-icon" href="images/favicon_touch.png"/>
+      <meta name="apple-touch-fullscreen" content="YES">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="default">
+      <meta http-equiv="x-rim-auto-match" content="none">
+      <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,target-densityDpi=device-dpi">
+    </swe:case>
+  </swe:switch>
+  <script type="text/javascript">
+    var ua = navigator.userAgent
+    var re = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+    if ( re.exec(ua) != null && parseFloat(RegExp.$1)<=8.0 ){
+      var IE8inc = "files/ie8-compat.css";
+      var c = document.createElement('link');
+        c.type = 'text/css';
+        c.rel = 'stylesheet';
+        c.href = IE8inc;
+        c.media = 'screen';
+        c.title = 'dynamicLoadedIE8';
+        document.getElementsByTagName("head")[0].appendChild(c);
+        }
+  </script>
+
+  <swe:include-script file="login.js"/>
+
+  <script language="JavaScript">
+    function fireEvent(element,event) {
+      if (document.createEvent) {
+        // dispatch for firefox + others
+        var evt = document.createEvent("HTMLEvents");
+        evt.initEvent(event, true, true ); // event type,bubbling,cancelable
+        return !element.dispatchEvent(evt);
+      } else {
+        // dispatch for IE
+        var evt = document.createEventObject();
+        return element.fireEvent('on'+event,evt)
+      }
+    }
+  </script>
+
+</head>
+<swe:switch>
+  <swe:case condition="Web Engine State Properties, IsMobileApplicationMode">
+    <swe:switch>
+      <swe:case condition="Web Engine State Properties, IsTabletMode">
+        <body class="siebui-mb-login" onunload="pwdcleaner()">
+      </swe:case>
+      <swe:case condition="Web Engine State Properties, IsPhoneMode">
+        <body class="siebui-mbp-login" onunload="pwdcleaner()">
+      </swe:case>
+    </swe:switch>
+    <swe:form method="post" name="SWEEntryForm" htmlAttr="target='_top'">
+      <div id="siebui-mb-loginheader" class="siebui-mb-loginheader">
+        <div id="siebui-mb-loginLogo" class="siebui-mb-loginLogo"></div>
+        <span class="siebui-mb-appTitle"><swe:this property="SplashText"/></span>
+      </div>
+      <div id="siebui-mb-formContent" class="siebui-mb-formContent">
+      <swe:error><div class="formError"></swe:error>
+        <div class="field">
+          <label for="s_swepi_1"><swe:pageitem id="7" property="DisplayName" /></label>
+          <span class="loginField"><swe:pageitem id="1" property="FormattedHtml" /></span>
+        </div>
+        <div class="field">
+          <label for="s_swepi_2"><swe:pageitem id="8" property="DisplayName" /></label>
+          <span class="loginField"><swe:pageitem id="2" property="FormattedHtml" /></span>
+        </div>
+        <div class="siebui-mb-submit">
+          <span class="fieldCheckbox">
+            <swe:pageitem id="3" property="FormattedHtml" />
+            <label for="s_swepi_3"><swe:pageitem id="9" property="DisplayName" /></label>
+          </span>
+          <span class="siebui-mb-loginButton">
+            <swe:pageitem id="22" property="FormattedHtml"/>
+          </span>
+        </div>
+        <swe:error></div></swe:error>
+      </div>
+      <script type="text/javascript">
+            var loginA_tag = document.getElementById('s_swepi_22');
+            var loginIMG_tag = loginA_tag.childNodes[0];
+            loginA_tag.appendChild( document.createTextNode(loginIMG_tag.alt) );
+      </script>
+      <div id="siebui-mb-statusBar" class="siebui-mb-statusBar">
+        <swe:error><swe:this property="FormattedHtml"/></swe:error>
+      </div>
+    </swe:form>
+    </div>
+  </body>
+  </swe:case>
+  </swe:default>
+  <body class="siebui-login_body" onunload="pwdcleaner()">
+    <div id="outerWrapper">
+    <div id="wrapper">
+      <swe:form method="post" name="SWEEntryForm" >
+        <div id="content">
+          <div id="badge"></div>
+          <swe:switch>
+            <swe:case condition="Web Engine State Properties, IsRTL">
+                
+            </swe:case>
+            <swe:default>
+                <div id="loginLogo"></div>
+            </swe:default>
+         </swe:switch>          
+          <div id="formContent">
+
+            <swe:error><div class="formError"></swe:error>
+
+                <p class="appTitle">
+                  <swe:this property="SplashText"/>
+                </p>
+                <p class="field">
+                  <label for="s_swepi_1"><swe:pageitem id="7" property="DisplayName" /></label><br>
+                  <span class="loginField"><swe:pageitem id="1" property="FormattedHtml" /></span>
+                </p>
+                <p class="field">
+                  <label for="s_swepi_2"><swe:pageitem id="8" property="DisplayName" /></label><br>
+                  <span class="loginField"><swe:pageitem id="2" property="FormattedHtml" /></span>
+                </p>
+                <p class="fieldCheckbox">
+                  <swe:pageitem id="3" property="FormattedHtml" />
+                  <label for="s_swepi_3"><swe:pageitem id="9" property="DisplayName" /></label>
+                </p>
+                <p class="loginButton">
+                  <swe:pageitem id="22" property="FormattedHtml"/>
+                  <span class="accessibilityText">
+                  <swe:switch> <!-- display Accessibility info and help for SI+ and PortableUI Mode -->
+                    <swe:case condition="Web Engine State Properties, IsAccessibleEnchanced"> <!-- display Accessibility help for SI+ and PortableUI Mode -->
+                        <swe:pageitem id="12" property="FormattedHtml" />
+                    </swe:case>
+                    <swe:case condition="Web Engine State Properties, IsPortableUIMode"> <!-- display Accessibility info and help for PortableUI Mode -->
+                      <span class="accessibilityText">
+                        <span class="accessibilityTextHeader">
+                          <swe:pageitem id="12" property="DisplayName" />
+                        </span>
+                        <swe:pageitem id="13" property="DisplayName" /><br/>
+                    </swe:case>
+                  </swe:switch>
+                  </span>
+                </p>
+
+            <swe:error></div></swe:error>
+
+          </div>
+          <swe:switch>
+            <swe:case condition="Web Engine State Properties, IsRTL">
+                <div id="loginLogo" class="loginLogoRTL"></div>
+            </swe:case>
+            <swe:default>
+                
+            </swe:default>
+         </swe:switch>   
+
+          <script type="text/javascript">
+            var loginA_tag = document.getElementById('s_swepi_22');
+            var loginIMG_tag = loginA_tag.childNodes[0];
+            loginA_tag.appendChild( document.createTextNode(loginIMG_tag.alt) );
+          </script>
+
+          <div class="break"></div>
+
+        </div>
+        <div id="statusBar">
+          <p>
+            <swe:error><swe:this property="FormattedHtml"/></swe:error>
+          </p>
+        </div>
+
+      </swe:form>
+    </div>
+  </div>
+  </body>
+  </swe:default>
+</swe:switch>
+
+<swe:scripts/>
+<script language="JavaScript">userfocus()</script>
+
+</html>

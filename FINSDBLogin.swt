@@ -1,0 +1,76 @@
+<html dir="swe:dir">
+<head>
+<title><swe:this property="Title"/></title>
+	<link href="files/main.css" rel="stylesheet">
+        <swe:include-script file="login.js"/>
+</head>
+
+<body class="loginBody" leftmargin="0" topmargin="2" marginwidth="0" marginheight="118" onunload="pwdcleaner()">
+
+<table class="loginImage" border="0" cellpadding="0" cellspacing="0" align="center">
+
+  <tr valign="top">
+	<td height="30" rowspan="1" valign="top" class="loginForm">
+	     <table width="440" cellpadding="0" align="center" style="background-image: url('images/about_siebel_d.gif')">
+		<tr>
+                   <td width=19>&nbsp;</td>
+		   <td class="loginAppTitle"> <swe:this property="SplashText"/>&nbsp; </td>
+                   <td width=19>&nbsp;</td>
+		</tr>
+            </table>
+         </td>
+   </tr>
+
+    
+  <tr>
+      <td height=1 bgcolor="#99cc00" width=100%>&nbsp;</td>
+  </tr>
+
+    <swe:form method="post" name="SWEEntryForm" htmlAttr="target='_top'">
+    <tr>
+     <td class=loginFourthRow>
+      <table cellspacing=0 cellpadding=0 border=0>
+      <tr>
+        <td width=19>&nbsp;</td>
+        <td >
+          <table width=210 cellspacing=4 cellpadding=0 border=0>
+              <swe:error>
+              <tr>  <td colspan="2" class="loginError"><div style="width:190"><swe:this property="FormattedHtml"/></div></td>
+                    <td colspan="1" style="width:20">&nbsp;</td>
+              </tr>
+              <tr>
+                     <td style="height:2px" colspan=3><IMG src="images/spacer.gif" alt=""></td>
+              </tr>
+              </swe:error>
+              <tr>
+                  <td class=loginLabel><swe:pageitem id="7" property="DisplayName" />:</td> 
+                  <td class=loginField><swe:pageitem id="1" property="FormattedHtml" /></td>
+		  <td width=20>&nbsp;</td>	
+             </tr>
+             <tr>
+                  <td class=loginLabel><swe:pageitem id="8" property="DisplayName" />:</td>
+                  <td class=loginField><swe:pageitem id="2" property="FormattedHtml" /></TD>
+             </tr>
+             <tr>
+                  <td>&nbsp;</td>
+                  <td colspan=2 class=loginlabel>
+		     <swe:pageitem id="4" property="FormattedHtml"/></TD> 
+             </tr>
+             <tr>
+                <td width=158>&nbsp;</td>
+                <td colspan=4 class=loginText><swe:pageitem id="3" property="FormattedHtml" />&nbsp;<swe:pageitem id="9" property="DisplayName" /></TD>
+             </tr>
+         <swe:error><tr><td style="height:2px" colspan=3><IMG src="images/spacer.gif" alt=""></td></tr></swe:error>
+       </table>
+      </td>
+
+     </table></td>
+    </tr>
+    </swe:form>
+</table>
+<swe:scripts/>
+
+<script language="JavaScript">userfocus()</script>
+</body>
+</html>
+  

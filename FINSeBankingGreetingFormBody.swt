@@ -1,0 +1,47 @@
+<!-- Template Start: FINSeBankingGreetingFormBody.swt -->
+
+<swe:control id="91">
+  <!-- Inside-applet help text -->
+  <tr><td colspan=4 class=FormInstruct>
+  <table cellpadding=4 cellspacing=0 border=0><tr><td><swe:this property="DisplayName" hintText="Inside Applet Help Text"/><p></td></tr></table>
+  </td></tr>
+</swe:control>
+
+<swe:control id="1231">
+  <!-- Long Field line, Top -->
+  <tr><td class=FormLabel align=right valign=baseline>&nbsp;<swe:this property="FormattedHtml" hintText="Long Label"/></td>
+  <td colspan=3 valign=baseline></swe:control>
+  <swe:control id="1331" property="FormattedHtml" hintText="Long Field"/>
+  <swe:control id="1231">&nbsp;</td></tr></swe:control>
+
+<!-- Begin Loop: Lines 1-30 -->
+<swe:for-each startValue="1101" count="30" iteratorName="currentId">
+
+<swe:control id="swe:currentId+100">
+  <!-- New line -->
+  <tr>
+  <td width="15%" valign=baseline align=right nowrap class=FormLabel>&nbsp;<div class='Welcome'><swe:this property="FormattedHtml" hintText="Label"/></div></td>
+  <td width=35% valign=baseline></swe:control>
+  <swe:control id="swe:currentId+200" property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/>
+  <swe:control id="swe:currentId+100">&nbsp;</td>
+
+  <td width="15%" valign=baseline align=right nowrap class=FormLabel>&nbsp;</swe:control>
+  <swe:control id="swe:currentId+1100" property="FormattedHtml" hintText="Label"/>
+  <swe:control id="swe:currentId+100"></td><td width=35% valign=baseline></swe:control>
+  <swe:control id="swe:currentId+1200" property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+1100"/>
+  <swe:control id="swe:currentId+100">&nbsp;</td></tr></swe:control>
+
+</swe:for-each>
+<!-- End Loop -->
+
+<swe:control id="1232">
+  <!-- Long Field line, Bottom -->
+  <tr><td class=FormLabel align=right valign=baseline>&nbsp;<swe:this property="FormattedHtml" hintText="Long Label"/></td>
+  <td colspan=3 valign=baseline></swe:control>
+  <swe:control id="1332" property="FormattedHtml" hintText="Long Field"/>
+  <swe:control id="1232">&nbsp;</td></tr></swe:control>
+
+<!-- Bottom form blank line -->
+<tr><td colspan=4 valign=baseline>&nbsp;</td></tr>
+
+<!-- Template End: FINSeBankingGreetingFormBody.swt -->

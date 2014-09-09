@@ -1,0 +1,25 @@
+<!-- Template Start: TCCOrderSummaryView.swt -->
+
+<swe:include file="CCHTMLHeader.swt"/>
+<swe:include file="CCTaskViewTitle.swt"/>
+<div class="siebui-telco-view3">
+	<div class="siebui-telco-prnt-row">
+		<div class="siebui-telco-view3Row1">
+			<swe:applet hintMapType="Applet" id="2" hintText="Child or Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+		</div>
+	</div>
+	<div class="siebui-telco-chld-row">
+		<div class="siebui-telco-view3Row2">
+			 <swe:applet hintMapType="Applet" id="3" hintText="Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+		</div>
+		<div class="siebui-telco-view3Row3">
+			<swe:applet hintMapType="Applet" id="4" hintText="Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+		</div>
+		<div class="siebui-telco-view3Row4">
+			<swe:applet hintMapType="Applet" id="5" hintText="Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+		</div>
+	</div>
+</div>
+<swe:include file="CCHTMLFooter.swt"/>
+
+<!-- Template Start: TCCOrderSummaryView.swt -->

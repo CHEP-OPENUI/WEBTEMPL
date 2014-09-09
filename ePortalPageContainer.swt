@@ -1,0 +1,139 @@
+<!-- Template Start: ePortalPageContainer.swt -->
+<HTML dir="swe:dir">
+<head>
+<title><swe:this property="Title"/></title>
+<link href="files/main.css" rel="stylesheet">
+<link href="files/main_eportal.css" rel="stylesheet">
+<SCRIPT language="javascript">
+var screen = "default";
+<swe:screenbar><swe:screenlink state="Active">screen = "<swe:screenname/>";</swe:screenlink></swe:screenbar>
+var file = screen.replace(/[\s]/g, "_");
+file = file.toLowerCase();
+document.write("<link href='files/eportal_" + file + ".css' rel='stylesheet'>");
+function getBanner()
+{
+ document.write("<img src='images/eportal_bnnr_" + file + ".gif' border=0>");
+}
+</SCRIPT>
+</head>
+
+<body bgcolor="#ffffff" leftmargin=0 topmargin=0 marginwidth=0 marginheight=0>
+<!--Banner-->
+<table datatable="0" summary="" width="100%" border="0" cellspacing="0" cellpadding="0" ><tr><td>
+<table datatable="0" summary="" class="bannerDiv" width="100%" border="0" cellspacing="0" cellpadding="0" >
+<tr><td><img src="images/spacer.gif" width="1" height="3" border="0" alt=""></td></tr>
+</table>
+<table datatable="0" summary="" cellpadding=0 cellspacing=0 border=0 class='banner'>
+<tr>
+<td width="50%"><script language="javascript">getBanner();</script></td>
+<td width="50%"><img src="images/spacer.gif" width="100%" height="58" border="0" alt=""></td>
+<td valign=top>
+<table datatable="0" summary="" cellpadding=0 cellspacing=0 border=0 class='banner'>
+<tr>
+<swe:for-each startValue="1" count="5" iteratorName="currentId">
+<swe:pageitem id="swe:currentId"><td><swe:this property="FormattedHtml" /></td></swe:pageitem>
+<swe:pageitem id="swe:currentId+1"><td><img src="images/eportal_custom_vert_div2.gif" width="16" height="17" border="0"></td></swe:pageitem>
+</swe:for-each>
+<td><img src="images/spacer.gif" width="10" height="20" border="0" alt=""></td>
+</tr>
+<tr><td class="bannerDiv2" colspan=10><img src="images/spacer.gif" width="1" height="1" border="0" alt=""></td></tr>
+<tr>
+<td align=center colspan=10><swe:image name="EPORTAL_LOGO" category="HTML Control Icons" width="190" height="30" border="0"/></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<!-- Screenbar -->
+<table datatable="0" summary="" width="100%" border="0" cellspacing="0" cellpadding="0" background="images/eportal_screenbar_tile.gif">
+<tr valign="absmiddle">
+<td width=10><img src="images/spacer.gif" width="10" height="20" border="0" alt=""></td>
+<td valign="absmiddle">
+<table datatable="0" summary="" cellpadding='0' cellspacing='0' border='0'>
+<tr>
+<swe:screenbar>
+<swe:screenlink state="Active">
+<td class='tabArrow'><img src='images/eportal_custom_vert_div6.gif' align='absmiddle' width='24' height='20' border='0'></td>
+<td class='tabOn' nowrap><swe:this property="FormattedHtml"><swe:screenname/>&nbsp;</swe:this></td>
+<td><img src='images/eportal_custom_vert_div7.gif' align='absmiddle' width='27' height='20' border='0'></td>
+</swe:screenlink>
+<swe:screenlink state="Inactive">
+<td nowrap class='tabOff'><swe:this property="FormattedHtml"><swe:screenname/>&nbsp;&nbsp;</swe:this>
+<img src='images/eportal_custom_vert_div5.gif' align='absmiddle' width='16' height='19' border='0'></td>
+</swe:screenlink>
+</swe:screenbar>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td></tr></table>
+
+<!-- Start Tier2 Nav-->
+<table datatable="0" summary="" class="tier2On" width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="tier2Off"><img src="images/spacer.gif" height="10" width="10" alt=""></td>
+<swe:viewbar>
+<swe:viewlink state="Inactive">
+<td class="tier2Off" ><img src="images/spacer.gif" height="22" width="10" alt=""></td>
+<td class="tier2Off"  nowrap>
+<swe:this property="FormattedHtml">
+<!--font color="#ffffff" class="tier2Off"-->
+<!--- viewname -->
+<swe:viewname/>
+<!--/font-->
+</swe:this>
+</td>
+<td class="tier2Off"><img src="images/spacer.gif" align="absmiddle" height="22" width="10" border="0" alt="">|</td>
+</swe:viewlink>
+<swe:viewlink state="Active">
+<td class="tier2On" ><img src="images/spacer.gif" height="22" width="10" alt=""></td>
+<td class="tier2On"  nowrap>
+<swe:this property="FormattedHtml">
+<!--font color="#ffffff" class="tier2On"-->
+<!--- viewname -->
+<swe:viewname/>
+<!--/font-->
+</swe:this>
+</td>
+<td class="tier2On"><img src="images/spacer.gif" align="absmiddle" height="22" width="10" alt="">|</td>
+</swe:viewlink>
+</swe:viewbar>
+
+<!-- Begin changes for special viewbar buttons to bring user directly to new mode -->
+<swe:pageitem id="21">
+<td class="tier2Off" ><img src="images/spacer.gif" align="absmiddle" height="22" width="10" alt=""></td>
+<td class="tier2Off" nowrap><swe:this property="FormattedHtml" />&nbsp;</td>
+<td class="tier2Off"><img src="images/spacer.gif" align="absmiddle" height="22" width="10" alt="">|</td>
+</swe:pageitem>
+<swe:pageitem id="22">
+<td class="tier2On" ><img src="images/spacer.gif" align="absmiddle" height="22" width="10" alt=""></td>
+<td class="tier2On"  nowrap><swe:this property="FormattedHtml" /> &nbsp;</td>
+<td class="tier2On"><img src="images/spacer.gif" align="absmiddle" height="22" width="10" alt="">|</td>
+</swe:pageitem>
+<!-- End changes for special viewbar buttons to bring user directly to new mode -->
+<td class="tier2Off" width="100%"><img src="images/spacer.gif" align="absmiddle" height="10" width="10" alt=""></td>
+</tr>
+</table>
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+	<tr>
+	<td valign="top" class="tier2Rule" align="right"><img src="images/spacer.gif" width="1" height="1" border="0" alt="" /></td>
+	</tr>
+</table>
+<img src="images/spacer.gif" height="5" width="10" alt=""><br>
+<!-- End Tier2 nav -->
+
+<!-- Start View -->
+<table datatable="0" summary="" border="0" cellspacing="0" cellpadding="1" width="100%" align="center">
+	<tr valign="top">
+		<td valign="top">
+			<swe:current-view/>
+		</td>
+	</tr>
+</table>
+<!-- End View -->
+<swe:scripts/>
+</BODY>
+</HTML>
+<!-- Template End: ePortalPageContainer.swt -->

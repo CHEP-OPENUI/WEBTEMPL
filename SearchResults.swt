@@ -1,0 +1,91 @@
+<!--  Template Start: SearchResults.swt -->
+
+<!-- Start Result Body Table -->
+<swe:form>
+<table width="100%" cellspacing="0" cellpadding="0" border="1" align="center" summary="swe:this.ListSummary">
+<tr valign="top" bgcolor="#B0C4DE">
+<td colspan="10">
+<!-- Search Results -->
+	<b>
+	<swe:control id="3000">
+		<swe:this property="DisplayName"  hintMapType="Control" hintText="Label"/>
+	</swe:control>
+	</b>&nbsp; &nbsp;
+<!-- Associate -->	
+	<b>
+	<swe:control id="3001">
+		<swe:this property="FormattedHtml"  hintMapType="Control" hintText="Attach"/>
+	</swe:control>
+	</b>
+<!-- Preview -->
+	<b>
+	 <swe:control id="3002"> <!-- CR 12-1O4OT91 -->
+		 <swe:this property="FormattedHtml"  hintMapType="Control" hintText="Preview"/>
+	 </swe:control>
+	</b>
+
+</td>	
+</tr>
+<!-- Start Result Body -->
+<tr>
+    <swe:control id="501">
+    	<td bgcolor="#B0C4DE" width="5%">
+        <font color="#FFFFFF"><swe:this property="DisplayName"/></font></td>  
+    </swe:control>
+<!-- Title -->
+    <swe:control id="502">
+        <td bgcolor="#B0C4DE" align="left" width="70%"scope="col">
+        <font color="#FFFFFF"><swe:this property="ListHeader"/></font></td>  
+    </swe:control>
+<!-- DataSource -->
+    <swe:control id="503">
+        <td bgcolor="#B0C4DE" align="left" width="15%"scope="col">
+        <font color="#FFFFFF"><swe:this property="ListHeader"/></font></td>  
+    </swe:control>
+<!-- Date -->
+    <swe:control id="504">
+        <td bgcolor="#B0C4DE" align="left" width="10%"scope="col">
+        <font color="#FFFFFF"><swe:this property="ListHeader"/></font></td>  
+    </swe:control>
+</tr>
+
+<tr>
+	<td align="center" colspan="10">
+		<swe:noResultsFound/>
+	</td>
+</tr> 
+    <swe:for-each-row count="10">
+	<tr class="swe:this.RowStyle">
+	<!-- Position on Row -->
+	<swe:control id="501">
+		<td align="swe:this.TextAlignment" class="Row">
+		<swe:this property="FormattedHtml" hintText="Selected Row" hintMapType="Control"/>
+		</td>
+	</swe:control>
+	<swe:select-row>
+		<td align="swe:this.TextAlignment" class="Row">
+		<swe:this property="FormattedHtml" />
+		</td>
+	</swe:select-row>
+	<!------------ Display all  Search Result Field ------------->
+	<swe:srchResultFieldList>
+	<swe:srchResultField>
+	<swe:this property="FormattedHtml"/>
+	</swe:srchResultField>
+	</swe:srchResultFieldList>
+	</tr> 
+    </swe:for-each-row>
+
+<!-- End Result Body -->
+	<tr><td align="right" colspan="10">
+	    <FONT color="Red">
+            	<swe:control id="2010">
+	   		<swe:this property="FormattedHtml"  hintMapType="Control" hintText="Label"/>
+		</swe:control>
+	     </FONT>
+	     </td>
+	</tr>
+</table>
+</swe:form>
+<!--  Template End: SearchResults.swt -->
+

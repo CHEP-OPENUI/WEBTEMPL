@@ -1,0 +1,16 @@
+<table datatable="0" summary="" border="0" bgcolor="#FAFAD2" width="100%">
+	<tr><td>
+
+			<swe:control id="1000">
+				        <swe:this property="FormattedHtml" hintMapType="Control"/>
+			</swe:control>
+	</td></tr>
+	<tr><td>
+			<swe:control id="1005">
+				        <swe:this property="FormattedHtml" hintMapType="Control"/>
+			</swe:control>
+			<swe:control id="1010">
+				        <swe:this property="FormattedHtml" hintMapType="Control"/>
+			</swe:control>
+	</td></tr>
+</table>

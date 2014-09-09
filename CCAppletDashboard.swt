@@ -1,0 +1,309 @@
+<!-- Template Start: CCAppletDashboard.swt -->
+
+<!--local override of CSS-->
+<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+
+<head>
+<style>.scField SELECT {	MARGIN: 0px; WIDTH: 120px;   }</style>
+</swe:if>
+
+</head>
+
+<table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr class="dashbrdBorder">
+		<td colspan="99">
+			<img src="images/spacer.gif" width="1" height="1" alt="">
+		</td>
+	</tr>
+
+              <swe:if condition="Web Engine State Properties, IsLowInteractive">
+              <tr class="dashbrdBack">
+                            <td colspan="99" nowrap>
+                                          <input type="text" value="Customer Dashboard" title="Customer Dashboard Title" tabindex = 1 READONLY>
+                            </td>
+              </tr>
+              
+              <tr class="dashbrdBorder">
+		<td colspan="99">
+			<img src="images/spacer.gif" width="1" height="1" alt="">
+		</td>
+              </tr>
+              </swe:if>
+</table>
+		
+<table datatable="0" summary="" width="100%" valign="top" cellpadding="0" cellspacing="0" border="0">
+	<swe:form>
+	<tr class="dashbrdBack">
+	    <td class="dashbrdBack"><img src="images/spacer.gif" width="7" height="2" border="0" alt=""></td>		  
+	    <td width="12%" class="dashbrdBack" nowrap>
+				<swe:control id="1200">
+					<div class="scLabelRight">
+						<!--placeholder for required-->
+						<swe:this property="FormattedHtml" hintText="Label"/>
+					</div>
+				</swe:control>
+
+		</td>
+		<td width="12%"  class="dashbrdBack" nowrap>
+				<swe:control id="1300">
+					<span align="swe:this.TextAlignment">
+					   <img src="images/spacer.gif" width="5" height="2" border="0" alt="">
+						<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/>
+					</span>
+				</swe:control>
+		</td>
+		<td class="dashbrdBack"><img src="images/spacer.gif" width="10" height="2" border="0" alt=""></td>	
+		<td width="12%" class="dashbrdBack" nowrap>
+				<swe:control id="1700">
+					<div class="scLabelRight">
+						<!--placeholder for required-->
+						<swe:this property="FormattedHtml" hintText="Label"/>
+					</div>
+				</swe:control>
+		</td>
+		<td width="12%"  class="dashbrdBack" nowrap>
+				<swe:control id="1800">
+					<span align="swe:this.TextAlignment">
+					   <img src="images/spacer.gif" width="5" height="2" border="0" alt="">
+						<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/>
+					</span>
+				</swe:control>
+		</td>
+		<td class="dashbrdBack"><img src="images/spacer.gif" width="10" height="2" border="0" alt=""></td>	
+		<td width="12%" class="dashbrdBack" nowrap>
+				<swe:control id="2200">
+					<div class="scLabelRight">
+						<!--placeholder for required-->
+						<swe:this property="FormattedHtml" hintText="Label"/>
+					</div>
+				</swe:control>
+		</td>
+		<td width="12%"  class="dashbrdBack" nowrap>
+				<swe:control id="2300">
+					<span align="swe:this.TextAlignment">
+					   <img src="images/spacer.gif" width="5" height="2" border="0" alt="">
+						<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/>
+					</span>
+				</swe:control>
+		</td>
+		<td class="dashbrdBack"><img src="images/spacer.gif" width="10" height="2" border="0" alt=""></td>	
+		<td width="15%" class="dashbrdBack" nowrap>
+				<swe:control id="2700">
+					<div class="scLabelRight">
+						<!--placeholder for required-->
+						<swe:this property="FormattedHtml" hintText="Label"/>
+					</div>
+				</swe:control>
+		</td>
+		<td width="15%"  class="dashbrdBack" nowrap>
+				<swe:control id="2800">					
+					<span align="swe:this.TextAlignment">
+					   <img src="images/spacer.gif" width="5" height="2" border="0" alt="">
+						<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/>
+					</span>
+				</swe:control>
+		</td>
+		
+		<td class="dashbrdBack" valign="top" align="right">
+			<table datatable="0" summary="" width="100%" cellpadding="4" cellspacing="0" border="0">
+				<tr>
+					<swe:control id="209">
+						<td valign="middle"><img src="images/btn_div.gif" height="13" align="middle" alt=""></td>
+					</swe:control>		
+					<td><swe:control id="209" property="FormattedHtml" hintText="Previous"/></td>
+					<td><swe:control id="210" property="FormattedHtml" hintText="Next"/></td>
+					<swe:control id="210">
+						<td valign="middle"><img src="images/btn_div.gif" height="13" align="middle" alt=""></td>
+					</swe:control>
+					
+					<swe:if condition="Web Engine State Properties, IsHighInteractive">
+						<td width="1" class="dashbrdBack"><swe:control id="211" property="FormattedHtml" hintText="Hide"/></td>
+					</swe:if>
+					<swe:if condition="Web Engine State Properties, IsLowInteractive">
+						<td width="1" class="dashbrdBack"><swe:control id="212" property="FormattedHtml" hintText="Hide"/></td>
+					</swe:if>
+				</tr>
+			</table>
+		</td>
+				
+		<td class="dashbrdBack"><img src="images/spacer.gif" width="4" height="2" border="0" alt=""></td>	
+	</tr>
+	
+	<tr class="dashbrdBack">		  
+	  
+	    <td class="dashbrdBack"><img src="images/spacer.gif" width="7" height="2" border="0" alt=""></td>
+	    <td width="12%"  class="dashbrdBack" nowrap>
+				<swe:control id="1201">
+					<div class="scLabelRight">
+						<!--placeholder for required-->
+						<swe:this property="FormattedHtml" hintText="Label"/>
+					</div>
+				</swe:control>
+		</td>
+		<td width="12%"  class="dashbrdBack" nowrap>
+				<swe:control id="1301">
+					<span align="swe:this.TextAlignment">
+					   <img src="images/spacer.gif" width="5" height="2" border="0" alt="">
+						<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/>
+					</span>
+				</swe:control>
+		</td>
+		<td class="dashbrdBack"><img src="images/spacer.gif" width="10" height="2" border="0" alt=""></td>	
+		<td width="12%" class="dashbrdBack" nowrap>
+				<swe:control id="1701">
+					<div class="scLabelRight">
+						<!--placeholder for required-->
+						<swe:this property="FormattedHtml" hintText="Label"/>
+					</div>
+				</swe:control>
+		</td>
+		<td width="12%" class="dashbrdBack" nowrap>
+				<swe:control id="1801">
+					<span align="swe:this.TextAlignment">
+					   <img src="images/spacer.gif" width="5" height="2" border="0" alt="">
+						<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/>
+					</span>
+				</swe:control>
+		</td>
+		<td class="dashbrdBack"><img src="images/spacer.gif" width="10" height="2" border="0" alt=""></td>	
+		<td width="12%" class="dashbrdBack" nowrap>
+				<swe:control id="2201">
+					<div class="scLabelRight">
+						<!--placeholder for required-->
+						<swe:this property="FormattedHtml" hintText="Label"/>
+					</div>
+				</swe:control>
+		</td>
+		<td width="12%"  class="dashbrdBack" nowrap>
+				<swe:control id="2301">
+					<span align="swe:this.TextAlignment">
+					   <img src="images/spacer.gif" width="5" height="2" border="0" alt="">
+						<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/>
+					</span>
+				</swe:control>
+		</td>
+		<td class="dashbrdBack"><img src="images/spacer.gif" width="10" height="2" border="0" alt=""></td>	
+		<td width="15%" class="dashbrdBack" nowrap>
+				<swe:control id="2701">
+					<div class="scLabelRight">
+						<!--placeholder for required-->
+						<swe:this property="FormattedHtml" hintText="Label"/>
+					</div>
+				</swe:control>	
+		</td>
+		<td width="15%" class="dashbrdBack" nowrap>
+			   <table datatable="0" summary="" cellpadding="0" cellspacing="0" border="0"><tr>
+			   <td><img src="images/spacer.gif" width="3" height="2" border="0" alt=""></td>
+				<td><swe:control id="2801">					
+					<span align="swe:this.TextAlignment">
+					   <img src="images/spacer.gif" width="5" height="2" border="0" alt="">
+						<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/>
+					</span>
+				</swe:control></td>
+				<swe:control id="2901">
+				<td><img src="images/spacer.gif" width="8" height="2" border="0" alt=""></td> 		
+				<td nowrap><swe:this property="FormattedHtml" hintText="Button"/></td>	
+				</swe:control>		
+				</tr></table>
+		</td>
+		<td class="dashbrdBack" nowrap align="right">
+			<table datatable="0" summary=""><tr>
+					<td><swe:control id="207" property="FormattedHtml" /></td>
+					<td><swe:control id="208" property="FormattedHtml" hintText="Update"/></td>
+			</tr></table>
+		</td>
+		<td class="dashbrdBack"><img src="images/spacer.gif" width="4" height="2" border="0" alt=""></td>	
+	</tr>
+		
+	<tr class="dashbrdBack">		  
+	    <td class="dashbrdBack"><img src="images/spacer.gif" width="7" height="2" border="0" alt=""></td>
+	    <td width="12%"  class="dashbrdBack" nowrap>
+				<swe:control id="1202">
+					<div class="scLabelRight">
+						<!--placeholder for required-->
+						<swe:this property="FormattedHtml" hintText="Label"/>
+					</div>
+				</swe:control>
+		</td>
+		<td width="12%"  class="dashbrdBack" nowrap>
+				<swe:control id="1302">
+					<span align="swe:this.TextAlignment">
+					   <img src="images/spacer.gif" width="5" height="2" border="0" alt="">
+						<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/>
+					</span>
+				</swe:control>
+		</td>
+		<td class="dashbrdBack"><img src="images/spacer.gif" width="10" height="2" border="0" alt=""></td>	
+		<td width="12%"  class="dashbrdBack" nowrap>
+				<swe:control id="1702">
+					<div class="scLabelRight">
+						<!--placeholder for required-->
+						<swe:this property="FormattedHtml" hintText="Label"/>
+					</div>
+				</swe:control>
+		</td>
+		<td width="12%"  class="dashbrdBack" nowrap>
+				<swe:control id="1802">
+					<span align="swe:this.TextAlignment">
+					   <img src="images/spacer.gif" width="5" height="2" border="0" alt="">
+						<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/>
+					</span>
+				</swe:control>
+		</td>
+		<td class="dashbrdBack"><img src="images/spacer.gif" width="10" height="2" border="0" alt=""></td>	
+		<td width="12%" class="dashbrdBack" nowrap>
+				<swe:control id="2202">
+					<div class="scLabelRight">
+						<!--placeholder for required-->
+						<swe:this property="FormattedHtml" hintText="Label"/>
+					</div>
+				</swe:control>
+		</td>
+		<td width="12%"  class="dashbrdBack" nowrap>
+				<swe:control id="2302">
+					<span align="swe:this.TextAlignment">
+					   <img src="images/spacer.gif" width="5" height="2" border="0" alt="">
+						<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/>
+					</span>
+				</swe:control>
+		</td>
+		<td class="dashbrdBack"><img src="images/spacer.gif" width="10" height="2" border="0" alt=""></td>	
+		<td width="15%" class="dashbrdBack" nowrap>
+				<swe:control id="2702">
+					<div class="scLabelRight">
+						<!--placeholder for required-->
+						<swe:this property="FormattedHtml" hintText="Label"/>
+					</div>
+				</swe:control>	
+		</td>
+		<td width="15%" class="dashbrdBack" nowrap>
+				<table datatable="0" summary="" cellpadding="0" cellspacing="0" border="0"><tr>
+				<td><swe:control id="2802">					
+					<span align="swe:this.TextAlignment">
+					   <img src="images/spacer.gif" width="5" height="2" border="0" alt="">
+						<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/>
+					</span>
+				</swe:control></td>
+				<swe:control id="2902">
+				<td><img src="images/spacer.gif" width="8" height="2" border="0" alt=""></td> 			
+				<td nowrap><swe:this property="FormattedHtml" hintText="Button"/></td>	
+				</swe:control>		
+				</tr></table>
+		</td>
+		<td></td>
+		<td class="dashbrdBack"><img src="images/spacer.gif" width="4" height="2" border="0" alt=""></td>	
+	</tr>	
+	
+	
+	</swe:form>
+</table>
+
+<table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr class="dashbrdBorder">
+		<td>
+			<img src="images/spacer.gif" width="1" height="1" alt="">
+		</td>
+	</tr>
+</table>
+
+<!-- Template End: CCAppletDashboard.swt -->

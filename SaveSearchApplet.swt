@@ -1,0 +1,49 @@
+<!--Template Start: SearchHeaderResults.swt -->
+<swe:form>
+<table datatable="0" summary="" border="0" width="100%">
+	<tr><td>&nbsp;</td></tr>
+	<tr><td>&nbsp;</td></tr>
+	<tr>
+		<td class="ColCaption" align="right">
+		<swe:control id="1000">
+			<swe:this property="FormattedHtml"  hintMapType="Control" hintText="Label"/>
+		</swe:control>
+		</td>
+		<td class="ColCaption" align="left">
+		<swe:control id="1005">
+			<swe:this property="FormattedHtml"  hintMapType="Control" hintText="Field"/>
+		</swe:control>
+		</td>
+	</tr>
+
+	<tr>
+		<td class="ColCaption" align="right" valign="top">
+		<swe:control id="1010">
+			<swe:this property="FormattedHtml"  hintMapType="Control" hintText="Label"/>
+		</swe:control>
+		</td>
+		<td class="ColCaption" align="left">
+		<swe:control id="1015">
+			<swe:this property="FormattedHtml"  hintMapType="Control" hintText="Field"/>
+		</swe:control>
+	</tr>
+	<tr><td>&nbsp;</td></tr>
+	<tr><td>&nbsp;</td></tr>
+	<tr>
+		<td>&nbsp;</td>
+	        <td valign="middle" align="right" colspan="10">
+	            <swe:control id="1020">
+			<swe:this property="FormattedHtml" hintMapType="Control"/>
+                    </swe:control>
+		    &nbsp;&nbsp;
+	            <swe:control id="1025">
+			<swe:this property="FormattedHtml" hintMapType="Control"/>
+                    </swe:control>
+                </td>
+	</tr>
+
+
+</table>
+</swe:form>
+
+<!--Template End: SearchHeaderResults.swt -->

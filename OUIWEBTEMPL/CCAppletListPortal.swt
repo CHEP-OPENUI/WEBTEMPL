@@ -1,0 +1,39 @@
+<!-- Template Start: CCAppletListPortal.swt -->
+<!-- Oliver:	Main Home Page MyAlerts Applet 		-->
+<!-- 			Table structure around GRID removed -->
+
+<swe:layout viewDisplayMode="Layout">
+	<swe:include file="CCApplet_Spacer.swt"/>
+	<swe:include file="CCLayoutTitlePortal.swt"/>
+</swe:layout>
+
+<swe:layout viewDisplayMode="Show" appletDisplayMode="Show">
+
+<swe:control id="1100">
+  <div class=CmdTxt><swe:this property="FormattedHtml" hintText="Outside Applet Help Text" hintMapType="Control"/></div><p>
+</swe:control>
+
+<div class="AppletStyle8">
+ <swe:form>
+
+	<div class="swe:this.SelectStyle">	
+	<swe:include file="CCTitle_PortalGraphical.swt"/>
+
+		<swe:layout viewDisplayMode="Show" appletDisplaySize="Max">
+			<swe:error>
+				<div class="siebui-error-txt"><swe:this property="FormattedHtml"/></div>
+			</swe:error> 
+			<swe:list>
+			<table valign="top" width="100%" cellpadding="2" cellspacing="1" border="0" datatable="1" summary="swe:this.ListSummary">
+				<swe:include file="CCListHeaderNoSort.swt"/>
+				<swe:include file="CCListBodyNoRowHilite.swt"/>
+			</table>
+			</swe:list>
+		</swe:layout>
+	</div>
+	
+ </swe:form>
+</div>
+</swe:layout>
+
+<!-- Template End: CCAppletListPortal.swt -->

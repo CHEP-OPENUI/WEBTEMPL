@@ -1,0 +1,17 @@
+<!-- Template Start: CCLogoutPage_ss.swt -->
+<HTML dir="swe:dir">
+    <head>
+        <title><swe:this property="Title"/></title>
+        <swe:include file="CCStylesChoice.swt"/>
+        <script language="JavaScript">
+            var newURL = window.location.protocol+"//"+window.location.host+""+window.location.pathname;
+            window.location.href=newURL;
+        </script>
+    </head>
+
+    <BODY >
+        <swe:scripts/>
+    </BODY>
+</HTML>
+
+<!-- Template End:  CCLogoutPage_ss.swt -->

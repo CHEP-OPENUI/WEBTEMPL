@@ -1,0 +1,42 @@
+<!-- Template Start: eCfgProductRawMode.swt -->
+<!-- This template is for showing the product which does not define any ui group -->
+<!-- Oliver: [code redesign], product modules -->
+
+<div  id="cxProdRaw" class="cxProdTheme">
+
+   <swe:for-each id="110" CfgLoopType="Attribute" startValue="1100" count="Dynamic" iteratorName="IncId" >
+      <div class="siebui-ecfg-feature-group">
+            <swe:include id="swe:110Id" CfgHtmlType="eCfgAttributeComboBox.swt" /> 
+      </div>
+   </swe:for-each>
+
+   <swe:for-each id="100" CfgLoopType="Port" startValue="2100" count="Dynamic" iteratorName="IncId" >
+       <div class="siebui-ecfg-feature-group">
+             <swe:include id="swe:210Id" CfgHtmlType="eCfgControlComboAdd.swt" /> 
+       </div>
+   </swe:for-each>
+
+   <div class="siebui-ecfg-linked-items-label">
+         <swe:control id="LinkedItem" CfgUIControl="lblLinkedItem" property="DisplayName" />
+   </div>
+   
+   <swe:for-each id="120" CfgLoopType="LinkedItem" startValue="3100" count="Dynamic" iteratorName="IncId" >
+       <div class="siebui-ecfg-linked-items">
+               <swe:include id="swe:310Id" CfgHtmlType="eCfgLinkedItem.swt" /> 
+       </div>
+   </swe:for-each>
+
+
+   <div class="siebui-ecfg-resource-items-label">
+         <swe:control id="Resource" CfgUIControl="lblResource" property="DisplayName" />
+   </div>
+
+   <swe:for-each id="140" CfgLoopType="Resource" startValue="4100" count="Dynamic" iteratorName="IncId" >
+      <div class="siebui-ecfg-resource-items">
+            <swe:include id="swe:410Id" CfgHtmlType="eCfgResource.swt" /> 
+      </div>
+   </swe:for-each>
+ 
+</div> <!-- end of product theme div -->
+
+<!-- Template End: eCfgProductRawMode.swt -->

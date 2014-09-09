@@ -1,0 +1,35 @@
+<!--
+<head><link href="files/dCCmain.css" rel="stylesheet"/></head>
+<div class="toolbar" style="display:block;position:absolute;top:0;left:0;width:100%;height:100%">
+    <TABLE datatable="0" summary="">				
+		<swe:if condition="Web Engine State Properties, IsHighInteractive">
+		   <tr>
+		      <td nowrap><swe:toolbar name="SearchCenter ActionPane"><swe:toolbaritem property="FormattedHtml"/></swe:toolbar></td>	
+			   <td>&nbsp;</td>	
+         </tr>
+         
+         <tr>		
+		      <td nowrap><swe:toolbar name="Task Assistant ActionPane"><swe:toolbaritem property="FormattedHtml"/></swe:toolbar>	
+			   <td>&nbsp;</td>	
+         </tr>
+
+         <tr>	
+			   <td nowrap><swe:toolbar name="Task Pane ActionPane"><swe:toolbaritem property="FormattedHtml"/></swe:toolbar>	
+			   <td>&nbsp;</td>	
+         </tr>
+		</swe:if>
+		
+		<swe:if condition="Web Engine State Properties, IsLowInteractive">
+		   <tr>
+   			<td nowrap><swe:toolbar name="SearchToolbar Hybrid"><swe:toolbaritem property="FormattedHtml"/></swe:toolbar></td>
+   			<td>&nbsp;</td>	
+		   </tr>
+				
+			<tr>	
+				<td nowrap><swe:toolbar name="Task Assistant Hybrid"><swe:toolbaritem property="FormattedHtml"/></swe:toolbar></td>
+				<td>&nbsp;</td>	
+			</tr>
+		</swe:if>
+	</TABLE>
+</div>
+-->

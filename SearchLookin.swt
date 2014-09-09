@@ -1,0 +1,133 @@
+<!-- Template Start -->
+<script>
+
+	function Navigate(val, textVal)
+	{
+		SWETargetGotoURL (val + "&TextFieldValue="+textVal, window);
+	}
+	
+</script>
+
+<!--<swe:form htmlAttr="onsubmit='SubmitSearch(); return false;'">-->
+<swe:form htmlAttr="onsubmit='return false;'">
+<swe:if condition="Web Engine State Properties, IsPrintOff">
+	 <div class="swe:this.SelectStyle"> 
+<table width="100%" cellpadding="0" cellspacing="0" border="0" align="center" class="AppletBack"><tr><td class="AppletHIFormBorder">
+</swe:if>
+<table datatable="0" summary="" border="0" width="100%" cols="2" align="center" class="AppletBack" bgcolor="#ffffff" cellspacing="0">
+<tr bgcolor="#B0C4DE">
+        
+	<swe:control id="2017">
+	<td  class="AppletTitle" nowrap width="60%">&nbsp;
+	    <b><swe:this property="DisplayName"  hintMapType="Control" hintText="Label"/></b>
+	 </td>
+	</swe:control>
+	
+	<swe:if condition="Web Engine State Properties, IsHighInteractive">
+	<swe:control id="2000">
+        <td  class="AppletTitle" align="right" width="40%">&nbsp;         	
+		<swe:this property="FormattedHtml" hintMapType="Hide Icon"/>
+	</td>
+        </swe:control>
+    </swe:if>
+    <swe:if condition="Web Engine State Properties, IsLowInteractive">
+	<swe:control id="2019">
+        <td  class="AppletTitle" align="right" width="40%">&nbsp;         	
+		<swe:this property="FormattedHtml" hintMapType="Hide Icon"/>
+	</td>
+        </swe:control>
+    </swe:if>
+</tr>
+
+<tr bgcolor="#d5e0f4">
+	<td colspan="2" width="100%">&nbsp;</td>
+</tr>
+
+<tr bgcolor="#d5e0f4">
+	<td align="left" width="100%" colspan="2">&nbsp;
+	<swe:control id="2001">
+		<swe:this property="DisplayName"  hintMapType="Control" hintText="Label"/>
+	</swe:control>
+	</td>
+</tr>
+<tr bgcolor="#d5e0f4">
+	<td width="100%" colspan="2">&nbsp;
+	<swe:control id="2002">
+		<swe:this property="FormattedHtml" hintMapType="Control" hintText="Field"/>
+	</swe:control>
+	</td>
+</tr>
+
+<tr bgcolor="#d5e0f4">
+	<td align="left" width="100%" colspan="2">&nbsp;
+	<swe:control id="2003">
+		<swe:this property="DisplayName"  hintMapType="Control" hintText="Label"/>
+	</swe:control>
+	</td>
+</tr>
+<tr bgcolor="#d5e0f4">
+	<td width="100%" colspan="2">&nbsp;
+	<swe:control id="2004">
+		<swe:this property="FormattedHtml" hintMapType="Control" hintText="Field"/>
+	</swe:control>
+	</td>
+</tr>
+
+
+        <!-- For the controls below the <TR> and <TD> is painted from the code -->
+	<swe:control id="2005">
+		<swe:this property="FormattedHtml" hintMapType="Control" hintText="Label"/>
+	</swe:control>
+	
+<tr bgcolor="#d5e0f4">
+    <td  colspan="2" width="100%">&nbsp;</td>
+</tr>
+
+<tr bgcolor="#d5e0f4">
+	<td width="100%" colspan="2">&nbsp;
+	</td>
+</tr>
+
+<tr bgcolor="#d5e0f4">
+	<td width="100%" colspan="2">&nbsp;
+	<swe:control id="2013">
+		<swe:this property="FormattedHtml"  hintMapType="Control" hintText="Control"/>
+	</swe:control>
+        &nbsp;|&nbsp;
+	<swe:control id="2014">
+		<swe:this property="FormattedHtml" hintMapType="Control" hintText="Control"/>
+	</swe:control>
+	</td>
+</tr>
+<tr bgcolor="#d5e0f4">
+	<td  colspan="2" width="100%">&nbsp;</td>
+</tr>
+<tr bgcolor="#d5e0f4">
+	<swe:if condition="Web Engine State Properties, IsHighInteractive">
+	<td colspan="2" align="leftt" width="100%">&nbsp;
+	<b>	
+	<swe:control id="2015">
+		<swe:this property="FormattedHtml"  hintMapType="Control" hintText="Control"/>
+	</swe:control>	
+	</b>
+	</td>
+	</swe:if>
+	<swe:if condition="Web Engine State Properties, IsLowInteractive">
+	<td colspan="2" align="leftt" width="100%">&nbsp;
+	<b>	
+	<swe:control id="2018">
+		<swe:this property="FormattedHtml"  hintMapType="Control" hintText="Control"/>
+	</swe:control>	
+	</b>
+	</td>
+	</swe:if>
+
+
+
+</tr>
+</table>
+<swe:if condition="Web Engine State Properties, IsPrintOff">
+	</div>	
+</swe:if>
+</swe:form>
+<!--Template End: -->

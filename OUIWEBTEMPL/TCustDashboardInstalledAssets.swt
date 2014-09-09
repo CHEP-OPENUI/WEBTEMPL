@@ -1,0 +1,27 @@
+<!-- Template Start: TCustDashboardInstalledAssets.swt -->
+
+
+<swe:form>
+    <div class="swe:this.SelectStyle">
+        <swe:include file="TCCFormButtonsTopNoMenu.swt"/>
+        <div class="siebui-applet-form-content siebui-applet-left-align">
+            <swe:for-each startValue="1101" count="15" iteratorName="currentId">
+                <swe:control id="swe:currentId" hintMapType="FormItem">
+                    <div class="siebui-list-applet-control">
+                        <div class="siebui-applet-control-label" align="swe:this.TextAlignmentLabel">
+                            <swe:this property="DisplayName" hintText="Label"/>
+                        </div>
+                        <div class="siebui-applet-control-field" align="swe:this.TextAlignment">
+                            <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+                        </div>
+                    </div>
+                </swe:control>
+            </swe:for-each>
+        </div>
+        <swe:control id="swe:currentId"></swe:control>
+        <div class="siebui-custdash-row2-image">
+            <swe:control id="2018"><swe:this property="FormattedHtml" hintText="Image"/></swe:control> 
+        </div>
+    </div>
+</swe:form>
+<!--Template End: TCustDashboardInstalledAssets.swt -->

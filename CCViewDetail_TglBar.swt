@@ -1,0 +1,43 @@
+<!--  Template Start: ERMViewDetail_TglBar.swt (copied from CCViewDetail2.swt) -->
+<swe:include file="CCHTMLHeader.swt"/>
+
+<swe:include file="CCTaskViewTitle.swt"/>
+
+<!-- ---------- Threadbar and Mini-Applet ----------------->
+<table datatable="0" summary="" border="0" cellspacing="0" cellpadding="1" width="100%">
+  <tr>
+	<swe:if condition="Web Engine State Properties, IsLowInteractive">
+    <td valign="absmiddle">
+		<swe:include file="CCThreadbar.swt"/>
+	</td>
+	</swe:if>
+	<swe:applet id="201" hintText="Mini-Applet">
+	    <td align="right"><swe:this property="FormattedHTML"/></td>
+		<td>&nbsp;&nbsp;&nbsp;</td>
+	</swe:applet>	
+		
+  </tr>
+</table> 
+<!-- ---------- End Threadbar and Mini-Applet ------------->
+
+<!-- ---------- Main Content Area ---------------------------->
+
+<swe:applet hintMapType="Applet" id="1" hintText="Parent Applet" property="FormattedHtml" var="Parent"/>
+
+<swe:applet hintMapType="Applet" id="2" hintText="Child Applet" property="FormattedHtml" var="Grandchild">
+<swe:include file="CCApplet_Spacer.swt"/><swe:this/>
+</swe:applet>
+
+<swe:for-each count="20" iteratorName="currentId" startValue="3">
+	<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+</swe:for-each>
+
+<swe:for-each count="20" iteratorName="currentId" startValue="23">
+	<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Grandchild Applet With Toggle Tab" property="FormattedHtml" var="Grandchild"/>
+</swe:for-each>
+
+<swe:include file="CCHTMLFooter.swt"/>
+
+<!-- ---------- End Main Content Area ------------------------>
+
+<!--  Template End: ERMViewDetail_TglBar.swt -->

@@ -1,0 +1,77 @@
+<!-- Template Start: ERMReport_Form.swt -->
+
+
+<span class="reportTxtLarge"><swe:this property="Title"/><p></span>
+
+<table datatable="0" summary="" class="reportBox">
+
+<swe:for-each startValue="1201" count="2" iteratorName="currentId">
+	
+	<swe:control id="swe:currentId+100"><tr valign="top"></swe:control>
+		
+		<swe:control id="swe:currentId">
+			<td class="reportLbl"><swe:this property="FormattedHtml" hintText="Mappable Label"/></td>
+		</swe:control>
+		<swe:control id="swe:currentId+100">
+			<td width="50%" class="reportFld"><swe:this property="FormattedHtml" hintText="Field"/>
+		</swe:control>
+		<swe:control id="swe:currentId+200">
+			<br><swe:this property="FormattedHtml" hintText="Field"/>
+		</swe:control>		
+		<swe:control id="swe:currentId+100">
+			</td>
+		</swe:control>
+
+		<swe:control id="swe:currentId+1000">
+			<td class="reportLbl"><swe:this property="FormattedHtml" hintText="Mappable Label"/></td>
+		</swe:control>
+		<swe:control id="swe:currentId+1100">
+			<td width="50%" class="reportFld"><swe:this property="FormattedHtml" hintText="Field"/>
+		</swe:control>
+		<swe:control id="swe:currentId+1200">
+			<br><swe:this property="FormattedHtml" hintText="Field"/>
+		</swe:control>		
+		<swe:control id="swe:currentId+1100">
+			</td>
+		</swe:control>
+		
+	<swe:control id="swe:currentId+100"></tr></swe:control>
+
+</swe:for-each>
+
+<swe:for-each startValue="1303" count="4" iteratorName="currentId">	
+	<swe:control id="swe:currentId"><tr valign="top"></swe:control>
+		<swe:control id="swe:currentId">
+			<td class="reportLbl"><swe:this property="DisplayName"/>:</td>
+			<td width="50%" class="reportFld"><swe:this property="FormattedHtml" hintText="Field"/></td>
+		</swe:control>
+		<swe:control id="swe:currentId+1000">
+			<td class="reportLbl"><swe:this property="DisplayName"/>:</td>
+			<td width="50%" class="reportFld"><swe:this property="FormattedHtml" hintText="Field"/></td>
+		</swe:control>
+	<swe:control id="swe:currentId"></tr></swe:control>
+</swe:for-each>
+	
+	
+</table>
+
+<p>
+
+<table datatable="0" summary=""><tr><td>
+
+<swe:for-each startValue="1211" count="4" iteratorName="currentId">
+		
+	<swe:control id="swe:currentId">
+		<span class="reportLbl"><swe:this property="FormattedHtml" hintText="Mappable Label "/></span><br>
+	</swe:control>
+	<swe:control id="swe:currentId+100">
+		<span class="reportFld"><swe:this property="FormattedHtml" hintText="Field"/></span><p>
+	</swe:control>
+
+</swe:for-each>	
+	
+</td></tr></table>
+
+
+
+<!-- Template End: ERMReport_Form.swt -->

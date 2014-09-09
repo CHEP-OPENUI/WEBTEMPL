@@ -1,0 +1,17 @@
+<!-- Template Start: dCCAppletListDetailedImgBullet.swt -->
+
+<swe:form>
+   <swe:include file="LSStdAppletHeader.swt"/>
+   <swe:layout viewDisplayMode="Show" appletDisplaySize="Max">
+
+      <swe:include file="dCCTitle_Mapped.swt"/>			
+      <swe:include file="CCTogglebar_drop.swt"/>
+
+      <table width="100%" cellpadding="1" cellspacing="0" border="0" align="center"><tr><td class="AppletBorder">
+         <table class="AppletBack" valign="top" width="100%" cellpadding="3" cellspacing="0" border="0">
+            <swe:include file="LS_AppletListBodyImgBulletDetailed.swt"/>	
+         </table>	
+      </td></tr></table>
+   </swe:layout>
+</swe:form>
+<!-- Template End: dCCAppletListDetailedImgBullet.swt -->

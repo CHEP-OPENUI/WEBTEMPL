@@ -1,0 +1,18 @@
+<!-- Template Start: dCCHTMLHeader_Hybrid.swt -->
+<swe:switch>
+	<swe:case condition="Web Engine State Properties, IsFrameless">
+		<span/>
+	</swe:case>
+
+	<swe:default>
+		<HTML dir="swe:dir">
+		<head>
+			<title><swe:this property="Title"/></title>
+			<swe:include file="CCStylesChoice.swt"/>
+		</head>
+		<body bgcolor="#ffffff"  leftmargin="5" topmargin="2" marginwidth="20" marginheight="2">
+	</swe:default>
+</swe:switch>
+<!-- Template End: dCCHTMLHeader_Hybrid.swt -->
+
+

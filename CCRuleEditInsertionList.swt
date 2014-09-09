@@ -1,0 +1,140 @@
+<!-- Template Start: CCRuleEditInsertionList.swt -->
+
+<swe:include file="CCApplet_NamedSpacer.swt"/>	
+
+<swe:control id="1100"><div class=CmdTxt><swe:this property="FormattedHtml" hintText="Outside Applet Help Text" hintMapType="Control"/></div><p></swe:control>
+
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+	<swe:form>
+	<tr valign="top">
+		<td>
+			<swe:if-var name="Grandchild"><span class="AppletStyle7"><swe:include file="CCTitle.swt"/></swe:if-var>			
+			<swe:if-var name="ChildWithPointer"><span class="AppletStyle3"></swe:if-var>				
+			<swe:if-var name="Child"><span class="AppletStyle3"></swe:if-var>	
+			<swe:if-var name="ParentWithPointer"><span class="AppletStyle1"><swe:include file="CCTitle.swt"/></swe:if-var>
+			<swe:if-var name="Parent"><span class="AppletStyle1"><swe:include file="CCTitle.swt"/></swe:if-var>		
+		
+<!-- Copied/modified CCListButtonsTop.swt -->
+
+
+	<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">		
+		<!-- button row-->
+		<tr class="AppletButtons">
+			<td><img src="images/spacer.gif" height="1" width="10" alt=""></td>
+			<td colspan="2">
+				<table datatable="0" summary="" cellpadding="2" cellspacing="0" border="0">
+					<tr class="AppletButtons">	
+						
+						<swe:include file="CCListButtons.swt"/>											
+                                                
+                                                <swe:include file="CCRecordNav.swt"/>
+
+						<td><swe:include file="CCTogglebar_drop.swt"/></td>		
+					</tr>
+				</table>		
+			</td>		
+			
+			<td align="right" width="100%">
+				<table datatable="0" summary="" cellpadding="2" cellspacing="0" border="0">
+					<tr class="AppletButtons">						
+						<td width="100%"><img src="images/spacer.gif" valign="top" width="1" height="1" alt=""></td>	
+						<swe:include file="CCListButtonsTopRight.swt"/>	
+					</tr>
+				</table>		
+			</td>			
+			<td valign="top" align="right"><img src="images/rnd_top_cls_d.gif" valign="top" width="6" height="6" alt=""></td>			
+		</tr>
+	
+	</table>
+	
+<!-- End Copied/modified CCListButtonsTop.swt -->  
+			
+				<swe:error>
+					<table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="4" cellspacing="0" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/><br>&nbsp;</td></tr></table>
+				</swe:error>	
+				<table datatable="0" summary="" bgcolor="#cccccc" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0"><tr valign="top"><td>
+				<table valign="top" width="100%" cellpadding="2" cellspacing="1" border="0" datatable="1" summary="swe:this.ListSummary">
+				   <swe:include file="CCListHeader.swt"/>
+
+                                <swe:for-each-row count="15">
+
+                                <tr>  
+
+                                <swe:control id="144">
+                                  <!--  Select 144 -->
+                                  <td width="42" align="center" class="Row"><swe:this property="FormattedHtml" hintText="Selected Row" hintMapType="Control"/></td>
+                                </swe:control>
+
+                                <swe:control id="147">
+                                <!--  Pick 147 -->
+                                  <td width="42" align="center" class="Row"><swe:this property="FormattedHtml" hintText="Pick Control" hintMapType="Control"/></td>
+                                </swe:control>
+
+                                <swe:select-row>
+                                   <td width="42" align="center" class="Row"><swe:this property="FormattedHtml" /></td>
+                                </swe:select-row>
+
+                                <!-- ---------- List Field Values (501-520) ------------->
+                                <swe:for-each startValue="501" count="20" iteratorName="currentId">
+                                  <swe:control id="swe:currentId">
+                                    <td align="swe:this.TextAlignment" class="Row" scope="swe:this.RowScope"><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></td>
+                                  </swe:control> 
+                                </swe:for-each>
+
+                                <!-- ---------- Per-record Control Buttons (Edit,Delete,Save / 132,133,146) ------------->
+                                <swe:control id="132">
+                                <!--  Edit, 132 -->
+                                  <td align="center" class="Row"><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+                                </swe:control>
+
+                                <swe:control id="133">
+                                <!--  Delete, 133 -->
+                                  <td align="center" class="Row"><swe:this property="FormattedHtml"  hintMapType="Control"/></td>
+                                </swe:control>
+
+                                <swe:control id="142">
+                                <!--  Optional, 142 -->
+                                  <td align="center" class="Row"><swe:this property="FormattedHtml"  hintMapType="Control"/></td>
+                                </swe:control>
+
+                                <swe:control id="143">
+                                <!--  Optional, 143 -->
+                                  <td align="center" class="Row"><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+                                </swe:control>
+
+                                <swe:control id="145">
+                                <!--  Optional, 145 -->
+                                  <td align="center" class="Row"><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+                                </swe:control>
+
+                                <swe:control id="146">
+                                <!--  Optional, 146 -->
+                                  <td align="center" class="Row"><swe:this property="FormattedHtml" hintText="Save" hintMapType="Control"/></td>
+                                </swe:control>
+
+                                </tr>
+
+
+                                <!-- ---------- End Loop ------------->
+                                </swe:for-each-row>
+
+				</table>
+				</td></tr></table>
+			
+				<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0"><tr class="AppletButtons"><td><img src="images/spacer.gif" width="44" height="2" align="top" alt="" /></td></tr></table>	
+			
+			<swe:if-var name="Parent"></span></swe:if-var>
+			<swe:if-var name="ParentWithPointer"><swe:include file="CCBottomAppletPntr.swt"/></span></swe:if-var>
+			<swe:if-var name="Child"></span></swe:if-var>	
+			<swe:if-var name="ChildWithPointer"><swe:include file="CCBottomAppletPntr.swt"/></span></swe:if-var>	
+			<swe:if-var name="Grandchild"></span></swe:if-var>	
+
+
+		</td>
+	</tr>
+	</swe:form>	
+</table>
+
+<!-- Template End: CCRuleEditInsertionList.swt-->
+
+

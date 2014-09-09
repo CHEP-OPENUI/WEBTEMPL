@@ -1,0 +1,19 @@
+<!--  Template Start: TCCFormButtonsTopNoMenu.swt -->  
+<table class ="siebui-tapplet-header">
+    <tr class="AppletButtons AppletBackTable AppletBack">
+        <td class="AppletTitle siebui-tapplet-title">
+            <swe:control id=90>
+                <swe:this  property = "FormattedHtml"/>
+                <div style='display:none;'>
+            </swe:control>
+            <swe:this property="Title"/>
+                <swe:control id=90>
+                </div>
+            </swe:control>
+        </td>
+        <swe:include file="CCRecordNav.swt"/>  
+        <swe:include file="CCFormButtonsTopRight.swt"/>
+        <td class="siebui-collapsible-applet-container"></td>
+    </tr>
+</table>
+<!--  Template End: TCCFormButtonsTopNoMenu.swt -->

@@ -1,0 +1,117 @@
+<!-- Template Start: eCfgAtt_HeaderJS.swt -->
+
+<div id="eCfgAtt_HeaderJS_PUI_1"></div>
+<SCRIPT>
+   var sParentPath = '<swe:control id="swe:IncId+520" CfgFieldName="Parent Path" CfgHtmlType="CfgLabel" />';
+   var sAttributeId = '<swe:control id="swe:IncId+520" CfgFieldName="AttID" CfgHtmlType="CfgLabel" DisplayMode="EncodeData" />';
+
+   // PUI CFG: Open Issue
+   var strHTML = '<A Name="' +  sParentPath + "_" + sAttributeId + '"></A>';
+   if (typeof (IsOpenUI) != "undefined" && IsOpenUI())
+   {
+      // DO SOMETHING
+      var strId = "eCfgAtt_HeaderJS_PUI_1_" + sParentPath + "_" + sAttributeId;
+      $("#eCfgAtt_HeaderJS_PUI_1")[0].id = strId;
+      $("#"+strId).html(strHTML);
+   }
+   else
+   {
+      document.write (strHTML);
+   }
+</SCRIPT>
+
+<div class="NotSelected">
+<table datatable="0" summary="" border="0" width="100%" cellpadding="2" cellspacing="0">
+   <swe:switch>
+      <swe:case condition="Default, AreEmptyFields, Operator:and, FieldName0:.Description, FieldName1:.LearnMore">
+         <tr class="AppletButtons">
+            <td>
+            <table>
+            <tr><td>
+               <div class="div-table">
+                  <div class="div-table-row">
+                     <div class="div-table-col"><strong><swe:control id="swe:IncId+20" CfgFieldName="Attribute Display Name" CfgHtmlType="CfgLabel" /></strong></div>
+                     <div class="div-table-col"><swe:control id="swe:IncId + 2550" CfgHtmlType="CfgGenerics" /></div>
+                  </div>
+               </div>
+            </td>
+            <td class="dCCItemSectionTitle" rowspan="1">
+      </swe:case>
+      <swe:default>
+         <tr class="AppletButtons">
+            <td>
+            <table>
+            <tr><td>
+               <div class="div-table">
+                  <div class="div-table-row">
+                     <div class="div-table-col"><strong><swe:control id="swe:IncId+20" CfgFieldName="Attribute Display Name" CfgHtmlType="CfgLabel" /></strong></div>
+                     <div class="div-table-col"><swe:control id="swe:IncId + 2550" CfgHtmlType="CfgGenerics" /></div>
+                  </div>
+               </div>
+            </td>
+            <td class="dCCItemSectionTitle" rowspan="2">
+      </swe:default>
+   </swe:switch>
+               <div id="eCfgAtt_HeaderJS_PUI_2"></div>
+               <SCRIPT>
+                  var sImage        = '<swe:control id="swe:IncId + 50" CfgFieldName=".Image" CfgHtmlType="CfgLabel"/>';
+                  var sParentPath = '<swe:control id="swe:IncId+520" CfgFieldName="Parent Path" CfgHtmlType="CfgLabel" />';
+                  var sAttributeId = '<swe:control id="swe:IncId+520" CfgFieldName="AttID" CfgHtmlType="CfgLabel" DisplayMode="EncodeData" />';
+                  if ( 0 == sImage.length )
+                     sImage = 'images/eCfgInvisibleSpacer.gif';
+
+                  // PUI CFG: Open Issue
+                  var strHTML = '<img id="img_' + sParentPath + "_" + sAttributeId + '" border="0" src="' + sImage + '" alt="" align="right">';
+                  if (typeof (IsOpenUI) != "undefined" && IsOpenUI())
+                  {
+                     // DO SOMETHING
+                     var strId = "eCfgAtt_HeaderJS_PUI_2_" + sParentPath + "_" + sAttributeId;
+                     $("#eCfgAtt_HeaderJS_PUI_2")[0].id = strId;
+                     $("#"+strId).html(strHTML);
+                  }
+                  else
+                  {
+                     document.write (strHTML);
+                  }
+               </SCRIPT>
+            </td>
+         </tr>
+   <swe:switch>
+      <swe:case condition="Default, AreEmptyFields, Operator:and, FieldName0:.Description, FieldName1:.LearnMore">
+      </swe:case>
+      <swe:default>
+         <tr>
+            <td>
+               <font>
+                  <swe:control id="swe:IncId + 150" CfgFieldName=".Description" CfgHtmlType="CfgLabel" />
+               </font>
+               <font>&nbsp;&nbsp;
+                  <div id="eCfgAtt_HeaderJS_PUI_3"></div>
+                  <SCRIPT>
+                     var sLearnMoreURL = '<swe:control id="swe:IncId + 250" CfgFieldName=".LearnMore" CfgHtmlType="CfgLabel" />';
+                     var sLearnMore    = '<swe:control id="LearnMore" CfgUIControl="lblLearnMore" CfgHtmlType="CfgLabel"/>';
+                     if ( 0 != sLearnMoreURL.length )
+                     {
+                        // PUI CFG: Open Issue
+                        var strHTML = '(<a href="' + sLearnMoreURL + '" TARGET="_blank"><img border="0" src="images/icon_watching.gif"><img border="0" src="images/eCfgInvisibleSpacer.gif" alt="">' + sLearnMore + '</a>)';
+                        if (typeof (IsOpenUI) != "undefined" && IsOpenUI())
+                        {
+                           // DO SOMETHING
+                           var strId = "eCfgAtt_HeaderJS_PUI_3_" + sParentPath + "_" + sAttributeId;
+                           $("#eCfgAtt_HeaderJS_PUI_3")[0].id = strId;
+                           $("#"+strId).html('(<a href="' + sLearnMoreURL + '" TARGET="_blank"><img border="0" src="images/icon_watching.gif"><img border="0" src="images/eCfgInvisibleSpacer.gif" alt="">' + sLearnMore + '</a>)');
+                        }
+                        else
+                        {
+                           document.write ( '(<a href="' + sLearnMoreURL + '" TARGET="_blank"><img border="0" src="images/icon_watching.gif"><img border="0" src="images/eCfgInvisibleSpacer.gif" alt="">' + sLearnMore + '</a>)' );
+                        }
+                     }
+                  </SCRIPT>
+               </font>
+            </td>
+          </tr>
+      </swe:default>
+   </swe:switch>
+   </td></tr></table>
+
+<!-- Template End: eCfgAtt_HeaderJS.swt -->

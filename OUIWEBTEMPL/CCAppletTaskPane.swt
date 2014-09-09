@@ -1,0 +1,38 @@
+<!-- Template Start: CCAppletTaskPane.swt -->
+
+        <!-- for QTP automation in HI, clickable elements need s_ prefix so that QTP recognizes the click 
+        as a Siebel event and doesn't create its own recording event. Otherwise, get two recording events. -->
+
+		<!-- Oliver: HTML clean up -->
+		
+<div id="s_TaskPane">
+
+    <!-- task list header -->
+    <div id="taskpaneHeader">
+		<span id="IDS_TASKPANE_CAPTION" class="taskCaption"></span>
+		<a id="s_close">
+			<!-- swe:control id="101"><swe:this property="FormattedHtml" hintMapType="Control" hintText="CloseTaskPane" /></swe:control -->
+		</a>
+    </div><!-- end of taskpaneHeader -->
+
+    <div id="taskList" class="tasklist1">
+		<div id="taskContainer">
+			<div id="taskControl">
+				<swe:control id="107"><swe:this property="FormattedHtml" hintMapType="Control" hintText="TaskPaneActiveXCtrl" /></swe:control>
+			</div>
+			<div id="progressBar">
+				<span id="IDS_TASKPANE_PROGRESS" class="taskProgress"></span>
+			</div>			
+		</div>   
+    </div><!-- end of taskList -->
+
+    <div id="taskpaneFooter">
+		<swe:if condition="Task UI Service (SWE), HasInboxView">    
+			<a id="s_gotoinbox" class="returnLink arrowForward">
+				<span id="IDS_TASKPANE_GOTOINBOX"></span>
+			</a>
+		</swe:if>
+    </div><!-- end of taskFooter -->
+	
+</div>
+<!-- Template End: CCAppletTaskPane.swt -->

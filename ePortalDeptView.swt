@@ -1,0 +1,68 @@
+<!-- Template Start: ePortalDeptView.swt -->
+<swe:include file="CCHTMLHeader.swt"/>
+<table datatable="0" summary="" width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td 		class="viewBlank" colspan=1><img src="images/spacer.gif" width="1" height="1" border="0" alt=""></td>	
+		<td 		class="viewBlank" colspan=1><img src="images/spacer.gif" width="1" height="1" border="0" alt=""></td>	
+		<td 		class="viewBlank" colspan=1><img src="images/spacer.gif" width="1" height="1" border="0" alt=""></td>	
+		<td 		class="viewBlank" colspan=1><img src="images/spacer.gif" width="1" height="1" border="0" alt=""></td>	
+		<td         class="viewBlank" colspan=1><img src="images/spacer.gif" width="1" height="1" border="0" alt=""></td>
+		<td width=1 class="viewRule"  colspan=1><img src="images/spacer.gif" width="1" height="1" border="0" alt=""></td>
+		<td width=1 class="viewRule"  colspan=1><img src="images/spacer.gif" width="1" height="1" border="0" alt=""></td>
+		<td         class="viewBlank" colspan=5><img src="images/spacer.gif" width="1" height="1" border="0" alt=""></td>				
+	</tr>
+		
+	<tr>
+		<td class="viewBlank" colspan=1><img src="images/spacer.gif" width="1" height="1" border="0" alt=""></td>	
+		<td class="viewBlank" colspan=1><img src="images/spacer.gif" width="1" height="1" border="0" alt=""></td>	
+		<td class="viewBlank" colspan=1><img src="images/spacer.gif" width="1" height="1" border="0" alt=""></td>	
+		<td class="viewBlank" colspan=1><img src="images/spacer.gif" width="1" height="1" border="0" alt=""></td>	
+		<td class="viewBlank" colspan=1><img src="images/spacer.gif" width="1" height="1" border="0" alt=""></td>	
+		<td class="viewBlank" colspan=1><img src="images/spacer.gif" width="1" height="1" border="0" alt=""></td>
+		<td class="viewBlank" colspan=1><img src="images/spacer.gif" width="1" height="1" border="0" alt=""></td>
+		<td class="viewBlank" colspan=1><img src="images/spacer.gif" width="1" height="1" border="0" alt=""></td>
+		<td class="viewBlank" colspan=1><img src="images/spacer.gif" width="1" height="1" border="0" alt=""></td>		
+		<td class="viewBlank" colspan=3><img src="images/spacer.gif" width="1" height="1" border="0" alt=""></td>				
+	</tr>
+	<tr valign="top">
+		<td class="viewBlank" width="150">
+			<!-- Column1 -->
+			<!--LeftMenu-->
+			<!-- Applet 100 range -->
+			<swe:for-each startValue=100 count=20 iteratorName="currentId">
+				<swe:applet id="swe:currentId" hintText="Applet"/>
+			</swe:for-each>
+			
+			<br><img src="images/spacer.gif" width="150" height="1" alt=""></td>	
+		<td class="viewBlank">&nbsp;</td>	
+		<td><img src="images/spacer.gif" width="1" height="1" border="0" alt=""></td>
+		<td width="1" class="viewDivider"><img src="images/spacer.gif" width="1" height="1" border="0" alt=""></td>	
+		<td width="6">&nbsp;</td>
+		<td width="59%">
+			<!-- Column2 -->
+			<!--Content-->
+			<!-- Applet 200 range -->
+			<swe:for-each startValue=200 count=20 iteratorName="currentId">
+				<swe:applet id="swe:currentId" hintText="Applet"/>
+			</swe:for-each>
+			<!-- End Column 2 -->
+		</td>
+		<td width="2%">&nbsp;</td>
+		<td width="1" ><img src="images/spacer.gif" width="1" height="1" border="0" alt=""></td>
+		<td width="1" class="viewDivider"><img src="images/spacer.gif" width="1" height="1" border="0" alt=""></td>	
+		<td width="2%">&nbsp;</td>
+		<td width="33%">
+			<!-- Column 3 -->			
+			<!--Additional Applets-->
+			<!-- Applet 300 range -->
+			<swe:for-each startValue=300 count=20 iteratorName="currentId">
+				<swe:applet id="swe:currentId" hintText="Applet"/>
+			</swe:for-each>
+			<!-- End Column 3-->		
+		</td>	
+		<td width="2%">&nbsp;</td>	
+	</tr>
+</table>
+<swe:include file="CCHTMLFooter.swt"/>
+<!-- Template End: ePortalDeptView.swt -->
+

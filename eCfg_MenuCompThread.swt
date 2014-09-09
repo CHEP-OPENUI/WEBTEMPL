@@ -1,0 +1,25 @@
+<!-- Template Start: eCfg_MenuCompThread.swt -->
+
+<!-- qa automation -->
+<div  id="cxThread" class="cxThread">
+
+<swe:for-each id="250" CfgLoopType="Thread" startValue="2500" count="Dynamic" iteratorName="250Id" >
+      <swe:switch>
+        <swe:case condition="Default, TestFieldValue, Operator:==, FieldName:LoopCount, FieldValue:0">
+            <SCRIPT>
+               var  sGotoTopNode = '<swe:control id="swe:250Id+ 50" CfgFieldName="CxObjName" CfgUIControl="SetTopObj" CfgHtmlType="CfgAction" property="FormattedHtml"/>';
+               var  sGotoSummary = '<swe:control id="swe:250Id+ 100" CfgFieldName="CxObjName" CfgUIControl="SetTopObj" CfgHtmlType="CfgAction" property="FormattedHtml" InvokeMethod="GotoTopSum" />';
+            </SCRIPT>
+        </swe:case>
+        <swe:default>
+               >>
+        </swe:default>
+      </swe:switch>
+      <swe:control id="swe:250Id" CfgFieldName="CxObjName" CfgUIControl="SetTopObj" property="FormattedHtml"/>   
+</swe:for-each>
+
+</div>
+
+
+<!-- Template Start: eCfg_MenuCompThread.swt -->
+

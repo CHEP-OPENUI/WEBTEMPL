@@ -1,0 +1,14 @@
+<!-- Template Start: ePortalAppletFormBasic.swt -->
+<swe:include file="ePortalAppletTitle.swt"/>
+
+<table datatable="0" summary="" class="Border1" width="100%" border="0" cellpadding="1" cellspacing="0" bgcolor="#333399">
+<tr><td>
+
+<table datatable="0" summary="" bgcolor="#cccccc" valign="top" width="100%" cellpadding="2" cellspacing="0" border="0" class=BasicFormClear>
+<swe:include file="CCFormBody.swt"/>
+</table>
+
+</td></tr>
+</table>
+<p></p>
+<!-- Template End: ePortalAppletFormBasic.swt -->

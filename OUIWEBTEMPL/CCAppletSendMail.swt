@@ -1,0 +1,145 @@
+<!-- Template Start: CCAppletSendMail.swt -->
+<!-- Oliver: code redesign -->
+
+<table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" border="0" class="AppletStyle1"><swe:form><tr><td class="AppletBack">
+<table datatable="0" summary="" border="0">
+	
+	<!--Row 1-->
+	<tr>
+		<td class="scLabelRight">
+			<swe:control id="1200"><swe:this property="FormattedHtml" hintText="From: Label"/></swe:control>
+		</td>
+		<swe:control id="1300">
+		<td colspan="3" class="mceWideFields" align="swe:this.TextAlignment">
+			<span class="mceField"><swe:this property="FormattedHtml" hintText="From Field"/></span>
+		</td>	
+		</swe:control>
+		<td><swe:control id="1400"><swe:this property="FormattedHtml" hintText="Optional Control"/></swe:control></td>	
+	</tr>
+	
+	<!--Row 2-->
+	<tr>
+		<td class="scLabelRight">
+			<swe:control id="1201"><swe:this property="FormattedHtml" hintText="To: Label"/></swe:control>
+		</td>
+		<swe:control id="1301">
+		<td colspan="3" class="mceWideFields" align="swe:this.TextAlignment">
+			<span class="mceField"><swe:this property="FormattedHtml" hintText="To Field"/></span>
+		</td>	
+		</swe:control>
+		<td><swe:control id="1401"><swe:this property="FormattedHtml" hintText="AB Control"/></swe:control></td>	
+	</tr>	
+	
+	<!--Row 3-->
+	<tr>
+		<td class="scLabelRight">
+			<swe:control id="1202"><swe:this property="FormattedHtml" hintText="Cc: Label"/></swe:control>
+		</td>
+		<swe:control id="1302">
+		<td class="mceWideFields" align="swe:this.TextAlignment">
+			<span class="mceField"><swe:this property="FormattedHtml" hintText="CC Field"/></span>
+		</td>		
+		</swe:control>	
+		<td class="scLabelRight">
+			<swe:control id="1203"><swe:this property="FormattedHtml" hintText="Bcc: Label"/></swe:control>
+		</td>
+		<swe:control id="1303">
+		<td class="mceWideFields" align="swe:this.TextAlignment">
+			<span class="mceField"><swe:this property="FormattedHtml" hintText="Bcc Field"/></span>
+		</td>		
+		</swe:control>	
+		<td><img src="images/spacer.gif" height="1" width="1" alt=""></td>	
+	</tr>	
+	
+	<!--Row 4-->
+	<tr>
+		<td class="scLabelRight">
+			<swe:control id="1204"><swe:this property="FormattedHtml" hintText="Subject: Label"/></swe:control>
+		</td>
+		<swe:control id="1304">
+		<td colspan="3" class="mceWideFields" align="swe:this.TextAlignment">
+			<span class="mceField"><swe:this property="FormattedHtml" hintText="Subject Field"/></span>
+		</td>	
+		</swe:control>
+		<td><swe:control id="1404"><swe:this property="FormattedHtml" hintText="Control"/></swe:control></td>	
+	</tr>	
+	
+	<!--Row 5-->
+	<tr><td colspan="5"><div class="Border1"><img src="images/spacer.gif" width="1" height="1" alt=""></div></td></tr>		
+	
+	<!--Row 6-->
+	<tr>
+		<td class="scLabelRight">
+			<swe:control id="1205"><swe:this property="FormattedHtml" hintText="Body: Label"/></swe:control>
+		</td>
+		
+		<swe:control id="1305">
+		<td colspan="4" class="mceWideFields" align="swe:this.TextAlignment">
+			<span class="mceField"><swe:this property="FormattedHtml" hintText="Templates Field"/></span>
+		</td>	
+		</swe:control>
+	</tr>	
+	
+	<!--Row 7-->
+	<tr>
+		<td class="scLabelRight">
+			<swe:control id="1206"><swe:this property="FormattedHtml" hintText="Optional Label"/></swe:control>
+		</td>
+		<swe:control id="1306">
+		<td colspan="4" class="mceWideFields"  align="swe:this.TextAlignment">
+			<span class="mceField"><swe:this property="FormattedHtml" hintText="Body Field"/></span>
+		</td>	
+		</swe:control>
+		
+	</tr>		
+
+
+	
+	<!--Row 8-->
+	<tr>
+		<td class="scLabelRight">
+			<swe:control id="1207"><swe:this property="FormattedHtml" hintText="Attachments: Label"/></swe:control>
+		</td>
+		
+		<swe:control id="1307">
+			<td colspan="3" class="mceWideFields" align="swe:this.TextAlignment">					
+				<span class="mceField"><swe:this property="FormattedHtml" hintText="Attachments Field"/></span>				
+			</td>	
+		</swe:control>		
+		<td>
+			<table datatable="0" summary="" cellspacing="0" cellPadding="0" border="0">
+				<tr>
+			        <swe:control id="300">
+			        <td valign="middle" nowrap>
+			        	<swe:this property="FormattedHtml" hintText="Icon" hintMapType="Control"/>
+			        </td>
+					<td><img src="images/btn_div.gif" alt=""></td>
+			        </swe:control>
+			      	<swe:control id="301">
+			        <td valign="middle" nowrap>
+			        <swe:this property="FormattedHtml" hintText="Icon" hintMapType="Control"/>
+			        </td>
+			      	</swe:control>	
+				</tr>
+			</table>
+		</td>
+	</tr>			
+</table>
+</td></tr>
+
+<!--button row-->
+<tr><td>
+
+	<table datatable="0" summary="" width="100%">		
+		<tr class="AppletButtons">
+			<td class="siebui-popup-action siebui-align-right" width="100%">
+				<swe:include file="CCButtons_oui.swt"/>		
+				<swe:include file="CCButtons_Popup_oui.swt"/>
+			</td>
+		</tr>
+	</table>
+	
+</td></tr></swe:form></table>
+
+
+<!-- Template End: CCAppletSendMail.swt -->

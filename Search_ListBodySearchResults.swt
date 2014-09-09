@@ -1,0 +1,23 @@
+<!--  Template Start: Search_ListBodySearchResults.swt -->
+<!------------ Loop for all N records, DATA ------------->
+<tr>
+	<td class="mceLabel">			
+		<swe:noResultsFound/>
+	</td>
+</tr>
+<swe:for-each-row count="10">
+<!------------ Begin Row ------------->
+<tr class="swe:this.RowStyle">
+<swe:control id="501"><!--  Select 501 --><td align="swe:this.TextAlignment" width="42" class="Row"><swe:this property="FormattedHtml" hintText="Selected Row" hintMapType="Control"/></td></swe:control>
+<!--swe:control id="505"--><!--  Pick 505 --><!--td align="swe:this.TextAlignment" width="swe:this.HtmlWidth" class="row"--><!--swe:this property="FormattedHtml" hintText="Pick Control" hintMapType="Control"/--><!--/td /swe:control -->
+<swe:select-row><td align="swe:this.TextAlignment" width="42" class="Row"><swe:this property="FormattedHtml" /></td></swe:select-row>
+<!------------ Display all  Search Result Field ------------->
+<swe:srchResultFieldList>
+<swe:srchResultField>
+	<swe:this property="FormattedHtml"/>
+</swe:srchResultField>
+</swe:srchResultFieldList>
+</tr>
+<!------------ End Row ------------->
+</swe:for-each-row>
+<!--  Template End: Search_ListBodySearchResults.swt -->

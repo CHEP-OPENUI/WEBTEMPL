@@ -1,0 +1,43 @@
+<!-- Template Start: CCChartBasic.swt -->
+<div class="swe:this.SelectStyle">	
+	<table datatable="0" summary="" width="100%" cellpadding="2" cellspacing="0" border="0" align="center"><tr valign="top"><td class="AppletHIFormBorder">
+	<table datatable="0" summary="" width="100%" border="0" class="AppletButtons">
+		<tr>
+			<td><swe:include file="CCTogglebar_drop2.swt"/></td>
+			<swe:if condition="Web Engine State Properties, IsHighInteractive">
+				<swe:switch>
+				<swe:case condition="Web Engine State Properties, IsViewPosition, 'Position:1'">
+					<td><swe:nav-control type="Category View" style="Select"/></td>
+				</swe:case>
+				<swe:case condition="Web Engine State Properties, IsViewPosition, 'Position:2'">
+					<td><swe:nav-control type="Category View" style="Select"/></td>
+				</swe:case>
+				<swe:default>
+				</swe:default>
+				</swe:switch>
+			</swe:if>
+			<swe:for-each count="20" iteratorName="CurrentId" startValue="501">
+				<td nowrap>
+				<swe:control id="swe:CurrentId" property="FormattedHtml"/>
+				</td>
+			</swe:for-each>
+			
+			
+				<td width="100%"><img src="images/spacer.gif" with="1" height="1" alt=""></td>
+			<swe:for-each count="5" iteratorName="CurrentId" startValue="551">
+				<td nowrap>
+				<swe:control id="swe:CurrentId" property="FormattedHtml"/>
+				</td>
+			</swe:for-each>
+		</tr>
+	</table>
+	<table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="5" cellspacing="0" border="0">
+	   <tr><td align="center">
+	 	  	<swe:control id="599" property="FormattedHtml" hintText="Chart"/>
+	   </td></tr>
+	</table>
+	</td></tr></table> 
+</div>
+	
+<!-- Template End: CCChartBasic.swt -->
+

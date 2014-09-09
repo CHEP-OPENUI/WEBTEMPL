@@ -1,0 +1,40 @@
+<!--  Template Start: CCAppletTopVideos.swt -->
+
+<swe:layout viewDisplayMode="Layout">
+<!--  <swe:include file="CCTitle.swt"/>  -->
+<swe:include file="CCStylesChoice.swt"/>
+</swe:layout>
+
+
+
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border-radius="10px" -webkit-border-radius="10px" align="center">
+<!--	<tr bgcolor="#62B1FF" class="AppletTitle"> 	-->
+	<tr bgcolor="#62B1FF" border-radius="10px" -webkit-border-radius="10px"> 
+		<td  class="curveleft" nowrap><font color="#ffffff" face="palatino, times, times new roman" size="4px"><img src="images/spacer.gif" width="6" height="30" align="middle" alt=""><swe:this property="Title"/></font></td>
+		<td  class="curveright" width="100%"  align="right">&nbsp;</td>
+		<swe:control id="1500" hintText="Required Legend" hintMapType="Control">
+			<td nowrap valign="absmiddle" ><swe:this property="DisplayName"/><img src="images/icon_req.gif"></td>
+		</swe:control>
+<!--	</font>	-->
+	</tr>
+</table>
+
+
+<body>
+
+					<dl>
+<!--		<li><IFrame src="http://www.youtube.com/v/N-hQ6-biWoo?version=3&feature=player_detailpage" width="320" height="200" alt="" /></li> -->  
+    <dt><IFrame width="500" height="305" src="http://www.youtube.com/embed/r3kO8YiSu28" alt=""/>	                                                            
+	<dd>Oracle - The Complete User Experience     	
+	</dl>
+
+
+<!-- <p>Oracle - The complete User Experience</p> -->
+
+		
+</body> 
+
+<!--  Template Start: CCAppletTopVideos.swt -->
+
+
+<!-- "http://www.youtube.com/embed/XLmtD3CanpM" -->

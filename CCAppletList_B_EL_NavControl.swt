@@ -1,0 +1,146 @@
+
+<!-- Template Start: CCAppletList_B_EL_NavControl.swt -->
+<!-- This is a modified version of CCAppletList_B_EL.swt to always have navigation control.-->
+
+<swe:include file="CCApplet_NamedSpacer.swt"/>	
+
+<swe:control id="1100"><div class=CmdTxt><swe:this property="FormattedHtml" hintText="Outside Applet Help Text" hintMapType="Control"/></div><p></swe:control>
+
+<swe:form>
+
+		<swe:include file="CCTitle_Named.swt"/>		
+
+<!--  Template End: CCListButtonsTop.swt -->
+<!-- MODIFICATION START -->
+<!-- THIS SECTION IS COPIED FROM CCListButtonsTop.swt AND MODIFIED TO PROVIDE CONSTANT NAV CONTROL --> 
+
+		<!--  Template Start: CCListButtonsTop.swt -->
+
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="2" border="0" align="center">
+	<tr class="AppletBlank" align="left">	
+
+		<!-- Applet Filter Area -->
+			<td class="AppletTitle" nowrap>
+				<swe:if condition="Web Engine State Properties, IsHighInteractive">		
+					<img src="images/spacer.gif" width="1" height="1" alt=""></td>
+					<td><swe:nav-control type="Category View" style="Select"/></td>
+					<td>
+					<img src="images/spacer.gif" width="8" height="1" alt="">
+					<img src="images/btn_div.gif" height="13" align="middle" alt="">
+					<img src="images/spacer.gif" width="3" height="1" alt="">					
+				</swe:if>
+				<swe:if condition="Web Engine State Properties, IsLowInteractive">		
+					&nbsp;
+					<swe:this property="Title"/>
+					&nbsp;&nbsp;
+					<img src="images/btn_div.gif" height="13" align="middle" alt="">
+					&nbsp;
+				</swe:if>
+			</td>
+		
+		<!-- Menu Button Area -->
+			<swe:if-var name="Parent">			     
+				<td nowrap><swe:menu type="Button" width="38" height="16" bgcolor="#6666cc" fgcolor="#ffffff" />
+		  		<img src="images/btn_div.gif" height="13" align="middle" alt=""></td>
+		  	</swe:if-var>
+		
+			<swe:if-var name="ParentWithPointer">			     
+				<td nowrap><swe:menu type="Button" width="38" height="16" bgcolor="#6666cc" fgcolor="#ffffff" />
+		  		<img src="images/btn_div.gif" height="13" align="middle" alt=""></td>
+	  		</swe:if-var>	
+		
+			<swe:if-var name="AppletFilter-No">			     
+				<td nowrap><swe:menu type="Button" width="38" height="16" bgcolor="#ccccff" fgcolor="#000000" />
+		  		<img src="images/btn_div.gif" height="13" align="middle" alt=""></td>
+		  	</swe:if-var>							
+
+			<swe:if-var name="Child">			     
+				<td nowrap><swe:menu type="Button" width="38" height="16" bgcolor="#ccccff" fgcolor="#000000" />
+		  		<img src="images/btn_div.gif" height="13" align="middle" alt=""></td>
+		  	</swe:if-var>	
+			
+			<swe:if-var name="ChildWithPointer">			     
+				<td nowrap><swe:menu type="Button" width="38" height="16" bgcolor="#ccccff" fgcolor="#000000" />
+		  		<img src="images/btn_div.gif" height="13" align="middle" alt=""></td>
+		  	</swe:if-var>	
+		
+			<swe:if-var name="Grandchild">			     
+				<td nowrap><swe:menu type="Button" width="38" height="16" bgcolor="#ccccff" fgcolor="#000000" />
+		  		<img src="images/btn_div.gif" height="13" align="middle" alt=""></td>
+		  	</swe:if-var>							
+
+		<!-- Other Buttons Area -->			
+		<td><img src="images/spacer.gif" width="3" height="1" alt=""></td>
+		<swe:include file="CCButtons.swt"/>											
+		
+		<!-- Toggle Bar Area -->			
+		<td>
+			<swe:include file="CCTogglebar_drop.swt"/>
+		</td>			
+
+		<!-- Query Message Area -->			
+		<td nowrap>
+			&nbsp;<b><swe:message type="Query Message" /></b>
+		</td>
+
+		<!-- Record Navigation Area -->			
+		<td align="right" width="100%">
+			<swe:switch>						
+				<swe:case condition="Web Engine State Properties, IsHighInteractiveApplet">
+					<td valign="middle" nowrap>
+						&nbsp;
+						<swe:this property="RowCounter"/>&nbsp;
+					</td>
+					<td valign="middle">
+						&nbsp;
+						<img src="images/btn_div.gif" height="13" align="middle" alt="">&nbsp;
+					</td>
+				</swe:case>							
+				<swe:default>
+					<swe:include file="CCRecordNav.swt"/>
+					<td>
+						&nbsp;
+					</td>
+				</swe:default>
+			</swe:switch>	
+			<swe:include file="CCListButtonsTopRight.swt"/>	
+		</td>			
+
+		<!-- Corner (if needed) -->			
+		<td valign="top" align="right">
+			<swe:if-var name="Parent">			     
+			</swe:if-var>	
+			<swe:if-var name="ParentWithPointer">			     
+			</swe:if-var>	
+			<swe:if-var name="Child">			     
+			</swe:if-var>	
+			<swe:if-var name="ChildWithPointer">			     
+			</swe:if-var>	
+			<swe:if-var name="Grandchild">			     
+			</swe:if-var>	
+		</td>
+	</tr>
+</table>		
+
+<!-- MODIFICATION END -->
+	
+		<swe:error type="Popup">
+			<table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="4" cellspacing="0" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/><br>&nbsp;</td></tr></table>
+		</swe:error>	
+		
+		<div class="swe:this.SelectStyle">	
+		<swe:list>
+		
+		<table valign="top" width="100%" cellpadding="2" cellspacing="0" border="1" borderColor="#cccccc" datatable="1" summary="swe:this.ListSummary">
+		   <swe:include file="CCListHeader.swt"/>
+		   <swe:include file="CCListBody.swt"/>
+		</table>
+		
+		</swe:list>
+		</div>
+		
+		</span>
+			
+</swe:form>	
+
+<!-- Template End: CCAppletList_B_EL.swt -->

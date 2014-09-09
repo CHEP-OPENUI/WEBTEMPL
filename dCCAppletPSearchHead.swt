@@ -1,0 +1,45 @@
+
+<!-- Template Start: CCAppletListPSearchHead.swt -->
+
+<swe:include file="CCApplet_Spacer.swt"/>
+<swe:control id="1100">
+  <div class=CmdTxt><swe:this property="FormattedHtml" hintText="Outside Applet Help Text" hintMapType="Control"/></div><p>
+</swe:control>
+
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">	
+	<tr valign="top">
+		<td class="AppletStyle1">
+				<swe:include file="dCCTitle.swt"/>
+            </td>
+      </tr>
+      <tr>
+            <td class="AppletStyle1">			
+				<swe:include file="dCCListButtonsTop.swt"/>
+            </td>
+      </tr>
+            <td>
+				<swe:error>
+					<table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="4" cellspacing="0" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/><br>&nbsp;</td></tr></table>
+				</swe:error>	
+				<table datatable="0" summary="" bgcolor="#cccccc" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0"><tr valign="top"><td>
+				<table datatable="0" summary="" valign="top" width="100%" cellpadding="2" cellspacing="1" border="0">
+
+<!------------ List Field Values (501-520) ------------->
+<swe:for-each startValue="501" count="20" iteratorName="currentId">
+	<swe:control id="swe:currentId">
+	<tr class="listRowOff">
+		<td class="Header" width="9%" align="right"><swe:this property="DisplayName" /></td>		
+		
+		<swe:for-each-row count="7">	
+		<td class="Row" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintMapType="Control"/></td>		
+		</swe:for-each-row>		
+	</tr>
+	</swe:control>
+</swe:for-each>
+
+
+
+
+
+
+<!-- Template End: CCAppletListPSearchHead.swt  -->

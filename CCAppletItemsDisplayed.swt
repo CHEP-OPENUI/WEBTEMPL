@@ -1,0 +1,105 @@
+<!-- Template Start: CCAppletItemsDisplayed.swt -->
+<STYLE TYPE="text/css">select.ItemsDisplayed { width:200px; height:200px; }</STYLE>
+
+<swe:control id="100">
+<SCRIPT LANGUAGE="javascript">
+g_strErrorNoItemsSelected = '<swe:this property="DisplayName"/>';
+</SCRIPT>
+</swe:control>
+
+<swe:include-script file="itemsdisplayed.js"/>
+
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+<swe:form>
+<tr>
+<td>
+
+<!-- Start Dialog -->
+<table datatable="0" summary="" width="100%" class="AppletStyle1"><tr><td class="AppletBack">
+<table datatable="0" summary="" class="AppletBack" cellspacing="0" cellpadding="0" border="0" align="center">
+<tr><td colspan="4">
+<swe:control id="1100">
+  <div class=CmdTxt><swe:this property="FormattedHtml" hintText="Outside Applet Help Text" hintMapType="Control"/></div>
+</swe:control>
+<swe:control id="91">
+  <!-- Inside-applet help text -->
+  <swe:this property="DisplayName" hintText="Inside Applet Help Text"/>
+</swe:control> 
+</td></tr>
+
+<tr>
+<td valign="center">
+<div class="mceLabel">
+<nobr><swe:control id="10" property="DisplayName" hintText="Available Items Label"/></nobr><br>
+<swe:control id="11" property="FormattedHtml" hintText="Available Items Combobox"/>
+<swe:control id="12" property="FormattedHtml" hintText="Available Items Hidden Field"/>
+</div>
+</td>
+
+<td valign="center" align="center">
+<img src="images/spacer.gif" width="40" height="1" alt="">
+<table datatable="0" summary="" cellspacing="0" cellpadding="3" border="0" align="center">
+	<tr><td><swe:control id="20"><!-- Show --><swe:this property="FormattedHtml" hintText="Move Item to Selected"/></swe:control></td></tr>
+	<tr><td><swe:control id="21"><!-- Hide --><swe:this property="FormattedHtml" hintText="Move All to Selected"/></swe:control></td></tr>
+	<tr><td><swe:control id="22"><!-- Show All --><swe:this property="FormattedHtml" hintText="Move Item to Available"/></swe:control></td></tr>
+	<tr><td><swe:control id="23"><!-- Hide All --><swe:this property="FormattedHtml" hintText="Move All to Available"/></swe:control></td></tr>
+</table>
+</td>
+
+<td valign="center">
+<div class="mceLabel">
+<nobr><swe:control id="30" property="DisplayName" hintText="Selected Items Label"/></nobr><br>
+<swe:control id="31" property="FormattedHtml" hintText="Selected Items Combobox"/>
+<swe:control id="32" property="FormattedHtml" hintText="Selected Items Hidden Field"/>
+</div>
+</td>
+
+<td valign="center" align="center">
+<img src="images/spacer.gif" width="20" height="1" alt="">
+<table datatable="0" summary="" cellspacing="0" cellpadding="3" border="0">
+	 <tr><td><swe:control id="40"><!-- Move Top --><swe:this property="FormattedHtml" hintText="Move Item to Top"/></swe:control></td></tr>
+	 <tr><td><swe:control id="41"><!-- Move Up --><swe:this property="FormattedHtml" hintText="Move Item Up"/></swe:control></td></tr>
+	 <tr><td><swe:control id="42"><!-- Move Down --><swe:this property="FormattedHtml" hintText="Move Item Down"/></swe:control></td></tr>
+	 <tr><td><swe:control id="43"><!-- Move Bottom --><swe:this property="FormattedHtml" hintText="Move Item to Bottom"/></swe:control></td></tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td></tr></table>
+<!-- End Dialog -->
+
+<!--button row-->
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="2" border="0" bgcolor="#cccccc">
+<tr>
+	<td width="100%"><img src="images/spacer.gif" height="16" width="10" alt=""></td>
+
+	<swe:control id="2">
+	<!-- Reset -->
+	<td nowrap><swe:this property="FormattedHtml" hintText="Reset" hintMapType="Control"/></td>
+	<td><img src="images/btn_div.gif" width="3" height="13" align="middle" alt=""></td>
+	</swe:control>
+	
+	<swe:control id="1">
+	<!-- Save -->
+	<td valign="middle" nowrap><swe:this property="FormattedHtml" hintText="Save" hintMapType="Control"/></td>
+	<td>&nbsp;</td>
+	</swe:control>
+	
+	
+	<swe:control id="3">
+	<!-- Cancel -->
+	<td nowrap><swe:this property="FormattedHtml" hintText="Cancel" hintMapType="Control"/></td>
+	<td>&nbsp;</td>
+	</swe:control>						 
+  
+	<td><img src="images/spacer.gif" height="16" width="10" alt=""></td>			 
+</tr>	
+</table>
+
+</td>
+</tr>
+</swe:form>
+</table>
+
+<!-- Template End: CCAppletItemsDisplayed.swt -->

@@ -1,0 +1,23 @@
+<!-- Template Start: CCAppletForm4Col_B.swt -->
+<!-- no top button in order to save space -->
+<!-- include own body file FINSDBAppletSummaryFormBody.swt -->
+
+<swe:include file="CCApplet_NamedSpacer.swt"/>	
+
+<swe:form>
+
+	<swe:include file="CCTitle_Named.swt"/>
+
+      <!--swe:include file="FINSDBFormButtonsTop.swt"/-->
+      <swe:include file="FINSDBAppletSummFormBody.swt"/>
+	
+	</span>				
+
+</swe:form>
+
+
+<!-- Template End: CCAppletFormBase4Col_B.swt -->
+
+
+
+	

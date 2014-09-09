@@ -1,0 +1,15 @@
+<!-- Template Start: eCfgControlTextPriceJS.swt -->
+
+<swe:include file="eCfgPort_HeaderJS.swt"/>
+
+<tr>
+   <td>
+      <swe:for-each id="500" CfgLoopType="Children" startValue="1500" count="Dynamic" iteratorName="101Id">
+         <swe:include file="eCfgObj_TextPriceJS.swt" />
+      </swe:for-each>
+   </td>
+</tr>
+
+<swe:include file="eCfgPort_FooterJS.swt"/>
+
+<!-- Template End: eCfgControlTextPriceJS.swt -->

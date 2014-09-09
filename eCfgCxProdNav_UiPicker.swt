@@ -1,0 +1,170 @@
+<!-- Template Start: eCfgProdNav_UiPicker.swt -->
+
+<div  id="cxUIPicker" class="cxAppletRoot">
+
+<swe:control id="swe:CFGPARAMETER" TemplateType="CxProdNavigator" RuntimeUIStyle="disable" property="FormattedHtml" />
+
+<span class="AppletStyle1">
+   <table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+      <tr class="AppletBlank">
+         <td class="AppletTitle" valign="top" width="8">
+            <img src="images/aplt_opn_d.gif" width="8" height="10" alt="">
+         </td>
+         <td class="AppletTitle" nowrap>
+            <swe:control id="swe:CurrentRoot" CfgFieldName="CxObjName" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>
+         </td>
+         <td class="AppletTitle" valign="top" width="22" align="right">
+            <img src="images/aplt_curve_d.gif" height="18" width="22" alt=""></img>
+         </td>
+         <td width="100%" class="AppletBlank" align="right">&nbsp;</td>
+      </tr>
+   </table>
+
+   <table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="1" border="0">
+      <tr>
+         <td class="AppletBorder">
+            <table datatable="0" summary="" width="100%" cellspacing="1" cellpadding="5" style="background-color:#ffffff">
+               <tr>
+                  <td><A name="CxAttribute"></A>&nbsp;</td>
+               </tr>
+               <tr>
+                  <td>
+                     <b>
+                        <swe:control id="Attribute" CfgUIControl="lblAttribute" property="DisplayName" />
+                     </b>
+                  </td>
+                  <td align="center" >
+                     <swe:control id="swe:PickButton" CfgUIControl="UIGroupAddItemButton" CfgHtmlType="MiniButton" InvokeMethod="AddUIGroupItem" property="FormattedHtml" Anchor="CxAttribute"/>
+                  </td>
+               </tr>    
+               <tr>
+                  <td>
+                     <table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0">
+                        <swe:for-each id="170" CfgLoopType="Attribute" startValue="1000" count="Dynamic" iteratorName="AttId">
+                           <swe:include file="eCfgTrSwitch.swt"/>
+                              <td width="1%" style="border-bottom: 1 solid #808080">
+                                 <swe:control id="swe:AttId" CfgUIControl="Active Row" property="FormattedHtml" Anchor="CxAttribute"/>
+                              </td>
+                              <td width="40%" colspan="3" style="border-bottom: 1 solid #808080">
+                                 <swe:control id="swe:AttId+1000" CfgFieldName="AttName" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>    
+                              </td>    
+                              <td width="59%" style="border-bottom: 1 solid #808080">
+                                  &nbsp;
+                              </td>
+                           </tr>
+                        </swe:for-each>
+                     </table>
+                  </td>
+               </tr>
+               <tr>
+                  <td>                
+                     <A name="CxRelationship"></A>&nbsp;                             
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <b>
+                        <swe:control id="Relationship" CfgUIControl="lblRelationship" property="DisplayName" />
+                     </b>
+                  </td>
+                  <td align="center" >
+                     <swe:control id="swe:PickButton" CfgUIControl="UIGroupAddItemButton" CfgHtmlType="MiniButton" InvokeMethod="AddUIGroupItem" property="FormattedHtml" Anchor="CxRelationship"/>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0">
+                        <swe:for-each id="130" CfgLoopType="Port" startValue="3200" count="Dynamic" iteratorName="PortId">
+                           <swe:include file="eCfgTrSwitch.swt"/>
+                              <td width="1%" style="border-bottom: 1 solid #808080">
+                                 <swe:control id="swe:PortId" CfgUIControl="Active Row" property="FormattedHtml" Anchor="CxRelationship"/>
+                              </td>
+                              <td width="40%" colspan="3" style="border-bottom: 1 solid #808080">
+                                 <swe:control id="swe:PortId+1000" CfgFieldName="CxPortName" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>    
+                              </td>    
+                              <td width="59%" style="border-bottom: 1 solid #808080">
+                                 &nbsp;
+                              </td>
+                           </tr>
+                        </swe:for-each>
+                     </table>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <A name="CxLinkedItem"></A>&nbsp;
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <b>
+                        <swe:control id="LinkedItem" CfgUIControl="lblLinkedItem" property="DisplayName" />
+                     </b>
+                  </td>
+                  <td align="center" >
+                     <swe:control id="swe:PickButton" CfgUIControl="UIGroupAddItemButton" CfgHtmlType="MiniButton" InvokeMethod="AddUIGroupItem" property="FormattedHtml" Anchor="CxLinkedItem" />
+                  </td>
+               </tr>
+                
+               <tr>
+                  <td>
+                     <table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0">
+                        <swe:for-each id="430" CfgLoopType="LinkedItem" startValue="5200" count="Dynamic" iteratorName="LinkedItemId">
+                           <swe:include file="eCfgTrSwitch.swt"/>
+                              <td width="1%" style="border-bottom: 1 solid #808080">
+                                 <swe:control id="swe:LinkedItemId" CfgUIControl="Active Row" property="FormattedHtml" Anchor="CxLinkedItem"/>
+                              </td>
+                              <td width="40%" colspan="3" style="border-bottom: 1 solid #808080">
+                                 <swe:control id="swe:LinkedItemId+1000" CfgFieldName="CxLnkItmName" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>    
+                              </td>    
+                              <td width="59%" style="border-bottom: 1 solid #808080">
+                                  &nbsp;
+                              </td>
+                           </tr>
+                        </swe:for-each>
+                     </table>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <A name="CxResource"></A>&nbsp;
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <b>
+                        <swe:control id="Resource" CfgUIControl="lblResource" property="DisplayName" />
+                     </b>
+                  </td>
+                  <td align="center" >
+                     <swe:control id="swe:PickButton" CfgUIControl="UIGroupAddItemButton" CfgHtmlType="MiniButton" InvokeMethod="AddUIGroupItem" property="FormattedHtml" Anchor="CxResource"/>
+                  </td>
+               </tr>
+                
+               <tr>
+                  <td>
+                     <table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0">
+                        <swe:for-each id="530" CfgLoopType="Resource" startValue="6200" count="Dynamic" iteratorName="ResourceId">
+                           <swe:include file="eCfgTrSwitch.swt"/>
+                              <td width="1%" style="border-bottom: 1 solid #808080">
+                                 <swe:control id="swe:ResourceId" CfgUIControl="Active Row" property="FormattedHtml" Anchor="CxResource"/>
+                              </td>
+                              <td width="40%" colspan="3" style="border-bottom: 1 solid #808080">
+                                 <swe:control id="swe:ResourceId+1000" CfgFieldName="CxResourceName" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>    
+                              </td>    
+                              <td width="59%" style="border-bottom: 1 solid #808080">
+                                  &nbsp;
+                              </td>
+                           </tr>
+                        </swe:for-each>
+                     </table>
+                  </td>
+               </tr>
+            </table>
+         </td>
+      </tr>
+   </table>
+</span>
+
+</div>
+<!-- Template End: eCfgProdNav_UiPicker.swt -->

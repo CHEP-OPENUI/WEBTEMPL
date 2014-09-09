@@ -1,0 +1,8 @@
+<!-- Template Start: CUTCCAppletPlaybarTop_Configurator.swt -->
+<!-- Oliver: code redesign -->
+
+<div class="siebui-taskui-playbar-top siebui-applet-action">
+	<swe:include file="CUTCCAppletPlaybarButtons_Configurator.swt"/>
+</div>
+
+<!-- Template End: CUTCCAppletPlaybarTop_Configurator.swt -->

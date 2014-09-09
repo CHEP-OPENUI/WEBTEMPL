@@ -1,0 +1,12 @@
+<!--  Template Start: CCFormButtonsTop.swt -->
+
+<swe:switch>                        
+        <swe:case condition="Web Engine State Properties, IsMobileApplicationMode">
+          <swe:include file="CCFormButtonsTop_OUIMobile.swt"/>
+        </swe:case>
+        <swe:default>
+          <swe:include file="CCFormButtonsTop_OUI.swt"/>
+        </swe:default>
+</swe:switch>
+
+<!--  Template End: CCFormButtonsTop.swt -->

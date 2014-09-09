@@ -1,0 +1,62 @@
+<!-- Template Start: eCfgAtt_Header.swt -->
+
+<SCRIPT>
+        var sAttributeId = '<swe:control id="swe:IncId+8520" CfgFieldName="AttID" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+        var sTemplateName = '<swe:control id="swe:IncId+620" CfgFieldName="TemplateName" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+
+        document.write ( '<A Name="' +  sAttributeId + '"></A>');
+        document.write ( '<div id="' + sTemplateName + '" class="cxTempl" > </div>');
+
+</SCRIPT>
+
+<table datatable="0" summary="" border="0" width="100%" cellpadding="2" cellspacing="0">
+   <swe:switch>
+      <swe:case condition="Default, AreEmptyFields, Operator:and, FieldName0:.Description, FieldName1:.LearnMore">
+         <tr bgcolor="#ccccff">
+            <td class="dCCItemSectionTitle" style="border-left: 1 solid #808080; border-top: 1 solid #808080; border-bottom: 1 solid #808080">
+               <b><swe:control id="swe:IncId+20" CfgFieldName="AttName" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" hintText="Attribute Name" property="FormattedHtml"/></b>
+               <swe:control id="swe:IncId + 1550" CfgFieldName="RequireMoreChild" CfgUIControl="RequireMoreChild" property="FormattedHtml" />
+            </td>
+            <td class="dCCItemSectionTitle" style="border-right: 1 solid #808080; border-top: 1 solid #808080; border-bottom: 1 solid #808080" rowspan="1">
+      </swe:case>
+      <swe:default>
+         <tr bgcolor="#ccccff">
+            <td class="dCCItemSectionTitle" style="border-left: 1 solid #808080; border-top: 1 solid #808080">
+               <b><swe:control id="swe:IncId+20" CfgFieldName="AttName" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" hintText="Attribute Name" property="FormattedHtml"/></b>
+               <swe:control id="swe:IncId + 2550" CfgFieldName="RequireMoreChild" CfgUIControl="RequireMoreChild" property="FormattedHtml" />
+            </td>
+            <td class="dCCItemSectionTitle" style="border-right: 1 solid #808080; border-top: 1 solid #808080; border-bottom: 1 solid #808080" rowspan="2">
+      </swe:default>
+   </swe:switch>
+               <SCRIPT>
+                  var sImage        = '<swe:control id="swe:IncId + 50" CfgFieldName=".Image" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+                  if ( 0 == sImage.length )
+                     sImage = 'images/eCfgInvisibleSpacer.gif';
+                  document.write ( '<img border="0" src="' + sImage + '" alt="" align="right">' );
+               </SCRIPT>
+            </td>
+         </tr>
+   <swe:switch>
+      <swe:case condition="Default, AreEmptyFields, Operator:and, FieldName0:.Description, FieldName1:.LearnMore">
+      </swe:case>
+      <swe:default>
+         <tr bgcolor="#ccccff">
+            <td class="dCCItemSection" style="border-left: 1 solid #808080; border-bottom: 1 solid #808080">
+               <font size="2"  color="#333399">
+                  <swe:control id="swe:IncId + 150" CfgFieldName=".Description" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>
+                  <swe:control id="swe:IncId + 3550" CfgFieldName="RequireMoreChild" CfgUIControl="RequireMoreChild" property="FormattedHtml" />                  
+               </font>
+               <font size="2">&nbsp;&nbsp;
+                  <SCRIPT>
+                     var sLearnMoreURL = '<swe:control id="swe:IncId + 250" CfgFieldName=".LearnMore" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+                     var sLearnMore    = '<swe:control id="LearnMore" CfgUIControl="lblLearnMore" property="DisplayName"/>';
+                     if ( 0 != sLearnMoreURL.length )
+                        document.write ( '(<a href="' + sLearnMoreURL + '" TARGET="_blank"><img border="0" src="images/icon_watching.gif"><img border="0" src="images/eCfgInvisibleSpacer.gif" alt="">' + sLearnMore + '</a>)' );
+                  </SCRIPT>
+               </font>
+            </td>
+          </tr>
+      </swe:default>
+   </swe:switch>
+
+<!-- Template End: eCfgAtt_Header.swt -->

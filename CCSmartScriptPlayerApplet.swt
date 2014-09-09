@@ -1,0 +1,212 @@
+<!-- Start of the CCSmartScriptPlayerApplet.swt -->
+
+<!-- SmartScriptForm (use onSubmit handler to cancel auto submissions through Enter key) -->
+<swe:form name="SmartScriptForm" htmlAttr="onSubmit='return false;'">
+
+<!-- Start of Script title -->
+   <table datatable="0" summary="" width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="SmartScriptLabel">		
+	      <tr>
+			<td width="66%"><div class="CmdTxt"><swe:control id="s_SmartScriptLabel"/></div><p></td>
+	        <td width="33%">&nbsp;</td>
+	      </tr>
+	</table>
+	<br>&nbsp;
+<!-- End of Script Title-->
+        
+
+	<span class="AppletStyle1">	
+	<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center" class="SmartScriptPageTitle">
+		<tr class="AppletBlank">
+			<td class="AppletTitle" nowrap><img src="images/spacer.gif" width="6" height="1" alt=""><swe:control id="s_SSPageLabel"/></td>
+			<swe:control id="6">
+				<td class="AppletBlank" valign="top" nowrap><swe:this property="FormattedHtml" hintText="Save Answers" hintMapType="Control"/></td>
+			</swe:control>		
+			<td width="100%" class="AppletTitle" align="right">
+	         <swe:control id="1500">
+			 	<swe:this property="DisplayName" hintText="Required Label"/><span class="required">*</span>
+			 </swe:control>
+			</td>	
+		</tr>
+	</table>
+
+	<table datatable="0" summary="" width="100%" cellpadding="2" cellspacing="0" border="0" align="center" class="SmartScriptPage">
+       <tr>
+          <td class="AppletBorder" colspan="3">
+			<table datatable="0" summary="" valign="top" width="100%" cellpadding="2" cellspacing="0" border="0" class="AppletBack">
+		      		<tr>
+	            		<td colspan="3"><img src="images/spacer.gif" width="1" height="3" alt=""></td>
+	     		    </tr>
+		
+				      <swe:error>
+							<tr>
+								<td width=20%>&nbsp;</td>
+			              		<td class="error" width=75%><swe:this property="FormattedHtml"/></td>
+								<td width=5%>&nbsp;</td>
+							</tr>
+				    		<tr>
+			            		<td colspan="3"><img src="images/spacer.gif" width="1" height="3" alt=""></td>
+			     		    </tr>
+				      </swe:error>
+	                  </table>	
+	       
+	      				<!-- Start of questions block -->
+	          <!--swe:ssQuestionList-->
+	        				<swe:for-each id="SSQuestionList" Count="Dynamic" StartValue=1000 IteratorName="SSQuestionIndex">
+	
+	                  <swe:control id="SSInfoQuestion">
+	                  <table datatable="0" summary="" valign="top" width="100%" cellpadding="2" cellspacing="0" border="0" class="AppletBack">
+	
+	
+	    				   <tr>
+							<td width=20%>&nbsp;</td>
+							<td width=75%>
+								<swe:this property="DisplayName"/>
+							</td>
+							<td width=5%>&nbsp;</td>
+								</tr>
+								<tr>
+					            <td colspan="3"><img src="images/spacer.gif" width="1" height="3" alt=""></td>
+					        	</tr>
+	                  </table>
+	
+					</swe:control>
+					<swe:control id="SSQuestion">
+	                  <table datatable="0" summary="" valign="top" width="100%" cellpadding="2" cellspacing="0" border="0" class="AppletBack">
+						<tr>
+							<td width=20%>&nbsp;</td>
+							<td width=75%>
+								<span class="questLabel" align="swe:this.TextAlignment">
+								<swe:this property="DisplayName"/>
+								<swe:this property="RequiredIndicator"/>
+								</span><br>
+								<span class="scField" align="swe:this.TextAlignment">
+									<swe:this property="FormattedHtml"/></span>			
+							</td>
+							<td width="5%">&nbsp;</td>
+						</tr>
+	                  </table>
+	
+					</swe:control>
+			
+	                  <swe:control id="SSGroupTitle">
+	                  <table datatable="0" summary="" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0" class="AppletBack">
+	
+	
+	    				<tr>
+							<td width=20%>&nbsp;</td>
+							<td width=75%>
+								<div class="questLabel">
+								<swe:this property="DisplayName"/>
+								<swe:this property="RequiredIndicator"/>
+								</div>
+							</td>
+							<td width=5%>&nbsp;</td>
+					</tr>
+	                  </table>
+				</swe:control>
+	                  	
+				<swe:control id="SSGroupElement">
+	                  <table datatable="0" summary="" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0" class="AppletBack">
+						<tr>
+							<td width=21%>&nbsp;</td>
+							<td width=1%>
+								<span class="scField" align="swe:this.TextAlignment">
+									<swe:this property="FormattedHtml"/></span>		
+							</td>
+							<td width=73% class="scField">	
+								<swe:this property="DisplayName"/>
+							</td>
+							<td width="5%">&nbsp;</td>
+						</tr>
+	                  </table>
+				</swe:control>
+
+	        </swe:for-each>
+	
+	        <!-- End of questions block -->
+	       
+		         <!-- Page divider -->
+	                  <table datatable="0" summary="" valign="top" width="100%" cellpadding="2" cellspacing="0" border="0" class="AppletBack">
+	                     <tr>
+	               <td width=20%>&nbsp;</td>
+	               <td width=75%>&nbsp;</td>
+	               <td width=5%>&nbsp;</td>
+	           </tr>
+	           <!-- End of page divider -->
+		
+	                     <!-- Buttons -->
+	                     <tr>
+	                        <td>&nbsp;</td>
+	                        <td>
+	                  	   <table datatable="0" summary="" cellpadding="0" cellspacing="0" border="0">
+	                  		<tr>
+	                           <!-- NextSection -->
+	                          	<swe:control id="4">
+	                          	  <td valign="middle" nowrap>
+	                          	  <swe:this property="FormattedHtml" hintText="Next Section" hintMapType="Control"/>
+	                         	  </td>
+	                          	</swe:control>
+	                                  
+	                            	 <!-- PreviousSection -->
+	                           <swe:control id="3">
+	                            <td valign="middle" nowrap>
+	                            <swe:this property="FormattedHtml" hintText="Previous Section" hintMapType="Control"/>
+	                            </td>
+	                           </swe:control>
+			 
+	                          
+	                           <!-- Finish: 1 -->
+	                           <swe:control id="1">
+			  <td valign="middle" nowrap>&nbsp;<img src="images/btn_div.gif" alt="">&nbsp;</td>
+	                            <td valign="middle" nowrap>
+	                            <swe:this property="FormattedHtml" hintText="Finish Script" hintMapType="Control"/>
+	                            </td>
+	                           </swe:control>
+	                           
+	                           <!-- Save: 5 -->
+	                           <swe:control id="5">
+	                            <td valign="middle" nowrap>
+	                            <swe:this property="FormattedHtml" hintText="Save Script" hintMapType="Control"/>
+	                            </td>
+	                           </swe:control>
+	                           
+	                           <!-- Cancel: 2 -->
+	                           <swe:control id="2">
+	                            <td valign="middle" nowrap>
+	                            <swe:this property="FormattedHtml" hintText="Cancel Script" hintMapType="Control"/>
+	                            </td>
+	                           </swe:control>										   
+	                  		</tr>
+	                  	   </table>	
+	                        </td>
+	                        <td>&nbsp;</td>
+	                     </tr>
+	                      <!-- End Buttons-->			
+		
+                           <!-- ActiveX Custom Control -->
+                           <tr>
+                              <swe:control id="8" hintMapType="FormItem">
+                                 <table datatable="0" summary="" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0" class="AppletBack">	
+                                    <tr valign="top">
+                                       <td class="scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="Field"/>&nbsp;</td>
+                                    </tr>
+                                 </table>
+                              </swe:control>
+                           </tr>				
+                           <!-- End of ActiveX Custom Control -->	
+		
+					   <!-- Page divider -->
+			         <tr>
+	                        <td>&nbsp;</td>
+	                        <td>&nbsp;</td>
+	                        <td>&nbsp;</td>
+			         </tr>
+	                     <!-- End of page divider -->					
+	                  </table>
+		</td>
+       </tr>
+    </table>
+
+	</swe:form>
+
+<!-- End of CCSmartScriptPlayerApplet.swt-->

@@ -1,0 +1,20 @@
+<!--  Template Start: dCCListBodyBullet.swt -->
+<swe:for-each-row count="10">
+<tr>
+    <td width="1"><img src="images/bullet_green.gif" alt=""></td>
+	<td>
+		<swe:control id="501">
+		    <b><swe:this property="FormattedHtml" hintText="Field" hintMapType="Hyperlinked Item"/></b><br>
+		</swe:control> 
+		<swe:for-each startValue="502" count="10" iteratorName="currentId">
+		  <swe:control id="swe:currentId">
+		    <swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/><br>
+		  </swe:control>
+		</swe:for-each>
+	</td>
+</tr>
+
+<tr><td colspan="2"><img src="images/spacer.gif" width="100%" height="3" alt=""></td></tr>
+
+</swe:for-each-row>
+<!--  Template End: dCCListBodyBullet.swt -->

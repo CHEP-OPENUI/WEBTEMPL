@@ -1,0 +1,55 @@
+<!--  Template Start: ERMViewTree2.swt -->
+<swe:include file="CCHTMLHeader.swt"/>
+
+<table datatable="0" summary="" width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+	<!-- ---------- Left Frame (25%) ---------------------------->
+	<td valign="top" width="25%">
+	
+		
+		
+		<!--local override of CSS-->
+		<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+			<style>	BODY {border-right:1px solid #000000;}	.mceField, .mceField INPUT, .mceField TEXTAREA, .mceField SELECT{width:130px;}	</style>
+		</swe:if>
+
+		
+		<swe:applet hintMapType="Applet" id="3" hintText="Applet" property="FormattedHtml" var="Parent"/>
+
+		<swe:applet hintMapType="Applet" id="1" hintText="Applet" property="FormattedHtml" var="Parent"/>
+
+	</td>
+	
+	<!-- ---------- Right Frame (75%) ---------------------------->
+	<td valign="top" width="75%">
+		
+		<!--local override of CSS-->
+		<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+				<style>		BODY {border-left:1px solid #000000;}		.mceField, .mceField INPUT, .mceField TEXTAREA, .mceField SELECT{width:130px;}		</style>
+		</swe:if>
+		
+		
+		<!-- ---------- Right Frame (75%) ------------------------->
+		
+		<table datatable="0" summary="" border="0" cellspacing="0" cellpadding="0" width="100%">
+		  <tr>
+		    <td valign="absmiddle">
+				<swe:include file="CCThreadbar.swt"/>
+			</td>
+			<swe:applet id="201" hintText="Mini-Applet">
+				<td>&nbsp;&nbsp;&nbsp;</td>
+			    <td align="right"><swe:this property="FormattedHTML"/></td>
+				<td>&nbsp;&nbsp;&nbsp;</td>
+			</swe:applet>	
+				
+		  </tr>
+		</table> 
+		
+		<swe:applet-tree-list var="Parent"/>
+
+	</td>
+	</tr>
+
+<swe:include file="CCHTMLFooter.swt"/>
+
+<!--  Template End: CCViewTree2.swt -->

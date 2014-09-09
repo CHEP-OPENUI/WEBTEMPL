@@ -1,0 +1,28 @@
+<!-- Template Start: eCfgAttributeComboBoxJS.swt -->
+
+<swe:include file="eCfgAtt_HeaderJS.swt"/>
+
+<tr>
+   <td colspan=3>
+      <table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="white">
+         <tr>
+            <td colspan="2" valign="top">
+                  <table datatable="0" summary=""  width="100%">
+                     <tr>
+                        <td>
+                        <swe:for-each id="550" CfgLoopType="Domain" Automation="N" startValue="1500" count="Dynamic" iteratorName="101Id" Usage="ComboBox" >
+                           <swe:control id="attCombo" CfgHtmlType="CfgCombo" CfgFieldName="AttValue" 
+                            CfgJSShow="showCombo" CfgJSUpdateExclusion="updateExcludedItemForAttribute" CfgJSUpdateSelection="updateSelectionInfoForAttribute"/>                     
+                        </swe:for-each>
+                        </td>
+                     </tr>
+                  </table>
+            </td>
+         </tr>
+      </table>
+   </td>
+</tr>
+
+<swe:include file="eCfgPort_FooterJS.swt"/>
+
+<!-- Template End: eCfgAttributeComboBoxJS.swt -->

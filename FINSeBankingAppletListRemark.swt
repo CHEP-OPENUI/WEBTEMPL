@@ -1,0 +1,24 @@
+<!-- Template Start: FINSeBankingAppletListRemark.swt -->
+
+<!-- swe:include file="CCListTinyTitle.swt"/ -->
+<swe:if-var name="Grandchild"><span class="AppletStyle7"><swe:include file="CCListTitle.swt"/></swe:if-var>			
+<swe:if-var name="ChildWithPointer"><span class="AppletStyle3"></swe:if-var>				
+<swe:if-var name="Child"><span class="AppletStyle3"></swe:if-var>	
+<swe:if-var name="ParentWithPointer"><span class="AppletStyle1"><swe:include file="CCListTitle.swt"/></swe:if-var>
+<swe:if-var name="Parent"><span class="AppletStyle1"><swe:include file="CCListTitle.swt"/></swe:if-var>		
+
+<swe:control id="7000">
+  	<swe:this property="FormattedHtml"/>
+</swe:control>
+<table bgcolor="#f0f0f0" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0">
+   <swe:include file="CCListHeader.swt"/>
+   <swe:include file="CCListBody.swt"/>
+</table>
+<br>
+<!-- Remark-->
+<swe:control id="8000">
+  	<swe:this property="FormattedHtml"/>
+</swe:control>
+<p></p>
+<!-- Template End: FINSeBankingAppletListRemark.swt -->
+

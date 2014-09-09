@@ -1,0 +1,52 @@
+
+<!-- Template Start: ERMCPRDAListHeader.swt -->
+
+<tr class="Header">
+    <swe:control id="144">
+    <!-- Select, 144 -->
+     <th class="Header" align="center"><swe:this property="DisplayName"/></th>
+    </swe:control>
+	
+	<swe:control id="147">
+    <!-- Pick, 147 -->
+     <th class="Header" align="center"><swe:this property="DisplayName"/></th>
+    </swe:control>
+	
+    <swe:select-row>
+     <th  class="Header" align="center"><swe:this property="DisplayName"/></th>
+    </swe:select-row>	
+
+   <!-- ---------- List Applet Columns ----------->
+   <swe:control id="501">
+      <th align="swe:this.TextAlignment" class="Header" scope="col" abbr="swe:this.HeaderAbbr"><swe:this property="ListHeader"/></th>
+   </swe:control>
+   
+   <swe:control id="145">
+   <!-- Optional, 145 -->
+     <th class="Header" align="center" width="100">&nbsp;</th>
+   </swe:control>
+   
+   <!-- ---------- List Field Values (502-540) ------------->
+   <swe:for-each startValue="502" count="39" iteratorName="currentId">
+     <swe:control id="swe:currentId">
+      <th align="swe:this.TextAlignment" class="Header" scope="col" abbr="swe:this.HeaderAbbr"><swe:this property="ListHeader"/></th>
+     </swe:control>
+    </swe:for-each>
+
+    <swe:control id="142">
+    <!-- Optional, 142 -->
+     <th class="Header" align="center"><swe:this property="DisplayName"/></th>
+    </swe:control>
+
+    <swe:control id="143">
+    <!-- Optional, 143 -->
+     <th class="Header" align="center"><swe:this property="DisplayName"/></th>
+    </swe:control>
+
+    <swe:control id="146">
+    <!-- Optional, 146 -->
+     <th class="Header" align="center"><swe:this property="DisplayName"/></th>
+    </swe:control>
+  </tr>
+
+<!-- Template End: ERMCPRDAListHeader.swt -->

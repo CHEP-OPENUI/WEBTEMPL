@@ -1,0 +1,68 @@
+<!--	Template Start: CCViewHIC.swt (modeled after CCView_66_33.swt) -->
+<!-- Oliver: added classes and removed superfluous code -->
+
+<swe:include file="CCHTMLHeader.swt"/>
+
+<swe:layout viewDisplayMode="Layout">
+	<!------------ Start: View Layout Table ------------------------->
+	<table datatable="0" summary="" width="100%" class="LayoutView">
+		<swe:applet id="901" hintText="Layout Controls">
+			<!---------- Start: View Layout; Buttons --------->
+			<tr valign="top">
+			<td><swe:this property="FormattedHtml"/></td>
+			</tr>
+			<!-- -------- End: View Layout; Buttons --------->
+		</swe:applet>
+
+	  <!---------- Start: View Layout; Applet Titles & Mover Controls --------->
+	</table>
+	<table datatable="0" summary="" width="100%"><tr><td class="AppletBack">
+</swe:layout>
+
+<swe:layout viewDisplayMode="Show">
+<table datatable="0" summary="" border="0" cellspacing="0" cellpadding="1" width="100%">
+  <tr>
+	<td width="50%">
+		<img src="images/spacer.gif" width="1" height="1" alt="">
+	</td>
+
+	<swe:applet id="901" hintText="Layout Controls">
+	<td align="right" width="50%"><swe:this property="FormattedHtml"/></td>
+	</swe:applet>
+  </tr>
+</table>
+</swe:layout>
+
+<!-- ---------- Main Content Area ---------------------------->
+<div class="siebui-view-multi-column">
+    <table datatable="0" summary="" width="100%">
+        <tr>
+            <!--Column 1 -->
+            <!--FR#12-1QDSORN-->
+            <td valign="top" width="63%">
+                <swe:applet id="101" property="FormattedHtml" hintText="Salutation Applet"/>
+                <swe:for-each count="20" iteratorName="currentId" startValue="102">
+                    <swe:applet hintMapType="Applet" id="swe:currentId" property="FormattedHtml" hintText="Applet" var="Grandchild"/>
+                </swe:for-each>
+            </td>
+            <!--Column 2 -->
+            <!--FR#12-1QDSORN-->
+            <td valign="top" width="37%" id="siebui-sideapplet">
+                <swe:for-each count="20" iteratorName="currentId" startValue="201">
+                    <swe:applet hintMapType="Applet" id="swe:currentId" property="FormattedHtml" hintText="Applet" var="Grandchild"/>
+                </swe:for-each>
+            </td>
+        </tr>
+    </table>
+</div>
+<!-- ---------- End Main Content Area ------------------------>
+
+<swe:layout viewDisplayMode="Layout">
+  <!---------- End: View Layout; Applet Titles & Mover Controls --------->
+  	</td></tr></table>
+<!------------ End: View Layout Table ------------------------>
+</swe:layout>
+
+<swe:include file="CCHTMLFooter.swt"/>
+
+<!--	Template End: CCViewHIC.swt -->

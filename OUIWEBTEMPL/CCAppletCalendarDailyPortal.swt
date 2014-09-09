@@ -1,0 +1,113 @@
+<!-- Start of CCAppletCalendarDailyPortal.swt -->
+<!-- Oliver: adjusted for HOME PAGE -->
+<!-- Oliver: added new siebui- classes & slight code cleanup -->
+
+<script language="JavaScript">
+function CalendarJumpToTop ()
+{
+   if(typeof(document) != "undefined")
+   {
+     if(document.readyState == "complete")
+	 	   dvPortalCalendarDayScroll.scrollTop=AnchorStartDayAt.scrollDistance;
+	  else
+         setTimeout("CalendarJumpToTop()", 100);
+   }
+}
+</script>
+
+<swe:layout viewDisplayMode="Layout">
+   <swe:include file="CCApplet_Spacer.swt"/>
+	<swe:include file="CCLayoutTitlePortal.swt"/>
+</swe:layout>
+
+<swe:layout viewDisplayMode="Show" appletDisplayMode="Show">
+<!--Applet Body-->
+<swe:include file="CCApplet_Spacer.swt"/>
+<div class="swe:this.SelectStyle">
+
+<swe:include file="CCCalendarAppletTitleGraphical.swt"/>
+
+<table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="AppletHIFormBorder">
+
+<swe:layout viewDisplayMode="Show" appletDisplaySize="Max">
+
+<table datatable="0" summary="" class="calendarBorder" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0" style="table-layout:fixed"><tr><td valign="top">
+<table datatable="0" summary="" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0">
+ <swe:form name=CalendarGotoDateForm>
+ <tr class="calendarBlank siebui-cal-pickrange">
+  <td valign="top">
+   <table datatable="0" summary="" border="0">
+    <tr>
+     <td class="calendarLabel"><!-- Owner Label --><swe:control id="101" property="FormattedHtml" hintText="Label"/></td>
+     <td class="calendarField" colspan="4"><!-- Owner field --><swe:control id="102" property="FormattedHtml" hintText="Field" hintMapType="Control"/></td>
+    </tr>
+    <tr>
+     <td class="calendarLabel"><!-- Date Label --><swe:control id="103" property="FormattedHtml"/></td>
+     <td class="calendarField"><div class="siebui-inp-popup-parent"><!-- Date Field (Month) --><swe:control id="105" property="FormattedHtml"/></div></td>
+     <td class="calendarField"><div class="siebui-inp-popup-parent"><!-- Date Field (Day) --><swe:control id="104" property="FormattedHtml"/></div></td>
+     <td class="calendarField"><div class="siebui-inp-popup-parent"><!-- Date Field (Year) --><swe:control id="106" property="FormattedHtml"/></div></td>
+     <td class="calendarField"><!-- Go --><swe:control id="130" property="FormattedHtml"/></td>
+    </tr>
+
+	<tr>
+		<td class="calendarLabel"><swe:control id="107" property="FormattedHtml" hintText="TimeZoneLabel"/></td>
+		<td class="mceField" colspan="4">
+			<swe:control id="108" property="FormattedHtml" hintText="TimeZone" hintMapType="Control"/>
+		</td>
+	</tr>
+
+	
+
+   </table>
+  </td>
+ </tr>
+ </swe:form>
+</table>
+<table datatable="0" summary="" class="AppletStyle3" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0">
+ <tr class="AppletButtons">
+  <td dir="ltr" class="AppletButtons siebui-cal-daterange" width="100%"><b><swe:calendar property="DateRange"></b></td>
+  <td class="AppletButtons" valign="middle" nowrap><!-- New Appt --><swe:control id=133 property="FormattedHtml"/></td>
+  <td class="AppletButtons siebui-appbutton-seperator" nowrap></td>
+  <td class="AppletButtons" valign="middle" nowrap><!-- Previous --><swe:control id=131 property="FormattedHtml"/></td>
+  <td class="AppletButtons" valign="middle" nowrap><!-- Next  --><swe:control id=132 property="FormattedHtml"/></td>
+ </tr>
+</table>
+</td></tr><tr><td>
+
+<div id=dvPortalCalendarDayScroll STYLE="width: 100%; height: 390px; overflow: auto;">
+<table datatable="0" summary="" class="calendarBorder2" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0">
+
+<swe:calendarIntervalLoop>
+<swe:calendarInterval>
+
+<tr valign="top" style="height:18;">
+	<!-- Interval -->
+	<td class="calendarInterval" align="right" nowrap style="white-space:nowrap;">
+		<!-- Date Interval -->
+		<swe:this property="Interval"/>&nbsp;
+	</td>
+	<swe:calendarTiledActivity/>
+</tr>
+
+</swe:calendarInterval>
+</swe:calendarIntervalLoop>
+
+</table>
+
+</div>
+</td>
+</tr>
+</table>
+
+<img src="images/spacer.gif" width="1" height="1" alt="" alt="" onLoad= "CalendarJumpToTop()">
+
+</swe:calendar>
+</swe:layout>
+
+</td></tr></table>
+</div>
+
+</swe:layout>
+
+<!-- End of CCAppletCalendarDailyPortal.swt-->
+

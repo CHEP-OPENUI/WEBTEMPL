@@ -1,0 +1,32 @@
+<!-- Template Start: eCfgObj_GlobalDetailExpl.swt -->
+<div id="eCfgObj_GlobalDetailExpl.swt" class="cxStatusTempl">
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+   <tr class="listRowOff">
+      <td>
+         <b><swe:control id="Explanation" CfgUIControl="lblExplanation" property="DisplayName" /></b>
+      </td>
+   </tr>
+   <tr class="listRowOff" >
+      <td >
+         <table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+	   <swe:for-each id="600" CfgLoopType="$.DetailExpl" startValue="1500" count="Dynamic" iteratorName="162Id">
+               <swe:control id="swe:162Id" CfgUIControl="CfgLabel"  DisplayMode="DontEncodeData" CfgHtmlType="CfgLabel" CfgFieldName="CxExplanation">
+               <tr class="listRowOff">
+                  <td width="1%" valign="top">
+                     <img src="images/icon_configure_conflict.gif" alt="">
+                  </td>
+                  <td>
+                     <span id="CxExplanation" class="cxLabel">
+                     <swe:this  property="FormattedHtml"/>
+                     </span>
+                  </td>
+               </tr>
+               </swe:control>
+            </swe:for-each>
+         </table>
+      </td>
+   </tr>
+</table>
+</div>
+
+<!-- Template End: eCfgObj_GlobalDetailExpl.swt -->

@@ -1,0 +1,48 @@
+<!--  Template Start: CCViewDetail_Mobile_Signature.swt -->
+<swe:include file="CCHTMLHeader.swt"/>
+<div>
+
+<!-- ---------- Main Content Area ---------------------------->
+
+<swe:if condition="Web Engine State Properties, IsPhoneMode">
+    <div id="_FormParentRelatedItemsOuterCont" class="siebui-SiebelDetailParentContainerRelatedItemsOuterCont-sign" landscape="Hide" portrait="Hide">
+</swe:if>
+<swe:if condition="Web Engine State Properties, IsTabletMode">
+    <div id="_FormParentRelatedItemsOuterCont" class="siebui-SiebelDetailParentContainerRelatedItemsOuterCont-sign" landscape="Default" portrait="Hide">
+</swe:if>
+
+   <div id="_FormParentRelatedItems" class="siebui-SiebelDetailParentContainerRelatedItems-sign ListAppletContainer ui-body-b">
+         <div enabletoggle="true"></div>
+      <swe:applet hintMapType="Applet" id="1" hintText="Parent List Applet" property="FormattedHtml" var="ParentWithPointer"/>
+   </div>
+</div>
+
+<swe:if condition="Web Engine State Properties, IsPhoneMode">
+    <div id="_AppletListRelatedItemsOuterCont" class="siebui-SiebelContentListContainerRelatedItemsOuterCont-sign ui-body-b" landscape="Show" portrait="Show">
+</swe:if>
+<swe:if condition="Web Engine State Properties, IsTabletMode">
+    <div id="_AppletListRelatedItemsOuterCont" class="siebui-SiebelContentListContainerRelatedItemsOuterCont-sign ui-body-b" landscape="Default" portrait="Show">
+</swe:if>
+
+    <div name="jqmToggleCtrl" id="jqmToggleCtrl" ctrltype="button" ctrllabel="IDS_SWE_MOBIIE_BACK" effect="blind" showoptions="{'direction': 'horizontal'}" hideoptions="{'direction': 'horizontal'}" style="display:none;"></div> 
+
+   <div id="_AppletFormRelatedItems1" class="siebui-SiebelContentDetailContainerRelatedItems1-sign ui-body-e">
+        <swe:applet hintMapType="Applet" id="3" hintText="Child Form Applet" property="FormattedHtml" var="Child"/>
+   </div>
+   <div id="_AppletListRelatedItems" class="siebui-SiebelContentListContainerRelatedItems-sign ui-body-b">
+        <swe:for-each count=2 iteratorName="currentId" startValue="4">         
+            <swe:applet hintMapType="Applet" id="swe:currentId" hintText="Child List Applet" property="FormattedHtml" var="ParentWithPointer" />
+        </swe:for-each>
+   </div>
+   <div id="_AppletFormRelatedItems" class="siebui-SiebelContentDetailContainerRelatedItems-sign ui-body-e">
+        <swe:applet hintMapType="Applet" id="10" hintText="Child Form Applet" property="FormattedHtml" var="Child"/>
+   </div>
+</div>
+<swe:include file="CCHTMLFooter.swt"/>
+
+<!-- ---------- End Main Content Area ------------------------>
+</div>
+<!--  Template End: CCViewDetail_Mobile_Signature.swt -->
+
+
+

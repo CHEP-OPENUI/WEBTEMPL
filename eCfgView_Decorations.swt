@@ -1,0 +1,72 @@
+<!-- Template Start: eCfgView_Decorations.swt -->
+
+<swe:frameset htmlAttr="rows='30%,40%,*' border='0' frameborder='No'">
+
+    <swe:frame type="Applet" name="Applet1">
+        <swe:include file="CCHTMLHeader.swt"/>
+
+        <table datatable="0" summary="" border="0" cellspacing="0" cellpadding="0" width="100%">
+            <tr>
+                <swe:if condition="Web Engine State Properties, IsLowInteractive">
+				<td valign="absmiddle"><swe:include file="CCThreadbar.swt"/></td>
+                </swe:if>
+                <td align="right"><swe:applet id="201" hintText="Search Applet"/></td>
+	        <td>&nbsp;&nbsp;&nbsp;</td>
+            </tr>
+        </table> 
+    
+        <swe:applet id="1" hintText="Parent Applet"/>
+            
+        <swe:include file="CCViewbar_Tabs.swt"/>
+        <swe:include file="CCSubViewbar_Drop.swt"/>
+    </swe:frame>
+    
+    <swe:frame type="Page" name="Page">
+        
+    <swe:switch>
+    <swe:case condition="Web Engine State Properties, IsRTL">
+    <!-- RTL case -->
+
+        <swe:frameset htmlAttr="cols='50%,50%' border='0' frameborder='No'">
+
+            <swe:frame type="Applet" name="Applet3">
+                <swe:applet id="3"/>
+            </swe:frame>
+
+            <swe:frame type="Applet" name="Applet2">
+                <swe:applet id="2"/>
+            </swe:frame>
+            
+        </swe:frameset>
+
+
+    <!-- end of RTL case -->
+    </swe:case>
+
+    <swe:default>
+    <!-- default, non-RTL -->
+
+        <swe:frameset htmlAttr="cols='50%,50%' border='0' frameborder='No'">
+
+            <swe:frame type="Applet" name="Applet2">
+                <swe:applet id="2"/>
+            </swe:frame>
+            
+            <swe:frame type="Applet" name="Applet3">
+                <swe:applet id="3"/>
+            </swe:frame>
+            
+        </swe:frameset>
+
+    <!-- end of default, non-RTL -->
+    </swe:default>
+    </swe:switch>
+
+        
+    </swe:frame>
+
+</swe:frameset>
+
+<swe:include file="CCHTMLFooter.swt"/>
+
+<!-- Template End: eCfgView_Decorations.swt -->

@@ -1,0 +1,67 @@
+<!-- Template Start ePortalTickerSearchFormApplet.swt -->
+<swe:layout viewDisplayMode="Layout"><swe:include file="ePortalAppletTitle.swt"/></swe:layout>
+<swe:layout viewDisplayMode="Show" appletDisplayMode="Show"><swe:include file="ePortalAppletTitle.swt"/></swe:layout>
+<swe:layout viewDisplayMode="Show" appletDisplayMode="Show" appletDisplaySize="Max">
+<table datatable="0" summary="" class="Border1" width="100%" border="0" cellpadding="1" cellspacing="0">
+<tr><td>
+<table datatable="0" summary="" class="BasicFormClear" valign="top" width="100%" cellpadding="4" cellspacing="0" border="0">
+<tr><td>
+
+<!-- begin Company Search form -->
+
+	<form name="SICompanySearchForm" method="GET" onSubmit="SISubmitEvent(); return false;">
+
+<input type="hidden" name="OneShot" value="1">
+<swe:control id="509" property="DisplayName" hintText="Label" hintMapType="Control"/>
+<swe:control id="508" property="DisplayName" hintText="Label" hintMapType="Control"/>
+<swe:control id="507" property="DisplayName" hintText="Label" hintMapType="Control"/>
+<swe:control id="510" property="DisplayName" hintText="Label" hintMapType="Control"/>
+
+<!-- Label: company search blurb -->
+<br>
+<swe:control id="501">
+	<swe:this property="DisplayName" hintText="Long Label"/>
+	<p></p>
+</swe:control>
+
+<table datatable="0" summary="">
+
+<!-- Company Search Text -->
+ <tr>
+  <td class="FormLabel">
+	<swe:control id="502" property="DisplayName" hintText="Label"/>
+  </td>
+  <td>
+	<input type="text" name="Find" size=40>
+  </td>
+  <td>
+   <table datatable="0" summary="" border=0 cellspacing=0 cellpadding=0 bgcolor="#cccccc" background="images/btn_back2.gif">
+    <tr>
+	<td> <img src="images/btn_left.gif" border=0 height=15 width=2></td>
+	<td valign="absmiddle" align="center" height="15" class="button" nowrap> <a href='JavaScript:SISubmitEvent()'>&nbsp;&nbsp;<swe:control id="504" property="DisplayName" hintText="Label" hintMapType="Control"/>&nbsp;&nbsp;</a> </td>
+	<td><img src="images/btn_right.gif" border=0 height=15 width=2> </td>
+    </tr>
+   </table>
+  </td>
+ </tr>
+</table>
+</form>
+<!-- end Company Search form -->
+
+</td></tr>
+</table>
+</td></tr>
+</table>
+<p></p>
+
+<script language="javascript">
+
+function SISubmitEvent()
+{
+   SWEPersonalizationGotoview(document.SICompanySearchForm.SWEView.value, "OneShot=1&Find=" + document.SICompanySearchForm.Find.value);   
+}
+
+</script>
+</swe:layout>
+<!-- Template End ePortalTickerSearchFormApplet.swt -->
+

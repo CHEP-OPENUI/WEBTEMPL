@@ -1,0 +1,66 @@
+<!-- Template Start ePortalLinkListApplet.swt (from: CCAppletListPortal.swt) -->
+
+<swe:layout viewDisplayMode="Layout">
+	<swe:include file="CCApplet_Spacer.swt"/>
+	<swe:include file="CCLayoutTitlePortal.swt"/>
+</swe:layout>
+
+<swe:layout viewDisplayMode="Show">
+<table datatable="0" summary="" width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr valign="top"><td><img src="images/spacer.gif" width="1" height="3" alt=""></td></tr></table>
+
+<swe:control id="1100">
+  <div class=CmdTxt><swe:this property="FormattedHtml" hintText="Outside Applet Help Text" hintMapType="Control"/></div><p>
+</swe:control>
+
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+ <tr valign="top">
+  <td class="AppletStyle1">
+    <swe:form>
+     <swe:include file="ePortalAppletTitle.swt"/>
+    </swe:form>	
+<swe:layout viewDisplayMode="Show" appletDisplaySize="Max">
+<table datatable="0" summary="" class="AppletBorder" width="100%" border="0" cellpadding="1" cellspacing="0">
+ <tr>
+  <td>
+   <table datatable="0" summary="" class="Row2" bgcolor="#FFFFFF" valign="top" width="100%"  cellpadding="0" cellspacing="0" border="0">
+    <tr>
+     <td class="Row2">
+
+<swe:for-each-row>
+<table datatable="0" summary="">
+	<tr valign="top">
+		<td><img src="images/bullet_black.gif"></td>
+		<td valign="top">
+			<table datatable="0" summary="" valign="top">
+				<tr valign="top">
+					<td><b><swe:control id="501" property="FormattedHtml"  hintText="Field" hintMapType="ListItem"/></b></td>
+				</tr>
+				<tr valign="top">
+					<td><swe:control id="502" property="FormattedHtml" hintText="Field" hintMapType="ListItem"/> &nbsp;
+					<swe:control id="503"><span class="LinkListInfo"><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></span></swe:control>
+					</td>
+				</tr>
+				<tr valign="top">
+					<td>&nbsp;</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</swe:for-each-row>
+
+     </td>
+    </tr>
+   </table>
+  </td>
+ </tr>
+</table>
+</swe:layout>
+	
+  	<!--<swe:include file="CCBottomApplet.swt"/> -->
+  </td>
+ </tr>
+</table>
+</swe:layout>
+
+<!-- Template End ePortalLinkListApplet.swt -->

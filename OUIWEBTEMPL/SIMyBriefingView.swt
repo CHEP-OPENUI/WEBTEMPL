@@ -1,0 +1,26 @@
+<!-- Salutation applet -->
+<swe:applet id="101" hintText="Applet"/>
+
+<!-- two-column area -->
+<div class="siebui-view-multi-column">
+    <table datatable="0" summary="" width="100%">
+        <tr>
+            <!-- 1st column (wide) -->
+            <td valign="top" width="66%">
+                <swe:for-each startValue="102" count="20" iteratorName="currentId"> 
+                   <swe:applet id="swe:currentId" hintText="Applet"/>
+                </swe:for-each>
+            </td>
+
+            <!-- gutter -->
+            <td valign="top" width="15">&nbsp;</td>
+
+            <!-- 2nd column (narrow) -->
+            <td valign="top" width="33%">
+                <swe:for-each startValue="202" count="20" iteratorName="currentId"> 
+                   <swe:applet id="swe:currentId" hintText="Applet"/>
+                </swe:for-each>
+            </td>
+        </tr>
+    </table>
+</div>

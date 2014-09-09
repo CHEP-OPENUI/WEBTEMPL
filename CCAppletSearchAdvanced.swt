@@ -1,0 +1,92 @@
+<!-- Template Start: CCAppletSearchAdvanced.swt -->
+
+<!-- The two tables, one td, and one tr are opened by CCAppletFormSearchTop.swt -->
+
+	<swe:form htmlAttr="onsubmit='SubmitAdvancedSearch(); return false;'">
+			<swe:include file="CCFormSearch.swt"/>
+			<!-- Start of categories block -->
+				<!--alignment row-->
+				<swe:srchCategoryList>
+		        <swe:srchCategory>
+				<tr valign="top">
+					<td align="right"></td>
+					<td>
+						<table datatable="0" summary="" cellpadding="0" cellspacing="0" border="0">
+							<tr>
+								<td><swe:srchCategoryControl/></td>
+								<td><swe:srchCategoryText/></td>
+							</tr>
+						</table>
+					</td>			
+				</tr>										
+				</swe:srchCategory>
+				</swe:srchCategoryList>
+				<tr><td><img src="images/spacer.gif" width="95" height="1" alt=""></td><td></td></tr>
+			<!-- End of categories block -->
+
+		<!--alignment row-->
+			<tr><td><img src="images/spacer.gif" width="95" height="1" alt=""></td><td></td></tr>	
+			<tr>
+				<td></td>
+				<td>
+					<table datatable="0" summary="" cellpadding="0" cellspacing="0" border="0"><tr>
+					 <swe:control id="132">
+				      <!-- EditRecord -->
+				        <td valign="middle" nowrap>
+				        <swe:this property="FormattedHtml" hintText="Menu" hintMapType="Control"/>
+				        </td>
+				      </swe:control>
+				
+				      <swe:control id="133">
+				      <!-- DeleteRecord -->
+				        <td valign="middle" nowrap>
+				        <swe:this property="FormattedHtml" hintText="New" hintMapType="Control"/>
+				        </td>
+				      </swe:control>
+				
+				      <swe:control id="141">
+				      <!-- optional control -->
+				        <td valign="middle" nowrap>
+				        <swe:this property="FormattedHtml" hintMapType="Control"/>
+				        </td>
+				      </swe:control>
+				
+				      <swe:control id="142">
+				      <!-- optional control -->
+				        <td valign="middle" nowrap>
+				        <swe:this property="FormattedHtml" hintMapType="Control"/>
+				        </td>
+				      </swe:control>
+				
+				      <swe:control id="143">
+				      <!-- optional control -->
+				        <td valign="middle" nowrap>
+				        <swe:this property="FormattedHtml" hintMapType="Control"/>
+				        </td>
+				      </swe:control>
+					  </tr></table>
+				</td>
+			</tr>
+		</table>
+	</td></tr>	
+		
+		
+	<swe:error>
+	<tr>
+		<td class="AppletStyle2">			
+			<table datatable="0" summary="" class="AppletBack" border="0" cellspacing="2" cellpadding="2">
+				<tr><td></td><td class="error"><swe:this property="FormattedHtml"/></td></tr>
+				<tr><td><img src="images/spacer.gif" width="95" height="1" alt=""></td><td></td></tr>	
+			</table>
+		</td>
+	</tr>
+	</swe:error>	
+		
+		
+	
+	</swe:form>
+</table>	
+<table datatable="0" summary="" bgcolor="#ffffff" width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr valign="top"><td><img src="images/spacer.gif" width="1" height="5" alt=""></td></tr></table>
+
+
+<!-- Template End: CCAppletSearchAdvanced.swt -->

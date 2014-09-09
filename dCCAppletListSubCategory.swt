@@ -1,0 +1,10 @@
+<!-- Template Start: dCCAppletListSubCategory.swt -->
+
+<swe:for-each-row>
+	<nobr>
+	&nbsp;<swe:control id="502" property="FormattedHtml" hintText="Field" hintMapType="Subcategory name"/>&nbsp;
+	<swe:control id="503">(<swe:this property="FormattedHtml" hintText="Field" hintMapType="Count"/>)</swe:control>&nbsp;&nbsp;&nbsp;&nbsp;
+	</nobr>&#32;&#32;
+</swe:for-each-row>
+
+<!-- Template End: dCCAppletListSubCategory.swt -->

@@ -1,0 +1,21 @@
+<!-- Template Start: CCSubViewbar_Drop.swt -->
+<!------------ Tier 4 navigation ----------------->
+
+	<table datatable="0" summary="" width="100%" valign="top" align="center" cellpadding='0' cellspacing='0' border='0'>
+		
+		<swe:subviewbar type="Select">
+		<swe:for-each-subview>
+		<tr valign="absmiddle">
+			<td><img src="images/spacer.gif" width="10" height="22" alt=""></td>
+			<td valign="top"><swe:pageitem id="2" property="DisplayName" /></td>	
+			<td nowrap><b><swe:this property="FormattedHtml" /></b></td>
+			<td width="100%">&nbsp;</td>
+		</tr>
+		</swe:for-each-subview>
+		</swe:subviewbar>
+		
+	</table>
+
+		
+<!------------ End Tier 4 navigation ------------->
+<!-- Template End: CCSubViewbar_Drop.swt -->

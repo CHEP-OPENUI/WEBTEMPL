@@ -1,0 +1,197 @@
+<!-- Template Start: eCfg_MenuProductTheme.swt -->
+
+<div  id="cxProdMenu" class="cxProdTheme">
+
+<script>
+    var iCounter = 0;
+</script>
+
+<div id="Rel_0" class="eCfgPosAbs">
+<table datatable="0" summary="" width="100%" height="100%" cellspacing="3" cellpadding="2" border="0" class="AppletBorder">
+<tr>
+
+    <td class="AppletBack" valign="top">
+        <table datatable="0" summary="" cellpadding="0" cellspacing="0" border="0" width="100%" height="100%" bgcolor="#ffffff">
+        <tr>
+
+            <td valign="top">
+            <!-- Options Map -->
+            <table datatable="0" summary="" cellpadding="5" cellspacing="5" border="0" width="100%" bgcolor="#ffffff">
+            <swe:for-each id="110" CfgLoopType="Group" startValue="8100" count="Dynamic" iteratorName="100Id" >
+                <script>
+                    var sIsCurrentGroup = '<swe:control id="swe:100Id+500" CfgFieldName="Selected" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+                    var sGroupName = '<swe:control id="swe:100Id+51"  CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" CfgFieldName="CxGroupName" />';
+                    var sHideGrp = '<swe:control id="swe:100Id+999" CfgFieldName=".Hide" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+    
+                    if ( !sIsCurrentGroup )
+                    {
+                        var sChangeGroup = '<swe:control id="swe:100Id+50"  CfgUIControl="ChangeCurrentNode" CfgHtmlType="CfgAction" property="FormattedHtml" CfgFieldName="CxGroupName" DisplayMode="EncodeData" InvokeMethod="ChangeCurrentNode"/>';
+                    }
+                    
+                    if (sGroupName == "&nbsp;")
+                    {    //this is the summary group
+                        var summaryLink = "";
+                        
+                        if (sIsCurrentGroup)
+                        {    //summary is selected
+                            bShowSummary = true;
+                        }
+                        else
+                        {    //summary is not selected
+                            //store the link used to select it
+                            summaryLink = sChangeGroup;
+                        }
+                    }
+                    
+                    //show the group if it isn't hidden
+                    if (sHideGrp != "Y")
+                    {
+                        document.write('<td width="33%" valign="top">');
+                        document.write('<table datatable="0" summary="" cellpadding="1" cellspacing="0" border="0">');
+                        //Header row
+                        document.write('<tr>');
+                        document.write('<td colspan="2">');
+                        document.write('<b>');
+                        document.write(sGroupName);
+                        document.write('</b>');
+                        document.write('</td>');
+                        document.write('</tr>');
+                    }
+                </script>
+                <!-- Relationships -->
+                <swe:for-each id="180" CfgLoopType="Children" startValue="410" count="Dynamic" iteratorName="IncId" >
+                <script>
+                    //show the relationship if the group isn't hidden
+                    if (sHideGrp != "Y")
+                    {
+                        var sHideRel = '<swe:control id="swe:180Id+500" CfgFieldName=".Hide" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+                        //show the relationship if it isn't hidden
+                        if (sHideRel != "Y")
+                        {
+                            var sHasChild = "";
+                            var sHasChildImage = "";
+ 
+                            sHasChild = '<swe:control id="swe:180Id+280" CfgFieldName="HasChildren" CfgUIControl="CfgLabel" property="FormattedHtml" />';
+                            if (sHasChild == "N" || sHasChild == "n" || sHasChild == "No")
+                            {
+                               sHasChildImage = '<img src="images/bullet_green.gif" width="9" height="14" border="0" space="0" hspace="0" alt=""  title="" ></img>';
+                            }
+                            else
+                            {
+                               sHasChildImage = '<img src="images/bullet_black.gif" width="9" height="14" border="0" space="0" hspace="0" alt=""  title="" ></img>';
+                            }
+                                                    
+                            document.write('<tr>');
+                            document.write('<td width="1%" valign="top">');
+                            document.write(sHasChildImage);
+                            document.write('</td>');
+                            document.write('<td width="99%">');
+                           
+                            var sPortName = '<swe:control id="swe:180Id + 350" CfgFieldName="CxPortName" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" hintText="Port Name" property="FormattedHtml"/>';
+                            var sRequireMoreChild = '<swe:control id="swe:180Id+4000" CfgFieldName="RequireMoreChild" CfgUIControl="RequireMoreChild" property="FormattedHtml" />';
+                            var sPortId = '<swe:control id="swe:180Id + 390" CfgFieldName="Port Item Id" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';                               
+
+                            if (sPortName == "")
+                            {    //this is an attribute
+                                sPortName = '<swe:control id="swe:180Id+20" CfgFieldName="AttName" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" hintText="Attribute Name" property="FormattedHtml"/>';
+                                sPortId = sPortName;
+                                //sRequireMoreChild = '';
+                            }
+
+                            var sLink;
+                            
+                            if ( sIsCurrentGroup )
+                            {
+                                sLink = 'javascript:ToggleContent(' + currentRel + ');';
+                                visibleRelArray[visibleArrayIndex] = currentRel;
+                                visibleArrayIndex++;
+                            }
+                            else
+                            {
+                                sLink = 'javascript:ChooseGroup("' + sChangeGroup + '",' + currentRel + ')';
+                            }
+                            
+                            if( sPortId != "" )
+                            {
+                                relationshipMap[sPortId] = currentRel;
+                            }
+                            currentRel++;
+                            
+                            //link for menu item
+                            document.write('<a href=\'');
+                            document.write(sLink);
+                            document.write('\' onMouseOver="javascript:HiLite(this, true);" onMouseOut="javascript:HiLite(this, false);">');
+                            document.write(sPortName);
+                            document.write('</a>');
+                            document.write (sRequireMoreChild);
+    
+                            document.write('</td>');
+                            document.write('</tr>');
+                        }
+                        else
+                        {
+                            if ( sIsCurrentGroup )
+                            {
+                                visibleRelArray[visibleArrayIndex] = currentRel;
+                                visibleArrayIndex++;
+                            }
+                            currentRel++;
+                        }
+                    }
+                </script>
+                </swe:for-each>
+                <script>
+                    if (sHideGrp != "Y")
+                    {
+                        document.write('</table>');
+                        document.write('</td>');
+                        iCounter++;
+                    }
+            
+                    if (iCounter % 3 == 0)
+                    {    //multiple of three
+                        //end and begin new table row
+                        document.write('</tr><tr>');
+                    }
+                </script>
+            </swe:for-each>
+            <script>
+                if (iCounter % 3 != 0)
+                {    //not a multiple of three
+                    if (iCounter % 3 == 2)
+                    {    //one relationship in last row
+                        //insert blank table definition and end table row
+                        document.write('<td>&nbsp;</td></tr>');
+                    }
+                    if (iCounter % 3 == 1)
+                    {    //two relationships in last row
+                        //insert two blank table definitions and end table row
+                        document.write('<td>&nbsp;</td><td>&nbsp;</td></tr>');
+                    } 
+                }
+            </script>
+            </table>
+            </td>
+
+        </tr>
+        </table>
+    </td>
+
+</tr>
+</table>
+</div>
+<table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" border="0" class="eCfgVisHid"><tr><td align="right">
+<div id="POSITION_REF" class="eCfgPosAbs"></div>
+</td></tr></table>
+<script>
+    //reset the loop index
+    currentRel = 0;
+</script>
+<!-- Loop for current group -->
+<swe:for-each id="120" CfgLoopType="CurrentGroup" startValue="210" count="Dynamic" iteratorName="150Id" >
+    <swe:include id="swe:151Id" />
+</swe:for-each>
+
+</div> <!-- end of product theme div -->
+
+<!-- Template Start: eCfg_MenuProductTheme.swt -->

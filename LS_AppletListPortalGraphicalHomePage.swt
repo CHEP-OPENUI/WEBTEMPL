@@ -1,0 +1,44 @@
+<!-- Template Start: CCAppletListPortalGraphicalHomePage.swt -->
+
+<swe:layout viewDisplayMode="Layout">
+<swe:include file="CCApplet_Spacer.swt"/>
+	<swe:include file="CCLayoutTitlePortal.swt"/>
+</swe:layout>
+
+<swe:layout viewDisplayMode="Show" appletDisplayMode="Show">
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr valign="top"><td><img src="images/spacer.gif" width="1" height="8" alt=""></td></tr></table>
+
+<swe:control id="1100">
+  <div class=CmdTxt><swe:this property="FormattedHtml" hintText="Outside Applet Help Text" hintMapType="Control"/></div><p>
+</swe:control>
+
+
+<span class="AppletStyle8">
+ <swe:form>
+
+	<div class="swe:this.SelectStyle">	
+	
+	<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td>
+
+		<swe:include file="CCTitle_PortalGraphical.swt"/>
+		<swe:layout viewDisplayMode="Show" appletDisplaySize="Max">
+			<swe:error>
+				<table class="AppletBlank" width="100%" cellpadding="4" cellspacing="0" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/><br>&nbsp;</td></tr></table>
+			</swe:error> 
+			<swe:list>
+			<table class="AppletBlank" valign="top" width="100%" cellpadding="0" cellspacing="1" border="0">
+				
+                           <swe:include file="dCCListBodyImgBulletScreenHomepage.swt"/>
+
+			</table>
+			</swe:list>
+		</swe:layout>
+		<swe:include file="CCBottomApplet.swt"/>
+	</td></tr></table>
+	
+	</div>
+	
+ </swe:form>
+</span>
+</swe:layout>
+<!-- Template End: CCAppletListPortalGraphical.swt -->

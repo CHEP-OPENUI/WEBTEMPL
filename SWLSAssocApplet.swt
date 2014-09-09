@@ -1,0 +1,65 @@
+<swe:switch>
+  <swe:case condition="Web Engine User Agent, TestCapability, WirelessStyle:WML">
+    <swe:xsl-stylesheet name="SWLSPickApplet_wml.xsl" mode="process"/>
+  </swe:case>
+  <swe:case condition="Web Engine User Agent, TestCapability, WirelessStyle:CHTML">
+    <swe:xsl-stylesheet name="SWLSPickApplet_chtml.xsl" mode="process"/>
+  </swe:case>
+  <swe:case condition="Web Engine User Agent, TestCapability, WirelessStyle:XHTML">
+    <swe:xsl-stylesheet name="SWLSPickApplet_1c_xhtml.xsl" mode="process"/>
+  </swe:case>
+  <swe:default>
+    <swe:xsl-stylesheet name="SWLSPickApplet_2c_html.xsl" mode="process"/>
+  </swe:default>
+</swe:Switch>
+
+<template>
+  <do type="prev" label="Back">
+    <prev/>
+  </do>
+</template>
+
+<!-- Name of the List -->
+<b>
+<swe:control id="1"  hintMapType="Control">
+  <swe:this property="DisplayName" hintText="New Title"/>
+</swe:control>
+</b>
+
+<swe:form>
+  <!-- "Search" button  -->
+  <swe:control id="2" hintMapType="Control">
+    <swe:this property="FormattedHtml" hintText="Find"/>
+  </swe:control>
+
+  <!-- "New" button -->
+  <swe:control id="3" hintMapType="Control">
+    <swe:this property="FormattedHtml" hintText="New"/>
+  </swe:control>
+
+  <!-- line break -->
+  - - - - <br/>
+
+  <!-- List Rows -->
+  <swe:for-each-row>
+    <swe:for-each count=20 iteratorName="CurrentId" startValue="11">
+      <!-- reserved for text labels -->
+      <swe:control id="swe:CurrentId+100" hintMapType="Control">
+        <swe:this property="DisplayName" hintText="Label"/>
+      </swe:control>
+      <swe:control id="swe:CurrentId" hintMapType="ListItem">
+        <swe:this property="FormattedHtml" hintText="ListItem"/>
+      </swe:control>
+    </swe:for-each>
+  </swe:for-each-row>
+</swe:form>
+
+<!-- More Button -->
+<swe:this property="RowCounter"/><br/>
+
+<!-- line break -->
+<swe:for-each count=10 iteratorName="CurrentId" startValue="41">
+  <swe:control id="swe:CurrentId" hintMapType="Control">
+    <swe:this property="FormattedHtml" hintText="InvokeMethod"/>
+  </swe:control>
+</swe:for-each>

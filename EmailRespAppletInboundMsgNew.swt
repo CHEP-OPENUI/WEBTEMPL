@@ -1,0 +1,19 @@
+<!-- Template Start: EmailRespAppletInBoundMsgNew.swt -->
+
+<swe:include file="CCApplet_Spacer.swt"/>
+<div class="swe:this.SelectStyle">	
+<table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+	<swe:form>
+	<tr valign="top">
+		<td class="AppletHIFormBorder"><swe:include file="CCTitle_Named.swt"/><swe:include file="CCFormButtonsTop.swt"/><swe:include file="EmailRespFormInBoundNew.swt"/></td>
+	</tr>
+	</swe:form>
+</table>
+</div>
+
+
+<!-- Template End: EmailRespAppletInBoundMsgNew.swt -->
+
+
+
+	

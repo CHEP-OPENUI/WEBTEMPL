@@ -1,0 +1,13 @@
+<!-- Template Start: XmlAppletListEdit.swt -->
+<swe:form>
+   <swe:this property="Title"/>
+	<swe:this property="RowCounter"/>
+   <swe:all-controls>
+      <swe:control property="FormattedHtml"/>
+   </swe:all-controls>
+   <swe:list-control/>
+   <swe:error>
+      <swe:this property="FormattedHtml"/>
+   </swe:error>
+</swe:form>
+<!-- Template End: XmlAppletListEdit.swt -->

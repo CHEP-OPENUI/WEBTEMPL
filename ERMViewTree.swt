@@ -1,0 +1,66 @@
+<!--  Template Start: ERMViewTree.swt -->
+
+<swe:include file="CCHTMLHeader.swt"/>
+
+<table datatable="0" summary="" width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+
+	<!-- ---------- Left Frame (25%) ---------------------------->
+	<td valign="top" width="25%">
+		
+		
+		<!--local override of CSS-->
+		<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+			<style>BODY {border-right:1px solid #000000;}	.mceField, .mceField INPUT, .mceField TEXTAREA, .mceField SELECT{width:130px;}</style>
+		</swe:if>
+
+
+		
+		<swe:applet hintMapType="Applet" id="1" hintText="Applet" property="FormattedHtml" var="Parent"/>
+
+
+	
+	</td>
+
+	<!-- ---------- Right Frame (75%) ---------------------------->
+	<td valign="top" width="75%">
+		
+		
+		<!--local override of CSS-->
+		<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+			<style>BODY {border-left:1px solid #000000;}.mceField, .mceField INPUT, .mceField TEXTAREA, .mceField SELECT{width:130px;}</style>
+		</swe:if>
+		
+		
+		<!-- ---------- Right Frame (75%) ------------------------->
+                <!-- Parent Employee Detail Applet -->
+		<table datatable="0" summary="" width="100%" cellpadding="5" cellspacing="0" border="0">
+		  <tr>		    
+                    <td valign="top" width="100%">                    
+                      <swe:applet hintMapType="Applet" id="101" hintText="Parent Applet" property="FormattedHtml" var="ParentWithPointer"/>                                                                
+    		    </td>
+    		  </tr>
+		</table> 
+		<!-- Child Review Period Applet -->  		
+		<table datatable="0" summary="" width="100%" cellpadding="5" cellspacing="0" border="0">
+                  <tr>  
+                    <td valign="top" width="100%">
+                      <swe:applet hintMapType="Applet" id="201" hintText="Child Applet" property="FormattedHtml" var="ChildWithPointer"/>
+                    </td>
+                  </tr>
+		</table> 
+		<!-- Grandchild Summary Toogle Applet -->
+		<table datatable="0" summary="" border="0" cellspacing="5" cellpadding="0" width="100%">
+		  <tr>
+		  <td valign="top" width="100%">
+		     <swe:applet hintMapType="Applet" id="301" hintText="Grandchild Applet" property="FormattedHtml" var="Child"/>
+		  </tr>
+		</table> 		
+		
+	</td>
+	</tr>
+</table>
+
+<swe:include file="CCHTMLFooter.swt"/>	
+
+<!--  Template End: ERMViewTree.swt -->

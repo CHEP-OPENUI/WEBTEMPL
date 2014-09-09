@@ -1,0 +1,23 @@
+<!-- Template Start: eCfgGroupMessagesJS.swt -->
+
+<div  id="cxStd" class="cxGrpTheme">
+
+<table datatable="0" summary="" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0">
+   <tr>
+      <td>
+
+        <script>
+           var sNameLabel = '<swe:control id="Name" CfgUIControl="lblName" CfgHtmlType="CfgLabel"/>';
+           var sEligReasonLabel = '<swe:control id="Elig" CfgUIControl="lblEligibilityReason" CfgHtmlType="CfgLabel"/>';
+        </script>
+
+        <swe:for-each id="200" CfgLoopType="Message" startValue="1500" count="Dynamic" iteratorName="102Id">
+          <swe:control id="swe:102Id+220" CfgHtmlType="CfgMessage" CfgJSShow="showMessages"/>
+        </swe:for-each>
+      </td>
+   </tr>
+</table>  
+
+</div>
+
+<!-- Template End: eCfgGroupMessagesJS.swt -->

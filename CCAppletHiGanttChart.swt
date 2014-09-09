@@ -1,0 +1,47 @@
+<!-- Start: CCAppletHiGanttChart.swt -->
+
+<link href="files/higantt.css" rel="stylesheet">
+
+<swe:include-script file="swecommon.js"/>
+<swe:include-script file="propset.js"/>
+
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+	<tr valign="top">
+		<td class="AppletStyle1">
+
+        <swe:form name="GanttChartForm">
+		<swe:if-var name="Grandchild"><span class="AppletStyle7"><swe:include file="CCTitle.swt"/></swe:if-var>			
+		<swe:if-var name="ChildWithPointer"><span class="AppletStyle3"></swe:if-var>				
+		<swe:if-var name="Child"><span class="AppletStyle3"></swe:if-var>	
+		<swe:if-var name="ParentWithPointer"><span class="AppletStyle1"><swe:include file="CCTitle.swt"/></swe:if-var>
+		<swe:if-var name="Parent"><span class="AppletStyle1"><swe:include file="CCTitle.swt"/></swe:if-var>
+		
+				<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">		
+						<tr class="AppletButtons">
+							<td><img src="images/spacer.gif" height="1" width="10" alt=""></td>
+							<td width="100%" class="AppletButtons">
+								<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="3" border="0">
+									<tr  class="AppletButtons">
+										<td width=100%></td>
+									</tr>
+								</table>										
+							</td>
+							<td valign="top" align="right"><img src="images/rnd_top_cls_d.gif" valign="top" width="6" height="6" border="0" alt=""></td>			
+						</tr>
+				</table>
+				
+				<DIV ID=dvHIGanttCtrl STYLE='width:100%;height:175px;border:1px solid #CCCCFF'>
+				</DIV>
+				
+				<swe:if-var name="Parent"><swe:include file="CCBottomApplet.swt"/></span></swe:if-var>
+				<swe:if-var name="ParentWithPointer"><swe:include file="CCBottomAppletPntr.swt"/></span></swe:if-var>
+				<swe:if-var name="Child"><swe:include file="CCBottomApplet.swt"/></span></swe:if-var>	
+				<swe:if-var name="ChildWithPointer"><swe:include file="CCBottomAppletPntr.swt"/></span></swe:if-var>	
+				<swe:if-var name="Grandchild"><swe:include file="CCBottomApplet.swt"/></span></swe:if-var>	
+
+		</swe:form>
+
+		</td>
+	</tr>
+</table>
+<!-- End: CCAppletHiGanttChart.swt-->

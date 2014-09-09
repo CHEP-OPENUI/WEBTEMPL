@@ -1,0 +1,33 @@
+<!--  Template Start: CCFrameViewbar_prm.swt -->
+<HTML dir="swe:dir">
+<head>
+    <title><swe:this property="Title"/></title>
+    <swe:include file="CCStylesChoice.swt"/>
+</head>
+<BODY class="toolbar" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+<swe:switch>
+    <swe:case condition="Web Engine State Properties, IsMobileApplicationMode">
+        <div id="HTMLMessageBar" class="ToolbarButton"></div>
+        <div id="s_pdq" class="ToolbarButton">
+            <a id = "s_pdq_a" href="#"><img src = "images/pdq.png"></a>
+        </div>
+        <div id="GoOffline" class="ToolbarButton"></div>
+        <div id="Sync" class="ToolbarButton"></div>
+        <div id="siebui-toolbar-mobilesettings" class="Tier2ToolbarContainer">
+            <swe:toolbar name="MobileSettings">
+                <swe:toolbaritem property="FormattedHtml"/>
+            </swe:toolbar>
+        </div>
+    </swe:case>
+    <swe:default>
+        <!--  Start Tier2 Nav & Toolbars-->
+        <div id="s_toolbar" class="Tier2ToolbarContainer">
+            <swe:toolbar name="PRMToolbar">
+                <swe:toolbaritem property="FormattedHtml"/>
+            </swe:toolbar>
+        </div>       
+    </swe:default>
+</swe:switch>
+</BODY>
+</HTML>
+<!--  Template End: CCFrameViewbar_prm.swt -->

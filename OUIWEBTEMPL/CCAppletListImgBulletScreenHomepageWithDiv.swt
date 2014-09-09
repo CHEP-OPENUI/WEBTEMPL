@@ -1,0 +1,33 @@
+<!--  Template Start: CCAppletListImgBulletScreenHomepageWithDiv.swt -->
+<!--  Oliver:   adjusted for HOME SCREENS, added classes, code cleanup -->
+
+<swe:layout viewDisplayMode="Layout">
+	<swe:include file="CCApplet_NamedSpacer.swt"/>	
+	<swe:include file="CCLayoutTitlePortal.swt"/>
+</swe:layout>
+
+<swe:layout viewDisplayMode="Show" appletDisplayMode="Show">
+<div class="siebui-screen-hp-applet">
+	<swe:form>
+		<table datatable="0" summary="" width="100%" class="siebui-screen-applet-head">
+			<tr class="siebui-applet-buttons">
+				<td class="siebui-screen-hp-title"><swe:this property="Title"/></td>
+				<td class="siebui-screen-hp-layoutbuttons"><swe:include file="CCLayoutButtons.swt"/></td>
+			</tr>
+		</table>
+
+		<div class="AppletStyle5 siebui-screen-hp-content">
+			<swe:layout viewDisplayMode="Show" appletDisplaySize="Max">
+
+				<table datatable="0" summary="" class="AppletBack" width="100%">
+					<swe:include file="dCCListBodyImgBulletScreenHomepage2.swt"/>
+				</table>
+				<swe:control id="1100"><swe:this property="FormattedHtml" hintText="ScriptIncludeHook" hintMapType="Control"/></swe:control>
+			
+			</swe:layout>
+		</div>	
+	</swe:form>	
+</div>	
+</swe:layout>
+
+<!--  Template End: CCAppletListImgBulletScreenHomepageWithDiv.swt -->

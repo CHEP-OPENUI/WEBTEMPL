@@ -1,0 +1,42 @@
+<!-- Template Start: eCfgCompAttributeEdit.swt -->
+
+<swe:include file="eCfgAtt_Header.swt"/>
+
+<tr>
+   <td colspan=3>
+      <table datatable="0" summary=""  color="blue"  valign="center" width="100%" cellpadding="0" cellspacing="0" border="0">
+         <tr>
+            <swe:form>
+               <td width="20%"  valign="top">
+                  <table datatable="0" summary="" width="100%">
+                     <swe:control id="swe:IncId + 8000" CfgFieldName="Error@AttValue" CfgUIControl="CfgLabel" CfgHtmlType="Cfglabel" >
+                        <tr>
+                           <td width="20%"  valign="top">
+                              <span id="Error@AttValue" class="eCfgSpanWarning" >
+                                 <swe:this property="FormattedHtml" />
+                              </span>
+                           </td>
+                        </tr>
+                     </swe:control>
+                     <tr>
+                        <td width="100%" valign="top">
+                           <span id="AttValue" class="cxEdit">
+                              <swe:control id="swe:IncId+9000" CfgFieldName="AttValue" CfgUIControl="AttributeValue" property="FormattedHtml" CfgInvokeMethod="SubmitRequest" CfgRequest="ChangeAttribute" />
+                           </span>
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+               <td width="10%"  valign="top">&nbsp;</td>
+            </swe:form>
+               <td  width="60%"  valign="top">&nbsp;</td>
+         </tr>
+      </table>
+   </td>
+</tr>
+
+
+<swe:include file="eCfgPort_Footer.swt"/>
+
+<!-- Template End: eCfgCompAttributeEdit.swt -->
+

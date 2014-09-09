@@ -1,0 +1,21 @@
+<!-- Template Start: eCfgControlRadioGridLayoutJS.swt -->
+<swe:include file="eCfgPort_HeaderJS.swt"/>
+
+<tr>
+   <td>
+   <swe:for-each id="500" CfgLoopType="DomainAndChildren" startValue="1500" count="Dynamic" iteratorName="101Id" 
+    Usage="Radio"
+    CfgFieldList="CfgFieldName:Name, CfgUIControl:lblName, HtmlAttrib_width:300, Default:Y*
+                  CfgFieldName:RequireMoreChild, Default:Y*
+                  CfgFieldName:Explanation, CfgUIControl:lblExplanation, HtmlAttrib_width:70, HtmlAttrib_align:center*
+                  CfgFieldName:Customize, CfgUIControl:lblCustomize, HtmlAttrib_width:70, HtmlAttrib_align:center"
+   >
+       <swe:control id="radioButton" CfgHtmlType="CfgRadio"
+        CfgJSShow="showRadioGrid" CfgJSUpdateExclusion="updateExcludedItemForPort" CfgJSUpdateSelection="updatePortItemsForRadio"/>
+   </swe:for-each>  
+   </td>
+</tr>
+
+<swe:include file="eCfgPort_FooterJS.swt"/>
+
+<!-- Template End: eCfgControlRadioGridLayoutJS.swt -->

@@ -1,0 +1,105 @@
+<!-- Template Start: ICListCategorized.swt -->
+
+<table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" border="0" align="center">
+
+<script language='JavaScript'>
+var LeftFlag=0;
+var ListRowCount=0;
+</script>
+
+
+<swe:for-each-row count="10">
+
+<script>
+
+if (LeftFlag==0)
+{
+	document.write("<tr valign=top>");
+}
+
+</script>
+<td width="1"><img src="images/spacer.gif" width="10" height="3" border="0" alt=""></td>
+<td width=50%>
+   <table datatable="0" summary="" width="100%" cellpadding="1" cellspacing="0" border="0" align="center">
+
+      <script>
+      if (ListRowCount<2)
+      {
+      	ListRowCount=ListRowCount+1;
+      }
+      else
+      {
+      	document.write('<tr valign="top">');
+      	document.write('<td width="1"><img src="images/spacer.gif" width="1" height="15" border="0" alt=""></td>');
+      	document.write('<td width="1"><img src="images/spacer.gif" width="1" height="15" border="0" alt=""></td>');
+      	document.write('<td width="1"><img src="images/spacer.gif" width="1" height="15" border="0" alt=""></td>');
+      	document.write('<td width="1"><img src="images/spacer.gif" width="1" height="15" border="0" alt=""></td>');
+      	document.write('<td width="1"><img src="images/spacer.gif" width="1" height="15" border="0" alt=""></td>');
+      	document.write('</tr>');
+      }
+      </script>
+
+
+      <tr valign="bottom">
+      	<td width="1"><img src="images/spacer.gif" width="1" height="3" border="0" alt=""></td>
+      	<td colspan=3 class=Welcome>
+      		<swe:control id="502" property="FormattedHtml" hintText="Field" hintMapType="ListItem"/>
+      	</td>
+      </tr>
+
+      <tr valign="top">
+      	<td width="1"><img src="images/spacer.gif" width="1" height="3" border="0" alt=""></td>
+      	<td width="1">
+      		<nobr><swe:control id="501"><swe:this property="FormattedHtml" hintText="Small Image (30x30)"/></swe:control>
+      		<img src="images/spacer.gif" width="1" height="1" border="0" alt=""></nobr>
+      	</td>
+      	<td width="1"><img src="images/spacer.gif" width="3" height="3" border="0" alt=""></td>
+      	<td valign="top" width="100%">
+      		<swe:control id="503" property="FormattedHtml" hintText="Field" hintMapType="ListItem"/>
+      		<BR><BR>
+
+      		<B><swe:control id="188" property="FormattedHtml" hintText="Label" hintMapType="Control"/></B><BR>
+			      <swe:for-each-child>
+			      	<swe:child-applet/> 
+			      </swe:for-each-child>
+      	</td>
+      </tr>
+   </table>
+</td>
+
+<script>
+
+if (LeftFlag==0)
+{
+	document.write('<td width="1"><img src="images/spacer.gif" width="10" height="3" border="0" alt=""></td>');
+	document.write('<td width="1" class="AppletBorder"><img src="images/spacer.gif" width="1" height="3" border="0" alt=""></td>');
+	document.write('<td width="1"><img src="images/spacer.gif" width="10" height="3" border="0" alt=""></td>');
+	LeftFlag=1;
+}
+else
+{
+	document.write('<td width="1"><img src="images/spacer.gif" width="10" height="3" border="0" alt=""></td>');
+	document.write("</tr>");
+	LeftFlag=0;
+}
+
+</script>
+
+</swe:for-each-row>
+
+<script>
+if (LeftFlag==0)
+{
+	LeftFlag=1;
+}
+else
+{
+	document.write("<td>&nbsp;</td>");
+	document.write("</tr>");
+	j=0;
+}
+</script>
+
+
+</table>
+<!-- Template End: ICListCategorized.swt -->

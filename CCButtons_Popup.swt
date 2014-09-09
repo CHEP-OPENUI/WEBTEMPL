@@ -1,0 +1,12 @@
+<!-- Template Start: CCButtons_Popup.swt -->
+
+<swe:control id="154"><!-- optional control  --><td class="swe:class mceGridLabel" nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+<swe:control id="155"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>									
+<swe:control id="156"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+<swe:control id="157"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+<swe:control id="158"><!-- Clear, 158        --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control" hintText="Clear (PickNone)"/></td></swe:control>							  
+									
+<swe:control id="152"><!-- OK, 152           --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control" hintText="OK (PickRecord)"/></td></swe:control>
+<swe:control id="153"><!-- Cancel, 153       --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control" hintText="Cancel (CloseApplet)"/></td></swe:control>						  
+										
+<!-- Template End: CCButtons_Popup.swt -->

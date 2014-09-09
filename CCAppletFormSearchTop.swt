@@ -1,0 +1,38 @@
+<!-- Template Start: CCAppletFormSearchTop.swt -->
+
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+
+   
+	<tr valign="top">
+		<td class="AppletStyle1">
+		<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="2" border="0" align="center">
+			<swe:form>
+			<tr class="AppletTitle">
+				<td class="AppletTitle" valign="top" nowrap><img src="images/spacer.gif" width="8" border="0" alt=""><swe:control id="90" property="DisplayName"/></td>
+				<td class="AppletTitle" valign="absmiddle" width="8"><img src="images/spacer.gif" width="8" height="20" border="0" alt=""></td>			
+				<td class="AppletTitle" width="100%" class="AppletBlank" align="right">&nbsp;</td>
+				<swe:if condition="Web Engine State Properties, IsHighInteractive">
+					<swe:control id="141">
+					<!-- optional control -->
+					<td valign="middle" nowrap>
+					<swe:this property="FormattedHtml" hintMapType="Hide Icon"/>
+					</td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					</swe:control>
+				</swe:if>
+				<swe:if condition="Web Engine State Properties, IsLowInteractive">
+					<swe:control id="142">
+					<!-- optional control -->
+					<td valign="middle" nowrap>
+					<swe:this property="FormattedHtml" hintMapType="Hide Icon"/>
+					</td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					</swe:control>
+				</swe:if>
+				</tr>
+		<swe:include file="CCFormSearch.swt"/>
+	</swe:form>
+<!-- The two tables, one td, and one tr will be closed in CCAppletSearchAdvanced.swt or CCAppletSearchBasic.swt or CCAppletSearchFind.swt. --> 
+
+<!-- Template End: CCAppletFormSearchTop.swt -->
+
+
+	

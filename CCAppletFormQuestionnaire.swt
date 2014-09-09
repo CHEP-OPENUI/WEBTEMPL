@@ -1,0 +1,103 @@
+<!-- Template Start: CCAppletFormQuestionnaire.swt -->
+
+<link rel="stylesheet" href="files/main.css">
+
+<swe:include file="CCApplet_NamedSpacer.swt"/>	
+
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+	<swe:form>
+	<tr valign="top">
+		<td>
+			<swe:include file="CCTitle_Named.swt"/>
+		
+			<swe:include file="CCFormButtonsTop.swt"/>
+
+
+			
+			<div class="swe:this.SelectStyle">			
+			<table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" border="0" align="center"><tr><td class="AppletHIFormBorder">
+			
+			<swe:error type="Popup">
+				<table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="0" cellspacing="5" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/></td></tr></table>
+			</swe:error>
+			
+			<swe:control id="91">
+			    <table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="0" cellspacing="5" border="0"><tr><td><swe:this property="DisplayName" hintText="Inside Applet Help Text"/></td></tr></table>
+			</swe:control>
+			
+				<table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="0" cellspacing="5" border="0">
+					<tr valign="top"><td>
+						<table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" border="0">	
+								
+							<swe:for-each startValue="1300" count="20" iteratorName="currentId">
+							<tr valign="top">
+								<swe:control id="swe:currentId" hintMapType="FormItem">
+								<td width="50%" class="mceWideField">								
+									<div class="mceLabel" align="swe:this.TextAlignmentLabel">&nbsp;</div>
+									<span class="mceField" align="swe:this.TextAlignment">
+										<swe:this property="FormattedHtml" hintText="Question" hintMapLabelId="swe:currentId"/>
+									</span>								
+								</td>
+								</swe:control>
+								<swe:control id="swe:currentId">
+								<td width="1">
+								</swe:control>
+								<swe:control id="swe:currentId+500" hintMapType="FormItem">
+									<div class="mceLabel" align="swe:this.TextAlignmentLabel">&nbsp;</div>
+									<span class="mceField" align="swe:this.TextAlignment">
+										<swe:this property="FormattedHtml" hintText="Checkbox" hintMapLabelId="swe:currentId"/>
+									</span>
+								</swe:control>
+								<swe:control id="swe:currentId">
+								</td><td>
+								</swe:control>
+								<swe:control id="swe:currentId+1000" hintMapType="FormItem">
+									<div class="mceLabel" align="swe:this.TextAlignmentLabel">
+										<swe:this property="DisplayName" hintText="Label"/>
+										<swe:this property="RequiredIndicator" hintText="Required"/>
+									</div>
+							
+									<span class="mceField" align="swe:this.TextAlignment">
+										<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+									</span>
+								</swe:control>
+								<swe:control id="swe:currentId">
+								</td><td>
+								</swe:control>
+								<swe:control id="swe:currentId+1500" hintMapType="FormItem">
+									<div class="mceLabel" align="swe:this.TextAlignmentLabel">
+										<swe:this property="DisplayName" hintText="Label"/>
+										<swe:this property="RequiredIndicator" hintText="Required"/>
+									</div>
+							
+									<span class="mceField" align="swe:this.TextAlignment">
+										<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+									</span>
+								</swe:control>
+								<swe:control id="swe:currentId">
+								</td>
+								</swe:control>
+							</tr>
+							</swe:for-each>
+							
+						</table>
+						
+					</td></tr>
+				</table>					
+						
+			<swe:include file="CCBottomApplet_NamedForm.swt"/>			
+			
+			</td>
+		</tr></table>
+		</div><!--Close SelectStyle div-->
+		</span><!--Close CCTitle_Named span-->
+	</td></tr>	
+</swe:form>
+</table>	
+
+
+
+<!-- Template End: CCAppletFormQuestionnaire.swt -->
+
+
+	

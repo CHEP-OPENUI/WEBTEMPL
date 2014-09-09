@@ -1,0 +1,85 @@
+<!-- Template Start: CCAppletList_CatalogTile.swt -->
+<swe:include file="CCApplet_NamedSpacer.swt"/>  
+<swe:control id="1100">
+  <div class="CmdTxt">
+    <swe:this property="FormattedHtml" hintText="Outside Applet Help Text" hintMapType="Control"/>
+  </div>
+</swe:control>
+<swe:form>
+  <swe:include file="CCTitle_Named.swt"/>   
+    <div class="swe:this.SelectStyle">  
+        <swe:error type="Popup">
+            <div class="swe:class AppletBack">
+                <div class="error">
+                    <swe:this property="FormattedHtml"/>
+                </div>
+            </div>
+        </swe:error>
+        <div class="AppletHIListBorder siebui-tile-container  siebui-catalog-tile-container">
+            <swe:this property="NoGrid"/>
+            <swe:this property="Vertical"/>
+            <swe:this property="ScrollVisibleTiles"/>
+            <swe:list>
+                <swe:list-record>
+                    <div class="siebui-catalog-tile-image">
+                        <swe:control id="503" hintMapType="FormItem">
+                            <swe:this property="FormattedHtml" align="swe:this.TextAlignment" hintText="Field"/>
+                        </swe:control>
+                    </div>
+                    <div class="siebui-catalog-tile-middle-col">
+                        <div class="siebui-tile-name">
+                            <swe:control id="502" hintMapType="FormItem">
+                                <swe:this property="FormattedHtml" align="swe:this.TextAlignment" hintText="Field"/>
+                            </swe:control>
+                        </div>
+                        <div class= "siebui-form-data siebui-catalog-tile-description">
+                            <!-- Description -->
+                            <swe:control id="504" hintMapType="FormItem">
+                                <swe:this property="FormattedHtml" align="swe:this.TextAlignment" hintText="Field"/>
+                            </swe:control>
+                        </div>
+                    </div>
+                    <div class="siebui-catalog-tile-right-col">
+                        <div class="siebui-catalog-right-row1">
+                            <swe:control id="507" hintMapType="FormItem">
+                                <div class="siebui-form-data siebui-catalog-qty">
+                                    <swe:this property="DisplayName" align="swe:this.TextAlignment" hintText="Label"/>:
+                                    <swe:this property="FormattedHtml" align="swe:this.TextAlignment" hintText="Field"/>
+                                </div>
+                            </swe:control>
+                            <swe:control id="509" hintMapType="FormItem">
+                                <div class="siebui-form-data" align="swe:this.TextAlignment">
+                                    <swe:this property="FormattedHtml" hintText="Field"/>
+                                </div>
+                            </swe:control>
+                        </div>
+                        <div class="siebui-catalog-right-row2">                        
+                            <swe:control id="505" hintMapType="FormItem">
+                                <div class="siebui-catalog-lstprice">
+                                    <swe:this property="DisplayName" align="swe:this.TextAlignment" hintText="Label"/>:
+                                    <swe:this property="FormattedHtml" align="swe:this.TextAlignment" hintText="Field"/>
+                                </div>
+                            </swe:control>
+                            <swe:control id="506" hintMapType="FormItem">
+                                <div class="siebui-catalog-netprice">
+                                    <swe:this property="DisplayName" align="swe:this.TextAlignment" hintText="Label"/>:
+                                    <swe:this property="FormattedHtml" align="swe:this.TextAlignment" hintText="Field"/>
+                                </div>
+                            </swe:control>
+                        </div>
+                        <div class="siebui-catalog-right-row3">
+                            <swe:for-each count="2" startValue="510" iteratorName="currentId">
+                                <swe:control id="swe:currentId" hintMapType="FormItem">
+                                    <div class="siebui-catalog-link-buttons" align="swe:this.TextAlignment">
+                                        <swe:this property="FormattedHtml" hintText="Field"/>
+                                    </div>
+                                </swe:control>
+                            </swe:for-each>
+                        </div>
+                    </div>
+                </swe:list-record>
+            </swe:list>
+        </div>
+    </div>
+</swe:form> 
+<!-- Template End: CCAppletList_CatalogTile.swt.swt -->

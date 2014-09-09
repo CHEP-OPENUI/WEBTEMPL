@@ -1,0 +1,67 @@
+<!-- Template Start: Search_View.swt -->
+<HTML dir="swe:dir">
+<head>
+	<title><swe:this property="Title"/></title>
+	<swe:include file="CCStylesChoice.swt"/>
+</head>
+<body bgcolor="#f0f0f0">
+<!--local override of CSS-->
+<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+	<style>BODY { border-left: 1px solid #000000; }</style>
+</swe:if>
+<!------------ Main Content Area ---------------------------->
+<!------------ Regular Applet(s) ---->
+<script>
+    function openPopup(url)
+    {
+        if(SWEIsHighInteract)
+        {
+           App().OpenPopup(url,400,400,false,false);
+        }
+        else
+        {
+           popupWin = window.open(url,'Search','menubar=no,toolbar=no,location=no,directories=no,status=no,scrollbars=yes,resizable=no,dependent,width=400,height=400,left=50,top=50');    
+        }
+    }
+
+	function Navigate(url)
+	{
+		SWETargetGotoURL (url, window);
+	}
+</script>
+<swe:include-script file="presence.js"/>
+
+<table border="1" cellpadding="0" cellspacing="0"></td>
+	<!-- Search Header Results Applet -->
+<tr>
+<td width="50%" valign="top" bgcolor="#d5e0f4">
+	<!-- Search Results Left Header --> 
+	<swe:applet hintMapType="Applet" id="1" hintText="Applet" property="FormattedHtml"/> </td>
+<td width="700" valign="top" bgcolor="#d5e0f4">
+	<!-- Search Results Header -->
+	<swe:applet hintMapType="Applet" id="2" hintText="Applet" property="FormattedHtml"/> </td>
+<tr>
+</table>
+
+<table border="1" cellpadding="0" cellspacing="0"></td>
+<tr>
+<td width="85%" valign="top">
+	<!-- Search Results Body --> 
+	<swe:applet hintMapType="Applet" id="3" hintText="Applet" property="FormattedHtml"/>
+</td>
+<td width="15%" valign="top">
+	<!-- Refine Search Options -->
+	<swe:applet hintMapType="Applet" id="4" hintText="Applet" property="FormattedHtml"/>
+</td>
+</tr>
+</table>
+
+<!------------ End Main Content Area ------------------------>
+<table bgcolor="#cccccc" width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+	<td><img src="images/spacer.gif" width="1" height="2" alt=""></td>
+</tr>
+</table>
+
+<!-- Template End: Search_View.swt -->
+

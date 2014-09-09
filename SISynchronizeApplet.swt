@@ -1,0 +1,40 @@
+<!-- Template Start SISynchronizeApplet.swt -->
+
+<table datatable="0" summary="" class="AppletStyle1" width="98%" cellspacing="0" cellpadding="0" border="0" align="center">
+
+<swe:if-var name="Child" set="false"><tr><td colspan="2"><swe:include file="CCTitle.swt"/></td></tr></swe:if-var>
+<tr>
+ <td colspan="2">
+  <table datatable="0" summary="" width="100%" cellpadding="2" cellspacing="0" border="0" align="center">
+  <tr>
+   <td class="AppletBorder" >
+   <swe:error>
+   <table datatable="0" summary="" class="AppletBlank" width="100%" cellpadding="2" cellspacing="0" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/></td></tr></table>
+   </swe:error>
+
+   <swe:control id="91">
+   <!-- Inside-applet help text -->
+   <table datatable="0" summary="" class="AppletBlank" width="100%" cellpadding="4" cellspacing="0" border="0"><tr><td><swe:this property="DisplayName" hintText="Inside Applet Help Text"/></td></tr></table>
+   </swe:control>
+
+   <table datatable="0" summary="" class="AppletBlank" width="100%" cellpadding="5" cellspacing="0" border="0">
+   <swe:for-each startValue="1301" count="5" iteratorName="currentId">
+ 	<swe:control id="swe:currentId" hintMapType="FormItem">
+    <tr valign="top">
+     <td class="mceWideFields">
+      <span class="mceField">
+      <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+      </span>
+     </td>
+    </tr>
+	</swe:control>
+	</swe:for-each>
+   </table>
+   </td>
+  </tr>
+  </table>
+ </td>
+ </tr>
+</table>
+
+<!-- Template End SISynchronizeApplet.swt -->

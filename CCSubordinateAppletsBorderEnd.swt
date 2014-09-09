@@ -1,0 +1,11 @@
+<!-- Template Start: CCSubordinateAppletsBorderEnd.swt -->
+
+<swe:if condition="Web Engine State Properties, IsViewPosition, 'Position:3'">
+	</div>
+</swe:if>
+
+<swe:if condition="Web Engine State Properties, IsViewPosition, 'Position:4'">
+	</div>
+</swe:if>
+
+<!-- Template End: CCSubordinateAppletsBorderEnd.swt -->

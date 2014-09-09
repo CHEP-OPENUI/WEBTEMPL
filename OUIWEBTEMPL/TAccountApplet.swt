@@ -1,0 +1,69 @@
+<!-- Template Start: TAccountApplet.swt -->
+<swe:form>
+<div class="siebui-collapsible-applet siebui-csim-applet">
+    <div class="swe:this.SelectStyle">  
+        <div class="siebui-collapsible-applet-header siebui-csim-appletheader">
+            <swe:include file="TCCFormButtonsTopNoMenu.swt"/>
+        </div> 
+        <div class="siebui-collapsible-applet-content siebui-csim-hdr">
+            <div class="siebui-csim-hdr-image">
+                <swe:control id="2018">
+                    <swe:this property="FormattedHtml" hintText="Image"/>
+                </swe:control> 
+            </div>
+            <div class="siebui-csim-hdr-col1">
+                <swe:for-each startValue="1100" count="7" iteratorName="currentId">
+                    <swe:control id="swe:currentId" hintMapType="FormItem">
+                        <div class="siebui-csim-hdr-div">
+                            <span class="mceGridLabel siebui-csim-hdr-text" align="swe:this.TextAlignmentLabel">
+                                <swe:this property="DisplayName" hintText="Label"/>:
+                            </span>
+                            <span class="mceGridField siebui-csim-hdr-text" align="swe:this.TextAlignment">
+                                <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+                            </span>
+                        </div>
+                    </swe:control>
+                </swe:for-each>
+            </div>
+            <div class="siebui-csim-hdr-col2">
+                <swe:for-each startValue="1300" count="7" iteratorName="currentId">
+                    <swe:control id="swe:currentId" hintMapType="FormItem">
+                        <div class="siebui-csim-hdr-div">
+                            <span class="mceGridLabel siebui-csim-hdr-text" align="swe:this.TextAlignmentLabel">
+                                <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+                            </span>
+                        </div>
+                    </swe:control>
+                </swe:for-each>
+                <swe:for-each startValue="1400" count="7" iteratorName="currentId">
+                    <swe:control id="swe:currentId" hintMapType="FormItem">
+                        <div class="siebui-csim-hdr-div">
+                            <span class="mceGridLabel siebui-csim-hdr-text" align="swe:this.TextAlignmentLabel">
+                                <swe:this property="DisplayName" hintText="Label"/>
+                            </span>
+                            <span class="mceGridField siebui-csim-hdr-text" align="swe:this.TextAlignment">
+                                <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+                            </span>
+                        </div>
+                    </swe:control>
+                </swe:for-each>
+            </div>
+            <div class="siebui-csim-hdr-col3">
+                <swe:for-each startValue="1600" count="7" iteratorName="currentId">
+                    <swe:control id="swe:currentId" hintMapType="FormItem">
+                        <div class="siebui-csim-hdr-div">
+                        <span class="mceGridLabel siebui-csim-hdr-text" align="swe:this.TextAlignmentLabel">
+                            <swe:this property="DisplayName" hintText="Label"/>:
+                        </span>
+                        <span class="mceGridField siebui-csim-hdr-text" align="swe:this.TextAlignment">
+                            <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+                        </span>
+                        </div>
+                    </swe:control>
+                </swe:for-each>
+            </div>
+        </div>
+    </div>
+</div>
+</swe:form>
+<!--Template End: TAccountApplet.swt -->

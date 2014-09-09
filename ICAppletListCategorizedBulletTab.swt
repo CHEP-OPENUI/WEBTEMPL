@@ -1,0 +1,27 @@
+<!-- Template Start: ICAppletListCategorizedBulletTab.swt -->
+
+<swe:include file="CCApplet_Spacer.swt"/>
+
+<swe:form>
+<span class="AppletStyle6">
+<table datatable="0" summary="" width="100%" cellpadding="1" cellspacing="0" border="0" align="center">
+<tr>
+<td width="100%">
+   &nbsp;
+</td>
+   <swe:include file="CCRecordNav.swt"/>
+</tr>
+</table>						
+
+<table datatable="0" summary="" width="100%" cellpadding="1" class="AppletBorder" cellspacing="0" border="0" align="center">
+<tr><td>
+    <table datatable="0" summary="" valign="top" width="100%" cellpadding="2" cellspacing="0" border="0" class="AppletBack">
+    <tr><td><br>
+      <swe:include file="ICListCategorized.swt"/>
+    <br></td></tr></table>
+</td></tr></table>
+
+</span>					
+</swe:form>
+
+<!-- Template End: ICAppletListCategorizedBulletTab.swt -->

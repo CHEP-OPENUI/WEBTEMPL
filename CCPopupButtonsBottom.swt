@@ -1,0 +1,72 @@
+<!-- Template Start: CCPopupButtonsBottom.swt -->
+
+	<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">		
+		<!--button row-->
+		<tr  bgcolor="#cccccc">
+			<td><img src="images/spacer.gif" height="20" width="10" alt=""></td>
+			<td align="right" width="100%">
+				<table datatable="0" summary="" cellpadding="2" cellspacing="0" border="0">
+					<tr bgcolor="#cccccc">	
+						<td width="100%"><img src="images/spacer.gif" valign="top" width="1" height="1" border="0" alt=""/></td>
+						
+	
+						
+						  <swe:control id="154">
+					      <!-- Optional, 154 -->
+					        <td valign="middle" nowrap>
+					        <swe:this property="FormattedHtml" hintMapType="Control"/>
+					        </td>
+					      </swe:control>
+						  
+						  <swe:control id="155">
+					      <!-- Optional, 155 -->
+					        <td valign="middle" nowrap>
+					        <swe:this property="FormattedHtml" hintMapType="Control"/>
+					        </td>
+					      </swe:control>	
+						  
+						  <swe:control id="156">
+					      <!-- Cancel, 155 -->
+					        <td valign="middle" nowrap>
+					        <swe:this property="FormattedHtml" hintMapType="Control"/>
+					        </td>
+					      </swe:control>			
+						  
+						  <swe:control id="157">
+					      <!-- Optional, 157 -->
+					        <td valign="middle" nowrap>
+					        <swe:this property="FormattedHtml" hintMapType="Control"/>
+					        </td>
+					      </swe:control>	
+						  
+						  <swe:control id="158">
+					      <!-- Cancel, 158 -->
+					        <td valign="middle" nowrap>
+					        <swe:this property="FormattedHtml" hintMapType="Control"/>
+					        </td>
+					      </swe:control>							  				
+						
+						
+						  <swe:control id="152">
+					      <!-- OK, 152 -->
+					        <td valign="middle" nowrap>
+					        <swe:this property="FormattedHtml" hintText="OK" hintMapType="Control"/>
+					        </td>
+					      </swe:control>
+						  
+						  <swe:control id="153">
+					      <!-- Cancel, 153 -->
+					        <td valign="middle" nowrap>
+					        <swe:this property="FormattedHtml" hintText="Cancel" hintMapType="Control"/>
+					        </td>
+					      </swe:control>						  
+							
+					</tr>
+				</table>		
+			</td>			
+			<td valign="top" align="right"><img src="images/spacer.gif" valign="top" width="10" height="6" border="0" alt=""/></td>			
+		</tr>
+	
+	</table>
+	
+<!-- Template End: CCPopupButtonsBottom.swt -->	

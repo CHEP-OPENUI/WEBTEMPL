@@ -1,0 +1,70 @@
+<!--  Template Start: CCViewbar_Tabs_DropList.swt -->
+
+<!-- ---------- Tier 3 navigation ------------------>
+<!-- this template replaces                       -->
+<!--  <swe:include file="CCViewbar_Tabs.swt"/>    -->
+<!--  <swe:include file="CCSubViewbar_Drop.swt"/> -->
+<!--  T3/4 navigation - toolbar + drop list       -->
+
+<!-- No detail view tabs on Task Views -->
+<swe:if condition="Task UI Service (SWE),IsNotInTask">
+    <swe:switch>
+        <swe:case condition="Web Engine State Properties, IsHtmlMarkup">
+            <swe:switch>
+                <swe:case condition="Web Engine State Properties, IsViewPosition, 'Position:3'">
+                    <table datatable="0" summary="" class="tier3Back" width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr valign="top"><td><img src="images/spacer.gif" width="1" height="3" alt=""></td></tr></table>
+                    <swe:nav-control type="Detail Category With View" style="Tab" indentWidth="30" anchorTab="Enabled"/>
+                </swe:case>
+                <swe:case condition="Web Engine State Properties, IsViewPosition, 'Position:4'">
+                    <table datatable="0" summary="" class="tier3Back" width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr valign="top"><td><img src="images/spacer.gif" width="1" height="3" alt=""></td></tr></table>
+                    <swe:nav-control type="Detail Category With View" style="Tab" indentWidth="30"  anchorTab="Enabled"/>
+                </swe:case>
+                <swe:default>
+                    <table datatable="0" summary="" width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td><img src="images/spacer.gif" width="1" height="3" alt=""></td></tr></table>
+                </swe:default>
+            </swe:switch>
+        </swe:case>
+        <swe:default>
+            <swe:switch>
+                <swe:case condition="Web Engine State Properties, IsViewPosition, 'Position:3'">
+                    <span class="tier3Back" style="width:100%">
+                        <swe:viewbar>
+                            <table datatable="0" summary="" class="tier3Back" cellpadding="0" cellspacing="0" border="0"><tr valign="top"><td><img src="images/spacer.gif" width="1" height="3" alt=""></td></tr></table>
+                            <table datatable="0" summary="" class="tier3Back" cellpadding='0' cellspacing='0' border='0'><tr><td>
+                                <table datatable="0" summary="" ID="swe:this.TableId" style="position:relative;left:30px" cellpadding="0" cellspacing="0" border='0'><tr>
+                                    <swe:for-each-view mode="NonContext">
+                                        <swe:viewlink state="Active"><td nowrap valign="bottom" id="swe:this.Id" class='tier3On'><swe:this property="FormattedHtml">&nbsp;<swe:viewname/>&nbsp;</swe:this></td></swe:viewlink>
+                                        <swe:viewlink state="Inactive"><td nowrap valign="bottom" id="swe:this.Id" class='tier3Off'><swe:this property="FormattedHtml">&nbsp;<swe:viewname/>&nbsp;</swe:this></td></swe:viewlink>
+                                    </swe:for-each-view>
+                                </tr></table>
+                            </td></tr></table>
+                        </swe:viewbar>
+                    </span>
+                    <swe:include file="CCSubViewbar_Drop.swt"/>
+                </swe:case>
+                <swe:case condition="Web Engine State Properties, IsViewPosition, 'Position:4'">
+                    <span class="tier3Back" style="width:100%">
+                        <swe:viewbar>
+                            <table datatable="0" summary="" class="tier3Back" cellpadding="0" cellspacing="0" border="0"><tr valign="top"><td><img src="images/spacer.gif" width="1" height="3" alt=""></td></tr></table>
+                            <table datatable="0" summary="" class="tier3Back" cellpadding='0' cellspacing='0' border='0'><tr><td>
+                                <table datatable="0" summary="" ID="swe:this.TableId" style="position:relative;left:30px" cellpadding="0" cellspacing="0" border='0'><tr>
+                                    <swe:for-each-view mode="NonContext">
+                                        <swe:viewlink state="Active"><td nowrap valign="bottom" id="swe:this.Id" class='tier3On'><swe:this property="FormattedHtml">&nbsp;<swe:viewname/>&nbsp;</swe:this></td></swe:viewlink>
+                                        <swe:viewlink state="Inactive"><td nowrap valign="bottom" id="swe:this.Id" class='tier3Off'><swe:this property="FormattedHtml">&nbsp;<swe:viewname/>&nbsp;</swe:this></td></swe:viewlink>
+                                    </swe:for-each-view>
+                                </tr></table>
+                            </td></tr></table>
+                        </swe:viewbar>
+                    </span>
+                    <swe:include file="CCSubViewbar_Drop.swt"/>
+                </swe:case>
+                <swe:default>
+                    <table datatable="0" summary="" width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td><img src="images/spacer.gif" width="1" height="3" alt=""></td></tr></table>
+                </swe:default>
+            </swe:switch>
+        </swe:default>
+    </swe:switch>
+</swe:if>
+
+<!-- ---------- End Tier 3 navigation ------------->
+<!--  Template End: CCViewbar_Tabs_DropList.swt -->

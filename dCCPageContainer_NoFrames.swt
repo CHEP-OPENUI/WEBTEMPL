@@ -1,0 +1,115 @@
+<!-- Template Start: dCCPageContainer_NoFrames.swt -->
+
+<HTML dir="swe:dir">
+<head>
+<title><swe:this property="Title"/></title>
+<swe:include file="CCStylesChoice.swt"/>	
+</head>
+
+<BODY bgcolor="#ffffff" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+<!---------------------------------------->
+
+<!--Begin Top Wrapping Table-->
+<table datatable="0" summary="" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td align="center">
+
+<!--Start Banner & Global Nav Header-->
+<table datatable="0" summary="" width="600" cellpadding='2' cellspacing='0' border='0' bgcolor="#ffffff">
+	<tr valign="bottom">
+		<td><swe:image name="SIEBEL_LOGO2" category="HTML Control Icons"/></td>
+		<td><img src="images/spacer.gif" width="10" height="10" alt=""></td>	
+		
+		<td align="center" valign="middle">
+			<table datatable="0" summary="" width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td><nobr>
+						<swe:pageitem id="11"><swe:this property="FormattedHtml" /><span class="bannerDiv">&nbsp;|&nbsp;</span></swe:pageitem>
+						<swe:pageitem id="12"><swe:this property="FormattedHtml" /><span class="bannerDiv">&nbsp;|&nbsp;</span></swe:pageitem>
+						<swe:pageitem id="13"><swe:this property="FormattedHtml" /><span class="bannerDiv">&nbsp;|&nbsp;</span></swe:pageitem>
+						<swe:pageitem id="14"><swe:this property="FormattedHtml" /><span class="bannerDiv">&nbsp;|&nbsp;</span></swe:pageitem>
+						<swe:pageitem id="17"><swe:this property="FormattedHtml" /><span class="bannerDiv">&nbsp;|&nbsp;</span></swe:pageitem>
+						<swe:pageitem id="18"><swe:this property="FormattedHtml" /><span class="bannerDiv">&nbsp;|&nbsp;</span></swe:pageitem>
+						<swe:pageitem id="19"><swe:this property="FormattedHtml" /><span class="bannerDiv">&nbsp;|&nbsp;</span></swe:pageitem>
+					</nobr></td>
+				</tr>
+			
+			</table>
+		</td>				 
+	</tr>
+</table>
+
+<!-- End Banner & Global Nav Header -->
+
+<!-- Start Tier1 Nav -->
+<table datatable="0" summary="" width="100%" class="tier1Back" height="19" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="absmiddle">
+		<td width="10"><img src="images/spacer.gif" width="10" height="23" alt=""></td>
+		<td valign="absmiddle"  class="tier1Back" align="center">
+			<nobr>
+				<table datatable="0" summary="" width="600" border="0" cellspacing="0" cellpadding="0"><tr><td>
+				<table datatable="0" summary="" height="23" cellpadding='0' cellspacing='0' border='0'>
+					<tr>
+						<swe:screenbar>
+							<swe:screenlink state="Active"><td id="tier1Selected" nowrap><nobr><span class='tier1On'><swe:this property="FormattedHtml">&nbsp;<swe:screenname/>&nbsp;</swe:this></span></nobr></td></swe:screenlink>
+							<swe:screenlink state="Inactive"><td nowrap class='tier1Off'><nobr><swe:this property="FormattedHtml">&nbsp;<swe:screenname/>&nbsp;</swe:this></nobr></td></swe:screenlink>
+						</swe:screenbar>					
+					</tr>
+				</table>
+				</td></tr></table>
+			</nobr>
+		</td>
+	</tr>
+</table>
+
+
+<!-- End Tier1 Nav section -->
+
+</td></tr></table>
+<!--End Top Wrapping Table-->
+
+
+
+
+<swe:if condition="Web Engine State Properties, IsLowInteractive">
+<swe:include file="CCThreadbar.swt"/>
+</swe:if>
+
+
+</td></tr></table>
+<!-- End Top Wrapping Table -->
+
+<!-- Start View -->
+<swe:current-view/>
+<!-- End View -->
+
+
+
+<!--Begin Bottom Wrapping Table-->
+<table datatable="0" summary="" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td align="center">
+
+<!--Page Footer-->
+<hr size=1>
+<table datatable="0" summary="" width="600" cellpadding='2' cellspacing='0' border='0' bgcolor="#ffffff">
+	<tr align="bottom">
+		<td align="center" valign="top">
+			<table datatable="0" summary="" width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td align="center"><nobr>
+						<swe:pageitem id="11"><swe:this property="FormattedHtml" /><span class="bannerDiv">&nbsp;|&nbsp;</span></swe:pageitem>
+						<swe:pageitem id="12"><swe:this property="FormattedHtml" /><span class="bannerDiv">&nbsp;|&nbsp;</span></swe:pageitem>
+						<swe:pageitem id="13"><swe:this property="FormattedHtml" /><span class="bannerDiv">&nbsp;|&nbsp;</span></swe:pageitem>
+						<swe:pageitem id="14"><swe:this property="FormattedHtml" /><span class="bannerDiv">&nbsp;|&nbsp;</span></swe:pageitem>
+						<swe:pageitem id="17"><swe:this property="FormattedHtml" /><span class="bannerDiv">&nbsp;|&nbsp;</span></swe:pageitem>
+						<swe:pageitem id="18"><swe:this property="FormattedHtml" /><span class="bannerDiv">&nbsp;|&nbsp;</span></swe:pageitem>
+						<swe:pageitem id="19"><swe:this property="FormattedHtml" /><span class="bannerDiv">&nbsp;|&nbsp;</span></swe:pageitem>
+					</nobr></td>
+				</tr>			
+			</table>
+		</td>				 
+	</tr>
+</table>
+
+<swe:scripts/>
+</BODY>
+</HTML>
+
+<!-- Template End: dCCPageContainer_NoFrames.swt -->

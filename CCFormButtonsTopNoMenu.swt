@@ -1,0 +1,298 @@
+<!--  Template Start: CCFormButtonsTop.swt -->
+
+<!-- No applet title on form applets on Task Views -->
+<swe:if condition="Task UI Service (SWE),IsNotInTask">	
+	<!-- Title Area (Row 1) -->
+	<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="2" border="0" align="center">
+	<tr class="AppletButtons">
+		<!-- Title Area -->
+      <swe:switch>
+      <swe:case condition="Web Engine State Properties, IsPrintOn">
+         <td nowrap class="swe:class AppletTitle">
+            &nbsp;
+            <swe:control id=90>
+               <swe:this  property = "FormattedHtml"/>
+               <div style='display:none;'>
+            </swe:control>
+            <swe:this property="Title"/>
+            <swe:control id=90>
+               </div>
+            </swe:control>
+            &nbsp;
+         </td>
+      </swe:case>
+      <swe:default>
+
+		<swe:if-var name="Parent">			     
+			<swe:if condition="Web Engine State Properties, IsHighInteractive">		
+			<swe:switch>
+			<swe:case condition="Web Engine State Properties, IsViewPosition, 'Position:2'">
+				<td><img src="images/spacer.gif" width="1" height="1" alt=""></td>
+                                <td nowrap class=AppletTitle>
+					<swe:nav-control type="Category View" style="Select"/>
+				</td>
+			</swe:case>
+			<swe:default>
+                                
+				<td nowrap width="100%" class="AppletTitle">
+					&nbsp;
+					<swe:control id=90>
+						<swe:this  property = "FormattedHtml"/>
+						<div style='display:none;'>
+					</swe:control>
+					<swe:this property="Title"/>
+					<swe:control id=90>
+						</div>
+					</swe:control>
+				</td>
+			</swe:default>
+			</swe:switch>
+			</swe:if>
+
+			<swe:if condition="Web Engine State Properties, IsLowInteractive">
+                                        
+					<td nowrap width="100%" class="swe:class AppletTitle">
+					&nbsp;
+					<swe:control id=90>
+						<swe:this  property = "FormattedHtml"/>
+						<div style='display:none;'>
+					</swe:control>
+					<swe:this property="Title"/>
+					<swe:control id=90>
+						</div>
+					</swe:control>
+				</td>
+			</swe:if>
+		</swe:if-var>
+
+		<swe:if-var name="ParentWithPointer">			     
+			<swe:if condition="Web Engine State Properties, IsHighInteractive">		
+			<swe:switch>
+			<swe:case condition="Web Engine State Properties, IsViewPosition, 'Position:2'">
+				<td><img src="images/spacer.gif" width="1" height="1" alt=""></td>
+                                
+				<td nowrap class=AppletTitle>
+					<swe:nav-control type="Category View" style="Select"/>
+				</td>
+			</swe:case>
+			<swe:default>
+                                
+				<td nowrap width="100%" class="AppletTitle">
+					&nbsp;
+					<swe:control id=90>
+						<swe:this  property = "FormattedHtml"/>
+						<div style='display:none;'>
+					</swe:control>
+					<swe:this property="Title"/>
+					<swe:control id=90>
+						</div>
+					</swe:control>
+				</td>
+			</swe:default>
+			</swe:switch>
+			</swe:if>
+
+			<swe:if condition="Web Engine State Properties, IsLowInteractive">	
+                                 	
+				<td nowrap width="100%" class="swe:class AppletTitle">
+					&nbsp;
+					<swe:control id=90>
+						<swe:this  property = "FormattedHtml"/>
+						<div style='display:none;'>
+					</swe:control>
+					<swe:this property="Title"/>
+					<swe:control id=90>
+						</div>
+					</swe:control>
+				</td>
+			</swe:if>
+		</swe:if-var>
+
+		<swe:if-var name="Child">
+			<swe:switch>
+			<swe:case condition="Web Engine State Properties, IsViewPosition, 'Position:1'">
+                                
+				<td nowrap width="100%" class="swe:class AppletTitle">
+					&nbsp;
+				<swe:control id=90>
+					<swe:this  property = "FormattedHtml"/>
+					<div style='display:none;'>
+				</swe:control>
+				<swe:this property="Title"/>
+				<swe:control id=90>
+					</div>
+				</swe:control>
+				</td>
+			</swe:case>
+			<swe:case condition="Web Engine State Properties, IsViewPosition, 'Position:2'">
+                                  
+				<td nowrap width="100%" class="swe:class AppletTitle">
+					&nbsp;
+					<swe:control id=90>
+						<swe:this  property = "FormattedHtml"/>
+						<div style='display:none;'>
+					</swe:control>
+					<swe:this property="Title"/>
+					<swe:control id=90>
+						</div>
+					</swe:control>
+				</td>
+			</swe:case>
+			<swe:default>
+                                <td nowrap width="100%" class="swe:class AppletTitle">
+					&nbsp;
+				</td>
+			</swe:default>
+			</swe:switch>
+		</swe:if-var>
+
+		<swe:if-var name="ChildWithPointer">
+			<swe:switch>
+			<swe:case condition="Web Engine State Properties, IsViewPosition, 'Position:1'">
+                                <td nowrap width="100%" class="swe:class AppletTitle">
+					&nbsp;
+					<swe:control id=90>
+						<swe:this  property = "FormattedHtml"/>
+						<div style='display:none;'>
+					</swe:control>
+					<swe:this property="Title"/>
+					<swe:control id=90>
+						</div>
+					</swe:control>
+				</td>
+			</swe:case>
+			<swe:case condition="Web Engine State Properties, IsViewPosition, 'Position:2'">
+				<td nowrap width="100%" class="swe:class AppletTitle">
+					&nbsp;
+					<swe:control id=90>
+						<swe:this  property = "FormattedHtml"/>
+						<div style='display:none;'>
+					</swe:control>
+					<swe:this property="Title"/>
+					<swe:control id=90>
+						</div>
+					</swe:control>
+				</td>
+			</swe:case>
+			<swe:default>
+				<td nowrap width="100%" class="swe:class AppletTitle">
+					&nbsp;
+				</td>
+			</swe:default>
+			</swe:switch>
+		</swe:if-var>
+
+		<swe:if-var name="Grandchild">
+                        
+			<td nowrap width="100%" class="swe:class AppletTitle">
+				&nbsp;
+				<swe:control id=90>
+					<swe:this  property = "FormattedHtml"/>
+					<div style='display:none;'>
+				</swe:control>
+				<swe:this property="Title"/>
+				<swe:control id=90>
+					</div>
+				</swe:control>
+			</td>
+		</swe:if-var>
+
+		<swe:if-var name="AppletFilter-No">
+                          	<td nowrap width="100%" class="swe:class AppletTitle">
+				&nbsp;
+				<swe:control id=90>
+					<swe:this  property = "FormattedHtml"/>
+					<div style='display:none;'>
+				</swe:control>
+				<swe:this property="Title"/>
+				<swe:control id=90>
+					</div>
+				</swe:control>
+			</td>
+		</swe:if-var>
+      </swe:default>
+   </swe:switch>
+
+   <swe:if condition="Web Engine State Properties, IsPrintOff">
+
+		<!-- Legend Area -->
+		<td nowrap valign="absmiddle" class="legend">
+			<swe:control id="1500" hintText="Required Legend" hintMapType="Control">
+				<img src="images/icon_req.gif">
+				<swe:this property="DisplayName"/>
+			</swe:control>
+		</td>
+
+
+
+
+		<!-- Indicator and Navigation Area -->		
+
+		<!-- Record Navigation and Additional Buttons Section -->					
+		<swe:include file="CCFormButtonsTopRight.swt"/>
+   </swe:if>
+
+		<!-- Corner -->
+		<td valign="top" align="right">
+			<swe:if-var name="Parent">			     
+			</swe:if-var>	
+
+			<swe:if-var name="ParentWithPointer">			     
+			</swe:if-var>	
+
+			<swe:if-var name="Child">			     
+			</swe:if-var>	
+
+			<swe:if-var name="ChildWithPointer">			     
+			</swe:if-var>	
+
+			<swe:if-var name="Grandchild">			     
+			</swe:if-var>	
+		</td>		
+
+	</tr>
+	</table>
+</swe:if>
+
+
+
+<swe:if condition="Web Engine State Properties, IsPrintOff">
+<!-- Applet Buttons Area (Row 2) -->
+
+
+<swe:if condition="Task UI Service (SWE),IsNotInTask">
+    <table datatable="0" summary="" class="AppletBackTable" width="100%" cellspacing="0" cellpadding="2" align="center">
+    <tr class="swe:class AppletBack" align="left">	   
+</swe:if>
+<!-- In task views, we should not make the table 100% width. Also should not make the <tr> class "AppletBack" because we do not want the grey background-->
+
+		<!-- No applet menu on Task Views -->
+		<swe:if condition="Task UI Service (SWE),IsNotInTask">
+			
+			<!-- Menu Button Area -->			
+			
+			<!-- Other Buttons Area -->						
+		</swe:if>
+		
+		<!-- Need to include buttons on Task Views-->
+		<swe:include file="CCButtons.swt"/>											
+		
+		
+		<swe:if condition="Task UI Service (SWE),IsNotInTask">
+			<!-- Toggle Bar Area -->			
+			<td>
+				<swe:include file="CCTogglebar_drop.swt"/>
+			</td>
+
+			<!-- Query Message Area -->			
+			<td class="swe:class mceGridLabel" align="left" width="100%" nowrap>
+				&nbsp;<b><swe:message type="Query Message" /></b>
+			</td>
+
+		</swe:if>
+		
+	</tr>
+</table>		
+</swe:if>
+
+<!--  Template End: CCFormButtonsTop.swt -->	

@@ -1,0 +1,25 @@
+<!--  Template Start: CCViewbar_Tabs.swt -->
+
+<!-- No detail view tabs on Task Views -->
+<swe:if condition="Task UI Service (SWE),IsNotInTask">
+	<swe:switch>
+		<swe:default condition="Web Engine State Properties, IsHtmlMarkup">
+			<swe:switch>
+				<swe:case condition="Web Engine State Properties, IsViewPosition, 'Position:3'">
+					<table datatable="0" summary="" class="tier3Back" width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr valign="top"><td><img src="images/spacer.gif" width="1" height="3" alt=""></td></tr></table>
+					<swe:nav-control type="Detail Category" style="Tab" indentWidth="30" anchorTab="Enabled" />
+				</swe:case>
+				<swe:case condition="Web Engine State Properties, IsViewPosition, 'Position:4'">
+					<table datatable="0" summary="" class="tier3Back" width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr valign="top"><td><img src="images/spacer.gif" width="1" height="3" alt=""></td></tr></table>
+					<swe:nav-control type="Detail Category" style="Tab" indentWidth="30"/>
+				</swe:case>
+				<swe:default>
+				</swe:default>
+			</swe:switch>
+		</swe:default>
+	</swe:switch>
+</swe:if>
+
+<!-- ---------- End Tier 3 navigation ------------->
+<!--  Template End: CCViewbar_Tabs.swt -->
+      

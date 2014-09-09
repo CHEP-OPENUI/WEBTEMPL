@@ -1,0 +1,39 @@
+<!-- Template Start: eCfgBasketBox.swt -->
+
+
+<span class="AppletStyle5">
+   <table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="1" border="0" class="AppletBorder">
+      <tr>
+         <td class="AppletBack">
+            <table datatable="0" summary="" border="0" cellpadding="2" cellspacing="0" width="100%">
+               <tr>
+                  <td width="100%" class="AppletTitle">
+                     <span class="scLabel">
+                        <swe:control id="Message" CfgUIControl="lblMessage" property="DisplayName" />
+                     </span>
+                  </td>
+               </tr>
+            </table>
+            <table datatable="0" summary="">
+               <swe:for-each id="200" CfgLoopType="$.Signal" startValue="1500" count="Dynamic" iteratorName="101Id">
+                  <tr class="listRowOff">
+                     <td>
+                        <swe:control id="swe:101Id+220" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" CfgFieldName="CxExplanation"/>
+                     </td>
+                  </tr>
+               </swe:for-each>
+               <swe:for-each id="300" CfgLoopType="Signal" startValue="1500" count="Dynamic" iteratorName="101Id">
+                  <tr class="listRowOff">
+                     <td>
+                        <swe:control id="swe:101Id+220" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" CfgFieldName="CxExplanation"/>
+                     </td>
+                  </tr>
+               </swe:for-each>
+            </table>
+         </td>
+      </tr>
+   </table>
+</span>
+
+
+<!-- Template End: eCfgBasketBox.swt -->

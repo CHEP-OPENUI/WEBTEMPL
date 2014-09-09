@@ -1,0 +1,305 @@
+<!-- Start: CCAppletGanttChart.swt -->
+
+<link href="files/gantt.css" rel="stylesheet">
+
+<swe:include-script file="swecommon.js"/>
+<swe:include-script file="propset.js"/>
+
+<script>
+
+var color;
+var dragStarted = false;
+
+function fnHighlightOn(thingey)
+{
+	color = thingey.style.backgroundColor;
+	thingey.style.backgroundColor="f0f0f0";
+	fnCancelDefault();
+}
+
+function fnHighlightOff(thingey) 
+{	
+	thingey.style.backgroundColor=color;
+}
+
+function fnCancelDefault() {                                            
+  event.returnValue = false;                  
+  event.dataTransfer.dropEffect = "copy";
+}
+
+function fnSetInfoHIList(row, busCompName, viewId, appletName, appletVar)
+{
+   var data;
+   var frame;
+   var pset = new JSSPropertySet();
+   var rowId;
+   var recordArray;
+   
+   dragStarted = true;
+
+   //calculate the value of the "rowid_BusCompName"
+   pset.SetProperty ("SWERow", row);
+   pset.SetProperty ("SWEReqRowId", "1");
+   frame = SWEJSSFindAppletFrame (viewId, appletName);
+   //eval ('frame.' + appletVar + '.ButtonMethod ("PositionOnRow", pset)');
+
+   //rowId = eval('frame.' + appletVar).busComp.GetIdValue();
+   
+   recordArray = eval('frame.' + appletVar).busComp.recordArray;
+   if ((recordArray != null) && (recordArray.length > 0))
+   {
+      rowId = recordArray[row].id;
+      data = rowId + "_" + busCompName;
+      event.dataTransfer.setData("Text", data); 
+      event.dataTransfer.effectAllowed = "copy"; 
+   }
+   else
+   {
+      event.dataTransfer.clearData("Text");
+   }
+}
+
+function fnSetInfo(data)
+{
+   dragStarted = true;
+   event.dataTransfer.setData("Text", data); 
+   event.dataTransfer.effectAllowed = "copy";                 
+} 
+
+function fnOnDrop1(y,x){
+  var data;
+  var alertData;
+  var url;
+
+  //alert ("Drop");
+  //ShowResults();
+  
+  event.returnValue = false;                           
+  event.dataTransfer.dropEffect = "copy";              
+  data = event.dataTransfer.getData("Text");
+  
+  alertData = data + " x = " + x + " y = " + y;
+  alert (alertData);
+    
+  event.cancelBubble = true;
+  //form.submit();
+}  
+
+function fnOnDropIndex(y,x, SWEApCnt, SWECnt, appletViewNameTag, viewName, viewId, target, thingey){
+  var data;
+  var alertData;
+  var url;
+
+  //alert ("Drop");
+  //ShowResults();
+  
+  event.returnValue = false;                           
+  event.dataTransfer.dropEffect = "copy";              
+  data = event.dataTransfer.getData("Text");
+  
+  //alertData = data + " x = " + x + " y = " + y;
+  //alert (alertData);
+
+  event.cancelBubble = true;
+
+  if (dragStarted == false)
+  {
+   // alert ("Please use a Valid Drag Target");
+  }
+  else
+  {
+    dragStarted = false;
+    url = "start.swe?SWEMethod=OnDrop_" + y  + "_"+ x + "_" + data + "&SWEReqRowId=1&" +  appletViewNameTag + "&SWEApcnt=" + SWEApCnt + "&SWEC=" + SWECnt + "&SWECmd=InvokeMethod" + "&SWERowIds=";
+    //this.location = url;
+    SWEGotoView(viewName, viewId, url, target);
+  } 
+  
+  thingey.style.backgroundColor=color;
+}
+
+function fnOnDrop(SWEApCnt, SWECnt, appletViewNameTag, viewName, viewId, target, thingey){
+  var data;
+  var alertData;
+  var url;
+
+  //alert ("Drop");
+  //ShowResults();
+  
+  event.returnValue = false;                           
+  event.dataTransfer.dropEffect = "copy";              
+  data = event.dataTransfer.getData("Text");
+  
+  //alertData = data + " x = " + x + " y = " + y;
+  //alert (alertData);
+
+  event.cancelBubble = true;
+
+  if (dragStarted == false)
+  {
+    // alert ("Please use a Valid Drag Target");
+  }
+  else
+  {
+    dragStarted = false;
+    url = "start.swe?SWEMethod=OnDrop_" + data + "&SWEReqRowId=1&" +  appletViewNameTag + "&SWEApcnt=" + SWEApCnt + "&SWEC=" + SWECnt + "&SWECmd=InvokeMethod" + "&SWERowIds=";
+    //this.location = url;
+    SWEGotoView(viewName, viewId, url, target);
+  } 
+  
+  thingey.style.backgroundColor=color;
+}
+
+</script>
+
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center"><tr valign="top"><td>
+	<tr valign="top">
+		<td class="AppletStyle1">
+
+         <swe:form name="GanttChartForm">
+         <swe:ganttChart>
+         <table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0">
+	         <tr valign="top">
+		         
+		         <td>
+					<swe:if-var name="Grandchild"><span class="AppletStyle7"><swe:include file="CCGanttAppletTitle.swt"/></swe:if-var>			
+					<swe:if-var name="ChildWithPointer"><span class="AppletStyle3"></swe:if-var>				
+					<swe:if-var name="Child"><span class="AppletStyle3"></swe:if-var>	
+					<swe:if-var name="ParentWithPointer"><span class="AppletStyle1"><swe:include file="CCGanttAppletTitle.swt"/></swe:if-var>
+					<swe:if-var name="Parent"><span class="AppletStyle1"><swe:include file="CCGanttAppletTitle.swt"/></swe:if-var>				 
+				 
+						<!--Button Row-->			
+						<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">		
+								<tr class="AppletButtons">
+									<td><img src="images/spacer.gif" height="1" width="10" alt=""></td>
+									<td width="100%" class="AppletButtons">
+										<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="3" border="0">
+											<tr  class="AppletButtons">
+												<td valign="middle" nowrap>
+												<swe:control id="405" property="FormattedHtml" hintMapType="Control"/>
+												</td>
+											
+												<!-- Gotoprevious-->
+												<td valign="middle" nowrap>
+												<swe:control id="303" property="FormattedHtml" hintMapType="Control"/>
+												</td>
+
+												<!-- Gotonext-->
+												<td valign="middle" nowrap>
+												<swe:control id="304" property="FormattedHtml" hintMapType="Control"/>
+												</td>												
+												
+												<td width="100%">&nbsp;</td>
+
+												<swe:for-each startValue="306" count="9" iteratorName="currentId">
+													<td valign="middle" nowrap><b><swe:control id="swe:currentId" property="FormattedHtml" hintText="Label"/></b></td>
+													<td valign="middle" nowrap><swe:control id="swe:currentId+100" property="FormattedHtml" hintText="Control"/></td>
+												</swe:for-each>
+											</tr>
+										</table>										
+									</td>
+									<td valign="top" align="right"><img src="images/rnd_top_cls_d.gif" valign="top" width="6" height="6" border="0" alt=""></td>			
+								</tr>					
+						</table>				
+						<!--End Button Row-->	
+
+			         <!-- Start of Gantt Chart body -->
+
+			         <table datatable="0" summary="" bgcolor="#cccccc" valign="top" width="100%" cellpadding="0" cellspacing="1" border="0" align="center">
+				         <tr>
+					         <td>
+						         <table datatable="0" summary="" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0">
+							         <tr class="GanttHeader">
+								         <!-- Employee Header -->
+								         <td align="Center" class="GanttHeader" width="4%" rowspan="2" nowrap>
+								               <table datatable="0" summary="" cellpadding="2" cellspacing="5" border="0">
+								                     <tr>
+								                           <td colspan="2"><swe:this property="YLabel"/></td>
+								                     </tr>
+								                     <tr>
+								                           <td><swe:control id="301" property="FormattedHtml"/></td>
+								                           <td width="100%"><swe:control id="302" property="FormattedHtml"/></td>
+								                     </tr>
+								               </table>
+								         </td>
+								         <!-- End of employee header -->
+								         <!-- Start of major axis -->					
+								         <swe:ganttChartMajorAxisLegend>
+								         </swe:ganttChartMajorAxisLegend>
+								         <!-- End of major axis -->
+
+							         </tr>
+							         
+							         <!-- Start of minor axis -->
+							         <!-- Minor Interval -->
+							         <tr>
+							         <swe:ganttChartMinorAxisLegend>
+								         <swe:this property="Legend"/>
+							         </swe:ganttChartMinorAxisLegend>
+
+							         </tr>
+
+							         <tr>
+								         <swe:for-each startValue="2101" count="30" iteratorName="currentId">
+								         <swe:control id="142" property="FormattedHtml"/>
+								         </swe:for-each>
+							         </tr>
+						            
+						            <!-- Start: Gantt Chart Body -->
+						            <swe:ganttChartYObjectLoop>
+							         <tr>
+							            <td align="swe:this.TextAlignment" width="4%" height="20" class="GanttYAxisRow" nowrap><swe:this property="Name"/></td>
+							            
+							            <swe:ganttChartXObjectLoop>
+							            
+							               <swe:ganttChartXObjectNone>
+							               <td align="Center" width="6%" class="GanttRow">
+									         <swe:this property="CellProperty"/>
+								         </td>
+							               </swe:ganttChartXObjectNone>
+
+							               <swe:ganttChartXObjectOff>
+							               <td align="Center" width="6%" class="GanttChartOff">
+									         <swe:this property="CellProperty"/>
+								         </td>
+							               </swe:ganttChartXObjectOff>
+
+							               <swe:ganttChartXObjectOn>
+							               <td align="Center" width="6%" class="GanttChartOn">
+									         <swe:ganttChartXObjectMultiple>
+									         <!--swe:this property="Description"/-->
+									         <!-- Used when <swe:ganttChartXObjectMultiple> is not used
+									         -->
+									         </swe:ganttChartXObjectMultiple>
+								         </td>
+							               </swe:ganttChartXObjectOn>
+							            
+							            </swe:ganttChartXObjectLoop>
+
+
+							         </tr>
+						   	         </swe:ganttChartYObjectLoop>
+							         <!-- End: GanttChart Body.swt -->
+						         </table>	
+					         </td>
+				         </tr>
+			         </table>
+					
+
+					<swe:if-var name="Parent"><swe:include file="CCBottomApplet.swt"/></span></swe:if-var>
+					<swe:if-var name="ParentWithPointer"><swe:include file="CCBottomAppletPntr.swt"/></span></swe:if-var>
+					<swe:if-var name="Child"><swe:include file="CCBottomApplet.swt"/></span></swe:if-var>	
+					<swe:if-var name="ChildWithPointer"><swe:include file="CCBottomAppletPntr.swt"/></span></swe:if-var>	
+					<swe:if-var name="Grandchild"><swe:include file="CCBottomApplet.swt"/></span></swe:if-var>	
+					
+					
+		         </td>
+	         </tr>
+         </table>
+         </swe:ganttChart>
+         </swe:form>
+
+		</td>
+	</tr>
+</table>
+
+<!-- End: CCAppletGanttChart.swt-->

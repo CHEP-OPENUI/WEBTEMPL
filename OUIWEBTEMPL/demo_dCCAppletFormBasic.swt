@@ -1,0 +1,28 @@
+<!-- Template Start: dCCAppletFormBasic.swt -->
+<swe:include file="CCApplet_NamedSpacer.swt"/>
+<swe:include file="CCStylesChoice.swt"/>
+
+<!-- <span class="AppletStyle1"> -->
+<span class="curve"> 
+<swe:form>
+	
+	<swe:include file="dCCTitle.swt"/>	
+
+	<!-- <table datatable="0" bgcolor="#ffffff" summary="" width="100%" cellpadding="5" cellspacing="0" border="0" bordercolor="red" align="center"><tr><td class="AppletBack"> -->
+	<table class="curve" datatable="0" bgcolor="#ffffff" summary="" width="100%"  cellpadding="5" cellspacing="0" border="1" bordercolor="#62B1FF" align="center"><tr ><td width="100%" height="324" class="curve">	
+		<swe:include file="dCCForm1ColBodyLight.swt"/>
+	</table>
+
+<!--	<table datatable="0" bgcolor="#ffffff" summary="" width="100%" cellpadding="0" cellspacing="0" border="0"  align="center"><tr><td class="AppletBack"> -->
+<!--		<table datatable="0" bgcolor="#ffffff" summary="" width="100%" cellpadding="0" cellspacing="0" border="1" bordercolor="#62B1FF"  align="center"><tr><td class="curvebottom"> -->
+<!--	<swe:include file="dCCFormButtonsBottom.swt"/>  -->
+<!--	</td></tr></table> -->
+	
+	
+</swe:form>
+</span>
+
+<!-- Template End: dCCAppletFormBasic.swt -->
+
+
+	

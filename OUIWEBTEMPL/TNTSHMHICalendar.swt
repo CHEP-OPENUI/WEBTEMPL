@@ -1,0 +1,154 @@
+<!-- Template Start TNTHICalendar.swt -->
+
+<swe:include file="CCApplet_NamedSpacer.swt"/>
+
+<swe:if condition="Web Engine State Properties, IsHighInteractive">
+
+<swe:form>
+   
+   <swe:include file="CCTitle_Named.swt"/>
+      
+   <div class="swe:this.SelectStyle">  
+   
+      <table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="2" border="0" align="center">
+         <tr class="AppletButtons" align="left" valign="center">  
+
+            <!-- Applet Filter Area -->
+            <swe:if-var name="Parent">            
+               <td class="AppletTitle" nowrap>
+                  <swe:if condition="Web Engine State Properties, IsHighInteractive">     
+                     <swe:switch>
+                     <swe:case condition="Web Engine State Properties, IsViewPosition, 'Position:2'">
+                        <img src="images/spacer.gif" width="1" height="1" alt=""></td>
+                        <td valign="center"><swe:nav-control type="Category View" style="Select"/></td>
+                        <td>
+                        <img src="images/spacer.gif" width="8" height="1" alt="">
+                        <img src="images/btn_div_gray.gif" height="13" align="middle" alt="">
+                        <img src="images/spacer.gif" width="8" height="1" alt="">
+                     </swe:case>
+                     <swe:default>
+                        &nbsp;
+                        <swe:this property="Title"/>
+                        &nbsp;&nbsp;
+                        <img src="images/btn_div_gray.gif" height="13" align="middle" alt="">
+                        &nbsp;
+                     </swe:default>
+                     </swe:switch>
+                  </swe:if>
+               </td>
+            </swe:if-var>
+
+            <swe:if-var name="ParentWithPointer">             
+               <td class="AppletTitle" nowrap>
+                  <swe:if condition="Web Engine State Properties, IsHighInteractive">     
+                     <swe:switch>
+                     <swe:case condition="Web Engine State Properties, IsViewPosition, 'Position:2'">
+                        <img src="images/spacer.gif" width="1" height="1" alt=""></td>
+                        <td valign="center"><swe:nav-control type="Category View" style="Select"/></td>
+                        <td>
+                        <img src="images/spacer.gif" width="8" height="1" alt="">
+                        <img src="images/btn_div_gray.gif" height="13" align="middle" alt="">
+                        <img src="images/spacer.gif" width="8" height="1" alt="">
+                     </swe:case>
+                     <swe:default>
+                        &nbsp;
+                        <swe:this property="Title"/>
+                        &nbsp;&nbsp;
+                        <img src="images/btn_div_gray.gif" height="13" align="middle" alt="">
+                        &nbsp;
+                     </swe:default>
+                     </swe:switch>
+                  </swe:if>
+               </td>
+            </swe:if-var>
+
+            <swe:if-var name="AppletFilter-No">            
+               <td class="AppletTitle" nowrap>
+                  &nbsp;
+                  <swe:this property="Title"/>
+                  &nbsp;&nbsp;
+                  <img src="images/btn_div_gray.gif" height="13" align="middle" alt="">
+                  &nbsp;
+               </td>
+            </swe:if-var>     
+
+            <swe:if-var name="Grandchild">
+               <td class="AppletTitle" nowrap>
+                  &nbsp;
+                  <swe:this property="Title"/>
+                  &nbsp;&nbsp;
+                  <img src="images/btn_div_gray.gif" height="13" align="middle" alt="">
+                  &nbsp;
+               </td>
+            </swe:if-var>
+            
+            <!-- Menu Button Area -->
+            
+            <td nowrap><img src="images/spacer.gif" width="38" height="16" alt=""></td>
+
+            <!-- Other Buttons Area -->         
+            <td><img src="images/spacer.gif" width="4" height="1" alt=""></td>
+            <swe:include file="CCButtons.swt"/>                               
+            
+            <!-- Toggle Bar Area -->         
+            <td>
+               <swe:include file="CCTogglebar_drop.swt"/>
+            </td>       
+
+            <!-- Query Message Area -->         
+            <td nowrap>
+               &nbsp;<b><swe:message type="Query Message" /></b>
+            </td>
+
+            <!-- Record Navigation Area -->        
+            <td align="right" width="100%">
+               <swe:switch>                  
+                  <swe:case condition="Web Engine State Properties, IsHighInteractiveApplet">
+                     <td valign="middle">
+                        &nbsp;
+                        <img src="images/btn_div_gray.gif" height="13" align="middle" alt="">&nbsp;
+                     </td>
+                  </swe:case>                   
+                  <swe:default>
+                     <td>
+                        &nbsp;
+                     </td>
+                  </swe:default>
+               </swe:switch>  
+               <swe:include file="CCListButtonsTopRight.swt"/> 
+            </td>       
+
+            <!-- Corner (if needed) -->         
+            <td valign="top" align="right">
+               <swe:if-var name="Parent">            
+               </swe:if-var>  
+               <swe:if-var name="ParentWithPointer">             
+               </swe:if-var>  
+               <swe:if-var name="Child">             
+               </swe:if-var>  
+               <swe:if-var name="ChildWithPointer">              
+               </swe:if-var>  
+               <swe:if-var name="Grandchild">              
+               </swe:if-var>  
+            </td>
+         </tr>
+      </table>
+         
+      <swe:error type="Popup">
+            <table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="4" cellspacing="0" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/><br>&nbsp;</td></tr></table>
+      </swe:error>   
+         
+      <swe:include file="CCApplet_NamedSpacer.swt"/>
+      
+      <swe:calendar>
+      </swe:calendar>   
+
+   </div>
+   
+   </span>
+
+</swe:form> 
+
+</swe:if>
+
+<!-- Template End    TNTHICalendar.swt -->

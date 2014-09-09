@@ -1,0 +1,55 @@
+<!-- Template Start: CCAppletGanttChartActX.swt modified from CCAppletForm4Col_B.swt -->
+
+<swe:if condition="Web Engine State Properties, IsHighInteractive">
+<swe:include file="CCApplet_NamedSpacer.swt"/>	
+
+<swe:form>
+<div class="swe:this.SelectStyle"> 
+   <table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" class="AppletBack"><tr><td class="AppletHIFormBorder">
+	   <swe:include file="CCTitle_Named.swt"/>
+	   <swe:include file="CCAppletCalendarGanttChartTop.swt"/>
+		<table datatable="0" summary="" class="AppletBlank" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+			<swe:control id="1301" hintMapType="FormItem">	
+				<tr valign="top">
+				<td class="scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="Field"/></td>
+				</tr>
+			</swe:control>
+			
+			<!-- Calendar Legend-->
+			<tr>
+			<td width=100%>
+			   <table datatable="0" summary="" align="center">
+			      <tr  valign="top">
+			      <td width=20><div class = "GCcurrentappoinment"></div></td>
+			      <td><swe:control id="1000"><swe:this property="FormattedHtml" hintMapType="Control" hintText="" /></swe:control></td>
+			      <td><img src="images/spacer.gif" height="1" width="1" alt=""></td>
+			      <td width=20><div class = "GCworkinghours"></div></td>
+			      <td><swe:control id="1001"><swe:this property="FormattedHtml" hintMapType="Control" hintText="" /></swe:control></td>
+		                     <td><img src="images/spacer.gif" height="1" width="1" alt=""></td>
+		                     <td width=20><div class = "GCnonworkinghours"></div></td>
+			      <td><swe:control id="1002"><swe:this property="FormattedHtml" hintMapType="Control" hintText="" /></swe:control></td>
+			      <td><img src="images/spacer.gif" height="1" width="1" alt=""></td>
+			      <td width=20> <div class = "GCconfirmedappoinments"></div></td>
+			      <td><swe:control id="1003"><swe:this property="FormattedHtml" hintMapType="Control" hintText="" /></swe:control></td>
+		                        <td><img src="images/spacer.gif" height="1" width="1" alt=""></td>
+		                        <td width=20> <div class = "GCnotavailableschedule"></div></td>
+			      <td><swe:control id="1004"><swe:this property="FormattedHtml" hintMapType="Control" hintText="" /></swe:control></td>
+			      </tr>
+			
+			   </table>
+			</td>
+		   </tr>
+		</table> 
+	   </span>
+	</td></tr></table>			
+   </div>
+     
+</swe:form>
+</swe:if>
+
+
+<!-- Template End: CCAppletGanttChartActX.swt -->
+
+
+
+	

@@ -1,0 +1,72 @@
+<!-- Template Start ePortalWeatherSearchFormApplet.swt -->
+<img src="images/spacer.gif" width="5" height="10" border="0" alt="" /><br/>
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+<tr valign="top">
+<td class="AppletStyle1">
+ <swe:include file="ePortalAppletTitle.swt"/>
+ <swe:layout viewDisplayMode="Show" appletDisplayMode="Show" appletDisplaySize="Max">
+<table datatable="0" summary="" width="100%" cellpadding="2" cellspacing="0" border="0" align="center"><tr>
+   <td class="AppletBorder" >
+<table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="5" cellspacing="0" border="0">
+   <tr valign="top"><td>
+
+<!-- begin Company Search form -->
+
+	<form name="SICompanySearchForm" method="GET" onSubmit="SISubmitEvent(); return false;">
+
+<swe:control id="509" property="DisplayName" hintText="Label" hintMapType="Control"/>
+<swe:control id="508" property="DisplayName" hintText="Label" hintMapType="Control"/>
+<swe:control id="507" property="DisplayName" hintText="Label" hintMapType="Control"/>
+<swe:control id="510" property="DisplayName" hintText="Label" hintMapType="Control"/>
+
+<!-- Label: company search blurb -->
+<br>
+<swe:control id="501">
+	<span class="scLabel">
+	<swe:this property="DisplayName" hintText="Long Label"/>
+	</span>
+	<p></p>
+</swe:control>
+
+<table datatable="0" summary="">
+
+<!-- Company Search Text -->
+ <tr>
+  <td class="FormLabel">
+	<swe:control id="502" property="DisplayName" hintText="Label"/>
+  </td>
+  <td>
+	<input type="text" name="Find" size="30">
+  </td>
+  <td nowrap>
+	<span height="16" class="minibuttonOn"><a href='JavaScript:SISubmitEvent()'>&nbsp;&nbsp;<swe:control id="504" property="DisplayName" hintText="Label" hintMapType="Control"/>&nbsp;&nbsp;</a></span>
+  </td>
+ </tr>
+</table>
+</form>
+<!-- end Company Search form -->
+
+</td>
+</tr>
+</table>
+</td></tr>
+</table>
+</td></tr>
+</table>
+
+<p></p>
+
+
+<script language="javascript">
+
+function SISubmitEvent()
+{
+   SWEPersonalizationGotoview(document.SICompanySearchForm.SWEView.value, "OneShot=1&Find=" + document.SICompanySearchForm.Find.value);
+}
+
+
+</script>
+</swe:layout>
+
+<!-- Template End ePortalWeatherSearchFormApplet.swt -->
+

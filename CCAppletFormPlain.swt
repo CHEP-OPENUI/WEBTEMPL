@@ -1,0 +1,11 @@
+
+<!-- Template Start: CCAppletFormPlain.swt -->
+<swe:form>
+
+<table datatable="0" summary="" bgcolor="#ffffff" valign="top" width="100%" cellpadding="2" cellspacing="0" border="0">
+<swe:include file="CCFormBody.swt"/>
+</table>
+
+</swe:form>
+
+<!-- Template End: CCAppletFormPlain.swt -->

@@ -1,0 +1,55 @@
+<!--  Template Start: dCCView_50_50.swt -->
+<swe:include file="dCCHTMLHeader.swt"/>
+
+<!-- ---------- Threadbar And/Or Greeting ----------------->
+<swe:if condition="Web Engine State Properties, IsLowInteractive">
+<swe:include file="CCThreadbar.swt"/>
+</swe:if>
+<swe:applet id="101" hintText="Salutation Applet">
+<table datatable="0" summary="" border="0" cellspacing="0" cellpadding="1" width="100%">
+	<tr><td>&nbsp;&nbsp;</td><td width="75%"><swe:this property="FormattedHtml"/></td><td width="25%"><img src="images/spacer.gif" width="100%" height="1" alt=""></td></tr>
+</table> 
+</swe:applet>
+<!-- ---------- Threadbar And/Or Greeting  ------------->
+
+<!-- ---------- Main Content Area ---------------------------->
+
+
+<table datatable="0" summary="" width="100%" cellpadding="5" cellspacing="0" border="0">
+	<tr>	
+		<!--  top -->
+		<td valign="top" colspan="2" width="100%">
+			<swe:for-each count=10 iteratorName="currentId" startValue="302">
+				<!-- start applet-->
+				<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" property="FormattedHtml" var="Parent"/>
+				<!-- end applet-->
+			</swe:for-each>
+		</td>
+		<!--  End top -->
+	</tr>
+	<tr>	
+		<!--  Column 1 -->
+		<td valign="top" width="50%">
+			<swe:for-each count=10 iteratorName="currentId" startValue="102">
+				<!-- start applet-->
+				<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" property="FormattedHtml" var="Parent"/>
+				<!-- end applet-->
+			</swe:for-each>
+		</td>
+		<!--  End Column 1 -->
+		
+		<!--  Column 2 -->
+		<td valign="top" width="50%">
+			<swe:for-each count=10 iteratorName="currentId" startValue="202">
+				<!-- start applet-->
+				<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" property="FormattedHtml" var="Parent"/>
+				<!-- end applet-->
+			</swe:for-each>
+		</td>
+		<!--  End Column 2 -->
+		
+</tr>
+</table>
+<!-- ---------- End Main Content Area ------------------------>
+<swe:include file="dCCHTMLFooter.swt"/>
+<!--  Template End: dCCView_50_50.swt -->

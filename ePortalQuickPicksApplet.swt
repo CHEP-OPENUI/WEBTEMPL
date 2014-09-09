@@ -1,0 +1,26 @@
+<swe:layout viewDisplayMode="Show">
+<!-- Template Start ePortalQuickPicksApplet.swt -->
+
+<swe:include file="ePortalAppletTitle.swt"/>
+
+<swe:layout appletDisplaySize="Max">
+<table datatable="0" summary="" class="Border1" width="100%" border="0" cellpadding="1" cellspacing="0" bgcolor="#333399">
+<tr><td>
+<table datatable="0" summary="" class="Row2" bgcolor="#FFFFFF" valign="top" width="100%"  cellpadding="4" cellspacing="0" border="0">
+<tr><td class="Row2">
+<swe:for-each-row>
+<span class="sub2viewoff">
+<swe:control id="501">
+	<swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/>
+</swe:control>
+<swe:control id="502">
+	<swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/>
+</swe:control>
+</span>&nbsp;<BR>
+</swe:for-each-row>
+</td></tr></table>
+</td></tr></table>
+</swe:layout>
+
+<!-- Template End ePortalQuickPicksApplet.swt -->
+</swe:layout>

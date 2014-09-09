@@ -1,0 +1,85 @@
+<!-- Template Start: SISOMeCfgControlComboAdd.swt -->
+
+<swe:include file="eCfgPort_Header.swt"/>
+
+<tr>
+   <td width=100% colspan=2>
+      <table cellpadding=0 cellspacing=0 border=0 width=100%>
+         <swe:form>
+            <tr>
+               <td width="250">
+                  <swe:control id="Name" CfgUIControl="lblName" property="DisplayName" />
+               </td>
+               <td width="50" align="center">
+                  <swe:control id="Quantity" CfgUIControl="lblQuantity" property="DisplayName" />
+               </td>
+               <td width="300" align="center">
+                  &nbsp;
+               </td>
+            </tr>
+
+            <tr>
+               <td width="250">
+                   <p>
+                     <SCRIPT>
+                        var ComboBoxName = '<swe:control id="swe:IncId+320" CfgFieldName="FieldName" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+                        document.write ( '<SELECT name="' + ComboBoxName + '">' );
+                                          
+                        document.write ( '<option value="" >' );
+
+                     <swe:for-each id="1100" CfgLoopType="Domain" Automation="N" startValue="1000" count="Dynamic" iteratorName="1100Id">
+                        
+                           var ID = '<swe:control id="swe:1100Id + 2000" CfgFieldName="Product Id" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+                           var DisplayValue = unescape('<swe:control id="swe:1100Id + 3000" CfgFieldName="CxObjName" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" DisplayMode="EncodeData" property="FormattedHtml" />');
+                           var DISABLED =     '<swe:control id="swe:1100Id + 1500" CfgFieldName="CxEnabled" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" />';
+                           var DispStyle = 'eCfgOptionAvailable';
+                           
+                           if( DISABLED == "Disabled" )
+                              DispStyle = 'eCfgOptionExcluded';
+                           
+                           document.writeln ( '<option value="' + ID + '" class="'+ DispStyle + '" >' );
+                           document.writeln ( DisplayValue );
+                     </swe:for-each>
+                     document.write('</SELECT>');
+                 	</SCRIPT>
+               </td>
+               <td width="50">
+                  <table width="100%">
+                     <swe:control id="swe:IncId + 5600" CfgFieldName="Error@Quantity" CfgUIControl="CfgLabel" CfgHtmlType="Cfglabel" >
+                        <tr>
+                           <td align="center" width="100%">
+                              <span id="Error@Quantity" class="eCfgSpenWarning" ><swe:this property="FormattedHtml" /></span>
+                           </td>
+                        </tr>
+                     </swe:control>
+                     <tr>
+                        <td align="center" width="100%">
+                           <span id="Quantity" class="cxEdit">
+                           <swe:control id="swe:IncId+5100" CfgFieldName="Quantity" CfgUIControl="QTY" CfgHtmlType="Text" property="FormattedHtml" />
+                           </span>
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+               <td width="300" align="center"><swe:control id="swe:IncId + 3000" CfgUIControl="AddItem" CfgRequest="AddItemMin" CfgHtmlType="CfgSubmitBtn" InvokeMethod="SubmitRequest" property="FormattedHtml" /></td>
+            </tr>
+         </swe:form>
+            <tr>
+               <td colspan="3">
+                    <swe:include file="SISOMeCfgRelationContentsQuantity.swt"/>    
+               </td>
+            
+               <SCRIPT>
+                  if ( 0 != iNumPortContents )
+                     document.write ( '<td>&nbsp;</td>' );
+               </SCRIPT>
+
+            </tr>
+      </table>
+   </td>
+</tr>
+
+<swe:include file="eCfgPort_Footer.swt"/>
+
+<!-- Template End: SISOMeCfgControlComboAdd.swt -->
+

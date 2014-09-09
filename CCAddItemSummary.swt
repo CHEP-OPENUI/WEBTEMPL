@@ -1,0 +1,85 @@
+<!--  Template Start: CCAddItemSummary.swt -->
+
+<tr valign="top">
+
+  <swe:control id="991">
+    <td align="swe:this.TextAlignment" class="Row" style = "background-color: #cccccc; width: 20%;"><b><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></b></td>
+  </swe:control> 
+  <swe:control id="992">
+    <td align="swe:this.TextAlignment" class="Row" style = "background-color: #cccccc; width: 20%;"><b><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></b></td>
+  </swe:control>
+ <swe:control id="993">
+    <td align="swe:this.TextAlignment" class="Row" style = "background-color: #cccccc; width: 20%;"><b><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></b></td>
+  </swe:control>
+  <swe:control id="994">
+    <td align="swe:this.TextAlignment" class="Row" style = "background-color: #cccccc; width: 20%;"><b><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></b></td>
+  </swe:control>
+ <swe:control id="995">
+    <td align="swe:this.TextAlignment" class="Row" style = "background-color: #cccccc; width: 20%;"><b><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></b></td>
+  </swe:control>
+</tr>
+
+<tr valign="top">
+
+  <swe:control id="1001">
+    <td align="swe:this.TextAlignment" class="Row" style = "background-color: #cccccc; width: 20%;"><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></td>
+  </swe:control> 
+  <swe:control id="1002">
+    <td align="swe:this.TextAlignment" class="Row" style = "background-color: #cccccc; width: 20%;"><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></td>
+  </swe:control>
+ <swe:control id="1003">
+    <td align="swe:this.TextAlignment" class="Row" style = "background-color: #cccccc; width: 20%;"><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></td>
+  </swe:control>
+ <swe:control id="1004">
+    <td align="swe:this.TextAlignment" class="Row" style = "background-color: #cccccc; width: 20%;"><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></td>
+  </swe:control>
+ <swe:control id="1005">
+    <td align="swe:this.TextAlignment" class="Row" style = "background-color: #cccccc; width: 20%;"><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></td>
+  </swe:control>
+</tr>
+
+<tr valign="top">
+
+  <swe:control id="1011">
+    <td align="swe:this.TextAlignment" class="Row" style = "background-color: #cccccc; width: 20%;"><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></td>
+  </swe:control> 
+  <swe:control id="1012">
+    <td align="swe:this.TextAlignment" class="Row" style = "background-color: #cccccc; width: 20%;"><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></td>
+  </swe:control>
+ <swe:control id="1013">
+    <td align="swe:this.TextAlignment" class="Row" style = "background-color: #cccccc; width: 20%;"><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></td>
+  </swe:control>
+ <swe:control id="1014">
+    <td align="swe:this.TextAlignment" class="Row" style = "background-color: #cccccc; width: 20%;"><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></td>
+  </swe:control>
+ <swe:control id="1015">
+    <td align="swe:this.TextAlignment" class="Row" style = "background-color: #cccccc; width: 20%;"><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></td>
+  </swe:control>
+
+</tr>
+
+<tr valign="top">
+
+  <swe:control id="1021">
+    <td align="swe:this.TextAlignment" class="Row" style = "background-color: #cccccc; width: 20%;"><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></td>
+  </swe:control> 
+  <swe:control id="1022">
+    <td align="swe:this.TextAlignment" class="Row" style = "background-color: #cccccc; width: 20%;"><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></td>
+  </swe:control>
+ <swe:control id="1023">
+    <td align="swe:this.TextAlignment" class="Row" style = "background-color: #cccccc; width: 20%;"><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></td>
+  </swe:control> 
+ <swe:control id="1024">
+    <td align="swe:this.TextAlignment" class="Row" style = "background-color: #cccccc; width: 20%;"><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></td>
+  </swe:control>
+ <swe:control id="1025">
+    <td align="swe:this.TextAlignment" class="Row" style = "background-color: #cccccc; width: 20%;"><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></td>
+  </swe:control>
+
+</tr>
+
+
+
+
+
+<!--  Template End: CCAddItemSummary.swt -->

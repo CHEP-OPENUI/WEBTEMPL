@@ -1,0 +1,47 @@
+<!-- Template Start: ePortalError.swt -->
+<p>&nbsp;</p>
+<p align="center">
+<table datatable="0" summary="" valign="top" width="95%"  cellpadding="0" cellspacing="0" border="0">
+ <tr>
+  <td class="appTabBorder" colspan=3><img src="images/spacer.gif" height="1" width="1" alt=""></td>
+  <td width=100% class="appTabBlank"></td>
+ </tr>
+ 
+ <tr align="absmiddle">
+  <td class="appTabBorder"><img src="images/spacer.gif" height="22" width="1" alt=""></td>
+  <td class="appTabLabel" nowrap>&nbsp;<swe:pageitem id="101" property="DisplayName" />&nbsp;</td>
+  <td class="appTabBorder"><img src="images/spacer.gif" height="22" width="1" alt=""></td>
+   <swe:pageitem id="2">
+        <!-- Back Button -->
+        <td class="appTabBlank" align="right" valign="middle" nowrap><swe:this property="FormattedHtml" /></td>
+   </swe:pageitem>  
+  </td>
+ </tr>
+ 
+</table>
+
+<table datatable="0" summary="" class="Border" width="95%" border="0" cellpadding="1" cellspacing="0" bgcolor="#cccccc">
+  <tr>
+    <td>
+   <table datatable="0" summary="" class="Row2" bgcolor="#ffffff" valign="top" width="100%"  cellpadding="4" cellspacing="0" border="0">
+        <tr>
+    <td class="Row2"><span class="error"><swe:pageitem id="102" property="DisplayName" /><br>&nbsp;</span></td>
+        </tr>
+        <tr>
+    <td class="Row2"><swe:pageitem id="1" property="FormattedHtml" /><p></p>&nbsp;</td>
+  </tr>
+  
+  <swe:pageitem id="4">
+    <!-- Link -->
+          <tr>
+      <td class="Row2"><swe:this property="FormattedHtml"/><br>&nbsp;</td>
+    </tr>
+  </swe:pageitem>
+      </table>
+ </td>
+  </tr>
+</table>
+</p>
+<p></p>
+
+<!-- Template End: ePortalError.swt -->

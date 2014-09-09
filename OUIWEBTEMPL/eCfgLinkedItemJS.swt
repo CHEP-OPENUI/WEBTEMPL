@@ -1,0 +1,33 @@
+<!-- Template Start: eCfgLinkedItemJS.swt -->
+
+<table datatable="0" summary="" class="AppletStyle1" width="100%" cellpadding="0" cellspacing="0" border="0">
+
+   <tr valign="top">
+      <td>
+         <table datatable="0" summary="" valign="top" width="100%" cellpadding="3" cellspacing="1" border="0">
+            <tr>
+               <td width="20%" align="center">
+                  <b>
+                     <swe:control id="LinkedItem" CfgUIControl="lblLinkedItem" CfgHtmlType="CfgLabel" />
+                  </b>
+                  &nbsp;&nbsp;&nbsp;
+               </td>
+               <td width="20%" align="center"><swe:control id="Name" CfgUIControl="lblName" CfgHtmlType="CfgLabel" />&nbsp;&nbsp;
+                  <div id="CxLnkItmName" class="cxLabel">
+                     <swe:control id="swe:IncId+200" CfgFieldName="CxLnkItmName" CfgHtmlType="CfgLabel" />
+                  </div>
+               </td>
+               <td width="20%" align="center"><swe:control id="Value" CfgUIControl="lblValue" CfgHtmlType="CfgLabel" />&nbsp;&nbsp;
+                  <div id="CxLnkItmValue" class="cxLabel">
+                     <swe:control id="swe:IncId+500" CfgFieldName="CxLnkItmDisplayValue" CfgHtmlType="CfgLabel" />
+                  </div>
+               </td>
+               <td width="20%" align="center">&nbsp;</td>
+               <td width="20%" align="center">&nbsp;</td>
+            </tr>
+         </table>
+      </td>
+   </tr>
+</table>
+
+<!-- Template End: eCfgLinkedItemJS.swt -->

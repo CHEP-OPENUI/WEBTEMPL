@@ -1,0 +1,59 @@
+<!--  Template Start: CCViewDetail.swt -->
+<!--  FINSDBViewDetail.swt -->
+<!--  Changes 1:  Include FINSDBHTMLHeader.swt instead of CCHTMLHeader.swt to remove space at left and top. -->
+<!--  Changes 2:  remove threadbar section at the top. -->
+<!--  Changes 3:  For parent applet (id='1'), change from var="Parent" to var="Child" to show in pink color.-->
+
+<!--swe:include file="CCHTMLHeader.swt"/-->
+<swe:include file="FINSDBHTMLHeader.swt"/>
+
+
+<!-- ---------- Main Content Area ---------------------------->
+
+<swe:applet hintMapType="Applet" id="1" hintText="Parent Applet" property="FormattedHtml" var="Child"/>
+
+<!-- ---------- Tier 3 & Tier 4 navigation ----------------->
+<swe:include file="CCViewbar_Tabs_DropList.swt"/>
+<!-- ---------- End Tier 3 & Tier 4 navigation ------------->
+
+<swe:for-each count=1 iteratorName="currentId" startValue="2">
+<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Child Applet" property="FormattedHtml" var="Child"/>
+</swe:for-each>
+
+<swe:if condition="Web Engine State Properties, IsHighInteractive">
+	<swe:for-each count=1 iteratorName="currentId" startValue="702">
+	<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Child Applet (HI Display Only)" property="FormattedHtml" var="Child"/>
+	</swe:for-each>
+</swe:if>
+
+<swe:for-each count=3 iteratorName="currentId" startValue="3">
+	<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Child or Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+</swe:for-each>
+
+<swe:if condition="Web Engine State Properties, IsHighInteractive">
+	<swe:for-each count=3 iteratorName="currentId" startValue="703">
+		<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Child or Grandchild Applet (HI Display Only)" property="FormattedHtml" var="Grandchild"/>
+	</swe:for-each>
+</swe:if>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+	<tr valign="top">
+		<td>
+			<swe:for-each count=2 iteratorName="currentId" startValue="6">
+				<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+			</swe:for-each>
+		</td>
+
+		<td>
+			<swe:for-each count=2 iteratorName="currentId" startValue="8">
+				<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+			</swe:for-each>
+		</td>
+	</tr>
+</table>
+
+<swe:include file="CCHTMLFooter.swt"/>
+
+<!-- ---------- End Main Content Area ------------------------>
+
+<!--  Template End: CCViewDetail.swt -->

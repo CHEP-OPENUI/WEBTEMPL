@@ -1,0 +1,11 @@
+
+<!-- Template Start: eSalesAppletFormItemDetail.swt -->
+<swe:include file="CCApplet_Spacer.swt"/>		
+<swe:form>
+	<span class="AppletStyle5">
+		<table datatable="0" summary="" width="100%" cellpadding="2" cellspacing="0" border="0" align="center">
+		   <swe:include file="dCCFormItemDetail.swt"/>
+		</table>	
+	</span>
+</swe:form>
+<!-- Template End: dCCAppletFormItemDetail.swt -->

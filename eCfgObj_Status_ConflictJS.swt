@@ -1,0 +1,71 @@
+<!-- Template Start: eCfgObj_Status_ConflictJS.swt -->
+<div id="eCfgObj_Status_ConflictJS.swt" class="cxStatusTempl">
+
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+   <tr class="listRowOff">
+      <td colspan="5">
+         <b><swe:control id="Status" CfgUIControl="lblStatus" CfgHtmlType="CfgLabel" property="DisplayName" /></b>
+      </td>
+   </tr>
+   <tr class="listRowOff" >
+      <td  colspan="5">
+            <swe:control id="swe:101Id+220" DisplayMode="DontEncodeData" CfgHtmlType="CfgError" 
+             CfgJSShow="showConflict" CfgJSUpdateConflict="showConflict"/>
+      </td>
+   </tr>
+</table>
+
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+   <tr class="listRowOff">
+      <td width="100%"></td>
+      <td colspan="2">&nbsp;</td>
+      
+      <td id="RemoveFailedRequests">
+         <swe:control id="RemoveFailedRequests" 
+                     CfgUIControl="UndoAllFailedRequest"
+                     CfgHtmlType="MiniButton" 
+                     InvokeMethod="RemoveFailedRequests" />
+      </td>
+      <td >&nbsp;</td>
+      
+      <td id="UndoLast">
+         <swe:control id="UndoLast" 
+                     CfgUIControl="UndoLastRequest"
+                     CfgHtmlType="MiniButton" 
+                     InvokeMethod="UndoLastRequest" />
+                        
+      </td>       
+      <td >&nbsp;</td>
+      
+      <td id="GetMoreExplButton">  
+         <swe:control id="swe:IncId+555"
+                     CfgUIControl="GetMoreExplButton"
+                     CfgHtmlType="MiniButton"                       
+                     InvokeMethod="GetDetailExpl"/>
+      </td>           
+      
+      <td >&nbsp;</td>
+      
+      <td id="ClearTheStatusUndo">  
+         <swe:control id="ClearTheStatusUndo" 
+                     CfgUIControl="ClearTheStatusUndo"
+                     CfgHtmlType="MiniButton" 
+                     InvokeMethod="ClearTheStatus"/>
+      </td>
+      
+      <td >&nbsp;</td>
+      
+      <td id="ClearTheStatus">  
+         <swe:control id="ClearTheStatus" 
+                     CfgUIControl="ClearTheStatus"
+                     CfgHtmlType="MiniButton" 
+                     InvokeMethod="ClearTheStatus"/>
+      </td> 
+            
+      <td colspan="2">&nbsp;</td>
+   </tr>
+
+</table>
+
+</div>
+<!-- Template End: eCfgObj_Status_ConflictJS.swt -->

@@ -1,0 +1,22 @@
+<!-- Template Start SILinkListApplet.swt -->
+<swe:include file="SIAppletTitle.swt"/>
+
+<table datatable="0" summary="" class="Border1" width="100%" border="0" cellpadding="1" cellspacing="0" bgcolor="#333399">
+  <tr><td>
+    <table datatable="0" summary="" class="Row2" bgcolor="#FFFFFF" valign="top" width="100%"  cellpadding="4" cellspacing="0" border="0">
+      <tr><td class="Row2">
+        <ul>
+          <swe:for-each-row>
+            <li><b><swe:control id="501" property="FormattedHtml"  hintText="Field" hintMapType="ListItem"/></b><br>
+              <swe:control id="502" property="FormattedHtml" hintText="Field" hintMapType="ListItem"/>&nbsp;
+              <swe:control id="503"><span class="LinkListInfo"><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></span></swe:control>
+			  <swe:control id="504"><span class="LinkListInfo"><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></span></swe:control>
+            <br>&nbsp;
+          </swe:for-each-row>
+        </ul>
+      </td></tr>
+    </table>
+  </td></tr>
+</table>
+<p></p>
+<!-- Template End SILinkListApplet.swt -->

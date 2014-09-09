@@ -1,0 +1,20 @@
+<!-- Template Start: dCCSubViewbar_Drop.swt -->
+<!------------ Tier 4 navigation ----------------->
+
+	<swe:form>
+		<table datatable="0" summary="" class="tier3On" width="100%" valign="top" align="center" cellpadding='0' cellspacing='0' border='0'>
+			<swe:subviewbar type="Select">
+			<swe:for-each-subview>
+			<tr class="tier3On" valign="absmiddle">
+				<td><img src="images/spacer.gif" width="10" height="22" alt=""></td>
+				<td valign="top"><swe:pageitem id="2" property="DisplayName" /></td>	
+				<td nowrap><swe:this property="FormattedHtml" /></td>
+				<td width="100%">&nbsp;</td>
+			</tr>
+			</swe:for-each-subview>
+			</swe:subviewbar>
+		</table>
+	</swe:form>
+		
+<!------------ End Tier 4 navigation ------------->
+<!-- Template End: dCCSubViewbar_Drop.swt -->

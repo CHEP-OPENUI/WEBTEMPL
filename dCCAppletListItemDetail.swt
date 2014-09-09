@@ -1,0 +1,19 @@
+<!-- Template Start: dCCAppletListItemDetail.swt -->
+
+<swe:include file="CCApplet_Spacer.swt"/>
+
+<span class="AppletStyle5">
+	<swe:form>
+
+			<table datatable="0" summary="" width="100%" cellpadding="1" cellspacing="0" border="0" align="center">
+				<tr><td class="AppletBorder">
+					<table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="2" cellspacing="0" border="0" align="center">
+					   <swe:include file="dCCListItemDetail.swt"/>
+					</table>	
+				</td></tr>
+			</table>				   
+
+	</swe:form>
+</span>	
+
+<!-- Template End: dCCAppletListItemDetail.swt -->

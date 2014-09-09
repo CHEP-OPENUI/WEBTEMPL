@@ -1,0 +1,167 @@
+<!--  Template Start: CCListBodyTotalsNoRowHilite.swt -->
+
+<!-- ---------- Loop for all N records, DATA ------------->
+<swe:for-each-row count="7">
+
+<tr class="listRowOff">
+
+<swe:control id="199">
+<td class="row">&nbsp;<!-- placeholder for the totals label presented in the last row--></td>
+</swe:control>
+
+<swe:control id="144">
+<!--  Select 144 -->
+  <td width="42" align="center" class="Row"><swe:this property="FormattedHtml" hintText="Selected Row" hintMapType="Control"/></td>
+</swe:control>
+
+<swe:control id="147">
+<!--  Select 147 -->
+  <td width="42" align="center" class="Row"><swe:this property="FormattedHtml" hintText="Pick Control" hintMapType="Control"/></td>
+</swe:control>
+
+<swe:select-row>
+   <td width="42" align="center" class="Row"><swe:this property="FormattedHtml" /></td>
+</swe:select-row>
+
+<!-- ---------- List Field Values (501-540) ------------->
+<swe:for-each startValue="501" count="40" iteratorName="currentId">
+  <swe:control id="swe:currentId">
+    <td align="swe:this.TextAlignment" class=Row scope="swe:this.RowScope"><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></td>
+  </swe:control> 
+</swe:for-each>
+
+<!-- ---------- Per-record Control Buttons ------------->
+
+<swe:control id="142">
+<!--  Optional, 142 -->
+  <td align=center class=Row><swe:this property="FormattedHtml"  hintMapType="Control"/></td>
+</swe:control>
+
+<swe:control id="143">
+<!--  Optional, 143 -->
+  <td align=center class=Row><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+</swe:control>
+
+<swe:control id="145">
+<!--  Optional, 145 -->
+  <td align=center class=Row><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+</swe:control>
+
+<swe:control id="146">
+<!--  Optional, 146 -->
+  <td align=center class=Row><swe:this property="FormattedHtml" hintText="Save" hintMapType="Control"/></td>
+</swe:control>
+
+</tr>
+
+<!-- ---------- End Loop ------------->
+</swe:for-each-row>
+
+<!-- Begin totals divider-->
+
+<tr class="listRowOff" height="1">
+
+<swe:control id="199"><!-- totals label placeholder-->
+<td class="Row"><img src="images/spacer.gif" width="1" height="1" alt=""></td>
+</swe:control>
+
+<swe:control id="144">
+<!--  Select 144 -->
+  <td width="42" align="center" class="Row"><img src="images/spacer.gif" width="1" height="1" alt=""></td>
+</swe:control>
+
+<swe:control id="147">
+<!--  Select 147 -->
+  <td width="42" align="center" class="Row"><img src="images/spacer.gif" width="1" height="1" alt=""></td>
+</swe:control>
+
+<swe:select-row>
+   <td width="42" align="center" class="Row"><img src="images/spacer.gif" width="1" height="1" alt=""></td>
+</swe:select-row>
+
+<!-- ---------- List Field Values (501-540) ------------->
+<swe:for-each startValue="501" count="40" iteratorName="currentId">
+  <swe:control id="swe:currentId">
+    <td align="swe:this.TextAlignment" class="Row"><img src="images/spacer.gif" width="1" height="1" alt=""></td>
+  </swe:control> 
+</swe:for-each>
+
+<!-- ---------- Per-record Control Buttons ------------->
+
+<swe:control id="142">
+<!--  Optional, 142 -->
+  <td align=center class="Row"><img src="images/spacer.gif" width="1" height="1" alt=""></td>
+</swe:control>
+
+<swe:control id="143">
+<!--  Optional, 143 -->
+  <td align=center class="Row"><img src="images/spacer.gif" width="1" height="1" alt=""></td>
+</swe:control>
+
+<swe:control id="145">
+<!--  Optional, 145 -->
+  <td align=center class="Row"><img src="images/spacer.gif" width="1" height="1" alt=""></td>
+</swe:control>
+
+<swe:control id="146">
+<!--  Optional, 146 -->
+  <td align=center class="Row"><img src="images/spacer.gif" width="1" height="1" alt=""></td>
+</swe:control>
+
+</tr>
+
+<!-- Begin totals row-->
+
+<tr class="listRowOff">
+<swe:control id="199">
+<!-- 199,Totals label-->
+<td class="Row"><b><swe:this property="FormattedHtml" hintText="Totals Label" />:&nbsp;</b></td>
+</swe:control>
+
+<swe:control id="144">
+<!--  Select 144 -->
+  <td width="42" align="center" class="Row">&nbsp;</td>
+</swe:control>
+
+<swe:control id="147">
+<!--  Select 147 -->
+  <td width="42" align="center" class="Row">&nbsp;</td>
+</swe:control>
+
+<swe:select-row>
+   <td width="42" align="center" class="Row">&nbsp;</td>
+</swe:select-row>
+
+<!-- ---------- List Field Values (501-540) ------------->
+<swe:for-each startValue="501" count="40" iteratorName="currentId">
+  <swe:control id="swe:currentId">
+    <td align="swe:this.TextAlignment" class=Row><swe:this property="Total"/></td>
+  </swe:control> 
+</swe:for-each>
+
+<!-- ---------- Per-record Control Buttons ------------->
+
+
+<swe:control id="142">
+<!--  Optional, 142 -->
+  <td align=center class=Row>&nbsp;</td>
+</swe:control>
+
+<swe:control id="143">
+<!--  Optional, 143 -->
+  <td align=center class=Row>&nbsp;</td>
+</swe:control>
+
+<swe:control id="145">
+<!--  Optional, 145 -->
+  <td align=center class=Row>&nbsp;</td>
+</swe:control>
+
+<swe:control id="146">
+<!--  Optional, 146 -->
+  <td align=center class=Row>&nbsp;</td>
+</swe:control>
+
+</tr>
+
+<!--  Template End: CCListBodyTotalsNoRowHilite.swt -->

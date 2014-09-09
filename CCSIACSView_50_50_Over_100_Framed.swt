@@ -1,0 +1,60 @@
+<!-- Template Start: CCView_50_50_Over_100_Framed.swt -->
+<HTML dir="swe:dir">
+<head></head>
+
+<swe:include file="CCHTMLHeader.swt"/>
+
+<!------------ Top Part (two applets) ---------------------------->
+<table width="100%" cellpadding="5" cellspacing="0" border="0">		
+<tr>
+	<!------------ Left Applet (50%) ---------------------------->
+        <td valign="top" width="50%">	
+           <swe:applet hintMapType="Applet" id="102" hintText="Applet" var="Grandchild">
+	      <!--start applet-->
+	      <swe:this property="FormattedHtml"/>
+	      <!--end applet-->
+	   </swe:applet>
+        </td>		
+	
+	
+	<!------------ Right Applet (50%) ---------------------------->	
+	<td valign="top" width="50%">				
+           <swe:applet hintMapType="Applet" id="103" hintText="Applet" var="Grandchild">
+	      <!--start applet-->
+	      <swe:this property="FormattedHtml"/>
+	      <!--end applet-->
+  	   </swe:applet>
+        </td>
+</tr>
+</table>
+
+<!------------ Bottom Part (Mutiple Applets) ---------------------------->
+<!------------ Main Content ------------------------------>
+<table width="100%" cellpadding="2" cellspacing="0" border="0">	
+<tr>	
+			<!-- Column 2 -->
+			<td valign="top" width="100%">
+			
+				<swe:include file="CCViewbar_Tabs.swt"/>
+				<swe:include file="CCSubViewbar_Tabs.swt"/>
+				<swe:applet-tree-list var="Child"/>
+				<swe:applet hintMapType="Applet" id="202" hintText="Applet" var="Grandchild"/>
+				
+				<swe:for-each count="10" iteratorName="currentId" startValue="203">
+				<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" var="Grandchild">
+					<!--start applet-->
+					<swe:this property="FormattedHtml"/>
+					<!--end applet-->
+				</swe:applet>
+				</swe:for-each>
+			</td>
+			<!-- End Column 2 -->
+</tr>
+</table>
+	
+
+<swe:include file="CCHTMLFooter.swt"/>
+<swe:scripts/>
+
+</html>
+<!-- Template End: CCView_50_50_Over_100_Framed.swt -->

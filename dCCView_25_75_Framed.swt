@@ -1,0 +1,186 @@
+<!-- Template Start: dCCView_25_75_Framed.swt -->
+<HTML dir="swe:dir">
+<head></head>
+
+
+<swe:switch>
+<swe:case condition="Web Engine State Properties, IsRTL">
+<!-- RTL case -->
+
+<swe:frameset htmlAttr="cols='75%,25%' border='1' frameborder='1'">
+
+<swe:frame type="Applet" name="Applet2" htmlAttr="topmargin='0' leftmargin='0' marginwidth='0' marginheight='0'">
+
+<swe:include file="dCCHTMLHeader.swt"/>
+
+<!--local override of CSS-->
+<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+	<style>BODY {border:1px solid #000000; border-width: 0 1 0 0;}</style>
+</swe:if>
+
+
+<!------------ Right Frame (75%) ------------------------->
+<!------------ Threadbar and Mini-Applet ----------------->
+<table datatable="0" summary="" border="0" cellspacing="0" cellpadding="1" width="100%">
+  <tr>
+	<swe:if condition="Web Engine State Properties, IsLowInteractive">
+    <td valign="absmiddle">
+		<swe:include file="CCThreadbar.swt"/>
+	</td>
+	</swe:if>
+	<swe:applet id="201" hintText="Mini-Applet">
+	    <td align="right"><swe:this property="FormattedHTML"/></td>
+		<td>&nbsp;&nbsp;&nbsp;</td>
+	</swe:applet>	
+	</tr>
+</table> 
+<!------------ End Threadbar and Mini-Applet ------------->
+
+<!------------ Main Content ------------------------------>
+<table datatable="0" summary="" width="100%" cellpadding="5" cellspacing="0" border="0">		
+		<!-- Column 2 -->
+		<td valign="top" width="100%">
+			<swe:for-each count=10 iteratorName="currentId" startValue="202">
+			<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" var="Parent">
+				<!--start applet-->
+				<swe:this property="FormattedHtml"/>
+				<!--end applet-->
+			</swe:applet>
+			</swe:for-each>
+		</td>
+		<!-- End Column 2 -->
+</tr>
+</table>
+
+<swe:include file="dCCHTMLFooter.swt"/>
+
+</swe:frame>
+
+
+<!------------ Left Frame (25%) ---------------------------->
+<swe:frame type="Applet" name="Applet1" htmlAttr="topmargin='0' leftmargin='0' marginwidth='0' marginheight='0'">
+
+<swe:include file="dCCHTMLHeader.swt"/>
+
+<!--local override of CSS-->
+<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+	<style>BODY {border:1px solid #000000; border-width: 0 0 0 1;}</style>
+</swe:if>
+
+
+<table datatable="0" summary="" width="100%" cellpadding="5" cellspacing="0" border="0">
+	<tr>	
+		<!-- Column 1 -->
+		<td valign="top" width="100%">
+			<swe:for-each count=10 iteratorName="currentId" startValue="102">
+			<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" var="Parent">
+				<!--start applet-->
+				<swe:this property="FormattedHtml"/>
+				<!--end applet-->
+			</swe:applet>
+			</swe:for-each>
+		</td>
+		<!-- End Column 1 -->
+	</tr>
+</table>
+<swe:include file="dCCHTMLFooter.swt"/>
+</swe:frame>
+
+</swe:frameset>
+
+<!-- end of RTL case -->
+</swe:case>
+
+<swe:default>
+<!-- default, non-RTL -->
+
+<swe:frameset htmlAttr="cols='25%,75%' border='1' frameborder='1'">
+
+
+<!------------ Left Frame (25%) ---------------------------->
+<swe:frame type="Applet" name="Applet1" htmlAttr="topmargin='0' leftmargin='0' marginwidth='0' marginheight='0'">
+
+<swe:include file="dCCHTMLHeader.swt"/>
+
+<!--local override of CSS-->
+<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+	<style>BODY {border:1px solid #000000; border-width: 0 0 0 1;}</style>
+</swe:if>
+
+
+<table datatable="0" summary="" width="100%" cellpadding="5" cellspacing="0" border="0">
+	<tr>	
+		<!-- Column 1 -->
+		<td valign="top" width="100%">
+			<swe:for-each count=10 iteratorName="currentId" startValue="102">
+			<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" var="Parent">
+				<!--start applet-->
+				<swe:this property="FormattedHtml"/>
+				<!--end applet-->
+			</swe:applet>
+			</swe:for-each>
+		</td>
+		<!-- End Column 1 -->
+	</tr>
+</table>
+<swe:include file="dCCHTMLFooter.swt"/>
+</swe:frame>
+
+<swe:frame type="Applet" name="Applet2" htmlAttr="topmargin='0' leftmargin='0' marginwidth='0' marginheight='0'">
+
+<swe:include file="dCCHTMLHeader.swt"/>
+
+<!--local override of CSS-->
+<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+	<style>BODY {border:1px solid #000000; border-width: 0 1 0 0;}</style>
+</swe:if>
+
+
+<!------------ Right Frame (75%) ------------------------->
+<!------------ Threadbar and Mini-Applet ----------------->
+<table datatable="0" summary="" border="0" cellspacing="0" cellpadding="1" width="100%">
+  <tr>
+	<swe:if condition="Web Engine State Properties, IsLowInteractive">
+    <td valign="absmiddle">
+		<swe:include file="CCThreadbar.swt"/>
+	</td>
+	</swe:if>
+	<swe:applet id="201" hintText="Mini-Applet">
+	    <td align="right"><swe:this property="FormattedHTML"/></td>
+		<td>&nbsp;&nbsp;&nbsp;</td>
+	</swe:applet>	
+	</tr>
+</table> 
+<!------------ End Threadbar and Mini-Applet ------------->
+
+<!------------ Main Content ------------------------------>
+<table datatable="0" summary="" width="100%" cellpadding="5" cellspacing="0" border="0">		
+		<!-- Column 2 -->
+		<td valign="top" width="100%">
+			<swe:for-each count=10 iteratorName="currentId" startValue="202">
+			<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" var="Parent">
+				<!--start applet-->
+				<swe:this property="FormattedHtml"/>
+				<!--end applet-->
+			</swe:applet>
+			</swe:for-each>
+		</td>
+		<!-- End Column 2 -->
+</tr>
+</table>
+
+<swe:include file="dCCHTMLFooter.swt"/>
+
+</swe:frame>
+
+</swe:frameset>
+
+<!-- end of default, non-RTL -->
+</swe:default>
+</swe:switch>
+
+
+<swe:scripts/>
+
+</html>
+<!-- Template End: dCCView_25_75_Framed.swt -->

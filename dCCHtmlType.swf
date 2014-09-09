@@ -1,0 +1,246 @@
+<!-------------------------------------------------->
+<!-- Siebel Dot-com Applications HTML Format File -->
+<!-------------------------------------------------->
+
+
+<!------------ MiniButton: standard text-based buttons -------------->
+<swe:htmltype name="MiniButton">
+   <span class="minibuttonOn">
+		<nobr><swe:this property="Data" type="Button" /></nobr>
+   </span>
+</swe:htmltype>
+
+<!------------ MiniButton (Disabled) -------------->
+<swe:htmltype name="MiniButton" state="Disabled">
+   <span class="minibuttonOff">
+		<nobr><swe:this property="Data" type="Text" /></nobr>
+   </span>
+</swe:htmltype>
+<!------------------------------------------------->
+
+<!------------ MiniButtonEdit -------------->
+<swe:htmltype name="MiniButtonEdit">
+   <span class="minibuttonOn">
+		<nobr><swe:this property="Data" type="Button" /></nobr>
+   </span>
+</swe:htmltype>
+
+<!------------ MiniButtonEdit(Disabled) -------------->
+<swe:htmltype name="MiniButtonEdit" state="Disabled">
+   <span class="minibuttonOff">
+		<nobr><swe:this property="Data" type="Text" /></nobr>
+   </span>
+</swe:htmltype>
+
+<!------------ MiniButtonEdit (Don't show button) -------------->
+<swe:htmltype name="MiniButtonEdit" mode="New"></swe:htmltype>
+<swe:htmltype name="MiniButtonEdit" mode="Query"></swe:htmltype>
+
+<!------------------------------------------------->
+
+<!------------ MiniButtonEditNew -------------->
+<swe:htmltype name="MiniButtonEditNew">
+   <span class="minibuttonOn">
+		<nobr><swe:this property="Data" type="Button" /></nobr>
+   </span>
+</swe:htmltype>
+
+<!------------ MiniButtonEditNew (Disabled) -------------->
+<swe:htmltype name="MiniButtonEditNew" state="Disabled">
+   <span class="minibuttonOff">
+		<nobr><swe:this property="Data" type="Text" /></nobr>
+   </span>
+</swe:htmltype>
+
+<!------------ MiniButtonEditNew (Don't show button) -------------->
+<swe:htmltype name="MiniButtonEditNew" mode="Query"></swe:htmltype>
+
+<!------------------------------------------------->
+
+<!------------ MiniButtonNew -------------->
+<swe:htmltype name="MiniButtonNew">
+   <span class="minibuttonOn">
+		<nobr><swe:this property="Data" type="Button" /></nobr>
+   </span>
+</swe:htmltype>
+
+<!------------ MiniButtonNew (Disabled) -------------->
+<swe:htmltype name="MiniButtonNew" state="Disabled">
+   <span class="minibuttonOff">
+		<nobr><swe:this property="Data" type="Text" /></nobr>
+   </span>
+</swe:htmltype>
+
+<!------------ MiniButtonNew (Don't show button) -------------->
+<swe:htmltype name="MiniButtonNew" mode="Edit"></swe:htmltype>
+<swe:htmltype name="MiniButtonNew" mode="Query"></swe:htmltype>
+
+<!------------------------------------------------->
+
+<!------------ MiniButtonQuery -------------->
+<swe:htmltype name="MiniButtonQuery">
+   <span class="minibuttonOn">
+		<nobr><swe:this property="Data" type="Button" /></nobr>
+   </span>
+</swe:htmltype>
+
+<!------------ MiniButtonQuery (Disabled) -------------->
+<swe:htmltype name="MiniButtonQuery" state="Disabled">
+   <span class="minibuttonOff">
+		<nobr><swe:this property="Data" type="Text" /></nobr>
+   </span>
+</swe:htmltype>
+
+<!------------ MiniButtonQuery (Don't show button) -------------->
+<swe:htmltype name="MiniButtonQuery" mode="Edit"></swe:htmltype>
+<swe:htmltype name="MiniButtonQuery" mode="New"></swe:htmltype>
+<swe:htmltype name="MiniButtonQuery" mode="Edit List"></swe:htmltype>
+
+<!------------------------------------------------->
+
+
+<!------------ PositionOnRow:  -------------->
+<swe:htmltype name="PositionOnRow"><swe:this property="Data" type="Link"><swe:image name="ROW_OFF" category="HTML Control Icons"/></swe:this></swe:htmltype>
+
+<!------------ PositionOnRow: Selected (Disabled) -------------->
+<swe:htmltype name="PositionOnRow" state="Disabled"><swe:image name="ROW_ON" category="HTML Control Icons"/></swe:htmltype>
+<!------------------------------------------------->
+
+<!------------ Form Section:  -------------->
+<swe:htmltype name="FormSection"><table width="100%" class="FormSection"><tr><td><b><swe:this property="DisplayName" /></b></td></tr></table></swe:htmltype>
+
+<!------------ Button Div:  -------------->
+<swe:htmltype name="ButtonDiv"><td><img src="images/btn_div.gif" alt=""></td></swe:htmltype>
+
+<!----------- Div --------------->
+<swe:htmltype name="Div">
+<table class="minibutton" height="15" border="0" cellspacing="0" cellpadding="0"><tr><td><img src="images/btn_div.gif" alt=""></td></tr></table>
+</swe:htmltype>
+
+
+
+<!------------ SmartScript Previous: standard text-based button with icon -------------->
+<swe:htmltype name="SSPrv">
+   <span class="ssminibuttonOn">
+		<nobr><img src="images/prv_1_d.gif" alt=""><swe:this property="Data" type="Button" /></nobr>
+   </span>
+</swe:htmltype>
+
+<!------------ SmartScript Previous: standard text-based button with icon (Disabled)-------------->
+<swe:htmltype name="SSPrv" state="Disabled">
+   <span class="minibuttonOff">
+		<nobr><img src="images/prv_0_d.gif" alt=""><swe:this property="Data" type="Text" /></nobr>
+   </span>
+</swe:htmltype>
+<!------------------------------------------------->
+
+
+<!------------ SmartScript Next: standard text-based buttons with icon -------------->
+<swe:htmltype name="SSNxt">
+   <span class="ssminibuttonOn">
+		<nobr><swe:this property="Data" type="Button" /><img src="images/nxt_1_d.gif" alt=""></nobr>
+   </span>
+</swe:htmltype>
+
+<!------------ SmartScript Next: standard text-based buttons with icon (Disabled)-------------->
+<swe:htmltype name="SSNxt" state="Disabled">
+   <span class="minibuttonOff">
+		<nobr><swe:this property="Data" type="Text" /><img src="images/nxt_0_d.gif" alt=""></nobr>
+   </span>
+</swe:htmltype>
+
+
+
+
+<!----------- RecordNav:Previous--------------->
+<swe:htmltype name="RecNavPrv">
+<swe:this property="Data" type="Link" />
+</swe:htmltype>
+
+
+<!----------- RecordNav:Previous (Disabled)--------------->
+<swe:htmltype name="RecNavPrv" state="Disabled">
+<swe:this property="Data" type="Link" />
+</swe:htmltype>
+
+
+<!----------- RecordNav:Next--------------->
+<swe:htmltype name="RecNavNxt">
+<swe:this property="Data" type="Link" />
+</swe:htmltype>
+
+
+<!----------- RecordNav:Next (Disabled)--------------->
+<swe:htmltype name="RecNavNxt" state="Disabled">
+<swe:this property="Data" type="Link" />
+</swe:htmltype>
+
+
+<!------------ FieldLabel: standard form-applet field label "Label: [value]" -------->
+<swe:htmltype name="FieldLabel">
+<swe:this property="DisplayName"/>:
+</swe:htmltype>
+
+<!------------ Field (base): standard list-applet field -------------->
+<swe:htmltype name="Field">
+<swe:this property="Data" type="Text"/>
+</swe:htmltype>
+
+<!------------ ImageButton: image-based button -------------->
+<swe:htmltype name="ImageButton">
+<table class="minibutton" border='0' cellspacing='0' cellpadding='0'><tr><td><swe:this property="Data" type="Link" /></td></tr></table>
+</swe:htmltype>
+
+<!------------ ImageButton (Disabled) -------------->
+<swe:htmltype name="ImageButton" state="Disabled">
+<table class="minibutton" border='0' cellspacing='0' cellpadding='0'><tr><td><swe:this property="Data" type="Text" /></td></tr></table>
+</swe:htmltype>
+
+<!------------ Rich Text Component (RTC) -------------->
+<swe:htmltype name="RTC_IO">
+	<script>rtc_writeLaunchPad(document);</script>
+</swe:htmltype>
+
+<swe:htmltype name="RTCEmbedded">
+	<script>createRTC(0,1,document)</script>
+	<swe:this property="Data" type="TextArea"/>
+	<script>createRTC(1,1,document)</script>
+</swe:htmltype>
+
+<swe:htmltype name="RTCEmbedded" mode="Base">
+	<script>createRTC(0,3,document)</script>
+	<swe:this property="Data" type="TextArea"/>
+	<script>createRTC(1,3,document)</script>
+</swe:htmltype>
+
+<swe:htmltype name="RTCPopup">
+	<script>createRTC(0,2,document)</script>
+	<swe:this property="Data" type="TextArea"/>
+	<script>createRTC(1,2,document)</script>
+</swe:htmltype>
+
+<swe:htmltype name="RTCPopup" mode="Base">
+	<script>createRTC(0,3,document)</script>
+	<swe:this property="Data" type="TextArea"/>
+	<script>createRTC(1,3,document)</script>
+</swe:htmltype>
+
+<swe:htmltype name="RTCEmbeddedLinkField">
+	<script>createRTCLinkCtl(0,document)</script>
+	<div class="mceLabel"><swe:this property="DisplayName"/>:</div><swe:this property="Data" type="Text"/>
+	<script>createRTCLinkCtl(1,document)</script>
+</swe:htmltype>
+
+<swe:htmltype name="RTCEmbeddedLinkField" mode="Base"></swe:htmltype>
+
+<swe:htmltype name="RTCEmbeddedLinkField" mode="Query"></swe:htmltype>
+
+<!------------ DrillDownTitle: standard text-based buttons -------------->
+<swe:htmltype name="DrillDownTitle">
+<span class="AppletTitle"><swe:this property="Data" type="Link"/></span>
+</swe:htmltype>
+
+<!------------ DrillDownTitle (Disabled) -------------->
+<swe:htmltype name="DrillDownTitle" state="Disabled">
+<span class="AppletTitle"><swe:this property="Data" type="Text"/></span>
+</swe:htmltype>

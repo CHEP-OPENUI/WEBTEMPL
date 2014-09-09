@@ -1,0 +1,25 @@
+<!-- Template Start: eCfgProductSingleJS.swt -->
+<!-- This the the One Page Theme template -->
+<!-- Oliver: code redesign -->
+
+<div  id="cxProdSingle" class="cxProdTheme">
+
+	<swe:for-each id="110" CfgLoopType="Group" startValue="8100" count="Dynamic" iteratorName="100Id" >
+
+		<div class="siebui-ecfg-tabs">
+				<div class="siebui-ecfg-tab eCfgProductTabOn">
+					<a href="JavaScript:function DoNothing(){return false;}">
+						<swe:control id="swe:100Id+50"  CfgHtmlType="CfgLabel" CfgFieldName="CxGroupName"/>
+					</a>
+				</div>
+		</div>
+				
+		<div class="siebui-ecfg-products">
+			<swe:include id="swe:151Id" CfgHtmlType="CurrentGroup"/>
+		</div>
+
+	</swe:for-each>
+	
+</div> <!-- end of product theme div -->
+
+<!-- Template End: eCfgProductSingleJS.swt -->

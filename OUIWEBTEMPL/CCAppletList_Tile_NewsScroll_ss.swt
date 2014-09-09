@@ -1,0 +1,28 @@
+<!-- Template Start: CCAppletList_Tile_NewsScroll_ss.swt -->
+<swe:include file="CCApplet_NamedSpacer.swt"/>
+<span class="siebui-ss-newscroll-applet">
+    <div class="swe:this.SelectStyle">
+        <div class="AppletHIListBorder siebui-tile-container siebui-tile-newsscroll">
+            <swe:this property="NoGrid"/>
+            <swe:this property="Horizontal"/>
+            <swe:this property="ScrollVisibleTiles"/>
+            <swe:list>
+                <swe:list-record>
+                    <div class="siebui-tile-newsscroll-img">
+                        <swe:control id="504" hintMapType="FormItem">
+                            <swe:this property="FormattedHtml" hintText="Field"/>
+                        </swe:control>
+                    </div>
+                    <div class="siebui-tile-newsscroll-desc">
+                        <swe:control id="503" >
+                            <span class="siebui-tile-newsscroll-desctext" align="swe:this.TextAlignment">
+                                <swe:this property="FormattedHtml" hintText="Field"/>
+                            </span>
+                        </swe:control>
+                    </div>
+                </swe:list-record>
+            </swe:list>
+        </div>
+    </div>
+</span>
+<!-- Template End: CCAppletList_Tile_NewsScroll_ss.swt -->

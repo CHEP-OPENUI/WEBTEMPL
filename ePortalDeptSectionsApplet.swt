@@ -1,0 +1,11 @@
+<!-- Template Start ePortalDeptSectionsApplet.swt -->
+<table datatable="0" summary="" width="150" class="Viewbar">
+<swe:for-each count="20" iteratorName="CurrentId" startValue="600">
+<swe:control id="swe:CurrentId">
+<tr><td>
+<swe:this property="FormattedHtml" hintText="Label" hintMapType="Control"/>
+</td></tr>
+</swe:control>
+</swe:for-each>
+</table>
+<!-- Template End ePortalDeptSectionsApplet.swt -->

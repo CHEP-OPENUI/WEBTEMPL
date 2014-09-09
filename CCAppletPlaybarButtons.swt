@@ -1,0 +1,60 @@
+<!-- Template Start: CCAppletPlaybarButtons.swt -->
+
+<!-- Buttons (Optional, Optional) --->
+
+<table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td  align="right">	  
+   <table datatable="0" summary="" cellpadding=2 cellspacing=0>
+      <tr>	  
+      <swe:control id="150">
+      <!-- Pause Button -->
+        <td class="AppletButtons" nowrap>
+        <swe:this property="FormattedHtml" hintText="Pause" hintMapType="Control"/>
+        </td>
+      </swe:control>
+	  
+      <td valign="middle">
+         &nbsp;
+         <img src="images/btn_div_gray.gif" height="13" align="middle" alt="|">
+         &nbsp;
+      </td>
+
+	<swe:control id="151">
+      <!-- Previous Button -->
+        <td class="AppletButtons" nowrap>
+        <swe:this property="FormattedHtml" hintText="Previous" hintMapType="Control"/>
+        </td>
+      </swe:control>
+
+      <td>&nbsp;</td>
+
+	<swe:control id="152">
+      <!-- Next Button -->
+      <!-- If <control user prop> of "DynamicLabel" is "Y", it shows "Next"/"Submit"/"Finish" based on -->
+      <!-- <forward button type> in task step -->
+        <td class="AppletButtons" nowrap>
+        <swe:this property="FormattedHtml" hintText="Next" hintMapType="Control"/>
+        </td>
+      </swe:control>
+
+      <td valign="middle">
+         &nbsp;
+         <img src="images/btn_div_gray.gif" height="13" align="middle" alt="|">
+         &nbsp;
+      </td>
+
+	<swe:control id="154">
+      <!-- Cancel Button -->
+        <td class="AppletButtons" nowrap>
+        <swe:this property="FormattedHtml" hintText="Cancel" hintMapType="Control"/>
+        </td>
+      </swe:control>
+      </tr>
+   </table>
+</td>
+</tr>
+</table>
+
+
+<!-- Template End: CCAppletPlaybarButtons.swt -->

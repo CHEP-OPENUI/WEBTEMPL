@@ -1,0 +1,78 @@
+<!-- This template is modified to support presence indicator, 7.9 collaboration -->
+<!-- The only difference is inclusion of new JavaScript file below -->
+
+<swe:include-script file="presence.js"/>
+
+<!--  Template Start: CCAppletListSearchResults.swt -->
+<swe:form>
+<swe:if condition="Web Engine State Properties, IsPrintOff">
+	 <div class="swe:this.SelectStyle">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" align="center" class="AppletBack"><tr><td class="AppletHIFormBorder">
+</swe:if>
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+
+   <swe:error>
+   <tr>
+      <td class="AppletStyle2">
+         <table datatable="0" summary="" class="AppletBack" border="0" cellspacing="2" cellpadding="2">
+            <tr><td></td><td class="error"><swe:this property="FormattedHtml"/></td></tr>
+            <tr><td><img src="images/spacer.gif" width="95" height="1" alt=""></td><td></td></tr>
+         </table>
+      </td>
+   </tr>
+   </swe:error>
+
+   <tr valign="top">
+      <td>
+            <table datatable="0" summary="" bgcolor="#cccccc" width="100%" cellspacing="0" cellpadding="2" border="0">
+               <tr>
+                  <td nowrap class="SrchCntrTitle"><span><swe:this property="Title"/></span></td><td>&nbsp;&nbsp;</td>
+                  <swe:if condition="Web Engine State Properties, IsHighInteractive">
+                     <swe:control id="195">
+                     <!-- optional control -->
+                     <td valign="middle" nowrap>
+                     <swe:this property="FormattedHtml" hintMapType="Hide Icon"/>
+                     </td>
+                     </swe:control>
+                  </swe:if>
+                  <swe:if condition="Web Engine State Properties, IsLowInteractive">
+                     <swe:control id="196">
+                     <!-- optional control -->
+                     <td valign="middle" nowrap>
+                     <swe:this property="FormattedHtml" hintMapType="Hide Icon"/>
+                     </td>
+                     </swe:control>
+                  </swe:if>
+                  <swe:include file="CCButtons.swt"/><td>&nbsp;&nbsp;</td>
+                  <swe:include file="CCRecordNav.swt"/>
+                  <td width="100%">&nbsp;</td>
+               </tr>
+            </table>
+
+
+            <table bgcolor="#cccccc" valign="top" width="100%" cellpadding="2" cellspacing="1" border="0" datatable="1" summary="swe:this.ListSummary">
+               <swe:include file="CCListHeader.swt"/>
+               <swe:include file="CCListBodySearchResults.swt"/>
+            </table>
+
+            <table datatable="0" summary="" bgcolor="#cccccc" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+              <swe:control id="151"><td><img src="images/spacer.gif" alt="" width="42" height="1" alt=""></td><td class="scLabelRight" nowrap><swe:this property="FormattedHtml" hintMapType="Control" hintText="Label"/></td></swe:control>
+              <swe:control id="152"><td>&nbsp;</td><td><swe:this property="FormattedHtml" hintMapType="Control" hintText="Field"/></td></swe:control>
+              <swe:control id="153"><td><swe:this property="FormattedHtml" hintMapType="Control" hintText="Field"/></td></swe:control>
+              <td width="100%"><img src="images/spacer.gif" alt="" width="1" height="1"></td>
+              </tr>
+            </table>
+
+
+      </td>
+   </tr>
+</table>
+<swe:if condition="Web Engine State Properties, IsPrintOff">
+	 </div>
+</swe:if>
+</swe:form>
+
+
+<!--  Template End: CCAppletListSearchResults.swt -->
+

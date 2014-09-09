@@ -1,0 +1,42 @@
+<!--  Template Start: CCAppletMyHeader.swt -->
+
+<swe:layout viewDisplayMode="Layout">
+<swe:include file="CCTitle.swt"/>
+
+</swe:layout>
+
+
+
+
+<div class="fadein">
+
+	<img src="http://www.oracle.com/us/ocom-feature-collaborate-12-1528998.jpg" width="1360" height="320" alt="" />
+	<img src="http://www.creativeprobers.com/CP%20Images/CB057355_LoRes.jpg" width="1360" height="320" alt="" />
+	<img src="http://www.eweek.com/images/stories/slideshows/112610_Tech_skills/techskills18.jpg" width="1360" height="320" alt="" />
+	<img src="http://www.integratekcorp.com/Portals/0/Imagenes/Section%20Headers/Oracle_banner.jpg" width="1360" height="320" alt="" />
+  
+</div>
+
+
+
+<script type="text/javascript">
+
+$(function(){
+    $('.fadein img:gt(0)').hide();
+    setInterval(function(){
+      $('.fadein :first-child').fadeOut()
+         .next('img').fadeIn()
+         .end().appendTo('.fadein');}, 
+      9000);
+});
+		
+</script>		
+
+
+<!--  Template End: CCAppletMyHeader.swt -->
+
+ <!-- <img src="http://farm3.static.flickr.com/2610/4148988872_990b6da667.jpg">	-->
+ <!-- <img src="http://farm3.static.flickr.com/2597/4121218611_040cd7b3f2.jpg">	-->
+ <!-- <img src="http://farm3.static.flickr.com/2531/4121218751_ac8bf49d5d.jpg">      -->
+
+<!-- <img src="http://www.oracle.com/us/ocom-feature-collaborate-12-1528998.jpg" width="1300" height="285" alt="" /> -->

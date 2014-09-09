@@ -1,0 +1,30 @@
+<!--  Template Start: dCCAppletLinksNoTitle.swt -->
+
+<swe:include file="CCApplet_Spacer.swt"/>
+
+<span class="AppletStyle5">
+<swe:form>
+	
+	<table datatable="0" summary="" width="100%" cellpadding="3" cellspacing="0" border="0" align="center"><tr><td _class="AppletBorder">
+	<table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="1" border="0" class="AppletBack">
+		<swe:for-each startValue="1101" count="30" iteratorName="currentId">
+		<swe:control id="swe:currentId"><tr></swe:control>	
+		<swe:control id="swe:currentId+100"><td><swe:this property="FormattedHtml" hintText="Image"/></td></swe:control>
+		<swe:control id="swe:currentId"><td width="100%"></swe:control>
+		<swe:control id="swe:currentId"><swe:this property="FormattedHtml" hintText="Link (Required)"/><br></swe:control>
+		<swe:control id="swe:currentId+200"><swe:this property="FormattedHtml" hintText="Description"/><br></swe:control>				
+		<swe:control id="swe:currentId+300"><swe:this property="FormattedHtml" hintText="Text"/><br></swe:control>
+		<swe:control id="swe:currentId+400"><swe:this property="FormattedHtml" hintText="Text"/><br></swe:control>
+		<swe:control id="swe:currentId+500"><swe:this property="FormattedHtml" hintText="Text"/><br></swe:control>	
+		<swe:control id="swe:currentId+600"><swe:this property="FormattedHtml" hintText="Text"/><br></swe:control>	
+		<swe:control id="swe:currentId"></td></swe:control>
+		<swe:control id="swe:currentId"></tr></swe:control>		
+		</swe:for-each>			
+	</table>	
+	</td></tr></table>
+	
+</swe:form>
+</span>
+<!--  Template End: dCCAppletLinksNoTitle.swt -->
+
+

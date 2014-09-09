@@ -1,0 +1,73 @@
+<!-- Template Start: EmailRespFormInBoundNew.swt -->
+
+<table width="100%" cellpadding="2" cellspacing="0" border="0" align="center"><tr><td>
+
+<table class="AppletBack" width="100%" cellpadding="6" cellspacing="0" border="0">
+	
+	<tr valign="top">		
+		<td>
+		
+			<table width="100%" summary="" datatable="0">
+	<tr>
+		<td colspan="2" width="33%"></td><td colspan="2" width="33%"></td><td colspan="2" width="34%"></td>
+	</tr>	
+				
+		
+		
+	
+	<!--From, To, CC, BCC, Subject-->
+	
+	<tr>
+	<td class="mceLabel" align="right"><swe:control id="1100"  property="FormattedHtml" hintText="From"/></swe:control>&nbsp;</td>
+
+	<td class="mceField" ><swe:control id="1200"  property="FormattedHtml" hintText="Field"/></swe:control></td>
+	
+
+	<td class="mceLabel" align="right"><swe:control id="1110"  property="FormattedHtml" hintText="To"/></swe:control></td>
+
+	<td class="mceField" ><swe:control id="1210"  property="FormattedHtml" hintText="Field"/></swe:control></td>
+
+
+	<td class="mceLabel" align="right"><swe:control id="1120"  property="FormattedHtml" hintText="Message Sent"/></swe:control></td>
+
+	<td class="mceField" ><swe:control id="1220"  property="FormattedHtml" hintText="Field"/></swe:control></td>
+
+	</tr>	
+
+	
+	<tr>
+		<td class="mceLabel" align="right"><swe:control id="1101"  property="FormattedHtml" hintText="Subject"/></swe:control>&nbsp;</td>
+
+	<td class="mceField" ><swe:control id="1201"  property="FormattedHtml" hintText="Field"/></swe:control></td>
+	
+
+	<td class="mceLabel" align="right"><swe:control id="1111"  property="FormattedHtml" hintText="Cc"/></swe:control></td>
+
+	<td class="mceField" ><swe:control id="1211"  property="FormattedHtml" hintText="Field"/></swe:control></td>
+
+
+	<td class="mceLabel" align="right"><swe:control id="1121"  property="FormattedHtml" hintText="Message Received"/></swe:control></td>
+
+	<td class="mceField" ><swe:control id="1221"  property="FormattedHtml" hintText="Field"/></swe:control></td>
+
+	</tr>				
+	</table>
+	</td>	
+		
+	</tr>	
+	
+	<!--swe:control id="1131"-->
+	<tr valign="top">	
+		<!--Message-->
+		
+<td colspan="6"><swe:control id="1131"  property="FormattedHtml" hintText="Message Body"/></td>
+			
+		
+	</tr>	
+	</swe:control>			
+	
+</table>
+</td></tr></table>
+
+
+<!-- Template End: EmailRespFormInBoundNew.swt -->	

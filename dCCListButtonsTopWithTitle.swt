@@ -1,0 +1,36 @@
+ <!--  Template Start: dCCListButtonsTopWithTitle.swt -->
+
+	<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">		
+		<!-- button row-->
+		<tr>
+			<td class="AppletTitle"><img src="images/spacer.gif" height="1" width="6" alt=""></td>
+			<td class="AppletTitle">
+				<table datatable="0" summary="" cellpadding="2" cellspacing="0" border="0">
+					<tr class="AppletTitle">	
+						<td class="AppletTitle" nowrap><swe:this property="Title"/></td>
+						<swe:include file="dCCButtons_List.swt"/>											
+						<td><swe:include file="CCTogglebar_drop.swt"/></td>
+					</tr>
+				</table>		
+			</td>		
+			
+			<td class="AppletTitle" width="100%" align="right">&nbsp;</td>
+			<swe:switch>						
+				<swe:case condition="Web Engine State Properties, IsHighInteractiveApplet">
+					<td valign="middle" nowrap>&nbsp;<swe:this property="RowCounter"/>&nbsp;</td>
+					<td valign="middle">&nbsp;<img src="images/btn_div.gif" height="13" align="middle" alt="">&nbsp;</td>
+				</swe:case>							
+				<swe:default>
+					<td class="AppletTitle" style="color:#000000">
+						<table datatable="0" summary="" cellpadding="0" cellspacing="0" border="0"><tr><td>
+						<swe:include file="CCRecordNav.swt"/></td></tr></table>
+					</td>
+					<td class="AppletTitle">&nbsp;</td>
+				</swe:default>
+			</swe:switch>				
+			<td class="AppletTitle">&nbsp;</td>					
+
+		</tr>	
+	</table>
+	
+<!--  Template End: dCCListButtonsTopWithTitle.swt -->	

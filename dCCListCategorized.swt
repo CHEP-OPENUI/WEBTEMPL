@@ -1,0 +1,22 @@
+<!-- Template Start: dCCListCategorized.swt -->
+<swe:for-each-row count="10">
+<tr valign="top">
+    <td width="1"><img src="images/bullet_green.gif" alt=""></td>
+	<td valign="bottom">
+		<b><swe:control id="502" property="FormattedHtml" hintText="Field" hintMapType="ListItem"/>
+		&nbsp;
+		<swe:control id="132" property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></b>
+	</td>
+</tr>
+
+<tr valign="top">
+    <td width="1"><img src="images/spacer.gif" alt=""></td>
+	<td valign="bottom">
+		<swe:for-each-child>
+			<swe:child-applet/>
+		</swe:for-each-child>
+	</td>
+</tr>
+</swe:for-each-row>
+
+<!-- Template End: dCCListCategorized.swt -->

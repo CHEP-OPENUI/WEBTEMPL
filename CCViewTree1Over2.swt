@@ -1,0 +1,219 @@
+<!--  Template Start: CCViewTree1Over2.swt -->
+
+<HTML dir="swe:dir">
+
+
+<swe:switch>
+<swe:case condition="Web Engine State Properties, IsRTL">
+<!-- RTL case -->
+
+<swe:frameset htmlAttr="cols='75%,25%' framespacing='6'">
+
+
+	<!-- ---------- Right Frame (75%) ---------------------------->
+	<swe:frame type="Applet" name="Applet2" htmlAttr="topmargin='0' leftmargin='8' marginwidth='8' marginheight='0'  frameborder='0'">
+		
+		<swe:include file="CCHTMLHeader.swt"/>
+		
+		<!--local override of CSS-->
+		<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+			<style>	BODY {border-left:1px solid #000000;}	.mceField, .mceField INPUT, .mceField TEXTAREA, .mceField SELECT{width:130px;}	</style>
+		</swe:if>
+
+		
+		<!-- ---------- Right Frame (75%) ------------------------->
+		<table datatable="0" summary="" border="0" cellspacing="0" cellpadding="0" width="100%">
+		  <tr>
+			<swe:if condition="Web Engine State Properties, IsLowInteractive">
+		    <td valign="absmiddle">
+				<swe:include file="CCThreadbar.swt"/>
+			</td>
+			</swe:if>
+			<swe:applet id="201" hintText="Mini-Applet">
+			<td>&nbsp;&nbsp;&nbsp;</td>
+			    <td align="right"><swe:this property="FormattedHTML"/></td>
+				<td>&nbsp;&nbsp;&nbsp;</td>
+			</swe:applet>	
+				
+		  </tr>
+		</table> 
+		
+
+		<swe:applet-tree-list var="Parent"/>
+		<swe:applet hintMapType="Applet" id="2" hintText="Top Applet" property="FormattedHtml" var="Parent"/>			
+		<!-- ---------- Tier 3 & Tier 4 navigation ----------------->
+		<swe:include file="CCViewbar_Tabs_DropList.swt"/>
+		<!-- ---------- End Tier 3 & Tier 4 navigation ------------->
+		<swe:applet hintMapType="Applet" id="4" hintText="Bottom Applet" property="FormattedHtml" var="Child"/>
+		<swe:applet hintMapType="Applet" id="6" hintText="Child or Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+		<swe:applet hintMapType="Applet" id="8" hintText="Child or Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+		<swe:applet hintMapType="Applet" id="10" hintText="Child or Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+<!-- ---------- Bottom Two Applet Region ------------------------>
+<table datatable="0" summary="" width="100%" cellpadding="3" border="0" cellspacing="0">
+	<tr>
+		<td valign="top">
+		<!--  Column 1 -->
+			<swe:for-each count=5 iteratorName="currentId" startValue="502">
+			<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" var="Grandchild">
+				<!-- start applet-->
+				<swe:this property="FormattedHtml"/>
+				<!-- end applet-->
+			</swe:applet>
+			</swe:for-each>
+		
+		<!--  End Column 1 -->
+		</td>
+		
+		<td valign="top">
+		<!--  Column 2 -->
+			<swe:for-each count=5 iteratorName="currentId" startValue="602">
+			<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" var="Grandchild">
+				<!-- start applet-->
+				<swe:this property="FormattedHtml"/>
+				<!-- end applet-->
+			</swe:applet>
+			</swe:for-each>
+		<!--  End Column 2 -->
+		</td>
+	</tr>
+</table>
+<!-- ---------- End Bottom Two Applet Region ------------------------>
+		<swe:include file="CCHTMLFooter.swt"/>
+	
+	</swe:frame>
+	
+	
+	<!-- ---------- Left Frame (25%) ---------------------------->
+	<swe:frame type="Applet" name="Applet1" htmlAttr="topmargin='4' leftmargin='8' marginwidth='8' marginheight='4' frameborder='0'">
+		
+		<swe:include file="CCHTMLHeader.swt"/>
+		
+		<!--local override of CSS-->
+		<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+				<style>	BODY {border-right:1px solid #000000;}	.mceField, .mceField INPUT, .mceField TEXTAREA, .mceField SELECT{width:130px;}	</style>
+		</swe:if>
+
+		
+		<swe:applet hintMapType="Applet" id="3" hintText="Applet" property="FormattedHtml" var="Parent"/>
+
+		<swe:applet hintMapType="Applet" id="1" hintText="Applet" property="FormattedHtml" var="Parent"/>
+
+		<swe:include file="CCHTMLFooter.swt"/>
+	
+	</swe:frame>
+
+</swe:frameset>
+
+<!-- end of RTL case -->
+</swe:case>
+
+<swe:default>
+<!-- default, non-RTL -->
+
+<swe:frameset htmlAttr="cols='25%,75%' framespacing='6'">
+
+
+	<!-- ---------- Left Frame (25%) ---------------------------->
+	<swe:frame type="Applet" name="Applet1" htmlAttr="topmargin='4' leftmargin='8' marginwidth='8' marginheight='4' frameborder='0'">
+		
+		<swe:include file="CCHTMLHeader.swt"/>
+		
+		<!--local override of CSS-->
+		<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+				<style>	BODY {border-right:1px solid #000000;}	.mceField, .mceField INPUT, .mceField TEXTAREA, .mceField SELECT{width:130px;}	</style>
+		</swe:if>
+
+		
+		<swe:applet hintMapType="Applet" id="3" hintText="Applet" property="FormattedHtml" var="Parent"/>
+
+		<swe:applet hintMapType="Applet" id="1" hintText="Applet" property="FormattedHtml" var="Parent"/>
+
+		<swe:include file="CCHTMLFooter.swt"/>
+	
+	</swe:frame>
+
+	<!-- ---------- Right Frame (75%) ---------------------------->
+	<swe:frame type="Applet" name="Applet2" htmlAttr="topmargin='0' leftmargin='8' marginwidth='8' marginheight='0'  frameborder='0'">
+		
+		<swe:include file="CCHTMLHeader.swt"/>
+		
+		<!--local override of CSS-->
+		<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+			<style>	BODY {border-left:1px solid #000000;}	.mceField, .mceField INPUT, .mceField TEXTAREA, .mceField SELECT{width:130px;}	</style>
+		</swe:if>
+
+		
+		<!-- ---------- Right Frame (75%) ------------------------->
+		<table datatable="0" summary="" border="0" cellspacing="0" cellpadding="0" width="100%">
+		  <tr>
+			<swe:if condition="Web Engine State Properties, IsLowInteractive">
+		    <td valign="absmiddle">
+				<swe:include file="CCThreadbar.swt"/>
+			</td>
+			</swe:if>
+			<swe:applet id="201" hintText="Mini-Applet">
+			<td>&nbsp;&nbsp;&nbsp;</td>
+			    <td align="right"><swe:this property="FormattedHTML"/></td>
+				<td>&nbsp;&nbsp;&nbsp;</td>
+			</swe:applet>	
+				
+		  </tr>
+		</table> 
+		
+
+		<swe:applet-tree-list var="Parent"/>
+		<swe:applet hintMapType="Applet" id="2" hintText="Top Applet" property="FormattedHtml" var="Parent"/>			
+		<!-- ---------- Tier 3 & Tier 4 navigation ----------------->
+		<swe:include file="CCViewbar_Tabs_DropList.swt"/>
+		<!-- ---------- End Tier 3 & Tier 4 navigation ------------->
+		<swe:applet hintMapType="Applet" id="4" hintText="Bottom Applet" property="FormattedHtml" var="Child"/>
+		<swe:applet hintMapType="Applet" id="6" hintText="Child or Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+		<swe:applet hintMapType="Applet" id="8" hintText="Child or Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+		<swe:applet hintMapType="Applet" id="10" hintText="Child or Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+<!-- ---------- Bottom Two Applet Region ------------------------>
+<table datatable="0" summary="" width="100%" cellpadding="3" border="0" cellspacing="0">
+	<tr>
+		<td valign="top">
+		<!--  Column 1 -->
+			<swe:for-each count=5 iteratorName="currentId" startValue="502">
+			<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" var="Grandchild">
+				<!-- start applet-->
+				<swe:this property="FormattedHtml"/>
+				<!-- end applet-->
+			</swe:applet>
+			</swe:for-each>
+		
+		<!--  End Column 1 -->
+		</td>
+		
+		<td valign="top">
+		<!--  Column 2 -->
+			<swe:for-each count=5 iteratorName="currentId" startValue="602">
+			<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" var="Grandchild">
+				<!-- start applet-->
+				<swe:this property="FormattedHtml"/>
+				<!-- end applet-->
+			</swe:applet>
+			</swe:for-each>
+		<!--  End Column 2 -->
+		</td>
+	</tr>
+</table>
+<!-- ---------- End Bottom Two Applet Region ------------------------>
+		<swe:include file="CCHTMLFooter.swt"/>
+	
+	</swe:frame>
+
+</swe:frameset>
+
+<!-- end of default, non-RTL -->
+</swe:default>
+</swe:switch>
+
+
+<swe:scripts/>
+
+</html>
+
+
+<!--  Template End: CCViewTree1.swt -->

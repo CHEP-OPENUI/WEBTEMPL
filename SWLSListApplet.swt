@@ -1,0 +1,87 @@
+<swe:switch>
+  <swe:case condition="Web Engine User Agent, TestCapability, WirelessStyle:WML">
+    <swe:xsl-stylesheet name="SWLSListApplet_wml.xsl" mode="process"/>
+  </swe:case>
+  <swe:case condition="Web Engine User Agent, TestCapability, WirelessStyle:CHTML">
+    <swe:xsl-stylesheet name="SWLSListApplet_chtml.xsl" mode="process"/>
+  </swe:case>
+  <swe:case condition="Web Engine User Agent, TestCapability, WirelessStyle:XHTML">
+    <swe:xsl-stylesheet name="SWLSListApplet_1c_xhtml.xsl" mode="process"/>
+  </swe:case>
+  <swe:default>
+    <swe:xsl-stylesheet name="SWLSListApplet_2c_html.xsl" mode="process"/>
+  </swe:default>
+</swe:Switch>
+
+<swe:threadbar>
+  <swe:for-each-thread>
+    <span class="threadbar">
+      <swe:threadlink property="FormattedHtml">
+        <swe:this property="Title"/>
+      </swe:threadlink>
+    </span>
+  </swe:for-each-thread>
+</swe:threadbar>
+
+<swe:error property="FormattedHtml"/>
+
+<!-- List Applet Template Body -->
+<!-- The List Applet template gets inserted in a List View template -->
+<!-- Start List Applet template body -->
+<!-- Name of the List -->
+<b>
+<swe:control id="1" hintMapType="Control">
+  <swe:this property="DisplayName" hintText="Applet Title"/>
+</swe:control>
+</b>
+
+<!-- New Query link -->
+<swe:control id="2" hintMapType="Control">
+  <swe:this property="FormattedHtml" hintText="Find"/>
+</swe:control>
+
+<!-- Control links -->
+<swe:for-each count=7 iteratorName="CurrentId" startValue="3">
+  <swe:control id="swe:CurrentId" hintMapType="Control">
+    <swe:this property="FormattedHtml" hintText="InvokeMethod"/>
+  </swe:control>
+</swe:for-each>
+
+<!-- reserved for '- - - -' separator line -->
+<swe:control id="1000" hintMapType="Control">
+  <swe:this property="DisplayName" hintText="Label"/>
+</swe:control>
+
+<!-- List Rows -->
+<swe:for-each-row>
+  <swe:for-each count=20 iteratorName="CurrentId" startValue="11">
+    <!-- reserved for labels -->
+    <swe:control id="swe:CurrentId+100" hintMapType="Control">
+      <swe:this property="DisplayName" hintText="Label"/>
+    </swe:control>
+    <swe:control id="swe:CurrentId" hintMapType="ListItem">
+      <swe:this property="FormattedHtml" hintText="ListItem"/>
+    </swe:control>
+  </swe:for-each>
+</swe:for-each-row>
+<!-- 1-5 of 5+ -->
+<!-- More link -->
+<swe:this property="RowCounter"/><br/>
+
+<!-- reserved for '- - - -' separator line -->
+<swe:control id="2000" hintMapType="Control">
+  <swe:this property="DisplayName" hintText="Label"/>
+</swe:control>
+
+<!-- New Record link -->
+<swe:control id="41" hintMapType="Control">
+  <swe:this property="FormattedHtml" hintText="New"/>
+</swe:control>
+
+<!-- Control links -->
+<swe:for-each count=10 iteratorName="CurrentId" startValue="42">
+  <swe:control id="swe:CurrentId" hintMapType="Control">
+    <swe:this property="FormattedHtml" hintText="InvokeMethod"/>
+  </swe:control>
+</swe:for-each>
+<!-- End List Applet template body -->

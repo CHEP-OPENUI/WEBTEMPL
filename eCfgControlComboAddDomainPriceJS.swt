@@ -1,0 +1,41 @@
+<!-- Template Start: eCfgControlComboAddDomainPriceJS.swt -->
+
+<swe:include file="eCfgPort_HeaderJS.swt"/>
+
+<tr>
+   <td width=100% colspan=2>
+      <table datatable="0" summary="" cellpadding=0 cellspacing=0 border=0 width=100%>
+            <tr>
+               <td>
+                  <script>
+                     var sAddItemLabel = '<swe:control id="AddItem" CfgUIControl="AddItem" CfgHtmlType="CfgLabel"/>';
+                     var sComboAddNameLabel = '<swe:control id="Name" CfgUIControl="lblName" CfgHtmlType="CfgLabel"/>';
+                     var sComboAddQtyLabel = '<swe:control id="Quantity" CfgUIControl="lblQuantity" CfgHtmlType="CfgLabel"/>';
+                  </script>
+
+                  <swe:for-each id="1100" CfgLoopType="Domain" Automation="N" startValue="1000" count="Dynamic" iteratorName="1100Id" 
+                   CfgFieldList="CfgFieldName:Quantity, CfgUIControl:lblQuantity, HtmlAttrib_width:80, HtmlAttrib_align:left, Default:Y*
+                        CfgFieldName:Name, CfgUIControl:lblName, HtmlAttrib_width:250, HtmlAttrib_align:left, Default:Y*
+                        CfgFieldName:RequireMoreChild, Default:Y*
+                        CfgFieldName:Original List Price, CfgUIControl:lblListPrice, DataType:DTYPE_CURRENCY, NeedRefresh:N">
+                      <swe:control id="ComboAdd" CfgHtmlType="CfgComboAdd" 
+                       CfgJSShow="showSelectAndOptionsPrice" CfgJSUpdateExclusion="updateExcludedItemForPortWithPrice" CfgJSUpdateSelection="updatePortItemsForComboAdd"/>
+                  </swe:for-each>
+               </td>
+
+            </tr>
+            <tr>
+               <td colspan="3">
+                   <swe:include file="eCfgRelationContentsPriceQuantityJS.swt"/>
+               </td>
+
+            </tr>
+
+      </table>
+   </td>
+</tr>
+
+<swe:include file="eCfgPort_FooterJS.swt"/>
+
+<!-- Template End: eCfgControlComboAddDomainPriceJS.swt -->
+

@@ -1,0 +1,113 @@
+<!-- Start of CCAppletCalendarDaily.swt-->
+
+<swe:include-script file="browser_print.js"/>
+
+	
+<swe:include file="CCApplet_NamedSpacer.swt"/>	
+
+<div class="swe:this.SelectStyle">
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="border-bottom:1px solid gray; border-left:1px solid gray">
+	<tr valign="top">	
+	<td>
+	<swe:include file="CCTitle_Named.swt"/>
+			
+	<!--Button row-->	
+	<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="3" border="0" align="center" style="border-bottom:1px solid gray">
+		<tr class="AppletBack" align="left">
+						
+			<td nowrap><!-- New Appt --><swe:control id="133" property="FormattedHtml"/></td>
+			<td nowrap><span class="printHide"><img src="images/btn_div.gif" alt=""></span></td>
+			<td nowrap><!-- Previous --><swe:control id="131" property="FormattedHtml"/></td>
+			<td nowrap><!-- Next  --><swe:control id="132" property="FormattedHtml"/></td>
+
+			<td dir="ltr" nowrap class="AppletTitle"><!-- Date Range--><swe:calendar property="DateRange"></td>			
+            <td nowrap>        					
+				<swe:form name="CalendarGotoDateForm">
+					<swe:printTable>
+				    <swe:printTr>
+	 	   			<table datatable="0" summary="" border=0 cellspacing=0 cellpadding=0><tr>
+						<td nowrap><!-- Owner Label --><b><swe:control id="101" property="FormattedHtml" hintText="Label"/></b></td>	
+						<td nowrap><!-- Owner field --><swe:control id="102" property="FormattedHtml" hintText="Field" hintMapType="Control"/></td>
+						<td nowrap><!-- Owner field2 --><b><swe:control id="997" property="FormattedHtml" hintText="TextBox"/></b></td>	
+						<td nowrap><!-- Owner selector --><swe:control id="996" property="FormattedHtml" hintText="Button" hintMapType="Control"/></td>
+				  		<td nowrap><!-- Time Zone Label --><b><swe:control id="107" property="FormattedHtml" hintText="Label"/></b></td>
+						<td nowrap><!-- Time Zone field --><swe:control id="108" property="FormattedHtml" hintText="Field" hintMapType="Control"/></td>
+	       				<td nowrap><!-- Date Label --><b><swe:control id="103" property="FormattedHtml"/></b></td>	
+						<td nowrap><!-- Date Field (Month) --><swe:control id="105" property="FormattedHtml"/></td>
+						<td nowrap><!-- Date Field (Day) --><swe:control id="104" property="FormattedHtml"/></td>	
+						<td nowrap><!-- Date Field (Year) --><swe:control id="106" property="FormattedHtml"/></td>
+						<td nowrap><!-- Go --><swe:control id="130" property="FormattedHtml"/></td>	
+						<td nowrap><!-- Today --><swe:control id="998" property="FormattedHtml"/></td>
+				    </tr></table>              
+				    </swe:printTr>
+				    </swe:printTable>
+				</swe:form>
+			</td>
+		</tr>	
+	</table>	
+		
+	<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="2" border="0" align="center" class="AppletBack">		
+		<tr class="AppletBack" align="left">
+			<td nowrap><!-- Optional --><swe:control id="10000" property="FormattedHtml" hintText="Optional"/></td>
+			<td nowrap><!-- Optional --><swe:control id="10001" property="FormattedHtml" hintText="Optional"/></td>
+			<td nowrap><!-- Optional --><swe:control id="10002" property="FormattedHtml" hintText="Optional"/></td>						
+			<td width="100%"></td>
+			<td nowrap><!-- Optional --><swe:control id="20000" property="FormattedHtml" hintText="Optional"/></td>
+			<td nowrap><!-- Optional --><swe:control id="20001" property="FormattedHtml" hintText="Optional"/></td>
+			<td nowrap><!-- Optional --><swe:control id="20002" property="FormattedHtml" hintText="Optional"/></td>
+		</tr>		
+	</table>	
+	
+        <div id=dvCalendarDayScroll STYLE="width: 100%; height: 390px; overflow: auto;">
+	<!--Body-->
+	<table datatable="0" summary="" bgcolor="#cccccc" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" class="AppletBack"><tr><td class="AppletHIFormBorder">
+
+	<swe:switch>
+	<swe:case condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+	<table datatable="0" summary="" style="table-layout:fixed" valign="top" width="100%" cellpadding="3" cellspacing="0" border="0" class="printBorder">
+	</swe:case>
+        <swe:default>
+	<table datatable="0" summary="" valign="top" width="100%" cellpadding="3" cellspacing="0" border="1" class="printBorder">
+	</swe:default>
+	</swe:switch>
+		
+		<!--Data-->
+		<swe:calendarIntervalLoop>
+		<swe:calendarInterval>
+		
+		<tr>	
+			<!-- Interval -->
+			<td class="calendarInterval" width="90" align="right">
+				<table datatable="0" summary="" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td nowrap style="white-space:nowrap" align="right"><img src="images/spacer.gif" height="1" valign="top" alt=""><br>
+							<!-- Date Interval -->
+							<B><swe:this property="Interval"/></B>
+						</td>
+						<td width="20">&nbsp;</td>
+					</tr>
+				</table>
+			</td>
+
+			<swe:calendarTiledActivity/>
+		</tr>
+
+		</swe:calendarInterval>
+		</swe:calendarIntervalLoop>
+		
+	</table>	
+	</td></tr></table>
+	
+	<swe:include file="CCBottomApplet.swt"/>
+		
+	</span></td></tr></table>
+
+        </div>
+	<img src="images/spacer.gif" width="1" height="1" alt="">
+
+</swe:calendar>
+</div>
+
+<!-- End of CCAppletCalendarDaily.swt-->
+
+

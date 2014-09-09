@@ -1,0 +1,36 @@
+<hr>
+<table datatable="0" summary="" border="0" bgcolor="#d5e0f4" width="100%" cols="1">
+<tr>
+        <td align="left">
+        <swe:control id="99">
+		<b><swe:this property="DisplayName" hintText="label"/></b>
+	</swe:control>		
+	</td>
+</tr>
+<!-- Begin of CR 12-1O4OTAF -->
+<tr>
+        <td align="left">
+        <swe:control id="101">
+		<b><swe:this property="FormattedHtml" hintMapType="Control" hintText="Field"/></b>
+	</swe:control>		
+	</td>
+</tr>
+
+<tr>
+	<td align="left">&nbsp</td>
+</tr>
+<!-- End of CR 12-1O4OTAF -->
+
+<tr>
+        <td align="left">
+        <swe:control id="100">
+		<swe:this property="FormattedHtml" hintMapType="Control"/>
+	</swe:control>
+	</td>
+</tr>
+<swe:for-each-row count="1000">
+<tr>
+        <td align="left">&nbsp</td>
+</tr>        
+</swe:for-each-row>
+</table>

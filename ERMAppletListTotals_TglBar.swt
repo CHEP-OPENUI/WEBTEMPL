@@ -1,0 +1,36 @@
+<!-- Template Start: ERMAppletListTotals_TglBar.swt (cloned from ERMAppletListTotals_B_EL_TglBar.swt) -->
+
+<swe:include file="CCTogglebar_Tabs.swt"/>
+<swe:include file="CCApplet_NamedSpacer.swt"/>	
+
+<swe:control id="1100"><div class=CmdTxt><swe:this property="FormattedHtml" hintText="Outside Applet Help Text" hintMapType="Control"/></div><p></swe:control>
+
+
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" >
+	<swe:form>
+	<tr valign="top">
+		<td>
+			<swe:include file="CCTitle_Named.swt"/>					
+			<swe:include file="ERMListButtonsTop_TglBar.swt"/>			
+			<swe:error type="AllErrors">
+				<table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="4" cellspacing="0" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/><br>&nbsp;</td></tr></table>
+			</swe:error>	
+
+			<div class="swe:this.SelectStyle">	
+			<swe:list>
+				<table datatable="0" summary="" bgcolor="#ffffff" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0">
+				    <tr valign="top">
+				       <td class="AppletHIListBorder">			            
+				       <swe:include file="ERMListBodyTotals.swt"/>
+				       </td>
+				    </tr></table>
+			</swe:list>
+
+			<swe:include file="CCBottomApplet_NamedList.swt"/>	
+			</div>
+		</td>
+	</tr>
+	</swe:form>	
+</table>
+
+<!-- Template End: ERMAppletListTotals_TglBar.swt  -->

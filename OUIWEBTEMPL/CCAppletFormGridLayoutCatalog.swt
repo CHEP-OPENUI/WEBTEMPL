@@ -1,0 +1,21 @@
+<!-- Template Start: CCAppletFormGridLayoutCatalog.swt -->
+
+<!-- <swe:include file="CCApplet_NamedSpacer.swt"/> -->     
+<swe:form>    
+    <swe:if condition="Web Engine State Properties, IsPrintOff">        
+        <div class="swe:this.SelectStyle">         
+    </swe:if>    
+    <swe:error type="Popup">        
+        <div class="swe:class AppletBack">            
+            <div class="error">                
+                <swe:this property="FormattedHtml"/>            
+            </div>        
+        </div>    
+    </swe:error>    
+    <swe:form-applet-layout>    
+    </swe:form-applet-layout>    
+    <swe:if condition="Web Engine State Properties, IsPrintOff">        
+        </div>         
+    </swe:if>
+</swe:form>
+<!-- Template End: CCAppletFormGridLayoutCatalog.swt -->

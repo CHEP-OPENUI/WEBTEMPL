@@ -1,0 +1,349 @@
+<!-- Template Start EmployeeLocatorSearchFormApplet.swt (from: CCAppletListPortal.swt) -->
+
+<swe:layout viewDisplayMode="Layout">
+	<swe:include file="CCApplet_Spacer.swt"/>
+	<swe:include file="CCLayoutTitlePortal.swt"/>
+</swe:layout>
+
+<!-- Begin Show Mode -->
+<swe:layout viewDisplayMode="Show">
+<table datatable="0" summary="" width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr valign="top"><td><img src="images/spacer.gif" width="1" height="3" alt=""></td></tr></table>
+
+<swe:control id="1100">
+  <div class=CmdTxt><swe:this property="FormattedHtml" hintText="Outside Applet Help Text" hintMapType="Control"/></div><p>
+</swe:control>
+
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+ <tr valign="top">
+  <td class="AppletStyle1">
+
+	<swe:include file="ePortalAppletTitle.swt"/>
+	
+	<swe:layout appletDisplaySize="Max">
+
+   <!-- Swoop Row -->
+   <table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">    
+   <tr class="AppletButtons">
+    <td valign="top" align="right" width="100%"><img src="images/spacer.gif" height="1" width="1" alt=""></td>
+   </tr>
+   </table>
+
+   <!-- Begin Border -->
+   <table datatable="0" summary="" class="calendarBorder" valign="top" width="100%" cellpadding="1" cellspacing="0" border="0">
+    <tr>
+     <td valign="top">
+      <table datatable="0" summary="" valign="top" width="100%" cellpadding="3" cellspacing="0" border="0">
+       <tr class="calendarBlank">
+        <td valign="top">
+
+<!-- Begin Employee Search form -->
+
+<form name="EmployeeLocatorSearchForm" method="GET" onSubmit="ELSubmitEvent()"; return false;>
+
+
+<swe:control id="518" property="DisplayName" hintText="Label" hintMapType="Control"/>
+<swe:control id="519" property="DisplayName" hintText="Label" hintMapType="Control"/>
+<swe:control id="520" property="DisplayName" hintText="Label" hintMapType="Control"/>
+
+<!-- Label: EmployeeSearch blurb -->
+<br>
+<swe:control id="401">
+<swe:this property="DisplayName" hintText="Long Label"/>
+<p></p>
+</swe:control>
+
+<table datatable="0" summary="">
+ <!-- EmployeeSearch Text -->
+ <tr>
+ 
+ <td class="FormLabel">
+   <swe:control id="501" property="DisplayName" hintText="Label"/>
+  </td>
+  <td>
+   <input type="text" name="LastName" size="20" onKeyPress="microsoftKeyPress()"; >
+  </td>
+  <td class="FormLabel">
+     <swe:control id="502" property="DisplayName" hintText="Label"/>
+    </td>
+    <td>
+     <input type="text" name="FirstName" size="20" onKeyPress="microsoftKeyPress()"; >
+  </td>
+  
+  </tr>
+  
+  <!-- Second Row ------>
+  <tr>
+   
+   <td class="FormLabel">
+     <swe:control id="503" property="DisplayName" hintText="Label"/>
+    </td>
+    <td>
+     <input type="text" name="Division" size="20" onKeyPress="microsoftKeyPress()"; >
+    </td>
+    <td class="FormLabel">
+       <swe:control id="504" property="DisplayName" hintText="Label"/>
+      </td>
+      <td>
+       <input type="text" name="ShortName" size="20" onKeyPress="microsoftKeyPress()"; >
+    </td>
+    
+  </tr>
+  
+   <!-- Third Row ------>
+    <tr>
+     
+     <td class="FormLabel">
+       <swe:control id="505" property="DisplayName" hintText="Label"/>
+      </td>
+      <td>
+       <input type="text" name="JobTitle" size="20" onKeyPress="microsoftKeyPress()"; >
+      </td>
+      <td class="FormLabel">
+         <swe:control id="506" property="DisplayName" hintText="Label"/>
+        </td>
+        <td>
+         <input type="text" name="City" size="20" onKeyPress="microsoftKeyPress()"; >
+      </td>
+      
+  </tr>
+  
+    <!-- Fourth Row ------>
+      <tr>
+       
+       <td class="FormLabel">
+         <swe:control id="507" property="DisplayName" hintText="Label"/>
+        </td>
+        <td>
+         <input type="text" name="ManagerLogin" size="20" onKeyPress="microsoftKeyPress()"; >
+        </td>
+        <td class="FormLabel">
+           <swe:control id="508" property="DisplayName" hintText="Label"/>
+          </td>
+          <td>
+           <input type="text" name="UserID" size="20" onKeyPress="microsoftKeyPress()"; >
+        </td>
+        
+  </tr>
+  
+  
+  
+  <tr>
+  <!--- Employee search Button and small blip --->
+  <td><img src="" border="0" height="15" width="2"></td>
+        <td valign="absmiddle" align="center" height="15" class="minibuttonOn" nowrap> <a href='JavaScript:ELSubmitEvent()'>&nbsp;&nbsp;<swe:control id="510" property="DisplayName" hintText="Label" hintMapType="Control"/>&nbsp;&nbsp;</a> </td>
+    <td><img src="" border="0" height="15" width="2"> </td>
+  <td class="FormLabel">
+     <swe:control id="402" property="DisplayName" hintText="Label"/>
+  </td>
+  
+ </tr>
+
+</table>
+</form>
+<!-- End EmployeeLocatorSearch form -->
+
+        </td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>
+   <!-- End Border -->
+
+</swe:layout>
+	
+  	<swe:include file="CCBottomApplet.swt"/>
+  </td>
+ </tr>
+</table>
+
+<!-- Begin Specialized Javascript -->
+<swe:layout appletDisplaySize="Max">
+<script language="javascript1.2">
+
+document.EmployeeLocatorSearchForm.LastName.focus();
+
+strRetrivedURL = new String(document.URL);
+
+
+
+var strRetrivedLastName = "";
+var strRetrivedFirstName = "";
+var strRetrivedCity = "";
+var strRetrivedShortName = "";
+var strRetrivedDivision = "";
+var strRetrivedManagerLogin= "";
+var strRetrivedUserID= "";
+var strRetrivedJobTitle = "";
+
+var newLastName ="LastName=";
+var newFirstName ="FirstName=";
+var newDivision ="Division=";
+var newCity ="City=";
+var newManagerLogin ="ManagerLogin=";
+var newUserID ="UserID=";
+var newJobTitle ="JobTitle=";
+var newShortName ="ShortName=";
+
+
+
+
+strRetrivedURL = strRetrivedURL.replace(/\?/,"");
+aArgs = strRetrivedURL.split("&");
+cArgs = aArgs.length;
+
+for (i = 0; i <cArgs; ++i)
+{
+  if (aArgs[i].indexOf("LastName=") >= 0)
+	strRetrivedLastName = aArgs[i].substring((newLastName.length), (aArgs[i].length));
+
+  if (aArgs[i].indexOf("FirstName=") >= 0)
+	strRetrivedFirstName = aArgs[i].substring((newFirstName.length), (aArgs[i].length));
+
+  if (aArgs[i].indexOf("ShortName=") >= 0)
+	strRetrivedShortName = aArgs[i].substring((newShortName.length), (aArgs[i].length));
+
+  if (aArgs[i].indexOf("Division=") >= 0)
+	strRetrivedDivision = aArgs[i].substring((newDivision.length), (aArgs[i].length));
+
+  if (aArgs[i].indexOf("City=") >= 0)
+	strRetrivedCity = aArgs[i].substring((newCity.length), (aArgs[i].length));
+
+  if (aArgs[i].indexOf("JobTitle=") >= 0)
+	strRetrivedJobTitle = aArgs[i].substring((newJobTitle.length), (aArgs[i].length));
+
+  if (aArgs[i].indexOf("UserID=") >= 0)
+	strRetrivedUserID = aArgs[i].substring((newUserID.length), (aArgs[i].length));
+
+  if (aArgs[i].indexOf("ManagerLogin=") >= 0)
+	strRetrivedManagerLogin = aArgs[i].substring((newManagerLogin.length), (aArgs[i].length));
+    	
+}
+
+if (strRetrivedLastName != "")
+{
+   strRetrivedLastName = unescape(unescape(strRetrivedLastName.replace(/\+/ig," ")));
+   document.EmployeeLocatorSearchForm.LastName.value = strRetrivedLastName;
+}
+
+if (strRetrivedFirstName != "")
+{
+   strRetrivedFirstName = unescape(unescape(strRetrivedFirstName.replace(/\+/ig," ")));
+   document.EmployeeLocatorSearchForm.FirstName.value = strRetrivedFirstName;
+}
+
+if (strRetrivedShortName != "")
+{
+   strRetrivedShortName = unescape(unescape(strRetrivedShortName.replace(/\+/ig," ")));
+   document.EmployeeLocatorSearchForm.ShortName.value = strRetrivedShortName;
+}
+
+if (strRetrivedDivision!= "")
+{
+   strRetrivedDivision = unescape(unescape(strRetrivedDivision.replace(/\+/ig," ")));
+   document.EmployeeLocatorSearchForm.Division.value = strRetrivedDivision;
+}
+
+if (strRetrivedCity != "")
+{
+   strRetrivedCity = unescape(unescape(strRetrivedCity.replace(/\+/ig," ")));
+   document.EmployeeLocatorSearchForm.City.value = strRetrivedCity;
+}
+
+if (strRetrivedManagerLogin!= "")
+{
+   strRetrivedManagerLogin = unescape(unescape(strRetrivedManagerLogin.replace(/\+/ig," ")));
+   document.EmployeeLocatorSearchForm.ManagerLogin.value = strRetrivedManagerLogin;
+}
+
+if (strRetrivedUserID != "")
+{
+   strRetriveUserID = unescape(unescape(strRetrivedUserID.replace(/\+/ig," ")));
+   document.EmployeeLocatorSearchForm.UserID.value = strRetrivedUserID;
+}
+
+if (strRetrivedJobTitle!= "")
+{
+   strRetrivedJobTitle = unescape(unescape(strRetrivedJobTitle.replace(/\+/ig," ")));
+   document.EmployeeLocatorSearchForm.JobTitle.value = strRetrivedJobTitle;
+}
+
+
+function microsoftKeyPress() {
+    if (window.event.keyCode == 13)
+        {
+         ELSubmitEvent();
+         return false;
+        }
+
+}
+
+function ELSubmitEvent()
+{
+
+var strURL = "&DummyName=";
+
+
+
+if ( document.EmployeeLocatorSearchForm.LastName.value != "")
+	{
+		strURL += "&LastName=";
+		strURL += (document.EmployeeLocatorSearchForm.LastName.value + "*");
+		
+	}
+	
+if ( document.EmployeeLocatorSearchForm.FirstName.value != "")
+	{
+		strURL += "&FirstName=";
+		strURL +=  (document.EmployeeLocatorSearchForm.FirstName.value + "*");
+	}
+	
+if ( document.EmployeeLocatorSearchForm.ShortName.value != "")
+	{
+		strURL += "&ShortName=";
+		strURL +=  (document.EmployeeLocatorSearchForm.ShortName.value + "*");
+	}
+if ( document.EmployeeLocatorSearchForm.JobTitle.value != "")
+	{
+		strURL += "&JobTitle=";
+		strURL +=  (document.EmployeeLocatorSearchForm.JobTitle.value + "*");
+	}
+if ( document.EmployeeLocatorSearchForm.Division.value != "")
+	{
+		strURL += "&Division=";
+		strURL +=  (document.EmployeeLocatorSearchForm.Division.value + "*");
+	}
+if ( document.EmployeeLocatorSearchForm.City.value != "")
+	{
+		strURL += "&City=";
+		strURL +=  (document.EmployeeLocatorSearchForm.City.value + "*");
+	}
+if ( document.EmployeeLocatorSearchForm.ManagerLogin.value != "")
+	{
+		strURL += "&ManagerLogin=";
+		strURL +=  (document.EmployeeLocatorSearchForm.ManagerLogin.value + "*");
+	}
+if ( document.EmployeeLocatorSearchForm.UserID.value != "")
+	{
+		strURL += "&UserID=";
+		strURL +=  (document.EmployeeLocatorSearchForm.UserID.value + "*");
+	}
+	
+<swe:if condition="Web Engine State Properties, IsLowInteractive">
+document.EmployeeLocatorSearchForm.submit();
+</swe:if>
+
+<swe:if condition="Web Engine State Properties, IsHighInteractive">
+SWEPersonalizationGotoview(document.EmployeeLocatorSearchForm.SWEView.value,strURL );
+</swe:if>
+
+}
+
+</script>
+</swe:layout>
+<!-- Begin End Javascript -->
+
+</swe:layout>
+<!-- End Show Mode -->
+
+<!-- Template End EmployeeLocatorSearchFormApplet.swt -->

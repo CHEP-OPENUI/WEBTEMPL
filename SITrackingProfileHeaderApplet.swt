@@ -1,0 +1,27 @@
+<swe:include file="CCListTinyTitle.swt"/>
+<table datatable="0" summary="" class="Border1" width="100%" border="0" cellpadding="1" cellspacing="0">
+<tr><td>
+<table datatable="0" summary="" class="Row" valign="top" width="100%"  cellpadding="4" cellspacing="0" border="0">
+	<swe:for-each-row>
+		<tr>
+			<td class="Row2" valign="top">
+			<swe:control id="501"><b><swe:this property="DisplayName" hintText="Label"/></b></swe:control>&nbsp;
+			<swe:control id="502"><swe:this property="FormattedHtml" hintText="Field" hintMapType="Control"/></swe:control>
+			</td>
+		</tr>
+		<tr>	
+			<td class="Row2" valign="top">
+			<swe:control id="503"><b><swe:this property="DisplayName" hintText="Label"/></b></swe:control>&nbsp;
+			<swe:control id="504"><swe:this property="FormattedHtml" hintText="Field" hintMapType="Control"/></swe:control>
+			</td>
+		<tr>
+			<td class="Row2" valign="top">&nbsp;</td>
+ 		</tr>
+		<tr>	
+			<td class="Row2" valign="top"><swe:control id="505"><swe:this property="DisplayName" hintText="Long Label"/></swe:control>&nbsp;</td>
+		</tr>
+	</swe:for-each-row>
+</table>
+</td></tr>
+</table>
+<p></p>

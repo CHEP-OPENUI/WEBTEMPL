@@ -1,0 +1,13 @@
+<!-- Template Start: CCListTitle.swt -->
+
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+	<tr class="AppletBlank">
+		<td class="AppletTitle" nowrap><img src="images/spacer.gif" width="6" height="1" alt=""><swe:this property="Title"/></td>
+		<td width="100%" class="AppletTitle" align="right">&nbsp;</td>
+		<swe:control id="1500" hintText="Required Legend" hintMapType="Control">
+			<td nowrap valign="absmiddle" class="AppletTitle"><swe:this property="DisplayName"/><img src="images/icon_req.gif"></td>
+		</swe:control>
+	</tr>
+</table>
+
+<!-- Template End: CCListTitle.swt -->

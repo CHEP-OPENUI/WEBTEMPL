@@ -1,0 +1,83 @@
+<!-- Start of the CCAppletAdvancedSearch.swt -->
+<swe:form>          
+        <table datatable="0" summary="" bgcolor="#cccccc" valign="top" width="100%" cellpadding="2" cellspacing="0" border="0" class=FormBack>
+
+	  	
+	  <!-- Row 1 -->
+	  <tr>
+		<td width="5"><img src="images/spacer.gif" alt="" width=5 height=18 border=0></td>
+	      <td width="1%" class="FormLabel">
+    		<!-- Find -->
+		    <swe:control id="1201">
+        		<b><swe:this property="DisplayName"/></b>
+      	    </swe:control>
+    	      </td>
+	      <td colspan=2>
+      		<!-- input -->
+      		<swe:control id="1301">
+        		<swe:this property="FormattedHtml"/>
+      		</swe:control>
+    	      </td>
+		<td width="99%"><img src="images/spacer.gif" alt="" width=5 height=1></td>
+	</tr>
+	
+
+        <!-- Start of categories block -->
+        <swe:srchCategoryList>
+                
+                <!-- Start of ssCategory block -->
+                <swe:srchCategory>
+                <tr>
+                        <td width=5%>&nbsp;</td>
+                        <td class=FormLabel align=right width=30%><div align=right><swe:srchCategoryText/></div></td>
+                        <td width=60%><swe:srchCategoryControl/></td>
+                        <td width=5%>&nbsp;</td>
+                </tr>
+                </swe:srchCategory>
+                <!-- End of srchCategory block -->        
+                
+        </swe:srchCategoryList>           
+        <!-- End of categories block -->
+        
+        <!-- Page divider -->
+        <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+        </tr>
+        <!-- End of page divider -->
+
+        </table>
+
+        <!--Bottom Bar-->       
+        <table datatable="0" summary="" class="Top" bgcolor="#333399"  valign="top" width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr class="Top">
+                <td width="98%" height="20" class="Top">&nbsp;</td>
+                        
+       <!-- Search: 1 -->
+       <swe:control id="1">
+         <td class="Top" valign="middle" nowrap>
+         <swe:this property="FormattedHtml" hintText="Execute" hintMapType="Control"/>
+         </td>
+       </swe:control>
+
+	 <!-- Reset: 2 -->
+       <swe:control id="2">
+         <td class="Top" valign="middle" nowrap>
+         <swe:this property="FormattedHtml" hintText="Reset" hintMapType="Control"/>
+         </td>
+       </swe:control>
+
+	 <!-- Help: 3 -->
+       <swe:control id="3">
+         <td class="Top" valign="middle" nowrap>
+         <swe:this property="FormattedHtml" hintText="Help" hintMapType="Control"/>
+         </td>
+       </swe:control>
+
+        </tr>
+        </table>
+        <!-- End of Bottom Bar -->
+</swe:form>
+<!-- End of CCAppletAdvancedSearch.swt-->

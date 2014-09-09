@@ -1,0 +1,49 @@
+<!-- Template Start: SIBriefingView.swt copy of CCViewBasic.swt -->
+<!-- gene: need to bump up the count of regular and special main applets 10 each -->
+<swe:include file="CCHTMLHeader.swt"/>
+
+<!------------ Threadbar and Mini-Applet ----------------->
+<table datatable="0" summary="" border="0" cellspacing="0" cellpadding="1" width="100%">
+  <tr>
+	<swe:if condition="Web Engine State Properties, IsLowInteractive">
+    <td valign="absmiddle">
+		<swe:include file="CCThreadbar.swt"/>
+	</td>
+	</swe:if>
+	<swe:applet id="201" hintText="Mini-Applet">
+	    <td align="right"><swe:this property="FormattedHTML"/></td>
+		<td>&nbsp;&nbsp;&nbsp;</td>
+	</swe:applet>	
+  </tr>
+</table> 
+<!------------ End Threadbar and Mini-Applet ------------->
+
+<!------------ Salutation & Layout Applets ---------------------------->
+<table datatable="0" summary="" border="0" cellspacing="0" cellpadding="1" width="100%">
+  <tr>
+  	<swe:applet id="101" hintText="Salutation Applet">
+    <td width="50%"><swe:this property="FormatttedHtml"/></td>
+	<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	</swe:applet>
+	<swe:applet id="901" hintText="Layout Controls">
+	<td align="right" width="50%"><swe:this property="FormatttedHtml"/></td>
+	</swe:applet>
+  </tr>
+</table> 
+<!------------ End Salutation & Layout Applets ------------------------>
+
+<!------------ Main Content Area ---------------------------->
+<!------------ Regular Applet(s) ---->
+<swe:for-each count=10 iteratorName="currentId" startValue="1">
+<swe:applet id="swe:currentId" hintText="Applet" property="FormattedHtml" var="Parent"/>
+</swe:for-each>
+
+<!------------ Special Applet(s) ---->
+<swe:for-each count=10 iteratorName="currentId" startValue="11">
+<swe:applet id="swe:currentId" hintText="Applet" property="FormattedHtml" var="Parent"/>
+</swe:for-each>
+<!------------ End Main Content Area ------------------------>
+
+<swe:include file="CCHTMLFooter.swt"/>
+
+<!-- Template End: SIBriefingView.swt copy of CCViewBasic.swt -->

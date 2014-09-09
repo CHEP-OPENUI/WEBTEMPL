@@ -1,0 +1,81 @@
+<!-- Template Start: ePortalSearchApplet.swt -->
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+<tr valign="top">
+<td class="AppletStyle1">
+<swe:include file="ePortalAppletTitle.swt"/>
+
+<swe:layout viewDisplayMode="Show" appletDisplayMode="Show" appletDisplaySize="Max">
+<table datatable="0" summary="" class="Border1" width="100%" border="0" cellpadding="1" cellspacing="0" bgcolor="#333399">
+<tr><td>
+<table datatable="0" summary="" border=0 cellpadding=4 cellspacing=0 width=100% bgcolor=#ffffff>
+<tr><td align=center>
+
+<swe:form mode="Query">
+
+<table datatable="0" summary="" bgcolor="#ffffff" valign="top" width="100%"  cellpadding="0" cellspacing="0" border="0" class="BasicSearchClear">
+<!--Start Cap-->
+ <tr>
+  <td width="5"><img src="images/table_corner3.gif" width="5" height="5" border="0" alt=""></td>
+  <td width="99%" colspan=3><img src="images/spacer.gif" width=1 height=5 alt=""></td>
+  <td width="5"><img src="images/spacer.gif" width=5 height=5 alt=""></td>
+ </tr>
+</table>
+
+<table datatable="0" summary="" bgcolor="#ffffff" valign="top" _width="100%"  cellpadding="2" cellspacing="0" border="0" class="BasicSearchClear">
+ <!-- Row 1 -->
+ <tr>
+  <td width="5"><img src="images/spacer.gif" width=5 height=18 border=0 alt=""></td>
+  <td width="1%" class="FormLabel">
+
+   <!-- Find -->
+   <swe:control id="1201"><b><swe:this property="DisplayName"/></b></swe:control>
+  </td>
+  <td colspan=2>
+   <!-- input -->
+   <swe:control id="1301"><swe:this property="FormattedHtml"/></swe:control>
+  </td>
+  <td width="99%"><img src="images/spacer.gif" width=5 height=1 alt=""></td>
+ </tr>
+
+ <!-- Row 2 -->
+ <tr>
+  <td width="5"><img src="images/spacer.gif" width=5 height=18 border=0 alt=""></td>
+  <td width="1%" nowrap align="right">
+  <!-- In -->
+  <swe:control id="2201"><b><swe:this property="DisplayName"/></b></swe:control>
+  </td>
+  <td>
+  <!-- View -->
+  <swe:control id="2301"><swe:this property="FormattedHtml"/></swe:control>
+  </td>
+  <td>
+  <!--- Go (Execute) --->
+  <swe:control id="106"><swe:this property="FormattedHtml"/></swe:control>
+  </td>
+  <td width="99%"><img src="images/spacer.gif" width=5 height=1 alt=""></td>
+ </tr>
+
+ <!-- Row 3 -->
+ <tr>
+  <td width="5"><img src="images/spacer.gif" width=5 height=1 alt=""></td>
+  <td>&nbsp;</td>
+  <td colspan=2>&nbsp;<swe:control id="421" property="FormattedHtml"/></td>
+  <td width="99%"><img src="images/spacer.gif" width=5 height=1 alt=""></td>
+ </tr>
+
+ <!--End Cap-->
+ <tr>
+  <td colspan=5><img src="images/spacer.gif" width=1 height=5 alt=""></td>
+ </tr>
+
+</table>
+</td></tr></table></td></tr></table>
+
+</swe:form>
+<p></p>
+</swe:layout>
+</td>
+</tr>
+</table>
+
+<!-- Template End: ePortalSearchApplet.swt -->

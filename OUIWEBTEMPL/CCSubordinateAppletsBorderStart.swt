@@ -1,0 +1,11 @@
+<!-- Template Start: CCSubordinateAppletsBorderStart.swt -->
+
+<swe:if condition="Web Engine State Properties, IsViewPosition, 'Position:3'">
+	<div class="siebui-sub-applets">
+</swe:if>
+
+<swe:if condition="Web Engine State Properties, IsViewPosition, 'Position:4'">
+	<div class="siebui-sub-applets">
+</swe:if>
+
+<!-- Template End: CCSubordinateAppletsBorderStart.swt -->

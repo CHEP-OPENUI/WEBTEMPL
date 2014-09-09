@@ -1,0 +1,32 @@
+<!-- Template Start: LS_AppletTitleGraphicalButton.swt -->
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+ <tr class="AppletButtons">
+  <td valign="bottom"><swe:control id="89" property="FormattedHtml" hintText="Image" hintMapType="Control"/></td>
+   <td valign="bottom" width="100%">
+	   <table cellspacing="0" cellpadding="3" border="0"><tr><td class="AppletTitle">
+	   <!-- Plain text title (90) --><swe:control id="90" property="DisplayName" hintText="Title" hintMapType="Control"/>
+	   <!-- GotoView (184) --><swe:control id="184" property="FormattedHtml" hintText="DrillDown Title" hintMapType="Control"/>      
+	   </td></tr></table>
+   </td>
+   <td valign="bottom">
+      <table cellspacing="0" cellpadding="3" border="0">
+        <tr>
+          <td nowrap>
+             <swe:control id="115" property="FormattedHtml" hintText="Mini Button" hintMapType="Control"/>
+          </td>
+          <td nowrap>
+             <swe:control id="116" property="FormattedHtml" hintText="Mini Button" hintMapType="Control"/>
+          </td>
+        </tr>
+      </table>
+   </td>
+   <td align="right" valign="bottom">
+   <table cellspacing="0" cellpadding="3" border="0"><tr><td>
+   <swe:include file="CCLayoutButtons.swt"/>
+   </td></tr></table>
+   </td>
+ </tr>
+</table>
+
+<!-- Template End: LS_AppletTitleGraphicalButton.swt -->

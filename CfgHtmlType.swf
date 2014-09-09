@@ -1,0 +1,77 @@
+<!------------------------------------------>
+<!-- Siebel Applications HTML Format File -->
+<!------------------------------------------>
+
+<!------------ List: Configurator Item List -------------->
+<swe:htmltype name="CfgList">
+<table  valign="center" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <swe:for-each-value>
+         <tr><td class="Row" >
+            <swe:this property="Data" type="Text"/>&nbsp;
+         </td></tr>
+      </swe:for-each-value>
+</table>
+</swe:htmltype>
+
+<!------------ RadioButtonList: Configurator Radio Button List -------------->
+<swe:htmltype name="CfgRadioList">
+<table  valign="center" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <swe:for-each-value>
+         <tr><td class="Row" >
+            <swe:this property="Data" type="Text"/>&nbsp;
+         </td></tr>
+      </swe:for-each-value>
+</table>
+</swe:htmltype>
+
+
+<!------------ CfgComboBox: Configurator ComboBox -------------->
+<!-- This combobox will submit on selection change. -->
+<swe:htmltype name="CfgComboBox">
+   <swe:this property="Data" type="ComboBox"/>&nbsp;
+</swe:htmltype>
+
+
+<!------------ CfgLink: -------------->
+<swe:htmltype name="CfgLink">
+   <swe:this property="Data" type="Link" />
+</swe:htmltype>
+
+<!------------ CfgLabel: -------------->
+<!-- This control shows read only label in any mode. -->
+<swe:htmltype name="CfgLabel"><swe:this property="Data" type="Text" /></swe:htmltype>
+
+<!------------ CfgSubmitBtn: standard text-based buttons -------------->
+<swe:htmltype name="CfgSubmitBtn">
+   <span class="minibuttonOn">
+		<nobr><swe:this property="Data" type="Link" /></nobr>
+   </span>
+</swe:htmltype>
+
+<!------------ CfgSubmitBtn (Disabled) -------------->
+<swe:htmltype name="CfgSubmitBtn" state="Disabled">
+   <span class="minibuttonOff">
+		<nobr><swe:this property="Data" type="Text" /></nobr>
+   </span>
+</swe:htmltype>
+<!------------------------------------------------->
+
+
+<!------------ CfgImageSubmitBtn: image-based button -------------->
+<swe:htmltype name="CfgImageSubmitBtn">
+<table border="0" cellspacing="0" cellpadding="0" ><tr><td><swe:this property="Data" type="Link" /></td></tr></table>
+</swe:htmltype>
+
+<!------------ CfgImageSubmitBtn (Disabled) -------------->
+<swe:htmltype name="CfgImageSubmitBtn" state="Disabled">
+<table border="0" cellspacing="0" cellpadding="0" ><tr><td><swe:this property="Data" type="Text" /></td></tr></table>
+</swe:htmltype>
+
+
+
+<!------------ CfgAction: -------------->
+<!-- This control shows read only label in any mode. -->
+<swe:htmltype name="CfgAction"><swe:this property="Data" type="Text" /></swe:htmltype>
+
+
+

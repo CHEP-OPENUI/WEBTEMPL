@@ -1,0 +1,17 @@
+<!--  Template Start: SAView.swt -->
+
+<swe:include file="CCHTMLHeader.swt"/>
+<!--local override of CSS-->
+<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+	<style>BODY {margin:0px; padding:0px;overflow:auto;}</style>
+</swe:if>
+
+<!-- ---------- Main Content Area ---------------------------->
+
+<swe:applet hintMapType="Applet" id="1" property="FormattedHtml" hintText="Iframe Applet" var="Parent"/>
+
+<!-- ---------- End Main Content Area ------------------------>
+
+<swe:include file="CCHTMLFooter.swt"/>
+
+<!--  Template End: SAView.swt -->

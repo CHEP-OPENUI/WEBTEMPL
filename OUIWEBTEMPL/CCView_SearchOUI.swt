@@ -1,0 +1,56 @@
+<!--  Template Start: CCViewDetail_ParentPntr.swt -->
+
+<swe:include file="CCHTMLHeader.swt"/>
+
+<swe:include file="CCTaskViewTitle.swt"/>
+
+<swe:if condition="Web Engine State Properties, IsPrintOff">
+   <!-- ---------- Threadbar and Mini-Applet ----------------->
+   <table datatable="0" summary="" border="0" cellspacing="0" cellpadding="1" width="100%">
+   <tr>
+	   <swe:if condition="Web Engine State Properties, IsLowInteractive">
+      <td valign="absmiddle">
+		   <swe:include file="CCThreadbar.swt"/>
+	   </td>
+	   </swe:if>
+	   <swe:applet id="201" hintText="Mini-Applet">
+	      <td align="right"><swe:this property="FormattedHTML"/></td>
+		   <td>&nbsp;&nbsp;&nbsp;</td>
+	   </swe:applet>
+   		
+   </tr>
+   </table> 
+   <!-- ---------- End Threadbar and Mini-Applet ------------->
+</swe:if>
+
+<!-- ---------- Main Content Area ---------------------------->
+
+<swe:if condition="Web Engine State Properties, IsPrintOff">
+   <!-- ---------- Tier 3 & Tier 4 navigation ----------------->
+   <swe:include file="CCViewbar_Tabs_DropList.swt"/>
+   <!-- ---------- End Tier 3 & Tier 4 navigation ------------->
+
+   <swe:include file="CCSubordinateAppletsBorderStart.swt"/>
+</swe:if>
+	<div id="siebui-locator-row">
+		<div class="locatorFormApplet">
+				<swe:applet hintMapType="Applet" id="1" hintText="Parent Applet" property="FormattedHtml" var="ParentWithPointer"/>
+		</div>
+		
+		<div class="locatorListApplet">
+			<swe:applet hintMapType="Applet" id="2" hintText="Child Applet" property="FormattedHtml" var="Child"/>			
+		</div>
+		
+		<div class="locatorPartnerMapApplet">
+			<swe:applet hintMapType="Applet" id="3" hintText="Child Applet" property="FormattedHtml" var="Child"/>			
+		</div>
+	</div>
+<swe:if condition="Web Engine State Properties, IsPrintOff">
+   <swe:include file="CCSubordinateAppletsBorderEnd.swt"/>
+</swe:if>
+
+<swe:include file="CCHTMLFooter.swt"/>
+
+<!-- ---------- End Main Content Area ------------------------>
+
+<!--  Template End: CCViewDetail_ParentPntr.swt -->

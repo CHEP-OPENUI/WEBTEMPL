@@ -1,0 +1,1 @@
+Put your custom web templates in this folder.

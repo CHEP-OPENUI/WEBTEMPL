@@ -1,0 +1,44 @@
+<table ID=tbBar ALIGN=center WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+	<tr>
+		<td width=355>
+			<table CLASS=tier3back ID=datetabs BORDER=0 CELLPADDING=0 CELLSPACING=0>
+				<tr>
+					<td ID=0Mtd STYLE='visibility:hidden' NOWRAP CLASS=tier3Off style=cursor:hand><A ID=daily></A></td>
+					<td ID=1Mtd STYLE='visibility:hidden' NOWRAP CLASS=tier3Off style=cursor:hand><A ID=weekly></A></td>
+					<td ID=2Mtd STYLE='visibility:hidden' NOWRAP CLASS=tier3Off style=cursor:hand><A ID=monthly></A></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td STYLE=background-color:#CCCCFF;width:100%>
+			<table id = tbControls>
+				<tr>
+				    <td id=newButton align=center></td>
+					<td id=todayButton align=center></td>
+	                <td id=printButton align=center></td>
+	                <td id=newconcallButton align=center></td>
+	                <td id=newacctcallButton align=center></td>
+	                <td id=newmeetingButton align=center></td>
+	               	<td STYLE=position:relative;left:5 CLASS=tier2On NOWRAP><SPAN CLASS=divider><img SRC=images/spacer.gif ALIGN=absmiddle WIDTH=1 HEIGHT=18 alt=""></SPAN></td>
+					<td STYLE=position:relative;left:5 ID=navigateBack></td>
+					<td STYLE=position:relative;left:5 ID=displayDate NOWRAP></td>
+					<td STYLE=position:relative;left:5 ID=navigateForward></td>
+					<td STYLE=position:relative;left:5 CLASS=tier2On NOWRAP><SPAN CLASS=divider><img SRC=images/spacer.gif ALIGN=absmiddle WIDTH=1 HEIGHT=18 alt=""></SPAN>&nbsp;&nbsp;</td>
+					<td STYLE=position:relative;left:5;visibility:hidden CLASS=tier2On NOWRAP ID=AccessLabel></td>
+	                <td STYLE=position:relative;left:5;visibility:hidden CLASS=tier2On ALIGN=absmiddle NOWRAP ID=accessContainer></td>
+					<td STYLE=position:relative;left:5 ID=SPLabel1>&nbsp;&nbsp;</td>
+					<td STYLE=position:relative;left:5 CLASS=tier2On NOWRAP ID=TimeZoneLabel></td>
+					<td STYLE=position:relative;left:5 ID=timezonePicker></td>
+					<td STYLE=position:relative;left:5 ID=SPLabel2>&nbsp;</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<table ID=tbCal ALIGN=center WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+	<tr>
+		<td ID=tdMain><table ID=tbMainH ALIGN=left CELLPADDING=0 CELLSPACING=1 BORDER=0 HEIGHT=100% WIDTH=100% BGCOLOR=gray></table></td>
+		<td ID=tdMini><DIV ID=dvMiniCal></DIV></td>
+	</tr>	
+</table>

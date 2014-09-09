@@ -1,0 +1,93 @@
+<!-- Template Start: CCAppletGanttChartActX.swt modified from CCAppletForm4Col_B.swt -->
+
+<!-- <swe:include file="CCApplet_NamedSpacer.swt"/> -->
+
+<swe:form>
+	<swe:include file="CCTitle_Named.swt"/>
+
+
+<!--  Template Start: CCFormButtonsTop.swt -->
+<!-- Title Area (Row 1) -->
+<!-- This whole Title Area is taken out -->
+<!-- Applet Buttons Area (Row 2) -->
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="2" border="0" align="center">
+	<tr class="AppletBack" align="left">	
+		
+		<!-- Menu Button Area -->
+		<td nowrap>
+			&nbsp;
+			<swe:if-var name="Parent">			     
+				<swe:menu type="Button" width="38" height="16" bgcolor="#6666cc" fgcolor="#ffffff" />
+		  	</swe:if-var>
+		
+			<swe:if-var name="ParentWithPointer">			     
+				<swe:menu type="Button" width="38" height="16" bgcolor="#6666cc" fgcolor="#ffffff" />
+	  		</swe:if-var>	
+		
+			<swe:if-var name="AppletFilter-No">			     
+				<swe:menu type="Button" width="38" height="16" bgcolor="#ccccff" fgcolor="#000000" />
+		  	</swe:if-var>							
+		  	
+			<swe:if-var name="Child">			     
+				<swe:menu type="Button" width="38" height="16" bgcolor="#ccccff" fgcolor="#000000" />
+		  	</swe:if-var>	
+			
+			<swe:if-var name="ChildWithPointer">			     
+				<swe:menu type="Button" width="38" height="16" bgcolor="#ccccff" fgcolor="#000000" />
+		  	</swe:if-var>	
+		
+			<swe:if-var name="Grandchild">			     
+				<swe:menu type="Button" width="38" height="16" bgcolor="#ccccff" fgcolor="#000000" />
+		  	</swe:if-var>							
+		  	
+		  	<img src="images/btn_div.gif" height="13" align="middle" alt="">
+		</td>
+			
+		<!-- Other Buttons Area -->			
+		<td><img src="images/spacer.gif" width="2" height="1" alt=""></td>
+		<swe:include file="CCButtons.swt"/>											
+		
+		<!-- Toggle Bar Area -->			
+		<td>
+			<swe:include file="CCTogglebar_drop.swt"/>
+		</td>			
+
+		<!-- Query Message Area -->			
+		<td align="left" width="100%" nowrap>
+			&nbsp;<b><swe:message type="Query Message" /></b>
+		</td>
+
+	</tr>
+</table>		
+
+<!-- Separator Area -->
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="1" align="center" bordercolor="#e5e5e5" bgcolor="#e5e5e5">
+	<tr class="AppletBack">
+		<td class="AppletBack"><img src="images/spacer.gif" height="1" width="1" alt=""></td>
+		<td class="AppletBlank" width="100%"><img src="images/spacer.gif" height="1" width="1" alt=""></td>
+		<td class="AppletBack"><img src="images/spacer.gif" height="1" width="1" alt=""></td>
+	</tr>
+</table>		
+<!--  Template End: CCFormButtonsTop.swt -->	
+
+
+	<table datatable="0" summary="" class="AppletBorder" width="100%" cellpadding="2" cellspacing="0" border="0" align="center"><tr><td>
+		<table datatable="0" summary="" class="AppletBlank" width="100%" cellspacing="0" cellpadding="2" border="0" align="center">
+		    <swe:if condition="Web Engine State Properties, IsHighInteractive">
+			    <swe:control id="1301" hintMapType="FormItem">	
+				    <tr valign="top">
+				    <td class="scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="Field"/></td>
+				    </tr>
+			    </swe:control>
+            </swe:if>
+		</table>
+	</td></tr></table>			
+
+</swe:form>
+
+
+<!-- Template End: CCAppletGanttChartActX.swt -->
+
+
+
+	

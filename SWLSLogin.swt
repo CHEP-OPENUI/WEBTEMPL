@@ -1,0 +1,27 @@
+<swe:switch>
+  <swe:case condition="Web Engine User Agent, TestCapability, WirelessStyle:WML">
+    <swe:xsl-stylesheet name="SWLSLogin_wml.xsl" mode="process"/>
+  </swe:case>
+  <swe:case condition="Web Engine User Agent, TestCapability, WirelessStyle:CHTML">
+    <swe:xsl-stylesheet name="SWLSLogin_chtml.xsl" mode="process"/>
+  </swe:case>
+  <swe:case condition="Web Engine User Agent, TestCapability, WirelessStyle:XHTML">
+    <swe:xsl-stylesheet name="SWLSLogin_1c_xhtml.xsl" mode="process"/>
+  </swe:case>
+  <swe:default>
+    <swe:xsl-stylesheet name="SWLSLogin_2c_html.xsl" mode="process"/>
+  </swe:default>
+</swe:Switch>
+
+<swe:form>
+<!-- Login Title -->
+<b><swe:pageitem id="1" property="DisplayName" /></b><br/>
+<!-- User Name -->
+<swe:pageitem id="2" property="DisplayName" />
+<swe:pageitem id="3" property="FormattedHtml" />
+<!-- Password -->
+<swe:pageitem id="4" property="DisplayName" />
+<swe:pageitem id="5" property="FormattedHtml" />
+<!-- Login button -->
+<swe:pageitem id="6" property="FormattedHtml" />
+</swe:form>

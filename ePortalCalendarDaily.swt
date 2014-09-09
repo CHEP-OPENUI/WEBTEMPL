@@ -1,0 +1,93 @@
+<!-- Start of ePortalCalendarDaily.swt -->
+<swe:layout viewDisplayMode="Layout"><swe:include file="ePortalCalendarAppletTitle.swt"/></swe:layout>
+<swe:layout viewDisplayMode="Show" appletDisplayMode="Show"><swe:include file="ePortalCalendarAppletTitle.swt"/></swe:layout>
+<swe:layout viewDisplayMode="Show" appletDisplayMode="Show" appletDisplaySize="Max">
+<!--Applet Body-->
+<table datatable="0" summary="" class="calendarBorder" valign="top" width="100%" cellpadding="1" cellspacing="0" border="0"><tr><td valign="top">
+<table datatable="0" summary="" valign="top" width="100%" cellpadding="3" cellspacing="0" border="0">
+ <swe:form name=CalendarGotoDateForm>
+ <tr class="calendarBlank">
+  <td valign="top">
+   <table datatable="0" summary="" broder="0">
+    <tr>
+     <td class="calendarLabel"><!-- Owner Label --><swe:control id=101 property="FormattedHtml" hintText="Label"/></td>
+     <td class="calendarField" colspan="4"><!-- Owner field --><swe:control id=102 property="FormattedHtml" hintText="Field" hintMapType="Control"/></td>
+    </tr>
+    <tr>
+     <td class="calendarLabel"><!-- Date Label --><swe:control id=103 property="FormattedHtml"/></td>
+     <td class="calendarField"><!-- Date Field (Month) --><swe:control id=105 property="FormattedHtml"/></td>
+     <td class="calendarField"><!-- Date Field (Day) --><swe:control id=104 property="FormattedHtml"/></td>
+     <td class="calendarField"><!-- Date Field (Year) --><swe:control id=106 property="FormattedHtml"/></td>
+     <td class="calendarField"><!-- Go --><swe:control id=130 property="FormattedHtml"/></td>
+    </tr>    
+   </table>  
+  </td>
+ </tr>
+ </swe:form>
+</table>
+<table datatable="0" summary="" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0">
+ <tr class="calendarBorder">
+  <td><img src="images/spacer.gif" border="0" width="2" height="2" alt=""></td>
+ </tr>
+</table>
+<table datatable="0" summary="" class="AppletStyle3" valign="top" width="100%" cellpadding="3" cellspacing="0" border="0">
+ <tr class="AppletButtons">
+  <td class="AppletButtons" width="100%"><swe:calendar property="DateRange"></td>
+  <td class="AppletButtons" valign="middle" nowrap><!-- New Appt --><swe:control id=133 property="FormattedHtml"/></td>
+  <td class="AppletButtons" nowrap>&nbsp;|&nbsp;</td>
+ 
+  <td class="AppletButtons" valign="middle" nowrap><!-- Previous --><swe:control id=131 property="FormattedHtml"/></td>
+
+  <td class="AppletButtons" valign="middle" nowrap><!-- Next  --><swe:control id=132 property="FormattedHtml"/></td>
+
+ </tr>
+</table>
+</td></tr></table>
+
+
+<table datatable="0" summary="" class="calendarBorder2" valign="top" width="100%" cellpadding="3" cellspacing="1" border="0">
+
+ <!--headers-->
+ <tr>
+  <td class="Header" nowrap>&nbsp;</td>
+  <td class="Header" width="70" nowrap><!-- Start Time--><swe:control id=301 property="FormattedHtml"/></td>
+  <td class="Header" width="100%"><!-- Description--><swe:control id=303 property="FormattedHtml"/></td>
+ </tr>
+  
+ <swe:calendarIntervalLoop>
+ <swe:calendarInterval>
+  <!--data--> 
+  <tr valign="top">
+   <td class="Row" align="right" nowrap><!-- Date Interval --><swe:this property="Interval"/></td>
+   <td class="Row" colspan="2" height="18">
+    <table datatable="0" summary="" width="100%" cellpadding="5" border=0>
+     
+     <!-- Start of activity loop-->
+     <swe:calendarActivityLoop>
+      <swe:calendarActivity>
+     
+      <tr height="18" valign="top">
+          <td align=right width="63" nowrap><swe:this property="StartTime"/></td>
+          <td width="100%">
+        <!-- Repeat Bitmap -->
+        <swe:control id=142 property="FormattedHtml"/>
+        <swe:this property="Description"/>
+       </td>
+      </tr>
+ 
+      </swe:calendarActivity>
+     </swe:calendarActivityLoop>
+     <!-- End of Activity loop-->
+
+    </table>
+   
+   </td>
+
+  </tr>
+ </swe:calendarInterval>
+ </swe:calendarIntervalLoop>
+</table>
+
+</swe:calendar>
+</swe:layout>
+<!-- End of ePortalCalendarDaily.swt-->

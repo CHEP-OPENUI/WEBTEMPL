@@ -1,0 +1,33 @@
+<!-- Template Start CCAppletFormGridLayout_ss_withLicense.swt -->
+
+<swe:include file="CCApplet_NamedSpacer.swt"/>
+<swe:form>
+
+    <div class="siebui-ss-applt-container">
+        <swe:include file="CCAppletFormButtons_Right_ss.swt"/>
+        <swe:include file="CCAppletFormSection_ss.swt"/>
+
+        <div class="siebui-license-placeholder">
+            <span class="siebui-licence-text">
+                <!-- Include the license terms text here --> 
+                <p></p>
+            </span>
+        </div>
+        <div>
+            <!-- Place holder to place field on the left and label on the right -->
+            <swe:control id="2000" hintMapType="FormItem">
+                <li class="siebui-list-section1">
+                    <div class="siebui-licence-text">
+                        <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+                        <swe:this property="DisplayName" hintText="Label"/>
+                        <swe:this property="RequiredIndicator" hintText="Required"/>
+                    </div>
+                </li>
+            </swe:control>
+        </div>
+        <swe:include file="CCAppletFormButtons_ss.swt"/>
+    </div>
+
+</swe:form>
+
+<!-- Template End CCAppletFormGridLayout_ss_withLicense.swt -->

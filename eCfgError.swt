@@ -1,0 +1,28 @@
+<!-- Template Start: eCfgError.swt -->
+
+<table datatable="0" summary="">
+   <swe:error>
+      <tr>
+         <td colspan="4" class="FormInstruct">
+            <table datatable="0" summary="" cellpadding="4" cellspacing="0" border="0">
+               <tr>
+                  <td class="error">
+                     <swe:this property="FormattedHtml"/>
+                     <br>&nbsp;</br>
+                  </td>
+               </tr>
+            </table>
+         </td>
+      </tr>
+   </swe:error>
+</table>
+
+<table datatable="0" summary="">
+   <tr>
+      <td nowrap>
+         <swe:control id="swe:CancelButton" CfgUIControl="Cancel" CfgHtmlType="MiniButton" InvokeMethod="CloseViewPopup" property="FormattedHtml"/>
+      </td>
+   </tr>
+</table>
+
+<!-- Template End: eCfgError.swt -->

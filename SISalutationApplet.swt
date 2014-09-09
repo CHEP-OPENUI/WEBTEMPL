@@ -1,0 +1,24 @@
+<!-- Salutation Top Cap -->
+<swe:layout viewDisplayMode="Show">
+
+
+
+<table datatable="0" summary="" cellpadding="4">
+	<tr valign="top">
+		<td><swe:image name="EBRIEF_MYBRIEF" category="HTML Control Icons" width="138" height="68" border="0" /></td>
+		<!-- User's name --><td width="99%"><span class="Welcome"><swe:control id="501" property="FormattedHtml" hintText="Field" hintMapType="Control"/></span><br>
+		<!-- Prompt, timestamp --><swe:control id="503" property="DisplayName" hintText="Label" />&nbsp;<swe:control id="504" property="FormattedHtml" hintText="Field" hintMapType="Control"/>
+		</td>
+		<!-- Date --><td nowrap><swe:control id="502" property="FormattedHtml" hintText="Field" hintMapType="Control"/></td>
+	</tr>
+</table>
+<!-- Salutation End Cap -->
+<table datatable="0" summary="" bgcolor="#cccccc"  valign="top" width="100%"  cellpadding="0" cellspacing="0" border="0">
+	<tr>
+	    <td><img src="images/spacer.gif" width=1 height=1 alt=""></td>
+	</tr>
+</table>
+<p></p>&nbsp;
+
+</swe:layout>
+<!--End Salutation -->

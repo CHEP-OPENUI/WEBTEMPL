@@ -1,0 +1,232 @@
+<swe:form>
+<table border="0" datatable="0">
+<tr>
+	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	<td colspan="70"><p><b> 
+          <!-- Search Preference (Label)-->
+	  <swe:control id="1000"> 
+	    <swe:this property="DisplayName"/>
+	  </swe:control></b></p> 
+ 	</td>
+
+	<td>
+          <!-- Default (Button)-->
+ 	  <swe:control id="1001">
+            <swe:this property ="FormattedHtml" hintMapType="Control"/>
+	  </swe:control>
+        </td>
+
+	<td>
+	<!-- Save Preference button (Button) -->
+	<swe:control id="1002">
+            <swe:this property ="FormattedHtml" hintMapType="Control"/>
+	  </swe:control>
+	</td>		
+</tr>
+</table>
+<hr width="98%">
+
+<table border="0" datatable="0">
+	<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<!-- Number of results (Label) -->
+		<td align="right"><b>
+		  <swe:control id="1003"> 
+	 	    <swe:this property="DisplayName"/>
+	 	  </swe:control>
+		</td>
+		<td colspan="2">
+			<!-- Display records per page -->
+			&nbsp;
+			<swe:control id="1004">
+			  <swe:this property="DisplayName"/>
+	   	        </swe:control>
+			
+			<!-- Select drop down -->
+			&nbsp;
+			<swe:control id="1005">
+            		  <swe:this property ="FormattedHtml" hintMapType="Control"/>
+		   	</swe:control>
+
+		</td>
+	</tr>
+
+	<tr>
+				<td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+				<td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+				<td colspan="2"><hr  align="right"></td>
+	</tr>
+
+	<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td align="right"><b> 
+		   <!-- Results window (Label) -->
+		   <swe:control id="1006">
+		     <swe:this property="DisplayName"/>
+	   	   </swe:control>
+		</b></td>
+
+		<td colspan="2">
+			<!-- Checkbox -->
+			<swe:control id="1007">
+            		  <swe:this property ="FormattedHtml" hintMapType="Control"/>
+		   	</swe:control>
+
+			<!--   Open search results in new browser window (Label) -->
+			<swe:control id="1008">
+			  <swe:this property="DisplayName"/>
+	   	        </swe:control>
+			
+		</td>
+	</tr>
+
+	<tr>
+			<td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+			<td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+			<td colspan="2"><hr  align="right"></td>
+	</tr>
+
+	<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td align="right"><b> 
+		   <!-- Auto Suggestion (Label) -->
+		   <swe:control id="1011">
+		     <swe:this property="DisplayName"/>
+	   	   </swe:control>
+		</b></td>
+
+		<td colspan="2">
+			<!-- Checkbox -->
+			<swe:control id="1012">
+            		  <swe:this property ="FormattedHtml" hintMapType="Control"/>
+		   	</swe:control>
+
+			<!--   Display suggestion based on search criteria (Label) -->
+			<swe:control id="1013">
+			  <swe:this property="DisplayName"/>
+	   	        </swe:control>
+			
+		</td>
+	</tr>
+
+	<tr>
+			<td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+			<td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+			<td colspan="2"><hr  align="right"></td>
+	</tr>
+
+	<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td align="right"><b>  
+			  <!-- Default Sort (Label) -->
+			  <swe:control id="1009">
+			    <swe:this property="DisplayName"/>
+	   	          </swe:control>
+
+			</b></td>
+
+			<td>
+		             <!-- By relevance -->
+	   		     <swe:control id="1010">
+	            		<swe:this property ="FormattedHtml" hintMapType="Control"/>
+		   	     </swe:control>
+
+				
+			</td>
+
+	</tr>
+
+	<tr>
+			<td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+			<td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+			<td colspan="2"><hr  align="right"></td>
+	</tr>
+
+	<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td align="right"><b>
+			   <!-- Context sensitivity (Label) -->
+			   <swe:control id="1018">
+			     <swe:this property="DisplayName"/>
+	   	           </swe:control>
+			</b></td>
+
+			<td>
+			   <!-- Context sensitivity radio button -->
+		           <swe:control id="1019">
+	            		<swe:this property ="FormattedHtml" hintMapType="Control"/>
+		   	     </swe:control>
+			</td>
+	</tr>
+
+	
+	<tr>
+				<td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+				<td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+				<td colspan="2"><hr  align="right"></td>
+	</tr>
+
+	<tr>
+				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td align="right"><b> 
+			          <!-- Criteria Reservation (Label) -->
+			          <swe:control id="1020">
+			           <swe:this property="DisplayName"/>
+	   	                  </swe:control>
+				  </b>
+				</td>
+	
+				<td>
+				    <!-- Criteria Reservation radio button -->
+		           	    <swe:control id="1021">
+	            		      <swe:this property ="FormattedHtml" hintMapType="Control"/>
+		   	            </swe:control>
+				</td>
+	</tr>
+
+	
+	<tr>
+					<td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+					<td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+					<td colspan="2"><hr  align="right"></td>
+	</tr>
+
+	<tr>
+				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td align="right"><b> 
+			          <!-- Language Name (Label)-->
+			          <swe:control id="1022">
+			           <swe:this property="DisplayName"/>
+	   	                  </swe:control>
+				  </b>
+				</td>
+	
+				<td>
+				    <!-- Language Name-->
+		           	    <swe:control id="1023">
+	            		      <swe:this property ="FormattedHtml" hintMapType="Control"/>
+		   	            </swe:control>
+				</td>
+	</tr>
+
+	<tr>
+				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td align="right"><b> 
+			          <!-- Doc Lang Label (Label)-->
+			          <swe:control id="1024">
+			           <swe:this property="DisplayName"/>
+	   	                  </swe:control>
+				  </b>
+				</td>
+	
+				<td>
+				    <!-- Doc Language Name-->
+		           	    <swe:control id="1025">
+	            		      <swe:this property ="FormattedHtml" hintMapType="Control"/>
+		   	            </swe:control>
+				</td>
+	</tr>
+
+</table>
+
+</swe:form>

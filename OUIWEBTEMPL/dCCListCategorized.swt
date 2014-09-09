@@ -1,0 +1,22 @@
+<!-- Template Start: dCCListCategorized.swt -->
+<!-- Oliver: code redesign -->
+
+<swe:for-each-row count="10">
+<li class="siebui-bullet-item">
+	<span class="siebui-bullet-item-ctrl1">
+		<swe:control id="502" property="FormattedHtml" hintText="Field" hintMapType="ListItem"/>
+	</span>
+	<span class="siebui-bullet-item-ctrl2">
+		<swe:control id="132" property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></b>
+	</span>
+	<ul class="siebui-bullet-childlist">
+		<li>
+			<swe:for-each-child>
+				<swe:child-applet/>
+			</swe:for-each-child>
+		</li>
+	</ul>
+</li>
+</swe:for-each-row>
+
+<!-- Template End: dCCListCategorized.swt -->

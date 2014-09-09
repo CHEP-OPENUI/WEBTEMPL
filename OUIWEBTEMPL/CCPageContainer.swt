@@ -1,0 +1,120 @@
+<!--  Template Start: CCPageContainer.swt -->
+<HTML dir="swe:dir">
+<head>
+  <title><swe:this property="Title"/></title>
+  <swe:include file="CCStylesChoice.swt"/>
+</head>
+<swe:switch>
+  <!--  If Communiation Toolbar is enabled, activate toolbar frame -->
+  <swe:case condition="Communications Client, IsCommEnabled">
+    <swe:frameset htmlAttr="rows='25,27,32,18,22,*'">
+      <!--  NOTE! Any changes made for the following frames need to be in sync with frames in bottom swe:default section -->
+      <swe:frame type="AppMenu">
+        <swe:include file="CCFrameBanner.swt"/>
+      </swe:frame>
+      <div class="siebui-button-toolbar">
+        <swe:frame type="Viewbar">
+          <swe:include file="CCFrameViewbar.swt"/>
+        </swe:frame>
+        <swe:frame type="Toolbar" name="CTIToolbar">
+          <swe:include file="CCFrameToolbar.swt"/>
+        </swe:frame>
+      </div>
+      <swe:frame type="Threadbar">
+        <swe:include file="CCFrameThreadbar.swt"/>
+      </swe:frame>
+      <swe:frame type="Screenbar">
+        <swe:include file="CCFrameScreenbar.swt"/>
+      </swe:frame>
+      <swe:frame type="Content">
+        <swe:include file="CCFrameContentHI.swt"/>
+      </swe:frame>
+    </swe:frameset>
+  </swe:case>
+  <!-- end of Communications Client, IsCommEnabled -->
+  <swe:case condition="HTML FS Barcoding Tool Bar, IsBarcodeEnabled">
+    <swe:frameset htmlAttr="rows='25,27,32,18,22,*'">
+      <!--  NOTE! Any changes made for the following frames need to be in sync with frames in bottom swe:default section -->
+      <swe:frame type="AppMenu">
+        <swe:include file="CCFrameBanner.swt"/>
+      </swe:frame>
+      <div class="siebui-button-toolbar">
+        <swe:frame type="Viewbar">
+          <swe:include file="CCFrameViewbar.swt"/>
+        </swe:frame>
+        <swe:frame type="Toolbar" name="CTIToolbar">
+          <swe:include file="CCFrameToolbar.swt"/>
+        </swe:frame>
+      </div>
+      <swe:frame type="Threadbar">
+        <swe:include file="CCFrameThreadbar.swt"/>
+      </swe:frame>
+      <swe:frame type="Screenbar">
+        <swe:include file="CCFrameScreenbar.swt"/>
+      </swe:frame>
+      <swe:frame type="Content">
+        <swe:include file="CCFrameContentHI.swt"/>
+      </swe:frame>
+    </swe:frameset>
+  </swe:case>
+  <!-- end of HTML FS Barcoding Tool Bar, IsBarcodeEnabled -->
+  <!--  By default, no Communiation Toolbar or Barcode Toolbar-->
+  <swe:default>
+    <swe:switch>
+      <swe:case condition="Communications Client, IsCommError">
+        <swe:frameset htmlAttr="rows='25,27,0,18,22,*'">
+          <!--  NOTE! Any changes made in this section need to be in sync with frames in top swe:case section -->
+          <swe:frame type="AppMenu">
+            <swe:include file="CCFrameBanner.swt"/>
+          </swe:frame>
+          <div class="siebui-button-toolbar">
+            <swe:frame type="Viewbar">
+              <swe:include file="CCFrameViewbar.swt"/>
+            </swe:frame>
+            <swe:frame type="Toolbar" name="CTIToolbar">
+              <swe:include file="CCFrameToolbar.swt"/>
+            </swe:frame>
+          </div>
+          <swe:frame type="Threadbar">
+            <swe:include file="CCFrameThreadbar.swt"/>
+          </swe:frame>
+          <swe:frame type="Screenbar">
+            <swe:include file="CCFrameScreenbar.swt"/>
+          </swe:frame>
+          <swe:frame type="Content">
+            <swe:include file="CCFrameContentHI.swt"/>
+          </swe:frame>
+        </swe:frameset>
+      </swe:case>
+      <!-- end of Communications Client, IsCommError -->
+      <!-- No Communications Client, IsCommError -->
+      <swe:default>
+        <swe:frameset htmlAttr="rows='25,27,18,22,*'">
+          <!--  NOTE! Any changes made in this section need to be in sync with frames in top swe:case section -->
+            <swe:frame type="AppMenu">
+              <swe:include file="CCFrameBanner.swt"/>
+            </swe:frame>
+            <div class="siebui-button-toolbar">
+              <swe:frame type="Viewbar">
+                <swe:include file="CCFrameViewbar.swt"/>
+              </swe:frame>
+            </div>
+            <swe:frame type="Threadbar">
+              <swe:include file="CCFrameThreadbar.swt"/>
+            </swe:frame>
+            <swe:frame type="Screenbar">
+              <swe:include file="CCFrameScreenbar.swt"/>
+            </swe:frame>
+            <swe:frame type="Content">
+              <swe:include file="CCFrameContentHI.swt"/>
+            </swe:frame>
+          </swe:frameset>
+        </swe:default>
+        <!-- end of no Communications Client, IsCommError -->
+      </swe:switch>
+      <!--end of Communications Client, IsCommError-->
+    </swe:default>
+  </swe:switch>
+  <swe:scripts/>
+  </HTML>
+  <!--  Template End: CCPageContainer.swt -->

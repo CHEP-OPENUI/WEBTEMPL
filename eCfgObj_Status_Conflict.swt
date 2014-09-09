@@ -1,0 +1,105 @@
+<!-- Template Start: eCfgObj_Status_Conflict.swt -->
+<div id="eCfgObj_Status_Conflict.swt" class="cxStatusTempl">
+
+<swe:form>
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+   <tr class="listRowOff">
+      <td colspan="5">
+         <b><swe:control id="Status" CfgUIControl="lblStatus" property="DisplayName" /></b>
+      </td>
+   </tr>
+   <tr class="listRowOff" >
+      <td  colspan="5">
+         <table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+            <swe:for-each id="200" CfgLoopType="ErrorMsg" startValue="1500" count="Dynamic" iteratorName="101Id">
+               <swe:control id="swe:101Id+220" CfgUIControl="CfgLabel"  DisplayMode="DontEncodeData" CfgHtmlType="CfgLabel" CfgFieldName="Message">
+               <tr class="listRowOff">
+                  <td width="1%" valign="top">
+                     <swe:image name="ICON_CONFIGURE_CONFLICT" category="HTML Control Icons"/>
+                  </td>
+                  <td>
+                     <span id="CxExplanation" class="cxLabel">	
+                     <swe:this  property="FormattedHtml"/>
+                     </span>
+                  </td>
+               </tr>
+               </swe:control>
+            </swe:for-each>
+         </table>
+      </td>
+   </tr>
+   <tr class="listRowOff" >
+      <td  colspan="5">
+         <!-- If you want show the expanantion in the main window instead of popup window, -->
+         <!-- please uncomment following section.                                          -->
+         <!-- Be aware that the getting expanation is very expensive operation.            -->
+         
+         <!--
+         <table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+	   <swe:for-each id="600" CfgLoopType="$.DetailExpl" startValue="1500" count="Dynamic" iteratorName="162Id">
+               <swe:control id="swe:162Id" CfgUIControl="CfgLabel"  DisplayMode="DontEncodeData" CfgHtmlType="CfgLabel" CfgFieldName="CxExplanation">
+               <tr class="listRowOff">
+                  <td width="1%" valign="top">
+                     <swe:image name="ICON_CONFIGURE_CONFLICT" category="HTML Control Icons"/>
+                  </td>
+                  <td>
+                     <span id="CxExplanation" class="cxLabel">
+                     <swe:this  property="FormattedHtml"/>
+                     </span>
+                  </td>
+               </tr>
+               </swe:control>
+            </swe:for-each>
+         </table>
+         -->
+      </td>
+   </tr>
+</table>
+
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+   <tr class="listRowOff">
+      <td width="100%"></td>
+      <td colspan="2">&nbsp;</td>
+      <td >
+         <swe:control id="UndoAllFailedRequest" 
+                      CfgUIControl="UndoAllFailedRequest"
+                      CfgHtmlType="MiniButton" 
+                      InvokeMethod="SubmitRequest"
+                      CfgRequest="UndoAllFailedRequest"
+                      property="FormattedHtml" 
+                      HideDisabled ="Y" />
+      </td>
+      <td >&nbsp;</td>
+      <td >
+         <swe:control id="UndoLast" 
+                      CfgUIControl="UndoLastRequest"
+                      CfgHtmlType="MiniButton" 
+                      InvokeMethod="SubmitRequest"
+                      CfgRequest="UndoLastRequest"
+                      property="FormattedHtml" />
+                      
+      </td>
+      <!-- If you want show the expanantion in the main window instead of popup window, -->
+      <!-- please comment out following section.                                        -->
+      <!-- Be aware that the getting expanation is very expensive operation.            -->
+
+      <!-- section start -->
+      <td >&nbsp;</td>
+      <td >  
+         <swe:control id="swe:IncId+555"
+                      CfgUIControl="GetMoreExplButton"
+                      CfgRequest="GetExpl" 
+                      property="FormattedHtml"
+                      TemplateName= "eCfgObj_GlobalDetailExpl.swt"
+                      CfgNodeType="DetailExpl"
+                      HideDisabled ="Y" />
+      </td>
+      <!-- section end -->
+      
+      <td colspan="2">&nbsp;</td>
+   </tr>
+
+</table>
+</swe:form>
+</div>
+<!-- Template End: eCfgObj_Status_Conflict.swt -->

@@ -1,0 +1,252 @@
+<!-- Template Start: eCfgGroupSummaryJS.swt -->
+
+<!-- qa automation -->
+<div  id="cxSum" class="cxGrpTheme">
+
+<swe:control id="swe:CFGPARAMETER" CfgType="Node" SummaryGroup="Y" property="FormattedHtml" />
+
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+   <swe:for-each id="110" CfgLoopType="Attribute" startValue="1100" count="Dynamic" iteratorName="AttrId" >
+      <tr class="listRowOff">
+         <td width="30%">
+            <strong><div id="AttName" class="cxLink">
+		   <swe:control id="swe:AttrId" CfgFieldName="AttName" CfgHtmlType="CfgLink" InvokeMethod="ChangeCurrentObj" CfgRequest="Group" />
+               </div>
+            </strong>
+            <div id="RequireMoreChild" class="cxImg">
+               <swe:control id="swe:AttrId+2000" CfgFieldName="RequireMoreChild" CfgUIControl="RequireMoreChild" CfgHtmlType="CfgLabel"/>
+            </div>
+
+         </td>
+         <td >
+            <div id="AttValue" class="cxLabel">
+            <swe:control id="swe:AttrId+100" CfgFieldName="AttValue" CfgHtmlType="CfgLabel" />&nbsp;
+            </div>
+         </td>
+         <td width="5%" >&nbsp;</td>
+         <td>&nbsp;</td>
+      </tr>
+   </swe:for-each>
+   <swe:for-each id="120" CfgLoopType="LinkedItem" startValue="3100" count="Dynamic" iteratorName="LinkedId" >
+       <tr class="listRowOff">
+          <td width="30%">
+            <strong>
+               <div id="CxLnkItmName" class="cxLabel">
+               <swe:control id="swe:LinkedId" CfgFieldName="CxLnkItmName" CfgHtmlType="CfgLabel" />
+               </div>
+            </strong>
+          </td>
+          <td>
+               <div id="CxLnkItmValue" class="cxLabel">
+               <swe:control id="swe:LinkedId+200" CfgFieldName="CxLnkItmDisplayValue" CfgHtmlType="CfgLabel" />&nbsp;
+               </div>
+          </td>
+         <td width="5%" >&nbsp;</td>
+         <td>&nbsp;</td>
+       </tr>
+   </swe:for-each>
+   <swe:for-each id="140" CfgLoopType="Resource" startValue="4100" count="Dynamic" iteratorName="RscId" >
+      <tr class="listRowOff">
+         <td width="30%">
+            <strong>
+               <div id="CxResourceName" class="cxLabel">
+               <swe:control id="swe:RscId" CfgFieldName="CxResourceName" CfgHtmlType="CfgLabel" />
+               </div>
+            </strong>
+         </td>
+         <td>
+            <div id="CxResourceValue" class="cxLabel">
+            <swe:control id="swe:RscId+300" CfgFieldName="CxResourceValue" CfgHtmlType="CfgLabel" />&nbsp;
+            </div>
+         </td>
+         <td width="5%" >&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+   </swe:for-each>
+      <tr class="listRowOff">
+         <td width="100%" colspan="4">&nbsp;</td>
+      </tr>
+</table>
+
+
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center" class="siebui-ecfg-module-content">
+   <swe:for-each id="200" CfgLoopType="Port" startValue="2100" count="Dynamic" iteratorName="TopPortId" >
+      <swe:if condition="Default, TestFieldValue, Operator:==, FieldName:LoopCount, FieldValue:0">
+         <tr>
+            <td  width="30%" class="dCCItemSectionTitle" style="border-bottom: 2px solid #d6d6ee">
+               <strong>
+                  &nbsp;
+               </strong>
+            </td>
+            <!-- Following removed in order to display Quantity -->
+            <!-- 
+            <td  width="40%" colspan="2" class="dCCItemSectionTitle" style="border-bottom: 2px solid #d6d6ee">
+               <strong>
+                  <swe:control id="Name" CfgUIControl="lblName" CfgHtmlType="CfgLabel" />
+               </strong>
+            </td>
+            <td align="center" width="10%" class="dCCItemSectionTitle" style="border-bottom: 2px solid #d6d6ee">
+               <strong>
+                  <swe:control id="Quantity" CfgUIControl="lblQuantity" CfgHtmlType="CfgLabel" />
+               </strong>
+            </td>
+            <td align="right" width="10%" class="dCCItemSectionTitle" style="border-bottom: 2px solid #d6d6ee">
+               <strong>
+                  <swe:control id="ListPrice" CfgUIControl="lblListPrice" CfgHtmlType="CfgLabel" />
+               </strong>
+            </td>
+            <td align="right" width="10%" class="dCCItemSectionTitle" style="border-bottom: 2px solid #d6d6ee">
+               <strong>
+                  <swe:control id="YourPrice" CfgUIControl="lblYourPrice" CfgHtmlType="CfgLabel" />
+               </strong>
+            </td>
+            -->
+         </tr>
+      </swe:if>
+ 
+      <tr class="listRowOff">
+		  <!-- Next Line changed to display editable Quantity field-->
+          <td width="100%" class="AppletBlank" >
+            <strong><div id="CxPortName" class="cxLink">
+               <swe:control id="swe:TopPortId + 350" CfgFieldName="CxPortName" CfgHtmlType="CfgLink" InvokeMethod="ChangeCurrentObj" CfgRequest="Group"/>
+               </div>
+            </strong>
+            <div id="RequireMoreChild" class="cxImg">
+            <swe:control id="swe:TopPortId + 2550" CfgFieldName="RequireMoreChild" CfgUIControl="RequireMoreChild" CfgHtmlType="CfgLabel" />
+            </div>
+          </td>
+
+          <!-- This entire listing is removed because we need to display editable quantity field.
+          <swe:for-each id="500" CfgLoopType="Children" startValue="1500" count="Dynamic" iteratorName="TopChildId">
+            <swe:if condition="Default, TestFieldValue, Operator:!=, FieldName:LoopCount, FieldValue:0">
+               <tr class="listRowOff">
+                  <td width="30%" class="AppletBlank" >&nbsp;</td>
+           </swe:if>
+            <td width="40%" colspan="2">
+
+              <swe:switch>
+                 <swe:case condition="Default, TestFieldValue, Operator:==, FieldName:CanDrillDown, FieldValue:Y">
+                   <div id="CxObjName" class="cxLink">
+                     <swe:control id="swe:TopChildId" CfgFieldName="Name" CfgHtmlType="CfgLink" InvokeMethod="SetTopObj"/>
+                   </div>
+                 </swe:case>
+                 <swe:default>
+                     <swe:control id="swe:TopChildId" CfgFieldName="Name" CfgHtmlType="CfgLabel"/>
+                 </swe:default>
+              </swe:switch>
+
+               <div id="RequireMoreChild" class="cxImg">
+               <swe:control id="swe:TopChildId+2000" CfgFieldName="RequireMoreChild" CfgUIControl="RequireMoreChild" CfgHtmlType="CfgLabel" />
+               </div>
+            </td>
+            <td width="10%" align="center">
+				<div id="Quantity" class="cxEdit">
+                <swe:control id="swe:TopChildId+1000" CfgFieldName="Quantity" CfgUIControl="InstanceQTYAuto" property="FormattedHtml" CfgInvokeMethod="SubmitRequest" CfgRequest="ChangeQtyMin" />
+                </div>
+             </td>
+
+            <td width="10%" align="right" >
+               <div id="List Price" class="cxLabel">
+               <swe:control id="swe:TopChildId+2200"  CfgHtmlType="CfgLabel" CfgFieldName="Original List Price" DataType="DTYPE_CURRENCY" />&nbsp;
+               </div>
+            </td>
+            <td width="10%" align="right" >
+               <div id="Current Price" class="cxLabel">
+               <swe:control id="swe:TopChildId+3000"  CfgHtmlType="CfgLabel" CfgFieldName="Current Price" DataType="DTYPE_CURRENCY" />&nbsp;
+               </div>
+            </td>
+            </tr>
+
+            <swe:for-each id="25" CfgLoopType="Port" startValue="2000" count="Dynamic" iteratorName="SubPortId">
+               <swe:for-each id="2500" CfgLoopType="Children" startValue="1500" count="Dynamic" iteratorName="SubChildId">
+
+                  <tr class="listRowOff">
+                     <td width="30%" class="AppletBlank" >&nbsp;</td>
+                     <td width="2%" class="AppletBlank" >&nbsp;</td>
+                     <td width="38%">
+
+              		<swe:switch>
+              		   <swe:case condition="Default, TestFieldValue, Operator:==, FieldName:CanDrillDown, FieldValue:Y">
+               		      <i><div id="CxObjName" class="cxLink">
+               	                 <swe:control id="swe:TopChildId" CfgFieldName="Name" CfgHtmlType="CfgLink" InvokeMethod="SetTopObj"/>
+                 	         </div>
+                              </i>
+                           </swe:case>
+                           <swe:default>
+                              <i><swe:control id="swe:TopChildId" CfgFieldName="Name" CfgHtmlType="CfgLabel"/></i>
+                           </swe:default>
+                        </swe:switch>
+
+                        <div id="RequireMoreChild" class="cxImg">
+                        <swe:control id="swe:SubChildId+2000" CfgFieldName="RequireMoreChild" CfgUIControl="RequireMoreChild" CfgHtmlType="CfgLabel"/>
+                        </div>
+                     </td>
+                     <td width="10%" align="center" >
+                        <div id="Quantity" class="cxLabel">
+                        <swe:control id="swe:SubChildId+1000" CfgFieldName="Quantity" CfgHtmlType="CfgLabel" />
+                        </div>
+                     </td>
+                     <td width="10%" align="right" >
+                        <div id="List Price" class="cxLabel">
+                        <swe:control id="swe:SubChildId+2200"  CfgHtmlType="CfgLabel" CfgFieldName="Original List Price" DataType="DTYPE_CURRENCY" />&nbsp;
+                        </div>
+                     </td>
+                     <td width="10%" align="right" >
+                        <div id="Current Price" class="cxLabel">
+                        <swe:control id="swe:SubChildId+3000"  CfgHtmlType="CfgLabel" CfgFieldName="Current Price" DataType="DTYPE_CURRENCY" />&nbsp;
+                        </div>
+                     </td>
+                  </tr>
+
+               </swe:for-each>
+            </swe:for-each>
+
+          </swe:for-each>
+          <swe:if condition="Default, TestFieldValue, Operator:==, FieldName:LoopCount, FieldValue:0">
+             <td width="100%" class="AppletBlank" colspan="5">&nbsp;</td>
+             </tr>
+          </swe:if>
+          -->
+      </tr>
+      <tr>
+         <td>
+         <script>
+         
+         </script>
+            <swe:for-each id="1100" CfgLoopType="Domain" Automation="N" startValue="1000" count="Dynamic" iteratorName="1100Id">
+               <swe:control id="ComboAdd" CfgHtmlType="CfgComboAdd" 
+               CfgJSShow="showSelectAndOptionsSpanOnly" CfgJSUpdateExclusion="updateExcludedItemForPort" CfgJSUpdateSelection="updatePortItemsForComboAdd"/>
+            </swe:for-each>
+
+            <swe:for-each id="500" CfgLoopType="Children" startValue="1500" count="Dynamic" iteratorName="101Id"
+            CfgFieldList="CfgFieldName:Quantity, CfgUIControl:lblQuantity, HtmlAttrib_width:80, HtmlAttrib_align:left, Default:Y*
+                        CfgFieldName:Name, CfgUIControl:lblName, HtmlAttrib_width:250, HtmlAttrib_align:left, Default:Y*
+                        CfgFieldName:RequireMoreChild, Default:Y*
+                        CfgFieldName:Explanation, CfgUIControl:lblExplanation, HtmlAttrib_width:70, HtmlAttrib_align:center*
+                        CfgFieldName:Original List Price, CfgUIControl:lblListPrice, DataType:DTYPE_CURRENCY, NeedRefresh:N, HtmlAttrib_align:center, HtmlAttrib_width:80*
+                        CfgFieldName:Current Price, CfgUIControl:lblYourPrice, DataType:DTYPE_CURRENCY, HtmlAttrib_align:center, HtmlAttrib_width:80"                        
+            >
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <table datatable="0" summary="">
+               <tr>
+                  <td align="center">
+                     <swe:control id="Port Item" CfgHtmlType="CfgPortItem" 
+                      CfgJSShow="showPortItems" CfgJSUpdateSelection="updatePortItemsForComboAdd"/>
+                  </td>
+               </tr>
+            </table>
+         </td>
+      </tr>
+      
+            </swe:for-each>
+   </swe:for-each>
+ 
+
+</table>
+
+</div>
+
+<!-- Template End: eCfgGroupSummaryJS.swt -->

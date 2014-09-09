@@ -1,0 +1,15 @@
+<!-- Template Start: CUTCCAppletPlaybarBottom_Configurator.swt -->
+
+<!-- 8 pt space above bottom playbar-->
+<table valign="top" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr><td style="background-color:#ffffff;"><img src="images/spacer.gif" width="1" height="8" alt=""></td></tr>
+</table>
+
+<swe:include file="CUTCCAppletPlaybarButtons_Configurator.swt"/>
+
+<!-- 1 pt rule below the bottom playbar -->
+<table valign="top" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr><td style="background-color:#cccccc;"><img src="images/spacer.gif" width="1" height="1" alt=""></td></tr>
+</table>
+
+<!-- Template End: CUTCCAppletPlaybarBottom_Configurator.swt -->

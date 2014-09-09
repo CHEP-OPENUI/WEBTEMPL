@@ -1,0 +1,30 @@
+<!--  Template Start: dCCFormButtonsTop.swt -->
+
+	<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">		
+		<!-- button row-->
+		<tr class="AppletButtons">
+			<td><img src="images/spacer.gif" height="22" width="10" alt=""></td>
+			<td colspan="2">
+				<table datatable="0" summary="" cellpadding="2" cellspacing="0" border="0">
+					<tr class="AppletButtons">							
+						<swe:include file="dCCButtons_Form.swt"/>											
+
+						<td><swe:include file="CCTogglebar_drop.swt"/></td>			
+					</tr>
+				</table>		
+			</td>		
+			
+			<td align="right" width="100%">
+				<table datatable="0" summary="" cellpadding="2" cellspacing="0" border="0">
+					<tr class="AppletButtons">	
+						<td width="100%"><img src="images/spacer.gif" valign="top" width="1" height="1" alt=""></td>		
+						<swe:include file="CCRecordNav.swt"/>	
+						<swe:include file="CCFormButtonsTopRight.swt"/>
+					</tr>
+				</table>		
+			</td>			
+		</tr>
+	
+	</table>
+	
+<!--  Template End: dCCFormButtonsTop.swt -->	

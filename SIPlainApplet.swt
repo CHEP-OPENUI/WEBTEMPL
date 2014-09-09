@@ -1,0 +1,18 @@
+<!-- Template Start SIPlainApplet.swt -->
+<swe:error>
+	<table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="4" cellspacing="0" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/><br>&nbsp;</td></tr></table>
+</swe:error>	
+<table datatable="0" summary="" valign="top" width="100%"  cellpadding="2" cellspacing="0" border="0">
+	<swe:for-each-row>
+	<tr>
+		<td class="Row2">
+			<swe:for-each count="10" iteratorName="CurrentId" startValue="501">
+			<swe:control id="swe:CurrentId">
+				<swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/>
+			</swe:control>
+			</swe:for-each>
+		</td>
+	</tr>
+	</swe:for-each-row>
+</table>
+<!-- Template End SIPlainApplet.swt -->

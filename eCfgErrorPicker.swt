@@ -1,0 +1,20 @@
+<!-- Template Start: eCfgErrorPicker.swt -->
+
+<table datatable="0" summary="">
+   <swe:error>
+      <tr>
+         <td colspan="4" class="FormInstruct">
+            <table datatable="0" summary="" cellpadding="4" cellspacing="0" border="0">
+               <tr>
+                  <td class="error">
+                     <swe:this property="FormattedHtml"/>
+                     <br>&nbsp;</br>
+                  </td>
+               </tr>
+            </table>
+         </td>
+      </tr>											
+   </swe:error>	
+</table>
+
+<!-- Template End: eCfgErrorPicker.swt -->

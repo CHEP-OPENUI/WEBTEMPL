@@ -1,0 +1,18 @@
+<!-- Template Start: dCCAppletListCategorizedBullet.swt -->
+
+<span class="AppletStyle4">
+	<swe:form>
+
+		<table datatable="0" summary="" width="100%" cellpadding="1" cellspacing="0" border="0" align="center"><tr><td class="AppletBorder">
+	
+			<table datatable="0" summary="" class="AppletBack" valign="top" width="100%" cellpadding="2" cellspacing="0" border="0">
+				   <swe:include file="dCCListCategorized.swt"/>
+			</table>
+	
+		</td></tr></table>
+
+	</swe:form>
+</span>
+
+
+<!-- Template End: dCCAppletListCategorizedBullet.swt -->

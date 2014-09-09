@@ -1,0 +1,166 @@
+<!-- Template Start: SISOMeCfgObj_TextPrice.swt -->
+<SCRIPT>
+   var iNumPortContents = 0;
+</SCRIPT>
+<ul type="circle" >
+   <li>
+      <swe:control id="swe:IncId" CfgFieldName="CxObjName" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>
+      <swe:control id="swe:IncId+2000" CfgFieldName="RequireMoreChild" CfgUIControl="RequireMoreChild" property="FormattedHtml" />
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <swe:control id="Quantity" CfgUIControl="lblQuantity" property="DisplayName" />&nbsp;
+      <swe:control id="Colon" CfgUIControl="lblColon" property="DisplayName" />&nbsp;
+      <swe:control id="swe:IncId+1000" CfgFieldName="Quantity" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" />
+      <swe:control id="Comma" CfgUIControl="lblComma" property="DisplayName" />
+      &nbsp;&nbsp;&nbsp;
+      <swe:control id="ListPrice" CfgUIControl="lblListPrice" property="DisplayName" />&nbsp;
+      <swe:control id="Colon" CfgUIControl="lblColon" property="DisplayName" />&nbsp;
+      <swe:control id="swe:IncId+2200"  CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" CfgFieldName="Original List Price" DataType="DTYPE_CURRENCY" />
+      <swe:control id="Comma" CfgUIControl="lblComma" property="DisplayName" />
+      &nbsp;&nbsp;&nbsp;
+      <swe:control id="YourPrice" CfgUIControl="lblYourPrice" property="DisplayName" />&nbsp;
+      <swe:control id="Colon" CfgUIControl="lblColon" property="DisplayName" />&nbsp;
+      <swe:control id="swe:IncId+3000"  CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" CfgFieldName="Current Price" DataType="DTYPE_CURRENCY" />
+      &nbsp;&nbsp;&nbsp;
+      <swe:control id="TierPrice" CfgUIControl="lblTierPrice" property="DisplayName" />&nbsp;
+      <swe:control id="Colon" CfgUIControl="lblColon" property="DisplayName" />&nbsp;
+      <swe:control id="swe:IncId+3500"  CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" CfgFieldName="Tier Price Info" DataType="DTYPE_TEXT" />
+      &nbsp;&nbsp;&nbsp;
+      <swe:control id="UnitOfMeasure" CfgUIControl="lblUnitOfMeasure" property="DisplayName" />&nbsp;
+      <swe:control id="Colon" CfgUIControl="lblColon" property="DisplayName" />&nbsp;
+      <swe:control id="swe:IncId+4000"  CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" CfgFieldName="Unit of Measure" DataType="DTYPE_TEXT" />
+      <swe:control id="Comma" CfgUIControl="lblComma" property="DisplayName" />
+      &nbsp;&nbsp;&nbsp;
+      <swe:control id="ServiceId" CfgUIControl="lblServiceId" property="DisplayName" />&nbsp;
+      <swe:control id="Colon" CfgUIControl="lblColon" property="DisplayName" />&nbsp;
+      <swe:control id="swe:IncId+5000"  CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" CfgFieldName="Service Id" DataType="DTYPE_TEXT" />
+      <swe:control id="Comma" CfgUIControl="lblComma" property="DisplayName" />
+      &nbsp;&nbsp;&nbsp;
+      <swe:control id="ServicePoint" CfgUIControl="lblServicePoint" property="DisplayName" />&nbsp;
+      <swe:control id="Colon" CfgUIControl="lblColon" property="DisplayName" />&nbsp;
+      <swe:control id="swe:IncId+6000"  CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" CfgFieldName="Service Point Id" DataType="DTYPE_ID" />
+      <swe:control id="Comma" CfgUIControl="lblComma" property="DisplayName" />
+    </li>
+   <ul type="disc" >
+      <swe:for-each id="100" CfgLoopType="Attribute" startValue="1000" count="Dynamic" iteratorName="AttId">
+         <SCRIPT>
+         
+            if ( 0 == iNumPortContents )
+            {
+               var sAttributes = '<swe:control id="Attribute" CfgUIControl="lblAttribute" property="DisplayName" />';
+               document.write ( '<li>'+ sAttributes + '</li>' );
+               document.write ( '<ul type = \"squre\" >' );
+               iNumPortContents ++;
+            }
+         </SCRIPT>
+         
+         <li>
+            <swe:control id="swe:AttId" CfgFieldName="AttName" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>
+            &nbsp;
+            <swe:control id="Colon" CfgUIControl="lblColon" property="DisplayName" />
+            &nbsp;
+            <swe:control id="swe:AttId+100" CfgFieldName="AttValue" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>
+         </li>
+      </swe:for-each>
+      
+      <SCRIPT>
+         if( iNumPortContents > 0 )
+         {
+            document.write ( '</ul>' );
+            iNumPortContents = 0;
+         }
+      </SCRIPT>
+
+      <swe:for-each id="12" CfgLoopType="Port" startValue="2000" count="Dynamic" iteratorName="PortId">
+         <SCRIPT>
+            if ( 0 == iNumPortContents )
+            {
+               var sRelationships = '<swe:control id="Relationship" CfgUIControl="lblRelationship" property="DisplayName" />';
+               document.write ( '<li>'+ sRelationships + '</li>' );
+
+               document.write ( '<ul type = \"squre\" >' );
+            }
+         </SCRIPT>
+
+         <li>
+            <swe:control id="swe:PortId+1000" CfgFieldName="CxPortName" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>
+            <swe:control id="swe:PortId+100" CfgFieldName="RequireMoreChild" CfgUIControl="RequireMoreChild" property="FormattedHtml" />
+         </li>
+         
+         <swe:for-each id="500" CfgLoopType="Children" startValue="1500" count="Dynamic" iteratorName="101Id">
+            <swe:include id="swe:RecursiveChild" CfgHtmlType="eCfgObj_TextPrice.swt" CfgNodeType="Unknown" />
+         </swe:for-each>
+         
+         <SCRIPT>
+            iNumPortContents ++;
+         </SCRIPT>
+      </swe:for-each>
+      
+      <SCRIPT>
+         if( iNumPortContents > 0 )
+         {
+            document.write ( '</ul>' );
+            iNumPortContents = 0;
+         }
+      </SCRIPT>
+
+      <swe:for-each id="130" CfgLoopType="LinkedItem" startValue="3000" count="Dynamic" iteratorName="LinkedItemId">
+         
+         <SCRIPT>
+            if ( 0 == iNumPortContents )
+            {
+               var sLinkedItems = '<swe:control id="LinkedItem" CfgUIControl="lblLinkedItem" property="DisplayName" />';
+               document.write ( '<li>'+ sLinkedItems + '</li>' );
+               document.write ( '<ul type = \"squre\" >' );
+               iNumPortContents ++;
+            }
+         </SCRIPT>
+         
+         <li>
+            <swe:control id="swe:LinkedItemId" CfgFieldName="CxLnkItmName" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>
+            &nbsp;
+            <swe:control id="Colon" CfgUIControl="lblColon" property="DisplayName" />
+            &nbsp;
+            <swe:control id="swe:ResourceId+100" CfgFieldName="CxLnkItmValue" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" />
+         </li>
+      </swe:for-each>
+
+      <SCRIPT>
+          if( iNumPortContents > 0 )
+          {
+             document.write ( '</ul>' );
+             iNumPortContents = 0;
+          }
+      </SCRIPT>
+         
+      <swe:for-each id="140" CfgLoopType="Resource" startValue="4000" count="Dynamic" iteratorName="ResourceId">
+   
+         <SCRIPT>
+            if ( 0 == iNumPortContents )
+            {
+               var sResources = '<swe:control id="Resource" CfgUIControl="lblResource" property="DisplayName" />';
+               document.write ( '<li>'+ sResources + '</li>' );
+               document.write ( '<ul type = \"squre\" >' );
+               iNumPortContents ++;
+            }
+         </SCRIPT>
+         
+         <li>
+            <swe:control id="swe:ResourceId" CfgFieldName="CxResourceName" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>
+            &nbsp;
+            <swe:control id="Colon" CfgUIControl="lblColon" property="DisplayName" />
+            &nbsp;
+            <swe:control id="swe:ResourceId+100" CfgFieldName="CxResourceValue" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>
+         </li>
+      </swe:for-each>
+      
+      <SCRIPT>
+         if( iNumPortContents > 0 )
+         {
+            document.write ( '</ul>' );
+            iNumPortContents = 0;
+         }
+      </SCRIPT>
+   </ul>
+</ul>
+
+<!-- Template End: SISOMeCfgObj_TextPrice.swt -->

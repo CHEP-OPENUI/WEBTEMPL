@@ -1,0 +1,77 @@
+<swe:switch>
+  <swe:case condition="Web Engine User Agent, TestCapability, WirelessStyle:WML">
+    <swe:xsl-stylesheet name="SWLSDetailApplet_wml.xsl" mode="process"/>
+  </swe:case>
+  <swe:case condition="Web Engine User Agent, TestCapability, WirelessStyle:CHTML">
+    <swe:xsl-stylesheet name="SWLSDetailApplet_chtml.xsl" mode="process"/>
+  </swe:case>
+  <swe:case condition="Web Engine User Agent, TestCapability, WirelessStyle:XHTML">
+    <swe:xsl-stylesheet name="SWLSDetailApplet_1c_xhtml.xsl" mode="process"/>
+  </swe:case>
+  <swe:default>
+    <swe:xsl-stylesheet name="SWLSDetailApplet_2c_html.xsl" mode="process"/>
+  </swe:default>
+</swe:Switch>
+
+<swe:threadbar>
+  <swe:for-each-thread>
+    <span class="threadbar">
+      <swe:threadlink property="FormattedHtml">
+        <swe:this property="Title"/>
+      </swe:threadlink>
+    </span>
+  </swe:for-each-thread>
+</swe:threadbar>
+
+<swe:error property="FormattedHtml"/>
+
+<!-- Start Detail Template Body -->
+<!-- reserved for Applet Title -->
+<b>
+<swe:control id="100" hintMapType="Control">
+  <swe:this property="DisplayName" hintText="Applet Title"/>
+</swe:control>
+</b>
+
+<!-- reserved for Applet Title with data -->
+<b>
+<swe:control id="1" hintMapType="FormItem">
+  <swe:this property="FormattedHtml" hintText="Applet Title with data"/>
+</swe:control>
+</b>
+
+<!-- reserved for controls with link -->
+<swe:for-each count=8 iteratorName="CurrentId" startValue="2">
+  <swe:control id="swe:CurrentId" hintMapType="Control">
+    <swe:this property="FormattedHtml" hintText="InvokeMethod"/>
+  </swe:control>
+</swe:for-each>
+
+<!-- reserved for '- - - -' separator line -->
+<swe:control id="1000" hintMapType="Control">
+  <swe:this property="DisplayName" hintText="Label"/>
+</swe:control>
+
+<swe:for-each count=29 iteratorName="CurrentId" startValue="11">
+  <!-- reserved for labels -->
+  <swe:control id="swe:CurrentId+100" hintMapType="Control">
+    <swe:this property="DisplayName" hintText="Label"/>
+  </swe:control>
+  <!-- reserved for form items -->
+  <swe:control id="swe:CurrentId" hintMapType="FormItem">
+    <swe:this property="FormattedHtml" hintText="FormItem"/>
+  </swe:control>
+</swe:for-each>
+
+<!-- reserved for '- - - -' separator line -->
+<swe:control id="2000" hintMapType="Control">
+  <swe:this property="DisplayName" hintText="Label"/>
+</swe:control>
+
+<!-- reserved for controls with link -->
+<swe:for-each count=10 iteratorName="CurrentId" startValue="41">
+  <swe:control id="swe:CurrentId" hintMapType="Control">
+    <swe:this property="FormattedHtml" hintText="InvokeMethod"/>
+  </swe:control>
+</swe:for-each>
+<!-- End Detail Template Body -->

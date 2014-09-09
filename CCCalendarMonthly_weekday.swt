@@ -1,0 +1,50 @@
+<!-- Start of CCCalendarMonthly_weekday.swt-->
+
+	   		<td valign="top" width="17%" height="19%" class="calendarDay">
+				<table datatable="0" summary="" width="100%" height="10" border="0" cellspacing="0" cellpadding="0">
+					<swe:calendarCurrentDayHeader><tr class="CalendarDayBarDark"></swe:calendarCurrentDayHeader>
+					<swe:calendarNotCurrentDayHeader><tr class="CalendarDayBar"></swe:calendarNotCurrentDayHeader>
+						<!-- Date and New Appt-->
+						<td>&nbsp;</td>
+						<td valign="top" width="100%"><B><swe:this property="Interval"/></B></td>
+						<td class="printHide"><!-- New Appt bitmap -->&nbsp;&nbsp;<swe:control id="141" property="FormattedHtml"/></td>
+						<td>&nbsp;</td>
+					</tr>
+				</table>
+				
+
+				<table datatable="0" summary="" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0">
+					<!-- Start of Activity Loop -->
+					<swe:calendarActivityLoop>
+					<swe:calendarActivity>
+						
+						<tr class="CalendarDay">
+							<td dir="ltr" nowrap><swe:this property="StartTime"/></td>
+
+							<td nowrap>
+                                                        <div style="width:112;overflow:hidden;">
+								<swe:this property="Description"/>
+                                                        </div>
+							</td>
+						</tr>						
+
+					</swe:calendarActivity>
+					<swe:calendarMultiDayActivity>
+						<tr class="calendarMultiDayActivity">
+							<td dir="ltr" nowrap><swe:this property="StartTime"/></td>
+
+							<td nowrap>
+                                                        <div style="width:112;overflow:hidden;">
+								<swe:this property="Description"/>
+                                                        </div>
+							</td>
+						</tr>						
+					</swe:calendarMultiDayActivity>
+					</swe:calendarActivityLoop>
+					<!-- End of Activity Loop -->
+					
+				</table>
+
+			</td>
+			<!-- End of Cell Data -->
+<!-- End of CCCalendarMonthly_weekday.swt-->

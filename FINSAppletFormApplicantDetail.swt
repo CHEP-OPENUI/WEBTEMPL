@@ -1,0 +1,129 @@
+<!-- Template Start: FINSApppletFormApplicantDetail.swt -->
+
+<!--
+A FINS specialized applet form web template:
+-------------------------------------------------------------------------------------
+| Label | (Label1)Field1  (Label2)Field2  (Label3)Field3  (Label4)Field4   Label5   |
+-------------------------------------------------------------------------------------
+-->
+
+<swe:include file="CCApplet_NamedSpacer.swt"/>	
+<swe:form>
+
+<swe:include file="CCTitle_Named.swt"/>
+<swe:include file="CCFormButtonsTop.swt"/>
+
+
+<!-- Template Body -->
+<span class="swe:this.SelectStyle">	
+<table width="100%" cellpadding="2" cellspacing="0" border="0" align="center" class="AppletBack">
+   <tr><td class="AppletHIFormBorder">    
+        <swe:error type="Popup">
+	   <table class="AppletBack" width="100%" cellpadding="0" cellspacing="5" border="0">
+               <tr>  
+                 <td class="error"> <swe:this property="FormattedHtml"/> </td>
+               </tr>
+           </table>
+       </swe:error>
+    </td> <tr>
+
+    <!-- Inside-applet help text -->   
+    <swe:control id="91">
+        <tr> <td>   
+          <table class="AppletBack" width="100%" cellpadding="0" cellspacing="5" border="0">
+	       <tr> <td><swe:this property="DisplayName" hintText="Inside Applet Help Text"/> </td></tr>
+	   </table>
+        </td> </tr>
+    </swe:control>
+    
+
+   <!-- ******* FINS Specialized Body     ************ -->
+ 
+  <tr> <td>
+
+   <table class="AppletBack" width="100%" cellpadding="0" cellspacing="0" border="0">
+  
+   <swe:for-each startValue="3000" count="20" iteratorName="currentId">
+
+   <tr align = "left">
+  
+      <!-- Each Row's header label -->
+      <td nowrap valign="center" align="right">
+   	  <swe:control id="swe:currentId" hintMapType="FormItem">
+              <span class="mceLabel" align="swe:this.TextAlignment">				
+	 	<swe:this property="DisplayName" hintText="Label"/>
+	      </span>			
+	  </swe:control>
+      </td> 
+		
+      <td nowrap align="left">
+      <table><tr> 
+     
+       <!-- Field 1 -->
+       <swe:control id="swe:currentId+100" hintMapType="FormItem">
+          <td> <span class="scLabel" align="swe:this.TextAlignment">
+                 <swe:this property="DisplayName" hintText="Label"/>
+          </span> </td>
+	  <td><span class="mceField" align="swe:this.TextAlignment">
+                 <swe:this property="FormattedHtml" hintText="Field"  hintMapLabelId="swe:currentId+100"/>
+ 	  </span></td>
+       </swe:control>
+		 
+
+       <!-- Field 2 -->
+       <swe:control id="swe:currentId+200" hintMapType="FormItem">
+          <td> <span class="scLabel" align="swe:this.TextAlignment">&nbsp;
+                 <swe:this property="DisplayName" hintText="Label"/>
+          </span> </td>
+	  <td><span class="mceField" align="swe:this.TextAlignment">
+                 <swe:this property="FormattedHtml" hintText="Field"  hintMapLabelId="swe:currentId+200"/>
+ 	  </span></td>
+       </swe:control>
+
+       <!-- Field 3 -->
+       <swe:control id="swe:currentId+300" hintMapType="FormItem">
+          <td> <span class="scLabel" align="swe:this.TextAlignment">&nbsp;
+                 <swe:this property="DisplayName" hintText="Label"/>
+          </span> </td>
+	  <td><span class="mceField" align="swe:this.TextAlignment">
+                 <swe:this property="FormattedHtml" hintText="Field"  hintMapLabelId="swe:currentId+300"/>
+ 	  </span></td>
+       </swe:control>
+
+       <!-- Field 4 -->
+       <swe:control id="swe:currentId+400" hintMapType="FormItem">
+          <td> <span class="scLabel" align="swe:this.TextAlignment">&nbsp;
+                 <swe:this property="DisplayName" hintText="Label"/>
+          </span> </td>
+	  <td><span class="mceField" align="swe:this.TextAlignment">
+                 <swe:this property="FormattedHtml" hintText="Field"  hintMapLabelId="swe:currentId+400"/>
+ 	  </span></td>
+       </swe:control>
+
+     <!-- End Label -->         					
+     <swe:control id="swe:currentId+500" hintMapType="FormItem">
+          <td> <span class="mceLabel" align="swe:this.TextAlignment"> &nbsp;
+		  <swe:this property="DisplayName" hintText="Label"/>
+          </td> </span>	
+     </swe:control>
+
+     </tr></table>
+
+     </td>
+   
+   </tr>	   
+   </swe:for-each>
+   
+   </table>	  
+   </td></tr>
+   
+    <!-- ******* FINS Specialized Body End ************ -->
+
+
+				
+</table>
+
+</span>			
+</swe:form>
+
+<!-- Template End: FINSApppletFormApplicantDetail.swt -->

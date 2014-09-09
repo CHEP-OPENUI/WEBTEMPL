@@ -1,0 +1,34 @@
+<!-- Template Start: CCPopupList.swt -->
+<swe:form>	
+	<table width="100%" cellspacing="0" cellpadding="0" border="0" align="center"><tr valign="top"><td class="AppletStylePopup">
+		<swe:include file="CCPopupListButtonsTop.swt"/>
+		<swe:error>
+			<table class="AppletBack" width="100%" cellpadding="4" cellspacing="0" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/><br>&nbsp;</td></tr></table>
+		</swe:error>	
+		<swe:list>
+			<table valign="top" width="100%" cellpadding="2" cellspacing="0" border="1" borderColor="#cccccc">
+				<swe:include file="CCListHeader.swt"/>
+				<swe:include file="CCListBody.swt"/>
+			</table>
+		</swe:list>
+		<!--button row-->
+		<table width="100%" cellpadding="2" cellspacing="0" border="0"  bgcolor="#cccccc"><tr>
+					<swe:control id="190"><!-- optional control  -->
+				<td nowrap>
+					<swe:this property="FormattedHtml" hintMapType="Control"/>
+				</td>
+			</swe:control>
+			<swe:control id="191"><!-- optional control  -->
+				<td nowrap>
+					<swe:this property="FormattedHtml" hintMapType="Control"/>
+				</td>
+			</swe:control>
+	
+			<td width="100%"><img src="images/spacer.gif" valign="top" width="10" height="20" alt=""></td>
+			<swe:include file="CCButtons_Popup.swt"/>
+			<td><img src="images/spacer.gif" valign="top" width="10" height="20" alt=""></td>									
+		</tr></table>				
+	</td></tr></table>
+</swe:form>	
+<swe:scripts/>
+<!-- Template End: CCPopupList.swt -->

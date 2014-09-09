@@ -1,0 +1,19 @@
+<!-- Template Start: dCCAppletListCategorizedBulletTab.swt -->
+<swe:include file="CCApplet_Spacer.swt"/>
+
+<span class="AppletStyle4 siebui-catbulletlist">
+   <swe:form>
+
+      <swe:include file="dCCTitle.swt"/>
+      
+      <table datatable="0" summary="" width="100%"><tr>
+            <swe:include file="dCCButtons_List.swt"/>
+        </tr></table>
+         
+		<ul class="siebui-bullet-list">
+			<swe:include file="dCCListCategorized.swt"/>
+		</ul>
+
+   </swe:form>
+</span>
+<!-- Template End: dCCAppletListCategorizedBulletTab.swt -->

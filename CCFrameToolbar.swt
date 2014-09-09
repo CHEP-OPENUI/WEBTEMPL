@@ -1,0 +1,38 @@
+<!-- Template Start: CCFrameToolbar.swt -->
+
+<HTML dir="swe:dir">
+<head>
+
+<swe:include-script file="objbase.js"/>
+<swe:include-script file="commToolbar_shared.js"/>
+
+<title><swe:this property="Title"/></title>
+<swe:include file="CCStylesChoice.swt"/>
+
+</head>
+
+<BODY class="toolbar" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" onResize="OnResize()">
+<swe:switch>
+ <swe:case condition="Web Engine State Properties, IsAccessibleEnchanced">
+	<swe:include-script file="commToolbar.js"/>
+	<span id="HTMLToolbar">&nbsp;</span>
+	<SCRIPT LANGUAGE=JavaScript>RegisterCallbackFunction(); Initiate_HTMLToolbar("HTMLToolbar");</SCRIPT>
+	<swe:toolbar name="Communication" javaapplet="true" width="1" height="0" bgcolor="#ccccff" />
+ </swe:case>
+ <swe:case condition="HTML FS Barcoding Tool Bar, IsBarcodeEnabled">
+	<swe:toolbar name="HTML Barcode" bgcolor="#ccccff">
+		<swe:toolbaritem property="FormattedHtml"/>
+	</swe:toolbar>
+ </swe:case>
+ <swe:default>
+	<swe:toolbar name="Communication" javaapplet="true" width="2048" height="31" bgcolor="#efefef" />
+ </swe:default>
+</swe:switch>
+
+<swe:scripts />
+<script for=window event=onresize>OnResize_IE();</script>
+
+</BODY>
+</HTML>
+
+<!-- Template End: CCFrameToolbar.swt -->

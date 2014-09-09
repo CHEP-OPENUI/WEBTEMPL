@@ -1,0 +1,88 @@
+<!-- Template Start: dCCListBodyImgBulletDetailed.swt -->
+<swe:for-each-row count="10">
+
+<tr valign="top">
+    <td width="1"><swe:control id="501"><swe:this property="FormattedHtml" hintText="Small Image (30x30)"/></swe:control>&nbsp;</td>
+	<td valign="top">
+	
+		<table datatable="0" summary="" width="100%" border="0" cellpadding="2"  cellspacing="0">
+			<swe:control id="502">
+				<tr><td width="100%" colspan="4" class="dCCItemTitle"><swe:this property="FormattedHtml" hintText="Item Name" hintMapType="ListItem"/></td></tr>
+			</swe:control>
+			
+			<swe:control id="503">
+				<tr><td width="100%" colspan="4" class="dCCItemValue"><swe:this property="FormattedHtml" hintText="Item Name" hintMapType="ListItem"/></td></tr>
+			</swe:control>			
+			
+			<swe:for-each count="2" startValue="504" iteratorName="currentId">
+				<swe:control id="swe:currentId">
+					<tr><td colspan="1" class="dCCItemLabel"><swe:this property="DisplayName" hintText="Label"/>:</td><td width="100%" colspan="3" class="dCCItemValue"><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></td></tr>
+				</swe:control>
+			</swe:for-each>
+
+			<tr><td colspan="4"><img src="images/spacer.gif" align="top" alt="">
+				<table datatable="0" summary="" border="0" cellpadding="0"  cellspacing="4">
+				<swe:for-each count="3" startValue="510" iteratorName="currentId">
+					<tr>
+						<swe:control id="swe:currentId">
+							<td colspan="1" class="dCCItemLabel"><swe:this property="DisplayName" hintText="Label"/>:</td><td class="dCCItemValue"><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></td>
+						</swe:control>
+						<swe:control id="swe:currentId+5">
+							<td colspan="1" class="dCCItemLabel"><swe:this property="DisplayName" hintText="Label"/>:</td><td class="dCCItemValue"><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></td>
+						</swe:control>
+					</tr>
+				</swe:for-each>							
+				</table>
+			</td></tr>
+			
+			<tr><td colspan="4">
+				<table datatable="0" summary="" border="0" cellpadding="0"  cellspacing="0">
+					<tr>
+						<swe:control id="142">
+						<!-- Optional, 142 -->
+						  <td align="center"><swe:this property="FormattedHtml"  hintMapType="Control"/></td>
+						  <td>&nbsp;</td>
+						</swe:control>
+						
+						<swe:control id="143">
+						<!-- Optional, 143 -->
+						  <td align="center"><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+						  <td>&nbsp;</td>
+						</swe:control>
+						
+						<swe:control id="145">
+						<!-- Optional, 145 -->
+						  <td align="center"><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+						  <td>&nbsp;</td>
+						</swe:control>
+						
+						<swe:control id="146">
+						<!-- Optional, 146 -->
+						  <td align="center"><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+						  <td>&nbsp;</td>
+						</swe:control>
+						
+						<swe:control id="157">
+						<!-- Optional, 157 -->
+						  <td align="center"><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+						  <td>&nbsp;</td>
+						</swe:control>
+						
+						<swe:control id="158">
+						<!-- Optional, 158 -->
+						  <td align="center"><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+						  <td>&nbsp;</td>
+						</swe:control>
+					</tr>					
+				</table>
+			</td></tr>
+			
+		</table>
+
+	</td>
+</tr>
+
+<tr><td colspan="2"><img src="images/spacer.gif" width="100%" height="3" alt=""></td></tr>
+
+</swe:for-each-row>
+<!-- Template End: dCCListBodyImgBulletDetailed.swt -->

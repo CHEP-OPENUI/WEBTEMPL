@@ -1,0 +1,14 @@
+<!-- Template Start TePortalURLApplet.swt -->
+
+<swe:layout viewDisplayMode="Show" appletDisplayMode="Show">
+   <swe:control id="1100">
+        <div class=CmdTxt>
+            <swe:this property="FormattedHtml" hintText="Outside Applet Help Text" hintMapType="Control"/>
+        </div>
+    </swe:control>
+   <swe:layout viewDisplayMode="Show" appletDisplaySize="Max">
+        <swe:include file="TSIPlainApplet.swt"/>
+   </swe:layout>
+</swe:layout>
+
+<!-- Template End TePortalURLApplet.swt -->

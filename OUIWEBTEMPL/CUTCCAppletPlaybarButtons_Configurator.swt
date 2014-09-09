@@ -1,0 +1,46 @@
+<!-- Template Start: CUTCCAppletPlaybarButtons_Configurator.swt -->
+<!-- Oliver: code redesign -->
+
+<!-- Buttons (Optional, Optional) -->
+
+<swe:control id="147">
+<!-- Save Button --><span class="siebui-applet-button"><swe:this property="FormattedHtml" hintText="Save" hintMapType="Control"/></span>
+</swe:control>
+
+<span class="siebui-button-sep-10"></span>
+
+<swe:control id="148">
+<!-- Verify Button --><span class="siebui-applet-button"><swe:this property="FormattedHtml" hintText="Verify" hintMapType="Control"/></span>
+</swe:control>
+
+<swe:control id="149">
+<!-- Done Button --><span class="siebui-applet-button"><swe:this property="FormattedHtml" hintText="Done" hintMapType="Control"/></span>
+</swe:control>
+
+<span class="siebui-button-sep-10"></span>
+
+<swe:control id="150">
+<!-- Pause Button --><span class="siebui-applet-button"><swe:this property="FormattedHtml" hintText="Pause" hintMapType="Control"/></span>
+</swe:control>
+
+<span class="siebui-button-sep-10"></span>
+
+<swe:control id="151">
+<!-- Previous Button --><span class="siebui-applet-button"><swe:this property="FormattedHtml" hintText="Previous" hintMapType="Control"/></span>
+</swe:control>
+
+<swe:control id="152">
+<!-- Next Button --><span class="siebui-applet-button"><swe:this property="FormattedHtml" hintText="Next" hintMapType="Control"/></span>
+</swe:control>
+
+<swe:control id="153">
+<!-- Submit Button --><span class="siebui-applet-button"><swe:this property="FormattedHtml" hintText="Submit" hintMapType="Control"/></span>
+</swe:control>
+
+<span class="siebui-button-sep-10"></span>
+
+<swe:control id="154">
+<!-- Cancel Button --><span class="siebui-applet-button"><swe:this property="FormattedHtml" hintText="Cancel" hintMapType="Control"/></span>
+</swe:control>
+
+<!-- Template End: CUTCCAppletPlaybarButtons_Configurator.swt -->

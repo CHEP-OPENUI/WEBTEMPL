@@ -1,0 +1,13 @@
+<!-- Template Start: TCCAppletFormGridLayoutNoMenu.swt -->
+
+<div class="siebui-Common siebui-csim-submitorder siebui-submitorder-view">
+    <swe:for-each startValue="1000" count="5" iteratorName="currentId">
+        <swe:control id="swe:currentId" hintMapType="FormItem">
+            <span class="siebui-csim-submitorder-text siebui-submitorder-view-text">
+                <swe:this property="FormattedHtml" hintMapType="Control"/>
+            </span>
+        </swe:control>
+    </swe:for-each>
+</div>
+
+<!-- Template End: TCCAppletFormGridLayoutNoMenu.swt -->

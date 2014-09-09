@@ -1,0 +1,22 @@
+<!-- TemplateStart: SISwoopTitle.swt -->
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+ <tr valign="top">
+ <td class="AppletStyle1">
+ <table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+  <tr class="AppletBlank">
+   <td class="AppletTitle" valign="top" width="8"><img src="images/aplt_opn_d.gif" width="8" height="10" border="0" alt="" /></td>
+   <td colspan="5">
+    <table datatable="0" summary="" cellspacing="0" cellpadding="0" border="0">
+     <tr>
+      <td class="AppletTitle"><nobr><swe:this property="Title"/></nobr></td>
+      <td class="AppletTitle" width="22"><img src="images/aplt_curve_d.gif" height="22" width="22" border="0" alt=""></img></td>	
+      <td width="100%" class="AppletBlank" align="right"><swe:image name="LOGO_EBRIEF" category="HTML Control Icons" width="220" height="22" border="0"/></td>
+     </tr>
+    </table>
+   </td>		
+  </tr>
+ </table>
+ </td>		
+ </tr>
+</table>
+<!-- Template End: SISwoopTitle.swt -->

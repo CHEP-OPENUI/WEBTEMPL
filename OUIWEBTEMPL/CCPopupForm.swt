@@ -1,0 +1,253 @@
+<!-- Template Start: CCPopupForm.swt -->
+<!-- Oliver: slight code redesign, fixes -->
+
+<swe:include file="CCStylesChoice.swt"/>
+	
+<swe:control id="1500" hintText="Required Legend" hintMapType="Control">	
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="2" border="0"><tr>	
+<td nowrap valign="absmiddle" class="legend" align="right"><img src="images/icon_req.gif"><swe:this property="DisplayName"/></td>
+</tr></table>	
+</swe:control>	
+
+<swe:form>	
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+	<tr valign="top">
+		<td class="AppletStylePopup">
+				<table datatable="0" summary="" class="swe:class AppletBack" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0">
+						<tr valign="top">
+							<td>
+								<swe:error>
+									<table datatable="0" summary="" class="swe:class AppletBack" _width="100%" cellpadding="2" cellspacing="0" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/></td></tr></table>
+								</swe:error>
+								<swe:control id="91">
+						  			<!-- Inside-applet help text -->
+						  			<table datatable="0" summary="" class="swe:class AppletBack" cellpadding="4" cellspacing="0" border="0"><tr><td class="swe:class scField"><swe:this property="DisplayName" hintText="Inside Applet Help Text"/></td></tr></table>
+								</swe:control>	
+								
+
+								<table datatable="0" summary="" width="100%" class="swe:class AppletBack" border="0" cellspacing="2" cellpadding="1" align="center">
+									<swe:for-each startValue="1090" count="10" iteratorName="currentId">										
+										  <swe:control id="swe:currentId+100">				  
+										  <tr valign="top">
+											  <td class="swe:class scLabelRight" nowrap></swe:control>
+												  <swe:control id="swe:currentId+200" property="RequiredIndicator" hintText="Required"/>												  
+												  <swe:control id="swe:currentId+100"><swe:this property="FormattedHtml" hintText="Label"/>													  												  
+											  </td>
+											  <td class="swe:class scField" width="100%"><table datatable="0" summary="" cellpadding="0" cellspacing="0" border="0"><tr>
+											  </swe:control>
+											  <swe:control id="swe:currentId+200"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/></td><td>&nbsp;</td></swe:control>
+											  <swe:control id="swe:currentId+300"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="x"/></td><td>&nbsp;</td></swe:control>
+											  <swe:control id="swe:currentId+400"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="x"/></td><td>&nbsp;</td></swe:control>											  
+											  <swe:control id="swe:currentId+500"><td class="scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="x"/></td><td>&nbsp;</td></swe:control>	
+											  <swe:control id="swe:currentId+600"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="x"/></td><td>&nbsp;</td></swe:control>										  
+	 										  <swe:control id="swe:currentId+700"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="x"/></td><td>&nbsp;</td></swe:control>
+										<swe:control id="swe:currentId+100"></tr></table></td>
+										  </tr>		
+										</swe:control>	
+									</swe:for-each>	
+									<swe:for-each startValue="1100" count="1" iteratorName="currentId">										
+										<swe:control id="swe:currentId+100">				  
+										  <tr valign="top">
+											  <td class="swe:class scLabelRight" nowrap><swe:this property="FormattedHtml" hintText="Label With Rule"/></td>
+											   <td width="100%"><hr size="1"></td>
+										  </tr>
+										</swe:control>	
+									</swe:for-each>	
+								</table>
+							
+								
+								
+								
+								<table datatable="0" summary=""  class="swe:class AppletBack" border="0" cellpadding="0"  cellspacing="0">
+									<tr valign="top">
+										<td>
+											<table datatable="0" summary="" border="0" cellspacing="2" cellpadding="1" align="center">
+											
+												<swe:control id="1001">
+												<tr><td colspan="2"><swe:this property="FormattedHtml" hintText="FormSection" hintMapType="FormSection"/></td></tr>
+												</swe:control>
+											
+												<!-- Begin Loop: Lines 1-10 -->
+												<swe:for-each startValue="1101" count="10" iteratorName="currentId">
+												<!-- New line -->
+													  <swe:control id="swe:currentId+100">				  
+													  <tr valign="top">
+														  <td class="swe:class scLabelRight" nowrap></swe:control>
+															  <swe:control id="swe:currentId+200" property="RequiredIndicator" hintText="Required"/>												  
+															  <swe:control id="swe:currentId+100"><swe:this property="FormattedHtml" hintText="Label"/>													  												  
+														  </td>
+														  <td class="swe:class scField" width="100%"><table datatable="0" summary="" cellpadding="0" cellspacing="0" border="0"><tr>
+														  </swe:control>
+														  <swe:control id="swe:currentId+200"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/></td><td>&nbsp;</td></swe:control>
+														  <swe:control id="swe:currentId+300"><td class="swe:class scField" align="swe:this.TextAlignment" valign="bottom"><swe:this property="FormattedHtml" hintText="x"/></td><td>&nbsp;</td></swe:control>
+														  <swe:control id="swe:currentId+400"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="x"/></td><td>&nbsp;</td></swe:control>											  
+														  <swe:control id="swe:currentId+500"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="x"/></td><td>&nbsp;</td></swe:control>	
+											              <swe:control id="swe:currentId+600"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="x"/></td><td>&nbsp;</td></swe:control>										  
+				 										  <swe:control id="swe:currentId+700"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="x"/></td><td>&nbsp;</td></swe:control>
+													<swe:control id="swe:currentId+100"></tr></table></td>
+													  </tr>
+													</swe:control>				
+												</swe:for-each>
+												<!-- End Loop -->
+												
+												<swe:control id="1002">
+												<tr><td colspan="2"><swe:this property="FormattedHtml" hintText="FormSection" hintMapType="FormSection"/></td></tr>
+												</swe:control>
+												
+												<!-- Begin Loop: Lines 11-15 -->
+												<swe:for-each startValue="1111" count="5" iteratorName="currentId">
+														<swe:control id="swe:currentId+100">				  
+													  	<tr valign="top">
+														  <td class="swe:class scLabelRight" nowrap></swe:control>
+															  <swe:control id="swe:currentId+200" property="RequiredIndicator" hintText="Required"/>												  
+															  <swe:control id="swe:currentId+100"><swe:this property="FormattedHtml" hintText="Label"/>													  												  
+														  </td>
+														  <td class="swe:class scField" width="100%"><table datatable="0" summary="" cellpadding="0" cellspacing="0" border="0"><tr>
+														  </swe:control>
+														  <swe:control id="swe:currentId+200"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/></td><td>&nbsp;</td></swe:control>
+														  <swe:control id="swe:currentId+300"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="x"/></td><td>&nbsp;</td></swe:control>
+														  <swe:control id="swe:currentId+400"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="x"/></td><td>&nbsp;</td></swe:control>											  
+														  <swe:control id="swe:currentId+500"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="x"/></td><td>&nbsp;</td></swe:control>	
+											              <swe:control id="swe:currentId+600"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="x"/></td><td>&nbsp;</td></swe:control>										  
+				 										  <swe:control id="swe:currentId+700"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="x"/></td><td>&nbsp;</td></swe:control>
+													<swe:control id="swe:currentId+100"></tr></table></td>
+													  </tr>
+													</swe:control>				
+												</swe:for-each>
+												<!-- End Loop -->													
+										
+											</table>
+										</td>
+										<td>
+											<table datatable="0" summary="" border="0" cellspacing="2" cellpadding="1">
+											
+												<swe:control id="2001">
+												<tr><td colspan="2"><swe:this property="FormattedHtml" hintText="FormSection" hintMapType="FormSection"/></td></tr>
+												</swe:control>
+												<!-- Begin Loop: Lines 1-10 -->
+												<swe:for-each startValue="2101" count="10" iteratorName="currentId">
+												<!-- New line -->
+													<swe:control id="swe:currentId+100">				  
+												    <tr valign="top">
+													  <td class="swe:class scLabelRight" nowrap></swe:control>
+														  <swe:control id="swe:currentId+200" property="RequiredIndicator" hintText="Required"/>												  
+														  <swe:control id="swe:currentId+100"><swe:this property="FormattedHtml" hintText="Label"/>													  												  
+													  </td>
+													  <td class="swe:class scField" width="100%"><table datatable="0" summary="" cellpadding="0" cellspacing="0" border="0"><tr>
+													  </swe:control>
+														  <swe:control id="swe:currentId+200"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/></td><td>&nbsp;</td></swe:control>
+														  <swe:control id="swe:currentId+300"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="x"/></td><td>&nbsp;</td></swe:control>
+														  <swe:control id="swe:currentId+400"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="x"/></td><td>&nbsp;</td></swe:control>											  
+														  <swe:control id="swe:currentId+500"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="x"/></td><td>&nbsp;</td></swe:control>	
+														  <swe:control id="swe:currentId+600"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="x"/></td><td>&nbsp;</td></swe:control>										  
+				 										  <swe:control id="swe:currentId+700"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="x"/></td><td>&nbsp;</td></swe:control>
+													<swe:control id="swe:currentId+100"></tr></table></td>
+													  </tr>
+													</swe:control>			
+												</swe:for-each>
+												
+												<swe:control id="2002">
+												<tr><td colspan="2"><swe:this property="FormattedHtml" hintText="FormSection" hintMapType="FormSection"/></td></tr>
+												</swe:control>
+												<!-- Begin Loop: Lines 11-15 -->
+												<swe:for-each startValue="2111" count="5" iteratorName="currentId">
+													  <swe:control id="swe:currentId+100">				  
+													  <tr valign="top">
+														  <td class="swe:class scLabelRight" nowrap></swe:control>
+															  <swe:control id="swe:currentId+200" property="RequiredIndicator" hintText="Required"/>												  
+															  <swe:control id="swe:currentId+100"><swe:this property="FormattedHtml" hintText="Label"/>													  												  
+														  </td>
+														  <td class="swe:class scField" width="100%"><table datatable="0" summary="" cellpadding="0" cellspacing="0" border="0"><tr>
+														  </swe:control>
+														  <swe:control id="swe:currentId+200"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/></td><td>&nbsp;</td></swe:control>
+														  <swe:control id="swe:currentId+300"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="x"/></td><td>&nbsp;</td></swe:control>
+														  <swe:control id="swe:currentId+400"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="x"/></td><td>&nbsp;</td></swe:control>											  
+														  <swe:control id="swe:currentId+500"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="x"/></td><td>&nbsp;</td></swe:control>	
+														  <swe:control id="swe:currentId+600"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="x"/></td><td>&nbsp;</td></swe:control>										  
+				 										  <swe:control id="swe:currentId+700"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="x"/></td><td>&nbsp;</td></swe:control>
+													<swe:control id="swe:currentId+100"></tr></table></td>
+													  </tr>
+													</swe:control>			
+												</swe:for-each>		
+												<!-- End Loop -->												
+											</table>
+										</td>		
+									</tr>	
+								</table>
+								
+								
+								
+								<table datatable="0" summary="" class="AppletBack" border="0" cellspacing="2" cellpadding="1" align="center">
+									<swe:for-each startValue="1150" count="1" iteratorName="currentId">										
+										<swe:control id="swe:currentId+100">				  
+										  <tr valign="top">
+											  <td class="swe:class scLabelRight" nowrap><swe:this property="FormattedHtml" hintText="Label With Rule"/></td>
+											  <td width="100%"><hr size="1"></td>
+										  </tr>
+										</swe:control>	
+									</swe:for-each>						
+									<swe:for-each startValue="1151" count="10" iteratorName="currentId">										
+									<swe:control id="swe:currentId+100">				  
+									  <tr valign="top">
+										  <td class="swe:class scLabelRight" nowrap></swe:control>
+											  <swe:control id="swe:currentId+200" property="RequiredIndicator" hintText="Required"/>												  
+											  <swe:control id="swe:currentId+100"><swe:this property="FormattedHtml" hintText="Label"/>													  												  
+										  </td>
+										  <td class="swe:class scField" width="100%"><table datatable="0" summary="" cellpadding="0" cellspacing="0" border="0"><tr>
+										  </swe:control>
+										  <swe:control id="swe:currentId+200"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/></td><td>&nbsp;</td></swe:control>
+										  <swe:control id="swe:currentId+300"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="x"/></td><td>&nbsp;</td></swe:control>
+										  <swe:control id="swe:currentId+400"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="x"/></td><td>&nbsp;</td></swe:control>											  
+										  <swe:control id="swe:currentId+500"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="x"/></td><td>&nbsp;</td></swe:control>	
+										  <swe:control id="swe:currentId+600"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="x"/></td><td>&nbsp;</td></swe:control>										  
+ 										  <swe:control id="swe:currentId+700"><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="x"/></td><td>&nbsp;</td></swe:control>
+										<swe:control id="swe:currentId+100"></tr></table></td>
+										  </tr>		
+										</swe:control>	
+									</swe:for-each>	
+	
+								</table>
+								
+							</td>					
+						</tr>
+				<swe:control id="3100"><tr><td class="swe:class scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="x"/></td></tr></swe:control>
+				</table>
+		</td>
+	</tr>
+	<tr>
+		<td> 
+			<!--button row-->
+            <swe:switch>
+                <swe:case condition="Web Engine State Properties, IsRTL">
+                    <table datatable="0" summary="" width="100%">		
+                        <tr class="AppletButtons test">
+                            <td class="siebui-popup-action siebui-align-right">
+                                <swe:include file="CCButtons_oui.swt"/>		
+                            </td>
+                            <td class="siebui-td-sep10"></td>		
+                            <td class="siebui-popup-action siebui-align-right" width="100%">
+                                <swe:include file="CCButtons_Popup_oui.swt"/>
+                            </td>
+                        </tr>
+                    </table>
+                </swe:case>
+                <swe:default>
+                    <table datatable="0" summary="" width="100%">		
+                        <tr class="AppletButtons test">
+                            <td class="siebui-popup-action siebui-align-right" width="100%">
+                                <swe:include file="CCButtons_oui.swt"/>		
+                            </td>
+                            <td class="siebui-td-sep10"></td>		
+                            <td class="siebui-popup-action siebui-align-right">
+                                <swe:include file="CCButtons_Popup_oui.swt"/>
+                            </td>
+                        </tr>
+                    </table>
+                </swe:default>
+            </swe:switch>	
+		</td>
+	</tr>
+</table>
+</swe:form>	
+<swe:scripts/>
+<!-- Template End: CCPopupForm.swt -->

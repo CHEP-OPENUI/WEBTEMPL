@@ -1,0 +1,28 @@
+<!-- Template Start: TCustomerInteraction_Edit.swt -->
+<swe:form>
+    <div class="swe:this.SelectStyle">  
+        <swe:include file="TCCFormButtonsTopNoMenu.swt"/> 
+        <div class="siebui-table">
+            <swe:for-each startValue="1200" count="5" iteratorName="currentId">
+                <swe:control id="swe:currentId" hintMapType="FormItem">
+                    <div class="siebui-each-tcell">
+                        <span class="mceGridLabel-form" align="swe:this.TextAlignmentLabel">
+                            <swe:this property="DisplayName" hintText="Label"/>
+                        </span>
+                        <span class="mceGridField-form" align="swe:this.TextAlignment">
+                            <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+                        </span>
+                    </div>
+                </swe:control>
+            </swe:for-each>
+            <div class="siebui-each-tcell">                
+                <span class="mceGridLabel-form"></span>
+                <span class="mceGridField-form">
+                    <swe:control id="156"><swe:this property="FormattedHtml" hintMapType="Control"/></swe:control>
+                    <swe:control id="157"><swe:this property="FormattedHtml" hintMapType="Control"/></swe:control>
+                </span>
+            </div>
+        </div>
+    </div>  
+</swe:form>
+<!-- Template End:TCustomerInteraction_Edit.swt -->

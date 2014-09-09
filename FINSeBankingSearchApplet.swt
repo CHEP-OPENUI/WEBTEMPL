@@ -1,0 +1,61 @@
+<!-- Template Start: _TestPickSearchApplet.swt -->
+<swe:form mode="Query">
+
+<!-- add for Title Bar -->
+<!--swe:include file="CCListBasicTitle.swt"/-->
+
+
+<table class="top" bgcolor="#333399" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr class="Top">
+    <td><img src="images/table_corner.gif" width="7" height="22" border="0"></td>
+   <td width="1%" nowrap><font color="#ffffff" class="Top"><swe:control id="900" property="DisplayName"/>&nbsp;</font></td> 
+    <td width="97%" align="center" valign="middle" class="Top">
+      <font color="#ffffff" class="Top">&nbsp;</font>
+    </td>
+
+  </tr>
+</table>
+
+
+<table bgcolor="#cccccc" valign="top" width="100%"  cellpadding="0" cellspacing="0" border="0">
+   <tr>
+  <swe:for-each startValue="3101" count="20" iteratorName="currentId">
+       
+	<td>
+          <!---Label--->
+          &nbsp;<swe:control id="swe:currentId+100">
+                <swe:this property="DisplayName"/>
+          </swe:control>
+	
+     
+	</td>
+   </swe:for-each>
+   </tr>
+
+   <tr>
+   <swe:for-each startValue="3101" count="19" iteratorName="currentId"> 
+	<td>
+          <!---Text Field--->
+          &nbsp;<swe:control id="swe:currentId+200">
+                <swe:this property="FormattedHtml"/>
+          </swe:control> 
+       
+	</td>  
+   </swe:for-each>
+
+   <!----Search Button---->
+        
+	    <td>  <!--- Find --->
+	   	<swe:control id="777">
+        		<swe:this property="FormattedHtml"/>
+      		</swe:control> &nbsp;
+	    </td>
+     </tr>
+</table>
+   
+</swe:form>
+
+   
+<swe:include file="CCAppletListBasic.swt"/> 
+   
+<!-- Template End: _TestPickSearchApplet.swt -->

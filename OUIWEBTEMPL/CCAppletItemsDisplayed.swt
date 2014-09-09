@@ -1,0 +1,90 @@
+<!-- Template Start: CCAppletItemsDisplayed.swt -->
+<!-- Oliver: code redesign -->
+
+<swe:control id="100">
+	<SCRIPT LANGUAGE="javascript">
+	g_strErrorNoItemsSelected = '<swe:this property="DisplayName"/>';
+	</SCRIPT>
+</swe:control>
+
+<swe:include-script file="itemsdisplayed.js"/>
+
+<swe:form>
+
+	<!-- Start Dialog -->
+
+	<table datatable="0" summary="" class="AppletBack siebui-popup-select-columns">
+		<tr>
+			<td colspan="4" class="siebui-cmdtxt">
+				<swe:control id="1100">
+				  <swe:this property="FormattedHtml" hintText="Outside Applet Help Text" hintMapType="Control"/>
+				</swe:control>
+				<swe:control id="91">
+				  <!-- Inside-applet help text -->
+				  <swe:this property="DisplayName" hintText="Inside Applet Help Text"/>
+				</swe:control> 
+			</td>
+		</tr>
+
+		<tr>
+			<td valign="center" class="siebui-popup-column">
+				<div class="siebui-popup-label"><swe:control id="10" property="DisplayName" hintText="Available Items Label"/></div>
+				<swe:control id="11" property="FormattedHtml" hintText="Available Items Combobox"/>
+				<swe:control id="12" property="FormattedHtml" hintText="Available Items Hidden Field"/>
+			</td>
+
+			<td valign="center" class="siebui-popup-ctrl">
+				<span class="siebui-btn-icon-e"><swe:control id="20"><!-- Show --><swe:this property="FormattedHtml" hintText="Move Item to Selected"/></swe:control></span>
+				<span class="siebui-btn-icon-e"><swe:control id="21"><!-- Hide --><swe:this property="FormattedHtml" hintText="Move All to Selected"/></swe:control></span>
+				<span class="siebui-btn-icon-e"><swe:control id="22"><!-- Show All --><swe:this property="FormattedHtml" hintText="Move Item to Available"/></swe:control></span>
+				<span class="siebui-btn-icon-e"><swe:control id="23"><!-- Hide All --><swe:this property="FormattedHtml" hintText="Move All to Available"/></swe:control></span>
+			</td>
+
+			<td valign="center" class="siebui-popup-column">
+				<div class="siebui-popup-label"><swe:control id="30" property="DisplayName" hintText="Selected Items Label"/></div>
+				<swe:control id="31" property="FormattedHtml" hintText="Selected Items Combobox"/>
+				<swe:control id="32" property="FormattedHtml" hintText="Selected Items Hidden Field"/>
+			</td>
+
+			<td valign="center" class="siebui-popup-ctrl">
+				<span class="siebui-btn-icon-e"><swe:control id="40"><!-- Move Top --><swe:this property="FormattedHtml" hintText="Move Item to Top"/></swe:control></span>
+				<span class="siebui-btn-icon-e"><swe:control id="41"><!-- Move Up --><swe:this property="FormattedHtml" hintText="Move Item Up"/></swe:control></span>
+				<span class="siebui-btn-icon-e"><swe:control id="42"><!-- Move Down --><swe:this property="FormattedHtml" hintText="Move Item Down"/></swe:control></span>
+				<span class="siebui-btn-icon-e"><swe:control id="43"><!-- Move Bottom --><swe:this property="FormattedHtml" hintText="Move Item to Bottom"/></swe:control></span>
+			</td>
+
+		</tr>
+	</table>
+
+	<!-- End Dialog -->
+
+	<!--button row-->
+	<table datatable="0" summary="" width="100%">		
+		<tr class="AppletButtons">
+			<td class="siebui-popup-action siebui-align-right">
+				<swe:control id="2">
+					<!-- Reset -->
+					<span class="siebui-popup-button">
+						<swe:this property="FormattedHtml" hintText="Reset" hintMapType="Control"/>
+					</span>
+				</swe:control>
+				
+				<swe:control id="1">
+				<!-- Save -->
+					<span class="siebui-popup-button">
+						<swe:this property="FormattedHtml" hintText="Save" hintMapType="Control"/>
+					</span>				
+				</swe:control>
+				
+				<swe:control id="3">
+				<!-- Cancel -->
+					<span class="siebui-popup-button">
+						<swe:this property="FormattedHtml" hintText="Cancel" hintMapType="Control"/>
+					</span>				
+				</swe:control>		
+			</td>
+		</tr>
+	</table>
+
+</swe:form>
+<!-- Template End: CCAppletItemsDisplayed.swt -->

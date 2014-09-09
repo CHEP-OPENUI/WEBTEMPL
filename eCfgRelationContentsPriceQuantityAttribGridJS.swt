@@ -1,0 +1,90 @@
+<!-- Template Start: eCfgRelationContentsPriceQuantityAttribGridJS.swt -->
+
+<td>
+   <table datatable="0" summary="" border="0" cellpadding="0" cellspacing="1" width="100%">
+      <tr><td>&nbsp;</td></tr>
+      <tr><td>&nbsp;</td></tr>
+      <tr><td>&nbsp;</td></tr>
+      <tr><td>&nbsp;</td></tr>
+      <tr>
+         <swe:for-each id="500" CfgLoopType="Children" startValue="1500" count="Dynamic" iteratorName="101Id"
+          CfgFieldList="CfgFieldName:Quantity, CfgUIControl:lblQuantity, HtmlAttrib_width:80, HtmlAttrib_align:left, Default:Y*
+                        CfgFieldName:Name, CfgUIControl:lblName, HtmlAttrib_width:250, HtmlAttrib_align:left, Default:Y*
+                        CfgFieldName:RequireMoreChild, Default:Y*
+                        CfgFieldName:Original List Price, CfgUIControl:lblListPrice, DataType:DTYPE_CURRENCY, NeedRefresh:N, HtmlAttrib_align:center, HtmlAttrib_width:80*
+                        CfgFieldName:Current Price, CfgUIControl:lblYourPrice, DataType:DTYPE_CURRENCY, HtmlAttrib_align:center, HtmlAttrib_width:80*
+                        CfgFieldName:Prod Prom Name, CfgUIControl:lblPromotion, HtmlAttrib_width:70, HtmlAttrib_align:center,
+                              PickApplet:ISS Promotion Related Prom Pick Applet, PickList:ISS Promotion Related Prom VBC PickList,
+                              Field01:Product Id, PickField01:CompProd Product Id, Constrain01:Y,
+                              Field02:Prod Prom Name, PickField02:Name,
+                              Field03:Prod Prom Id, PickField03:Promotion Id*
+                        CfgFieldName:Explanation, CfgUIControl:lblExplanation, HtmlAttrib_width:70, HtmlAttrib_align:center*
+                        CfgFieldName:Customize, CfgUIControl:lblCustomize, HtmlAttrib_width:70, HtmlAttrib_align:center"
+         >
+
+            <td align="center">
+               <swe:control id="Port Item" CfgHtmlType="CfgPortItem" ForceRefresh="Y"
+                CfgJSShow="showPortItemsWithAttr" CfgJSUpdateSelection="updatePortItemsForComboAddAttr"/>
+            </td>
+
+            <script>
+               var sPortId = "";
+               var sAttArr = null;
+               sPortId = '<swe:control id="PrdId" CfgFieldName="Port Item Id" CfgHtmlType="CfgLabel"/>';
+               sAttArr = m_UIFramework.m_grandChildAttrArray [sPortId];
+               if (sAttArr == null || typeof (sAttArr) == 'undefined')
+                  m_UIFramework.m_grandChildAttrArray [sPortId] = new Array ();
+            </script>
+
+            <swe:for-each id="181" CfgLoopType="Attribute" startValue="1409" count="Dynamic" iteratorName="IncId" >
+               <swe:if condition="Default, TestFieldValue, Operator:==, FieldName:.Grandchild Enabled, FieldValue:Y">
+
+                  <script>
+                     var sAttName = "";
+                     var sAttArr = null;
+                     var bNewAtt = true;
+                     sAttName = '<swe:control id="AttrId" CfgFieldName="Attribute Display Name" CfgHtmlType="CfgLabel" DisplayMode="EncodeData"/>';
+                     sAttArr = m_UIFramework.m_grandChildAttrArray [sPortId];
+
+                     for (var i = 0; i < sAttArr.length; i++)
+                     {
+                        if (sAttName == sAttArr [i])
+                        {
+                           bNewAtt = false;
+                           break;
+                        }
+                     }
+
+                     if (bNewAtt)
+                        sAttArr.push (sAttName);
+                  </script>
+
+                  <swe:if condition="Default, TestFieldValue, Operator:==, FieldName:.Grandchild Type, FieldValue:text">
+                     <swe:control id="850" CfgFieldName="AttValue" CfgHtmlType="CfgTextBox"
+                      CfgJSShow="showTextBoxAttr" CfgJSUpdateSelection="updateSelectionInfoForAttribute" />
+                  </swe:if>
+
+                  <swe:if condition="Default, TestFieldValue, Operator:==, FieldName:.Grandchild Type, FieldValue:combo">
+                     <swe:for-each id="550" CfgLoopType="Domain" Automation="N" startValue="1500" count="Dynamic" iteratorName="101Id" Usage="ComboBox" >
+                        <swe:control id="attCombo" CfgHtmlType="CfgCombo" CfgFieldName="AttValue"
+                         CfgJSShow="showComboAttr" CfgJSUpdateExclusion="updateExcludedItemForAttribute" CfgJSUpdateSelection="updateSelectionInfoForAttribute"/>
+                     </swe:for-each>
+                  </swe:if>
+
+                  <swe:if condition="Default, TestFieldValue, Operator:==, FieldName:.Grandchild Type, FieldValue:radio">
+                     <swe:for-each id="500" CfgLoopType="Domain" startValue="1500" count="Dynamic" iteratorName="101Id" >
+                        <swe:control id="attRadio" CfgHtmlType="CfgRadio"
+                         CfgJSShow="showRadioAttr" CfgJSUpdateExclusion="updateExcludedItemForAttribute" CfgJSUpdateSelection="updateSelectionInfoForAttribute"/>
+                     </swe:for-each>
+                  </swe:if>
+
+               </swe:if>
+            </swe:for-each>
+
+         </swe:for-each>
+      </tr>
+   </table> 
+
+</td>
+
+<!-- Template End: eCfgRelationContentsPriceQuantityAttribGridJS.swt -->

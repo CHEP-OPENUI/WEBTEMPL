@@ -1,0 +1,15 @@
+<!-- Template Start: dCCScreenbar_NSTabs.swt -->
+<!------------ Tier 1 navigation Netscape ----------------->	
+<div class="tier1Back">
+	<swe:screenbar>
+		<table datatable="0" summary="" cellpadding="1" cellspacing="0" border='0'><tr>
+			<swe:for-each-screen>
+				<swe:screenlink state="Active"  ><td nowrap class='tier1On'><swe:this property="FormattedHtml">&nbsp;<swe:screenname/>&nbsp;</swe:this></td></swe:screenlink>
+				<swe:screenlink state="Inactive"><td nowrap class='tier1Off'><swe:this property="FormattedHtml">&nbsp;<swe:screenname/>&nbsp;</swe:this></td></swe:screenlink>
+			</swe:for-each-screen>
+		</tr></table>
+	</swe:screenbar>	
+</div>
+<!------------ End Tier 1 navigation Netscape ------------->
+<!-- Template End: dCCScreenbar_NSTabs.swt -->
+               

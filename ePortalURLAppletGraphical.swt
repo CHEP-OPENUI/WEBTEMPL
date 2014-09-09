@@ -1,0 +1,43 @@
+<!-- Template Start ePortalURLAppletGraphical.swt -->
+
+<swe:layout viewDisplayMode="Layout">
+   <swe:include file="CCApplet_Spacer.swt"/>
+   <swe:include file="CCLayoutTitlePortal.swt"/>
+</swe:layout>
+
+<swe:layout viewDisplayMode="Show" appletDisplayMode="Show">
+   <swe:include file="CCApplet_Spacer.swt"/>
+   <swe:control id="1100">
+      <div class=CmdTxt>
+         <swe:this property="FormattedHtml" hintText="Outside Applet Help Text" hintMapType="Control"/>
+      </div>
+   </swe:control>
+   <span class="AppletStyle8">
+   
+   <swe:form>
+
+      <div class="swe:this.SelectStyle">
+
+      <swe:if condition="Web Engine State Properties, IsHighInteractive">
+         <table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="AppletHIFormBorder">
+      </swe:if>
+
+      <swe:include file="CCTitle_PortalGraphical.swt"/>
+
+      <swe:layout viewDisplayMode="Show" appletDisplaySize="Max">
+	      <swe:include file="ePortalURLAppletInner.swt"/>
+      </swe:layout>
+      
+      <swe:include file="CCBottomApplet.swt"/>
+      
+      <swe:if condition="Web Engine State Properties, IsHighInteractive">
+         </td></tr></table>
+      </swe:if>
+
+      </div>
+
+   </swe:form>    
+   </span>
+</swe:layout>
+
+<!-- Template End ePortalURLAppletGraphical.swt -->

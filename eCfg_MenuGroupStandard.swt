@@ -1,0 +1,12 @@
+<!-- Template Start: eCfg_MenuGroupStandard.swt -->
+
+<!-- div for qa automation -->
+<div  id="cxMenuStd" class="cxGrpTheme">
+
+    <swe:for-each id="180" CfgLoopType="Children" startValue="410" count="Dynamic" iteratorName="IncId" >
+    	<swe:include id="swe:180Id" />
+    </swe:for-each>
+
+</div>
+
+<!-- Template End: eCfg_MenuGroupStandard.swt -->

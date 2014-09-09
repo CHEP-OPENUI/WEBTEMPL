@@ -1,0 +1,121 @@
+<!-- Template Start: eWirelessPageTabLayt4ColBody.swt -->
+
+<table datatable="0" summary="" width="100%" cellpadding="2" cellspacing="0" border="0" align="center"><tr><td class="AppletBorder" >
+<swe:error type="Popup">
+<table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="2" cellspacing="0" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/></td></tr></table>
+</swe:error>
+
+<swe:control id="91">
+  <!-- Inside-applet help text -->
+  <table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="4" cellspacing="0" border="0"><tr><td><swe:this property="DisplayName" hintText="Inside Applet Help Text"/></td></tr></table>
+</swe:control>
+
+<table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="5" cellspacing="0" border="0">
+  <tr valign="top">
+  <td width="50%">
+    <table datatable="0" summary="" width="100%" cellpadding="5" cellspacing="0" border="0">													
+    <tr valign="top">
+    <td>						
+    <table datatable="0" summary="" width="100%" border="0" cellspacing="2" cellpadding="1" align="center">						
+       <swe:control id="1002">
+         <tr><td><swe:this property="FormattedHtml" hintText="FormSection" hintMapType="FormSection"/></td></tr>
+       </swe:control>	
+       <swe:for-each startValue="1301" count="10" iteratorName="currentId">
+         <swe:control id="swe:currentId" hintMapType="FormItem">
+         <tr valign="top">
+         <td>
+            <div class="mceLabel" align="swe:this.TextAlignmentLabel">
+              <swe:this property="DisplayName" hintText="Label"/>:
+              <swe:this property="RequiredIndicator" hintText="Required"/>
+            </div>
+            </td>
+            <td>
+            <span class="mceField">
+              <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+            </span>
+         </td>
+	 </tr>
+         </swe:control>									
+       </swe:for-each>						
+    </table>
+    </td>
+<td valign="center" align="center">
+<img src="images/spacer.gif" width="40" height="1" alt="">
+<table datatable="0" summary="" cellspacing="0" cellpadding="3" border="0" align="center">
+       <swe:control id="1003">
+       <tr><td><swe:this property="FormattedHtml" hintText="FormSection" hintMapType="FormSection"/></td></tr>
+       </swe:control>	
+       <swe:for-each startValue="1801" count="10" iteratorName="currentId">
+          <swe:control id="swe:currentId" hintMapType="FormItem">
+             <tr><td><swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/><td><tr>
+    	  </swe:control>									
+       </swe:for-each>										
+    </table>
+    </td>
+    </tr>
+    </table>
+    </td>
+<td width="50%">
+    <table datatable="0" summary="" width="100%" cellpadding="5" cellspacing="0" border="0">												
+    <tr valign="top">
+    <td>
+    <table datatable="0" summary="" width="100%" border="0" cellspacing="2" cellpadding="1" align="center">
+      <swe:control id="2002">
+      <tr><td><swe:this property="FormattedHtml" hintText="FormSection" hintMapType="FormSection"/></td></tr>
+      </swe:control>
+      <swe:for-each startValue="2301" count="1" iteratorName="currentId">
+      <swe:control id="swe:currentId" hintMapType="FormItem">
+         <tr valign="top">
+         <td>
+         <div class="mceLabel" align="swe:this.TextAlignmentLabel">
+            <swe:this property="DisplayName" hintText="Label"/>
+            <swe:this property="RequiredIndicator" hintText="Required"/>	
+	</div>							
+	</td>
+	</tr>										
+      </swe:control>
+      </swe:for-each>
+      <swe:for-each startValue="2302" count="11" iteratorName="currentId">
+      <swe:control id="swe:currentId" hintMapType="FormItem">
+      <tr valign="top">
+      <td>
+         <div class="mceLabel" align="swe:this.TextAlignmentLabel">
+            <swe:this property="DisplayName" hintText="Label"/>:
+            <swe:this property="RequiredIndicator" hintText="Required"/>
+         </div>
+         </td>
+         <td>
+         <span class="mceField">
+            <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+         </span>
+      </td>
+      </tr>										
+      </swe:control>									
+      </swe:for-each>						
+</table>
+</td>
+<td valign="center" align="center">
+<img src="images/spacer.gif" width="20" height="1" alt="">
+<table datatable="0" summary="" cellspacing="0" cellpadding="3" border="0">
+   <swe:control id="2003">
+      <tr><td><swe:this property="FormattedHtml" hintText="FormSection" hintMapType="FormSection"/></td></tr>
+   </swe:control>
+   <swe:for-each startValue="2802" count="10" iteratorName="currentId">
+      <swe:control id="swe:currentId" hintMapType="Control">
+        <tr><td>
+	    <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+	</td></tr>										
+     </swe:control>									
+   </swe:for-each>							
+</table>
+</td>
+
+</tr>
+			
+</table>
+</td></tr></table>
+</td></tr></table>
+
+
+
+<!-- Template End: eWirelessPageTabLayt4ColBody.swt -->	

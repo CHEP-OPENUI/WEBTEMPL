@@ -1,0 +1,9 @@
+<!--  Template Start: CCViewbar_Tabs_DropList_Always.swt -->
+
+<!-- No detail view tabs on Task Views -->
+<swe:if condition="Task UI Service (SWE),IsNotInTask">
+	<table datatable="0" summary="" class="tier3Back" width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr valign="top"><td><img src="images/spacer.gif" width="1" height="3" alt=""></td></tr></table>
+		<swe:nav-control type="Detail Category With View" style="Tab" indentWidth="30" anchorTab="Enabled" />
+</swe:if>
+
+<!--  Template End: CCViewbar_Tabs_DropList_Always.swt -->

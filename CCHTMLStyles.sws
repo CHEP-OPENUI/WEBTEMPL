@@ -1,0 +1,36 @@
+<!--Controls the list row color-->
+<swe:style type="RowStyle" name="Siebel List"> 
+	
+	<swe:switch> 
+		<swe:case condition="Web Engine State Properties, IsErrorRow"> 
+			<swe:class name="listRowError"/> 
+		</swe:case> 
+		<swe:case condition="Web Engine State Properties, IsCurrentRow"> 
+			<swe:class name="listRowOn"/> 
+		</swe:case> 
+		<swe:case condition="Web Engine State Properties, IsOddRow"> 
+			<swe:class name="listRowOdd"/> 
+		</swe:case> 
+		<swe:case condition="Web Engine State Properties, IsEvenRow"> 
+			<swe:class name="listRowEven"/> 
+		</swe:case> 
+		<swe:default> 
+			<swe:class name="listRowOff"/> 
+		</swe:default> 
+	</swe:switch> 
+
+</swe:style>
+
+<!--controls the applet selected color-->
+<swe:style type="SelectStyle" name="Applet Select"> 
+
+		<swe:switch> 
+		<swe:case condition="Web Engine State Properties, IsAppletActive"> 
+			<swe:class name="Selected"/> 
+		</swe:case> 
+		<swe:default> 
+			<swe:class name="NotSelected"/> 
+		</swe:default> 
+	</swe:switch> 
+	
+</swe:style>

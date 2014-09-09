@@ -1,0 +1,24 @@
+<!-- Template Start: TCCAppletFormLaunchPad.swt -->
+<div class="siebui-toui-lpad-header siebui-collapsible-applet AppletHIFormBorder AppletStyleChild77">
+    <div class="siebui-toui-lpad-row-1 siebui-collapsible-applet-header siebui-collapsible-applet-expanded AppletTitle">
+        <swe:control id=90>
+            <swe:this  property = "FormattedHtml"/>
+        </swe:control>
+        <span class="siebui-toui-applet-title-text">
+            <swe:this property="Title"/>
+        </span>
+            <swe:control id=90>
+            </swe:control>
+        <div class="siebui-collapsible-applet-container"></div>
+    </div>
+    <div class="siebui-collapsible-applet-content siebui-toui-lpad-row-2">
+        <swe:for-each startValue="1000" count="10" iteratorName="currentId">
+            <swe:control id="swe:currentId" hintMapType="FormItem">
+                <div class="siebui-toui-lpad-col">
+                    <swe:this property="FormattedHtml" hintMapType="Control"/>
+                </div>
+            </swe:control>
+        </swe:for-each>
+    </div>
+</div>
+<!-- Template Start: TCCAppletFormLaunchPad.swt -->

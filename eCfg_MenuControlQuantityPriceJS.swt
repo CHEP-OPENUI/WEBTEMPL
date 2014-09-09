@@ -1,0 +1,131 @@
+<!-- Template Start: eCfg_MenuControlQuantityPriceJS.swt -->
+
+<script>
+	//div tag for content
+	document.write('<DIV id="Rel_' + visibleRelArray[currentRel] + '" class="eCfgDivStyle">');
+</script>
+
+<!-- Formatting tables -->
+<table datatable="0" summary="" width="100%" height="100%" cellspacing="3" cellpadding="2" border="0" class="AppletBorder">
+<tr>
+
+<td class="AppletBack" valign="top">
+<table datatable="0" summary="" cellpadding="2" cellspacing="0" border="0" width="100%" bgcolor="#ffffff" height="100%">
+<tr>
+
+	<td valign="top">
+		<!-- Header -->
+		<table datatable="0" summary="" border="0" width="100%" cellpadding="2" cellspacing="0" bgcolor="#ffffff">
+	    <SCRIPT>
+	        var sImage        = '<swe:control id="swe:IncId + 50" CfgFieldName=".Image" CfgHtmlType="CfgLabel" />';
+	        var sDescription  = '<swe:control id="swe:IncId + 150" CfgFieldName=".Description" CfgHtmlType="CfgLabel" />';
+	        var sLearnMoreURL = '<swe:control id="swe:IncId + 250" CfgFieldName=".LearnMore" CfgHtmlType="CfgLabel" />';
+	        var sPortName     = '<swe:control id="swe:IncId + 350" CfgFieldName="CxPortName" CfgHtmlType="CfgLabel" />';
+	        var sLearnMore    = '<swe:control id="LearnMore" CfgUIControl="lblLearnMore" CfgHtmlType="CfgLabel"/>';
+	
+	        var iImageRowSpan = 2;
+	        var bText = true;
+	
+	        if ( 0 == sImage.length )
+	            sImage = 'images/eCfgInvisibleSpacer.gif';
+	
+	        if ( ( 0 == sDescription.length ) &&
+	             ( 0 == sLearnMoreURL.length ) )
+	            {
+	                iImageRowSpan = 1;
+	                bText = false;
+	            }
+	
+	        if ( ! bText )
+	            document.write ( '<tr bgcolor="#ccccff"><td class="eCfgSectionTitle0if"');
+		else
+		    document.write ( '<tr bgcolor="#ccccff"><td class="eCfgSectionTitle0"');
+				
+	        document.write ( '><b>' + sPortName + '</b>');
+	
+	        var sRequireMoreChild = '<swe:control id="swe:IncId+4000" CfgHtmlType="CfgGenerics" />';
+	        
+	        document.write (sRequireMoreChild + '</td>' );
+	        document.write ( '<td class="eCfgSectionTitle1" rowspan="' + iImageRowSpan + '">' );
+	        document.write ( '<img border="0" src="' + sImage + '" alt="" align="right">' );
+	        document.write ( '</td></tr>' );
+	
+	        if ( bText )
+	        {
+	            document.write ( '<tr bgcolor="#ccccff">' );
+	            document.write ( '<td class="eCfgSectionTitle2">' );
+	
+	            if ( 0 != sDescription.length )
+	                document.write ( '<span class="eCfgAuxText">' + sDescription + '&nbsp;&nbsp;' );
+	
+	            if ( 0 != sLearnMoreURL.length )
+	                document.write ( '<a href="' + sLearnMoreURL + '" TARGET="_blank">' + sLearnMore + '</a></span><img border="0" src="images/eCfgInvisibleSpacer.gif" alt="">' );
+	
+	            document.write ( '</td></tr>' );
+	        }
+
+	    </SCRIPT>
+		</table>
+		<!-- END Header -->
+	</td>
+</tr>
+<tr>
+	<td valign="top" height="99%">
+		<!-- Content table -->
+		<table datatable="0" summary="" cellpadding="1" cellspacing="4" border="0" width="100%">
+
+                <tr>
+                   <td colspan="4">
+		     <swe:for-each id="500" CfgLoopType="DomainAndChildren" startValue="1500" count="Dynamic" 
+                      iteratorName="111Id" Usage="QuantityList"
+                      CfgFieldList="CfgFieldName:Quantity, CfgUIControl:lblQuantity, Default:Y, HtmlAttrib_width:60, HtmlAttrib_align:left, HtmlAttrib_valign:middle*
+                                    CfgFieldName:Name, CfgUIControl:lblName, Default:Y, HtmlAttrib_width:410*
+                                    CfgFieldName:RequireMoreChild, Default:Y*
+                                    CfgFieldName:Original List Price, CfgUIControl:lblListPrice, DataType:DTYPE_CURRENCY, NeedRefresh:N, HtmlAttrib_width:80, HtmlAttrib_valign:middle, HtmlAttrib_align:center*
+                                    CfgFieldName:Explanation, CfgUIControl:lblExplanation, HtmlAttrib_align:center">
+
+                         <swe:control id="swe:111Id + 4000" CfgHtmlType="CfgQuantity" 
+                          CfgJSShow="showQuantityList" CfgJSUpdateExclusion="updateExcludedItemForPort" CfgJSUpdateSelection="updatePortItemsForQuantityList" />
+		      </swe:for-each>
+                   </td>
+                </tr>
+
+		<tr>
+                   <td colspan="4">
+                      &nbsp;
+                   </td>
+                </tr>
+
+		<tr>
+                  <td colspan="4">
+                     <!-- Menu button -->
+
+                     <SCRIPT>
+                     var buttonName;
+
+                     buttonName = '<swe:control id="swe:ShowMenu" CfgUIControl="sShowMenu" CfgHtmlType="CfgLabel" />';
+
+                     document.write ('<input type="button"');
+                     document.write (' value=');
+                     document.write (buttonName);
+                     document.write (' onClick="ShowMenu();" style="height:20;">');
+                     </SCRIPT>
+                  </td>
+		</tr>
+		</table>
+		<!-- END Content table -->
+	</td>
+
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+<!-- END Formatting tables -->
+</DIV>
+<script>
+	currentRel++;
+</script>
+
+<!-- Template End: eCfg_MenuControlQuantityPriceJS.swt -->

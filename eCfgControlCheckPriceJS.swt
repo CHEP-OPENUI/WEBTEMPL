@@ -1,0 +1,32 @@
+<!-- Template Start: eCfgControlCheckPriceJS.swt -->
+
+<swe:include file="eCfgPort_HeaderJS.swt"/>
+         
+<tr>
+   <td colspan=3>
+      <swe:for-each id="500" CfgLoopType="DomainAndChildren" startValue="1500" count="Dynamic" iteratorName="101Id" 
+       Usage="CheckBox" 
+       CfgFieldList="CfgFieldName:Name, CfgUIControl:lblName, HtmlAttrib_width:310, Default:Y*
+                     CfgFieldName:RequireMoreChild, Default:Y*
+                     CfgFieldName:Original List Price, CfgUIControl:lblListPrice, DataType:DTYPE_CURRENCY, NeedRefresh:N, HtmlAttrib_align:center, HtmlAttrib_width:80*
+                     CfgFieldName:Current Price, CfgUIControl:lblYourPrice, DataType:DTYPE_CURRENCY, HtmlAttrib_align:center, HtmlAttrib_width:80*
+                     CfgFieldName:Prod Prom Name, CfgUIControl:lblPromotion, HtmlAttrib_width:70, HtmlAttrib_align:center, 
+                        PickApplet:ISS Promotion Related Prom Pick Applet, PickList:ISS Promotion Related Prom VBC PickList, 
+                        Field01:Product Id, PickField01:CompProd Product Id, Constrain01:Y,
+                        Field02:Prod Prom Name, PickField02:Name,
+                        Field03:Prod Prom Id, PickField03:Promotion Id*                  
+                     CfgFieldName:Explanation, CfgUIControl:lblExplanation, HtmlAttrib_align:center*
+                     CfgFieldName:Customize, CfgUIControl:lblCustomize, HtmlAttrib_align:center"
+                     >
+          <swe:control id="swe:111Id + 4000" CfgHtmlType="CfgCheckBox"
+           CfgJSShow="showCheckBox" CfgJSUpdateExclusion="updateExcludedItemForPort" CfgJSUpdateSelection="updatePortItemsForCheckBox"/>
+
+      </swe:for-each>
+
+   </td>
+</tr>
+
+
+<swe:include file="eCfgPort_FooterJS.swt"/>
+
+<!-- Template End: eCfgControlCheckPriceJS.swt -->

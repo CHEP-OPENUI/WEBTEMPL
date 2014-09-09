@@ -1,0 +1,79 @@
+<!-- Template Start: SearchLookinResultsHeader.swt -->
+<table datatable="0" summary=""  border="0"  cellpadding="2" width="100%" bgcolor="#ffffff" cellspacing="0">
+	<tr bgcolor="#B0C4DE">
+		<td  align="right" >
+	<!-- Button 1 -->
+		<swe:form>
+		<swe:control id="2008">
+			<swe:this property="FormattedHtml"  hintMapType="Control" hintText="Field"/>
+		</swe:control>
+		</swe:form>&nbsp;&nbsp;
+	<!-- Button 2 -->
+		<swe:control id="2007">
+			<swe:this property="FormattedHtml" hintMapType="Control" hintText="Field"/>
+		</swe:control>
+		</td>
+	</tr>
+	<!-- Search For -->
+	<tr>
+		<td valign="top" bgcolor="#d5e0f4">
+		<swe:control id="2002">
+			<swe:this property="DisplayName"  hintMapType="Control" hintText="Label"/>
+		</swe:control></td>
+
+	</tr>
+	<!-- Lookin Values -->
+	<tr>
+		<td valign="top" bgcolor="#d5e0f4">
+		<swe:control id="2010">
+			<swe:this property="DisplayName" hintMapType="Control" hintText="Label"/>
+		</swe:control></td>
+
+	</tr>
+	<!-- Found -->
+	<tr>
+		<td bgcolor="#d5e0f4">
+		<swe:control id="2004">
+			<swe:this property="DisplayName"  hintMapType="Control" hintText="Label"/>
+		</swe:control>
+		</td>
+	</tr>
+	<!-- Sort By -->
+	<tr>
+		<td bgcolor="#d5e0f4">
+		<swe:control id="2006">
+			<swe:this property="DisplayName"  hintMapType="Control" hintText="Label"/>
+		</swe:control>
+		</td>
+
+	</tr>
+	<!-- Do you mean -->
+	<tr>
+		<td bgcolor="#d5e0f4">
+		<swe:control id="2013">
+			<swe:this property="DisplayName"  hintMapType="Control" hintText="Label"/>
+		</swe:control>
+		</td>
+
+	</tr>
+	<!-- Refine Result -->
+	<tr>
+		<td valign="top" bgcolor="#d5e0f4">
+		<swe:control id="2014">
+			<swe:this property="DisplayName"  hintMapType="Control" hintText="Field"/>
+		</swe:control>
+		</td>
+		
+	</tr>
+	<!-- Remove Filter -->
+	<tr>
+		<td valign="top" bgcolor="#d5e0f4">
+		<swe:control id="2015">
+			<swe:this property="DisplayName"  hintMapType="Control" hintText="Field"/>
+		</swe:control>
+		</td>
+		
+	</tr>
+</table>
+
+<!-- Template End: SearchLookinResultsHeader.swt -->

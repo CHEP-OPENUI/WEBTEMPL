@@ -1,0 +1,264 @@
+<!-- Template Start: CCAppletTaskAssistantPlayer.swt -->
+
+<!-- DRA: js file names, css file name -->
+<swe:include-script file="propset.js"/>
+<swe:include-script file="taskhelper.js"/>
+<swe:include-script file="taskassistant.js"/>
+
+   <link rel="stylesheet" href="files/taskassistant.css"/>
+
+<swe:form>
+
+<!--
+ <swe:control id="101"><swe:this property="FormattedHtml" hintMapType="Control" hintText="Close" /></swe:control>
+-->
+
+<script language="JavaScript">
+   // register onresize event handler
+   window.onresize = HandleResize;
+</script>
+
+<!-- for QTP automation in HI, clickable elements need s_ prefix so that QTP recognizes the click 
+     as a Siebel event and doesn't create its own recording event. Otherwise, get two recording events. -->
+
+<div id="s_TaskAssistant" style="padding:5px;">
+
+<!-- task list header -->
+<div id="taskListHeader">
+   <table datatable="0" summary="" width="100%" class="titlebar">
+      <tr>
+         <td class="titleBox" width="100%">
+            <span id="titleBox_list" class="control1">
+               <span id="taskTitle_list" class="taskTitle"></span>
+            </span>
+            <span id="titleBox_player" class="control0">
+               <span id="IDS_TASKASST_CAPTION" class="taskTitle"></span>
+            </span>
+         </td>
+         <td>
+            <!-- DRA: swe control close -->
+      <swe:if condition="Web Engine State Properties, IsHighInteractive">
+               <a id="s_close" href="JavaScript:HandleClose()">
+                  <swe:control id="101"><swe:this property="FormattedHtml" hintMapType="Control" hintText="CloseTaskAssistant" /></swe:control>
+               </a>
+      </swe:if>
+      <swe:if condition="Web Engine State Properties, IsLowInteractive">
+         <swe:control id="102"><swe:this property="FormattedHtml" hintMapType="Control" hintText="CloseTaskAssistantHybrid" /></swe:control>
+      </swe:if>
+         </td>
+      </tr>
+   </table>
+</div><!-- end of taskListHeader -->
+
+<!-- task list template -->
+
+<div id="tasklistUI" class="tasklist1">
+
+   <div id="taskListPane">
+      <!-- task definition template -->
+      <span id="0_task_box" class="taskBox0">
+         <table datatable="0" summary="" cellspacing="0" cellpadding="3">
+            <tr valign="top">
+               <td><img src="images/bullet_green.gif" alt=""></td>
+               <td>
+                  <span id="s_0_task" class="taskHoverOff"></span>
+               </td>
+            </tr>
+            <tr valign="top">
+               <td>
+               </td>
+               <td>
+                  <span id="s_0_sub_task" class="subtaskBox"></span>
+               </td>
+            </tr>
+         </table>
+      </span>
+   
+      <!-- tasklist pane -->
+      <table datatable="0" summary="" width="100%" cellpadding="3" cellspacing="0" class="tasklistBorder">
+         <tr valign="bottom">
+            <td class="tasklistHeader">
+               <span id="IDS_TASKASST_CAPTION"></span>
+            </td>
+         </tr>
+         <tr>
+            <td width="100%">
+               <!-- task container -->
+               <div id="taskContainer"></div>
+            </td>
+         </tr>
+      </table>
+   </div>   
+
+</div><!-- end of tasklistUI -->
+
+<!-- task player template -->
+
+<div id="taskPlayerUI" class="taskUI0">
+
+   <!-- taskHeader and taskPane -->
+   <div id="taskPlayerMain" class="taskPlayer">
+
+      <!-- task header -->
+      <div id="taskHeader">
+         <span id="taskName" class="taskName"></span>
+      </div>
+
+      <!-- task pane -->
+      <div id="taskPane" class="taskPane0">
+         <!-- step definition template -->
+         <div id="0_main_box" class="stepBox0">
+            <table datatable="0" summary="" cellpadding="0" cellspacing="0" border="0" width="100%">
+               <tr valign="top">
+                  <td>
+                     <B><span id="0_main_sectionLabel"></span></B>
+                  </td>
+               </tr>
+               <tr valign="top">
+                  <td>
+                     <div id="0_main_span" class="step0">
+                        <table datatable="0" summary="" cellpadding="0" cellspacing="0" border="0" width="100%">
+                           <!-- step data -->
+                           <tr class="stepCell" valign="top">
+                              <td width="100%">
+                                 <div class="stepText">
+                                    <span id="s_0_main"></span>
+                                    <img id="0_main_more" src="images/arw_more.gif" align="absmiddle" border="0" class="stepImg0"/>
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <!-- sub step box -->
+                                 <table datatable="0" summary="" cellpadding="0" cellspacing="0" border="0" id="0_sub_box" class="substep0">
+                                    <tr>
+                                       <td>
+
+                                          <!-- sub step definition template -->
+                                          <div id="0_0_sub_span" class="substep0">
+                                             <table datatable="0" summary="" cellpadding="2" cellspacing="0" border="0">
+                                                <tr class="substepCell" valign="top">
+                                                   <td><img alt="" src="images/task_bullet.gif"/></td>
+                                                   <td width="3"></td>
+                                                   <td width="100%"><span id="0_0_sub"></span></td>
+                                                </tr>
+                                             </table>
+                                          </div>
+
+                                          <!-- sub steps container -->
+                                          <div id="0_subStepContainer"></div>
+
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                  </td>             
+               </tr>
+            </table>
+         </div>
+
+         <!-- steps container -->
+         <div id="stepContainer"></div>
+   
+         <!-- branch step -->
+         <div id="branchStep" class="branch1">
+            <table datatable="0" summary="" cellpadding="0" cellspacing="0" border="0">
+               <tr valign="top">
+                  <td><img alt="" src="images/arw_branch.gif"/></td>
+                  <td width="3"></td>
+                  <td valign="middle">
+                     <a id="s_branch" class="returnLink" href="JavaScript:HandleBranch()">
+                        <span id="IDS_TASKASST_BRANCH"></span>
+                     </a>
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <!-- done step -->
+         <div id="doneStep" class="done0">
+            <table datatable="0" summary="" cellpadding="0" cellspacing="0" border="0">
+               <tr>
+                  <td><span id="doneNum"></span></td>
+                  <td width="3"></td>
+                  <td nowrap>
+                     <span class="minibuttonOn">
+                        <a href="JavaScript:HandleDone()">
+                           <span id="IDS_TASKASST_DONE"></span>
+                        </a>
+                     </span>
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <!-- ShowMe definition template added by SNAYAK for Feature#12-QP5WH9 -->
+      <span id="0_ShowMe_box" class=" TaskBox0">
+        <table datatable="0" summary="" cellspacing="0" cellpadding="3">
+            <tr valign="top">
+            <td>
+                <span id="s_0_ShowMe" class="taskHoverOff"></span>
+            </td>
+            </tr>
+        </table>
+      </span><!-- end of ShowMe definition template -->
+      
+      <!-- Additional iHelp item definition template added by SNAYAK for Feature#12-QP5W7S -->
+      <span id="0_taskiHelpAdd_box" class="taskBox0">
+         <table datatable="0" summary="" cellspacing="0" cellpadding="3" border="0">
+            <tr valign="top">
+               <td valign="middle">
+                  <img src="images/bullet_add_items.gif"/></td>
+               <td>
+                  <span id="s_0_taskiHelpAdd" class="taskHoverOff"></span>
+               </td>
+            </tr>
+         </table>
+      </span><!-- end of Additional iHelp item definition template -->
+      <!-- Additional iHelp header and container for iHelp items template -->      
+      <table datatable="0" summary="" cellspacing="0" cellpadding="0" width="100%" border="0">
+         <tr valign="top">
+            <td id="AddHelpHeaderImg"width="100%" border="0" class="AddiHelpHeader">
+                <span id="AddHelpHeader"class="AddiHelpHeader"></span>
+            </td>
+         </tr>
+         <tr>
+            <td width="100%">
+               <!-- task container -->
+               <div id="taskiHelpAddContainer"></div>
+            </td>
+         </tr>
+      </table><!-- End of Additional iHelp header and container for iHelp items template --> 
+
+   </div><!-- end of taskPlayerMain -->
+   
+   <!-- task footer -->
+   <table datatable="0" summary="" cellpadding="0" cellspacing="0" width="100%" style="padding:4 0 0 0;">
+   <tr valign="top">
+      <td width="10"><img src="images/arw_back.gif" align="absmiddle" border="0"/></td>
+      <td>
+         <a id="s_done" class="returnLink" href="JavaScript:HandleDone()">
+            <span id="taskListName"></span>
+         </a>
+      </td>
+   </tr>
+   </table>
+
+</div><!-- end of taskPlayerUI -->
+
+</div>
+
+<!-- DRA: generic invoke method control -->
+<span style="visibility:hidden">
+   <swe:control id="106"><swe:this property="FormattedHtml" hintMapType="Control" hintText="" /></swe:control>
+</span>
+
+</swe:form>
+
+<swe:if condition="Web Engine State Properties, IsHighInteractive">
+   <swe:control id="107"><swe:this property="FormattedHtml" hintMapType="Control" hintText="TaskEmbeddedActiveX" /></swe:control>
+</swe:if>
+
+<!-- Template End: CCAppletTaskAssistantPlayer.swt -->

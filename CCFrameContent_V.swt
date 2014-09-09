@@ -1,0 +1,8 @@
+<!-- Template Start: CCFrameContent_V.swt -->
+<!--Content frame shows view only-->
+<swe:frameset htmlAttr="cols='100%,*' border='0' frameborder='No'">
+	<swe:frame type="View" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+		<swe:current-view/>
+	</swe:frame>	 
+</swe:frameset>
+<!-- Template Start: CCFrameContent_V.swt -->

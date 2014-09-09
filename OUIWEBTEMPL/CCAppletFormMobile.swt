@@ -1,0 +1,54 @@
+<!-- Template Start: CCAppletFormMobile.swt -->
+
+<swe:include file="CCApplet_NamedSpacer.swt"/>    
+<swe:form>
+ 
+<swe:if condition="Web Engine State Properties, IsPrintOff">
+	<div class="swe:this.SelectStyle">
+</swe:if>
+
+        <table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" class="swe:class AppletBack"><tr><td class="AppletHIFormBorder" style="display:none;">
+			<swe:include file="CCTitle_Named.swt"/>
+			<swe:include file="CCFormButtonsTop_OUIMobile.swt"/>
+		<swe:error type="Popup">
+			<div class="swe:class AppletBack"><div class="error"><swe:this property="FormattedHtml"/></div></div>
+		</swe:error>
+
+			<div id="_FormAppletMobile" class="siebui-formappletmobile ui-body-f">
+				<div id="_FormAppletH1">    
+					<swe:for-each startValue="1301" count="1" iteratorName="currentId">
+					<swe:control id="swe:currentId" hintMapType="FormItem">
+					<div class="mceGridField"><swe:this property="FormattedHtml" hintText="Field"/></div>
+					</swe:control>
+					</swe:for-each>
+				</div> 
+
+				<div id="_FormAppletH3" class="siebui-formappleth3 ui-body-f">
+					<swe:for-each startValue="3301" count="6" iteratorName="currentId">
+					<swe:control id="swe:currentId" hintMapType="FormItem">
+					<div class="mceGridField"><swe:this property="FormattedHtml" hintText="Field"/></div>
+					</swe:control>
+					</swe:for-each>
+				</div>
+			</div>
+
+			<!-- Form Applet: label-value pairs -->
+			<div id="_FormAppletMobileSection3" class="siebui-formappletmobilesection3">
+                <div class="ui-body-f">
+                    <swe:for-each startValue="5301" count="25" iteratorName="currentId">
+                    <swe:control id="swe:currentId" hintMapType="FormItem">
+                    <div class="siebui-mb-label ui-input-text ui-body-f"><swe:this property="DisplayName" hintText="Label"/></div>
+                    <div class="siebui-mb-value ui-input-text ui-body-f"><swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/></div>
+                    </swe:control>
+                    </swe:for-each>            
+                </div>
+			</div>
+        </span></td></tr></table>
+
+<swe:if condition="Web Engine State Properties, IsPrintOff">
+    </div>    
+</swe:if>
+
+</swe:form>
+
+<!-- Template End: CCAppletFormMobile.swt -->

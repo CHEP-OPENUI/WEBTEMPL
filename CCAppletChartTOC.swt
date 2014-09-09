@@ -1,0 +1,44 @@
+<!-- Template Start: CCAppletChartTOC.swt -->
+
+<swe:include file="CCApplet_NamedSpacer.swt"/>	
+
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+<swe:form>
+<tr><td>
+
+	<swe:include file="CCTitle_Named.swt"/>
+
+	<table datatable="0" summary="" width="100%" cellpadding="2" cellspacing="0" border="0" align="center"><tr><td class="AppletBorder">
+	<table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="5" cellspacing="0" border="0">
+			
+	   <tr valign="top">
+	  	 	<swe:subviewbar>
+				<td>
+					<swe:viewlink state="Active" property="FormattedHtml">
+						<table datatable="0" summary="">
+							<tr align="center"><td bgcolor="#cccccc"><img src="images/spacer.gif" width="40" height="40" alt=""></td></tr>
+							<tr align="center"><td><swe:viewname/></td></tr>
+						</table>
+					</swe:viewlink>
+					
+					<swe:viewlink state="Inactive" property="FormattedHtml">
+						<table datatable="0" summary="">
+							<tr align="center"><td bgcolor="#cccccc"><img src="images/spacer.gif" width="40" height="40" alt=""></td></tr>
+							<tr align="center"><td><swe:viewname/></td></tr>
+						</table>
+					</swe:viewlink>
+				</td>
+			</swe:subviewbar>	
+	   </tr>
+	   
+	</table>
+	</td></tr></table>
+
+	<swe:include file="CCBottomApplet_NamedForm.swt"/>				
+
+</td></tr>
+</swe:form>
+</table>
+
+<!-- Template End: CCAppletChartTOC.swt -->
+        

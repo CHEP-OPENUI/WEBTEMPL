@@ -1,0 +1,25 @@
+<!-- Template Start: dCCFormTotals.swt -->
+<table datatable="0" summary="" valign="top" width="100%" cellpadding="3" cellspacing="0" border="0">
+	<swe:for-each count="6" startValue="1112" iteratorName="currentId">
+		<tr>
+			<swe:control id="swe:currentId+1200" hintMapType="FormItem">
+				<td class="dCCItemValue" nowrap><swe:this property="DisplayName"/></td>
+				<td width="100%" class="dCCItemValue"><swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/></td>
+			</swe:control>
+			<swe:control id="swe:currentId+100">
+				<td nowrap class="dCCItemLabel"><swe:this property="FormattedHtml" hintText="Label"/></td>
+			</swe:control>
+			<swe:control id="swe:currentId+200">
+				<td nowrap class="dCCItemValue"><swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/></td>
+			</swe:control>
+		</tr>
+	</swe:for-each>
+</table>
+<div align="right">
+	<table datatable="0" summary="" valign="top" cellpadding="3" cellspacing="0" border="0">
+		<tr>
+			<swe:include file="dCCButtons_Form.swt"/>		
+		</tr>
+	</table>
+</div>
+<!-- Template End: dCCFormTotals.swt -->

@@ -1,0 +1,37 @@
+<!-- Template Start: TCustomerNavigationApplet.swt -->
+<swe:include file="CCApplet_NamedSpacer.swt"/>
+<span class="AppletStyle5">
+    <swe:form>
+        <div class="AppletBorder siebui-custnavigationdiv1">
+            <div class="AppletBack siebui-custnavigationdiv2">
+                <swe:control id="1100">
+                    <div class="AppletBack siebui-custnavigationdiv3">
+                        <swe:this property="FormattedHtml" hintText="Text"/>
+                    </div>
+                </swe:control>
+                <ul class="siebui-UlBorder">    
+                    <swe:control id="swe:currentId"></swe:control>
+                    <li class="siebui-Image_List">
+                        <swe:control id="2018"><swe:this property="FormattedHtml" hintText="Image"/></swe:control>
+                    </li>
+                    <li class="siebui-Image_List">
+                        <swe:control id="2033"><swe:this property="FormattedHtml" hintText="Image"/></swe:control>
+                    </li>
+                    <li class="siebui-Image_List">
+                        <swe:control id="2048"><swe:this property="FormattedHtml" hintText="Image"/></swe:control>
+                    </li>
+                    <li class="siebui-Image_List">
+                        <swe:control id="2063"><swe:this property="FormattedHtml" hintText="Image"/></swe:control>
+                    </li>
+                    <li class="siebui-Image_List">
+                        <swe:control id="2078"><swe:this property="FormattedHtml" hintText="Image"/></swe:control>
+                    </li>
+                    <li class="siebui-Image_List">
+                        <swe:control id="2093"><swe:this property="FormattedHtml" hintText="Image"/></swe:control>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </swe:form>
+</span>
+<!-- Template End: TCustomerNavigationApplet.swt -->

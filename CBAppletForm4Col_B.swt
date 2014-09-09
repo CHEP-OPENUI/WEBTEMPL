@@ -1,0 +1,20 @@
+<!-- Template Start: CCAppletForm4Col_B.swt -->
+
+<swe:include file="CCApplet_NamedSpacer.swt"/>	
+
+<swe:form>
+
+	<swe:include file="CCTitle_Named.swt"/>
+	
+	<swe:include file="CCFormButtonsTop.swt"/>
+	<swe:include file="CCForm4ColBody.swt"/>
+	
+	</span>				
+
+</swe:form>
+
+<!-- Template End: CCAppletFormBase4Col_B.swt -->
+
+
+
+	

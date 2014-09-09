@@ -1,0 +1,160 @@
+<!-- Template Start: eCfgObj_TextJS.swt -->
+<SCRIPT>
+   var iNumPortContents = 0;
+</SCRIPT>
+<ul type="circle" >
+   <li>
+      <swe:control id="swe:IncId" CfgFieldName="Name" CfgHtmlType="CfgLabel" />
+      <swe:control id="RequireMoreChild" CfgHtmlType="CfgGenerics" />
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <swe:control id="Quantity" CfgUIControl="lblQuantity" CfgHtmlType="CfgLabel" />&nbsp;
+      <swe:control id="Colon" CfgUIControl="lblColon" CfgHtmlType="CfgLabel" />&nbsp;
+      <swe:control id="swe:IncId+1000" CfgFieldName="Quantity" CfgHtmlType="CfgLabel" />
+      <swe:control id="Comma" CfgUIControl="lblComma" CfgHtmlType="CfgLabel" />
+   </li>
+   <ul type="disc">
+      <div id="eCfgObj_TextJS_OUI_Canvas"></div>
+   </ul>
+</ul>
+
+<script>
+   var strObjName = '<swe:control id="swe:IncId" CfgFieldName="Name" CfgHtmlType="CfgLabel" />';
+   var strHeaderHTML = "";
+   var strFooterHTML = "";
+   var strHTML       = "";
+   $("#eCfgObj_TextJS_OUI_Canvas")[0].id = "eCfgObj_TextJS_OUI_Canvas_" + strObjName;
+</script>
+
+<div id="eCfgObj_TextJS_OUI_Buffer" style="display:none">
+
+   <div id="eCfgObj_TextJS_OUI_Attribute_Buffer">
+      <swe:for-each id="100" CfgLoopType="Attribute" startValue="1000" count="Dynamic" iteratorName="AttId">
+         <SCRIPT>
+            if ( 0 == iNumPortContents )
+            {
+               var sAttributes = '<swe:control id="Attribute" CfgUIControl="lblAttribute" CfgHtmlType="CfgLabel" />';
+               strHeaderHTML += '<li>'+ sAttributes + '</li>';
+               strHeaderHTML += '<ul type = \"squre\" >';
+               iNumPortContents ++;
+            }
+         </SCRIPT>
+         <li>
+            <swe:control id="swe:AttId" CfgFieldName="AttName" CfgHtmlType="CfgLabel" />&nbsp;
+            <swe:control id="Colon" CfgUIControl="lblColon" CfgHtmlType="CfgLabel" />&nbsp;
+            <swe:control id="swe:AttId+100" CfgFieldName="AttValue" CfgHtmlType="CfgLabel" />
+         </li>
+      </swe:for-each>
+      <SCRIPT>
+         if( iNumPortContents > 0 )
+         {
+            strFooterHTML = '</ul>';
+            iNumPortContents = 0;
+         }
+         strHTML = strHeaderHTML + $("#eCfgObj_TextJS_OUI_Attribute_Buffer")[0].innerHTML + strFooterHTML;
+         $("#eCfgObj_TextJS_OUI_Attribute_Buffer")[0].outerHTML = "";
+         strHeaderHTML = "";
+         strFooterHTML = "";
+      </SCRIPT>
+   </div>
+
+   <div id="eCfgObj_TextJS_OUI_Port_Buffer">
+      <swe:for-each id="12" CfgLoopType="Port" startValue="2000" count="Dynamic" iteratorName="PortId">
+         <SCRIPT>
+            if ( 0 == iNumPortContents )
+            {
+               var sRelationships = '<swe:control id="Relationship" CfgUIControl="lblRelationship" CfgHtmlType="CfgLabel" />';
+               strHeaderHTML += '<li>'+ sRelationships + '</li>';
+               strHeaderHTML += '<ul type = \"squre\" >';
+            }
+         </SCRIPT>
+         <li>
+            <swe:control id="swe:PortId+1000" CfgFieldName="CxPortName" CfgHtmlType="CfgLabel" />
+            <swe:control id="RequireMoreChild" CfgHtmlType="CfgGenerics" />               
+         </li>
+         
+         <swe:for-each id="500" CfgLoopType="Children" startValue="1500" count="Dynamic" iteratorName="101Id">
+            <swe:include id="swe:RecursiveChild" CfgHtmlType="Recursive Include" CfgNodeType="eCfgObj_TextJS.swt" />
+         </swe:for-each>
+
+         <SCRIPT>
+            iNumPortContents ++;
+         </SCRIPT>
+      </swe:for-each>
+
+      <SCRIPT>
+         if( iNumPortContents > 0 )
+         {
+            strFooterHTML = '</ul>';
+            iNumPortContents = 0;
+         }
+         strHTML += strHeaderHTML + $("#eCfgObj_TextJS_OUI_Port_Buffer")[0].innerHTML + strFooterHTML;
+         $("#eCfgObj_TextJS_OUI_Port_Buffer")[0].outerHTML = "";
+         strHeaderHTML = "";
+         strFooterHTML = "";
+      </SCRIPT>
+   </div>
+
+   <div id="eCfgObj_TextJS_OUI_LinkedItem_Buffer">
+      <swe:for-each id="130" CfgLoopType="LinkedItem" startValue="3000" count="Dynamic" iteratorName="LinkedItemId">
+         <SCRIPT>
+            if ( 0 == iNumPortContents )
+            {
+               var sLinkedItems = '<swe:control id="LinkedItem" CfgUIControl="lblLinkedItem" CfgHtmlType="CfgLabel" />';
+               strHeaderHTML += '<li>'+ sLinkedItems + '</li>';
+               strHeaderHTML += '<ul type = \"squre\" >';
+               iNumPortContents ++;
+            }
+         </SCRIPT>
+         <li>
+            <swe:control id="swe:LinkedItemId" CfgFieldName="CxLnkItmName" CfgHtmlType="CfgLabel" />&nbsp;
+            <swe:control id="Colon" CfgUIControl="lblColon" CfgHtmlType="CfgLabel" />&nbsp;
+            <swe:control id="swe:ResourceId+100" CfgFieldName="CxLnkItmDisplayValue" CfgHtmlType="CfgLabel" />
+         </li>
+      </swe:for-each>
+      <SCRIPT>
+         if( iNumPortContents > 0 )
+         {
+            strFooterHTML = '</ul>';
+            iNumPortContents = 0;
+         }
+         strHTML += strHeaderHTML + $("#eCfgObj_TextJS_OUI_LinkedItem_Buffer")[0].innerHTML + strFooterHTML;
+         $("#eCfgObj_TextJS_OUI_LinkedItem_Buffer")[0].outerHTML = "";
+         strHeaderHTML = "";
+         strFooterHTML = "";
+      </SCRIPT>
+   </div>
+
+   <div id="eCfgObj_TextJS_OUI_Resource_Buffer">
+      <swe:for-each id="140" CfgLoopType="Resource" startValue="4000" count="Dynamic" iteratorName="ResourceId">
+         <SCRIPT>
+            if ( 0 == iNumPortContents )
+            {
+               var sResources = '<swe:control id="Resource" CfgUIControl="lblResource" CfgHtmlType="CfgLabel" />';
+               strHeaderHTML += '<li>'+ sResources + '</li>';
+               strHeaderHTML += '<ul type = \"squre\" >';
+               iNumPortContents ++;
+            }
+         </SCRIPT>
+         <li>
+            <swe:control id="swe:ResourceId" CfgFieldName="CxResourceName" CfgHtmlType="CfgLabel" />&nbsp;
+            <swe:control id="Colon" CfgUIControl="lblColon" CfgHtmlType="CfgLabel" />&nbsp;
+            <swe:control id="swe:ResourceId+100" CfgFieldName="CxResourceValue" CfgHtmlType="CfgLabel" />
+         </li>
+      </swe:for-each>
+      <SCRIPT>
+         if( iNumPortContents > 0 )
+         {
+            strFooterHTML = '</ul>';
+            iNumPortContents = 0;
+         }
+         strHTML += strHeaderHTML + $("#eCfgObj_TextJS_OUI_Resource_Buffer")[0].innerHTML + strFooterHTML;
+         $("#eCfgObj_TextJS_OUI_Resource_Buffer")[0].outerHTML = "";
+         $("#eCfgObj_TextJS_OUI_Buffer")[0].outerHTML = "";
+         strHeaderHTML = "";
+         strFooterHTML = "";
+
+         $("#eCfgObj_TextJS_OUI_Canvas_" + strObjName)[0].outerHTML = strHTML;
+      </SCRIPT>
+   </div>
+</div>
+<!-- Template End: eCfgObj_TextJS.swt -->

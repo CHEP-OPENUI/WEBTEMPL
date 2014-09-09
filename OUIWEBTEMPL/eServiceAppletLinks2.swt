@@ -1,0 +1,52 @@
+<!--  Template Start: dCCAppletLinks2.swt -->
+
+<swe:include file="CCApplet_NamedSpacer.swt"/>
+<swe:include file="CCStylesChoice.swt"/>
+
+<span class="AppletStyle5">
+<swe:form>
+			
+	<swe:include file="CCFormBaseTitle.swt"/>	
+	
+	<!-- <table bgcolor="#ffffff" datatable="0" summary="" width="100%" cellpadding="1" cellspacing="0" border="0" align="center"><tr><td class="AppletBorder"> -->
+	<table class="curve" bgcolor="#ffffff" datatable="0" summary="" width="100%" cellpadding="1" cellspacing="0" border="1" bordercolor="#62B1FF" align="center"><tr><td class="curve">
+	<!-- <table bgcolor="#ffffff" datatable="0" summary="" width="100%" cellpadding="3" cellspacing="1" border="0" class="AppletBack"><tr> -->
+	<table class="curve" bgcolor="#ffffff" datatable="0" summary="" width="100%" cellpadding="3" cellspacing="1"><tr> 
+		<swe:control id="1099">
+		<!-- <td class="AppletBack" valign="top"><swe:this property="FormattedHtml" hintText="Thematic Image"/></td> -->
+		<td class="curve" valign="top"><swe:this property="FormattedHtml" hintText="Thematic Image"/></td>
+		</swe:control>	
+		<!-- <td class="AppletBack" width="100%"> -->
+		<td class="curve" width="100%" >
+		<swe:control id="1100">
+		<!-- <table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" border="0" class="AppletBack"> -->
+		<table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" class="curve">
+			<tr><td class="curve"><swe:this property="FormattedHtml" hintText="Text"/></td></tr>
+		</table>	
+		</swe:control>	
+		<!-- <table bgcolor="#ffffff" datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" border="0" class="AppletBack" font size="14px" color="#FFFFFF"> -->
+		<table class="curve" bgcolor="#ffffff" datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" font size="14px" color="#FFFFFF">
+			<swe:for-each startValue="1101" count="30" iteratorName="currentId">
+				<swe:control id="swe:currentId"><tr height="66" valign="top"></swe:control>
+				<swe:control id="swe:currentId+100"><td><swe:this property="FormattedHtml" hintText="Image"/></td></swe:control>
+				<swe:control id="swe:currentId"><td class="curve" width="100%"><table class="curve" datatable="0" summary="" width="100%" border="0" cellspacing="0" cellpadding="0"></swe:control>
+				<swe:control id="swe:currentId"><tr><td><swe:this property="FormattedHtml" hintText="Link (Required)"/></td></tr></swe:control>
+				<swe:control id="swe:currentId+200"><tr><td><swe:this property="FormattedHtml" hintText="Description"/></td></tr></swe:control>
+				<swe:control id="swe:currentId+300"><tr><td><swe:this property="FormattedHtml" hintText="Text"/></td></tr></swe:control>
+				<swe:control id="swe:currentId+400"><tr><td><swe:this property="FormattedHtml" hintText="Text"/></td></tr></swe:control>
+				<swe:control id="swe:currentId+500"><tr><td><swe:this property="FormattedHtml" hintText="Text"/></td></tr></swe:control>
+				<swe:control id="swe:currentId+600"><tr><td><swe:this property="FormattedHtml" hintText="Text"/></td></tr></swe:control>
+				<swe:control id="swe:currentId+700"><tr><td><swe:this property="FormattedHtml" hintText="Text"/></td></tr></swe:control>
+				<swe:control id="swe:currentId"></table></td></swe:control>
+				<swe:control id="swe:currentId"></tr></swe:control>		
+			</swe:for-each>			
+		</table>	
+	</td></tr></table>	
+	</td></tr></table>
+	<table bgcolor="#F6F6F6" datatable="0" summary="" width="100%" height="18" cellpadding="1" cellspacing="0" border="0" border-radius="15px" -webkit-border-radius:15px align="center"><tr><td class="AppletBorder">
+	</td></tr></table>
+	<table bgcolor="#F6F6F6" datatable="0" summary="" width="100%" cellpadding="1" cellspacing="0" border="0" border-radius="15px" -webkit-border-radius:15px align="center"><tr><td class="AppletBorder">
+	</td></tr></table>	
+</swe:form>
+</span>
+<!--  Template End: dCCAppletLinks2.swt -->

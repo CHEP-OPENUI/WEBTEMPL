@@ -1,0 +1,51 @@
+<!-- Template Start: CCPageContainer_ss.swt -->
+<HTML dir="swe:dir">
+    <head>
+        <title><swe:this property="Title"/></title>
+        <swe:include file="CCStylesChoice.swt"/>
+    </head>
+
+    <BODY >
+        <!-- Begin Banner & Global Nav Header -->
+        <div  class="siebui-page-container">
+            <div  class="siebui-app-container">
+                <div  class="siebui-header">
+                    <!-- Header Logo Place holder -->
+                    <div class="siebui-logo"></div>
+
+                    <!-- Header Page Item Place holder -->
+                    <div class="siebui-pageitem" >
+                        <swe:pageitem id="11"><swe:this property="FormattedHtml"/></swe:pageitem>
+                        <swe:pageitem id="12"><swe:this property="FormattedHtml"/></swe:pageitem>
+                        <swe:pageitem id="13"><swe:this property="FormattedHtml"/></swe:pageitem>
+                        <swe:pageitem id="14"><swe:this property="FormattedHtml"/></swe:pageitem>
+                        <swe:pageitem id="15"><swe:this property="FormattedHtml"/></swe:pageitem>
+                        <swe:pageitem id="16"><swe:this property="FormattedHtml"/></swe:pageitem>
+                    </div>
+                    <div class="siebui-clear-all"></div>
+
+                    <!-- Screen Tab Place holder -->
+                    <div id="screenTabs" class="siebui-ss-screentabs">
+                        <swe:include  file="CCScreenbar_Tabs.swt"/>
+                    </div>
+                    <swe:if condition="Web Engine State Properties, IsLoggedIn">
+                        <swe:searchbar></swe:searchbar>
+                    </swe:if>
+                </div>
+                <!-- End Banner & Global Nav Header -->
+                
+                <!-- View Container Place holder -->
+                <div class="siebui-view-container">
+                    <swe:frameset htmlAttr="cols='0%,100%' border='0' frameborder='No'">
+                        <swe:frame type="View" htmlAttr="marginheight='0' marginwidth='0' scrolling='NO' frameborder='0'">
+                            <swe:current-view/>
+                        </swe:frame>
+                    </swe:frameset>						
+                </div>
+            </div>
+        </div>
+        <swe:scripts/>
+    </BODY>
+</HTML>
+
+<!-- Template End:  CCPageContainer_ss.swt -->

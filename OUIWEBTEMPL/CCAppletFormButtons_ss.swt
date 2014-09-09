@@ -1,0 +1,35 @@
+<!-- Template Start CCAppletFormButtons_ss.swt -->
+
+<!-- Form Buttons -->
+<div class="siebui-applt-button-ctrl">    <!-- save data, save Output, Public Flag fields -->
+    <swe:control id="131"><!-- CreateRecord, 131 --><div class="siebui-ss-applt-button"><swe:this property="FormattedHtml" hintMapType="Control" hintText="New"/></div></swe:control> 
+    <swe:control id="132"><!-- EditRecord, 132   --><div class="siebui-ss-applt-button"><swe:this property="FormattedHtml" hintMapType="Control" hintText="Edit" /></div></swe:control>
+    <swe:control id="133"><!-- DeleteRecord, 133 --><div class="siebui-ss-applt-button"><swe:this property="FormattedHtml" hintMapType="Control" hintText="Delete"/></div></swe:control>
+    <swe:control id="106"><!-- NewQuery, 106     --><div class="siebui-ss-applt-button"><swe:this property="FormattedHtml" hintMapType="Control" hintText="Query" /></div></swe:control>
+
+    <swe:control id="136"><!-- Save, 136         --><div class="siebui-ss-applt-button"><swe:this property="FormattedHtml" hintMapType="Control" hintText="Save"  /></div></swe:control>
+    <swe:control id="134"><!-- Reset, 134        --><div class="siebui-ss-applt-button"><swe:this property="FormattedHtml" hintMapType="Control" hintText="Reset" /></div></swe:control>
+    <swe:control id="135"><!-- Cancel, 135       --><div class="siebui-ss-applt-button"><swe:this property="FormattedHtml" hintMapType="Control" hintText="Cancel"/></div></swe:control>
+
+    <swe:control id="107"><!-- ExecuteQuery, 107 --><div class="siebui-ss-applt-button"><swe:this property="FormattedHtml" hintMapType="Control" hintText="Go (ExecuteQuery)" /></div></swe:control>
+    <swe:control id="108"><!-- CancelQuery, 108  --><div class="siebui-ss-applt-button"><swe:this property="FormattedHtml" hintMapType="Control" hintText="Cancel (Query)" /></div></swe:control>
+    <swe:control id="126"><!-- QueryAssistant,126--><div class="siebui-ss-applt-button"><swe:this property="FormattedHtml" hintMapType="Control" hintText="Query Assistant" /></div></swe:control>
+    <!--<swe:control id="109"><div class="siebui-ss-applt-cust-button1"><swe:this property="FormattedHtml" hintMapType="Control"/></div></swe:control> 
+    <swe:control id="110"><div class="siebui-ss-applt-cust-button1"><swe:this property="FormattedHtml" hintMapType="Control"/></div></swe:control> -->
+    <swe:control id="145"><!-- optional control  --><div class="siebui-ss-applt-button"><swe:this property="FormattedHtml" hintMapType="Control" hintText="Public"/></div></swe:control>
+    <swe:control id="146"><!-- optional control  --><div class="siebui-ss-applt-button"><swe:this property="FormattedHtml" hintMapType="Control" hintText="Save Data"/></div></swe:control>
+    <swe:control id="147"><!-- optional control  --><div class="siebui-ss-applt-button"><swe:this property="FormattedHtml" hintMapType="Control" hintText="Save Output"/></div></swe:control>
+</div>
+
+<div class="siebui-applt-cust-button-ctrl1">    
+    <swe:control id="150"><div class="siebui-ss-applt-cust-button1"><swe:this property="FormattedHtml" hintMapType="Control"/></div></swe:control> 
+    <swe:control id="151"><div class="siebui-ss-applt-cust-button1"><swe:this property="FormattedHtml" hintMapType="Control"/></div></swe:control> 
+    <swe:control id="152"><div class="siebui-ss-applt-cust-button1"><swe:this property="FormattedHtml" hintMapType="Control"/></div></swe:control>
+</div>
+
+<div class="siebui-applt-cust-button-ctrl2">
+    <swe:control id="142"><div class="siebui-ss-applt-cust-button2"><swe:this property="FormattedHtml" hintMapType="Control"/></div></swe:control>
+    <swe:control id="143"><div class="siebui-ss-applt-cust-button2"><swe:this property="FormattedHtml" hintMapType="Control"/></div></swe:control>
+</div>
+
+<!-- Template End CCAppletFormButtons_ss.swt -->

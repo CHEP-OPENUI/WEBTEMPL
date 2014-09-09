@@ -1,0 +1,59 @@
+<!-- Template Start: eCfg_MenuAttributeRadioJS.swt -->
+
+<script>
+   //div tag for content
+   document.write('<DIV id="Rel_' + visibleRelArray[currentRel] + '" class="eCfgContent">');
+</script>
+
+<!-- Formatting tables -->
+<table datatable="0" summary="" width="100%" height="100%" cellspacing="3" cellpadding="2" border="0" class="AppletBorder">
+<tr>
+   <td class="AppletBack" valign="top">
+
+      <!-- This starts a new table -->
+      <swe:include file="eCfgAtt_HeaderJS.swt"/>
+
+         <tr>
+            <td colspan=3>
+               <table datatable="0" summary="" valign="center" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="white">
+                  <tr>
+                     <td width="100%">
+                        <swe:for-each id="500" CfgLoopType="Domain" startValue="1500" count="Dynamic" iteratorName="101Id" Usage="Radio">
+                           <swe:control id="radioButton" CfgHtmlType="CfgRadio"
+                            CfgJSShow="showRadio" CfgJSUpdateExclusion="updateExcludedItemForAttribute" CfgJSUpdateSelection="updateSelectionInfoForAttribute"/>
+                        </swe:for-each>
+                     </td>
+                  </tr>
+                  <tr>
+	             <td colspan="5">
+
+	                <SCRIPT>
+	                var buttonName;
+
+	                buttonName = "<swe:control id="swe:ShowMenu" CfgUIControl="sShowMenu" CfgHtmlType="CfgLabel"/>";
+
+	                document.write ('<input type="button"');
+	                document.write (' value=');
+	                document.write (buttonName);
+	                document.write (' onClick="ShowMenu();" style="height:20;">');
+	                </SCRIPT>
+	             </td>
+	          </tr>
+
+               </table>
+            </td>
+         </tr>
+
+      <swe:include file="eCfgPort_FooterJS.swt"/>
+
+   </td>
+</tr>
+</table>
+
+<!-- END Formatting tables -->
+</DIV>
+<script>
+	currentRel++;
+</script>
+
+<!-- Template End: eCfg_MenuAttributeRadioJS.swt -->

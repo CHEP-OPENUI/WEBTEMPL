@@ -1,0 +1,60 @@
+<!-- Template Start: CCAppletList_B_EL.swt -->
+<swe:form>
+  <swe:include file="CCTitle_Named.swt"/>
+  <swe:include file="CCRecordNav.swt"/>
+  <div class="AppletHIListBorder siebui-map-container">
+    <!-- this is for the map-->
+    <swe:list>
+    </swe:list>
+    <!-- POPUP -->
+    <swe:list-detail>
+      <div class="siebui-tile-name">
+        <swe:for-each count="3" startValue="500" iteratorName="currentId">
+          <swe:control id="swe:currentId" hintMapType="FormItem">
+            <div class="siebui-form-data" align="swe:this.TextAlignment">
+              <swe:this property="FormattedHtml" hintText="Field"/>
+            </div>
+          </swe:control>
+        </swe:for-each>
+      </div>
+      <div class="siebui-tile-details-row1">
+        <ul>
+          <swe:for-each count="4" startValue="510" iteratorName="currentId">
+            <li>
+              <swe:control id="swe:currentId" hintMapType="FormItem">
+                <div class="siebui-form-data" align="swe:this.TextAlignment">
+                  <swe:this property="FormattedHtml" hintText="Field"/>
+                </div>
+              </swe:control>
+            </li>
+          </swe:for-each>
+        </ul>
+      </div>
+      <div class="siebui-tile-image">
+        <swe:for-each count="2" startValue="520" iteratorName="currentId">
+          <swe:control id="swe:currentId" hintMapType="FormItem">
+            <div class="siebui-form-data" align="swe:this.TextAlignment">
+              <swe:this property="FormattedHtml" hintText="Field"/>
+            </div>
+          </swe:control>
+        </swe:for-each>
+      </div>
+      <div class="siebui-tile-clear"/>
+        <div class="siebui-tile-details-row2">
+          <ul>
+            <swe:for-each count="4" startValue="530" iteratorName="currentId">
+              <li>
+                <swe:control id="swe:currentId" hintMapType="FormItem">
+                  <div class="siebui-form-data" align="swe:this.TextAlignment">
+                    <swe:this property="FormattedHtml" hintText="Field"/>
+                  </div>
+                </swe:control>
+              </li>
+            </swe:for-each>
+          </ul>
+        </div>
+      </div>
+    </swe:list-detail>
+  </div>
+</swe:form>
+<!-- Template End: CCAppletList_B_EL.swt -->

@@ -1,0 +1,63 @@
+<swe:include file="CCApplet_NamedSpacer.swt"/>	
+
+<swe:form>
+
+<div class="siebui-epui-header-applet">
+    <div class="swe:this.SelectStyle">	
+        <div class="siebui-epui-tab" name="EditPromHeaderTab">
+            <div class="siebui-epui-tr">
+                <div class="siebui-epui-td">
+                <!-- Title for the two applets combined-->
+                    <div class="siebui-epui-rule-tab siebui-applet-title-row" name="EPUITitleRow">
+                        <div class="siebui-epui-rule-tr">
+                            <div class="siebui-epui-rule-td-la siebui-epui-rule-head">
+                                <swe:this property="Title"/>
+                            </div>
+                            <!-- Total MRC, TOTAL NRC comes here -->
+                            <div class="siebui-epui-rule-td-la">
+                                <swe:for-each startValue="506" count="5" iteratorName="currentId">
+                                    <swe:control id="swe:currentId" hintMapType="FormItem">
+                                        <div>
+                                            <div class="mceGridLabel" style="display:inline">
+                                                <swe:this property="DisplayName" hintText="Label"/>:
+                                            </div>
+                                            <div class="mceGridField" style="display:inline">
+                                                <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+                                            </div>
+                                        </div>                                    
+                                    </swe:control>              
+                                </swe:for-each>  
+                            </div>
+                            <!--Qty and other Fields -->
+                            <div class="siebui-epui-rule-td-la">
+                                <swe:for-each startValue="511" count="5" iteratorName="currentId">
+                                    <swe:control id="swe:currentId" hintMapType="FormItem">
+                                        <div>
+                                            <div class="mceGridLabel" style="display:inline">
+                                                <swe:this property="DisplayName" hintText="Label"/>:
+                                            </div>
+                                            <div class="mceGridField" style="display:inline">
+                                                <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+                                            </div>
+                                        </div>                                    
+                                    </swe:control>              
+                                </swe:for-each>  
+                            </div>
+                            <!-- A few buttons for the Applet -->
+                            <div class="siebui-epui-rule-td-ra">
+                                <swe:for-each startValue="551" count="5" iteratorName="currentId">
+                                    <swe:control id="swe:currentId">
+                                        <span class="siebui-epui-reg-elem">
+                                            <swe:this property="FormattedHtml"  hintText="Control" hintMapType="Control"/>
+                                        </span>
+                                    </swe:control>                                
+                                </swe:for-each>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>        
+</swe:form>	

@@ -1,0 +1,28 @@
+<!-- Template Start: CCAppletPlaybarButtons.swt -->
+<!-- Oliver: code redesign -->
+
+<!-- Buttons (Optional, Optional) -->
+
+<swe:control id="150">
+<!-- Pause Button --><span class="siebui-applet-button"><swe:this property="FormattedHtml" hintText="Pause" hintMapType="Control"/></span>
+</swe:control>
+
+<span class="siebui-button-sep-10"></span>
+
+<swe:control id="151">
+<!-- Previous Button --><span class="siebui-applet-button"><swe:this property="FormattedHtml" hintText="Previous" hintMapType="Control"/></span>
+</swe:control>
+
+<swe:control id="152">
+<!-- If <control user prop> of "DynamicLabel" is "Y", it shows "Next"/"Submit"/"Finish" based on -->
+<!-- <forward button type> in task step -->
+<!-- Next Button --><span class="siebui-applet-button"><swe:this property="FormattedHtml" hintText="Next" hintMapType="Control"/></span>
+</swe:control>
+
+<span class="siebui-button-sep-10"></span>
+
+<swe:control id="154">
+<!-- Cancel Button --><span class="siebui-applet-button"><swe:this property="FormattedHtml" hintText="Cancel" hintMapType="Control"/></span>
+</swe:control>
+
+<!-- Template End: CCAppletPlaybarButtons.swt -->

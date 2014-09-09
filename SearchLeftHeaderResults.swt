@@ -1,0 +1,37 @@
+<!-- Template Start: SearchLeftHeaderResults.swt -->
+<table datatable="0" summary=""  border="0"  cellpadding="2" width="100%" bgcolor="#d5e0f4" cellspacing="0">
+	<tr bgcolor="#B0C4DE">
+	<td>&nbsp;&nbsp;</td>
+	</tr>
+	
+	<!-- Found -->
+	<tr>
+		<td >
+		<swe:control id="2004">
+			<swe:this property="DisplayName"  hintMapType="Control" hintText="Label"/>
+		</swe:control>
+		</td>
+	</tr>
+	<!-- Sort By -->
+	<tr>
+		<td>
+		<swe:control id="2006">
+			<swe:this property="DisplayName"  hintMapType="Control" hintText="Label"/>
+		</swe:control>
+		</td>
+
+	</tr>
+	
+	<tr><td>&nbsp;</td></tr>
+	<!-- Do you mean -->
+	<tr>
+		<td>
+		<swe:control id="2014">
+			<swe:this property="DisplayName"  hintMapType="Control" hintText="Label"/>
+		</swe:control>
+		</td>
+
+	</tr>
+</table>
+
+<!-- Template End: SearchLeftHeaderResults.swt -->

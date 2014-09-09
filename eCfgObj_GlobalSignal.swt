@@ -1,0 +1,29 @@
+<!-- Template Start: eCfgObj_GobalSignal.swt -->
+<div id="eCfgObj_GobalSignal.swt" class="cxStatusTempl">
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+   <tr class="listRowOff">
+      <td>
+         <b><swe:control id="Message" CfgUIControl="lblMessage" property="DisplayName" /></b>
+      </td>
+   </tr>
+   <swe:for-each id="200" CfgLoopType="$.Signal" startValue="1500" count="Dynamic" iteratorName="102Id">
+      <tr class="listRowOff">
+         <td>
+             <span id="CxExplanation" class="cxLabel">
+             <swe:control id="swe:102Id+220" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" CfgFieldName="CxExplanation"/>
+             </span>
+         </td>
+      </tr>
+   </swe:for-each>
+   <swe:for-each id="300" CfgLoopType="Signal" startValue="1500" count="Dynamic" iteratorName="103Id">
+      <tr class="listRowOff">
+         <td>
+             <span id="CxExplanation" class="cxLabel">
+             <swe:control id="swe:103Id+220" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" CfgFieldName="CxExplanation"/>
+             </span>
+         </td>
+      </tr>
+   </swe:for-each>
+</table>
+</div>
+<!-- Template End: eCfgObj_GobalSignal.swt -->

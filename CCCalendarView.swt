@@ -1,0 +1,54 @@
+<!--  Template Start: CCCalendarView.swt -->
+<swe:include file="CCHTMLHeader.swt"/>
+
+<!-- ---------- Threadbar and Mini-Applet ----------------->
+<table datatable="0" summary="" border="0" cellspacing="0" cellpadding="1" width="100%">
+  <tr>
+	<swe:if condition="Web Engine State Properties, IsLowInteractive">
+    <td valign="absmiddle">
+		<swe:include file="CCThreadbar.swt"/>
+    </td>
+	</swe:if>
+  </tr>
+</table> 
+<!-- ---------- End Threadbar ------------->
+
+<!-- ---------- Main Content Area ---------------------------->
+
+<!-- ---------- Tier 3 navigation required so SWE pickups JumpTabs in SI ----------------->
+<swe:include file="CCViewbar_Tabs.swt"/>
+<!-- ---------- End Tier 3 navigation ------------->
+
+
+<swe:include file="CCCalendarViewTabs.swt"/>
+
+<swe:for-each count="1" iteratorName="currentId" startValue="3">
+	<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Grandchild Applet" property="FormattedHtml" var="Child"/>
+</swe:for-each>
+
+<swe:for-each count="2" iteratorName="currentId" startValue="4">
+	<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+</swe:for-each>
+
+<table datatable="0" summary="" width="100%" border="0" cellspacing="0" cellpadding="3">
+	<tr valign="top">
+		<td>
+			<swe:for-each count=2 iteratorName="currentId" startValue="6">
+				<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+			</swe:for-each>
+		</td>
+
+		<td>
+			<swe:for-each count=2 iteratorName="currentId" startValue="8">
+				<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Grandchild Applet"  property="FormattedHtml" var="Grandchild"/>
+			</swe:for-each>
+		</td>
+	</tr>
+</table>
+
+<swe:include file="CCHTMLFooter.swt"/>
+
+
+<!-- ---------- End Main Content Area ------------------------>
+
+<!--  Template End: CCCalendarView.swt -->

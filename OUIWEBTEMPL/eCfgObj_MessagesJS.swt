@@ -1,0 +1,13 @@
+<!-- Template Start: eCfgObj_MessagesJS.swt -->
+<!-- Oliver: [code redesign], product modules -->
+
+<div id="CfgObjDetails" style="display:none">
+   <dl id="CfgProdDetails" style="display:none">
+      <dt><swe:control id="PartNum" CfgUIControl="lblPartNum" CfgHtmlType="CfgLabel" /></dt>
+      <dd><swe:control id="swe:PartNum" CfgFieldName="Part Number" CfgHtmlType="CfgLabel" /></dd>
+      <dt><swe:control id="Description" CfgUIControl="lblDescription" CfgHtmlType="CfgLabel" /></dt>
+      <dd><swe:control id="swe:Description" CfgFieldName="Display Description" CfgHtmlType="CfgLabel" /></dd>
+   </dl>
+</div>
+
+<!-- Template End: eCfgObj_MessagesJS.swt -->

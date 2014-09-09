@@ -1,0 +1,38 @@
+<!--  Template Start: dCCListBodyImgBulletScreenHomepage.swt -->
+<swe:for-each-row count="10">
+<tr valign="top">
+	<td><swe:control id="1" property="FormattedHtml" hintText="Anchor"/>
+		<swe:control id="502">
+		    <span class="ScreenHomePageTitle"><swe:this property="FormattedHtml" hintText="Title"/></span><br>
+		</swe:control> 
+		<swe:control id="503">
+		    <span class="ScreenHomePageDescription"><swe:this property="FormattedHtml" hintText="Description" /></span><br>
+		</swe:control> 
+		<swe:for-each startValue="504" count="10" iteratorName="currentId">
+		  <swe:control id="swe:currentId">
+		    <swe:this property="FormattedHtml" hintText="Other Text"/><br>
+		  </swe:control> 
+		</swe:for-each>
+
+	  <table datatable="0" summary="" border="0" cellspacing="0" cellpadding="0"><tr>
+		<swe:for-each startValue="520" count="10" iteratorName="currentId">
+			<swe:control id="swe:currentId">
+		 		<td><swe:this property="FormattedHtml" hintText="Other"/></td>
+			</swe:control> 
+		</swe:for-each>
+        </tr></table>
+
+		<table datatable="0" summary=""><tr><td><img src="images/spacer.gif" width="1" height="3" alt=""></td></tr></table>
+
+	</td>
+</tr>
+
+<tr><td>
+	<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff">
+		<tr bgcolor="ffffff">
+			<td><img src="images/spacer.gif" width="100%" height="1" alt=""></td>
+		</tr>
+	</table>
+</td></tr>
+</swe:for-each-row>
+<!--  Template End: dCCListBodyImgBulletScreenHomepage.swt -->

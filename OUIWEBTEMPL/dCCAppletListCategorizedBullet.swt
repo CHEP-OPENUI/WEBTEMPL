@@ -1,0 +1,11 @@
+<!-- Template Start: dCCAppletListCategorizedBullet.swt -->
+
+<span class="AppletStyle4 siebui-catbulletlist">
+	<swe:form>
+		<ul class="siebui-bullet-list">
+			<swe:include file="dCCListCategorized.swt"/>
+		</ul>
+	</swe:form>
+</span>
+
+<!-- Template End: dCCAppletListCategorizedBullet.swt -->

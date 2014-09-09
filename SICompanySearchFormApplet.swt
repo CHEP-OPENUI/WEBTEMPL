@@ -1,0 +1,3 @@
+<!-- Template Start SICompanySearchFormApplet.swt -->
+<swe:include file="ePortalCompanySearchFormApplet.swt"/>
+<!-- Template End SICompanySearchFormApplet.swt -->

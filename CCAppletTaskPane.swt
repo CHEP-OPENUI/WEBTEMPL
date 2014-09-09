@@ -1,0 +1,79 @@
+<!-- Template Start: CCAppletTaskPane.swt -->
+    <script language="JavaScript">
+    function TaskObj ()
+    {
+        return this.document.getElementById ("s_TaskUIPane");
+    }
+    function HandleResize()
+    {
+        TaskObj ().HandleResize();
+    }
+       
+    // register onresize event handler
+    window.onresize = HandleResize;
+    </script>
+
+    <!-- for QTP automation in HI, clickable elements need s_ prefix so that QTP recognizes the click 
+        as a Siebel event and doesn't create its own recording event. Otherwise, get two recording events. -->
+
+    <div id="s_TaskPane" style="padding:5px;">
+
+    <!-- task list header -->
+    <div id="taskpaneHeader">
+    <table datatable="0" summary="" width="100%" class="titlebar">
+        <tr>
+            <td class="titleBox" width="100%">
+                <span id="titleBox_player">
+                <span id="IDS_TASKPANE_CAPTION" class="taskCaption"></span>
+                </span>
+            </td>
+            <td>
+                <a id="s_close" href="JavaScript:TaskObj().HandleClose()">
+                <swe:control id="101"><swe:this property="FormattedHtml" hintMapType="Control" hintText="CloseTaskPane" /></swe:control>
+                </a>
+            </td>
+        </tr>
+    </table>
+    </div><!-- end of taskpaneHeader -->
+
+    <div id="taskList" class="tasklist1">
+
+    <div id="taskContainer">
+        <table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" class="tasklistBorder">
+            <tr>
+                <td width="100%" align="center">
+                <!-- task control -->
+                <div id="taskControl" Style="border:0px solid red">
+                    <swe:control id="107"><swe:this property="FormattedHtml" hintMapType="Control" hintText="TaskPaneActiveXCtrl" /></swe:control>
+                </div>
+                </td>
+            </tr>
+		    <!--ACR558-->
+		    <tr align="middle">
+			    <td class="progressBar" width="100%">
+				    <span id="progressBar_player">
+					    <span id="IDS_TASKPANE_PROGRESS" class="taskProgress"></span>
+				    </span>
+			    </td>
+		    </tr><!--End of Progress Bar-->         
+        </table>
+    </div>   
+    </div><!-- end of taskList -->
+
+    <div id="taskpaneFooter">
+    <!-- task footer -->
+    <table datatable="0" summary="" cellpadding="0" cellspacing="0" width="100%" style="padding:4 0 0 0;"  class="tasklink">
+    <swe:if condition="Task UI Service (SWE), HasInboxView">    
+    <tr valign="top">
+        <td class="aligndefault">
+            <a id="s_gotoinbox" class="returnLink" href="JavaScript:TaskObj().HandleGotoInbox()">
+                <span id="IDS_TASKPANE_GOTOINBOX"></span>
+            </a>
+        </td>
+        <td width="10"><img src="images/arw_fwd.gif" align="absmiddle" border="0"/></td>
+    </tr>
+    </swe:if>
+    </table>
+    </div><!-- end of taskFooter -->
+</div>
+<!-- Template End: CCAppletTaskPane.swt -->

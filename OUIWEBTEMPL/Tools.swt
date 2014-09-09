@@ -1,0 +1,16 @@
+<swe:if condition="Web Engine State Properties, IsHighInteractive">
+    <swe:if condition="Task UI Service (SWE),IsNotInTask">
+    			<!-- link href="files/ie8-compat.css" rel="stylesheet"/ -->
+    </swe:if>
+    <swe:if condition="Task UI Service (SWE),IsInTask">
+			<!-- link href="files/main_task.css" rel="stylesheet"/ -->
+    </swe:if>
+</swe:if>
+
+<link href="files/tools.css" rel="stylesheet">
+
+<SCRIPT>
+window.onerror=__ToolsErrorTrap;
+function __ToolsErrorTrap(sMsg,sUrl,sLine){return true;}
+</SCRIPT>
+

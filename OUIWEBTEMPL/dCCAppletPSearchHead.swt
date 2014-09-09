@@ -1,0 +1,58 @@
+<!-- Template Start: CCAppletListPSearchHead.swt -->
+<div class="siebui-catalog-search">
+    <div class="siebui-applet">
+        <swe:control id="1100">
+            <div class=CmdTxt>
+                <swe:this property="FormattedHtml" hintText="Outside Applet Help Text" hintMapType="Control"/>
+            </div>
+        </swe:control>
+        <div class="swe:this.SelectStyle">
+            <span class="siebui-catalog-search-header AppletButtons">
+            <div class="siebui-catalog-search-title">
+                <span  class="swe:class AppletTitle">
+                <swe:this property="Title"/>
+                </span>
+            </div>
+            <div class="siebui-catalog-search-button-row">
+                <swe:control id="109">
+                    <swe:this property="FormattedHtml" hintMapType="Control"/>
+                </swe:control>
+            </div>
+            </span>
+        </div>
+        
+        <table datatable="0" summary="" cellpadding="0" cellspacing="0" class="siebui-comparelist">
+            <!------------ List Field Values (501-520) ------------->
+            <swe:control id="501">
+                <tr class="siebui-comparelist-header">
+                    <th class="siebui-comparelist-header-col" align="swe:this.TextAlignment">
+                        <div class="mceGridLabel" align="swe:this.TextAlignmentLabel">
+                            <swe:this property="DisplayName"/>
+                        </div>
+                    </th>
+                    <swe:for-each-row count="7">
+                        <th class="siebui-comparelist-header-col" align="swe:this.TextAlignment">
+                            <span class="mceGridField siebui-comparelist-hide">
+                            <swe:this property="FormattedHtml" hintMapType="Control"/>
+                            </span>
+                        </th>
+                    </swe:for-each-row>
+                </tr>
+            </swe:control>
+            <swe:control id="502" hintMapType="FormItem">
+                <tr class="siebui-comparelist-row">
+                    <td class="siebui-comparelist-attrname" align="swe:this.TextAlignment">
+                        <span class="mceGridField">
+                        <swe:this property="DisplayName"/>
+                        </span>
+                    </td>
+                    <swe:for-each-row count="7">
+                        <td class="siebui-comparelist-attrvaluecell siebui-comparelist-img-col" align="swe:this.TextAlignment">
+                            <span class="mceGridField siebui-comparelist-hide">
+                            <swe:this property="FormattedHtml" hintMapType="Control" hintText="Field"/>
+                            </span>
+                        </td>
+                    </swe:for-each-row>
+                </tr>
+            </swe:control>
+            <!-- Template End: CCAppletListPSearchHead.swt  -->

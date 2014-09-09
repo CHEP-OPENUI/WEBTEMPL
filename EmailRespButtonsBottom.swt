@@ -1,0 +1,48 @@
+<!-- Template Start: EmailRespButtonsBottom.swt -->
+
+<!-- Buttons (Optional, Optional) --->
+
+      <swe:control id="145">
+      <!-- optional control -->
+        <td valign="middle" nowrap>
+        <swe:this property="FormattedHtml" hintMapType="Control"/>
+        </td><td>&nbsp;</td>
+      </swe:control>
+	  
+	  
+	  
+	  <swe:control id="146">
+      <!-- optional control -->
+        <td valign="middle" nowrap>
+        <swe:this property="FormattedHtml" hintMapType="Control"/>
+        </td><td>&nbsp;</td>
+      </swe:control>
+	  
+	 	  
+	  
+	  <td width="100%">&nbsp;</td>
+	  
+	  <swe:control id="147">
+      <!-- optional control -->
+        <td valign="middle" nowrap>
+        <swe:this property="FormattedHtml" hintText="Send" hintMapType="Control"/>
+        </td><td>&nbsp;</td>
+      </swe:control>	
+      
+        <swe:control id="148">
+	            <!-- optional control -->
+	              <td valign="middle" nowrap>
+	              <swe:this property="FormattedHtml" hintMapType="Control"/>
+	              </td><td>&nbsp;</td>
+      </swe:control>
+	  
+	  <swe:control id="149">
+      <!-- optional control -->
+        <td valign="middle" nowrap>
+        <swe:this property="FormattedHtml" hintText="Cancel" hintMapType="Control"/>
+        </td><td>&nbsp;</td>
+      </swe:control>		  
+
+
+
+<!-- Template End: EmailRespButtonsBottom.swt -->

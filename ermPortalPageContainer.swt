@@ -1,0 +1,152 @@
+<!--  Template Start: ermPortalPageContainer.swt -->
+
+<HTML dir="swe:dir">
+<head>
+
+<title><swe:this property="Title"/></title>
+	<swe:include file="CCStylesChoice.swt"/>
+<style>
+body{
+	margin:0;padding:0;overflow-y:auto;
+}
+</style>
+</head>
+
+<body>
+<table datatable="0" summary="" class="ermbackground" width="100%" border="0" cellspacing="0" cellpadding="0">
+ <tr>
+  <td>
+    <table datatable="0" summary="" class="ermbackground" cellpadding='0' cellspacing='0' border=0>
+    <tr>
+	<td><swe:image name="ERMSIEBEL_LOGO" category="HTML Control Icons"/></td>
+	<td class="ermMenuFade"><img src="images/btn_div_white.gif">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	<td class="ermMenuFade">
+		<table datatable="0" summary="" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+			<td class="ermWPLink" >
+				<swe:form>
+					<swe:toolbar name="Search ERM User">
+						<td class="ermWPLink" nowrap>
+							<swe:toolbaritem property="FormattedHtml"/>
+						</td>
+					</swe:toolbar>
+				</swe:form>
+			</td>
+		  </tr>
+		</table>
+	</td>
+
+	<td class="ermbackground" width="100%"><img src="images/spacer.gif" width="100%" height="41" alt=""></td>
+	<td class="ermbackground" align="center" valign="top">
+		<table datatable="0" summary="" class="ermbackground" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td class="ermWPLink" height="1" valign="top">
+			<table datatable="0" summary="" class="ermbackground" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+				<swe:pageitem id="12"><td nowrap><swe:this property="FormattedHtml" /><span class="ermtoolbardiv">&nbsp;|&nbsp;</span></td></swe:pageitem>
+				<swe:pageitem id="101"><td nowrap><swe:this property="FormattedHtml"/><span class="ermtoolbardiv">&nbsp;|&nbsp;</span></td></swe:pageitem>
+				<swe:pageitem id="102"><td nowrap><swe:this property="FormattedHtml"/><span class="ermtoolbardiv">&nbsp;|&nbsp;</span></td></swe:pageitem>
+				<swe:pageitem id="103"><td nowrap><swe:this property="FormattedHtml"/><span class="ermtoolbardiv">&nbsp;|&nbsp;</span></td></swe:pageitem>
+				<swe:pageitem id="104"><td nowrap><swe:this property="FormattedHtml"/><span class="ermtoolbardiv">&nbsp;|&nbsp;</span></td></swe:pageitem>
+				<swe:pageitem id="105"><td nowrap><swe:this property="FormattedHtml"/><span class="ermtoolbardiv">&nbsp;|&nbsp;</span></td></swe:pageitem>
+				<swe:pageitem id="11"><td nowrap><swe:this property="FormattedHtml" /><span class="ermtoolbardiv">&nbsp;|&nbsp;</span></td></swe:pageitem>
+				<swe:pageitem id="13"><td nowrap><swe:this property="FormattedHtml" /><span class="ermtoolbardiv">&nbsp;|&nbsp;</span></td></swe:pageitem>
+				<swe:pageitem id="14"><td nowrap><swe:this property="FormattedHtml" /><span class="ermtoolbardiv">&nbsp;|&nbsp;</span></td></swe:pageitem>
+			   </tr>
+			</table>
+			</td>
+		</tr>
+		<tr>
+			<td  class="ermbackground" width="100%" align=right><a href="http://www.siebel.com" target="_blank"><swe:image name="ERMPOWERED_BY" category="HTML Control Icons"/></a></td>
+		</tr>
+		</table>
+	</td>
+    </tr>
+  </table>
+
+	</td></tr>
+
+   <tr><td>
+     <div class="tier1Back">
+       <swe:screenbar>
+   	  	<table datatable="0" summary="" ID="swe:this.TableId" style="position:relative;left:0px" cellpadding="0" cellspacing="0" border='0'>
+   	  	<tr>
+		 <swe:for-each-screen>
+		   <swe:screenlink state="Active"><td nowrap id="swe:this.Id" class='tier1On'><swe:this property="FormattedHtml">&nbsp;<swe:screenname/>&nbsp;</swe:this></td></swe:screenlink>
+		   <swe:screenlink state="Inactive"><td nowrap id="swe:this.Id" class='tier1Off'><swe:this property="FormattedHtml">&nbsp;<swe:screenname/>&nbsp;</swe:this></td></swe:screenlink>
+		 </swe:for-each-screen>
+	   	</tr>
+	   	</table>
+       </swe:screenbar>
+     </div>
+	</td></tr>
+
+</table>
+
+<!-- viewbar & left hand Nav-->
+<!-- Create special table for the Left Nav and View section -->
+
+<table datatable="0" summary="" width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+	<td bgcolor="#D5E0F4" width=100% height=5></td>
+</tr>
+<!-- Viewbar for Reports and PDQ -->
+<!--JPADHI FR: 12-185UDRM CHANGES BEGIN-->
+<tr>
+	<td bgcolor="#D5E0F4" width=100% height=5 align="right">
+   			   <table datatable="0" summary="" border="0" cellspacing="0" cellpadding="1">
+   			      <tr>
+<!--
+   			         <td>
+     			   	    <swe:if condition="Web Engine State Properties, IsLowInteractive">
+   					<swe:reportselect>
+   					</swe:reportselect>
+   			   	    </swe:if>
+   			         </td>
+-->
+   			         <td>
+			            <swe:form>
+			            <swe:pdqbar>
+			            <table datatable="0" summary=""  border="0" cellpadding="0" cellspacing="0">
+			            	<tr>			            		
+			            		<swe:pageitem id="35">
+			            		<td class="tier2On" valign="middle" nowrap><swe:this property="FormattedHtml" />:&nbsp;</td>
+			            		</swe:pageitem>
+			            		<td class="tier2On" valign="middle">&nbsp;</td>
+			            		<td class="tier2OnNormal" valign="middle"><swe:this property="FormattedHtml" /></td>
+			            	</tr>
+			            </table>		
+             			    </swe:pdqbar>
+            			    </swe:form>   			         
+   			         </td>
+   			      </tr>
+   			   </table>	
+	</td>
+</tr>
+<!--JPADHI FR: 12-185UDRM CHANGES END-->
+<tr>
+	<td valign=top>
+		<table datatable="0" summary="" height=100% width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td bgColor=#D5E0F4 align="left" valign="top" width=1>
+				<swe:include file="ermPortalViewbar.swt"/>
+			</td>
+			
+			<td class=whiteLine>&nbsp;</td>
+
+			<td align="left" valign="top">
+				<swe:current-view/>
+			</td>
+
+		</tr>
+		</table>
+
+	</td>
+</tr>
+</table>
+<swe:scripts/>
+</body>
+</HTML>
+
+<!--  Template End: ermPortalPageContainer.swt -->
+

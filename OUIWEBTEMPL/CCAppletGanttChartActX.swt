@@ -1,0 +1,80 @@
+<!-- Template Start: CCAppletGanttChartActX.swt modified from CCAppletForm4Col_B.swt -->
+<!-- Oliver: code fixes, no redesign yet -->
+
+<!-- <swe:include file="CCApplet_NamedSpacer.swt"/> -->
+
+<swe:form>
+	<swe:include file="CCTitle_Named.swt"/>
+
+
+<!--  Template Start: CCFormButtonsTop.swt -->
+<!-- Title Area (Row 1) -->
+<!-- This whole Title Area is taken out -->
+<!-- Applet Buttons Area (Row 2) -->
+<table datatable="0" summary="" width="100%">
+	<tr class="AppletBack" align="left">	
+		
+		<!-- Menu Button Area -->
+		<td class="AppletMenu" nowrap>
+			<swe:if-var name="Parent">			     
+				<swe:menu type="Button" width="38" height="16" bgcolor="#6666cc" fgcolor="#ffffff" />
+		  	</swe:if-var>
+		
+			<swe:if-var name="ParentWithPointer">			     
+				<swe:menu type="Button" width="38" height="16" bgcolor="#6666cc" fgcolor="#ffffff" />
+	  		</swe:if-var>	
+		
+			<swe:if-var name="AppletFilter-No">			     
+				<swe:menu type="Button" width="38" height="16" bgcolor="#ccccff" fgcolor="#000000" />
+		  	</swe:if-var>							
+		  	
+			<swe:if-var name="Child">			     
+				<swe:menu type="Button" width="38" height="16" bgcolor="#ccccff" fgcolor="#000000" />
+		  	</swe:if-var>	
+			
+			<swe:if-var name="ChildWithPointer">			     
+				<swe:menu type="Button" width="38" height="16" bgcolor="#ccccff" fgcolor="#000000" />
+		  	</swe:if-var>	
+		
+			<swe:if-var name="Grandchild">			     
+				<swe:menu type="Button" width="38" height="16" bgcolor="#ccccff" fgcolor="#000000" />
+		  	</swe:if-var>							
+		</td>
+			
+		<!-- Other Buttons Area -->			
+
+		<swe:include file="CCButtons.swt"/>											
+		
+		<!-- Toggle Bar Area -->			
+		<td>
+			<swe:include file="CCTogglebar_drop.swt"/>
+		</td>			
+
+		<!-- Query Message Area -->			
+		<td align="left" width="100%" nowrap class="siebui-popup-query-msg">
+			<swe:message type="Query Message" />
+		</td>
+
+	</tr>
+</table>		
+
+<table datatable="0" summary="" class="AppletBorder" width="100%"><tr><td>
+	<table datatable="0" summary="" class="AppletBlank" width="100%">
+		<swe:if condition="Web Engine State Properties, IsHighInteractive">
+			<swe:control id="1301" hintMapType="FormItem">	
+				<tr valign="top">
+				<td class="scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="Field"/></td>
+				</tr>
+			</swe:control>
+		</swe:if>
+	</table>
+</td></tr></table>			
+
+</swe:form>
+
+
+<!-- Template End: CCAppletGanttChartActX.swt -->
+
+
+
+	

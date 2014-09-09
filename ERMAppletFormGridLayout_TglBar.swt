@@ -1,0 +1,11 @@
+<!-- Template Start: ERMAppletFormGridLayout_TglBar.swt -->
+<swe:include file="CCTogglebar_Tabs.swt"/>
+<swe:include file="CCApplet_NamedSpacer.swt"/>	
+<swe:form>
+	<swe:include file="CCTitle_Named.swt"/>
+	<swe:include file="ERMFormButtonsTop_TglBar.swt"/>
+	<swe:form-applet-layout>
+	</swe:form-applet-layout>
+
+</swe:form>
+<!-- Template End: ERMAppletFormGridLayout_TglBar.swt -->

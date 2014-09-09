@@ -1,0 +1,28 @@
+<!--  Template Start: CCView_Home_prm.swt -->
+
+<swe:include file="CCHTMLHeader.swt"/>
+
+<swe:include file="CCTaskViewTitle.swt"/>
+
+<div class="siebui-homepane-prm">
+    <div class="siebui-banner-prm">
+        <swe:applet hintMapType="Applet" id="1" hintText="Parent Applet" property="FormattedHtml" var="ParentWithPointer"/>
+    </div>
+    <div class="siebui-homenavigation-prm">
+        <swe:applet hintMapType="Applet" id="3" hintText="Child Applet" property="FormattedHtml" var="Child"/>          
+    </div>
+    
+    <div class="siebui-banner-prm">
+        <swe:applet hintMapType="Applet" id="4" hintText="Child Applet" property="FormattedHtml" var="Child"/>          
+    </div>
+    
+    <div class="siebui-homenavigation-prm">
+        <swe:applet hintMapType="Applet" id="5" hintText="Child Applet" property="FormattedHtml" var="Child"/>          
+    </div>
+    <div class="siebui-userlogin-prm">
+        <swe:applet hintMapType="Applet" id="2" hintText="Child Applet" property="FormattedHtml" var="Child"/>         
+    </div>  
+</div>    
+<swe:include file="CCHTMLFooter.swt"/>
+
+<!--  Template End: CCView_Home_prm.swt -->

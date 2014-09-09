@@ -1,0 +1,15 @@
+<!-- Template Start: CCHTMLHeader.swt -->
+<!-- FINSDBHTMLHeader.swt: change margin size so that there is no space at left and top -->	
+
+<HTML dir="swe:dir">
+<head>
+	<title><swe:this property="Title"/></title>
+	<swe:include file="CCStylesChoice.swt"/>
+</head>
+
+<!-- body bgcolor="#ffffff" leftmargin="8" topmargin="2" marginwidth="20" marginheight="2"-->
+<body bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+<!-- Template End: CCHTMLHeader.swt -->
+
+

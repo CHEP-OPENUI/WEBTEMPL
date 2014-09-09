@@ -1,0 +1,23 @@
+<!-- Template Start: LOYAppletFloating.swt -->
+<swe:form>
+<table valign="top" width="100%"  cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td class="appTabBorder" colspan=3><img src="images/spacer.gif" height="1" width="1" alt=""></td>
+<td width=100% class="appTabBlank"></td>
+</tr>
+<tr align="absmiddle">
+<td class="appTabBorder"><img src="images/spacer.gif" height="22" width="1" alt=""></td>
+<td class="appTabLabel" nowrap>&nbsp;<swe:this property="Title"/>&nbsp;</td>
+<td class="appTabBorder"><img src="images/spacer.gif" height="22" width="1" alt=""></td>
+<td class="appTabBlank" align="right" nowrap></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="1" cellspacing="0">
+<tr><td>
+<table valign="top" width="100%" cellpadding="2" cellspacing="0" border="0" class="RealTimeCart">
+<swe:include file="LOYCCFormBody.swt"/>
+</table>
+</td></tr>
+</table>
+</swe:form>
+<!-- Template End: LOYAppletFloating.swt -->

@@ -1,0 +1,19 @@
+<!-- Template Start: CCAppletPopupFormGridLayout.swt -->
+<swe:form>
+	<swe:error type="Popup">
+		<table class="AppletBack" width="100%" cellpadding="2" cellspacing="0" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/></td></tr></table>
+	</swe:error>
+
+	<swe:form-applet-layout>
+	</swe:form-applet-layout>
+
+	
+	
+</swe:form>
+
+<!-- Template End: CCAppletPopupFormGridLayout.swt -->
+
+
+
+
+	

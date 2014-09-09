@@ -1,0 +1,18 @@
+<!--  Template Start: CCAppletAppHomepageBanner.swt -->
+
+<span class="AppletStyleParent77">
+<swe:layout viewDisplayMode="Show" appletDisplayMode="Show">
+<swe:form>
+
+
+<table datatable="0" summary="" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0" >
+	<tr>
+		<td class="pad4"><span class="AppHomePageTitle"><swe:control id="90" property="DisplayName" hintText="Title" hintMapType="Control"/></span></td>	
+		<td class="pad4"><swe:control id="1"><span class="AppHomePageSaluation"><swe:this property="FormattedHtml" hintText="Salutation"/></span></swe:control></td>		
+	</tr>
+</table>
+
+</swe:form>
+</swe:layout>
+</span>
+<!--  Template End: CCAppletAppHomepageBanner.swt -->

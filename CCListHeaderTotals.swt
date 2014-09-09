@@ -1,0 +1,57 @@
+
+<!-- Template Start: CCListHeaderTotals.swt -->
+
+  <tr class="Header">
+	
+	<swe:control id="199">  
+	<th class="Header" scope="col">&nbsp;<span style= "height:1px; width:1px; position:absolute; overflow:hidden; top=10px; visibility:hidden;"><swe:this property="DisplayName"/></span><!--placeholder for the totals label presented in the last row--></th>
+	</swe:control>
+	
+    <swe:control id="144">
+    <!-- Select, 144 -->
+     <th class="Header" align="center" scope="col"><swe:this property="DisplayName"/></th>
+    </swe:control>
+	
+    <swe:control id="147">
+    <!-- Pick, 147 -->
+     <th class="Header" align="center" scope="col"><swe:this property="DisplayName"/></th>
+    </swe:control>
+	
+	<swe:select-row>
+   <th class="Header" align="center"><swe:this property="DisplayName"/></th>
+	</swe:select-row>
+
+    <swe:for-each startValue="501" count="40" iteratorName="currentId">
+     <swe:control id="swe:currentId">
+      <th align="swe:this.TextAlignment" class="Header" scope="col" abbr="swe:this.HeaderAbbr"><swe:this property="ListHeader"/></th>
+     </swe:control>
+    </swe:for-each>
+
+    <swe:for-each startValue="611" count="40" iteratorName="currentId">
+     <swe:control id="swe:currentId">
+      <th align="swe:this.TextAlignment" class="Header" scope="col" abbr="swe:this.HeaderAbbr"><swe:this property="ListHeader"/></th>
+     </swe:control>
+    </swe:for-each>
+
+    <swe:control id="142">
+    <!-- Optional, 142 -->
+     <th class="Header" align="center"><swe:this property="DisplayName"/></th>
+    </swe:control>
+
+    <swe:control id="143">
+    <!-- Optional, 143 -->
+     <th class="Header" align="center"><swe:this property="DisplayName"/></th>
+    </swe:control>
+
+    <swe:control id="145">
+    <!-- Optional, 145 -->
+     <th class="Header" align="center"><swe:this property="DisplayName"/></th>
+    </swe:control>
+
+    <swe:control id="146">
+    <!-- Optional, 146 -->
+     <th class="Header" align="center"><swe:this property="DisplayName"/></th>
+    </swe:control>
+  </tr>
+
+<!-- Template End: CCListHeaderTotals.swt -->

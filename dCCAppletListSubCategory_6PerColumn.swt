@@ -1,0 +1,23 @@
+<!--  Template Start: dCCAppletListSubCategory_6PerColumn.swt -->
+<table datatable="0" summary=""><tr valign="top"><td>
+<swe:for-each-row>
+	<table datatable="0" summary="" cellpadding="1" cellspacing="0" border="0">
+		<tr>
+			<td><swe:control id="501" property="FormattedHtml" hintText="Image" hintMapType="Image"/></td>
+			<td><swe:control id="502" property="FormattedHtml" hintText="Subcategory" hintMapType="Subcategory"/></td>
+      		<td><swe:control id="503">(<swe:this property="FormattedHtml" hintText="Count" hintMapType="Count"/>)</swe:control>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	  </tr>
+	</table>
+	
+	<swe:switch>
+		<swe:case condition="Web Engine State Properties, IsRowMultipleOf, 'value:6'">
+			</td><td>
+		</swe:case>
+		<swe:case condition="Web Engine State Properties, IsLastDisplayedRow">
+			</td>
+		</swe:case>					
+	</swe:switch>
+	
+</swe:for-each-row>
+</tr></table>
+<!--  Template End: dCCAppletListSubCategory_4PerColumn.swt -->

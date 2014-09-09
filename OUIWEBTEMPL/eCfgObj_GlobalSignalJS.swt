@@ -1,0 +1,16 @@
+<!-- Template Start: eCfgObj_GobalSignalJS.swt -->
+<!-- Oliver: [code redesign] -->
+
+<div class="siebui-applet-title-row cxStatusTempl">
+	<span id="CfgLessBtn" style="display:none" class="siebui-link-icon-e">
+		<a href='javascript:showLessMsg ()'><img src="images/btn_less.gif"/></a>
+	</span>
+	<swe:control id="Message" CfgUIControl="lblMessage" CfgHtmlType="CfgLabel" />
+</div>
+<div class="siebui-applet-content">
+	<swe:for-each id="300" CfgLoopType="Signal" startValue="1500" count="Dynamic" iteratorName="103Id">
+	  <swe:control id="swe:103Id+220" CfgHtmlType="CfgSignal" CfgJSShow="showSignal" CfgJSUpdateSignal="updateSignal"/>
+	</swe:for-each>
+</div>
+
+<!-- Template End: eCfgObj_GobalSignalJS.swt -->

@@ -1,0 +1,105 @@
+<!-- CCView_33_66_Frame.swt start -->
+<HTML dir="swe:dir">
+<head></head>
+
+
+<swe:switch>
+<swe:case condition="Web Engine State Properties, IsRTL">
+<!-- RTL case -->
+
+<swe:frameset htmlAttr="cols='66%,33%' border='1' frameborder='Yes'">
+
+  <!-- Column 2 Applets -->
+   <swe:frame type="Applet" name="Applet2" htmlAttr="marginheight='0' marginwidth='0' scrolling='Auto'">
+	  	<swe:include file="CCHTMLHeader.swt"/>
+		<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+			<style>BODY {border:1px solid #000000; border-width: 0 1 1 0;}</style>
+		</swe:if>
+
+		<swe:for-each count=10 iteratorName="currentId" startValue="201">
+		<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" var="Parent">
+			<!--start applet-->
+			<swe:this property="FormattedHtml"/>
+			<!--end applet-->
+		</swe:applet>
+		</swe:for-each>
+		<swe:include file="CCHTMLFooter.swt"/>
+   </swe:frame>
+   
+     <!-- Column 1 Applets -->
+   <swe:frame type="Applet" name="Applet1" htmlAttr="marginheight='0' marginwidth='0' scrolling='Auto'">
+   	  <swe:include file="CCHTMLHeader.swt"/>
+	
+	  <!--local override of CSS--> 
+	<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+		<style>BODY {border:1px solid #000000; border-width: 0 1 1 0;}</style>
+	</swe:if>
+
+	  
+      <swe:for-each count=10 iteratorName="currentId" startValue="101">
+		<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" var="Parent">
+			<!--start applet-->
+			<swe:this property="FormattedHtml"/>
+			<!--end applet-->
+		</swe:applet>
+		</swe:for-each>
+		<swe:include file="CCHTMLFooter.swt"/>
+   </swe:frame>
+
+</swe:frameset>
+
+<!-- end of RTL case -->
+</swe:case>
+
+<swe:default>
+<!-- default, non-RTL -->
+
+<swe:frameset htmlAttr="cols='33%,66%' border='1' frameborder='Yes'">
+
+  <!-- Column 1 Applets -->
+   <swe:frame type="Applet" name="Applet1" htmlAttr="marginheight='0' marginwidth='0' scrolling='Auto'">
+   	  <swe:include file="CCHTMLHeader.swt"/>
+	
+	  <!--local override of CSS--> 
+	<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+		<style>BODY {border:1px solid #000000; border-width: 0 1 1 0;}</style>
+	</swe:if>
+
+	  
+      <swe:for-each count=10 iteratorName="currentId" startValue="101">
+		<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" var="Parent">
+			<!--start applet-->
+			<swe:this property="FormattedHtml"/>
+			<!--end applet-->
+		</swe:applet>
+		</swe:for-each>
+		<swe:include file="CCHTMLFooter.swt"/>
+   </swe:frame>
+
+  <!-- Column 2 Applets -->
+   <swe:frame type="Applet" name="Applet2" htmlAttr="marginheight='0' marginwidth='0' scrolling='Auto'">
+	  	<swe:include file="CCHTMLHeader.swt"/>
+		<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+			<style>BODY {border:1px solid #000000; border-width: 0 1 1 0;}</style>
+		</swe:if>
+
+		<swe:for-each count=10 iteratorName="currentId" startValue="201">
+		<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" var="Parent">
+			<!--start applet-->
+			<swe:this property="FormattedHtml"/>
+			<!--end applet-->
+		</swe:applet>
+		</swe:for-each>
+		<swe:include file="CCHTMLFooter.swt"/>
+   </swe:frame>
+
+</swe:frameset>
+
+<!-- end of default, non-RTL -->
+</swe:default>
+</swe:switch>
+
+<swe:scripts/>
+
+</html>
+<!-- CCView_33_66_Frame.swt end -->

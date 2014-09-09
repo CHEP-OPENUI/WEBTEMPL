@@ -1,0 +1,25 @@
+<!-- Template Start: CCFrameMsgbar.swt -->
+<HTML dir="swe:dir">
+<head>
+<title><swe:this property="Title"/></title>
+<swe:include file="CCStylesChoice.swt"/>
+
+</head>
+<BODY class="tier2Back" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" onResize="resizeHTMLMsgBar()">
+
+<swe:include-script file="htmlMessageBar.js"/>
+<span id=HTMLMessageBar>&nbsp;</span>
+<swe:if condition="Web Engine State Properties, IsHighInteractive">
+   <script>window.setTimeout("CreateMessageBar('HTMLMessageBar', 'HI')", 4000);</script>
+</swe:if>
+<swe:if condition="Web Engine State Properties, IsLowInteractive">
+   <script>CreateMessageBar('HTMLMessageBar', 'LI');</script>
+   <swe:toolbar name="MessageBar" width="1" height="1" bgcolor="#ccccff" javaapplet="true" />
+</swe:if>
+
+<swe:scripts/>
+<script for=window event=onresize>resizeHTMLMsgBar();</script>
+
+</BODY>
+</HTML>
+<!-- Template End: CCFrameMsgbar.swt -->

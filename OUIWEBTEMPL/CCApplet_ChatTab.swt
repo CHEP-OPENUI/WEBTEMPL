@@ -1,0 +1,18 @@
+<!-- Template Start: CCApplet_ChatTab.swt -->
+
+<div id="s_ChatPane">
+
+    <!-- chat pane header -->
+    <div id="chatpaneHeader">
+        <span id="IDS_CHATPANE_CAPTION" class="chatCaption"></span>
+        <a id="s_chatclose"></a>
+    </div>
+    <!-- end of chatpaneHeader -->
+
+    <div id="chatContainer">
+        <div id="candy"></div>
+    </div>   
+
+</div>
+
+<!--Template End: CCApplet_ChatTab.swt -->

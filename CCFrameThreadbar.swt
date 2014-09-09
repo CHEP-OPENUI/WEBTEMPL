@@ -1,0 +1,18 @@
+<!-- Template Start: CCFrameThreadbar.swt -->
+
+<HTML dir="swe:dir">
+<head>
+<title><swe:this property="Title"/></title>
+<swe:include file="CCStylesChoice.swt"/>
+</head>
+
+<BODY class="threadbarBack" topmargin="0" leftmargin="8" marginheight="0" marginwidth="0">
+
+<swe:include file="CCThreadbar.swt"/>
+
+<swe:scripts/>
+
+</BODY>
+</HTML>
+
+<!-- Template End: CCFrameThreadbar.swt -->

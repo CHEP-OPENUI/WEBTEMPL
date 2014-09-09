@@ -1,0 +1,20 @@
+<!-- Template Start: dCCAppletForm1Col.swt -->
+
+<swe:include file="CCApplet_NamedSpacer.swt"/>	
+
+<swe:form>
+
+	<swe:include file="dCCTitle_Named.swt"/>
+
+	<swe:include file="CCTogglebar_drop.swt"/>
+
+	<table datatable="0" summary="" class="AppletBack" valign="top" width="100%" cellpadding="3" cellspacing="0" border="0">
+	   <swe:include file="dCCForm1Col.swt"/>
+	</table>	
+	
+	</span>			
+
+</swe:form>
+
+	
+<!-- Template End: dCCAppletForm1Col.swt -->

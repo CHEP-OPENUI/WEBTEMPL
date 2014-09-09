@@ -1,0 +1,25 @@
+<!--  Template Start: LSCCAppletListImgBulletScreenHomepage.swt -->
+<swe:form>
+	<swe:include file="LSStdAppletHeader.swt"/>
+	<swe:layout viewDisplayMode="Show" appletDisplaySize="Max">
+		<table width="100%" cellpadding="1" cellspacing="0" border="0" align="center">
+			<tr>
+				<td>
+					<table class="AppletBack" valign="top" width="100%" cellpadding="3" cellspacing="0" border="0">
+						
+						<!-- Body Starts Here -->
+						<swe:include file="LSdCCListBodyImgBulletScreenHomepage.swt"/>
+						<!-- Body Ends Here -->
+						
+					</table>
+				</td>
+			</tr>
+		</table>
+	</swe:layout>
+	<!-- swe:include file="LSStdAppletTail.swt"/ -->
+</swe:form>	
+<swe:control id="1100">
+	<swe:this property="FormattedHtml" hintText="ScriptIncludeHook" hintMapType="Control"/>
+</swe:control>
+
+<!--  Template End: LSCCAppletListImgBulletScreenHomepage.swt -->

@@ -1,0 +1,52 @@
+<!-- Template Start: eCfg_MenuTopLevelButtons.swt -->
+<script>
+var sCancel = '<swe:control id="swe:sCancel"  CfgUIControl="Cancel" CfgHtmlType="CfgAction" property="FormattedHtml" DisplayMode="EncodeData" InvokeMethod="SubmitRequest" CfgRequest="PrevView"/>';
+var sDone = '<swe:control id="swe:sDone"  CfgUIControl="Done" CfgHtmlType="CfgAction" property="FormattedHtml" DisplayMode="DontEncodeData" InvokeMethod="SubmitRequest" CfgRequest="DoneConfig"/>';
+var sInComplete = '<swe:control id="swe:InComplete" CfgFieldName="RequireMoreChild" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" />';
+var sRefreshUI = '&SWEApplet=Cfg+Cx+Runtime+Instance+Frame';
+var bAttrDirty = false;
+</script>
+
+<table datatable="0" summary="" border="0" bgcolor="white">
+<tr>
+	<td>
+		<swe:control id="swe:CheckPrice"
+		CfgUIControl="Check the price"
+		CfgHtmlType="MiniButton"
+		InvokeMethod="SubmitRequest"
+		CfgRequest="CalculatePriceCX"
+		property="FormattedHtml" />
+	</td>
+	
+	<td>
+		<swe:control id="swe:Save"
+		CfgUIControl="Save" 
+		CfgHtmlType="MiniButton"
+		InvokeMethod="SubmitRequest"
+		CfgRequest="SyncInstance"
+		property="FormattedHtml" />
+	</td>
+	
+	<td>
+
+           <swe:switch> 
+               <swe:case condition="Default, AreEmptyFields, Operator:and, FieldName0:$.CxVersion">
+               <!-- Root Product Version is empty only when we are not doing doing validation. -->
+                     <swe:control id="swe:Cancel" CfgUIControl="sCancel" property="FormattedHtml" />
+               </swe:case>
+               <swe:default>
+                     <swe:control id="swe:disCancel" CfgUIControl="Cancel" CfgHtmlType="MiniButton" 
+                                  DisplayMode="EncodeData" InvokeMethod="SubmitRequest" 
+                                  CfgRequest="PrevView" property="FormattedHtml" />
+               </swe:default>
+           </swe:switch> 
+	</td>
+	<td>
+		<swe:control id="swe:Done"
+		CfgUIControl="sDone"
+		property="FormattedHtml" />
+	</td>
+</tr>
+</table>
+
+<!-- Template End: eCfg_MenuTopLevelButtons.swt -->

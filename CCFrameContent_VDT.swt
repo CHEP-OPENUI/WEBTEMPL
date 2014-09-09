@@ -1,0 +1,98 @@
+<!-- Template Start: CCFrameContent_VDT.swt -->
+
+<swe:if condition="Web Engine State Properties, IsHighInteractive">
+<swe:frameset htmlAttr="rows='55,*' border='0' frameborder='No'">
+	<swe:frame type="AltView" name="Dashboard" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+		<swe:view name="Persistent Customer Dashboard View" id="Dashboard" />
+	</swe:frame>
+
+
+	<swe:switch>
+	<swe:case condition="Web Engine State Properties, IsRTL">
+	<!-- RTL case -->
+
+	<swe:frameset htmlAttr="cols='80%,20%' border='0' frameborder='No'">
+		<swe:frame type="View" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+			<swe:current-view/>
+		</swe:frame>
+   	  
+		<swe:frame type="AltView" name="TaskAssistant" htmlAttr="marginheight='0' marginwidth='0' scrolling='No' frameborder='1'">
+			<swe:view name="Task Assistant Player View" id="TaskAssistant" />
+		</swe:frame>
+	</swe:frameset>
+
+	<!-- end of RTL case -->
+	</swe:case>
+
+	<swe:default>
+	<!-- default, non-RTL -->
+
+	<swe:frameset htmlAttr="cols='20%,80%' border='0' frameborder='No'">
+		<swe:frame type="AltView" name="TaskAssistant" htmlAttr="marginheight='0' marginwidth='0' scrolling='No' frameborder='1'">
+			<swe:view name="Task Assistant Player View" id="TaskAssistant" />
+		</swe:frame>
+   
+		<swe:frame type="View" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+			<swe:current-view/>
+		</swe:frame>
+	</swe:frameset>	 
+
+	<!-- end of default, non-RTL -->
+	</swe:default>
+	</swe:switch>
+   
+
+</swe:frameset>
+</swe:if>
+
+
+<swe:if condition="Web Engine State Properties, IsLowInteractive">
+<swe:frameset htmlAttr="rows='82,*' border='0' frameborder='No'">
+	<swe:frame type="AltView" name="Dashboard" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='AUTO'">
+		<swe:view name="Persistent Customer Dashboard View" id="Dashboard" />
+	</swe:frame>
+
+
+	<swe:switch>
+	<swe:case condition="Web Engine State Properties, IsRTL">
+	<!-- RTL case -->
+
+	<swe:frameset htmlAttr="cols='80%,20%' border='0' frameborder='No'">
+		<swe:frame type="View" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+			<swe:current-view/>
+		</swe:frame>
+   	  
+		<swe:frame type="AltView" name="TaskAssistant" htmlAttr="marginheight='0' marginwidth='0' scrolling='No' frameborder='1'">
+			<swe:view name="Task Assistant Player View" id="TaskAssistant" />
+		</swe:frame>
+	</swe:frameset>
+
+	<!-- end of RTL case -->
+	</swe:case>
+
+	<swe:default>
+	<!-- default, non-RTL -->
+
+	<swe:frameset htmlAttr="cols='20%,80%' border='0' frameborder='No'">
+		<swe:frame type="AltView" name="TaskAssistant" htmlAttr="marginheight='0' marginwidth='0' scrolling='No' frameborder='1'">
+			<swe:view name="Task Assistant Player View" id="TaskAssistant" />
+		</swe:frame>
+   
+		<swe:frame type="View" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+			<swe:current-view/>
+		</swe:frame>
+	</swe:frameset>	 
+
+	<!-- end of default, non-RTL -->
+	</swe:default>
+	</swe:switch>
+   
+
+</swe:frameset>
+</swe:if>
+
+<!-- Template Start: CCFrameContent_VDT.swt -->
+
+
+
+

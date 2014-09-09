@@ -1,0 +1,10 @@
+<template>
+  <do type="prev" label="Back">
+    <prev/>
+  </do>
+</template>
+
+<!-- Start View Template Body -->
+<!-- Applet should be inserted here -->
+<swe:applet id="1"/>
+<!-- End View Template Body -->

@@ -1,0 +1,8 @@
+<!-- Template Start: CCAppletPlaybarTop.swt -->
+<!-- Oliver: code redesign -->
+
+<div class="siebui-taskui-playbar-top siebui-applet-action">
+	<swe:include file="CCAppletPlaybarButtons.swt"/>
+</div>
+
+<!-- Template End: CCAppletListTop.swt -->

@@ -1,0 +1,13 @@
+<!-- Template Start: dCCTogglebar_Tabs.swt -->
+	<table datatable="0" summary="" width="100%" align="center" cellpadding='0' cellspacing='0' border='0'><tr><td>
+	<table datatable="0" summary="" cellpadding='0' cellspacing='0' border='0' class="tier3back">
+		<tr>			
+			<swe:togglebar>
+				<swe:togglelink state="Active"><td nowrap class='tier3On'><nobr><swe:this property="FormattedHtml">&nbsp;<swe:togglename/>&nbsp;</swe:this></nobr></td></swe:togglelink>
+				<swe:togglelink state="Inactive"><td nowrap class='tier3Off'><nobr><swe:this property="FormattedHtml">&nbsp;<swe:togglename/>&nbsp;</swe:this></nobr></td></swe:togglelink>
+			</swe:togglebar>
+		</tr>
+	</table>
+	</td></tr></table>	
+<!-- Template End: dCCTogglebar_Tabs.swt -->
+               

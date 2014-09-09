@@ -1,0 +1,52 @@
+<!--  Template Start: dCCAppletGotoURL.swt -->
+
+<swe:include file="CCApplet_Spacer.swt"/>
+
+<span class="AppletStyle1">
+<swe:form>
+			
+	<swe:include file="CCFormBaseTitle.swt"/>	
+
+	<table datatable="0" summary="" width="100%" cellpadding="1" cellspacing="0" border="0" align="center"><tr><td>
+		<td  width="100%">
+		<swe:control id="1100">
+		<table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" border="0" class="AppletBack">
+			<tr><td><swe:this property="FormattedHtml" hintText="Text"/></td></tr>
+		</table>	
+		</swe:control>	
+		<table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" border="0" class="AppletBack">
+			<tr><td>&nbsp;</td></tr>
+			<tr>
+				<Td>&nbsp;&nbsp;&nbsp;</td>
+					<swe:control id="1101">
+						<td nowrap>
+							<div class="dCCItemValue">
+								<swe:this property="DisplayName" hintText="Label"/>
+							</div>
+						</td>
+					</swe:control>
+					<swe:control id="1201">
+						<td  nowrap>
+							<div class="dCCItemValue">
+								&nbsp;<swe:this property="FormattedHtml" hintText="Field"/>&nbsp;
+							</div>
+						</td>
+					</swe:control>
+					<swe:control id="1301">
+						<td  nowrap>
+							<div class="mceField">
+								<swe:this property="DisplayName" hintText="Label"/>
+							</div>
+						</td>
+					</swe:control>
+				<td width="100%">&nbsp;</td>
+			</tr>
+			<tr><td>&nbsp;</td></tr>
+		</table>	
+	</td></tr>
+	</td></tr></table>	
+   
+</swe:form>
+</span>
+<!--  Template End: dCCAppletGotoURL.swt -->
+                             

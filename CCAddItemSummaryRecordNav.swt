@@ -1,0 +1,24 @@
+<!-- Template Start: CCAddITemSummaryRecordNav.swt -->
+	
+	<swe:control id="989">
+		<!-- GotoNext, 989 -->
+		<td valign="middle" align="left" nowrap style="width:5px;">
+		<swe:this property="FormattedHtml" hintText="Previous" hintMapType="Control"/>
+		
+	</swe:control>
+	
+	<swe:control id="990">
+		<!-- GotoLast, 990 -->
+		<td valign="middle" align="left" nowrap style="width:5px;">
+		<swe:this property="FormattedHtml" hintText="Next" hintMapType="Control"/>
+		
+	</swe:control>
+	<td>&nbsp; </td>
+	
+		
+	
+<!-- Template End: CCAddITemSummaryRecordNav.swt -->
+
+
+
+

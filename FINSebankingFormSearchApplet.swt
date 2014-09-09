@@ -1,0 +1,37 @@
+<!-- Template Start: eBankingFormSearchApplet.swt -->
+<swe:form mode="Query">
+
+<table bgcolor="#cccccc" valign="top" _width="100%"  cellpadding="2" cellspacing="0" border="0" class="FormBack">
+
+
+  <swe:for-each startValue="3101" count="29" iteratorName="currentId">
+       <tr>
+          <!---Label--->
+          <swe:control id="swe:currentId+100">
+                <swe:this property="DisplayName"/>
+          </swe:control>
+
+          <!---Text Field--->
+          <swe:control id="swe:currentId+200">
+                <swe:this property="FormattedHtml"/>
+          </swe:control>
+       </tr>
+
+ 
+   </swe:for-each>
+
+   <!----Search Button---->
+        <tr>
+	    <td>  <!--- Find --->
+	   	<swe:control id="777">
+        		<swe:this property="FormattedHtml"/>
+      		</swe:control>  </td>
+	</tr>
+</table>
+   
+</swe:form>
+
+   
+<swe:include file="CCAppletFormBasic.swt"/> 
+   
+<!-- Template End: eBankingFormSearchApplet.swt -->

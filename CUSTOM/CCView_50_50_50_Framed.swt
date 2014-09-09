@@ -1,0 +1,336 @@
+<!-- Template Start: CCView_50_50_Framed2.swt -->
+<HTML dir="swe:dir">
+<head></head>
+
+
+<swe:switch>
+<swe:case condition="Web Engine State Properties, IsRTL">
+<!-- RTL case -->
+
+<swe:frameset htmlAttr="cols='50%,50%' framespacing='4'">
+
+<swe:frame type="Applet" name="Applet4" htmlAttr="frameborder='0' topmargin='0' leftmargin='0' marginwidth='0' marginheight='0'">
+
+	<swe:include file="CCHTMLHeader.swt"/>
+	
+	<!--local override of CSS-->
+	<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+		<style>BODY {border:1px solid #3399FF; border-width: 0 0 0 1;}</style>
+	</swe:if>
+
+	
+	<!------------ Right Frame (50%) ------------------------->
+	<!------------ Threadbar and Mini-Applet ----------------->
+	<table border="0" cellspacing="0" cellpadding="1" width="100%">
+	  <tr>
+		<swe:if condition="Web Engine State Properties, IsLowInteractive">
+	    <td valign="absmiddle">
+			<swe:include file="CCThreadbar.swt"/>
+		</td>
+		</swe:if>
+		<swe:applet id="201" hintText="Mini-Applet">
+		    <td align="right"><swe:this property="FormattedHTML"/></td>
+			<td>&nbsp;&nbsp;&nbsp;</td>
+		</swe:applet>	
+	  </tr>
+	</table> 
+	<!------------ End Threadbar and Mini-Applet ------------->
+
+	<!------------ Main Content ------------------------------>
+	<table width="100%" cellpadding="5" cellspacing="0" border="0">		
+			<!-- Column 2 -->
+			<td valign="top" width="100%">
+				<swe:for-each count=10 iteratorName="currentId" startValue="202">
+				<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" var="Parent">
+					<!--start applet-->
+					<swe:this property="FormattedHtml"/>
+					<!--end applet-->
+				</swe:applet>
+				</swe:for-each>
+			</td>
+			<!-- End Column 2 -->
+	</tr>
+	</table>
+	
+	<swe:include file="CCHTMLFooter.swt"/>
+	
+</swe:frame>
+
+<!------------ Left Frame (50%) ---------------------------->
+<swe:frameset htmlAttr="rows='5%,45%,5%,45%' framespacing='0'">
+
+     <swe:frame type="Applet" name="Applet1" htmlAttr="frameborder='0' topmargin='0' leftmargin='0' marginwidth='0' marginheight='0' noresize scrolling='no'">
+		<swe:include file="CCHTMLHeader.swt"/>
+		
+		<!--local override of CSS-->
+		<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+			<style>BODY {border:1px solid #000000; border-width: 0 0 0 0;}</style>
+		</swe:if>
+
+					
+			<swe:applet hintMapType="Applet" id="102" hintText="Applet" var="Parent">
+				<table width="100%" cellpadding="0" cellspacing="0" border="0">
+					<tr>	
+						<td valign="top" width="100%">			
+								<!--start applet-->
+								<swe:this property="FormattedHtml"/>
+								<!--end applet-->
+						</td>
+				
+					</tr>
+				</table>
+			</swe:applet>
+		<swe:include file="CCHTMLFooter.swt"/>
+	</swe:frame>
+
+
+	<swe:frame type="Applet" name="Applet2" htmlAttr="frameborder='0' topmargin='0' leftmargin='0' marginwidth='0' marginheight='0' noresize">
+		<swe:include file="CCHTMLHeader.swt"/>
+		
+		<!--local override of CSS-->
+		<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+			<style>BODY {border:1px solid #3399FF; border-width: 0 0 1 0;}</style>
+		</swe:if>
+
+					
+			<swe:applet hintMapType="Applet" id="103" hintText="Applet" var="Parent">
+				<table width="100%" cellpadding="0" cellspacing="0" border="0">
+					<tr>	
+						<td valign="top" width="100%">			
+								<!--start applet-->
+								<swe:this property="FormattedHtml"/>
+								<!--end applet-->
+						</td>
+				
+					</tr>
+				</table>
+			</swe:applet>
+		<swe:include file="CCHTMLFooter.swt"/>
+	</swe:frame>
+	
+<swe:frame type="Applet" name="Applet5" htmlAttr="frameborder='0' topmargin='0' leftmargin='0' marginwidth='0' marginheight='0' noresize scrolling='no'">
+		<swe:include file="CCHTMLHeader.swt"/>
+		
+		<!--local override of CSS-->
+		<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+			<style>BODY {border:1px solid #000000; border-width: 0 0 0 0;}</style>
+		</swe:if>
+
+					
+			<swe:applet hintMapType="Applet" id="106" hintText="Applet" var="Parent">
+				<table width="100%" cellpadding="0" cellspacing="0" border="0">
+					<tr>	
+						<td valign="top" width="100%">			
+								<!--start applet-->
+								<swe:this property="FormattedHtml"/>
+								<!--end applet-->
+						</td>
+				
+					</tr>
+				</table>
+			</swe:applet>
+		<swe:include file="CCHTMLFooter.swt"/>
+	</swe:frame>
+
+<swe:frame type="Applet" name="Applet6" htmlAttr="frameborder='0' topmargin='0' leftmargin='0' marginwidth='0' marginheight='0' noresize">
+		<swe:include file="CCHTMLHeader.swt"/>
+		
+		<!--local override of CSS-->
+		<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+			<style>BODY {border:1px solid #3399FF; border-width: 0 0 1 0;}</style>
+		</swe:if>
+
+					
+			<swe:applet hintMapType="Applet" id="107" hintText="Applet" var="Parent">
+				<table width="100%" cellpadding="0" cellspacing="0" border="0">
+					<tr>	
+						<td valign="top" width="100%">			
+								<!--start applet-->
+								<swe:this property="FormattedHtml"/>
+								<!--end applet-->
+						</td>
+				
+					</tr>
+				</table>
+			</swe:applet>
+		<swe:include file="CCHTMLFooter.swt"/>
+	</swe:frame>
+
+
+
+</swe:frameset>
+
+</swe:frameset>
+
+<!-- end of RTL case -->
+</swe:case>
+
+<swe:default>
+<!-- default, non-RTL -->
+
+<swe:frameset htmlAttr="cols='50%,50%' framespacing='4'">
+
+<!------------ Left Frame (50%) ---------------------------->
+<swe:frameset htmlAttr="rows='5%,45%,5%,45%' framespacing='0'">
+
+     <swe:frame type="Applet" name="Applet1" htmlAttr="frameborder='0' topmargin='0' leftmargin='0' marginwidth='0' marginheight='0' noresize scrolling='no'">
+		<swe:include file="CCHTMLHeader.swt"/>
+		
+		<!--local override of CSS-->
+		<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+			<style>BODY {border:1px solid #000000; border-width: 0 0 0 0;}</style>
+		</swe:if>
+
+					
+			<swe:applet hintMapType="Applet" id="102" hintText="Applet" var="Parent">
+				<table width="100%" cellpadding="0" cellspacing="0" border="0">
+					<tr>	
+						<td valign="top" width="100%">			
+								<!--start applet-->
+								<swe:this property="FormattedHtml"/>
+								<!--end applet-->
+						</td>
+				
+					</tr>
+				</table>
+			</swe:applet>
+		<swe:include file="CCHTMLFooter.swt"/>
+	</swe:frame>
+
+
+	<swe:frame type="Applet" name="Applet2" htmlAttr="frameborder='0' topmargin='0' leftmargin='0' marginwidth='0' marginheight='0' noresize">
+		<swe:include file="CCHTMLHeader.swt"/>
+		
+		<!--local override of CSS-->
+		<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+			<style>BODY {border:1px solid #3399FF; border-width: 0 0 1 0;}</style>
+		</swe:if>
+
+					
+			<swe:applet hintMapType="Applet" id="103" hintText="Applet" var="Parent">
+				<table width="100%" cellpadding="0" cellspacing="0" border="0">
+					<tr>	
+						<td valign="top" width="100%">			
+								<!--start applet-->
+								<swe:this property="FormattedHtml"/>
+								<!--end applet-->
+						</td>
+				
+					</tr>
+				</table>
+			</swe:applet>
+		<swe:include file="CCHTMLFooter.swt"/>
+	</swe:frame>
+	
+<swe:frame type="Applet" name="Applet5" htmlAttr="frameborder='0' topmargin='0' leftmargin='0' marginwidth='0' marginheight='0' noresize scrolling='no'">
+		<swe:include file="CCHTMLHeader.swt"/>
+		
+		<!--local override of CSS-->
+		<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+			<style>BODY {border:1px solid #3399FF; border-width: 0 0 0 0;}</style>
+		</swe:if>
+
+					
+			<swe:applet hintMapType="Applet" id="106" hintText="Applet" var="Parent">
+				<table width="100%" cellpadding="0" cellspacing="0" border="0">
+					<tr>	
+						<td valign="top" width="100%">			
+								<!--start applet-->
+								<swe:this property="FormattedHtml"/>
+								<!--end applet-->
+						</td>
+				
+					</tr>
+				</table>
+			</swe:applet>
+		<swe:include file="CCHTMLFooter.swt"/>
+	</swe:frame>
+
+<swe:frame type="Applet" name="Applet6" htmlAttr="frameborder='0' topmargin='0' leftmargin='0' marginwidth='0' marginheight='0' noresize">
+		<swe:include file="CCHTMLHeader.swt"/>
+		
+		<!--local override of CSS-->
+		<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+			<style>BODY {border:1px solid #3399FF; border-width: 0 0 1 0;}</style>
+		</swe:if>
+
+					
+			<swe:applet hintMapType="Applet" id="107" hintText="Applet" var="Parent">
+				<table width="100%" cellpadding="0" cellspacing="0" border="0">
+					<tr>	
+						<td valign="top" width="100%">			
+								<!--start applet-->
+								<swe:this property="FormattedHtml"/>
+								<!--end applet-->
+						</td>
+				
+					</tr>
+				</table>
+			</swe:applet>
+		<swe:include file="CCHTMLFooter.swt"/>
+	</swe:frame>
+
+
+
+</swe:frameset>
+
+<swe:frame type="Applet" name="Applet7" htmlAttr="frameborder='0' topmargin='0' leftmargin='0' marginwidth='0' marginheight='0'scrolling='no'">
+
+	<swe:include file="CCHTMLHeader.swt"/>
+	
+	<!--local override of CSS-->
+	<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+		<style>BODY {border:1px solid #3399FF; border-width: 0 0 0 1;}</style>
+	</swe:if>
+
+	
+	<!------------ Right Frame (50%) ------------------------->
+	<!------------ Threadbar and Mini-Applet ----------------->
+	<table border="0" cellspacing="0" cellpadding="1" width="100%">
+	  <tr>
+		<swe:if condition="Web Engine State Properties, IsLowInteractive">
+	    <td valign="absmiddle">
+			<swe:include file="CCThreadbar.swt"/>
+		</td>
+		</swe:if>
+		<swe:applet id="201" hintText="Mini-Applet">
+		    <td align="right"><swe:this property="FormattedHTML"/></td>
+			<td>&nbsp;&nbsp;&nbsp;</td>
+		</swe:applet>	
+	  </tr>
+	</table> 
+	<!------------ End Threadbar and Mini-Applet ------------->
+
+	<!------------ Main Content ------------------------------>
+	<table width="100%" cellpadding="5" cellspacing="0" border="0">		
+			<!-- Column 2 -->
+			<td valign="top" width="100%">
+				<swe:for-each count=10 iteratorName="currentId" startValue="202">
+				<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" var="Parent">
+					<!--start applet-->
+					<swe:this property="FormattedHtml"/>
+					<!--end applet-->
+				</swe:applet>
+				</swe:for-each>
+			</td>
+			<!-- End Column 2 -->
+	</tr>
+	</table>
+	
+	<swe:include file="CCHTMLFooter.swt"/>
+	
+</swe:frame>
+
+</swe:frameset>
+
+<!-- end of default, non-RTL -->
+</swe:default>
+</swe:switch>
+
+
+
+
+<swe:scripts/>
+
+</html>
+<!-- Template End: CCView_50_50_Framed2.swt -->

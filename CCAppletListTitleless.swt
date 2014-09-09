@@ -1,0 +1,9 @@
+
+<!-- Template Start: CCAppletListTitleless.swt -->
+<swe:include file="CCApplet_Spacer.swt"/>
+<table bgcolor="#f0f0f0" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0" datatable="1" summary="swe:this.ListSummary">
+   <swe:include file="CCListHeader.swt"/>
+   <swe:include file="CCListBody.swt"/>
+</table>
+
+<!-- Template End: CCAppletListTitleless.swt -->

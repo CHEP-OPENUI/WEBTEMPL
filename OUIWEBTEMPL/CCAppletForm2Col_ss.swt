@@ -1,0 +1,77 @@
+<!-- Template Start CCAppletForm2Col_ss.swt -->
+<swe:include file="CCApplet_NamedSpacer.swt"/>
+<div class="siebui-collapsible-applet">
+    <swe:form>
+        <div class="siebui-collapsible-applet-header">
+            <swe:control id="80">
+                <div class=" siebui-ss-collapsible-header">
+                    <div  class="siebui-ss-navlink-list siebui-ss-collapsible-caption">
+                        <swe:this property="FormattedHtml" hintMapType="Control" hintText="Title" />
+                    </div>
+                    <div class="siebui-ss-navlink-list siebui-ss-navlink-img siebui-collapsible-applet-container"></div>
+                </div>
+            </swe:control>
+        </div>
+        <div class="siebui-collapsible-applet-content">
+            <!-- Buttons align with applet header -->
+            <swe:control id="90">
+                <div class="siebui-ss-list siebui-ss-applt-header">
+                    <swe:this property="FormattedHtml" hintMapType="Control" hintText="Title" />
+                </div>        
+            </swe:control>
+            <div class="siebui-ss-list siebui-ss-tile-aplt-btns-container">
+                <swe:for-each count="4" startValue="171" iteratorName="currentId">
+                    <swe:control id="swe:currentId">
+                        <span class="siebui-ss-tile-aplt-btn">
+                            <swe:this property="FormattedHtml" hintMapType="Control" hintText="New"/>
+                        </span>
+                    </swe:control>
+                </swe:for-each>
+            </div>
+            <div class="siebui-clear-all"></div>
+            <ul>
+                <li class="siebui-list-section1 siebui-form-col">
+                    <ul class="siebui-ss-form2col-col1">
+                        <swe:for-each startValue="1201" count="5" iteratorName="currentId">
+                            <!-- Place holder to place both Label and Field -->
+                            <swe:control id="swe:currentId" hintMapType="FormItem">
+                                <li class="siebui-list-section1">
+                                    <div class="siebui-ss-tbl-row">
+                                        <div class="mceGridLabel siebui-ss-tbl-cell siebui-ss-form2col-label" align="swe:this.TextAlignmentLabel">
+                                            <swe:this property="DisplayName" hintText="Label"/>
+                                            <swe:this property="RequiredIndicator" hintText="Required"/>
+                                        </div>
+                                        <div class="mceGridField siebui-ss-tbl-cell siebui-ss-form2col-field" align="swe:this.TextAlignment">
+                                            <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+                                        </div>
+                                    </div>
+                                </li>
+                            </swe:control>
+                        </swe:for-each>
+                    </ul>        
+                    <ul class="siebui-ss-form2col-col2">
+                        <li class="siebui-list-section1">
+                            <swe:for-each startValue="1206" count="5" iteratorName="currentId">
+                                <div class="siebui-ss-tbl-row">
+                                    <!-- Place holder to place both Label and Field -->
+                                    <swe:control id="swe:currentId" hintMapType="FormItem">
+                                        <div class="siebui-ss-tbl-cell">
+                                            <div class="mceGridLabel siebui-ss-tbl-cell siebui-ss-form2col-label" align="swe:this.TextAlignmentLabel">
+                                                <swe:this property="DisplayName" hintText="Label"/>
+                                                <swe:this property="RequiredIndicator" hintText="Required"/>
+                                            </div>
+                                            <div class="mceGridField siebui-ss-tbl-cell siebui-ss-form2col-field" align="swe:this.TextAlignment">
+                                                <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+                                            </div>
+                                        </div>
+                                    </swe:control>
+                                </div>
+                            </swe:for-each>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </swe:form>
+</div>
+<!-- Template Start CCAppletForm2Col_ss.swt -->

@@ -1,0 +1,29 @@
+<!-- Template Start: TCustDashboardDynaGridLayout.swt -->
+
+<swe:form>
+    <div class="swe:this.SelectStyle">
+        <swe:include file="TCCFormButtonsTopNoMenu.swt"/>
+        <div class="siebui-table">
+            <swe:for-each startValue="1200" count="5" iteratorName="currentId">
+                <div class="siebui-table-row">
+                    <div class="siebui-cust-tgrid-field">
+                        <swe:control id="swe:currentId+100" hintMapType="FormItem">
+                            <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+                        </swe:control>
+                        <div class="siebui-field-row2">
+                            <swe:control id="swe:currentId+200" hintMapType="FormItem">
+                                <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+                            </swe:control>
+                        </div> 
+                    </div>
+                    <swe:control id="swe:currentId+50" hintMapType="FormItem">
+                        <div class="siebui-cust-tgrid-label" align="swe:this.TextAlignmentLabel">
+                            <swe:this property="DisplayName" hintText="Label"/>
+                        </div>
+                    </swe:control> 
+                </div>
+            </swe:for-each>
+        </div>
+    </div>
+ </swe:form>
+<!-- Template End:TCustDashboardDynaGridLayout.swt -->

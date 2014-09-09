@@ -1,0 +1,79 @@
+<!-- Template Start: CCForm1ColBody.swt -->
+<!-- No border table section -->
+<!-- Set table style for pink background. -->
+<!-- Add 501 for photo, 502 for signature. -->
+<!-- Add 500 for dummy photo -->
+
+<!-- no border 
+<table class="AppletBorder" width="100%" cellpadding="2" cellspacing="0" border="0" align="center"><tr><td>
+-->
+
+<table class="AppletBlank" width="100%" cellspacing="0" cellpadding="2" border="0" align="center" style="background-color:#ccccff;color:#333399;">
+
+
+<!-- image control -->
+<tr>	
+<td>
+<swe:control id="500"><swe:this property="FormattedHtml" hintText="Small Image (30x30)"/></swe:control>
+<swe:control id="501"><swe:this property="FormattedHtml" hintText="Small Image (30x30)"/></swe:control>
+</td>
+</tr>
+
+<!-- signature control -->
+<tr>	
+<td align="center"> <swe:control id="502"><swe:this property="FormattedHtml" hintText="Signature"/></swe:control></td>
+</tr>
+
+<swe:error>
+  <!-- Inside-applet help text -->
+	<tr valign="top">
+		<td class="scLabelRight"><img src="images/spacer.gif" width="75" height="18" border="0" alt="" /></td>
+		<td class="formInstruct"><span class="error"><swe:this property="FormattedHtml"/></span></td>
+	</tr>  
+</swe:error>
+
+<swe:for-each startValue="1301" count="50" iteratorName="currentId">
+	<swe:control id="swe:currentId" hintMapType="FormItem">	
+		<tr valign="top">
+			<td class="scLabelRight">&nbsp;
+			<swe:this property="RequiredIndicator" hintText="Required"/>
+			<swe:this property="DisplayName" hintText="Label"/>:					
+			</td>
+			<td class="scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="Field"/>&nbsp;</td>
+		</tr>
+	</swe:control>
+</swe:for-each>	
+
+<swe:for-each startValue="2301" count="50" iteratorName="currentId">
+	<swe:control id="swe:currentId" hintMapType="FormItem">	
+		<tr valign="top">
+			<td class="scLabelRight">&nbsp;
+			<swe:this property="RequiredIndicator" hintText="Required"/>
+			<swe:this property="DisplayName" hintText="Label"/>:					
+			</td>
+			<td class="scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="Field"/>&nbsp;</td>
+		</tr>
+	</swe:control>
+</swe:for-each>	
+
+	
+	<tr>
+		<td class="scLabelRight">&nbsp;</td>
+		<td class="scField">
+			<table cellpadding="2" cellspacing="0" border="0">
+				<tr>	
+					<swe:include file="CCButtons.swt"/>		
+					<td width="100%"><img src="images/spacer.gif" valign="top" width="1" height="1" border="0" alt=""/></td>									
+				</tr>
+			</table>	
+		</td>
+	</tr>	
+	
+</table>
+
+<!-- no border
+</td></tr></table>
+-->
+
+
+<!-- Template End: CCForm1ColBody.swt -->

@@ -1,0 +1,29 @@
+<!-- Template Start: CCAppletList_Tile_SocialMediaLinks_ss.swt -->
+<swe:include file="CCApplet_NamedSpacer.swt"/>
+<span class="siebui-social-media-links-applet">
+    <div class="swe:this.SelectStyle">
+        <div class="AppletHIListBorder siebui-tile-container siebui-social-media-links-container">
+            <swe:this property="NoGrid"/>
+            <swe:this property="Horizontal"/>
+            <swe:this property="ScrollVisibleTiles"/>
+            <swe:list>
+                <swe:list-record>
+                    <div class="siebui-social-media-link-img">
+                        <swe:control id="502">
+                            <swe:this property="FormattedHtml" hintText="Field"/>
+                        </swe:control>
+                    </div>
+                    <div class="siebui-tile-media-link-desc">
+                        <swe:control id="503" >
+                            <span class="siebui-tile-media-link-desctext" align="swe:this.TextAlignment">
+                                <swe:this property="FormattedHtml" hintText="Field"/>
+                            </span>
+                        </swe:control>
+                    </div>
+                </swe:list-record>
+            </swe:list>
+        </div>
+    </div>
+</span>
+
+<!-- Template End: CCAppletList_SocialMediaLinks_ss.swt -->

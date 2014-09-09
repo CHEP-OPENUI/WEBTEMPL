@@ -1,0 +1,13 @@
+<!-- Template Start TSIPlainApplet.swt -->
+<swe:error>
+    <table datatable="0" summary="" class="AppletBack"><tr><td class="error">
+    <swe:this property="FormattedHtml"/><br>&nbsp;</td></tr></table>
+</swe:error>    
+<div class="siebui-URLApplet">
+    <swe:for-each count="10" iteratorName="CurrentId" startValue="501">
+        <swe:control id="swe:CurrentId">
+            <swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/>
+        </swe:control>
+    </swe:for-each>
+</div>
+<!-- Template End TSIPlainApplet.swt -->

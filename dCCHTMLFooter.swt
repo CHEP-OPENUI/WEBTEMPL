@@ -1,0 +1,15 @@
+<!-- Template Start: dCCHTMLFooter.swt -->
+<swe:switch>
+	<swe:case condition="Web Engine State Properties, IsFrameless">
+		<span/>
+	</swe:case>
+
+	<swe:default>
+		<swe:scripts/>
+		</body>
+		</html>
+	</swe:default>
+</swe:switch>
+<!-- Template End: dCCHTMLFooter.swt -->
+
+

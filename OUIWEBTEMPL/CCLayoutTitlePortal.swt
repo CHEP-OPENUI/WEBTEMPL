@@ -1,0 +1,25 @@
+<!-- Template Start: CCLayoutTitlePortal.swt -->
+<!-- Oliver:   EDIT LAYOUT clean up -->
+
+<swe:layout viewDisplayMode="Layout">
+
+<swe:layout appletDisplayMode="Show">
+  <swe:layout appletDisplaySize="Min"><div class="LayoutStyleMin"></swe:layout>
+  <swe:layout appletDisplaySize="Max"><div class="LayoutStyleMax"></swe:layout>
+</swe:layout>
+
+<swe:layout appletDisplayMode="Hide"><div class="LayoutStyleHide"></swe:layout>
+
+<table datatable="0" summary="" class="swe:class AppletBlank" width="100%">
+  <tr class="swe:class AppletButtons">
+    <td class="AppletTitle">
+          <swe:control id="90" property="DisplayName" hintText="Title" hintMapType="Control"/> <!-- Plain text title (90) -->
+          <swe:control id="184" property="DisplayName" hintText="DrillDown Title" hintMapType="Control"/> <!-- GotoView (184) -->
+    </td>
+    <td class="siebui-screen-hp-layoutbuttons"><swe:include file="CCLayoutButtons.swt"/></td>
+  </tr>
+</table>
+
+</div>
+</swe:layout>
+<!-- Template End: CCLayoutTitlePortal.swt -->

@@ -1,0 +1,53 @@
+<!-- Template Start: eTrainingPageContainer_Frames.swt -->
+
+<HTML dir="swe:dir">
+<head>
+<title><swe:this property="Title"/></title>
+<swe:include file="CCStylesChoice.swt"/>
+</head>
+
+
+<!--The following switch/case accounts for differences between the way IE and NS paint frames-->
+<swe:switch>
+	<swe:case condition="Web Engine User Agent, TestCapability, 'JumpTab:TRUE'">
+        <swe:frameset htmlAttr="rows='44,24,*' border='0' frameborder='No'">			
+		     <swe:frame type="Page" name="Page" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+		         <swe:include file="dCCFrameBanner_Hybrid.swt"/>
+		     </swe:frame>
+			 
+			 <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+		         <swe:include file="dCCFrameScreenbar_Hybrid.swt"/>
+		     </swe:frame>
+	
+		     <swe:frame type="View" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+		         <swe:current-view/>
+		     </swe:frame>
+		</swe:frameset>
+	</swe:case>
+		     
+	<swe:default>
+        <swe:frameset htmlAttr="rows='51,31,*' border='0' frameborder='No'">			
+		     <swe:frame type="Page" name="Page" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+		         <swe:include file="dCCFrameBanner_Hybrid.swt"/>
+		     </swe:frame>
+			 
+			 <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+		         <swe:include file="dCCFrameScreenbar_Hybrid.swt"/>
+		     </swe:frame>
+
+		     <swe:frame type="View" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+		         <swe:current-view/>
+		     </swe:frame>
+		</swe:frameset>		   
+	</swe:default>	
+</swe:switch>
+
+<swe:scripts/>
+
+</HTML>
+
+
+
+
+
+<!-- Template End: eTrainingPageContainer_Frames.swt -->

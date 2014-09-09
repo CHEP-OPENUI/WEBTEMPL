@@ -1,0 +1,63 @@
+<!-- Template Start: ERMCPRDAListBody.swt -->
+
+<!------------ Loop for all N records, DATA ------------->
+<swe:for-each-row count="7">
+
+<tr class="listRowOff">
+
+
+<swe:control id="144">
+  <!-- Select 144 -->
+  <td width="42" align="center" class="Row"><swe:this property="FormattedHtml" hintText="Selected Row" hintMapType="Control"/></td>
+</swe:control>
+
+<swe:control id="147">
+<!-- Pick 147 -->
+  <td width="42" align="center" class="Row"><swe:this property="FormattedHtml" hintText="Pick Control" hintMapType="Control"/></td>
+</swe:control>
+
+<swe:select-row>
+   <td width="42" align="center" class="Row"><swe:this property="FormattedHtml" /></td>
+</swe:select-row>
+
+<!-- ---------- List Applet Columns ----------->
+<swe:control id="501">
+  <td align="swe:this.TextAlignment" class="Row"><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></td>
+</swe:control>
+   
+<swe:control id="145">
+<!-- Optional, 145 -->
+  <td align="center" class="Row"><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+</swe:control>
+
+<!-- ---------- List Field Values (502-540) ------------->
+<swe:for-each startValue="502" count="39" iteratorName="currentId">
+  <swe:control id="swe:currentId">
+    <td align="swe:this.TextAlignment" valign="Top" class="Row"><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></td>
+  </swe:control> 
+</swe:for-each>
+
+<!------------ Per-record Control Buttons ------------->
+
+<swe:control id="142">
+<!-- Optional, 142 -->
+  <td align="center" class="Row"><swe:this property="FormattedHtml"  hintMapType="Control"/></td>
+</swe:control>
+
+<swe:control id="143">
+<!-- Optional, 143 -->
+  <td align="center" class="Row"><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+</swe:control>
+
+<swe:control id="146">
+<!-- Optional, 146 -->
+  <td align="center" class="Row"><swe:this property="FormattedHtml" hintText="Save" hintMapType="Control"/></td>
+</swe:control>
+
+</tr>
+
+
+<!------------ End Loop ------------->
+</swe:for-each-row>
+
+<!-- Template End:  ERMCPRDAListBody.swt -->

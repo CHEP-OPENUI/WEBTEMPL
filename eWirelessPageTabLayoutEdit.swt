@@ -1,0 +1,51 @@
+<!-- Template Start: eWirelessPageTabLayoutEdit.swt -->
+
+<STYLE TYPE="text/css">select.ItemsDisplayed { width:200px; height:200px; }</STYLE>
+
+<SCRIPT language="javascript">
+<swe:control id="100">g_strErrorNoItemsSelected = '<swe:this property="DisplayName"/>';</swe:control>
+</SCRIPT>
+
+<swe:include-script file="itemsdisplayed.js"/>
+
+<SCRIPT language="javascript">
+function SubmitSelection(formObj)
+{
+<!-- Defect 12-959ZY9 - There is a timing issue with the -->
+<!-- Mac OS. While the form is getting submitted, the -->
+<!-- formObj is restored and the method invoked is overwritten. -->
+<!--   SWESaveFormObj (formObj); -->
+
+   formObj.SWECmd.value = 'InvokeMethod';
+   formObj.SWEMethod.value = 'ChangeSelection';
+   formObj.submit();
+
+<!--   SWERestoreFormObj (formObj); -->
+}
+</SCRIPT>
+
+<!-- Template Start: Copy of CCAppletForm4Col_E_N.swt -->
+
+<swe:include file="CCApplet_NamedSpacer.swt"/>	
+
+<table datatable="0" summary="" width="98%" cellspacing="0" cellpadding="0" border="0" align="center">
+	<swe:form>
+	<tr valign="top">
+		<td>
+			<swe:include file="CCTitle_Named.swt"/>
+		
+			<swe:include file="CCFormButtonsTop.swt"/>
+			<swe:include file="eWirelessPageTabLayt4ColBody.swt"/>
+			
+			<swe:include file="CCBottomApplet_NamedForm.swt"/>
+						
+		</td>
+	</tr>
+	</swe:form>
+</table>	
+
+
+
+<!-- Template End: Copy of CCAppletForm4Col_E_N.swt -->
+
+<!-- Template End: eWirelessPageTabLayoutEdit.swt -->

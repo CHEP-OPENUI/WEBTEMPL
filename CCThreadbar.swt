@@ -1,0 +1,39 @@
+<!--  Template Start: CCThreadbar.swt -->
+<swe:switch>
+<!-- start of IsThreadbarHidden -->
+<swe:case condition="Web Engine State Properties, IsThreadbarHidden">
+</swe:case>
+<!-- end of IsThreadbarHidden -->
+<!-- default, Show Threadbar -->
+<swe:default>
+<swe:threadbar>
+<table datatable="0" summary="" cellpadding="0" cellspacing="0" border="0">
+<tr>    
+	<swe:for-each-thread>
+	<td>
+		<span class="threadbar">
+        <swe:threadlink property="FormattedHtml">
+           	<nobr><swe:this property="Title"/></nobr>
+        </swe:threadlink>
+		</span>
+	</td>
+
+	<td><img src="images/spacer.gif" width="5" height="1" alt=""></td>
+
+	<td>
+       	<swe:stepseparator dir="ltr">
+        	    <span class="threadbardiv">&nbsp;&gt;&nbsp;</span>
+        </swe:stepseparator>
+        <swe:stepseparator dir="rtl">
+        	    <span class="threadbardiv">&nbsp;&gt;&nbsp;</span>
+       	</swe:stepseparator>
+	
+	</td>   
+	</swe:for-each-thread>
+</tr>
+</table>
+</swe:threadbar>
+</swe:default>
+<!-- end of show Threadbar -->
+</swe:switch>
+<!--  Template End: CCThreadbar.swt -->

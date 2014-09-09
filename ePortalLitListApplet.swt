@@ -1,0 +1,39 @@
+<!-- Template Start ePortalLitListApplet.swt -->
+<!-- no title
+	<swe:layout viewDisplayMode="Layout">
+	<swe:include file="ePortalAppletTitle.swt"/>
+	<img src="images/spacer.gif" width=100% height=1 alt="">
+	</swe:layout>
+	<swe:layout viewDisplayMode="Show" appletDisplayMode="Show"><swe:include file="ePortalAppletTitle.swt"/></swe:layout>
+-->
+<swe:layout viewDisplayMode="Show" appletDisplayMode="Show" appletDisplaySize="Max">
+<!-- no border
+	<table datatable="0" summary="" class="Border1" width="100%" border="0" cellpadding="1" cellspacing="0" bgcolor="#333399">
+	<tr><td>
+-->
+<table datatable="0" summary="" class="Row2" bgcolor="#FFFFFF" valign="top" width="100%"  cellpadding="4" cellspacing="0" border="0">
+<tr><td class="Row2">
+<swe:for-each-row>
+<!-- no bullet arrows
+	<table datatable="0" summary="">
+	<tr valign="top">
+	<td><img src="images/bullet_black.gif"></td>
+	<td>
+-->
+<b><swe:control id="501" property="FormattedHtml"  hintText="Field" hintMapType="ListItem"/></b>
+<!-- no other fields
+	<swe:control id="502" property="FormattedHtml" hintText="Field" hintMapType="ListItem"/>
+	<swe:control id="503"><span class="LinkListInfo"><swe:layout property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></span></swe:control>
+-->
+&nbsp;<p>
+<!-- no bullet arrows
+	</td></tr></table>
+-->
+</swe:for-each-row>
+</td></tr></table>
+<!-- no border
+	</td></tr></table>
+-->
+<p></p>
+</swe:layout>
+<!-- Template End ePortalLitListApplet.swt -->

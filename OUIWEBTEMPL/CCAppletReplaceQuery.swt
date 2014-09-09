@@ -1,0 +1,19 @@
+<!-- Template Start: CCAppletReplaceQuery.swt -->
+<!-- Oliver: slight code redesign, fixes -->
+ 
+<swe:include file="CCStylesChoice.swt"/>
+
+<!--button row-->
+<table datatable="0" summary="" width="100%">		
+	<tr class="AppletButtons">
+		<td class="siebui-popup-action siebui-align-right">
+			<swe:control id="136"><!-- Save, 136 --><span class="siebui-popup-button"><swe:this property="FormattedHtml" hintMapType="Control" hintText="Save"  /></span></swe:control>
+			<swe:control id="135"><!-- Cancel, 135 --><span class="siebui-popup-button"><swe:this property="FormattedHtml" hintMapType="Control" hintText="Cancel"/></span></swe:control>	
+		</span>
+	</tr>
+</table>
+
+</span>
+</tr>
+
+<!-- Template End: CCAppletReplaceQuery.swt -->

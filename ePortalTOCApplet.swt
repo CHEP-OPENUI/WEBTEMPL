@@ -1,0 +1,39 @@
+<swe:layout viewDisplayMode="Show" appletDisplayMode="Show">
+<!-- Template Start ePortalTOCApplet.swt -->
+
+<!--TOC top-->
+<table datatable="0" summary="" width="100%">
+ <tr><td width="145"><hr size=1 width=138></td>
+  <td nowrap>&nbsp;<b><swe:this property="Title"/></b></td>
+  <td width="99%"><hr size=1></td>
+ </tr>
+</table>
+<table datatable="0" summary="" class="Row2" valign="top" width="100%"  cellpadding="4" cellspacing="0" border="0">
+ <tr>
+
+  <swe:control id="401"><!-- TOCColumnStart --><swe:this property="DisplayName" hintText="Label" hintMapType="Control"/></swe:control>
+
+  <swe:for-each count="10" iteratorName="CurrentId" startValue="501">
+   <swe:control id="swe:CurrentId">
+    <li><swe:this property="DisplayName" hintText="Label" hintMapType="Control"/><br>
+   </swe:control>
+  </swe:for-each>
+
+  <swe:for-each count="10" iteratorName="CurrentId" startValue="601">
+   <swe:control id="swe:CurrentId">
+    <li><swe:this property="DisplayName" hintText="Label" hintMapType="Control"/><br>
+   </swe:control>
+  </swe:for-each>
+
+  <swe:for-each count="10" iteratorName="CurrentId" startValue="701">
+   <swe:control id="swe:CurrentId">
+    <li><swe:this property="DisplayName" hintText="Label" hintMapType="Control"/><br>
+   </swe:control>
+  </swe:for-each>
+
+  <swe:control id="402"><!-- TOCColumnEnd --><swe:this property="DisplayName" hintText="Label" hintMapType="Control"/></swe:control>
+
+ </tr>
+</table>
+<!-- Template End ePortalTOCApplet.swt -->
+</swe:layout>

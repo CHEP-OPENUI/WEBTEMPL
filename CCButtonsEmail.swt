@@ -1,0 +1,45 @@
+<!-- Template Start: CCButtons.swt -->
+
+<swe:if condition="Web Engine State Properties, IsLowInteractive">
+  <swe:control id="580"><!-- SI only control, 580    --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control" hintText="New - shows only in SI"  /></td></swe:control>
+</swe:if>
+
+<swe:control id="131"><!-- CreateRecord, 131 --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control" hintText="New"/></td></swe:control>
+<swe:control id="132"><!-- EditRecord, 132   --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control" hintText="Edit" /></td></swe:control>
+<swe:control id="133"><!-- DeleteRecord, 133 --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control" hintText="Delete"/></td></swe:control>
+
+<swe:control id="136"><!-- Save, 136         --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control" hintText="Save"  /></td></swe:control>
+<swe:if condition="Web Engine State Properties, IsHighInteractive">
+  <swe:control id="599"><!-- Mvg Save, 599     --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control" hintText="Save - shows only in HI"  /></td></swe:control>
+</swe:if>
+<swe:control id="134"><!-- Reset, 134        --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control" hintText="Reset" /></td></swe:control>
+<swe:control id="135"><!-- Cancel, 135       --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control" hintText="Cancel"/></td></swe:control>
+
+<swe:control id="106"><!-- NewQuery, 106     --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control" hintText="Query" /></td></swe:control>
+<swe:control id="107"><!-- ExecuteQuery, 107 --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control" hintText="Go (ExecuteQuery)" /></td></swe:control>
+<swe:control id="108"><!-- CancelQuery, 108  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control" hintText="Cancel (Query)" /></td></swe:control>
+<swe:control id="126"><!-- QueryAssistant,126--><td nowrap><swe:this property="FormattedHtml" hintMapType="Control" hintText="Query Assistant" /></td></swe:control>
+<swe:control id="109"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+<swe:control id="110"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+<swe:control id="111"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+
+<swe:control id="139"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+<swe:control id="140"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+<swe:control id="141"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+<swe:control id="142"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+<swe:control id="143"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+<swe:control id="144"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+<swe:control id="145"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+					
+<swe:pageitem id="2"> <!-- Back Button       --><td nowrap><swe:this property="FormattedHtml" hintText="Back" /></td></swe:pageitem>
+
+<swe:control id="125">
+	<td valign="middle"><img src="images/btn_div_gray.gif" height="13" align="middle" alt=""></td>
+	<!-- Info-Button, 125 -->
+	<td valign="middle" nowrap>
+		<swe:this property="FormattedHtml" hintText="Info-Button" hintMapType="Control"/>
+	</td><td>&nbsp;</td>
+</swe:control>	
+
+
+<!-- Template End: CCButtons.swt -->

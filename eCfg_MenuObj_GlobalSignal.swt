@@ -1,0 +1,122 @@
+<!-- Template Start: eCfg_MenuObj_GlobalSignal.swt -->
+
+<script>
+
+	var helpVisible = false;
+	
+	function ShowHelp()
+	{
+		var objHelp = document.getElementById("HELP_BOX");
+		
+		if (helpVisible == false)
+		{
+			var xPos, yPos;
+			var objHelpPos = document.getElementById("HELP_POS");
+			
+		    xPos = objHelpPos.offsetLeft;
+			yPos = objHelpPos.offsetTop;
+		   
+			//show the help box
+			objHelp.style.left = xPos;
+			objHelp.style.top = yPos;
+			objHelp.style.width = 250;
+			objHelp.style.visibility = "visible";
+			
+			helpVisible = true;
+		}
+		else
+		{	
+			//hide the help box
+			objHelp.style.left = -1000;
+			objHelp.style.top = -1000;
+			objHelp.style.visibility = "hidden";
+			helpVisible = false;
+		}
+	}
+</script>
+
+<table datatable="0" summary="" width="100%" height="100%" cellspacing="3" cellpadding="2" border="0" class="AppletBorder">
+<tr>
+
+	<td class="AppletBack" valign="top">
+		<table datatable="0" summary="" width="100%" cellspacing="1" cellpadding="1" border="0" bgcolor="#ffffff" height="100%">
+		<tr>
+
+			<td valign="top">
+				<table datatable="0" summary="" width="100%" cellspacing="1" cellpadding="1" border="0" bgcolor="#ffffff">
+				<tr>
+					<td colspan="2">
+				    <b><swe:control id="Message" CfgUIControl="lblMessage" property="DisplayName" /></b>
+				    </td>
+					<!-- Help Button -->
+					<td align="right">
+						<table datatable="0" summary="" cellpadding="0" cellspacing="3" border="0">
+						<tr>
+						<td valign="middle">
+								<a href="javascript:ShowHelp();"><span class="help"><swe:control id="StringQuestionMark" CfgUIControl="lblQuestionMark" property="DisplayName" /></span></a>
+							</td>
+							<td valign="middle">
+								<a href="javascript:ShowHelp();"><swe:control id="StringHelp" CfgUIControl="lblHelp" property="DisplayName" /></a>
+							</td>
+						</tr>
+						</table>
+						<DIV id="HELP_BOX" class="eCfgHelpPos">
+						<table datatable="0" summary="" cellpadding="3" cellspacing="3" border="0" width="100%" class="eCfgAppBorder">
+						<tr>
+							<td class="appletBack">
+								<table datatable="0" summary="" cellpadding="2" cellspacing="0" border="0" width="100%">
+								<tr bgcolor="#ffffff">
+									<td>
+										<b>Siebel eProduct Configurator Help</b>
+									</td>
+									<td align="right">
+										<a href="javascript:ShowHelp();"><swe:image name="LAYOUT_HIDE_ON" category="HTML Control Icons" width="24" height="15" border="0" /></a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						</DIV>
+					</td>
+					<!-- END Help Button -->
+				</tr>
+				<tr>
+					<td><DIV id="HELP_POS" class="eCfgHelpPos2"></DIV></td>
+				</tr>
+				<swe:for-each id="200" CfgLoopType="$.Signal" startValue="1500" count="Dynamic" iteratorName="102Id">
+					<tr>
+						<td width="1%" valign="top">
+							<img src="IMAGES/bullet_green.gif" width="9" height="14" border="0" alt=""> 
+						</td>
+						<td width="99%" colspan="2">
+							<swe:control id="swe:102Id+220" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" CfgFieldName="CxExplanation"/>
+						</td>
+					</tr>
+				</swe:for-each>
+				<swe:for-each id="300" CfgLoopType="Signal" startValue="1500" count="Dynamic" iteratorName="103Id">
+					<tr>
+						<td width="1%" valign="top">
+							<img src="IMAGES/bullet_green.gif" width="9" height="14" border="0" alt=""> 
+						</td>
+						<td width="99%" colspan="2">
+							<swe:control id="swe:103Id+220" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" CfgFieldName="CxExplanation"/>
+						</td>
+					</tr>
+				</swe:for-each>
+				<tr>
+				</table>
+			</td>
+
+		</tr>
+		</table>
+	</td>
+
+</tr>
+</table>
+
+<!-- Template End: eCfg_MenuObj_GlobalSignal.swt -->

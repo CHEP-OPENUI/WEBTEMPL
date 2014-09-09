@@ -1,0 +1,23 @@
+<!-- Template Start: eCfgObj_GobalSignalJS.swt -->
+<div id="eCfgObj_GobalSignalJS.swt" class="cxStatusTempl" style="height:135px" >
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+   <tr>
+      <td>
+         <b><swe:control id="Message" CfgUIControl="lblMessage" CfgHtmlType="CfgLabel" /></b>
+      </td>
+      <td id="CfgLessBtn" align="right" style="display:none">
+         <a href='Javascript:showLessMsg ()'><img src="IMAGES/btn_less.gif" border="0"/></a>
+      </td>
+   </tr>
+   <tr>
+      <td colspan="2">
+        <swe:for-each id="300" CfgLoopType="Signal" startValue="1500" count="Dynamic" iteratorName="103Id">
+          <swe:control id="swe:103Id+220" CfgHtmlType="CfgSignal" 
+           CfgJSShow="showSignal" CfgJSUpdateSignal="updateSignal"/>
+        </swe:for-each>
+      </td>
+   </tr>
+
+</table>
+</div>
+<!-- Template End: eCfgObj_GobalSignalJS.swt -->

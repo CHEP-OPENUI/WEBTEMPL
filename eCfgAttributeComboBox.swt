@@ -1,0 +1,61 @@
+<!-- Template Start: eCfgAttributeComboBox.swt -->
+
+<swe:include file="eCfgAtt_Header.swt"/>
+
+<tr>
+   <td colspan=3>
+      <table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="white">
+         <tr>
+            <td colspan="2" valign="top">
+               <swe:form>
+                  <table datatable="0" summary=""  width="100%">
+                     <tr>
+                        <td>
+
+                        <SCRIPT>
+                           //For netscape, all the pieces have to be in one script block.
+                           var ComboObjectName  = '<swe:control id="swe:IncId+520" CfgFieldName="FieldName" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+                           var sReadOnly        = '<swe:control id="swe:IncId+2520" CfgFieldName="CxReadOnly" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+                           var sSubmitReq       = unescape('<swe:control id="swe:IncId + 1500" CfgUIControl="AttrAutoPick" CfgRequest="ChangeAttribute" DisplayMode="EncodeData" CfgHtmlType="CfgAction" InvokeMethod="SubmitRequest" NoSelfData="Y" property="FormattedHtml"/>');
+                           var readonlyval;
+
+                           if( sReadOnly == "Y" )
+                              readonlyval = 'disabled';
+                           else
+                              readonlyval = '';
+
+                           document.write ( "<SELECT name=\"" + ComboObjectName + "\" onChange=\"" + sSubmitReq + "\" " + readonlyval + ">" );
+                           
+                        
+                        <swe:for-each id="550" CfgLoopType="Domain" Automation="N" startValue="1500" count="Dynamic" iteratorName="101Id" Usage="ComboBox" >
+                        
+                           var ID           = unescape('<swe:control id="swe:101Id+2000" CfgFieldName="AttValue" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" DisplayMode="EncodeData" property="FormattedHtml"/>');
+                           var ENABLED      = '<swe:control id="swe:101Id+400" CfgFieldName="CxEnabled" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+                           var Selected     = '<swe:control id="swe:101Id+600" CfgFieldName="Selected" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+                           var DispStyle    = 'eCfgOptionAvailable';
+                  
+                           if( ENABLED == "Disabled" )
+                              DispStyle = 'eCfgOptionExcluded';
+
+                           document.write ( '<option  ');
+                           if ( Selected == "Y" )
+                              document.write ( ' selected ' );
+
+                           document.write ('value=\"' + ID + '\" class=\"' + DispStyle + '\">' + ID );
+                     </swe:for-each>
+                     document.write('</SELECT>');
+                  	</SCRIPT>
+
+                        </td>
+                     </tr>
+                  </table>
+               </swe:form>
+            </td>
+         </tr>
+      </table>
+   </td>
+</tr>
+
+<swe:include file="eCfgPort_Footer.swt"/>
+
+<!-- Template End: eCfgAttributeComboBox.swt -->

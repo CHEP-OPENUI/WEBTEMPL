@@ -1,0 +1,77 @@
+<!-- Template Start: RTest-CCAppletPopupFormGridLayout.swt -->
+
+<swe:include file="CCApplet_NamedSpacer.swt"/>	
+
+<swe:form>
+	<swe:error type="Popup">
+		<table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="2" cellspacing="0" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/></td></tr></table>
+	</swe:error>
+
+	<swe:form-applet-layout>
+	</swe:form-applet-layout>
+        <table bgcolor="#FFFFFF">
+        <tr>
+		<td nowrap><swe:control id="1" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="2" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="3" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="4" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="5" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="6" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="7" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="8" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="9" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="10" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="11" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="12" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="13" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="14" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="15" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="16" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="17" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="18" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="19" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="20" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="21" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="22" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="23" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="24" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="25" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+
+        </tr>
+        <tr>
+		<td nowrap><swe:control id="26" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="27" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="28" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="29" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="30" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="31" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="32" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="33" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="34" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="35" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="36" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="37" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="38" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="39" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="40" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="41" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="42" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="43" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="44" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="45" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="46" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="47" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="48" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="49" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+		<td nowrap><swe:control id="50" property="FormattedHtml" hintMapType="Control"></swe:control></td>
+
+
+        </tr>
+        </table>
+</swe:form>
+
+<!-- Template End: RTest-CCAppletPopupFormGridLayout.swt -->
+
+
+
+	

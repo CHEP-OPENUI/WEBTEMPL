@@ -1,0 +1,43 @@
+<!-- Template Start: CCAppletFormPortalGraphical.swt -->
+
+<swe:layout viewDisplayMode="Layout">
+<swe:include file="CCApplet_Spacer.swt"/>
+	<swe:include file="CCLayoutTitlePortal.swt"/>
+</swe:layout>
+
+<swe:layout viewDisplayMode="Show" appletDisplayMode="Show">
+<table datatable="0" summary="" width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr valign="top"><td><img src="images/spacer.gif" width="1" height="3" alt=""></td></tr></table>
+
+<swe:control id="1100">
+  <div class=CmdTxt><swe:this property="FormattedHtml" hintText="Outside Applet Help Text" hintMapType="Control"/></div><p>
+</swe:control>
+
+
+<span class="AppletStyle8">
+<swe:form>  
+
+<div class="swe:this.SelectStyle">	
+<table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" class="AppletBack"><tr><td class="AppletHIFormBorder">
+
+	<swe:include file="CCTitle_PortalGraphical.swt"/>
+		<swe:layout viewDisplayMode="Show" appletDisplaySize="Max">
+
+         		<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="4" border="0"  align="center">
+			<tr class="AppletBack" align="left"> 
+                	<td nowrap class="AppletMenu"><swe:menu type="Button"/><img src="images/btn_div.gif" align="middle" alt=""></td>
+			<swe:include file="CCButtons.swt"/>	
+			<td width="100%" align="right"><img src="images/spacer.gif" width="6" height="1" alt=""></td>	
+	        	<swe:include file="CCRecordNav.swt"/>	
+	        	<swe:include file="CCFormButtonsTopRight.swt"/>
+			</tr>        
+			</table>
+	
+			<swe:form-applet-layout>
+			</swe:form-applet-layout>
+		</swe:layout>
+</td></tr></table>
+</div>
+ </swe:form>
+</span>
+</swe:layout>
+<!-- Template End: CCAppletFormPortalGraphical.swt -->

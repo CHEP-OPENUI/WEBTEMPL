@@ -1,0 +1,28 @@
+<!-- Template Start: LSCCFullList.swt -->
+<swe:form>
+	<swe:include file="LSStdAppletHeader.swt"/>
+	<swe:layout viewDisplayMode="Show" appletDisplaySize="Max">
+		<table width="100%" cellpadding="1" cellspacing="0" border="0" align="center">
+			<tr>
+				<td>
+					<table class="AppletBack" valign="top" width="100%" cellpadding="3" cellspacing="0" border="0">
+						
+						<!-- Body Starts Here -->
+						
+						<swe:list>
+							<table valign="top" width="100%" cellpadding="2" cellspacing="0" border="0" borderColor="#cccccc">
+								<swe:include file="CCListHeader.swt"/>
+								<swe:include file="CCListBody.swt"/>
+							</table>
+						</swe:list>
+						
+						<!-- Body Ends Here -->
+						
+					</table>
+				</td>
+			</tr>
+		</table>
+	</swe:layout>
+	<!-- swe:include file="LSStdAppletTail.swt"/ -->
+</swe:form>	
+<!-- Template End: LSCCFullList.swt -->

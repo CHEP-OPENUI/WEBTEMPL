@@ -1,0 +1,25 @@
+<!-- Template Start: eCfgRelationContentsQuantityJS.swt -->
+
+
+<table datatable="0" summary="" border="0" cellpadding="0" cellspacing="3" width="100%">
+   <swe:for-each id="500" CfgLoopType="Children" startValue="1500" count="Dynamic" iteratorName="101Id"
+   CfgFieldList="CfgFieldName:Quantity, CfgUIControl:lblQuantity, HtmlAttrib_width:80, HtmlAttrib_align:left, Default:Y*
+                 CfgFieldName:Name, CfgUIControl:lblName, HtmlAttrib_width:250, HtmlAttrib_align:left, Default:Y*
+                 CfgFieldName:RequireMoreChild, Default:Y*
+                 CfgFieldName:Explanation, CfgUIControl:lblExplanation, HtmlAttrib_width:70, HtmlAttrib_align:center*
+                 CfgFieldName:Customize, CfgUIControl:lblCustomize, HtmlAttrib_width:70, HtmlAttrib_align:center"
+   >
+
+      <tr>
+            <td align="center">
+               <swe:control id="Port Item" CfgHtmlType="CfgPortItem" 
+                CfgJSShow="showPortItems" CfgJSUpdateSelection="updatePortItemsForComboAdd"/>
+            </td>
+      </tr>
+
+   </swe:for-each>
+</table>
+
+
+
+<!-- Template End: eCfgRelationContentsQuantityJS.swt -->

@@ -1,0 +1,11 @@
+<!-- Template Start: CCtogglebar_Drop.swt -->
+<!-- Oliver: code redesign -->
+
+<swe:togglebar type="Select">
+	<span class="siebui-popup-togglebar">
+		<swe:control id="2" property="DisplayName" />
+		<swe:this property="FormattedHtml"/>
+	</span>
+</swe:togglebar>
+
+<!-- Template End: CCtogglebar_Drop.swt -->

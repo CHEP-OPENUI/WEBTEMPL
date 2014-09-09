@@ -1,0 +1,43 @@
+<!-- Template Start: dCCForm1ColBodyLight.swt -->
+
+
+
+<table datatable="0" summary="" class="AppletBlank" width="100%" cellpadding="5" cellspacing="0" border="0">
+	<tr valign="top">
+		<td width="100%">
+			
+			<swe:control id="91">
+			  <!-- Inside-applet help text -->
+			  <table datatable="0" summary="" class="AppletBlank" width="100%" cellpadding="1" cellspacing="0" border="0"><tr><td><swe:this property="DisplayName" hintText="Inside Applet Help Text"/></td></tr></table>
+			</swe:control>
+					
+			<swe:error>
+				<table datatable="0" summary="" class="AppletBlank" width="100%" cellpadding="1" cellspacing="0" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/></td></tr></table>
+			</swe:error>		
+			
+			<table datatable="0" summary="" width="100%" border="0" cellspacing="2" cellpadding="1" align="center">
+	
+					<swe:for-each startValue="1101" count="30" iteratorName="currentId">
+						<swe:control id="swe:currentId+200" hintMapType="FormItem">
+						<tr valign="top">
+							<td>
+								<div class="scLabel">
+									<swe:this property="DisplayName" hintText="Label"/>:
+									<swe:this property="RequiredIndicator" hintText="Required"/>
+								</div>
+								<span class="mceField">
+									 <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+200"/>
+								</span>
+							</td>
+						</tr>										
+						</swe:control>									
+					</swe:for-each>						
+			
+			</table>
+		</td>				
+	</tr>	
+</table>
+
+
+
+<!-- Template End: dCCForm1ColBodyLight.swt -->	

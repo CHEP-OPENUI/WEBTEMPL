@@ -1,0 +1,50 @@
+<!-- Template Start: CCAppletListPortal.swt -->
+
+<swe:layout viewDisplayMode="Layout">
+<swe:include file="CCApplet_Spacer.swt"/>
+	<swe:include file="CCLayoutTitlePortal.swt"/>
+</swe:layout>
+
+<swe:layout viewDisplayMode="Show" appletDisplayMode="Show">
+
+<swe:control id="1100">
+  <div class=CmdTxt><swe:this property="FormattedHtml" hintText="Outside Applet Help Text" hintMapType="Control"/></div><p>
+</swe:control>
+
+<span class="AppletStyle8">
+ <swe:form>
+  
+  	<div class="swe:this.SelectStyle">
+  	
+	<swe:include file="CCTitle_Portal.swt"/>
+	
+	<swe:if condition="Web Engine State Properties, IsHighInteractive">
+	<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="AppletHIFormBorder">
+	</swe:if>
+
+	<swe:layout viewDisplayMode="Show" appletDisplaySize="Max">
+		<swe:include file="CCListButtonsTopNoRecNav.swt"/>
+		<swe:error>
+			<table class="AppletBack" width="100%" cellpadding="4" cellspacing="0" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/><br>&nbsp;</td></tr></table>
+		</swe:error> 
+		<swe:list>
+		<table bgcolor="#cccccc" valign="top" width="100%" cellpadding="2" cellspacing="1" border="0">
+			<swe:include file="CCListHeaderNoSort.swt"/>
+			<swe:include file="CCListBodyNoRowHilite.swt"/>
+		</table>
+		</swe:list>
+	</swe:layout>
+	
+  	<swe:include file="CCBottomApplet.swt"/>
+
+	<swe:if condition="Web Engine State Properties, IsHighInteractive">
+	</td></tr></table>
+	</swe:if>
+	
+	</div>
+
+ </swe:form>
+</span>
+</swe:layout>
+
+<!-- Template End: CCAppletListPortal.swt -->

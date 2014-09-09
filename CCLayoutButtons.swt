@@ -1,0 +1,36 @@
+<!-- Template Start: CCLayoutButtons.swt -->
+<table datatable="0" summary="" cellspacing="0" cellpadding="2" border="0">
+<tr class="AppletButtons">
+
+<swe:layout viewDisplayMode="Show" appletDisplayMode="Show">
+<swe:control id="157"><!-- Edit --><td><swe:this property="FormattedHtml" hintText="Label" hintMapType="Control"/></td></swe:control>
+</swe:layout>
+
+<swe:layout appletDisplaySize="Min">
+<swe:control id="204"><!-- Max --><td></swe:control><swe:control id="204" property="FormattedHtml" hintText="MaximizeApplet" hintMapType="Control"/><swe:control id=204></td></swe:control>
+</swe:layout>
+
+<swe:layout appletDisplaySize="Max">
+<swe:control id="203"><!-- Min --><td></swe:control><swe:control id="203" property="FormattedHtml" hintText="MinimizeApplet" hintMapType="Control"/><swe:control id="203"></td></swe:control>
+</swe:layout>
+
+<swe:layout viewDisplayMode="Layout">
+<swe:control id="207"><!-- Up --><td></swe:control><swe:control id="207" property="FormattedHtml" hintText="MoveAppletUp" hintMapType="Control"/><swe:control id="207"></td></swe:control>
+<swe:control id="208"><!-- Down --><td></swe:control><swe:control id="208" property="FormattedHtml" hintText="MoveAppletDown" hintMapType="Control"/><swe:control id="208"></td></swe:control>
+</swe:layout>
+
+<swe:layout appletDisplayMode="Show">
+<swe:control id="212"><!-- Hide --><td></swe:control><swe:control id="212" property="FormattedHtml" hintText="HideApplet" hintMapType="Control"/><swe:control id="212"></td></swe:control>
+</swe:layout>
+
+<swe:layout appletDisplayMode="Hide">
+<swe:control id="211"><!-- Show --><td></swe:control><swe:control id="211" property="FormattedHtml" hintText="ShowApplet" hintMapType="Control"/><swe:control id="211"></td></swe:control>
+</swe:layout>
+
+<swe:layout viewDisplayMode="Show" appletDisplayMode="Show">
+<swe:control id="555"><!-- GotoTop --><td><swe:this property="DisplayName" hintText="Label" hintMapType="Control"/><a href="#top"><img src="images/btn_aplt_top_1.gif" border="0" alt="GoToTop"></a></td></swe:control>
+</swe:layout>
+
+</tr>
+</table>
+<!-- Template End: CCLayoutButtons.swt -->

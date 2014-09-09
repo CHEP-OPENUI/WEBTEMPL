@@ -1,0 +1,60 @@
+<!-- Template Start: dCCListBodyHorizontal.swt -->
+<tr valign="top">
+<swe:for-each-row count="10">
+
+	<td valign="top">
+	
+		<table datatable="0" summary="" border="0" cellpadding="3"  cellspacing="0">
+		
+			<swe:control id="501">
+				<tr valign="top"><td align="center"><swe:this property="FormattedHtml" hintText="Small Image (30x30)"/></td></tr>
+			</swe:control>
+			
+			<swe:control id="502">
+				<tr valign="top"><td colspan="2" class="dCCItemTitle"><swe:this property="FormattedHtml" hintText="Item Name" hintMapType="ListItem"/></td></tr>
+			</swe:control>
+			
+			<swe:for-each count="3" startValue="503" iteratorName="currentId">
+				<swe:control id="swe:currentId">
+					<tr valign="top"><td colspan="2" class="dCCItemValue"><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></td></tr>
+				</swe:control>
+			</swe:for-each>
+
+					
+			<swe:for-each count="3" startValue="510" iteratorName="currentId">
+				<swe:control id="swe:currentId">
+					<tr valign="top">
+						<td colspan="1" class="dCCItemLabel"><swe:this property="DisplayName" hintText="Label"/>:</td><td class="dCCItemValue"><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></td>
+					</tr>
+				</swe:control>
+			</swe:for-each>							
+
+			<swe:control id="142">
+			<tr valign="top"><!-- Optional, 142 -->
+				<td  colspan="2" align="center"><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+			 </tr>
+			</swe:control>
+			
+			<swe:control id="143">
+			<tr valign="top"><!-- Optional, 143 -->
+				<td colspan="2" align="center"><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+			 </tr>
+			</swe:control>
+			
+			<swe:control id="145">
+			<tr valign="top"><!-- Optional, 145 -->
+				<td  colspan="2" align="center"><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+			 </tr>
+			</swe:control>
+		
+		</table>
+
+	</td>
+
+	<td><img src="images/spacer.gif" width="2" height="3" alt=""></td>
+	<td class="AppletBorder"><img src="images/spacer.gif" width="1" height="3" alt=""></td>
+	<td><img src="images/spacer.gif" width="2" height="3" alt=""></td>
+
+</swe:for-each-row>
+</tr>
+<!-- Template End: dCCListBodyHorizontal.swt -->

@@ -1,0 +1,36 @@
+<!-- Template Start: ERMReport_ListTotal.swt -->
+
+
+
+<span class="reportTxtLarge"><swe:this property="Title"/><br></span>
+
+<swe:control id="91"><span><swe:this hintText="Description" property="FormattedHtml"/><p></span></swe:control>
+
+
+<table datatable="0" summary="" cellspacing="0">
+<tr>
+<swe:for-each startValue="1301" count="8" iteratorName="currentId">	
+	<swe:control id="swe:currentId"><td class="reportLblBtmBorder">&nbsp;<swe:this property="DisplayName" hintText="Mappable Label" />&nbsp;</td></swe:control>
+</swe:for-each>
+</tr>
+
+<swe:for-each-row count="30">
+<tr>
+<swe:for-each startValue="1301" count="8" iteratorName="currentId">	
+	<swe:control id="swe:currentId"><td class="reportFld">&nbsp;<swe:this property="FormattedHtml" hintText="Field" />&nbsp;</td></swe:control>
+</swe:for-each>
+</tr>
+</swe:for-each-row>
+
+<swe:control id="92">
+<tr>
+	<td class="reportLblTopBorder" colspan="8" align="right"><swe:this property="DisplayName"/>&nbsp;<span class="reportFld"><swe:this hintText="Total" property="Total"/></span></td>
+</tr>
+</swe:control>
+
+</table>
+
+
+<br>
+
+<!-- Template End: ERMReport_ListTotal -->

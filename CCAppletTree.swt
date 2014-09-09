@@ -1,0 +1,32 @@
+<!-- Template Start: CCAppletTree.swt -->
+<!-- Applet with a Tree Control -->
+<!-- Use the custom html type of "Tree" for this control -->
+
+<span class="treeBack">
+<table datatable="0" summary="" border=0 cellspacing=0 cellpadding=0>
+
+	<swe:for-each-node>
+	<tr valign=top>
+		<td nowrap>
+		<swe:for-each-indent>
+			<swe:indent-img/>
+		</swe:for-each-indent>
+		<swe:node type="DisplayName" state="Active">
+			<span class="treeActive"><swe:this property="FormattedHtml"/></span>
+		</swe:node>
+		<swe:node type="DisplayName" state="Inactive">
+			<span class="treeInactive"><swe:this property="FormattedHtml"/></span>
+		</swe:node>
+		<swe:node type="FieldValue" state="Active">
+			<span class="treeActive"><swe:this property="FormattedHtml"/></span>
+		</swe:node>
+		<swe:node type="FieldValue" state="Inactive">
+			<span class="treeInactive"><swe:this property="FormattedHtml"/></span>
+		</swe:node>
+		</td>
+	</tr>
+	</swe:for-each-node>
+
+</table>
+</span>
+<!-- Template End: CCAppletTree.swt -->

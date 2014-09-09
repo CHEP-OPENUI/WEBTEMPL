@@ -1,0 +1,31 @@
+<!-- Template Start: dCCAppletListCategorizedBulletTab3.swt -->
+<swe:include file="CCApplet_Spacer.swt"/>
+
+<span class="AppletStyle4">
+	<swe:form>
+
+		<table datatable="0" summary="" width="100%" class="AppletBack" cellpadding="2" cellspacing="0" border="0">
+			<tr>
+				<td><swe:include file="dCCTitle.swt"/></td>
+				<td width="100%">&nbsp;</td>
+				<swe:include file="CCRecordNav.swt"/>
+			</tr>
+		</table>	
+
+		<table datatable="0" summary="" width="100%" cellpadding="1" cellspacing="0" border="0" align="center">
+			<tr>
+				<td class="AppletBorder">
+
+					<table datatable="0" summary="" class="AppletBack" valign="top" width="100%" cellpadding="2" cellspacing="0" border="0">
+						<swe:include file="dCCListCategorized3.swt"/>
+					</table>
+		
+				</td>
+			</tr>
+		</table>
+		
+
+	
+	</swe:form>
+</span>
+<!-- Template End: dCCAppletListCategorizedBulletTab3.swt -->

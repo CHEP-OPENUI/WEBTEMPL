@@ -1,0 +1,32 @@
+<!-- Template Start: CCAppletFlowchart.swt -->
+
+<swe:include file="CCApplet_NamedSpacer.swt"/>
+<swe:form>
+  <div class="swe:this.SelectStyle">
+    <table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" class="AppletBack"><tr><td class="AppletHIFormBorder">
+
+    <swe:include file="CCTitle_Named.swt"/>
+    <swe:include file="CCFormButtonsTop.swt"/>
+
+    <div id="control" class="siebui-fcControl">
+      <div id="FCToolBar" class="siebui-fcToolBar ui-corner-all">
+        <div>
+          <div id="delete" class="siebui-fcButton"></div>
+          <div id="options" class="siebui-fcButton"></div>
+        </div>
+        <ul id="menu" class="siebui-fcMenu"></ul>
+      </div>
+      <div id="palette" class="siebui-fcPalette">
+        <div id="paletteHeader">Objects</div>
+        <div id="paletteitems" class="siebui-fcPaletteItem"></div>
+      </div>
+      <div id="canvas" class="siebui-fcCanvas">
+        <div id="canvas-content" class="siebui-fcCanvas-content"></div>
+      </div>      
+    </div>
+
+    </td></tr></table>
+  </div>
+</swe:form>
+
+<!-- Template End: CCAppletFlowchart.swt -->

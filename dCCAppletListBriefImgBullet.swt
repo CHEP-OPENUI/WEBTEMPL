@@ -1,0 +1,34 @@
+<!-- Template Start: dCCAppletListBriefImgBullet.swt -->
+
+<swe:layout viewDisplayMode="Layout">
+	<swe:include file="CCApplet_Spacer.swt"/>
+	<swe:include file="CCLayoutTitlePortal.swt"/>
+</swe:layout>
+
+<swe:layout viewDisplayMode="Show" appletDisplayMode="Show">
+<swe:include file="CCApplet_Spacer.swt"/>	
+
+<swe:control id="1100"><div class=CmdTxt><swe:this property="FormattedHtml" hintText="Outside Applet Help Text" hintMapType="Control"/></div><p></swe:control>
+
+<span class="AppletStyle5">
+	<swe:form>
+
+			<swe:include file="dCCTitle_Portal.swt"/>		
+				
+			<swe:include file="CCTogglebar_drop.swt"/>	
+			
+			<table datatable="0" summary="" width="100%" cellpadding="1" cellspacing="0" border="0" align="center"><tr><td class="AppletBorder">
+			
+			   <swe:include file="dCCListTitleNoRule.swt"/>
+			   <table datatable="0" summary="" class="AppletBack" valign="top" width="100%" cellpadding="3" cellspacing="0" border="0">
+			   		<swe:include file="dCCListBodyImgBullet.swt"/>
+			   </table>
+		
+			</td></tr></table>
+
+	</swe:form>	
+</span>	
+</swe:layout>
+
+
+<!-- Template End: dCCAppletListBriefImgBullet.swt -->

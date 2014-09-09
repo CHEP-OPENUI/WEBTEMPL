@@ -1,0 +1,9 @@
+
+<!-- Template Start: dCCAppletFormTotals.swt -->
+<swe:include file="CCApplet_Spacer.swt"/>
+
+<swe:form>
+	   <swe:include file="dCCFormTotals.swt"/>
+</swe:form>
+
+<!-- Template End: dCCAppletFormTotals.swt -->

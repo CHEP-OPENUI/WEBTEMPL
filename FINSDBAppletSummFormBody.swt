@@ -1,0 +1,306 @@
+<!-- Template Start: CCForm4ColBody.swt -->
+<!-- change background color -->
+<!-- change class from mceLabel to class="scLabelRight" -->
+<!-- remove : for top left 2-column label -->
+<!-- change 1296/2296 to 1286/2286 to fit more fields -->
+
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" align="center" class="AppletBack"><tr><td>
+<swe:error type="Popup">
+	<table class="AppletBack" width="100%" cellpadding="0" cellspacing="5" border="0" style="background-color:#ccccff;color : #333399;">
+<tr><td class="error"><swe:this property="FormattedHtml"/></td></tr></table>
+</swe:error>
+<swe:control id="91">
+	<!-- Inside-applet help text -->
+	<table class="AppletBack" width="100%" cellpadding="0" cellspacing="5" border="0" style="background-color:#ccccff;color : #333399;">
+<tr><td><swe:this property="DisplayName" hintText="Inside Applet Help Text"/></td></tr></table>
+</swe:control>
+<table class="AppletBack" width="100%" cellpadding="0" cellspacing="5" border="0" style="background-color:#ccccff;color : #333399;">
+	<tr valign="top">
+		<td width="50%">
+			<table width="100%" cellpadding="0" cellspacing="0" border="0">
+				<swe:control id="1286">
+					<tr valign="top">
+						<td colspan="2">
+							<table width="100%" cellpadding="0" class="mceWideFields" valign="top">
+				</swe:control>
+				<swe:control id="1001">
+					<tr><td colspan="2"><swe:this property="FormattedHtml" hintText="FormSection" hintMapType="FormSection"/></td></tr>
+				</swe:control>	
+				<!-- **********Start 2-Column Fields on Top Left of Form ************** -->
+				<!-- **********To increase number of fields increase the count below************** -->
+				<swe:for-each startValue="1286" count="10" iteratorName="currentId">
+					<swe:control id="swe:currentId" hintMapType="FormItem">
+						<tr valign="top">
+							<td nowrap>
+								<div class="scLabelRight">
+									<swe:this property="RequiredIndicator" hintText="Required"/>
+									<swe:this property="DisplayName" hintText="Label"/>
+								</div>
+							</td>
+							<td>
+								<span class="mceField" align="swe:this.TextAlignment">
+									<swe:this property="FormattedHtml" hintText="2-Column Wide Field" hintMapLabelId="swe:currentId"/>
+								</span>
+							</td>
+						</tr>										
+					</swe:control>									
+				</swe:for-each>	
+				<!-- **********End 2-Column Fields on Top Left of Form ************** -->
+				<swe:control id="1286">						
+							</table>
+						</td>
+					</tr>
+				</swe:control>
+				<tr valign="top">
+					<td>
+						<table width="100%" border="0" cellspacing="2" cellpadding="0" align="center">
+							<swe:control id="1002">
+								<tr><td><swe:this property="FormattedHtml" hintText="FormSection" hintMapType="FormSection"/></td></tr>
+							</swe:control>	
+							<!-- **********Start 1-Column Fields on Far Left************** -->
+							<!-- **********To increase number of fields increase the count below************** -->
+							<swe:for-each startValue="1301" count="10" iteratorName="currentId">
+								<swe:control id="swe:currentId" hintMapType="FormItem">
+								<tr valign="top">
+									<td nowrap>
+										<div class="scLabelRight">
+											<swe:this property="RequiredIndicator" hintText="Required"/>
+											<swe:this property="DisplayName" hintText="Label"/>:
+										</div>
+									</td>
+									<td>
+										<span class="mceField" align="swe:this.TextAlignment">
+											<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+										</span>
+									</td>
+								</tr>										
+								</swe:control>									
+							</swe:for-each>						
+							<!-- **********End 1-Column Fields on Far Left of Form ************** -->
+						</table>
+					</td>
+					<td>
+						<table width="100%" border="0" cellspacing="2" cellpadding="0">
+							<swe:control id="1003">
+								<tr><td><swe:this property="FormattedHtml" hintText="FormSection" hintMapType="FormSection"/></td></tr>
+							</swe:control>	
+							<!-- **********Start 1-Column Fields 2nd from Left************** -->
+							<!-- **********To increase number of fields increase the count below************** -->
+							<swe:for-each startValue="1801" count="10" iteratorName="currentId">
+								<swe:control id="swe:currentId" hintMapType="FormItem">
+								<tr valign="top">
+									<td nowrap>
+										<div class="scLabelRight">
+											<swe:this property="RequiredIndicator" hintText="Required"/>
+											<swe:this property="DisplayName" hintText="Label"/>:
+										</div>
+									</td>
+									<td>
+										<span class="mceField" align="swe:this.TextAlignment">
+											<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+										</span>
+									</td>
+								</tr>										
+								</swe:control>									
+							</swe:for-each>
+							<!-- **********End 1-Column Fields 2nd from Left************** -->
+						</table>
+					</td>
+				</tr>
+				<swe:control id="1311">
+				<tr valign="top">
+					<td colspan="2">
+						<table width="100%" cellpadding="0" class="mceWideFields" valign="top">
+				</swe:control>
+				<swe:control id="1004">
+					<tr><td colspan="2"><swe:this property="FormattedHtml" hintText="FormSection" hintMapType="FormSection"/></td></tr>
+				</swe:control>	
+				<!-- **********Start 2-Column Fields on Bottom Left of Form ************** -->
+				<!-- **********To increase number of fields increase the count below************** -->
+				<swe:for-each startValue="1311" count="1" iteratorName="currentId">
+					<swe:control id="swe:currentId" hintMapType="FormItem">
+					<tr valign="top">
+						<td nowrap>
+							<div class="scLabelRight">
+								<swe:this property="RequiredIndicator" hintText="Required"/>
+								<swe:this property="DisplayName" hintText="Label"/>:
+							</div>
+						</td>
+						<td>
+							<span class="mceField" align="swe:this.TextAlignment">
+								<swe:this property="FormattedHtml" hintText="2-Column Wide Field" hintMapLabelId="swe:currentId"/>
+							</span>
+						</td>
+					</tr>										
+					</swe:control>									
+				</swe:for-each>	
+				<!-- **********End 2-Column Fields on Bottom Left of Form ************** -->
+				<swe:control id="1311">						
+						</table>
+					</td>
+				</tr>
+				</swe:control>				
+			</table>
+		</td>
+		<td width="50%">
+			<table width="100%" cellpadding="0" cellspacing="0" border="0">
+				<swe:control id="2286">
+				<tr valign="top">
+					<td colspan="2">
+						<table width="100%" cellpadding="0" class="mceWideFields" valign="top">
+				</swe:control>
+				<swe:control id="2001">
+					<tr><td colspan="2"><swe:this property="FormattedHtml"  hintText="FormSection" hintMapType="FormSection"/></td></tr>
+				</swe:control>
+				<!-- **********Start 2-Column Fields on Top Right of Form ************** -->
+				<!-- **********To increase number of fields increase the count below************** -->
+				<swe:for-each startValue="2286" count="10" iteratorName="currentId">
+					<swe:control id="swe:currentId" hintMapType="FormItem">
+					<tr valign="top">
+						<td nowrap>
+							<div class="scLabelRight">
+								<swe:this property="RequiredIndicator" hintText="Required"/>
+								<swe:this property="DisplayName" hintText="Label"/>
+							</div>
+						</td>
+						<td>
+							<span class="mceField" align="swe:this.TextAlignment">
+								<swe:this property="FormattedHtml" hintText="2-Column Wide Field" hintMapLabelId="swe:currentId"/>
+							</span>
+						</td>
+					</tr>										
+					</swe:control>									
+				</swe:for-each>	
+				<!-- **********End 2-Column Fields on Top Right of Form ************** -->
+				<swe:control id="2286">						
+						</table>
+					</td>
+				</tr>
+				</swe:control>			
+				<tr valign="top">
+					<td>
+						<table width="100%" border="0" cellspacing="2" cellpadding="0" align="center">
+							<swe:control id="2002">
+								<tr><td><swe:this property="FormattedHtml" hintText="FormSection" hintMapType="FormSection"/></td></tr>
+							</swe:control>
+							<!-- **********Start 1-Column Fields 2nd from Right************** -->
+							<!-- **********To increase number of fields increase the count below************** -->
+							<swe:for-each startValue="2301" count="10" iteratorName="currentId">
+								<swe:control id="swe:currentId" hintMapType="FormItem">
+								<tr valign="top">
+									<td nowrap>
+										<div class="scLabelRight">
+											<swe:this property="RequiredIndicator" hintText="Required"/>
+											<swe:this property="DisplayName" hintText="Label"/>:
+										</div>
+									</td>
+									<td>
+										<span class="mceField" align="swe:this.TextAlignment">
+											<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+										</span>
+									</td>
+								</tr>										
+								</swe:control>									
+							</swe:for-each>						
+							<!-- **********End 1-Column Fields 2nd from Right************** -->
+						</table>
+					</td>
+					<td>
+						<table width="100%" border="0" cellspacing="2" cellpadding="0">
+							<swe:control id="2003">
+								<tr><td><swe:this property="FormattedHtml" hintText="FormSection" hintMapType="FormSection"/></td></tr>
+							</swe:control>
+							
+							<!-- **********Start 1-Column Fields on Right************** -->
+							<!-- **********To increase number of fields increase the count below************** -->
+							<swe:for-each startValue="2801" count="10" iteratorName="currentId">
+								<swe:control id="swe:currentId" hintMapType="FormItem">
+								<tr valign="top">
+									<td nowrap>
+										<div class="scLabelRight">
+											<swe:this property="RequiredIndicator" hintText="Required"/>
+											<swe:this property="DisplayName" hintText="Label"/>:
+										</div>
+									</td>
+									<td>
+										<span class="mceField" align="swe:this.TextAlignment">
+											<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+										</span>
+									</td>
+								</tr>										
+								</swe:control>									
+							</swe:for-each>							
+							<!-- **********End 1-Column Fields on Right************** -->
+						</table>
+					</td>
+				</tr>
+				<swe:control id="2811">
+				<tr valign="top">
+					<td colspan="2">
+						<table width="100%" cellpadding="0" class="mceWideFields" valign="top">
+				</swe:control>
+				<swe:control id="2004">
+					<tr><td colspan="2"><swe:this property="FormattedHtml" hintText="FormSection" hintMapType="FormSection"/></td></tr>
+				</swe:control>
+				<!-- **********Start 2-Column Fields on Bottom Right************** -->
+				<!-- **********To increase number of fields increase the count below************** -->
+				<swe:for-each startValue="2811" count="1" iteratorName="currentId">
+					<swe:control id="swe:currentId" hintMapType="FormItem">
+					<tr valign="top">
+						<td nowrap>
+							<div class="scLabelRight">
+								<swe:this property="RequiredIndicator" hintText="Required"/>
+								<swe:this property="DisplayName" hintText="Label"/>:
+							</div>
+						</td>
+						<td>
+							<span class="mceField" align="swe:this.TextAlignment">
+								<swe:this property="FormattedHtml" hintText="2-Column Wide Field" hintMapLabelId="swe:currentId"/>
+							</span>
+						</td>
+					</tr>										
+					</swe:control>									
+				</swe:for-each>	
+				<!-- **********End 2-Column Fields on Bottom Right************** -->
+				<swe:control id="2811">						
+						</table>
+					</td>
+				</tr>
+				</swe:control>
+			</table>
+		</td>	
+	</tr>	
+	<swe:control id="1020">
+		<tr><td colspan="2"><swe:this property="FormattedHtml" hintText="FormSection" hintMapType="FormSection"/></td></tr>
+	</swe:control>
+	<!-- **********Start 4-Column Fields on Bottom of Form ************** -->
+	<!-- **********To increase number of fields increase the count below************** -->
+	<swe:for-each startValue="1336" count="1" iteratorName="currentId">
+	<swe:control id="swe:currentId" hintMapType="FormItem">
+	<tr>
+		<td colspan="2">					
+			<table width="100%" cellpadding="0" class="mceWideFields" valign="top">	
+				<tr valign="top">
+					<td nowrap>
+						<div class="scLabelRight">
+							<swe:this property="RequiredIndicator" hintText="Required"/>
+							<swe:this property="DisplayName" hintText="4-Column Wide Label"/>:
+						</div>
+					</td>
+					<td>
+						<span class="mceField" align="swe:this.TextAlignment">
+							<swe:this property="FormattedHtml" hintText="4-Column Wide Field" hintMapLabelId="swe:currentId"/>
+						</span>
+					</td>
+				</tr>		
+			</table>			
+		</td>
+	</tr>
+	</swe:control>	
+	</swe:for-each>
+	<!-- **********End 4-Column Fields on Bottom of Form ************** -->
+</table>
+</td></tr></table>
+</div>
+<!-- Template End: CCForm4ColBody.swt -->

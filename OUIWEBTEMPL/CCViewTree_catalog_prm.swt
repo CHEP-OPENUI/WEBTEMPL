@@ -1,0 +1,44 @@
+<!--  Template Start: CCViewTree_catalog_prm.swt -->
+<HTML dir="swe:dir">
+    <head>
+    </head>
+    <swe:include file="CCHTMLHeader.swt"/>
+    <swe:applet hintMapType="Applet" id="1" hintText="Parent Applet" property="FormattedHtml" var="Parent"/>
+    <!-- ---------- Tier 3 & Tier 4 navigation ----------------->
+    <swe:include file="CCViewbar_Tabs_DropList.swt"/>
+    <!-- ---------- End Tier 3 & Tier 4 navigation ------------->
+    <!-- ---------- Bottom Three Applet Region ----------------->
+    <div class="siebui-sub-applets siebui-catalogview-table">
+        <div class="siebui-catalogview-col1 siebui-catalogviewprm-col1">
+            <div class="siebui-catalogview-col1-cell1">
+                <swe:applet hintMapType="Applet" id="502" hintText="Applet" var="Grandchild">
+                    <!-- start applet-->
+                    <swe:this property="FormattedHtml"/>
+                    <!-- end applet-->
+                </swe:applet>
+            </div>
+            <div class="siebui-catalogview-colspacer-hor">
+            </div>
+            <div class="siebui-catalogview-col1-cell2">
+                <swe:applet hintMapType="Applet" id="503" hintText="Applet" var="Grandchild">
+                    <!-- start applet-->
+                    <swe:this property="FormattedHtml"/>
+                    <!-- end applet-->
+                </swe:applet>
+            </div>
+        </div>      
+        <div class="siebui-catalogviewprm-col2">
+            <swe:for-each count=20 iteratorName="currentId" startValue="602">
+                <swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" var="Grandchild">
+                    <!-- start applet-->
+                    <div class="siebui-catalogview-col2-cell2"> 
+                        <swe:this property="FormattedHtml"/>
+                    </div>
+                    <!-- end applet-->
+                </swe:applet>
+            </swe:for-each>
+        </div>
+    
+    </div>
+    <swe:include file="CCHTMLFooter.swt"/>
+</html>

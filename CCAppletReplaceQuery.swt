@@ -1,0 +1,15 @@
+<!-- Template Start: CCAppletReplaceQuery.swt -->
+<swe:include file="CCStylesChoice.swt"/>
+<!--button row-->
+<table datatable="0" summary="" width="100%" cellpadding="2" cellspacing="0" border="0" class="AppletStylePopup">
+	<tr class="appletbttm">	
+	<td width="100%"><img src="images/spacer.gif" valign="top" width="10" height="20" alt=""></td>
+	<swe:control id="136"><!-- Save, 136         --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control" hintText="Save"  /></td></swe:control>
+<swe:control id="135"><!-- Cancel, 135       --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control" hintText="Cancel"/></td></swe:control>		
+	<td><img src="images/spacer.gif" valign="top" width="10" height="20" alt=""></td>									
+	</tr>
+	</table>	
+	</td>
+	</tr>
+
+<!-- Template End: CCAppletReplaceQuery.swt -->

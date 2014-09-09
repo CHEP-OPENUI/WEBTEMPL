@@ -1,0 +1,26 @@
+<!-- Template Start: eCfg_MenuLinkedItemJS.swt -->
+
+<table datatable="0" summary="" valign="top" width="100%" cellpadding="1" cellspacing="1" border="0">
+<tr>
+	<td align="right" width="25%>
+      	<b><swe:control id="LinkedItem" CfgUIControl="lblLinkedItem" CfgHtmlType="CfgLabel" /><swe:control id="StringColon" CfgUIControl="lblColon" CfgHtmlType="CfgLabel" /></b>
+   	</td>
+   	<td width="75%">
+               <div id="CxLnkItmName" class="cxlabel">
+		<swe:control id="swe:IncId+200" CfgFieldName="CxLnkItmName" CfgHtmlType="CfgLabel" />
+               </div>
+   	</td>
+</tr>
+<tr>
+   	<td align="right"><b><swe:control id="Value" CfgUIControl="lblValue" CfgHtmlType="CfgLabel" /><swe:control id="StringColon" CfgUIControl="lblColon" CfgHtmlType="CfgLabel" />
+	</td>
+	<td>
+        <div id="CxLnkItmValue" class="cxlabel">
+      	<swe:control id="swe:IncId+500" CfgFieldName="CxLnkItmDisplayValue" CfgHtmlType="CfgLabel" />
+        </div>
+   	</td>
+</tr>
+</table>
+
+<!-- Template End: eCfg_MenuLinkedItemJS.swt -->
+

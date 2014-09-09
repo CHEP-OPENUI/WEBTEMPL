@@ -1,0 +1,95 @@
+<!-- Template Start: CCFrameContentHI.swt -->
+<!--Content frame shows dashboard above view and seach center to the right of dashboard and view-->
+
+<swe:frameset htmlAttr="rows='0,*' border='0' frameborder='No'">
+   <swe:frame type="AltView" name="Dashboard" htmlAttr="marginheight='0' marginwidth='0' scrolling='Yes'  frameborder='0'">
+      <html></html>
+   </swe:frame>
+
+
+
+	<swe:switch>
+	<swe:case condition="Web Engine State Properties, IsRTL">
+	<!-- RTL case -->
+
+	<swe:frameset htmlAttr="cols='100%,0%' border='0' frameborder='No' framespacing='1'">
+		<swe:frameset htmlAttr="cols='100%,0%' border='0' frameborder='No'">
+			<swe:frameset htmlAttr="cols='100%,0%' border='0' frameborder='No'">
+				<swe:frame type="AltView" name="SS_OpenUIReportPane" htmlAttr="marginheight='0' marginwidth='0' scrolling='No' frameborder='1'">
+					<html>Report pane</html>
+				</swe:frame>
+				<swe:frameset htmlAttr="cols='100%,0%' border='0' frameborder='No'">
+					<swe:frame type="AltView" name="SS_TaskUIPane" htmlAttr="marginheight='0' marginwidth='0' scrolling='No' frameborder='1'">
+						<html>Task pane</html>
+					</swe:frame>
+                    
+					<swe:frameset htmlAttr="cols='0%,100%' border='0' frameborder='No'">
+						<swe:frame type="AltView" name="SS_ChatUI" htmlAttr="marginheight='0' marginwidth='0' scrolling='No' frameborder='1'">
+							<html>Chat pane</html>
+						</swe:frame>
+
+						<swe:frame type="View" htmlAttr="marginheight='0' marginwidth='0' scrolling='Yes' frameborder='0'">
+							<swe:current-view/>
+						</swe:frame>
+					</swe:frameset>
+				
+				</swe:frameset>
+
+				<swe:frame type="AltView" name="TaskAssistant" htmlAttr="marginheight='0' marginwidth='0' scrolling='No' frameborder='1'">
+					<html>task</html>
+				</swe:frame>
+			</swe:frameset>
+		</swe:frameset>	    
+		<swe:frame type="AltView" name="SS_SearchCenter" htmlAttr="marginheight='0' marginwidth='0' scrolling='Yes' frameborder='0'">
+			<html></html>
+		</swe:frame>
+	</swe:frameset>
+
+	<!-- end of RTL case -->
+	</swe:case>
+
+	<swe:default>
+	<!-- default, non-RTL -->
+
+	<swe:frameset htmlAttr="cols='0,*' border='0' frameborder='No' framespacing='1'">
+		<swe:frame type="AltView" name="SS_SearchCenter" htmlAttr="marginheight='0' marginwidth='0' scrolling='Yes' frameborder='0'">
+			<html></html>
+		</swe:frame>
+ 
+		<swe:frameset htmlAttr="cols='0,*' border='0' frameborder='No'">
+			<swe:frame type="AltView" name="TaskAssistant" htmlAttr="marginheight='0' marginwidth='0' scrolling='No' frameborder='1'">
+				<html>task</html>
+			</swe:frame>        
+      
+			<swe:frameset htmlAttr="cols='0,*' border='0' frameborder='No'">      				
+      				<swe:frame type="AltView" name="SS_OpenUIReportPane" htmlAttr="marginheight='0' marginwidth='0' scrolling='No' frameborder='1'">
+						<html>Report pane</html>
+					</swe:frame>
+					<swe:frameset htmlAttr="cols='0,*' border='0' frameborder='No'">
+						<swe:frame type="AltView" name="SS_TaskUIPane" htmlAttr="marginheight='0' marginwidth='0' scrolling='No' frameborder='1'">
+							<html>Task pane</html>
+						</swe:frame>   
+		            
+						<swe:frameset htmlAttr="cols='*,0' border='0' frameborder='No'">
+							<swe:frame type="View" htmlAttr="marginheight='0' marginwidth='0' scrolling='Yes' frameborder='0'">
+								<swe:current-view/>
+							</swe:frame>
+
+							<swe:frame type="AltView" name="SS_ChatUI" htmlAttr="marginheight='0' marginwidth='0' scrolling='No' frameborder='1'">
+								<html>Chat pane</html>
+							</swe:frame>   
+						</swe:frameset>
+					</swe:frameset>
+			</swe:frameset> 
+		</swe:frameset>     
+	</swe:frameset>
+
+	<!-- end of default, non-RTL -->
+	</swe:default>
+	</swe:switch>
+
+
+</swe:frameset>
+
+
+<!-- Template Start: CCFrameContentHI.swt -->

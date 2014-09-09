@@ -1,0 +1,142 @@
+<!-- This template is modified to support presence indicator, 7.9 collaboration -->
+<!-- The only difference is inclusion of new JavaScript file below -->
+<!-- copied from CCAppletListSearchResults.swt. Change grey color to blue -->
+
+<!--swe:include-script file="presence.js"/ -->
+
+<!--  Template Start: SearchFindResults.swt -->
+<swe:form>
+<swe:if condition="Web Engine State Properties, IsPrintOff">
+	 <div class="swe:this.SelectStyle"> 
+<table width="100%" cellpadding="0" cellspacing="0" border="0" align="center" class="AppletBack"><tr><td class="AppletHIFormBorder">
+</swe:if>
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+
+	<swe:error>
+	<tr>
+		<td class="AppletStyle2">			
+			<table datatable="0" summary="" class="AppletBack" border="0" cellspacing="2" cellpadding="2">
+				<tr><td></td><td class="error"><swe:this property="FormattedHtml"/></td></tr>
+				<tr><td><img src="images/spacer.gif" width="95" height="1" alt=""></td><td></td></tr>	
+			</table>
+		</td>
+	</tr>
+	</swe:error>
+
+	<tr valign="top">
+		<td>		
+				<table datatable="0" summary="" bgcolor="#B0C4DE" width="100%" cellspacing="0" cellpadding="2" border="0"><tr>
+				<td nowrap class="SrchCntrTitle"><swe:this property="Title"/></td><td>&nbsp;&nbsp;</td>
+				<swe:if condition="Web Engine State Properties, IsHighInteractive">
+					<swe:control id="195">
+					<!-- optional control -->
+					<td valign="middle" nowrap>
+					<swe:this property="FormattedHtml" hintMapType="Hide Icon"/>
+					</td>
+					</swe:control>
+				</swe:if>
+				<swe:if condition="Web Engine State Properties, IsLowInteractive">
+					<swe:control id="196">
+					<!-- optional control -->
+					<td valign="middle" nowrap>
+					<swe:this property="FormattedHtml" hintMapType="Hide Icon"/>
+					</td>
+					</swe:control>
+				</swe:if>
+				<swe:include file="CCButtons.swt"/><td>&nbsp;&nbsp;</td>
+
+				<swe:include file="CCRecordNav.swt"/>
+				<td width="100%">&nbsp;</td>
+				</tr></table>
+				
+	
+				<table bgcolor="#B0C4DE" valign="top" width="100%" cellpadding="2" cellspacing="1" border="0" datatable="1" summary="swe:this.ListSummary">
+				   <!--swe:include file="CCListHeader.swt"/ -->
+
+<!-- Template Start: CCListHeader.swt -->
+
+  <tr>
+
+    <swe:control id="144">
+    <!-- Select, 144 -->
+     <td bgcolor="#B0C4DE" align="center" ><swe:this property="DisplayName"/></td>
+    </swe:control>
+	
+    <swe:control id="147">
+    <!-- Pick, 147 -->
+     <td bgcolor="#B0C4DE" align="center"><swe:this property="DisplayName"/></td>
+    </swe:control>
+	
+	<swe:select-row>
+   <td align="center"><swe:this property="DisplayName"/></th>
+	</swe:select-row>
+
+    <swe:for-each startValue="501" count="40" iteratorName="currentId">
+     <swe:control id="swe:currentId">
+      <td bgcolor="#B0C4DE" align="swe:this.TextAlignment" width="swe:this.HtmlWidth" scope="col" abbr="swe:this.HeaderAbbr"><swe:this property="ListHeader"/></td>
+     </swe:control>
+    </swe:for-each>
+
+    <swe:for-each startValue="611" count="40" iteratorName="currentId">
+     <swe:control id="swe:currentId">
+      <td bgcolor="#B0C4DE" align="swe:this.TextAlignment" width="swe:this.HtmlWidth" scope="col" abbr="swe:this.HeaderAbbr"><swe:this property="ListHeader"/></td>
+     </swe:control>
+    </swe:for-each>
+
+    <swe:control id="142">
+    <!-- Optional, 142 -->
+     <td bgcolor="#B0C4DE" align="center"><swe:this property="DisplayName"/></td>
+    </swe:control>
+
+    <swe:control id="143">
+    <!-- Optional, 143 -->
+     <td bgcolor="#B0C4DE" align="center"><swe:this property="DisplayName"/></td>
+    </swe:control>
+
+    <swe:control id="145">
+    <!-- Optional, 145 -->
+     <td bgcolor="#B0C4DE" align="center"><swe:this property="DisplayName"/></td>
+    </swe:control>
+
+    <swe:control id="146">
+    <!-- Optional, 146 -->
+     <td bgcolor="#B0C4DE" align="center"><swe:this property="DisplayName"/></td>
+    </swe:control>
+
+    <swe:if condition="Web Engine State Properties, IsLowInteractive">
+      <swe:control id="598">
+      <!--  Optional, Mvg Save 598 -->
+       <td bgcolor="#B0C4DE" align="center"><swe:this property="DisplayName"/></td>
+      </swe:control>
+    </swe:if>
+
+  </tr>
+
+<!-- Template End: CCListHeader.swt -->
+
+
+
+				   <swe:include file="CCListBodySearchResults.swt"/>
+				</table>	
+				
+				<table datatable="0" summary="" bgcolor="#B0C4DE" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0">
+				  <tr>
+				  <swe:control id="151"><td><img src="images/spacer.gif" alt="" width="42" height="1"></td><td class="scLabelRight" nowrap><swe:this property="FormattedHtml" hintMapType="Control" hintText="Label"/></td></swe:control>
+				  <swe:control id="152"><td>&nbsp;</td><td><swe:this property="FormattedHtml" hintMapType="Control" hintText="Field"/></td></swe:control>
+				  <swe:control id="153"><td><swe:this property="FormattedHtml" hintMapType="Control" hintText="Field"/></td></swe:control>
+				  <td width="100%"><img src="images/spacer.gif" alt="" width="1" height="1"></td>
+				  </tr>
+				</table>
+	
+
+		</td>		
+	</tr>
+</table>
+<swe:if condition="Web Engine State Properties, IsPrintOff">
+	</div>	
+</swe:if>
+</swe:form>
+
+
+<!--  Template End: SearchFindResults.swt -->
+

@@ -1,0 +1,11 @@
+<!-- Template Start: CCViewContainer_PostSearch.swt -->
+	 
+
+	<swe:frameset htmlAttr="cols='100%,*' border='0' frameborder='No'">
+	    <swe:frame type="View" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Yes'">
+	        <swe:current-view/>
+	    </swe:frame>	 
+	</swe:frameset>
+
+
+<!-- Template End: CCViewContainer_PostSearch.swt -->

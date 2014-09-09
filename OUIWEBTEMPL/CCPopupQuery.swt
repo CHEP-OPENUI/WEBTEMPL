@@ -1,0 +1,67 @@
+<!-- Template Start: CCPopupQuery.swt -->
+<!-- Oliver: slight code redesign, fixes -->
+
+<swe:include file="CCStylesChoice.swt"/>
+	
+<swe:control id="1500" hintText="Required Legend" hintMapType="Control">	
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="2" border="0"><tr>	
+<td nowrap valign="absmiddle" class="legend" align="right"><img src="images/icon_req.gif"><swe:this property="DisplayName"/></td>
+</tr></table>	
+</swe:control>		
+
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+	<swe:form>	
+	<tr valign="top">
+		<td class="AppletStylePopup">
+		
+				<table datatable="0" summary="" class="swe:class AppletBack" valign="top" width="100%" cellpadding="2" cellspacing="1" border="0">
+						<tr valign="top">
+							<td>
+								<swe:error>
+									<table datatable="0" summary="" class="swe:class AppletBack" width="100%" cellpadding="2" cellspacing="0" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/></td></tr></table>
+								</swe:error>
+								<swe:control id="91">
+						  			<!-- Inside-applet help text -->
+						  			<table datatable="0" summary="" class="swe:class AppletBack" width="100%" cellpadding="4" cellspacing="0" border="0"><tr><td class="swe:class scField"><swe:this property="DisplayName" hintText="Inside Applet Help Text"/></td></tr></table>
+								</swe:control>		
+								<table datatable="0" summary="" class="swe:class AppletBack" border="0" cellpadding="0"  cellspacing="4">
+								<swe:for-each count="15" startValue="1100" iteratorName="currentId">
+									<swe:control id="swe:currentId+200" hintMapType="FormItem">
+										<tr>				
+										<td class="swe:class scLabelRight">
+											<swe:this property="DisplayName" hintText="Label"/>:
+											<swe:this property="RequiredIndicator" hintText="Required"/>
+										</td>
+										<td class="swe:class scField" align="swe:this.TextAlignment">
+											<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+200"/>
+										</td>
+										</tr>
+									</swe:control>
+								</swe:for-each>		
+								<tr>
+									<td><img src="images/spacer.gif" width="1" height="1" class="popupLabelSize" alt=""></td>
+									<td></td>
+								</tr>
+								
+								</table>
+							</td>							
+						</tr>
+				</table>
+ 
+				
+				<!--button row-->
+				<table datatable="0" summary="" width="100%">		
+					<tr class="AppletButtons">
+						<td class="siebui-popup-action siebui-align-right">
+							<swe:include file="CCButtons_oui.swt"/>		
+							<swe:include file="CCButtons_Popup_oui.swt"/>
+						</td>
+					</tr>
+				</table>		
+	
+		</td>
+	</tr>
+	</swe:form>	
+</table>
+<swe:scripts/>
+<!-- Template End: CCPopupQuery.swt -->

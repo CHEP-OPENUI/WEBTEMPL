@@ -1,0 +1,18 @@
+<!-- Template Start: eCfgClassNode.swt -->
+
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0">
+   <swe:for-each id="820" CfgLoopType="Class" startValue="2250" count="Dynamic" iteratorName="ClassId">
+      <swe:include file="eCfgTrSwitch.swt"/>
+         <td width="1%">&nbsp;</td>
+         <td width="1%">&nbsp;</td>                                    
+         <td width="1%">
+            <swe:control id="swe:ClassId" CfgUIControl="Active Row" property="FormattedHtml"/>&nbsp;&nbsp;
+         </td>
+         <td width="97%" colspan="2" nowrap>
+            <swe:control id="swe:ClassId+1000" CfgFieldName="CxObjName" CfgUIControl="SetTopObj" property="FormattedHtml"/>    
+         </td>
+      </tr>
+   </swe:for-each>
+</table>
+
+<!-- Template Start: eCfgClassNode.swt -->

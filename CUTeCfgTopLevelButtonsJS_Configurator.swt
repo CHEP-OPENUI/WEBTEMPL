@@ -1,0 +1,68 @@
+<!-- Template Start: eCfgTopLevelButtonsJS.swt -->
+
+<script>
+
+   m_UIFramework.m_preInvokeMethod ["DoneConfig"] = "CfgDoneConfig ()";
+
+   function CfgDoneConfig ( )
+   {
+      var sWarning = CfgGetLocalString ("IDS_CXP_UI_INCOMPLETE_CONFIG");
+      var i = 0;
+ 
+      if (m_UIFramework.m_topRequireMoreChild == "Y" || m_UIFramework.m_missingReqAttrArray.length > 0)
+      {
+         if (m_UIFramework.m_missingReqAttrArray.length > 0)
+         {
+            sWarning += "\nPlease fill in these required attributes:";
+            for (i = 0; i < m_UIFramework.m_missingReqAttrArray.length; i++)
+            {
+               sWarning += "\n";
+               sWarning += m_UIFramework.m_missingReqAttrArray[i];
+            }
+         }
+
+         if( confirm (sWarning))
+         {
+            m_UIFramework.m_topRequireMoreChild = "";
+            m_UIFramework.m_bRequestLock = false;
+            return true;
+         }
+         else
+         {
+            m_UIFramework.m_bRequestLock = false;
+            return false;
+         }
+      }
+      else
+      {
+         m_UIFramework.m_bRequestLock = false;
+         return true;
+      }
+   }
+
+   function CfgGetLocalString (str)
+   {
+      //acquire handle to translatable string function
+      var appObj = (window.opener != null) ? window.opener : this;
+
+      //HI mode acccessor
+      if (SWEIsHighInteract )
+      {
+         var sString = top.App ().GetLocalString (str);
+      }
+      else
+      {
+         var sString = appObj._SWEgetMessage (str);
+      }
+
+      return sString;
+   }
+
+</script>
+
+<table border="0" bgcolor="white" width="100%">
+   <tr>
+   </tr>
+</table>
+
+<!-- Template End: eCfgTopLevelButtonsJS.swt -->

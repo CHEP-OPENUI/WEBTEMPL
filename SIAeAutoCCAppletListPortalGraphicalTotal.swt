@@ -1,0 +1,40 @@
+<!-- Template Start: CCAppletListPortalGraphical.swt -->
+
+<swe:layout viewDisplayMode="Layout">
+<swe:include file="CCApplet_Spacer.swt"/>
+	<swe:include file="CCLayoutTitlePortal.swt"/>
+</swe:layout>
+
+<swe:layout viewDisplayMode="Show" appletDisplayMode="Show">
+<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr valign="top"><td><img src="images/spacer.gif" width="1" height="3" alt=""></td></tr></table>
+
+<swe:control id="1100">
+  <div class=CmdTxt><swe:this property="FormattedHtml" hintText="Outside Applet Help Text" hintMapType="Control"/></div><p>
+</swe:control>
+
+
+<span class="AppletStyle8">
+ <swe:form>
+  
+	<swe:include file="CCTitle_PortalGraphical.swt"/>
+
+		<swe:layout viewDisplayMode="Show" appletDisplaySize="Max">
+			<swe:include file="CCListButtonsTopNoRecNav.swt"/>
+			<swe:error>
+				<table class="AppletBack" width="100%" cellpadding="4" cellspacing="0" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/><br>&nbsp;</td></tr></table>
+			</swe:error> 
+			<table bgcolor="#cccccc" valign="top" width="100%" cellpadding="0" cellspacing="1" border="0"><tr valign="top"><td>
+			<swe:list>			
+			<table valign="top" width="100%" cellpadding="2" cellspacing="1" border="0">
+				   <swe:include file="CCListHeaderTotals.swt"/>
+				   <swe:include file="CCListBodyTotals.swt"/>
+			</table>
+			</swe:list>
+			</td></tr></table>
+		</swe:layout>
+
+	<swe:include file="CCBottomApplet.swt"/>
+ </swe:form>
+</span>
+</swe:layout>
+<!-- Template End: CCAppletListPortalGraphical.swt -->

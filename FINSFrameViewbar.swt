@@ -1,0 +1,279 @@
+<!--  Template Start: FINSFrameViewbar.swt -->
+<swe:if condition="Web Engine State Properties, IsLowInteractive">
+	<!-- Workaround for frame being too large in SI+ -->
+	<style>
+		.PDQWidth SELECT {width:140;}
+	</style>
+</swe:if>
+
+<HTML dir="swe:dir">
+<head>
+<title><swe:this property="Title"/></title>
+<swe:include file="CCStylesChoice.swt"/>
+</head>
+
+<BODY class="toolbar" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+
+<!--  Start Tier2 Nav & Toolbars-->
+	<table datatable="0" summary="" width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td><img src="images/spacer.gif" height="26" width="6" alt=""></td>
+		<swe:if condition="Web Engine State Properties, IsLowInteractive">
+			<td valign="middle"><swe:pageitem id="1" property="DisplayName" hintText="Show Label"/>&nbsp;</td>		
+			<td>
+				<swe:form>
+					<swe:viewbar type="Select" mode="Context">
+						<table datatable="0" summary="" border="0" cellpadding="0" cellspacing="0"><tr>
+						<td valign="middle" nowrap><swe:this property="FormattedHtml"/></td>
+						<td nowrap>&nbsp;&nbsp;&nbsp;<span class="divider"><img src="images/spacer.gif" align="absmiddle" width="1" height="18" alt=""></span>&nbsp;&nbsp;&nbsp;</td>
+						</tr></table>
+					</swe:viewbar>
+				</swe:form>
+			</td>
+		</swe:if>
+		<swe:pageitem id="21">
+		   <td>&nbsp;</td>
+		   <td nowrap><swe:this property="FormattedHtml" />&nbsp;</td>
+		   <td >&nbsp;|</td>
+		</swe:pageitem>
+
+		<swe:pageitem id="22">
+		   <td>&nbsp;</td>
+		   <td nowrap><swe:this property="FormattedHtml" /> &nbsp;</td>
+		   <td>&nbsp;|</td>
+		</swe:pageitem>
+
+		<swe:pageitem id="23">
+		   <!--History Label-->
+		   <td nowrap><swe:this property="FormattedHtml" />:&nbsp;</td>
+		</swe:pageitem>
+
+		<swe:if condition="Web Engine State Properties, IsHighInteractive">
+			<td nowrap>
+                <swe:toolbar name="FINS ToolBar">
+					<swe:toolbaritem property="FormattedHtml"/>
+				</swe:toolbar>
+			</td>
+			<td>&nbsp;</td>
+		</swe:if>
+
+		<swe:if condition="Web Engine State Properties, IsLowInteractive">
+			<td nowrap>
+                <swe:toolbar name="FINS ToolBar">
+					<swe:toolbaritem property="FormattedHtml"/>
+				</swe:toolbar>
+			</td>
+			<td>&nbsp;</td>
+		</swe:if>
+                <!--BEGINNING SEPARATOR PANE START-->
+                <td nowrap>&nbsp;&nbsp;<span class="TBdivider divider"><img src="images/spacer.gif" align="absmiddle" width="1" height="18" alt=""></span>&nbsp;&nbsp;&nbsp;</td>
+                <!--BEGINNING SEPARATOR PANE END-->
+
+
+		<swe:if condition="Web Engine State Properties, IsHighInteractive">
+			<td nowrap>
+				<swe:toolbar name="HIMain">
+					<swe:toolbaritem property="FormattedHtml"/>
+				</swe:toolbar>
+			</td>
+			<td>&nbsp;</td>
+
+		</swe:if>
+
+
+		<swe:if condition="Web Engine State Properties, IsLowInteractive">
+			<td nowrap>
+				<swe:toolbar name="SIMain">
+					<swe:toolbaritem property="FormattedHtml"/>
+				</swe:toolbar>
+			</td>
+			<td>&nbsp;</td>
+
+		</swe:if>
+
+		<swe:if condition="Persistent Customer Dashboard, ShowDashboardToolbar">
+			<swe:if condition="Web Engine State Properties, IsHighInteractive">
+				<td nowrap>
+				   <swe:toolbar name="Dashboard">
+						   <swe:toolbaritem property="FormattedHtml"/>
+				   </swe:toolbar>
+				</td>
+				<td>&nbsp;</td>
+         		</swe:if>
+
+         		<swe:if condition="Web Engine State Properties, IsLowInteractive">
+				   <swe:toolbar name="Dashboard Hybrid">
+					   <td nowrap>
+						   <swe:toolbaritem property="FormattedHtml"/>
+					   </td>
+					   <td>&nbsp;</td>
+				   </swe:toolbar>
+	         	</swe:if>
+         	</swe:if>
+
+                <!--BEGINNING SEPARATOR FOR SEARCH CENTER/IHELP/TASK PANE START-->
+                <td nowrap>&nbsp;&nbsp;<span class="TBdivider divider"><img src="images/spacer.gif" align="absmiddle" width="1" height="18" alt=""></span>&nbsp;&nbsp;&nbsp;</td>
+                <!--BEGINNING SEPARATOR FOR SEARCH CENTER/IHELP/TASK PANE END-->
+
+		<swe:if condition="Web Engine State Properties, IsHighInteractive">
+			<td nowrap><swe:toolbar name="SearchToolbar"><swe:toolbaritem property="FormattedHtml"/></swe:toolbar></td>
+			<td>&nbsp;</td>
+		</swe:if>
+		<swe:if condition="Web Engine State Properties, IsLowInteractive">
+			<swe:toolbar name="SearchToolbar Hybrid">
+			<td nowrap><swe:toolbaritem property="FormattedHtml"/></td>
+			<td>&nbsp;</td>
+		</swe:toolbar>
+		</swe:if>
+		<!-- TASK ASSISTANT TOOLBAR START -->
+			<swe:if condition="Web Engine State Properties, IsHighInteractive">
+				<td nowrap>
+				   <swe:toolbar name="Task Assistant">
+						   <swe:toolbaritem property="FormattedHtml"/>
+				   </swe:toolbar>
+				</td>
+
+                                <!-- dropdown -->
+                                <!--
+				<swe:if condition="Task Assistant UI Service, CanOpenTaskAssistant">
+				<td nowrap>
+					<span id='TaskList' style='cursor:hand;padding:0px 0px;border:0px solid #CCCCFF' onclick="_JMenu_Initialize(this, '', 'Tasks', 0, false)"><a id='TaskListImage' href='javascript:void(0)'><img src='images/icon_tasklist.gif' alt='TaskList' border="0"></a></span>
+				</td>
+		      		</swe:if>
+
+				<td>&nbsp;</td>
+                                -->
+         		</swe:if>
+
+         		<swe:if condition="Web Engine State Properties, IsLowInteractive">
+				<td nowrap>
+				   <swe:toolbar name="Task Assistant Hybrid">
+						   <swe:toolbaritem property="FormattedHtml"/>
+				   </swe:toolbar>
+				   <td>&nbsp;</td>
+				</td>
+	         	</swe:if>
+		<!-- TASK ASSISTANT TOOLBAR END -->
+
+		<!-- TASK PANE TOOLBAR START -->
+			<swe:if condition="Web Engine State Properties, IsHighInteractive">
+				<td nowrap>
+				   <swe:toolbar name="Task Pane">
+						   <swe:toolbaritem property="FormattedHtml"/>
+				   </swe:toolbar>
+				</td>
+			</swe:if>
+		<!-- TASK PANE TOOLBAR END -->
+
+		<!-- CHAT PANE TOOLBAR START -->
+			<swe:if condition="Chat UI Business Service, IsChatEnabled">
+				<td nowrap>
+				   <swe:toolbar name="Chat Pane">
+						   <swe:toolbaritem property="FormattedHtml"/>
+				   </swe:toolbar>
+				</td>
+			</swe:if>
+		<!-- CHAT PANE TOOLBAR END -->
+
+                <!--ENDING SEPARATOR FOR SEARCH CENTER/IHELP/TASK PANE START-->
+                <td nowrap>&nbsp;&nbsp;&nbsp;<span class="TBdivider divider"><img src="images/spacer.gif" align="absmiddle" width="1" height="18" alt=""></span>&nbsp;&nbsp;&nbsp;</td>
+                <!--ENDING SEPARATOR FOR SEARCH CENTER/IHELP/TASK PANE END-->
+
+		<td nowrap>
+			<swe:toolbar name="Quick Print">
+				<swe:toolbaritem property="FormattedHtml"/>
+			</swe:toolbar>
+		</td>
+		<td>&nbsp;</td>
+
+		<td nowrap>
+			<swe:toolbar name="Synchronize">
+				<swe:toolbaritem property="FormattedHtml"/>
+			</swe:toolbar>
+		</td>
+		<td>&nbsp;</td>
+
+		<swe:if condition="Web Engine State Properties, IsHighInteractive">
+			<td>
+				<swe:reportselect>
+				</swe:reportselect>
+			</td>
+		</swe:if>
+		<td>&nbsp;</td>
+
+		<td nowrap>
+			<swe:toolbar name="XMLP Reports">
+				<swe:toolbaritem property="FormattedHtml"/>
+			</swe:toolbar>
+		</td>
+		<td>&nbsp;</td>
+
+		<td width="100%">&nbsp;</td>
+
+		<swe:pageitem id="33">
+		<td valign="middle" nowrap><swe:this property="FormattedHtml" hintText="Control" /></td>
+		<td>&nbsp;</td>
+		</swe:pageitem>
+		<swe:pageitem id="34">
+		<td valign="middle" nowrap><swe:this property="FormattedHtml" hintText="Control"/></td>
+		<td>&nbsp;</td>
+		</swe:pageitem>
+
+		<swe:if condition="Web Engine State Properties, IsLowInteractive">
+			<td>
+				<swe:reportselect>
+				</swe:reportselect>
+			</td>
+		</swe:if>
+		<td><img src="images/spacer.gif" width="8" height="26" alt=""></td>
+		<td valign="top">
+			<swe:form>
+				<swe:pdqbar>
+					<table datatable="0" summary="" border="0" cellpadding="0" cellspacing="0" class="PDQWidth">
+						<tr> <td valign="absmiddle"><img src="images/spacer.gif" width="1" height="3" alt=""></td></tr>
+					<tr>
+						<!--Favorites Label-->
+						<swe:pageitem id="35">
+							<td valign="middle" nowrap><b><swe:this property="FormattedHtml" />:&nbsp;</b></td>
+						</swe:pageitem>
+						<td valign="middle">&nbsp;</td>
+						<td valign="middle"><swe:this property="FormattedHtml" /></td>
+        				<td nowrap>&nbsp;&nbsp;&nbsp;
+					</tr></table>
+				</swe:pdqbar>
+			</swe:form>
+		</td>
+
+		<swe:if condition="Web Engine State Properties, IsHighInteractive">
+			<td nowrap>
+				<swe:toolbar name="HIQuery">
+						<swe:toolbaritem property="FormattedHtml"/>
+				</swe:toolbar>
+			</td>
+			<td>&nbsp;</td>
+		</swe:if>
+
+		<swe:pageitem id="36">
+		<td valign="middle" nowrap><swe:this property="FormattedHtml" hintText="Control"/></td>
+		<td>&nbsp;</td>
+		</swe:pageitem>
+		<swe:pageitem id="37">
+		<td valign="middle" nowrap><swe:this property="FormattedHtml" hintText="Control"/></td>
+		<td>&nbsp;</td>
+		</swe:pageitem>
+		<swe:pageitem id="38">
+		<td valign="middle" nowrap><swe:this property="FormattedHtml" hintText="Control"/></td>
+		<td>&nbsp;</td>
+		</swe:pageitem>
+
+		<td>&nbsp;</td>
+	</tr>
+</table>
+
+<!--  End Tier2 nav & Toolbars-->
+
+<swe:scripts/>
+</BODY>
+</HTML>
+
+<!--  Template End: FINSFrameViewbar.swt -->

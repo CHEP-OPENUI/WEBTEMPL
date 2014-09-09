@@ -1,0 +1,43 @@
+<!-- Template Start: eCfgProductSingle.swt -->
+<!-- This the the One Page Theme template -->
+
+<div  id="cxProdSingle" class="cxProdTheme">
+
+     <swe:for-each id="110" CfgLoopType="Group" startValue="8100" count="Dynamic" iteratorName="100Id" >
+            <table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0"  border="0" class="AppletBlank">
+               <tr class="listRowOff" >
+                  <td class="AppletBlank">&nbsp;</td>
+               </tr>
+            </table>
+            <table datatable="0" summary="" cellpadding='0' cellspacing='0' border='0' bgcolor="white" width="100%">
+               <tr class="listRowOff">
+                  <td class="AppletBlank">
+                     <table datatable="0" summary="" cellpadding='0' cellspacing="0" border="0" bgcolor="white">
+                        <tr class="listRowOff">
+                           <td class="tier3On" nowrap>
+					<a href="JavaScript:function DoNothing(){return false;}">
+                              <swe:control id="swe:100Id+50"  CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel"
+                                                  property="FormattedHtml" CfgFieldName="CxGroupName"/>
+					</a>
+                           </td>
+                        </tr>
+                     </table>
+                  </td>
+                  <td class = "AppletBlank">&nbsp;</td>
+               </tr>
+            </table>
+
+            <span class="AppletStyle3">
+               <table datatable="0" summary="" border="0" width="100%" cellspacing="2" cellpadding="10" class="AppletBorder">
+                  <tr class="listRowOff">
+                     <td class="AppletBlank">
+                        <swe:include id="swe:151Id" />
+                     </td>
+                  </tr>
+               </table>
+            </span>
+      </swe:for-each>
+
+</div> <!-- end of product theme div -->
+
+<!-- Template End: eCfgProductSingle.swt -->

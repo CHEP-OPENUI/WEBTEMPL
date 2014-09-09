@@ -1,0 +1,64 @@
+<!-- Template Start: CCFormButtonsTopRight.swt -->
+
+<!-- Buttons (Optional, Optional) --->
+
+	  
+	  <swe:control id="160">
+      <!-- optional control -->
+        <td valign="middle" nowrap>
+        <swe:this property="FormattedHtml" hintMapType="Control"/>
+        </td>
+      </swe:control>
+	  
+	<swe:control id="161">
+      <!-- optional control -->
+        <td valign="middle" nowrap>
+        <swe:this property="FormattedHtml" hintMapType="Control"/>
+        </td>
+      </swe:control>
+
+	<swe:control id="162">
+      <!-- optional control -->
+        <td valign="middle" nowrap>
+        <swe:this property="FormattedHtml" hintMapType="Control"/>
+        </td>
+      </swe:control>
+	  
+	  	<swe:control id="163">
+      <!-- optional control -->
+        <td valign="middle" nowrap>
+        <swe:this property="FormattedHtml" hintMapType="Control"/>
+        </td>
+      </swe:control>
+	  
+	  <swe:control id="164">
+      <!-- optional control -->
+        <td valign="middle" nowrap>
+        <swe:this property="FormattedHtml" hintMapType="Control"/>
+        </td>
+      </swe:control>  
+	  
+      <swe:control id="150">
+      <!-- optional control -->
+        <td valign="middle" nowrap>
+        <swe:this property="FormattedHtml" hintMapType="Control"/>
+        </td>
+      </swe:control>
+	  
+	<swe:control id="151">
+      <!-- optional control -->
+        <td valign="middle" nowrap>
+        <swe:this property="FormattedHtml" hintMapType="Control"/>
+        </td>
+      </swe:control>
+
+	<swe:control id="152">
+      <!-- optional control -->
+        <td valign="middle" nowrap>
+        <swe:this property="FormattedHtml" hintMapType="Control"/>
+        </td>
+      </swe:control>
+
+
+
+<!-- Template End: CCFormButtonsTopRight.swt -->

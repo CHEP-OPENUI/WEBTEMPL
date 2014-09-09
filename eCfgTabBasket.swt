@@ -1,0 +1,42 @@
+<!-- Template Start: eCfgTabBasket.swt -->
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+   <tr>
+      <td>
+         <table datatable="0" summary="" width="95%" cellspacing="0" cellpadding="0" border="0" align="center">
+            <tr><td>&nbsp;</td></tr>
+            <tr>
+               <td>
+                  <table datatable="0" summary="" valign="top" width="100%" cellpadding="2" cellspacing="4" border="0">
+                     <tr>
+                        <swe:for-each id="110" CfgLoopType="Group" startValue="8100" count="Dynamic" iteratorName="100Id" >
+                           <td bgcolor="#C0C0C0" style="border: 1 solid #000080">
+                              <swe:control id="swe:100Id+50"  CfgUIControl="ChangeCurrentNode" CfgHtmlType="CfgLink"
+                                          property="FormattedHtml" CfgFieldName="CxGroupName"
+                                          InvokeMethod="ChangeCurrentNode"/>
+                           </td>
+                        </swe:for-each>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <table datatable="0" summary="" border="0" width="100%" cellpadding="10">
+                     <tr>
+                        <td style="border: 1 solid #808080">
+                           <swe:for-each id="120" CfgLoopType="CurrentGroup" startValue="210" count="Dynamic" iteratorName="150Id" >
+                              <swe:include id="swe:151Id" /> 
+                           </swe:for-each>
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+         </table>
+      </td>
+   </tr>
+</table>
+
+<!-- Template End: eCfgTabBasket.swt -->
+
+

@@ -1,0 +1,143 @@
+<!-- Template Start: CCViewbarAll_Tabs.swt -->
+
+<!-- No detail view tabs on Task Views -->
+<swe:if condition="Task UI Service (SWE),IsNotInTask">
+	<!------------ Tier 3 navigation ----------------->
+	<swe:switch>
+		<swe:case condition="Web Engine User Agent, TestCapability, 'Browser:IE'">		
+	      <swe:if condition="Web Engine State Properties, IsHighInteractive">
+		    <swe:switch>
+				<swe:case condition="Web Engine State Properties, IsHtmlMarkup">
+				    <swe:switch>
+				    <swe:case condition="Web Engine State Properties, IsViewPosition, 'Position:3'">
+					    <swe:nav-control type="Detail Category With View" style="Tab" indentWidth="30" anchorTab="Enabled"/>
+				    </swe:case>
+				    <swe:case condition="Web Engine State Properties, IsViewPosition, 'Position:4'">
+					    <swe:nav-control type="Detail Category With View" style="Tab" indentWidth="30" anchorTab="Enabled"/>
+				    </swe:case>
+				    <swe:default>
+				    </swe:default>
+				    </swe:switch>
+				</swe:case>
+				<swe:default>
+					<swe:if condition="Web Engine State Properties, IsViewPosition, 'Position:3'">
+					<span class="tier3Back" style="width:100%">
+					<swe:subviewbar>
+					<table datatable="0" summary="" class="tier3Back" width="100%" cellpadding='0' cellspacing='0' border='0'><tr><td>
+					<table datatable="0" summary="" cellpadding='0' cellspacing='0' border='0' class="tier3Back">
+						<tr><td>
+							<table datatable="0" summary="" ID="swe:this.TableId" style="position:relative;left:30px" cellpadding="0" cellspacing="0" border='0'><tr>
+								<swe:for-each-subview>
+									<swe:viewlink state="Active"><td nowrap valign="bottom" id="swe:this.Id" class='tier3On'><swe:this property="FormattedHtml">&nbsp;<swe:viewname/>&nbsp;</swe:this></td></swe:viewlink>
+									<swe:viewlink state="Inactive"><td nowrap valign="bottom" id="swe:this.Id" class='tier3Off'><swe:this property="FormattedHtml">&nbsp;<swe:viewname/>&nbsp;</swe:this></td></swe:viewlink>
+								</swe:for-each-subview>
+							</tr></table>
+						</td></tr>
+					</table>	
+					</td></tr></table>	
+					</swe:subviewbar>
+					</span>
+					</swe:if>
+
+					<swe:if condition="Web Engine State Properties, IsViewPosition, 'Position:4'">
+					<span class="tier3Back" style="width:100%">
+					<swe:subviewbar>
+					<table datatable="0" summary="" class="tier3Back" width="100%" cellpadding='0' cellspacing='0' border='0'><tr><td>
+					<table datatable="0" summary="" cellpadding='0' cellspacing='0' border='0' class="tier3Back">
+						<tr><td>
+							<table datatable="0" summary="" ID="swe:this.TableId" style="position:relative;left:30px" cellpadding="0" cellspacing="0" border='0'><tr>
+								<swe:for-each-subview>
+									<swe:viewlink state="Active"><td nowrap valign="bottom" id="swe:this.Id" class='tier3On'><swe:this property="FormattedHtml">&nbsp;<swe:viewname/>&nbsp;</swe:this></td></swe:viewlink>
+									<swe:viewlink state="Inactive"><td nowrap valign="bottom" id="swe:this.Id" class='tier3Off'><swe:this property="FormattedHtml">&nbsp;<swe:viewname/>&nbsp;</swe:this></td></swe:viewlink>
+								</swe:for-each-subview>
+							</tr></table>
+						</td></tr>
+					</table>	
+					</td></tr></table>	
+					</swe:subviewbar>
+					</span>
+					</swe:if>
+				</swe:default>
+				</swe:switch>
+	      </swe:if>
+	      <swe:if condition="Web Engine State Properties, IsLowInteractive">	
+					<swe:if condition="Web Engine State Properties, IsViewPosition, 'Position:3'">
+					<span class="tier3Back" style="width:100%">
+					<swe:subviewbar>
+					<table datatable="0" summary="" class="tier3Back" width="100%" cellpadding='0' cellspacing='0' border='0'><tr><td>
+					<table datatable="0" summary="" cellpadding='0' cellspacing='0' border='0' class="tier3Back">
+						<tr><td>
+							<table datatable="0" summary="" ID="swe:this.TableId" style="position:relative;left:30px" cellpadding="0" cellspacing="0" border='0'><tr>
+								<swe:for-each-subview>
+									<swe:viewlink state="Active"><td nowrap valign="bottom" id="swe:this.Id" class='tier3On'><swe:this property="FormattedHtml">&nbsp;<swe:viewname/>&nbsp;</swe:this></td></swe:viewlink>
+									<swe:viewlink state="Inactive"><td nowrap valign="bottom" id="swe:this.Id" class='tier3Off'><swe:this property="FormattedHtml">&nbsp;<swe:viewname/>&nbsp;</swe:this></td></swe:viewlink>
+								</swe:for-each-subview>
+							</tr></table>
+						</td></tr>
+					</table>	
+					</td></tr></table>	
+					</swe:subviewbar>
+					</span>
+					</swe:if>
+
+					<swe:if condition="Web Engine State Properties, IsViewPosition, 'Position:4'">
+					<span class="tier3Back" style="width:100%">
+					<swe:subviewbar>
+					<table datatable="0" summary="" class="tier3Back" width="100%" cellpadding='0' cellspacing='0' border='0'><tr><td>
+					<table datatable="0" summary="" cellpadding='0' cellspacing='0' border='0' class="tier3Back">
+						<tr><td>
+							<table datatable="0" summary="" ID="swe:this.TableId" style="position:relative;left:30px" cellpadding="0" cellspacing="0" border='0'><tr>
+								<swe:for-each-subview>
+									<swe:viewlink state="Active"><td nowrap valign="bottom" id="swe:this.Id" class='tier3On'><swe:this property="FormattedHtml">&nbsp;<swe:viewname/>&nbsp;</swe:this></td></swe:viewlink>
+									<swe:viewlink state="Inactive"><td nowrap valign="bottom" id="swe:this.Id" class='tier3Off'><swe:this property="FormattedHtml">&nbsp;<swe:viewname/>&nbsp;</swe:this></td></swe:viewlink>
+								</swe:for-each-subview>
+							</tr></table>
+						</td></tr>
+					</table>	
+					</td></tr></table>	
+					</swe:subviewbar>
+					</span>
+					</swe:if>
+		</swe:if>
+
+		</swe:case>
+
+		<swe:default>
+
+			<!-- Handle tabs in nonIE browsers -->
+			<swe:if condition="Web Engine State Properties, IsViewPosition, 'Position:3'">
+			<swe:subviewbar>
+				<div class="tier3Div">
+					<table datatable="0" summary="" cellpadding="0" cellspacing="0" border='0'><tr>
+						<swe:for-each-subview>
+							<swe:viewlink state="Active"><td class='tier3On' nowrap><swe:this property="FormattedHtml">&nbsp;<swe:viewname/>&nbsp;</swe:this></td></swe:viewlink>
+							<swe:viewlink state="Inactive"><td  class='tier3Off' nowrap><swe:this property="FormattedHtml">&nbsp;<swe:viewname/>&nbsp;</swe:this></td></swe:viewlink>
+						</swe:for-each-subview>
+					</tr></table>
+				</div>
+			</swe:subviewbar>
+			</swe:if>
+
+			<swe:if condition="Web Engine State Properties, IsViewPosition, 'Position:4'">
+			<swe:subviewbar>
+				<div class="tier3Div">
+					<table datatable="0" summary="" cellpadding="0" cellspacing="0" border='0'><tr>
+						<swe:for-each-subview>
+							<swe:viewlink state="Active"><td class='tier3On' nowrap><swe:this property="FormattedHtml">&nbsp;<swe:viewname/>&nbsp;</swe:this></td></swe:viewlink>
+							<swe:viewlink state="Inactive"><td  class='tier3Off' nowrap><swe:this property="FormattedHtml">&nbsp;<swe:viewname/>&nbsp;</swe:this></td></swe:viewlink>
+						</swe:for-each-subview>
+					</tr></table>
+				</div>
+			</swe:subviewbar>
+			</swe:if>
+
+		</swe:default>
+	</swe:switch>	
+</swe:if>
+	
+<!------------ End Tier 3 navigation ------------->
+
+
+
+<!-- Template End: CCViewbarAll_Tabs.swt -->
+      

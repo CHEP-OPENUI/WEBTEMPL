@@ -1,0 +1,1061 @@
+<!--  Template Start: CCCRAPageContainer.swt -->
+
+<HTML dir="swe:dir">
+<head>
+<title><swe:this property="Title"/></title>
+<swe:include file="CCStylesChoice.swt"/>
+</head>
+
+<swe:switch>
+<swe:case condition="Web Engine State Properties, IsHighInteractive"> 
+<!-- Begin: High Interactivity case -->
+
+<swe:switch>
+	<swe:case condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+	   <!-- IE Processing -->
+
+      <swe:switch>
+      <!--  If Communiation Toolbar is enabled, activate toolbar frame -->
+
+      <swe:case condition="Communications Client, IsCommEnabled">
+      	<swe:switch>
+      		<swe:case condition="Message Bar, IsMsgBarEnabled">     
+                           <swe:frameset htmlAttr="rows='25,27,33,18,38,*,15' border='0' frameborder='No'">
+                              <!--  NOTE! Any changes made for the following frames need to be in sync with frames in bottom swe:default section -->
+                              <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCFrameBanner.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCCRAFrameViewbar.swt"/>
+                              </swe:frame>	 
+
+                              <swe:frame type="Toolbar" name="Toolbar1" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCFrameToolbar.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Threadbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCFrameThreadbar.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCFrameScreenbar.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+                                 <swe:include file="CCFrameContentHI.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Toolbar" name="Toolbar2" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCFrameMsgbar.swt"/>
+                              </swe:frame>		
+                           </swe:frameset>     		            		      
+      		</swe:case>
+      		<swe:default>
+			<swe:frameset htmlAttr="rows='25,27,33,18,38,*' border='0' frameborder='No'">
+                              <!--  NOTE! Any changes made for the following frames need to be in sync with frames in bottom swe:default section -->
+                              <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCFrameBanner.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCCRAFrameViewbar.swt"/>
+                              </swe:frame>	 
+
+                              <swe:frame type="Toolbar" name="Toolbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCFrameToolbar.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Threadbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCFrameThreadbar.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCFrameScreenbar.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+                                 <swe:include file="CCFrameContentHI.swt"/>
+                              </swe:frame>
+                           </swe:frameset>		    		           
+      		</swe:default>
+      	</swe:switch>
+      </swe:case>
+	  
+	   <!--  If Barcode Toolbar is enabled, activate toolbar frame -->
+	   <swe:case condition="HTML FS Barcoding Tool Bar, IsBarcodeEnabled">
+      	<swe:switch>
+      		<swe:case condition="Message Bar, IsMsgBarEnabled">
+      		         <swe:frameset htmlAttr="rows='25,27,33,18,38,*,15' border='0' frameborder='No'">
+                              <!--  NOTE! Any changes made for the following frames need to be in sync with frames in bottom swe:default section -->
+                              <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCFrameBanner.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCCRAFrameViewbar.swt"/>
+                              </swe:frame>	 
+
+                              <swe:frame type="Toolbar" name="Toolbar1" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCFrameToolbar.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Threadbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCFrameThreadbar.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCFrameScreenbar.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+                                 <swe:include file="CCFrameContentHI.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Toolbar" name="Toolbar2" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCFrameMsgbar.swt"/>
+                              </swe:frame>		
+                           </swe:frameset>
+      		</swe:case>
+      		<swe:default>
+      		   	<swe:frameset htmlAttr="rows='25,27,33,18,38,*' border='0' frameborder='No'">
+                              <!--  NOTE! Any changes made for the following frames need to be in sync with frames in bottom swe:default section -->
+                              <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCFrameBanner.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCCRAFrameViewbar.swt"/>
+                              </swe:frame>	 
+
+                              <swe:frame type="Toolbar" name="Toolbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCFrameToolbar.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Threadbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCFrameThreadbar.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCFrameScreenbar.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+                                 <swe:include file="CCFrameContentHI.swt"/>
+                              </swe:frame>
+                          </swe:frameset>			            
+      		</swe:default>
+      	</swe:switch>
+      </swe:case>	  
+
+      <!--  By default, no Communiation Toolbar or Barcode Toolbar-->
+      <swe:default>
+         <swe:switch>
+            <swe:case condition="Communications Client, IsMaxCommToolbars">
+      	      <swe:switch>
+      		      <swe:case condition="Message Bar, IsMsgBarEnabled">
+      		         
+                                 <swe:frameset htmlAttr="rows='25,27,0,18,38,*,15' border='0' frameborder='No'">
+                                    <!--  NOTE! Any changes made in this section need to be in sync with frames in top swe:case section -->
+                                    <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                       <swe:include file="CCFrameBanner.swt"/>
+                                    </swe:frame>
+
+                                    <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                       <swe:include file="CCCRAFrameViewbar.swt"/>
+                                    </swe:frame>	 
+
+                                    <swe:frame type="Toolbar" name="Toolbar1" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                       <swe:include file="CCFrameToolbar.swt"/>
+                                    </swe:frame>
+
+                                    <swe:frame type="Threadbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                       <swe:include file="CCFrameThreadbar.swt"/>
+                                    </swe:frame>
+
+                                    <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                       <swe:include file="CCFrameScreenbar.swt"/>
+                                    </swe:frame>
+
+                                    <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+                                       <swe:include file="CCFrameContentHI.swt"/>
+                                    </swe:frame>
+
+                                    <swe:frame type="Toolbar" name="Toolbar2" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                       <swe:include file="CCFrameMsgbar.swt"/>
+                                    </swe:frame>
+                                 </swe:frameset>
+      		      </swe:case>
+      		      <swe:default>
+                                 <swe:frameset htmlAttr="rows='25,27,0,18,38,*' border='0' frameborder='No'">
+                                    <!--  NOTE! Any changes made in this section need to be in sync with frames in top swe:case section -->
+                                    <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                       <swe:include file="CCFrameBanner.swt"/>
+                                    </swe:frame>
+
+                                    <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                       <swe:include file="CCCRAFrameViewbar.swt"/>
+                                    </swe:frame>	 
+
+                                    <swe:frame type="Toolbar" name="Toolbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                       <swe:include file="CCFrameToolbar.swt"/>
+                                    </swe:frame>
+
+                                    <swe:frame type="Threadbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                       <swe:include file="CCFrameThreadbar.swt"/>
+                                    </swe:frame>
+
+                                    <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                       <swe:include file="CCFrameScreenbar.swt"/>
+                                    </swe:frame>
+
+                                    <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+                                       <swe:include file="CCFrameContentHI.swt"/>
+                                    </swe:frame>	
+                                 </swe:frameset>
+      		      </swe:default>
+      	      </swe:switch>
+            </swe:case>
+            <swe:default>
+               <swe:switch>
+                  <swe:case condition="Message Bar, IsMsgBarEnabled">
+                                 <swe:frameset htmlAttr="rows='25,27,18,38,*,15' border='0' frameborder='No'">
+                                    <!--  NOTE! Any changes made in this section need to be in sync with frames in top swe:case section -->
+                                    <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                       <swe:include file="CCFrameBanner.swt"/>
+                                    </swe:frame>                          
+
+                                    <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                       <swe:include file="CCCRAFrameViewbar.swt"/>
+                                    </swe:frame>	 
+
+                                    <swe:frame type="Threadbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                       <swe:include file="CCFrameThreadbar.swt"/>
+                                    </swe:frame>
+
+                                    <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                       <swe:include file="CCFrameScreenbar.swt"/>
+                                    </swe:frame>
+
+                                    <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+                                       <swe:include file="CCFrameContentHI.swt"/>
+                                    </swe:frame>
+
+                                    <swe:frame type="Toolbar" name="Toolbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                       <swe:include file="CCFrameMsgbar.swt"/>
+                                    </swe:frame>
+                                 </swe:frameset>
+      		                  </swe:default>
+      		               </swe:switch>
+      		            </swe:default>
+      		         </swe:switch>
+                  </swe:case>
+                  <swe:default>  
+                                 <swe:frameset htmlAttr="rows='25,27,18,38,*' border='0' frameborder='No'">
+                                    <!--  NOTE! Any changes made in this section need to be in sync with frames in top swe:case section -->
+                                    <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                       <swe:include file="CCFrameBanner.swt"/>
+                                    </swe:frame>
+
+                                    <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                       <swe:include file="CCCRAFrameViewbar.swt"/>
+                                    </swe:frame>	 
+
+                                    <swe:frame type="Threadbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                       <swe:include file="CCFrameThreadbar.swt"/>
+                                    </swe:frame>
+
+                                    <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                       <swe:include file="CCFrameScreenbar.swt"/>
+                                    </swe:frame>
+
+                                    <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+                                       <swe:include file="CCFrameContentHI.swt"/>
+                                    </swe:frame>	
+                                 </swe:frameset>    		                  
+                  </swe:default>
+               </swe:switch>
+            </swe:default>
+         </swe:switch>
+      </swe:default>
+      </swe:switch>
+	</swe:case>
+	
+	<swe:default>
+
+<!-- NS Processing -->
+
+      <swe:switch>
+      <!--  If Communiation Toolbar is enabled, activate toolbar frame -->
+
+      <swe:case condition="Communications Client, IsCommEnabled">
+      	<swe:switch>
+      		<swe:case condition="Message Bar, IsMsgBarEnabled">
+                           <swe:frameset htmlAttr="rows='25,27,33,18,40,*,15' border='0' frameborder='No'">
+                              <!--  NOTE! Any changes made for the following frames need to be in sync with frames in bottom swe:default section -->
+                                 <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                              <swe:include file="CCFrameBanner.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCCRAFrameViewbar.swt"/>
+                              </swe:frame>	 
+
+                              <swe:frame type="Toolbar" name="Toolbar1" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCFrameToolbar.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Threadbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCFrameThreadbar.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+                                 <swe:include file="CCFrameScreenbar.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+                                 <swe:include file="CCFrameContentHI.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Toolbar" name="Toolbar2" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCFrameMsgbar.swt"/>
+                              </swe:frame>		
+                           </swe:frameset>
+      		</swe:case>
+      		<swe:default>
+                           <swe:frameset htmlAttr="rows='25,27,33,18,40,*' border='0' frameborder='No'">
+                              <!--  NOTE! Any changes made for the following frames need to be in sync with frames in bottom swe:default section -->
+                              <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCFrameBanner.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCCRAFrameViewbar.swt"/>
+                              </swe:frame>	 
+
+                              <swe:frame type="Toolbar" name="Toolbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCFrameToolbar.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Threadbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCFrameThreadbar.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+                                 <swe:include file="CCFrameScreenbar.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+                                 <swe:include file="CCFrameContentHI.swt"/>
+                              </swe:frame>
+                           </swe:frameset>		
+      		</swe:default>
+      	</swe:switch>
+      </swe:case>
+
+	<swe:case condition="HTML FS Barcoding Tool Bar, IsBarcodeEnabled">
+      	<swe:switch>
+      		<swe:case condition="Message Bar, IsMsgBarEnabled">
+                           <swe:frameset htmlAttr="rows='25,27,33,18,40,*,15' border='0' frameborder='No'">
+                              <!--  NOTE! Any changes made for the following frames need to be in sync with frames in bottom swe:default section -->
+                              <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCFrameBanner.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCCRAFrameViewbar.swt"/>
+                              </swe:frame>	 
+
+                              <swe:frame type="Toolbar" name="Toolbar1" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCFrameToolbar.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Threadbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCFrameThreadbar.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+                                 <swe:include file="CCFrameScreenbar.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+                                 <swe:include file="CCFrameContentHI.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Toolbar" name="Toolbar2" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCFrameMsgbar.swt"/>
+                              </swe:frame>		
+                           </swe:frameset>
+      		</swe:case>
+      		<swe:default>
+                           <swe:frameset htmlAttr="rows='25,27,33,18,40,*' border='0' frameborder='No'">
+                              <!--  NOTE! Any changes made for the following frames need to be in sync with frames in bottom swe:default section -->
+                              <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCFrameBanner.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCCRAFrameViewbar.swt"/>
+                              </swe:frame>	 
+
+                              <swe:frame type="Toolbar" name="Toolbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCFrameToolbar.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Threadbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                 <swe:include file="CCFrameThreadbar.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+                                 <swe:include file="CCFrameScreenbar.swt"/>
+                              </swe:frame>
+
+                              <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+                                 <swe:include file="CCFrameContentHI.swt"/>
+                              </swe:frame>
+                           </swe:frameset>		
+      		</swe:default>
+         </swe:switch>
+      </swe:case>	  
+	  
+      <!--  By default, no Communiation Toolbar or Barcode Toolbar-->
+
+      <swe:default>
+
+         <swe:switch>
+         <swe:case condition="Communications Client, IsMaxCommToolbars">
+
+     	      <swe:switch>
+     		      <swe:case condition="Message Bar, IsMsgBarEnabled">
+                              <swe:frameset htmlAttr="rows='25,27,0,18,40,*,15' border='0' frameborder='No'">
+                                 <!--  NOTE! Any changes made in this section need to be in sync with frames in top swe:case section -->
+                                 <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                    <swe:include file="CCFrameBanner.swt"/>
+                                 </swe:frame>
+
+                                 <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                    <swe:include file="CCCRAFrameViewbar.swt"/>
+                                 </swe:frame>	 
+
+                                 <swe:frame type="Toolbar" name="Toolbar1" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                    <swe:include file="CCFrameToolbar.swt"/>
+                                 </swe:frame>
+
+                                 <swe:frame type="Threadbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                    <swe:include file="CCFrameThreadbar.swt"/>
+                                 </swe:frame>
+
+                                 <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+                                    <swe:include file="CCFrameScreenbar.swt"/>
+                                 </swe:frame>
+
+                                 <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+                                    <swe:include file="CCFrameContentHI.swt"/>
+                                 </swe:frame>
+
+                                 <swe:frame type="Toolbar" name="Toolbar2" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                    <swe:include file="CCFrameMsgbar.swt"/>
+                                 </swe:frame>
+                              </swe:frameset>
+     		      </swe:case>
+     		      <swe:default>
+                              <swe:frameset htmlAttr="rows='25,27,0,18,40,*' border='0' frameborder='No'">
+                                 <!--  NOTE! Any changes made in this section need to be in sync with frames in top swe:case section -->
+                                 <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                    <swe:include file="CCFrameBanner.swt"/>
+                                 </swe:frame>
+
+                                 <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                    <swe:include file="CCCRAFrameViewbar.swt"/>
+                                 </swe:frame>	 
+
+                                 <swe:frame type="Toolbar" name="Toolbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                    <swe:include file="CCFrameToolbar.swt"/>
+                                 </swe:frame>
+
+                                 <swe:frame type="Threadbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                    <swe:include file="CCFrameThreadbar.swt"/>
+                                 </swe:frame>
+
+                                 <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+                                    <swe:include file="CCFrameScreenbar.swt"/>
+                                 </swe:frame>
+
+                                 <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+                                    <swe:include file="CCFrameContentHI.swt"/>
+                                 </swe:frame>	
+                              </swe:frameset>
+     		      </swe:default>
+     	      </swe:switch>
+
+         </swe:case>
+         <swe:default>
+
+            <swe:switch>
+     		      <swe:case condition="Message Bar, IsMsgBarEnabled">    		      
+                              <swe:frameset htmlAttr="rows='25,27,18,40,*,15' border='0' frameborder='No'">
+                                 <!--  NOTE! Any changes made in this section need to be in sync with frames in top swe:case section -->
+                                 <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                    <swe:include file="CCFrameBanner.swt"/>
+                                 </swe:frame>
+
+                                 <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                    <swe:include file="CCCRAFrameViewbar.swt"/>
+                                 </swe:frame>	 
+
+                                 <swe:frame type="Threadbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                    <swe:include file="CCFrameThreadbar.swt"/>
+                                 </swe:frame>
+
+                                 <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+                                    <swe:include file="CCFrameScreenbar.swt"/>
+                                 </swe:frame>
+
+                                 <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+                                    <swe:include file="CCFrameContentHI.swt"/>
+                                 </swe:frame>
+
+                                 <swe:frame type="Toolbar" name="Toolbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                    <swe:include file="CCFrameMsgbar.swt"/>
+                                 </swe:frame>
+                              </swe:frameset>
+      		      </swe:case>
+     		      <swe:default>   
+                              <swe:frameset htmlAttr="rows='25,27,18,40,*' border='0' frameborder='No'">
+                                 <!--  NOTE! Any changes made in this section need to be in sync with frames in top swe:case section -->
+                                 <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                    <swe:include file="CCFrameBanner.swt"/>
+                                 </swe:frame>
+
+                                 <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                    <swe:include file="CCCRAFrameViewbar.swt"/>
+                                 </swe:frame>	 
+
+                                 <swe:frame type="Threadbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                                    <swe:include file="CCFrameThreadbar.swt"/>
+                                 </swe:frame>
+
+                                 <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+                                    <swe:include file="CCFrameScreenbar.swt"/>
+                                 </swe:frame>
+
+                                 <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+                                    <swe:include file="CCFrameContentHI.swt"/>
+                                 </swe:frame>	
+                              </swe:frameset>
+     		      </swe:default>
+     	      </swe:switch>
+
+         </swe:default>
+         </swe:switch>
+
+      </swe:default>
+      </swe:switch>
+
+	</swe:default>
+</swe:switch>
+
+</swe:case> <!-- End: High Interactivity case -->
+<swe:default> <!-- Begin: Non-High Interactivity case -->
+
+<swe:switch>
+	<swe:case condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+	   <!-- IE Processing -->
+
+      <swe:switch>
+      <!--  If Communiation Toolbar is enabled, activate toolbar frame -->
+
+      <swe:case condition="Communications Client, IsCommEnabled">
+      	<swe:switch>
+      		<swe:case condition="Message Bar, IsMsgBarEnabled">
+      		<swe:frameset htmlAttr="rows='25,33,22,27,*,15' border='0' frameborder='No'">
+      			     <!--  NOTE! Any changes made for the following frames need to be in sync with frames in bottom swe:default section -->
+      			     <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			         <swe:include file="CCFrameBanner.swt"/>
+      			     </swe:frame>
+      			
+      				  <swe:frame type="Toolbar" name="Toolbar1" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			         <swe:include file="CCFrameToolbar.swt"/>
+      			     </swe:frame>
+      			
+      			     <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			         <swe:include file="CCFrameScreenbar.swt"/>
+      			     </swe:frame>
+      			
+      			     <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			         <swe:include file="CCCRAFrameViewbar.swt"/>
+      			     </swe:frame>	 
+      			
+      			     <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+      			         <swe:include file="CCFrameContent_Logic.swt"/>
+      			     </swe:frame>
+      				 
+      				 <swe:frame type="Toolbar" name="Toolbar2" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			         <swe:include file="CCFrameMsgbar.swt"/>
+      			     </swe:frame>		
+      			</swe:frameset>
+      		</swe:case>
+      		<swe:default>
+      			<swe:frameset htmlAttr="rows='25,33,22,27,*' border='0' frameborder='No'">
+      			     <!--  NOTE! Any changes made for the following frames need to be in sync with frames in bottom swe:default section -->
+      			     <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			         <swe:include file="CCFrameBanner.swt"/>
+      			     </swe:frame>
+      			
+      				 <swe:frame type="Toolbar" name="Toolbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			         <swe:include file="CCFrameToolbar.swt"/>
+      			     </swe:frame>
+      			
+      			     <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			         <swe:include file="CCFrameScreenbar.swt"/>
+      			     </swe:frame>
+      			
+      			     <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			         <swe:include file="CCCRAFrameViewbar.swt"/>
+      			     </swe:frame>	 
+      			
+      			     <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+      			         <swe:include file="CCFrameContent_Logic.swt"/>
+      			     </swe:frame>
+      			</swe:frameset>		
+      		</swe:default>
+      	</swe:switch>
+      </swe:case>
+	  
+	  <!--  If Barcode Toolbar is enabled, activate toolbar frame -->
+	  <swe:case condition="HTML FS Barcoding Tool Bar, IsBarcodeEnabled">
+      	<swe:switch>
+      		<swe:case condition="Message Bar, IsMsgBarEnabled">
+      		<swe:frameset htmlAttr="rows='25,33,22,27,*,15' border='0' frameborder='No'">
+      			     <!--  NOTE! Any changes made for the following frames need to be in sync with frames in bottom swe:default section -->
+      			     <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			         <swe:include file="CCFrameBanner.swt"/>
+      			     </swe:frame>
+      			
+      				 <swe:frame type="Toolbar" name="Toolbar1" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			         <swe:include file="CCFrameToolbar.swt"/>
+      			     </swe:frame>
+      			
+      			     <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			         <swe:include file="CCFrameScreenbar.swt"/>
+      			     </swe:frame>
+      			
+      			     <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			         <swe:include file="CCCRAFrameViewbar.swt"/>
+      			     </swe:frame>	 
+      			
+      			     <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+      			         <swe:include file="CCFrameContentHI.swt"/>
+      			     </swe:frame>
+      				 
+      				 <swe:frame type="Toolbar" name="Toolbar2" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			         <swe:include file="CCFrameMsgbar.swt"/>
+      			     </swe:frame>		
+      			</swe:frameset>
+      		</swe:case>
+      		<swe:default>
+      			<swe:frameset htmlAttr="rows='25,33,22,27,*' border='0' frameborder='No'">
+      			     <!--  NOTE! Any changes made for the following frames need to be in sync with frames in bottom swe:default section -->
+      			     <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			         <swe:include file="CCFrameBanner.swt"/>
+      			     </swe:frame>
+      			
+      				 <swe:frame type="Toolbar" name="Toolbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			         <swe:include file="CCFrameToolbar.swt"/>
+      			     </swe:frame>
+      			
+      			     <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			         <swe:include file="CCFrameScreenbar.swt"/>
+      			     </swe:frame>
+      			
+      			     <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			         <swe:include file="CCCRAFrameViewbar.swt"/>
+      			     </swe:frame>	 
+      			
+      			     <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+      			         <swe:include file="CCFrameContent_Logic.swt"/>
+      			     </swe:frame>
+      			</swe:frameset>		
+      		</swe:default>
+      	</swe:switch>
+      </swe:case>	  
+
+      <!--  By default, no Communiation Toolbar or Barcode Toolbar-->
+
+      <swe:default>
+
+         <swe:switch>
+         <swe:case condition="Communications Client, IsMaxCommToolbars">
+      	         <swe:switch>
+      		         <swe:case condition="Message Bar, IsMsgBarEnabled">
+      			         <swe:frameset htmlAttr="rows='25,0,22,27,*,15' border='0' frameborder='No'">
+           
+      		              <!--  NOTE! Any changes made in this section need to be in sync with frames in top swe:case section -->
+                          <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+     			                  <swe:include file="CCFrameBanner.swt"/>
+                          </swe:frame>
+
+                          <swe:frame type="Toolbar" name="Toolbar1" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			               <swe:include file="CCFrameToolbar.swt"/>
+      			           </swe:frame>
+      		         
+      		              <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      		                  <swe:include file="CCFrameScreenbar.swt"/>
+      		              </swe:frame>
+      		         
+      		              <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      		                  <swe:include file="CCCRAFrameViewbar.swt"/>
+      		              </swe:frame>	 
+      		         
+      		              <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+      		                  <swe:include file="CCFrameContent_Logic.swt"/>
+      		              </swe:frame>
+      			          
+      			          <swe:frame type="Toolbar" name="Toolbar2" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      		                  <swe:include file="CCFrameMsgbar.swt"/>
+      		              </swe:frame>
+      		         
+      			         </swe:frameset>
+      		         </swe:case>
+      		         <swe:default>
+      			         <swe:frameset htmlAttr="rows='25,0,22,27,*' border='0' frameborder='No'">
+           
+      		              <!--  NOTE! Any changes made in this section need to be in sync with frames in top swe:case section -->
+      		              <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+     			                  <swe:include file="CCFrameBanner.swt"/>
+     		                 </swe:frame>
+
+                          <swe:frame type="Toolbar" name="Toolbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			               <swe:include file="CCFrameToolbar.swt"/>
+      			           </swe:frame>
+
+      		              <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      		                  <swe:include file="CCFrameScreenbar.swt"/>
+      		              </swe:frame>
+      		         
+      		              <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      		                  <swe:include file="CCCRAFrameViewbar.swt"/>
+      		              </swe:frame>	 
+      		         
+      		              <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+      		                  <swe:include file="CCFrameContent_Logic.swt"/>
+      		              </swe:frame>	
+      			         </swe:frameset>
+      		         </swe:default>
+      	         </swe:switch>
+            </swe:case>
+            <swe:default>
+                  <swe:switch>
+      		         <swe:case condition="Message Bar, IsMsgBarEnabled">
+      			         <swe:frameset htmlAttr="rows='25,22,27,*,15' border='0' frameborder='No'">
+           
+      		              <!--  NOTE! Any changes made in this section need to be in sync with frames in top swe:case section -->
+                          <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+     			                  <swe:include file="CCFrameBanner.swt"/>
+                          </swe:frame>                          
+      		         
+      		              <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      		                  <swe:include file="CCFrameScreenbar.swt"/>
+      		              </swe:frame>
+      		         
+      		              <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      		                  <swe:include file="CCCRAFrameViewbar.swt"/>
+      		              </swe:frame>	 
+      		         
+      		              <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+      		                  <swe:include file="CCFrameContentHI.swt"/>
+      		              </swe:frame>
+      			          
+      			          <swe:frame type="Toolbar" name="Toolbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      		                  <swe:include file="CCFrameMsgbar.swt"/>
+      		              </swe:frame>
+      		         
+      			         </swe:frameset>
+      		         </swe:case>
+      		         <swe:default>
+      			         <swe:frameset htmlAttr="rows='25,22,27,*' border='0' frameborder='No'">
+           
+      		              <!--  NOTE! Any changes made in this section need to be in sync with frames in top swe:case section -->
+      		              <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+     			                  <swe:include file="CCFrameBanner.swt"/>
+     		                 </swe:frame>
+
+      		              <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      		                  <swe:include file="CCFrameScreenbar.swt"/>
+      		              </swe:frame>
+      		         
+      		              <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      		                  <swe:include file="CCCRAFrameViewbar.swt"/>
+      		              </swe:frame>	 
+      		         
+      		              <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+      		                  <swe:include file="CCFrameContent_Logic.swt"/>
+      		              </swe:frame>	
+      			         </swe:frameset>
+      		         </swe:default>
+      	         </swe:switch>
+            </swe:default>
+            </swe:switch>
+      </swe:default>
+      </swe:switch>
+	</swe:case>
+	
+	<swe:default>
+
+<!-- NS Processing -->
+
+      <swe:switch>
+      <!--  If Communiation Toolbar is enabled, activate toolbar frame -->
+
+      <swe:case condition="Communications Client, IsCommEnabled">
+      	<swe:switch>
+      		<swe:case condition="Message Bar, IsMsgBarEnabled">
+      		<swe:frameset htmlAttr="rows='25,33,40,27,*,15' border='0' frameborder='No'">
+      			     <!--  NOTE! Any changes made for the following frames need to be in sync with frames in bottom swe:default section -->
+      			     <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			         <swe:include file="CCFrameBanner.swt"/>
+      			     </swe:frame>
+      			
+      				 <swe:frame type="Toolbar" name="Toolbar1" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			         <swe:include file="CCFrameToolbar.swt"/>
+      			     </swe:frame>
+      			
+      			     <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+      			         <swe:include file="CCFrameScreenbar.swt"/>
+      			     </swe:frame>
+      			
+      			     <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			         <swe:include file="CCCRAFrameViewbar.swt"/>
+      			     </swe:frame>	 
+      			
+      			     <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+      			         <swe:include file="CCFrameContent_Logic.swt"/>
+      			     </swe:frame>
+      				 
+      				 <swe:frame type="Toolbar" name="Toolbar2" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			         <swe:include file="CCFrameMsgbar.swt"/>
+      			     </swe:frame>		
+      			</swe:frameset>
+      		</swe:case>
+      		<swe:default>
+      			<swe:frameset htmlAttr="rows='25,33,40,27,*' border='0' frameborder='No'">
+      			     <!--  NOTE! Any changes made for the following frames need to be in sync with frames in bottom swe:default section -->
+      			     <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			         <swe:include file="CCFrameBanner.swt"/>
+      			     </swe:frame>
+      			
+      				 <swe:frame type="Toolbar" name="Toolbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			         <swe:include file="CCFrameToolbar.swt"/>
+      			     </swe:frame>
+      			
+      			     <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+      			         <swe:include file="CCFrameScreenbar.swt"/>
+      			     </swe:frame>
+      			
+      			     <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			         <swe:include file="CCCRAFrameViewbar.swt"/>
+      			     </swe:frame>	 
+      			
+      			     <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+      			         <swe:include file="CCFrameContent_Logic.swt"/>
+      			     </swe:frame>
+      			</swe:frameset>		
+      		</swe:default>
+      	</swe:switch>
+      </swe:case>
+
+	<swe:case condition="HTML FS Barcoding Tool Bar, IsBarcodeEnabled">
+      	<swe:switch>
+      		<swe:case condition="Message Bar, IsMsgBarEnabled">
+      			<swe:frameset htmlAttr="rows='25,33,40,27,*,15' border='0' frameborder='No'">
+      			     <!--  NOTE! Any changes made for the following frames need to be in sync with frames in bottom swe:default section -->
+      			     <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			         <swe:include file="CCFrameBanner.swt"/>
+      			     </swe:frame>
+      			
+      				 <swe:frame type="Toolbar" name="Toolbar1" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			         <swe:include file="CCFrameToolbar.swt"/>
+      			     </swe:frame>
+      			
+      			     <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+      			         <swe:include file="CCFrameScreenbar.swt"/>
+      			     </swe:frame>
+      			
+      			     <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			         <swe:include file="CCCRAFrameViewbar.swt"/>
+      			     </swe:frame>	 
+      			
+      			     <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+      			         <swe:include file="CCFrameContent_Logic.swt"/>
+      			     </swe:frame>
+      				 
+      				 <swe:frame type="Toolbar" name="Toolbar2" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			         <swe:include file="CCFrameMsgbar.swt"/>
+      			     </swe:frame>		
+      			</swe:frameset>
+      		</swe:case>
+      		<swe:default>
+      			<swe:frameset htmlAttr="rows='25,33,40,27,*' border='0' frameborder='No'">
+      			     <!--  NOTE! Any changes made for the following frames need to be in sync with frames in bottom swe:default section -->
+      			     <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			         <swe:include file="CCFrameBanner.swt"/>
+      			     </swe:frame>
+      			
+      				 <swe:frame type="Toolbar" name="Toolbar"  htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			         <swe:include file="CCFrameToolbar.swt"/>
+      			     </swe:frame>
+      			
+      			     <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+      			         <swe:include file="CCFrameScreenbar.swt"/>
+      			     </swe:frame>
+      			
+      			     <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			         <swe:include file="CCCRAFrameViewbar.swt"/>
+      			     </swe:frame>	 
+      			
+      			     <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+      			         <swe:include file="CCFrameContent_Logic.swt"/>
+      			     </swe:frame>
+      			</swe:frameset>		
+      		</swe:default>
+		</swe:switch>
+	</swe:case>	  
+	  
+      <!--  By default, no Communiation Toolbar or Barcode Toolbar-->
+
+      <swe:default>
+
+         <swe:switch>
+         <swe:case condition="Communications Client, IsMaxCommToolbars">
+
+      	      <swe:switch>
+      		      <swe:case condition="Message Bar, IsMsgBarEnabled">
+      			      <swe:frameset htmlAttr="rows='25,0,40,27,*,15' border='0' frameborder='No'">
+           
+      		           <!--  NOTE! Any changes made in this section need to be in sync with frames in top swe:case section -->
+                       <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                           <swe:include file="CCFrameBanner.swt"/>
+     		              </swe:frame>
+
+                       <swe:frame type="Toolbar" name="Toolbar1" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			               <swe:include file="CCFrameToolbar.swt"/>
+      			           </swe:frame>
+
+      		           <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+      		               <swe:include file="CCFrameScreenbar.swt"/>
+      		           </swe:frame>
+      		      
+      		           <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      		               <swe:include file="CCCRAFrameViewbar.swt"/>
+      		           </swe:frame>	 
+      		      
+      		           <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+      		               <swe:include file="CCFrameContent_Logic.swt"/>
+      		           </swe:frame>
+      			       
+      			       <swe:frame type="Toolbar" name="Toolbar2" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      		               <swe:include file="CCFrameMsgbar.swt"/>
+      		           </swe:frame>
+      		      
+      			      </swe:frameset>
+      		      </swe:case>
+      		      <swe:default>
+      			      <swe:frameset htmlAttr="rows='25,0,40,27,*' border='0' frameborder='No'">
+           
+      		           <!--  NOTE! Any changes made in this section need to be in sync with frames in top swe:case section -->
+                       <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                           <swe:include file="CCFrameBanner.swt"/>
+                       </swe:frame>
+
+                       <swe:frame type="Toolbar" name="Toolbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      			               <swe:include file="CCFrameToolbar.swt"/>
+      			           </swe:frame>
+
+      		           <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+      		               <swe:include file="CCFrameScreenbar.swt"/>
+      		           </swe:frame>
+      		      
+      		           <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      		               <swe:include file="CCCRAFrameViewbar.swt"/>
+      		           </swe:frame>	 
+      		      
+      		           <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+      		               <swe:include file="CCFrameContent_Logic.swt"/>
+      		           </swe:frame>	
+      			      </swe:frameset>
+      		      </swe:default>
+      	      </swe:switch>
+
+         </swe:case>
+         <swe:default>
+
+               <swe:switch>
+      		      <swe:case condition="Message Bar, IsMsgBarEnabled">
+      			      <swe:frameset htmlAttr="rows='25,40,27,*,15' border='0' frameborder='No'">
+           
+      		           <!--  NOTE! Any changes made in this section need to be in sync with frames in top swe:case section -->
+                       <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                           <swe:include file="CCFrameBanner.swt"/>
+     		              </swe:frame>
+
+      		           <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+      		               <swe:include file="CCFrameScreenbar.swt"/>
+      		           </swe:frame>
+      		      
+      		           <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      		               <swe:include file="CCCRAFrameViewbar.swt"/>
+      		           </swe:frame>	 
+      		      
+      		           <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+      		               <swe:include file="CCFrameContent_Logic.swt"/>
+      		           </swe:frame>
+      			       
+      			       <swe:frame type="Toolbar" name="Toolbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      		               <swe:include file="CCFrameMsgbar.swt"/>
+      		           </swe:frame>
+      		      
+      			      </swe:frameset>
+      		      </swe:case>
+      		      <swe:default>
+      			      <swe:frameset htmlAttr="rows='25,40,27,*' border='0' frameborder='No'">
+           
+      		           <!--  NOTE! Any changes made in this section need to be in sync with frames in top swe:case section -->
+                       <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                           <swe:include file="CCFrameBanner.swt"/>
+                       </swe:frame>
+
+      		           <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+      		               <swe:include file="CCFrameScreenbar.swt"/>
+      		           </swe:frame>
+      		      
+      		           <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      		               <swe:include file="CCCRAFrameViewbar.swt"/>
+      		           </swe:frame>	 
+      		      
+      		           <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+      		               <swe:include file="CCFrameContent_Logic.swt"/>
+      		           </swe:frame>	
+      			      </swe:frameset>
+      		      </swe:default>
+      	      </swe:switch>
+
+         </swe:default>
+         </swe:switch>
+
+      </swe:default>
+      </swe:switch>
+
+	</swe:default>
+</swe:switch>
+
+</swe:default> <!-- End: Non-High Interactivity case -->
+</swe:switch>
+
+<swe:scripts/>
+
+</HTML>
+
+
+
+<!--  Template End: CCCRAPageContainer.swt -->
+

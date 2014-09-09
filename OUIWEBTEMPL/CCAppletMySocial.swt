@@ -1,0 +1,41 @@
+<!--  Template Start: CCAppletMySocial.swt -->
+
+<swe:layout viewDisplayMode="Layout">
+<swe:include file="CCTitle.swt"/>
+
+</swe:layout>
+
+
+<body bgcolor="#ffffff">
+
+<!--  <a href="http://www.oracle.com">follow us on </a> -->
+
+<a href="http://www.twitter.com">
+<img src="http://www.gfsnews.com/article/4151/1/imagenes/twitter_button.png" hspace="5px" vspace="10px" align="top" />
+</a>
+
+<a href="http://www.oracle.com/us/syndication/feeds/index.html">
+<img src="http://www.leovaradkar.ie/wp-content/themes/leo/images/rss-icon-small.jpg" hspace="13px" vspace="10px" align="top" />
+</a>
+
+<a href="http://www.facebook.com">
+<img src="http://blindtastingclub.net/wp-content/themes/dark-choco-10/images/Facebook_button_small.gif" hspace="10px" vspace="10px" align="top" />
+</a>
+
+<a href="http://www.linkedin.com">
+<img src="http://www.johnsonconsulting.com/images/linkedin-button_small.png" hspace="11px" vspace="10px" align="top" />
+</a>
+
+<a href="http://www.youtube.com">
+<img src="http://erplogic.com/home/sites/default/files/images/YouTube_icon_small.png" hspace="12px" vspace="10px" align="top" />
+</a>
+
+
+		
+		
+</body> 
+
+<!--  Template Start: CCAppletMySocial.swt -->
+
+<!-- http://www.nataliehunter.me/images/youtube_small.gif -->
+<!-- http://www.drummondhouseplans.com/fileadmin/user_upload/rss_icon_small.jpg   // RSS--> 

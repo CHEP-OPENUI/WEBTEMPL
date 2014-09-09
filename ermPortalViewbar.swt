@@ -1,0 +1,82 @@
+
+<STYLE>
+  .InActiveLink A,
+  .InActiveLink A:visited,
+  .InActiveLink A:hover
+  { COLOR:Navy; BACKGROUND-COLOR:#D5E0F4; CURSOR: hand; PADDING-LEFT: 3; text-decoration:none}
+  .ActiveLink   A,
+  .ActiveLink   A:visited,
+  .ActiveLink   A:hover
+  { COLOR:Navy; CURSOR: hand; BACKGROUND-COLOR:#ffffff ; PADDING-LEFT: 3; text-decoration:none}
+  TD.InActiveLink { COLOR:Navy; BACKGROUND-COLOR:#D5E0F4; CURSOR: hand; HEIGHT: 25; PADDING-LEFT: 3;}
+  TD.ActiveLink	{ COLOR: Navy; CURSOR: hand; BACKGROUND-COLOR:#ffffff ; HEIGHT: 25; PADDING-LEFT: 3;}
+  TD.darkColor  { BACKGROUND-COLOR: #5E7DBB ; LEFT-MARGIN: 0;}
+  TD.whiteColor { BACKGROUND-COLOR: #D5E0F4 ; LEFT-MARGIN: 0;}
+  TD.whiteLine  { BACKGROUND-COLOR: #ffffff; WIDTH: 1}
+
+</STYLE>
+
+
+
+<table datatable="0" summary="" border="0" cellspacing="0" cellpadding="0">
+
+<swe:viewbar mode="Context">
+
+<!-- // 12-JKJ5YF 
+<tr height=1>
+	<td class=whiteColor><img src=images/spacer.gif width=2 height=1 alt=""></td>
+        <td class=whiteColor><img src=images/spacer.gif width=140 height=1 alt=""></td>
+	<td class=whiteLine></td>
+</tr>
+-->
+<tr>
+<td class=whiteColor></td>
+
+<swe:viewlink state="Active">
+<td Class=ActiveLink>
+<swe:viewlink state="Active" property="FormattedHtml">
+		<b><swe:viewname/></b>
+</swe:viewlink>
+</td>
+</swe:viewlink>
+
+<swe:viewlink state="Inactive">
+<td class=InActiveLink>
+<swe:viewlink state="Inactive" property="FormattedHtml">
+		<swe:viewname/>
+</swe:viewlink>
+</td>
+</swe:viewlink>
+
+<!--<td class=whiteLine>&nbsp;</td>-->
+</tr>
+
+<tr height=1>
+	<td class=whiteColor><img src=images/spacer.gif width=2 height=1 alt=""></td>
+        <td class=whiteColor><img src=images/spacer.gif width=142 height=1 alt=""></td>
+	<td class=whiteLine></td>
+</tr>
+
+</swe:viewbar>
+
+ <swe:viewbar mode="Context">
+<swe:viewlink state="Active" property="FormattedHtml">
+
+<tr height=1>
+	<td class=whiteColor><img src=images/spacer.gif width=2 height=1 alt=""></td>
+        <td class=whiteColor><img src=images/spacer.gif width=140 height=1 alt=""></td>
+	<td class=whiteLine></td>
+</tr> 
+<tr height=1>
+	<td class=whiteColor><img src=images/spacer.gif width=2 height=1 alt=""></td>
+	<td class=whitecolor><img src=images/spacer.gif width=140 height=1 alt=""></td>
+	<td class=whiteLine></td>
+</tr>
+
+
+</swe:viewlink>
+</swe:viewbar>
+
+
+</table>
+

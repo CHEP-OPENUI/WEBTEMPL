@@ -1,0 +1,53 @@
+<!--  Template Start: dCCView_66_33.swt -->
+<swe:include file="dCCHTMLHeader.swt"/>
+<!-- ---------- Threadbar And/Or Greeting ----------------->
+<table datatable="0" summary="" border="0" cellspacing="0" cellpadding="1" width="100%">
+	<swe:if condition="Web Engine State Properties, IsLowInteractive">
+	<tr><td width="75%" valign="top"><swe:include file="CCThreadbar.swt"/></td><td width="25%"><img src="images/spacer.gif" width="100%" height="1" alt=""></td></tr>
+	</swe:if>
+	<tr><td width="75%"><swe:applet id="101" hintText="Salutation Applet" property="FormattedHtml"/><img src="images/spacer.gif" width="1" height="1" alt=""></td>
+	<swe:applet id="901" hintText="Layout Controls"><td align="right" width="25%"><swe:this property="FormatttedHtml"/></td></swe:applet></tr>
+</table> 
+<!-- ---------- Threadbar And/Or Greeting  ------------->
+
+<!-- ---------- Main Content Area ---------------------------->
+<div class="siebui-view-multi-column">
+    <table datatable="0" summary="" width="100%" cellpadding="5" cellspacing="0" border="0">
+        <swe:for-each count=1 iteratorName="currentId" startValue="302">
+        <tr>
+            <!--  Full Width -->
+            <td colspan="2" valign="top">			
+                    <!-- start applet-->
+                    <swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" property="FormattedHtml" var="Parent"/>
+                    <!-- end applet-->
+            </td>
+        </tr>
+        </swe:for-each>
+
+        <tr>	
+            <!--  Column 1 -->
+            <td valign="top" width="66%">
+                <swe:for-each count=10 iteratorName="currentId" startValue="102">
+                    <!-- start applet-->
+                    <swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" property="FormattedHtml" var="Parent"/>
+                    <!-- end applet-->
+                </swe:for-each>
+            </td>
+            <!--  End Column 1 -->
+            
+            <!--  Column 2 -->
+            <td valign="top" width="33%">
+                <swe:for-each count=10 iteratorName="currentId" startValue="202">
+                    <!-- start applet-->
+                    <swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" property="FormattedHtml" var="Parent"/>
+                    <!-- end applet-->
+                </swe:for-each>
+            </td>
+            <!--  End Column 2 -->
+        </tr>
+    </table>
+</div>
+<!-- ---------- End Main Content Area ------------------------>
+
+<swe:include file="dCCHTMLFooter.swt"/>
+<!--  Template End: dCCView_66_33.swt -->

@@ -1,0 +1,49 @@
+
+<!-- Template Start: CCAppletFormWizard.swt -->
+<swe:control id="1100"><div class=CmdTxt><swe:this property="FormattedHtml" hintText="Outside Applet Help Text"/></div><p></swe:control>
+
+<table datatable="0" summary="" class="AppletStyle1" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+<swe:form>	
+	<swe:if-var name="Child" set="false">
+		<tr><td colspan="2"><swe:include file="CCTitle_Mapped.swt"/></td></tr>
+	</swe:if-var>
+
+	<tr valign="top" height="0" style="position:absolute;left:67;top:30;width:0"><td width="360">
+	<table datatable="0" summary="" class="AppletBack" width="100%" cellspacing="0" cellpadding="2" border="0" align="center">
+
+	<swe:error>
+		<tr valign="top">
+			<td class="scLabelRight"><img src="images/spacer.gif" width="75" height="18" border="0" alt="" /></td>
+			<td class="formInstruct"><span class="error"><swe:this property="FormattedHtml"/></span></td>
+		</tr>  
+	</swe:error>
+
+	<swe:control id="91">
+	  <!-- Inside-applet help text -->
+		<tr valign="top">
+			<td class="scLabelRight"><img src="images/spacer.gif" width="75" height="10" border="0" alt="" /></td>
+			<td class="formInstruct">&nbsp;</td>
+		</tr>
+		<tr valign="top">
+			<td class="scLabelRight"><img src="images/spacer.gif" width="75" height="18" border="0" alt="" /></td>
+			<td class="formInstruct"><swe:this property="DisplayName" hintText="Inside Applet Help Text"/></td>
+		</tr>  
+	</swe:control>
+	</table>
+	</td></tr>
+
+	<tr><td>
+	<swe:form-applet-layout>
+	</swe:form-applet-layout>
+	<table datatable="0" summary="" width="100%" cellpadding="2" cellspacing="0" border="0" bgcolor="#cccccc"><tr>	
+		<td width="100%"><img src="images/spacer.gif" valign="top" width="10" height="20" alt=""></td>
+		<swe:include file="CCButtons.swt"/>		
+		<swe:include file="CCButtons_Popup.swt"/>
+		<td><img src="images/spacer.gif" valign="top" width="10" height="20" alt=""></td>									
+	</tr></table>	
+
+	</td></tr>
+
+</swe:form>	
+</table>
+<!-- Template End: CCAppletFormWizard.swt -->

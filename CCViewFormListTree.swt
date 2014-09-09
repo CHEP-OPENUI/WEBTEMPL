@@ -1,0 +1,38 @@
+<!--  Template Start: CCViewFormListTree.swt -->
+
+<swe:include file="CCHTMLHeader.swt"/>
+
+<swe:include file="CCTaskViewTitle.swt"/>
+
+<!-- ---------- Threadbar and Mini-Applet ----------------->
+<swe:layout viewDisplayMode="Show">
+<table datatable="0" summary="" border="0" cellspacing="0" cellpadding="1" width="100%">
+  <tr>
+	<swe:if condition="Web Engine State Properties, IsLowInteractive">
+	<td valign="absmiddle">
+		<swe:include file="CCThreadbar.swt"/>
+	</td>
+	</swe:if>
+	<swe:applet id="201" hintText="Mini-Applet">
+	 <td align="right"><swe:this property="FormattedHtml"/></td>
+	 <td>&nbsp;&nbsp;&nbsp;</td>
+	</swe:applet>
+  </tr>
+</table>
+</swe:layout>
+<!-- ---------- End Threadbar and Mini-Applet ------------->
+
+<!-- ---------- Main Content Area ---------------------------->
+
+		<swe:applet hintMapType="Applet" id="2" hintText="Top Applet" property="FormattedHtml" var="Grandchild"/>			
+		<swe:applet hintMapType="Applet" id="4" hintText="Bottom Applet" property="FormattedHtml" var="Grandchild"/>
+		<swe:applet hintMapType="Applet" id="6" hintText="Child or Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+		<swe:applet hintMapType="Applet" id="8" hintText="Child or Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+		<swe:applet hintMapType="Applet" id="10" hintText="Child or Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+
+		
+<swe:include file="CCHTMLFooter.swt"/>
+
+<!-- ---------- End Main Content Area ------------------------>
+
+<!--  Template End: CCViewFormListTree.swt -->

@@ -1,0 +1,92 @@
+<!--  Template Start: CCViewPaneFormListTree.swt -->
+<swe:include file="CCHTMLHeader.swt"/>
+
+<swe:include file="CCTaskViewTitle.swt"/>
+
+<!-- ---------- Threadbar and Mini-Applet ----------------->
+<swe:layout viewDisplayMode="Show">
+<table datatable="0" summary="" border="0" cellspacing="0" cellpadding="1" width="100%">
+  <tr>
+	<swe:if condition="Web Engine State Properties, IsLowInteractive">
+	<td valign="absmiddle">
+		<swe:include file="CCThreadbar.swt"/>
+	</td>
+	</swe:if>
+	<swe:applet id="201" hintText="Mini-Applet">
+	 <td align="right"><swe:this property="FormattedHtml"/></td>
+	 <td>&nbsp;&nbsp;&nbsp;</td>
+	</swe:applet>
+  </tr>
+</table>
+</swe:layout>
+<!-- ---------- End Threadbar and Mini-Applet ------------->
+
+		<swe:applet hintMapType="Applet" id="2" hintText="Applet" var="Parent">
+				<table datatable="0" summary="" width="100%" cellpadding="2" cellspacing="0" border="0">
+					<tr>	
+						<td valign="top" width="100%">			
+								<!--start applet-->
+								<swe:this property="FormattedHtml"/>
+								<!--end applet-->
+						</td>
+				
+					</tr>
+				</table>
+			</swe:applet>
+			<swe:applet hintMapType="Applet" id="4" hintText="Applet" var="Child">
+				<table datatable="0" summary="" width="100%" cellpadding="2" cellspacing="0" border="0">
+					<tr>	
+						<td valign="top" width="100%">			
+								<!--start applet-->
+								<swe:this property="FormattedHtml"/>
+								<!--end applet-->
+						</td>
+					</tr>
+				</table>
+			</swe:applet>
+			<swe:applet hintMapType="Applet" id="5" hintText="Applet" var="Child">
+				<table datatable="0" summary="" width="100%" cellpadding="2" cellspacing="0" border="0">
+					<tr>	
+						<td valign="top" width="100%">			
+								<!--start applet-->
+								<swe:this property="FormattedHtml"/>
+								<!--end applet-->
+						</td>
+					</tr>
+				</table>
+			</swe:applet>
+			
+	<table width="100%" cellpadding="5" cellspacing="0" border="0">	
+		<!------------ Left Applet (50%) ---------------------------->
+		<tr valign="top">
+			<td ROWSPAN="2" width="50%">
+				<swe:applet hintMapType="Applet" id="6" hintText="Tree Applet" var="Parent">
+					<!--start applet-->
+					<swe:this property="FormattedHtml"/>
+					<!--end applet-->
+		</swe:applet>
+        </td>		
+		<!------------ Right Applet (50%) ---------------------------->	
+			<td valign="top" width="50%">
+				<swe:applet hintMapType="Applet" id="8" hintText="Applet" var="Child">
+					<!--start applet-->
+			        <swe:this property="FormattedHtml"/>
+			      <!--end applet-->
+		       </swe:applet>
+		     </td>
+		 </tr>
+		 <tr>
+			<td valign="top" width="75%">
+				 <swe:applet hintMapType="Applet" id="10" hintText="Applet" var="Child">
+					<!--start applet-->
+					<swe:this property="FormattedHtml"/>
+					<!--end applet-->
+				 </swe:applet>
+			</td>
+		</tr>
+	</table>
+		
+<swe:include file="CCHTMLFooter.swt"/>
+
+<!-- ---------- End Main Content Area ------------------------>
+<!--  Template End: CCViewPaneFormListTree.swt -->

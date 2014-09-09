@@ -1,0 +1,19 @@
+<swe:layout viewDisplayMode="Show" appletDisplaySize="Max">
+<!-- Template Start ePortalNavBarApplet.swt -->
+
+<table datatable="0" summary="" class="Row2" bgcolor="#FFFFFF" valign="top" width="100%"  cellpadding="0" cellspacing="0" border="0">
+<tr><td class="Row2">
+<swe:for-each-row>
+<span class="SubviewOn">
+<swe:control id="501">
+	<swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/>
+</swe:control>
+<swe:control id="502">
+	<swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/>
+</swe:control>
+</span>&nbsp;<BR>
+</swe:for-each-row>
+</td></tr></table>
+
+<!-- Template End ePortalNavBarApplet.swt -->
+</swe:layout>

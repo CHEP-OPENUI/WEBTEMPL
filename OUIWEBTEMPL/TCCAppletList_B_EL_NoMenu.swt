@@ -1,0 +1,41 @@
+<!-- Template Start: TCCAppletList_B_EL_NoMenu.swt -->
+
+<swe:include file="CCApplet_NamedSpacer.swt"/>  
+<swe:control id="1100">
+    <div class=CmdTxt>
+        <swe:this property="FormattedHtml" hintText="Outside Applet Help Text" hintMapType="Control"/>
+    </div>
+    <p>
+</swe:control>
+<swe:form>
+    <swe:include file="CCTitle_Named.swt"/>     
+    <swe:if condition="Web Engine State Properties, IsPrintOff">
+        <div class="swe:this.SelectStyle">  
+    </swe:if>   
+    <swe:include file="CCListButtonsTopNoMenuButton.swt"/> 
+    <swe:error type="Popup">
+        <table class="swe:class AppletBack siebui-AplietListB_El_NoMenu_table">
+        <tr><td class="error"><swe:this property="FormattedHtml"/><br>&nbsp;</td></tr></table>
+    </swe:error>
+    <swe:if condition="Web Engine State Properties, IsHighInteractive">
+        <swe:if condition="Web Engine State Properties, IsPrintOff">
+            <div class="AppletHIListBorder">
+        </swe:if>
+    </swe:if>
+    <swe:list>
+        <table class="siebui-Common" datatable="1" summary="swe:this.ListSummary">
+            <swe:include file="CCListHeader.swt"/>
+            <swe:include file="CCListBody.swt"/>
+        </table>        
+    </swe:list>
+    <swe:control id="155"><!-- optional control  --><div nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></div></swe:control>
+    <swe:if condition="Web Engine State Properties, IsHighInteractive">
+        </div>
+    </swe:if>
+    <swe:if condition="Web Engine State Properties, IsPrintOff">
+        </div>
+    </swe:if>
+    </span>
+</swe:form>
+
+<!-- Template End: TCCAppletList_B_EL_NoMenu.swt -->

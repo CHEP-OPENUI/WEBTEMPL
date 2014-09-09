@@ -1,0 +1,10 @@
+<!-- Template Start: dCCTitle_Named.swt -->
+
+<swe:if-var name="Grandchild"><span class="AppletStyle7"><swe:include file="dCCTitle.swt"/></swe:if-var>			
+<swe:if-var name="ChildWithPointer"><span class="AppletStyle3"></swe:if-var>				
+<swe:if-var name="Child"><span class="AppletStyle3"></swe:if-var>	
+<swe:if-var name="ParentWithPointer"><span class="AppletStyle1"><swe:include file="dCCTitle.swt"/></swe:if-var>
+<swe:if-var name="Parent"><span class="AppletStyle1"><swe:include file="dCCTitle.swt"/></swe:if-var>
+
+<!-- Template End: dCCTitle_Named.swt -->
+			

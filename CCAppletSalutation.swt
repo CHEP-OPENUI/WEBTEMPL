@@ -1,0 +1,13 @@
+<swe:control id="1">
+<swe:include file="CCApplet_Spacer.swt"/>
+<table datatable="0" summary="" bgcolor="#ffffff" valign="top" width="100%" cellpadding="2" cellspacing="0" border="0">
+  <tr>
+    <td>
+      <swe:this property="FormattedHtml" hintText="Salutation"/>
+    </td>
+  </tr>
+</table>
+</swe:control>
+
+
+

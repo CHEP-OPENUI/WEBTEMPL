@@ -1,0 +1,95 @@
+<!-- Template Start: EmailRespFormOutBoundNew.swt -->
+<!--local override of CSS-->
+<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+	<style>TD.mceWideFields Input {width:100%}</style>
+</swe:if>
+
+<table width="100%" cellpadding="2" cellspacing="0" border="0" align="center"><tr><td>
+<swe:control id="91">
+  <!-- Inside-applet help text -->
+  <table class="AppletBack" width="100%" cellpadding="5" cellspacing="0" border="0" align="center"><tr><td><swe:this property="DisplayName" hintText="Inside Applet Help Text"/></td></tr></table>
+</swe:control>
+
+<table class="AppletBack" width="100%" cellpadding="1" cellspacing="0" border="0" align="center">
+	<tr>
+		<td colspan="5" width="70%"></td><td colspan="3" width="30%"></td>
+	</tr>
+	
+	<tr>
+		<td class="mceLabel" colspan="1" align="right"><swe:control id="1200"  property="FormattedHtml" hintText="From"/></td>
+		<td class="mceField" colspan="2"><swe:control id="1300"  property="FormattedHtml" hintText="Label"/></td>
+		<td class="mceLabel" colspan="2" align="right"><swe:control id="1220"  property="FormattedHtml" hintText="SR #"/></td>
+		<td class="mceField" colspan="2"><swe:control id="1320"  property="FormattedHtml" hintText="Field"/></span></swe:control>&nbsp;&nbsp;<swe:control id="1210"  property="FormattedHtml" hintText="Preview Icon"/></td>
+	</tr>
+	
+	
+	<tr>
+		<td class="mceLabel" colspan="1" align="right"><swe:control id="1201"  property="FormattedHtml" hintText="To"/></td>
+		<td class="mceField" colspan="1"><swe:control id="1301"><span align="swe:this.TextAlignment"><swe:this property="FormattedHtml"	hintText="Field"/></span></swe:control>&nbsp;&nbsp;<swe:control id="1401"  property="FormattedHtml" hintText="Addr Book Icon"/></td>
+		<td class="mceLabel" colspan="3"align="right"><swe:control id="1221"  property="FormattedHtml" hintText="Opportunity"/></td>
+		<td class="mceField" colspan="2"><swe:control id="1321"  property="FormattedHtml" hintText="Field"/></span></swe:control>&nbsp;&nbsp;<swe:control id="1211"  property="FormattedHtml" hintText="Preview Icon"/></td>
+
+	</tr>
+	
+	<tr>
+		<td class="mceLabel" colspan="1" align="right"><swe:control id="1202"  property="FormattedHtml" hintText="CC"/></td>
+		<td class="mceField" colspan="2" ><swe:control id="1302"><span align="swe:this.TextAlignment"><swe:this property ="FormattedHtml" hintText="Field"/></swe:control>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<swe:control id="1402"  property="FormattedHtml" hintText="BCC"/></swe:control><swe:control id="1502"><span align="swe:this.TextAlignment"><swe:this property ="FormattedHtml" hintText="Field"/></span></swe:control></td>
+		<td class="mceLabel" colspan="2" align="right"><swe:control id="1222"  property="FormattedHtml" hintText="Contact"/></swe:control></td>
+		<td class="mceField" colspan="2" ><swe:control id="1322"  property="FormattedHtml" hintText="Field"/></span></swe:control>&nbsp;&nbsp;<swe:control id="1212"  property="FormattedHtml" hintText="Preview Icon"/></td>
+	</tr>
+	
+	<tr>
+		<td class="mceLabel" align="right"><swe:control id="1203"  property="FormattedHtml" hintText="Subject"/></td>
+		<td class="mceField" colspan="2"><swe:control id="1303"  property="FormattedHtml" hintText="Field"/></td>
+		<td class="mceField">&nbsp;&nbsp;</td>
+		<td class="mceLabel" align="right"><swe:control id="1223"  property="FormattedHtml" hintText="Account"/></td>
+		<td class="mceField"><swe:control id="1323"  property="FormattedHtml" hintText="Field"/></span></swe:control>&nbsp;&nbsp;<swe:control id="1213"  property="FormattedHtml" hintText="Preview Icon"/></td>
+	</tr>
+	
+	<tr>
+		<td colspan="8"><div class="Border1"><img src="images/spacer.gif" width="1" height="1"></div></td>
+	</tr>
+	
+	<tr>
+		<td class="mceLabel" align="right"><swe:control id="1204"  property="FormattedHtml" hintText="Category"/></td>
+		<td class="mceField" colspan="3"><swe:control id="1304"  property="FormattedHtml" hintText="Field"/></td>
+		<td class="mceField">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td class="mceLabel" align="right"><swe:control id="1224"  property="FormattedHtml" hintText="Greeting"/></td>
+		<td class="mceField"><swe:control id="1324"  property="FormattedHtml" hintText="Field"/></td>
+		<td class="mceField">&nbsp;&nbsp;&nbsp;</td>	
+	</tr>
+	
+	<tr>
+		<td class="mceLabel" align="right"><swe:control id="1205"  property="FormattedHtml" hintText="Body"/></td>
+		<td class="mceField" ><swe:control id="1305"  property="FormattedHtml" hintText="Field"/></td>
+		<td class="mceField">&nbsp;&nbsp;&nbsp;</td>
+		<td class="mceLabel" colspan="3" align="right"><swe:control id="1225"  property="FormattedHtml" hintText="Closing"/></td>
+		<td class="mceField"><swe:control id="1325"  property="FormattedHtml" hintText="Field"/></td>
+		<td class="mceField">&nbsp;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="8"><swe:control id="1306"  property="FormattedHtml" hintText="Message Body"/></td>
+	</tr>
+	
+	
+	<tr>
+		<td class="mceLabel" align="right"><swe:control id="1207"  property="FormattedHtml" hintText="Attachments"/></td>
+		<td class="mceField" colspan="6">
+			<table cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td class="mceField"><swe:control id="1307"  property="FormattedHtml" hintText="Field"/></td>
+					<td class="mceField"><swe:control id="1407"  property="FormattedHtml" hintText="Icon"/></td>
+					
+					<td class="mceField"><swe:control id="1507"  property="FormattedHtml" hintText="Icon"/></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+</td></tr></table>
+
+
+
+
+<!-- Template End: EmailRespFormOutBoundNew.swt -->	

@@ -1,0 +1,37 @@
+<!-- TemplateStart: CCCalendarAppletTitle.swt -->
+	<table datatable="0" summary="" width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr valign="top"><td><img src="images/spacer.gif" width="1" height="3" alt=""></td></tr></table>
+	
+	<table datatable="0" summary="" class="AppletStyle1" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+
+		<tr class="AppletBlank">
+			<td class="AppletTitle" valign="top" width="8"><img src="images/aplt_opn_d.gif" width="8" height="10" alt=""></td>
+			<td>
+				<table datatable="0" summary="" cellspacing="0" cellpadding="0" border="0">
+					<tr>
+						<td class="AppletTitle" nowrap>
+						   <!-- Plain text title (90) --><swe:control id="90" property="DisplayName" hintText="Title" hintMapType="Control"/>
+						   <!-- GotoView (184) --><swe:control id="184" property="FormattedHtml" hintText="DrillDown Title" hintMapType="Control"/> 						
+						</td>
+						<td class="AppletTitle" width="22" align="right"><img src="images/aplt_curve_d.gif" height="18" width="22" alt=""></td>	
+     				</tr>
+				</table>   
+  			 </td>
+			   <td width="100%" class="AppletBlank" align="right">
+			   
+				   <swe:include file="CCLayoutButtons.swt"/>
+			   				
+				</td>		
+			</tr>
+		</table>
+
+<table datatable="0" summary="" class="AppletStyle1" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr><td class="AppletButtons"><img src="images/spacer.gif" width="2" height="2" alt=""></td></tr>
+</table>
+
+
+<swe:layout viewDisplayMode="Layout"></swe:layout>
+
+<swe:layout viewDisplayMode="Show" appletDisplayMode="Show" appletDisplaySize="Min"></swe:layout>
+
+<swe:layout viewDisplayMode="Show" appletDisplayMode="Show"></swe:layout>
+<!-- Template End: CCCalendarAppletTitle.swt -->

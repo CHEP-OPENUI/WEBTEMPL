@@ -1,0 +1,54 @@
+<!-- Template Start: CCPopupListAssoc.swt -->
+<swe:switch>
+	<swe:case condition="Web Engine State Properties, IsMvgInShuttle">
+		<swe:form>
+				<tr valign=top>
+					<td colSpan=2 class=AppletStylePopup>
+						<swe:include file="CCPopupListAssocShuttleButtonsTop.swt"/>
+					</td>
+				</tr>
+				<tr valign=top class=AppletStylePopup>
+					<td width='47%' class=AppletTD1>
+						<table datatable="0" summary="" width="100%" border=0 cellpadding=0 cellspacing=0 style='background:#F0F0F0;padding-left:10;'>
+						<tr><td>
+							<table datatable="0" summary="" width='100%' style='padding-top:5;' cellspacing=0 cellpadding=0 border=0 align=center>
+								<tr style='background:#F0F0F0;'>
+									<td width='100%' class=AppletTD2>
+										<swe:control id="1097"><swe:this property="FormattedHtml" hintText="Title"/></swe:control>
+									</td>
+									<td valign="middle"><img src='images/spacer.gif' width='1' height='16' alt="">&nbsp;<img src="images/btn_div.gif" height="13" align="middle" alt=""></td>
+									<td valign="middle" align="right" class=AppletTD3 nowrap>&nbsp;<swe:this property="RowCounter"/>&nbsp;</td>
+								</tr>
+							</table>
+							<swe:error>
+								<table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="4" cellspacing="0" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/><br>&nbsp;</td></tr></table>
+							</swe:error>
+							<div class="swe:this.SelectStyle"><div class="AppletHIFormBorder">
+								<swe:list>
+									<table valign="top" width="100%" cellpadding="2" cellspacing="0" border="1" borderColor="#cccccc" datatable="1" summary="swe:this.ListSummary">
+										<swe:include file="CCListHeader.swt"/>
+										<swe:include file="CCListBody.swt"/>
+									</table>
+								</swe:list>
+							</div></div>
+						</td></tr>
+						</table>
+						<!--img src='images/spacer.gif' width='10' height='20' alt=''-->
+						<!--button row-->
+						<table datatable="0" summary="" width="100%" cellpadding="2" cellspacing="0" border="0"  Class="swe:class AppletBttm">
+							<tr>
+								<td width="100%"><img src="images/spacer.gif" valign="top" width="10" alt=""></td>
+
+								<swe:include file="CCButtons_Popup.swt"/>
+
+								<td><img src="images/spacer.gif" valign="top" width="10" alt=""></td>
+							</tr>
+						</table>
+					</td>
+			</swe:form>
+	</swe:case>
+	<swe:default>
+		<swe:include file="CCPopupList.swt"/>
+	</swe:default>
+</swe:switch>
+<!-- Template End: CCPopupListAssoc.swt -->

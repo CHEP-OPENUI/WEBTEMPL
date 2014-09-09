@@ -1,0 +1,45 @@
+<!--  Template Start: CCPageContainer.swt -->
+
+<HTML dir="swe:dir">
+<head>
+<title><swe:this property="Title"/></title>
+<swe:include file="CCStylesChoice.swt"/>
+</head>
+
+      <swe:default>
+      			         <swe:frameset htmlAttr="rows='0,27,0,0,*,0' border='0' frameborder='No'">
+
+      		              <!--  NOTE! Any changes made in this section need to be in sync with frames in top swe:case section -->
+                          <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+     			                  <swe:include file="CCFrameBanner.swt"/>
+                          </swe:frame>
+
+      		              <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      		                  <swe:include file="CCFrameViewbar.swt"/>
+      		              </swe:frame>
+
+      					  <swe:frame type="Threadbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      						  <swe:include file="CCFrameThreadbar.swt"/>
+      					  </swe:frame>
+
+      		              <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      		                  <swe:include file="CCFrameScreenbar.swt"/>
+      		              </swe:frame>
+
+      		              <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+      		                  <swe:include file="CCFrameContentHI.swt"/>
+      		              </swe:frame>
+
+      			          <swe:frame type="Toolbar" name="Toolbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+      		                  <swe:include file="CCFrameMsgbar.swt"/>
+      		              </swe:frame>
+
+      			         </swe:frameset>
+
+      </swe:default>
+</HTML>
+
+
+
+<!--  Template End: CCPageContainer.swt -->
+

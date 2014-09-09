@@ -1,0 +1,33 @@
+<!--  Template Start: CCFrameBanner_OUI_ESERVICE.swt -->
+
+<html dir="swe:dir">
+    <head>
+        <title><swe:this property="Title"/></title>
+        <swe:include file="CCStylesChoice.swt"/>
+        <meta charset="utf-8">
+        </style>
+        <script>
+            function logoff()
+            {
+               this.location = unescape(this.location.pathname) + '?SWECmd=Logoff';
+            }="right" 
+        </script>
+    </head>
+     <body class="poweredBy" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0"> 
+<!-- <body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0"> -->
+        <div class="siebui-logo"></div>
+        <div class="applicationMenu" align="right" nowrap><swe:menu type="Default"/></div>
+
+
+     <!--   <swe:pageitem id="11"><div align="right" nowrap><swe:this property="FormattedHtml"/><span class="bannerDiv"/></div></swe:pageitem> -->
+    <swe:pageitem id="12"><div align="right" nowrap><swe:this property="FormattedHtml"/><span class="bannerDiv"/></div></swe:pageitem>
+    <!--    <swe:pageitem id="13"><div align="right" nowrap><font color="#ffffff" face="palatino, times, times new roman" size="4px"><swe:this property="FormattedHtml"/><span class="bannerDiv"/></font></div></swe:pageitem> -->
+    <!--    <swe:pageitem id="14"><div align="right" nowrap><font color="#ffffff" face="palatino, times, times new roman" size="4px"><swe:this property="FormattedHtml"/><span class="bannerDiv"/></font></div></swe:pageitem> -->
+
+ <div id="MsgLayer"/>
+        <div class="header-top tr"><a href="javaScript:logoff()" class="logoutlink">Logoff</a></div>
+        <swe:scripts/>
+    </body>
+</html>
+
+<!--  Template End: CCFrameBanner_OUI_ESERVICE.swt -->

@@ -1,0 +1,79 @@
+<!-- Template Start: CCForm1ColBody.swt -->
+
+<table datatable="0" summary="" class="AppletBorder" width="100%" cellpadding="2" cellspacing="0" border="0" align="center"><tr valign="top"><td>
+<table datatable="0" summary="" class="AppletBlank" width="100%" cellspacing="0" cellpadding="2" border="0" align="center">
+
+<swe:error>
+  <!-- Inside-applet help text -->
+	<tr valign="middle">
+		<td class="scLabelRight"><img src="images/spacer.gif" width="75" height="18" border="0" alt="" /></td>
+		<td class="formInstruct"><span class="error"><swe:this property="FormattedHtml"/></span></td>
+	</tr>  
+</swe:error>
+
+<swe:control id="91">
+  <!-- Inside-applet help text -->
+	<tr valign="middle">
+		<td class="scLabelRight"><img src="images/spacer.gif" width="75" height="10" border="0" alt="" /></td>
+		<td class="formInstruct">&nbsp;</td>
+	</tr>
+	<tr valign="middle">
+		<td class="scLabelRight"><img src="images/spacer.gif" width="75" height="18" border="0" alt="" /></td>
+		<td class="formInstruct"><swe:this property="DisplayName" hintText="Inside Applet Help Text"/></td>
+	</tr>  
+</swe:control>
+
+	<tr valign="middle">
+		<td class="scLabelRight"><img src="images/spacer.gif" width="75" height="10" border="0" alt="" /></td>
+		<td class="formInstruct">&nbsp;</td>
+	</tr>
+
+	
+<swe:for-each startValue="1301" count="50" iteratorName="currentId">
+	<swe:control id="swe:currentId" hintMapType="FormItem">	
+		<tr valign="middle">
+			<td class="scLabelRight" align="swe:this.TextAlignmentLabel">&nbsp;
+			<swe:this property="DisplayName" hintText="Label"/>:					
+			<swe:this property="RequiredIndicator" hintText="Required"/>
+			</td>
+			<td class="scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="Field"/>&nbsp;</td>
+		</tr>
+	</swe:control>
+</swe:for-each>	
+
+<swe:for-each startValue="2301" count="50" iteratorName="currentId">
+	<swe:control id="swe:currentId" hintMapType="FormItem">	
+		<tr valign="middle">
+			<td class="scLabelRight" align="swe:this.TextAlignmentLabel">&nbsp;
+			<swe:this property="DisplayName" hintText="Label"/>:					
+			<swe:this property="RequiredIndicator" hintText="Required"/>
+			</td>
+			<td class="scField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="Field"/>&nbsp;</td>
+		</tr>
+	</swe:control>
+</swe:for-each>	
+
+	<!--blank row-->
+	<tr>
+		<td class="scLabelRight">&nbsp;</td>
+		<td class="scField"><img src="images/spacer.gif" width="14" height="28" border="0" alt="" /></td>
+	</tr>	
+	
+	<tr>
+		<td class="scLabelRight">&nbsp;</td>
+		<td class="scField">
+			<table datatable="0" summary="" cellpadding="2" cellspacing="0" border="0">
+				<tr>	
+					<swe:include file="CCButtons.swt"/>		
+					<td width="100%"><img src="images/spacer.gif" valign="middle" width="1" height="1" border="0" alt=""/></td>									
+				</tr>
+			</table>	
+		</td>
+	</tr>	
+	
+</table>
+</td></tr></table>
+	
+
+
+<!-- Template End: CCForm1ColBody.swt -->

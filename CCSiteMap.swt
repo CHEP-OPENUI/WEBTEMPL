@@ -1,0 +1,127 @@
+<!-- Template Start: CCSiteMap.swt -->
+
+<swe:switch>
+	<swe:case condition="Web Engine State Properties, IsFrameless">
+	</swe:case>
+
+	<swe:default>
+	
+		<HTML dir="swe:dir">
+		<head>
+			<title><swe:this property="Title"/></title>
+			<swe:include file="CCStylesChoice.swt"/>
+		</head>
+
+		<body>
+	</swe:default>
+</swe:switch>
+
+<a name="top" href="#top"></a>
+<table datatable="0" summary="" width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td rowSpan="2" valign="bottom">
+			<swe:image name="ST_MP_GLOBE" category="HTML Control Icons"/>
+		</td>
+		<td class="pad4" valign="top" width="100%">	
+			<div class="Welcome">
+				<swe:pageitem id="400" property="DisplayName" />
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="pad4" valign="bottom">
+			<swe:pageitem id="401" property="DisplayName" />
+		</td>
+	</tr>
+	<tr valign="top">
+		<td class="fader" width="100%" colSpan="2">
+			<img src="images/spacer.gif" width="1" height="2" alt=""></td><td><img src="images/fade_d.gif" alt="" width="200" height="2">
+		</td>
+	</tr>
+</table>
+
+<br>
+
+<table datatable="0" summary="" width="99%" align="center" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td valign=top>
+<swe:for-each-screen property="GotoAnchor">
+   <swe:screenlink>
+     <span class="screenName1"><swe:this property="FormattedHtml"><swe:screenname/><br></swe:this></span>
+   </swe:screenlink>
+</swe:for-each-screen>
+</td>
+</tr>
+</table>
+
+<br>
+<table datatable="0" summary="" width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td rowSpan="2" valign="bottom">
+			<img src="images/st_mp_globe.gif" alt="">
+		</td>
+		<td class="pad4" valign="top" width="100%">	
+			<div class="Welcome">
+				<swe:pageitem id="402" property="DisplayName" />
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="pad4" valign="bottom">
+			<swe:pageitem id="403" property="DisplayName" />
+		</td>
+	</tr>
+	<tr valign="top">
+		<td class="fader" width="100%" colSpan="2">
+			<img src="images/spacer.gif" width="1" height="2" alt=""></td><td><img src="images/fade_d.gif" width="200" height="2" alt="">
+		</td>
+	</tr>
+</table>
+<table datatable="0" summary="" width="100%" align="center">
+<tr>
+<td valign=top>
+
+<div style="display:none;">
+</div>
+    
+        </div>
+<swe:for-each-screen property="Anchor">
+		<swe:screenlink>
+			<img src="images/bullet_screen.gif" align="absmiddle" alt=""><span class="screenName2"><swe:this property="FormattedHtml"><swe:screenname/></swe:this></span>
+		</swe:screenlink>
+		<swe:for-each-view mode="Screen Category">
+		   <swe:viewlink>
+	              <br><img src="images/bullet_view.gif" align="absmiddle" alt=""> <span class="viewName"> <swe:this property="FormattedHtml"> <swe:viewname/></swe:this></span>
+	       </swe:viewlink> 
+		   <swe:for-each-view mode="Detail Category">
+		      <swe:viewlink>
+	                 <br> <img src="images/bullet_sub_view.gif" align="absmiddle" alt=""> <span class="viewName"> <swe:this property="FormattedHtml"><swe:viewname/></swe:this></span>
+	          </swe:viewlink>
+		      <swe:for-each-subview>
+		         <swe:viewlink>
+	                    <br> <img src="images/bullet_4th_lvl_view.gif" align="absmiddle" alt=""> <span class="viewName"> <swe:this property="FormattedHtml"><swe:viewname/></swe:this></span>
+                 </swe:viewlink>
+              </swe:for-each-subview>
+	       </swe:for-each-view>
+		</swe:for-each-view>
+	<br> <br>
+</swe:for-each-screen>
+</div>
+</td>
+</tr>
+</table>
+
+<swe:switch>
+	<swe:case condition="Web Engine State Properties, IsFrameless">
+	</swe:case>
+
+	<swe:default>
+	
+		<swe:scripts/>
+		</body>
+		</HTML>
+
+	</swe:default>
+</swe:switch>
+
+<!-- Template End: CCSiteMap.swt -->

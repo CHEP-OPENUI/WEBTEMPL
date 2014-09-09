@@ -1,0 +1,51 @@
+<!--  Template Start: CCFormFilterButtonsTop.swt -->
+
+	<table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">		
+		<!-- button row-->
+		<tr class="AppletButtons">
+			<td><img src="images/spacer.gif" height="1" width="10" alt=""></td>
+			<td colspan="2">
+				<table cellpadding="2" cellspacing="0" border="0">
+					<tr class="AppletButtons">	
+						
+                                            <swe:include file="CCButtons.swt"/>											
+					    <swe:include file="CCRecordNav.swt"/>	
+					    <td><swe:include file="CCTogglebar_drop.swt"/></td>			
+					    <td nowrap>&nbsp;<b><swe:message type="Query Message" 
+/></b></td>
+					</tr>
+				</table>		
+			</td>		
+			
+			<td align="right" width="100%">
+				<table cellpadding="2" cellspacing="0" border="0">
+					<tr class="AppletButtons">	
+						<td width="100%"><img src="images/spacer.gif" valign="top" width="1" height="1" alt=""></td>		
+						<swe:include file="CCFormButtonsTopRight.swt"/>
+					</tr>
+				</table>		
+			</td>			
+			
+			<td valign="top" align="right">
+				<swe:if-var name="Parent">			     
+					<img src="images/rnd_top_cls_d.gif" valign="top" width="6" height="6" alt="">		
+				</swe:if-var>	
+				<swe:if-var name="ParentWithPointer">			     
+					<img src="images/rnd_top_cls_d.gif" valign="top" width="6" height="6" alt="">	
+				</swe:if-var>	
+				<swe:if-var name="Child">			     
+					<img src="images/spacer.gif" valign="top" width="6" height="6" alt="">			
+				</swe:if-var>	
+				<swe:if-var name="ChildWithPointer">			     
+					<img src="images/spacer.gif" valign="top" width="6" height="6" alt="">		
+				</swe:if-var>	
+				<swe:if-var name="Grandchild">			     
+					<img src="images/rnd_top_cls_d.gif" valign="top" width="6" height="6" alt="">		
+				</swe:if-var>	
+			</td>				
+			
+		</tr>
+	
+	</table>
+	
+<!--  Template End: CCFormFilterButtonsTop.swt -->	

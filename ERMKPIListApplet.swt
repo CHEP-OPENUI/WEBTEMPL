@@ -1,0 +1,70 @@
+<!-- Template Start: ERMKPIListApplet.swt -->
+
+<br>
+<swe:control id="91">
+<div align="right"><swe:this property="FormattedHtml" hintText="Field" hintMapType="Hyperlinked Item"/></div>
+</swe:control>
+<table datatable="0" summary="">
+<swe:for-each startValue="1001" count="4" iteratorName="currentId">
+	
+	<swe:control id="swe:currentId+100"><tr valign="top"></swe:control>
+		
+		<swe:control id="swe:currentId">
+			<td class="reportLbl"><swe:this property="FormattedHtml" hintText="Mappable Label"/></td>
+		</swe:control>
+		<swe:control id="swe:currentId+100">
+			<td width="50%" class="reportFld"><swe:this property="FormattedHtml" hintText="Field"/>
+		</swe:control>
+		<swe:control id="swe:currentId+200">
+			<br><swe:this property="FormattedHtml" hintText="Field"/>
+		</swe:control>		
+		<swe:control id="swe:currentId+100">
+			</td>
+		</swe:control>
+
+		<swe:control id="swe:currentId+1000">
+			<td class="reportLbl"><swe:this property="FormattedHtml" hintText="Mappable Label"/></td>
+		</swe:control>
+		<swe:control id="swe:currentId+1100">
+			<td width="50%" class="reportFld"><swe:this property="FormattedHtml" hintText="Field"/>
+		</swe:control>
+		<swe:control id="swe:currentId+1200">
+			<br><swe:this property="FormattedHtml" hintText="Field"/>
+		</swe:control>		
+		<swe:control id="swe:currentId+1100">
+			</td>
+		</swe:control>
+		
+	<swe:control id="swe:currentId+100"></tr></swe:control>
+
+</swe:for-each>
+</table>
+
+<br>
+
+<table datatable="0" summary="" cellspacing="0" celpadding="0" border="0" >
+<tr>
+<swe:for-each startValue="1301" count="8" iteratorName="currentId">	
+	<swe:control id="swe:currentId"><td class="reportLblBtmBorder" width="swe:this.HtmlWidth" align="swe:this.TextAlignment">&nbsp;<swe:this property="DisplayName" hintText="Mappable Label" />&nbsp;</td></swe:control>
+</swe:for-each>
+</tr>
+
+<swe:for-each-row count="30">
+<tr valign="bottom">
+<td><swe:control id="1301"> <div class="reportObjNum"><swe:this property="FormattedHtml" hintText="Field" hintMapType="Hyperlinked Item"/></div></swe:control></td>
+<swe:for-each startValue="1302" count="7" iteratorName="currentId">	
+	<td><swe:control id="swe:currentId"><div class="reportObjTitle" align="swe:this.TextAlignment" width="swe:this.HtmlWidth"><swe:this property="FormattedHtml" hintText="Field" /></div></swe:control></td>
+</swe:for-each>
+</tr>
+<tr><td><br></td></tr>
+</swe:for-each-row>
+</table>
+
+<br>
+<br>
+<br>
+<swe:control id="191">
+<div align="left"><swe:this property="FormattedHtml" hintText="Field" hintMapType="Hyperlinked Item"/></div>
+</swe:control>
+
+<!-- Template End: ERMKPIListApplet.swt -->

@@ -1,0 +1,54 @@
+<!--  Template Start: dCCAppletListBriefImgBullet2.swt -->
+<swe:include file="CCApplet_Spacer.swt"/>	
+
+<swe:control id="1100"><div class=CmdTxt><swe:this property="FormattedHtml" hintText="Outside Applet Help Text" hintMapType="Control"/></div><p></swe:control>
+
+<span class="AppletStyle5">
+	<swe:form>
+
+			<swe:include file="dCCTitle_Mapped.swt"/>	
+
+			<!--swe:include file="CCTogglebar_drop.swt"/-->
+			
+			<table datatable="0" summary="" width="100%" cellpadding="1" cellspacing="0" border="0" align="center"><tr><td class="AppletBorder">
+			
+			   <table datatable="0" summary="" class="AppletBack" valign="top" width="100%" cellpadding="3" cellspacing="0" border="0">
+                    <swe:for-each-row count="10">
+                    <tr valign="top">
+                        <td width="1"><swe:control id="501"><swe:this property="FormattedHtml" hintText="Small Image (30x30)"/></swe:control>&nbsp;</td>
+	                    <td><swe:control id="1" property="FormattedHtml" hintText="Anchor"/>
+		                    <swe:control id="502">
+		                        <div class="siebui-home-alert-title"><b><swe:this property="FormattedHtml" hintText="Title"/></b><br></div>
+		                    </swe:control> 
+		                    <swe:control id="503">
+		                        <div class="siebui-home-alert-desc"><swe:this property="FormattedHtml" hintText="Description" /><br></div>
+		                    </swe:control> 
+		                    <swe:for-each startValue="504" count="10" iteratorName="currentId">
+		                    <swe:control id="swe:currentId">
+		                        <swe:this property="FormattedHtml" hintText="Other Text"/><br>
+		                    </swe:control> 
+		                    </swe:for-each>
+
+	                    <table datatable="0" summary="" border="0" cellspacing="0" cellpadding="0"><tr>
+		                    <swe:for-each startValue="520" count="10" iteratorName="currentId">
+			                    <swe:control id="swe:currentId">
+		 		                    <td><swe:this property="FormattedHtml" hintText="Other"/></td>
+			                    </swe:control> 
+		                    </swe:for-each>
+                            </tr></table>
+
+	                    </td>
+                    </tr>
+
+                    <tr><td colspan="2"><img src="images/spacer.gif" width="100%" height="3" alt=""></td></tr>
+
+                    </swe:for-each-row>
+			   </table>
+			
+			</td></tr></table>
+
+	</swe:form>	
+</span>	
+
+
+<!--  Template End: dCCAppletListBriefImgBullet2.swt -->

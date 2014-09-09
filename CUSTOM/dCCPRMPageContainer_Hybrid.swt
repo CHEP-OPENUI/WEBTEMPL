@@ -1,0 +1,80 @@
+<!--  Template Start: dCCPRMPageContainer_Hybrid.swt -->
+
+<HTML dir="swe:dir">
+<head>
+<title><swe:this property="Title"/></title>
+<swe:include file="CCStylesChoice.swt"/>
+</head>
+
+<!--The following switch/case accounts for differences between the way IE and NS paint frames-->
+<swe:switch>
+	<swe:case condition="Web Engine State Properties, IsHighInteractive">
+          
+            <swe:frameset htmlAttr="rows='65,29,18,38,*' border='0' frameborder='No'">			
+               <swe:frame type="AppMenu" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                  <swe:include file="dCCFrameBanner_Hybrid.swt"/>
+               </swe:frame>
+
+               <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                  <swe:include file="dCCPRMFrameViewbar.swt"/>
+               </swe:frame>	 
+
+               <swe:frame type="Threadbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                  <swe:include file="CCFrameThreadbar.swt"/>
+               </swe:frame>
+
+               <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+                  <swe:include file="CCFrameScreenbar.swt"/>
+               </swe:frame>
+
+               <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+                  <swe:include file="CCFrameContentHI.swt"/>
+               </swe:frame>
+            </swe:frameset>
+        </swe:case>
+	<swe:case condition="Web Engine User Agent, TestCapability, 'JumpTab:TRUE'">
+        <swe:frameset htmlAttr="rows='44,24,23,*' border='0' frameborder='No'">			
+		     <swe:frame type="Page" name="Page" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+		         <swe:include file="dCCFrameBanner_Hybrid.swt"/>
+		     </swe:frame>
+			 
+			 <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+		         <swe:include file="CCFrameScreenbar.swt"/>
+		     </swe:frame>
+		
+		     <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+		         <swe:include file="dCCFrameViewbar_Hybrid.swt"/>
+		     </swe:frame>	 
+		
+		     <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+		          <swe:include file="CCFrameContent_Logic.swt"/>
+		     </swe:frame>
+		</swe:frameset>
+	</swe:case>
+	<swe:default>
+        <swe:frameset htmlAttr="rows='51,44,23,*' border='0' frameborder='No'">	
+		     <swe:frame type="Page" name="Page" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+		         <swe:include file="dCCFrameBanner_Hybrid.swt"/>
+		     </swe:frame>
+			 		
+		     <swe:frame type="Screenbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+		         <swe:include file="CCFrameScreenbar.swt"/>
+		     </swe:frame>
+		
+		     <swe:frame type="Viewbar" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='No'">
+		         <swe:include file="dCCFrameViewbar_Hybrid.swt"/>
+		     </swe:frame>	 
+		
+		     <swe:frame type="Content" htmlAttr="marginheight='0' marginwidth='0' noresize scrolling='Auto'">
+		          <swe:include file="CCFrameContent_Logic.swt"/>
+		     </swe:frame>
+		</swe:frameset>   
+	</swe:default>	
+</swe:switch>
+
+
+<swe:scripts/>
+
+</HTML>
+
+<!--  Template End: dCCPRMPageContainer_Hybrid.swt -->

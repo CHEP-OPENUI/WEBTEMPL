@@ -1,0 +1,63 @@
+<!-- Template Start: CCPopupListMvg.swt -->
+<swe:switch>
+	<swe:case condition="Web Engine State Properties, IsMvgInShuttle">
+		<table datatable="0" summary="" width='100%' cellspacing=0 cellpadding=0 border=0 align=center>
+			<swe:applet-assoc-mvg>
+			</swe:applet-assoc-mvg>
+				<td nowrap>
+					<swe:form>
+						<table datatable="0" summary="" border=0 cellpadding=0 cellspacing=0>
+							<tr>
+								<td valign=middle style='background:#F0F0F0;' nowrap>
+									<table datatable="0" summary="" cellspacing="2" cellpadding="1" border="0">
+										<swe:control id="3001"><!-- Add, 3001 --><tr><td align=center nowrap><swe:this property="FormattedHtml" hintMapType="Control" hintText="Other"/></td></tr></swe:control>
+										<tr><td>&nbsp;</td></tr>
+										<swe:control id="3003"><!-- Delete,3003 --><tr><td align=center nowrap><swe:this property="FormattedHtml" hintMapType="Control" hintText="Other"/></td></tr></swe:control>
+										<swe:control id="3004"><!-- Delete All, 3004 --><tr><td align=center nowrap><swe:this property="FormattedHtml" hintMapType="Control" hintText="Other"/></td></tr></swe:control>
+									</table>
+								</td>
+								<td class=AppletStyle1 width='100%' style='padding-right:10;background:#F0F0F0;'>
+									<table datatable="0" summary="" width='100%' style='padding-top:5;' border=0 cellspacing=0 cellpadding=0'>
+										<tr style='background:#F0F0F0;'>
+											<td class=AppletTD2 nowrap>
+												<swe:control id="1097"><swe:this property="FormattedHtml" hintText="Title"/></swe:control>
+											</td>
+											<td width='100%'>
+												<swe:include file="CCPopupListMvgShuttleButtonsTop.swt"/>
+											</td>
+										</tr>
+									</table>
+									<swe:error>
+										<table datatable="0" summary="" class="swe:class AppletBack" width="100%" cellpadding="4" cellspacing="0" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/><br>&nbsp;</td></tr></table>
+									</swe:error>
+									<div class="swe:this.SelectStyle"><div class="AppletHIFormBorder">
+										<swe:list>
+											<table valign="top" width="100%" cellpadding="2" cellspacing="0" border="1" borderColor="#cccccc" datatable="1" summary="swe:this.ListSummary">
+											<swe:include file="CCListHeader.swt"/>
+											<swe:include file="CCListBody.swt"/>
+											</table>
+										</swe:list>
+									</div></div>
+								</td>
+							</tr>
+						</table>
+						<!--button row-->
+						<table datatable="0" summary="" width="100%" cellpadding="2" cellspacing="0" border="0"  class="AppletStylePopup">
+							<tr class="swe:class AppletBttm">
+								<td width="100%"><img src="images/spacer.gif" valign="top" width="10" alt=""></td>
+
+								<swe:include file="CCButtons_Popup.swt"/>
+
+								<td><img src="images/spacer.gif" valign="top" width="10" alt=""></td>
+							</tr>
+						</table>
+					</swe:form>
+				</td>
+			</tr></table>
+			<swe:scripts/>
+	</swe:case>
+	<swe:default>
+		<swe:include file="CCPopupList.swt"/>
+	</swe:default>
+</swe:switch>
+<!-- Template End: CCPopupListMvg.swt -->

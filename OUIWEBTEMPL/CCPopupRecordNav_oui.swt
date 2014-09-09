@@ -1,0 +1,37 @@
+<!-- Template Start: CCPopupRecordNav.swt -->
+<!-- Oliver: code redesign -->
+
+	<swe:control id="121">
+		<!-- GotoFirst, 121 -->
+		<span class="siebui-popup-rec-first">
+			<swe:this property="FormattedHtml" hintText="First" hintMapType="Control"/>
+		</span>
+	</swe:control>
+	
+	<swe:control id="122">
+		<!-- GotoPrevious, 122 -->
+		<span class="siebui-popup-rec-prev">
+			<swe:this property="FormattedHtml" hintText="Previous" hintMapType="Control"/>
+		</span>	
+	</swe:control>
+	
+	<!-- RowCounter -->
+	<span class="siebui-popup-row-counter">
+		<swe:this property="RowCounter"/>
+	</span>
+		
+	<swe:control id="123">
+		<!-- GotoNext, 123 -->
+		<span class="siebui-popup-rec-next">
+			<swe:this property="FormattedHtml" hintText="Next" hintMapType="Control"/>
+		</span>
+	</swe:control>
+	
+	<swe:control id="124">
+		<!-- GotoLast, 124 -->
+		<span class="siebui-popup-rec-last">
+			<swe:this property="FormattedHtml" hintText="Last" hintMapType="Control"/>
+		</span>
+	</swe:control>
+		
+<!-- Template End: CCPopupRecordNav.swt -->

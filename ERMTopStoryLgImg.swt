@@ -1,0 +1,26 @@
+<!-- Template Start: ERMTopStoryLgImg.swt -->
+
+<swe:layout viewDisplayMode="Layout">
+	<swe:include file="CCApplet_Spacer.swt"/>
+	<swe:include file="CCLayoutTitlePortal.swt"/>
+</swe:layout>
+
+<swe:layout viewDisplayMode="Show" appletDisplayMode="Show">
+<swe:include file="CCApplet_Spacer.swt"/>
+<span class="AppletStyle5">
+	<swe:form>
+
+		<swe:include file="dCCTitle_Mapped.swt"/>			
+	
+		<swe:include file="CCTogglebar_drop.swt"/>
+				
+		<table datatable="0" summary="" width="100%" cellpadding="1" cellspacing="0" border="0" align="center"><tr><td class="AppletBorder">
+			<table datatable="0" summary="" class="AppletBack" valign="top" width="100%" cellpadding="3" cellspacing="0" border="0">
+				   <swe:include file="ERMTopStory.swt"/>	
+			</table>	
+		</td></tr></table>
+
+	</swe:form>
+</span>
+</swe:layout>
+<!-- Template End: ERMTopStoryLgImg.swt -->

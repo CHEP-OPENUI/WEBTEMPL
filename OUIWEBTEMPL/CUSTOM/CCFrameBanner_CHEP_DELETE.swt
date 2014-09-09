@@ -1,0 +1,53 @@
+<!--  Template Start: CCFrameBanner.swt -->
+
+<html dir="swe:dir">
+    <head>
+        <title><swe:this property="Title"/></title>
+        <swe:include file="CCStylesChoice.swt"/>
+        <meta charset="utf-8">
+        </style>
+        
+    </head>
+    <body class="poweredBy" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    <swe:switch>
+        <swe:case condition="Web Engine State Properties, IsMobileApplicationMode">
+            <div class="header-middle"><img id="logo" src="images/logo.png" alt="Powered by Siebel"></div>
+            <div class="app-back-button"><a href="#" id="back-button"></a></div>
+        </swe:case>
+        <swe:default>
+            <div class="header-middle"><a href="http://www.brambles.com" target="_blank" title="Brambles"><img id="logo" src="images/brambles_logo.jpg" alt="Brambles"></a></div>
+            <div class="applicationMenu" nowrap><swe:menu type="Default"/></div>
+            <swe:pageitem id="11"><div class="bannerDiv" nowrap><swe:this property="FormattedHtml"/><span ></div></swe:pageitem>
+            <swe:pageitem id="12"><div class="bannerDiv" nowrap><swe:this property="FormattedHtml"/></div></swe:pageitem>
+            <swe:pageitem id="13"><div class="bannerDiv" nowrap><swe:this property="FormattedHtml"/></div></swe:pageitem>
+            <swe:pageitem id="14"><div class="bannerDiv" nowrap><swe:this property="FormattedHtml"/></div></swe:pageitem>
+            <swe:pageitem id="15"><div class="bannerDiv" nowrap><swe:this property="FormattedHtml"/></div></swe:pageitem>
+            <swe:searchbar></swe:searchbar>
+            <div id="MsgLayer"/>
+                    <div id="tb_11" class="PDQToolbarContainer">
+                        <swe:form>
+                            <swe:pdqbar>
+                                <div id="PDQToolbar" class="PDQWidth">
+                                    <!--Favorites Label-->
+                                    <swe:pageitem id="35">
+                                        <div class="PageItemLabel"><swe:this property="FormattedHtml" />:</div>
+                                    </swe:pageitem>
+                                    <div class="PageItem"><swe:this property="FormattedHtml" /></div>
+                                </div>
+                            </swe:pdqbar>
+                        </swe:form>
+                    </div>
+                    <div id="HTMLMessageBar" class="header-top tr"><a href="#"></a></div>
+                    <div id="tb_12" class="ToolbarButton">
+                        <swe:toolbar name="HIQuery">
+                            <swe:toolbaritem property="FormattedHtml"/>
+                        </swe:toolbar>
+                    </div>
+        </swe:default>
+    </swe:switch>
+        
+        <swe:scripts/>
+    </body>
+</html>
+
+<!--  Template End: CCFrameBanner.swt -->

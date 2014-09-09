@@ -1,0 +1,33 @@
+<!-- Template Start: eCfgObj_ExplanationJS.swt -->
+<div id="eCfgObj_ExplanationJS.swt" class="cxStatusTempl">
+
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+   <tr class="listRowOff">
+      <td colspan="5">
+         <b><swe:control id="Explanation" CfgUIControl="lblExplanation" CfgHtmlType="CfgLabel" property="DisplayName" /></b>
+      </td>
+   </tr>
+   <tr class="listRowOff" >
+      <td  colspan="5">
+         <table datatable="0" summary="" id="CfgExplanationSpan"></table>
+      </td>
+   </tr>
+</table>
+
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+   <tr class="listRowOff">
+      <td width="100%"></td>
+      <td colspan="2">&nbsp;</td>
+      <td >
+         <swe:control id="CloseExplanation" 
+                      CfgUIControl="ClearTheStatus"
+                      CfgHtmlType="MiniButton" 
+                      InvokeMethod="CloseExplanation"/>
+      </td>
+      <td colspan="2">&nbsp;</td>
+   </tr>
+
+</table>
+
+</div>
+<!-- Template End: eCfgObj_ExplanationJS.swt -->

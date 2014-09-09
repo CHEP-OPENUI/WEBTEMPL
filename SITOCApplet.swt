@@ -1,0 +1,47 @@
+<!-- Template Start SITOCApplet.swt -->
+
+<!--TOC top-->
+<table datatable="0" summary="" width="100%">
+	<tr><td width="145"><hr size=1 width=138></td>
+		<td nowrap>&nbsp;<b><swe:this property="Title"/></b></td>
+		<td width="99%"><hr size=1></td>
+	</tr>
+</table>
+<table datatable="0" summary="" class="Row2" valign="top" width="100%"  cellpadding="4" cellspacing="0" border="0">
+	<tr>
+		<!-- Column 1 of TOC -->
+		<td valign="top">
+			<ul>
+			<swe:for-each count="10" iteratorName="CurrentId" startValue="501">
+				<swe:control id="swe:CurrentId">
+					<li><swe:this property="DisplayName" hintText="Label" hintMapType="Control"/><br>
+				</swe:control>
+			</swe:for-each>
+			</ul>
+			&nbsp;
+		</td>
+		<!-- Column 2 of TOC -->
+		<td valign="top">
+			<ul>
+			<swe:for-each count="10" iteratorName="CurrentId" startValue="601">
+				<swe:control id="swe:CurrentId">
+					<li><swe:this property="DisplayName" hintText="Label" hintMapType="Control"/><br>
+				</swe:control>
+			</swe:for-each>
+			</ul>
+			&nbsp;
+		</td>
+		<!-- Column 3 of TOC -->
+		<td valign="top">
+			<ul>
+			<swe:for-each count="10" iteratorName="CurrentId" startValue="701">
+				<swe:control id="swe:CurrentId">
+					<li><swe:this property="DisplayName" hintText="Label" hintMapType="Control"/><br>
+				</swe:control>
+			</swe:for-each>
+			</ul>
+			&nbsp;
+		</td>
+	</tr>
+</table>
+<!-- Template End SITOCApplet.swt -->

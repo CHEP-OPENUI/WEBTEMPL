@@ -1,0 +1,85 @@
+<!--  Template Start: CCFrameBanner.swt -->
+
+<html dir="swe:dir">
+    <head>
+        <title><swe:this property="Title"/></title>
+        <swe:include file="CCStylesChoice.swt"/>
+        <meta charset="utf-8">
+        </style>
+        
+    </head>
+    <body class="poweredBy" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    <swe:switch>
+        <swe:case condition="Web Engine State Properties, IsMobileApplicationMode">
+            <div id="siebui-toolbar-sitemap-mobile">
+                <swe:toolbar name="SiteMap Mobile">
+                    <swe:toolbaritem property="FormattedHtml"/>
+                </swe:toolbar>
+            </div>
+            <div class="siebui-logo"></div>
+        </swe:case>
+        <swe:case condition="Web Engine State Properties, IsRTL">
+            <div class="siebui-logo siebui-rtl-element-right"></div>
+            <div class="applicationMenu" nowrap><swe:menu type="Default"/></div>
+            <swe:pageitem id="11"><div class="bannerDiv" nowrap><swe:this property="FormattedHtml"/><span ></div></swe:pageitem>
+            <swe:pageitem id="12"><div class="bannerDiv" nowrap><swe:this property="FormattedHtml"/></div></swe:pageitem>
+            <swe:pageitem id="13"><div class="bannerDiv" nowrap><swe:this property="FormattedHtml"/></div></swe:pageitem>
+            <swe:pageitem id="14"><div class="bannerDiv" nowrap><swe:this property="FormattedHtml"/></div></swe:pageitem>
+            <swe:searchbar></swe:searchbar>
+            <div id="MsgLayer"/>
+                    <div id="tb_11" class="PDQToolbarContainer siebui-rtl-element-left">
+                        <swe:form>
+                            <swe:pdqbar>
+                                <div id="PDQToolbar" class="PDQWidth">
+                                    <!--Favorites Label-->
+                                    <swe:pageitem id="35">
+                                        <div class="PageItemLabel siebui-rtl-element-right"><swe:this property="FormattedHtml" />:</div>
+                                    </swe:pageitem>
+                                    <div class="PageItem"><swe:this property="FormattedHtml" /></div>
+                                </div>
+                            </swe:pdqbar>
+                        </swe:form>
+                    </div>
+                    <div id="HTMLMessageBar" class="header-top tr siebui-rtl-element-left"><a href="#"></a></div>
+                    <div id="tb_12" class="ToolbarButton">
+                        <swe:toolbar name="HIQuery">
+                            <swe:toolbaritem property="FormattedHtml"/>
+                        </swe:toolbar>
+                    </div>
+        </swe:case>
+        <swe:default>
+            <div class="siebui-logo"></div>
+            <div class="applicationMenu" nowrap><swe:menu type="Default"/></div>
+            <swe:pageitem id="11"><div class="bannerDiv" nowrap><swe:this property="FormattedHtml"/><span ></div></swe:pageitem>
+            <swe:pageitem id="12"><div class="bannerDiv" nowrap><swe:this property="FormattedHtml"/></div></swe:pageitem>
+            <swe:pageitem id="13"><div class="bannerDiv" nowrap><swe:this property="FormattedHtml"/></div></swe:pageitem>
+            <swe:pageitem id="14"><div class="bannerDiv" nowrap><swe:this property="FormattedHtml"/></div></swe:pageitem>
+            <swe:searchbar></swe:searchbar>
+            <div id="MsgLayer"/>
+                    <div id="tb_11" class="PDQToolbarContainer">
+                        <swe:form>
+                            <swe:pdqbar>
+                                <div id="PDQToolbar" class="PDQWidth">
+                                    <!--Favorites Label-->
+                                    <swe:pageitem id="35">
+                                        <div class="PageItemLabel"><swe:this property="FormattedHtml" />:</div>
+                                    </swe:pageitem>
+                                    <div class="PageItem"><swe:this property="FormattedHtml" /></div>
+                                </div>
+                            </swe:pdqbar>
+                        </swe:form>
+                    </div>
+                    <div id="HTMLMessageBar" class="header-top tr"><a href="#"></a></div>
+                    <div id="tb_12" class="ToolbarButton">
+                        <swe:toolbar name="HIQuery">
+                            <swe:toolbaritem property="FormattedHtml"/>
+                        </swe:toolbar>
+                    </div>
+        </swe:default>
+    </swe:switch>
+        
+        <swe:scripts/>
+    </body>
+</html>
+
+<!--  Template End: CCFrameBanner.swt -->

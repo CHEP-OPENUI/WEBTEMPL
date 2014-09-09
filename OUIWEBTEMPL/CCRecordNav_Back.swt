@@ -1,0 +1,28 @@
+<!-- Template Start: CCRecordNav_Back.swt -->
+<div valign="middle" nowrap>
+    <swe:message type="Applet Control Message"/>
+</div>
+<div class="siebui-tile-nav-back">
+    <swe:control id="121">
+        <!-- GotoFirst, 121 -->
+        <div class="swe:class AppletTitle siebui-tile-nav siebui-tile-nav-first" valign="middle" nowrap>
+            <swe:this property="FormattedHtml" hintText="First" hintMapType="Control"/>
+        </div>
+    </swe:control>
+    
+    <swe:control id="122">
+        <!-- GotoPrevious, 122 -->
+        <div class="swe:class AppletTitle siebui-tile-nav siebui-tile-nav-prev" valign="middle" nowrap>
+            <swe:this property="FormattedHtml" hintText="Previous" hintMapType="Control"/>
+        </div>
+    </swe:control>
+    <swe:control id="151">
+        <div class="swe:class AppletTitle siebui-tile-nav" valign="middle"></div>
+    </swe:control>
+    
+    <swe:control id="152">
+        <div class="swe:class AppletTitle siebui-tile-nav" valign="middle"></div>
+    </swe:control>
+</div>
+
+<!-- Template End: CCRecordNav_Back.swt -->

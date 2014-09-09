@@ -1,0 +1,247 @@
+<!--  Template Start: LSCCAppletCalendarWeekly.swt -->
+<swe:form>
+
+<!--  Template Start: LSStdAppletHeader.swt -->
+<swe:layout viewDisplayMode="Layout">
+	<!-- Used when the applet is in LAYOUT mode -->
+	<swe:include file="CCApplet_Spacer.swt"/>
+	<swe:include file="CCLayoutTitlePortal.swt"/>
+</swe:layout>
+
+<div class="swe:this.SelectStyle">
+	<span class="AppletStyle8">
+		<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0" WIDTH="100%">
+			<swe:layout viewDisplayMode="Show" appletDisplaySize="Max">
+				<TR CELLSPACING="0" WIDTH="100%" HEIGHT="1">
+					<TD>
+						<TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0" BORDER="0" ALIGN="CENTER" BGCOLOR="#FFFFFF">
+							<tr bgcolor="d5e0f4">
+								<td><img src="images/spacer.gif" width="100%" height="1" alt=""></td>
+							</tr>
+						</TABLE>
+					</TD>
+				</TR>
+			</swe:layout>
+			<TR CELLSPACING="0" WIDTH="100%" HEIGHT="2">
+				<TD></TD>
+			</TR>
+		</TABLE>
+		
+		<swe:layout viewDisplayMode="Show">
+			<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0" WIDTH="100%">
+				<TR WIDTH="100%" HEIGHT="1">
+					<TD WIDTH="2" class="AppletTitle"><IMG SRC="images/spacer.gif" alt=""></IMG></TD>
+					<TD class="AppletTitle" WIDTH="100%" valign="middle" nowrap>
+						<swe:layout appletDisplaySize="Min">
+							<swe:control id="204"><!-- Max --></swe:control>
+							<swe:control id="204" property="FormattedHtml" hintText="MaximizeApplet" hintMapType="Control"/>
+							<swe:control id="204"></swe:control>
+						</swe:layout>
+						<swe:layout appletDisplaySize="Max">
+							<swe:control id="203"><!-- Min --></swe:control>
+							<swe:control id="203" property="FormattedHtml" hintText="MinimizeApplet" hintMapType="Control"/>
+							<swe:control id="203"></swe:control>
+						</swe:layout>
+						&nbsp;
+						
+						<!-- Plain text title (90) -->
+						
+						<swe:control id="90" property="DisplayName" hintText="Title" hintMapType="Control"/>
+						
+						<!-- GotoView (184) -->
+						
+						<swe:control id="184" property="FormattedHtml" hintText="DrillDown Title" hintMapType="Control"/> 
+					</TD>
+					<td nowrap><!-- Date Label --><b><swe:control id="99133" property="FormattedHtml" hintText="DateLabel"/></b></td>
+					<td>&nbsp;</td>
+					<td nowrap><!-- Date Field (Month) --><swe:control id="99131" property="FormattedHtml" hintText="PickMonth"/></td>
+					<td>&nbsp;</td>
+					<td nowrap><!-- Date Field (Day) --><swe:control id="99145" property="FormattedHtml" hintText="PickDay"/></td>
+					<td>&nbsp;</td>
+					<td nowrap><!-- Date Field (Year) --><swe:control id="99132" property="FormattedHtml" hintText="PickYear"/></td>
+					<td>&nbsp;</td>
+					<td nowrap><!-- Go --><swe:control id="99109" property="FormattedHtml" hintText="GoPeriod"/></td>
+					<td>&nbsp;</td>
+					<td nowrap><!-- Today --><swe:control id="99110" property="FormattedHtml" hintText="GoToday"/></td>
+					<td>&nbsp;</td>
+					<td nowrap><!-- Previous --><swe:control id="99157" property="FormattedHtml" hintText="PreviousPeriod"/></td>
+					<td>&nbsp;</td>
+					<td nowrap><!-- Next  --><swe:control id="99158" property="FormattedHtml" hintText="NextPeriod"/></td>
+					<TD WIDTH="2" class="AppletTitle"><IMG SRC="images/spacer.gif" alt=""></IMG></TD>
+				</TR>
+			</TABLE>
+		</swe:layout>
+	</span>
+</div>
+<!--  Template End: LSStdAppletHeader.swt -->
+<swe:layout viewDisplayMode="Show" appletDisplaySize="Max">
+	
+	<table width="100%" cellpadding="1" cellspacing="0" border="0" align="center">
+		<tr>
+			<td>
+				<table class="AppletBack" valign="top" width="100%" cellpadding="3" cellspacing="0" border="0">
+					
+					<!-- Body Starts Here -->
+					
+					<!--Button row-->
+					
+					<table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+						<tr class="AppletBack" align="left">
+							<td><img src="images/spacer.gif" height="22" width="5" alt=""></td>
+							<td nowrap align="left" width="100%"><b>
+								<!-- Date Range-->
+								<swe:calendar property="DateRange"></b>
+									</td>
+									<td align="right" width="100%">&nbsp;</td>
+									<td nowrap>
+										<table border=0 cellspacing=0 cellpadding=0>
+											<tr>
+												<td nowrap><!-- Time Zone Label --><b><swe:control id="99107" property="FormattedHtml" hintText="TimeZoneLabel"/></b></td>
+												<td>&nbsp;</td>
+												<td nowrap> <!-- Time Zone field --><swe:control id="99108" property="FormattedHtml" hintText="TimeZoneField" hintMapType="Control"/></td>
+												<td>&nbsp;</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+							
+							<!--Body-->
+							
+							<table bgcolor="#fffffe" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" class="AppletBack">
+								<tr>
+									<td class="AppletHIFormBorder">
+										<table valign="top" width="100%" cellpadding="3" cellspacing="1" border="0" class="printBorder">
+											
+											<!--Column Headers-->
+											
+											<tr class="Header">
+												<td nowrap height="18" width="90">&nbsp;</td>
+												<td width="100%">
+													<table bgcolor="#fffffe" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0" align="center">
+														<tr>
+															<td class="Header">
+																<table valign="top" width="100%" cellpadding="3" cellspacing="1" border="0">
+																	<tr class="Header">
+																		<td width="70" align="center"><img src="images/spacer.gif" width="70" height="1" valign="top" alt=""><br>
+																			
+																			<!-- Start Time-->
+																			
+																			<swe:control id="301" property="FormattedHtml"/>
+																		</td>
+																		<td width="70" align="center"><img src="images/spacer.gif" width="70" height="1" valign="top" alt=""><br>
+																			
+																			<!-- End Time-->
+																			
+																			<swe:control id="302" property="FormattedHtml"/>
+																		</td>
+																		<td width="100%"><img src="images/spacer.gif" width="100%" height="1" valign="top" alt=""><br>
+																			
+																			<!-- Description -->
+																			
+																			<swe:control id="303" property="FormattedHtml"/>
+																		</td>
+																	</tr>
+																</table>
+															</tr>
+														</td>
+													</table>
+												</td>
+											</tr>
+												
+												<!--Data-->
+												
+												<swe:calendarIntervalLoop>
+													<swe:calendarInterval>
+														<tr>
+															<!-- Interval -->
+															<swe:calendarCurrentDayHeader>
+																<!-- td class="calendarIntervalDark" width="90" align="right" -->
+																<td class="calendarInterval" width="90" align="right">
+															</swe:calendarCurrentDayHeader>
+															<swe:calendarNotCurrentDayHeader>
+																<td class="calendarInterval" width="90" align="right">
+															</swe:calendarNotCurrentDayHeader>
+															<table border="0" cellspacing="0" cellpadding="0">
+																<tr>
+																	<td align="right" nowrap width="70"><img src="images/spacer.gif" width="70" height="1" valign="top" alt=""><br>
+																		<!-- Interval -->
+																		<B><swe:this property="Interval"/></B>
+																	</td>
+																	<td>&nbsp;&nbsp;</td>
+																	<td class="printHide">
+																		<!-- New Appt. Bitmap-->
+																		<swe:control id="141" property="FormattedHtml"/>
+																	</td>
+																</tr>
+															</table>
+														</td>
+														<td width="100%" class="calendarActivityBack" height="18">
+															<table class="calendarActivityBorder" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0" align="center">
+																<tr>
+																	<td>
+																		<table valign="top" width="100%" cellpadding="0" cellspacing="0" border="0">
+																			
+																			<!-- Start of activity loop-->
+																			
+																			<swe:calendarActivityLoop>
+																				<swe:calendarActivity>
+																					<tr>
+																						<td dir="ltr" class="calendarActivity" width="70" align="center"><img src="images/spacer.gif" width="70" height="1" valign="top" alt=""><br><swe:this property="StartTime"/></td>
+																						<td dir="ltr" class="calendarActivity" width="70" align="center"><img src="images/spacer.gif" width="70" height="1" valign="top" alt=""><br><swe:this property="EndTime"/></td>
+																						<td class="calendarActivity">&nbsp;&nbsp;&nbsp;</td>
+																						<td class="calendarActivity" width="100%"><img src="images/spacer.gif" width="100%" height="1" valign="top" alt=""><br>
+																							<!-- Repeat Bitmap -->
+																							<swe:control id="142" property="FormattedHtml"/>
+																							<swe:this property="Description"/>
+																						</td>
+																					</tr>
+																				</swe:calendarActivity>
+																				<swe:calendarMultiDayActivity>
+																					<tr class="calendarMultiDayActivity">
+																						<td dir="ltr" class="calendarMultiDayActivity" width="70" align="center"><img src="images/spacer.gif" width="70" height="1" valign="top" alt=""><br><swe:this property="StartTime"/></td>
+																						<td dir="ltr" class="calendarMultiDayActivity" width="70" align="center"><img src="images/spacer.gif" width="70" height="1" valign="top" alt=""><br><swe:this property="EndTime"/></td>
+																						<td class="calendarMultiDayActivity">&nbsp;&nbsp;&nbsp;</td>
+																						<td class="calendarMultiDayActivity" width="100%">
+																							<!-- Repeat Bitmap -->
+																							<swe:control id="142" property="FormattedHtml"/>
+																							<swe:this property="Description"/>
+																						</td>
+																					</tr>
+																					
+																				</swe:calendarMultiDayActivity>
+																				
+																			</swe:calendarActivityLoop>
+																			<!-- End of Activity loop-->
+																			
+																		</table>
+																	</tr>
+																</td>
+															</table>
+														</td>
+													</tr>
+													
+													
+												</swe:calendarInterval>
+												<swe:printHr/>
+											</swe:calendarIntervalLoop>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</swe:calendar>
+						
+						<!-- Body Ends Here -->
+						
+					</table>
+				</td>
+			</tr>
+		</table>
+	</swe:layout>
+	<!-- swe:include file="LSStdAppletTail.swt"/ -->
+</swe:form>	
+
+<!-- swe:include file="CCBottomApplet.swt"/ -->
+
+<!-- End of CCAppletCalendarWeekly.swt -->
+

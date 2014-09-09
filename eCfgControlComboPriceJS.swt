@@ -1,0 +1,43 @@
+<!-- Template Start: eCfgControlComboPriceJS.swt -->
+
+<swe:include file="eCfgPort_HeaderJS.swt"/>
+
+<tr>
+   <td colspan=3>
+      <table datatable="0" summary="" border="0" cellpadding="0" cellspacing="3" width="100%" bgcolor="white">
+         <tr>
+            <td colspan=2 valign="top">
+              <table datatable="0" summary="">
+                <tr>
+                  <td>
+                    <swe:for-each id="1100" CfgLoopType="DomainAndChildren" Automation="N" startValue="1000" count="Dynamic" iteratorName="1100Id"
+                     Usage="ComboBox"
+                     CfgFieldList="CfgFieldName:Name, CfgUIControl:lblName, HtmlAttrib_width:310, Default:Y*
+                                   CfgFieldName:RequireMoreChild, Default:Y*
+                                   CfgFieldName:Original List Price, CfgUIControl:lblListPrice, DataType:DTYPE_CURRENCY, NeedRefresh:N, HtmlAttrib_align:center, HtmlAttrib_width:80*
+                                   CfgFieldName:Current Price, CfgUIControl:lblYourPrice, DataType:DTYPE_CURRENCY, HtmlAttrib_align:center, HtmlAttrib_width:80*
+                                   CfgFieldName:Prod Prom Name, CfgUIControl:lblPromotion, HtmlAttrib_width:70, HtmlAttrib_align:center, 
+                                       PickApplet:ISS Promotion Related Prom Pick Applet, PickList:ISS Promotion Related Prom VBC PickList, 
+                                       Field01:Product Id, PickField01:CompProd Product Id, Constrain01:Y,
+                                       Field02:Prod Prom Name, PickField02:Name,
+                                       Field03:Prod Prom Id, PickField03:Promotion Id*                                     
+                                   CfgFieldName:Explanation, CfgUIControl:lblExplanation, HtmlAttrib_align:center, HtmlAttrib_width:70*
+                                   CfgFieldName:Customize, CfgUIControl:lblCustomize, HtmlAttrib_align:center, HtmlAttrib_width:70"
+                     >
+                      <swe:control id="swe:111Id + 4000" CfgHtmlType="CfgCombo"
+                       CfgJSShow="showCombo" CfgJSUpdateExclusion="updateExcludedItemForPort" CfgJSUpdateSelection="updatePortItemsForComboBox"/>                   
+                    </swe:for-each>
+
+                  </td>
+                </tr>
+              </table>
+            </td>
+
+         </tr>
+      </table>
+   </td>
+</tr>
+
+<swe:include file="eCfgPort_FooterJS.swt"/>
+
+<!-- Template End: eCfgControlComboPriceJS.swt -->

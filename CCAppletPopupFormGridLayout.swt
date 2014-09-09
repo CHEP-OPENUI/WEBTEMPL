@@ -1,0 +1,24 @@
+<!-- Template Start: CCAppletPopupFormGridLayout.swt -->
+
+<swe:include file="CCApplet_NamedSpacer.swt"/>	
+
+<swe:form>
+	<swe:error type="Popup">
+		<table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="2" cellspacing="0" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/></td></tr></table>
+	</swe:error>
+
+	<swe:form-applet-layout>
+	</swe:form-applet-layout>
+	<table datatable="0" summary="" width="100%" cellpadding="2" cellspacing="0" border="0" bgcolor="#cccccc"><tr>	
+		<td width="100%"><img src="images/spacer.gif" valign="top" width="10" height="20" alt=""></td>
+		<swe:include file="CCButtons.swt"/>		
+		<swe:include file="CCButtons_Popup.swt"/>
+		<td><img src="images/spacer.gif" valign="top" width="10" height="20" alt=""></td>									
+	</tr></table>	
+</swe:form>
+
+<!-- Template End: CCAppletPopupFormGridLayout.swt -->
+
+
+
+	

@@ -1,0 +1,41 @@
+<!-- Template Start: eCfgRelationRawCombo.swt -->
+
+<table datatable="0" summary="">
+   <tr>
+      <td>
+         <swe:form>        
+            <SCRIPT>
+               var ComboBoxName = '<swe:control id="swe:IncId+320" CfgFieldName="FieldName" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+               var sSubmitReq   = unescape('<swe:control id="swe:IncId + 3000" CfgUIControl="AutoPick" CfgRequest="ReplaceItem" DisplayMode="EncodeData" CfgHtmlType="CfgAction" InvokeMethod="SubmitRequest" property="FormattedHtml" />');
+               document.write ( "<SELECT name=\"" + ComboBoxName + "\" onChange=\"" + sSubmitReq + "\">" );
+            
+            document.write('<option value="">');
+
+               <swe:for-each id="1100" CfgLoopType="DomainAndChildren" Automation="N" startValue="1000" count="Dynamic" iteratorName="1100Id">
+
+                     var ID            = '<swe:control id="swe:1100Id + 2000" CfgFieldName="Product Id" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+                     var DisplayValue  = unescape('<swe:control id="swe:1100Id + 3000" CfgFieldName="CxObjName" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" DisplayMode="EncodeData" property="FormattedHtml"/>');
+                     var Enabled       = '<swe:control id="swe:1100Id + 1500" CfgFieldName="CxEnabled" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" />';
+                     var DispStyle     = 'eCfgOptionAvailable';
+                     
+                     if( Enabled == "Disabled" )
+                        DispStyle = 'eCfgOptionExcluded';
+                     
+                     var Selected = '<swe:control id="swe:1100Id+600" CfgFieldName="Selected" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+                        
+                     document.write ( '<option ' );
+                     
+                     if ( Selected == "Y" )
+                        document.write ( 'selected' );
+                     
+                     document.write ( ' value="' + ID + '" class="'+ DispStyle + '">' );
+                     document.write ( DisplayValue );
+                </swe:for-each>
+                     document.write('</SELECT>');
+            </SCRIPT>
+         </swe:form>
+      </td>
+   </tr>
+</table>
+
+<!-- Template Start: eCfgRelationRawCombo.swt -->

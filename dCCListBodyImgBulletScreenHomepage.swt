@@ -1,0 +1,32 @@
+<!--  Template Start: dCCListBodyImgBulletScreenHomepage.swt -->
+<swe:for-each-row count="10">
+<tr valign="top">
+    <td width="1"><swe:control id="501"><swe:this property="FormattedHtml" hintText="Small Image (30x30)"/></swe:control>&nbsp;</td>
+	<td><swe:control id="1" property="FormattedHtml" hintText="Anchor"/>
+		<swe:control id="502">
+		    <swe:this property="FormattedHtml" hintText="Title"/><br>
+		</swe:control> 
+		<swe:control id="503">
+		    <swe:this property="FormattedHtml" hintText="Description" /><br>
+		</swe:control> 
+		<swe:for-each startValue="504" count="10" iteratorName="currentId">
+		  <swe:control id="swe:currentId">
+		    <swe:this property="FormattedHtml" hintText="Other Text"/><br>
+		  </swe:control> 
+		</swe:for-each>
+
+	  <table datatable="0" summary="" border="0" cellspacing="0" cellpadding="0"><tr>
+		<swe:for-each startValue="520" count="10" iteratorName="currentId">
+			<swe:control id="swe:currentId">
+		 		<td><swe:this property="FormattedHtml" hintText="Other"/></td>
+			</swe:control> 
+		</swe:for-each>
+        </tr></table>
+
+	</td>
+</tr>
+
+<tr><td colspan="2"><img src="images/spacer.gif" width="100%" height="3" alt=""></td></tr>
+
+</swe:for-each-row>
+<!--  Template End: dCCListBodyImgBulletScreenHomepage.swt -->

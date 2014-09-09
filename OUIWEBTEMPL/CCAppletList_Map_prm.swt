@@ -1,0 +1,51 @@
+<!-- Template Start: CCAppletList_B_EL.swt -->
+<swe:form>
+
+    <swe:include file="CCTitle_Named.swt"/>
+        <swe:if condition="Web Engine State Properties, IsPrintOff">
+            <div class="swe:this.SelectStyle">	
+         </swe:if>
+    <swe:switch>
+        <swe:default>
+            <swe:include file="CCRecordNav.swt"/>
+        </swe:default>
+    </swe:switch>
+    <swe:if condition="Web Engine State Properties, IsHighInteractive">
+        <swe:if condition="Web Engine State Properties, IsPrintOff">
+            <div class="AppletHIListBorder">
+        </swe:if>
+    </swe:if>
+    <swe:list>
+    </swe:list>
+    
+    <!-- POPUP -->
+
+<swe:list-detail>
+     <div style="width:100%; display: table-row">
+        <DIV style="WIDTH:25%; display: table-cell;">
+            <swe:for-each iteratorName="currentId" startValue="500" count="5">
+                <swe:control id=swe:currentId hintMapType="FormItem">
+                    <DIV class="mceLabel siebui-form-label" style="display: table-cell;WIDTH: 50%" align=swe:this.TextAlignmentLabel>
+                        <swe:this hintText="Label" property="DisplayName"></swe:this>:
+                 </DIV>
+                 <DIV class=siebui-form-data style="display: table-cell;WIDTH: 50%" align=swe:this.TextAlignment>
+                     <swe:this hintText="Field" property="FormattedHtml"></swe:this>
+               </DIV>
+               <DIV style="CLEAR: left">
+               </DIV>
+                </swe:control>
+            </swe:for-each>
+        </DIV>
+     </div>
+</swe:list-detail>
+
+    <swe:if condition="Web Engine State Properties, IsHighInteractive">
+         </div>
+    </swe:if>
+    <swe:if condition="Web Engine State Properties, IsPrintOff">
+         </div>
+    </swe:if>
+</swe:form>	
+
+
+<!-- Template End: CCAppletList_B_EL.swt -->

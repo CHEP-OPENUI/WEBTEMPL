@@ -1,0 +1,44 @@
+<!-- Template Start: ERMImageDescr.swt -->
+<!-- Modeled after CCAppletFormBase4Col_B -->
+<swe:form>
+	<div class="swe:this.SelectStyle">	
+		<table datatable="0" summary="" width="100%" cellpadding="0" class="mceWideFields" valign="top">
+				<swe:control id="1001">
+					<tr><td><swe:this property="FormattedHtml" hintText="FormSection" hintMapType="FormSection"/></td></tr>
+				</swe:control>	
+
+				<swe:control id="1296" hintMapType="FormItem">
+					<tr valign="top">
+						<td>
+							<span class="mceField" align="swe:this.TextAlignment">
+								<swe:this property="FormattedHtml" hintText="1-Column Wide Field" hintMapLabelId="swe:currentId"/>
+							</span>
+						</td>
+					</tr>										
+				</swe:control>									
+
+				<swe:control id="1297" hintMapType="FormItem">
+					<tr valign="top">
+						<td>
+							<!-- JPADHI FR # 12-1B2Q9MI START CHANGE -->
+							<span class="mceLabel" align="swe:this.TextAlignmentLabel">
+								<swe:this property="DisplayName" hintText="Label"/>:
+							</span>
+							<!-- JPADHI FR # 12-1B2Q9MI END CHANGE -->
+						</td>
+					</tr>										
+				</swe:control>									
+
+				<swe:control id="1298" hintMapType="FormItem">
+					<tr valign="top">
+						<td>
+							<span class="mceField" align="swe:this.TextAlignment">
+								<swe:this property="FormattedHtml" hintText="1-Column Wide Field" hintMapLabelId="swe:currentId"/>
+							</span>
+						</td>
+					</tr>										
+				</swe:control>									
+		</table>
+	</div>
+</swe:form>
+<!-- Template End: ERMImageDescr.swt -->	

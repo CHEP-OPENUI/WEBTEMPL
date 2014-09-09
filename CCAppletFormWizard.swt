@@ -1,0 +1,15 @@
+
+<!-- Template Start: CCAppletFormWizard.swt -->
+<swe:control id="1100"><div class=CmdTxt><swe:this property="FormattedHtml" hintText="Outside Applet Help Text"/></div><p></swe:control>
+
+<table datatable="0" summary="" class="AppletStyle1" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+<swe:form>	
+	<swe:if-var name="Child" set="false">
+		<tr><td colspan="2"><swe:include file="CCTitle_Mapped.swt"/></td></tr>
+	</swe:if-var>
+
+	<tr><td><swe:include file="CCForm1ColBody.swt"/></td></tr>
+
+</swe:form>	
+</table>
+<!-- Template End: CCAppletFormWizard.swt -->

@@ -1,0 +1,11 @@
+<!-- Template Start: CCListButtonsTopNoRecNav.swt -->
+		
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="4" border="0"  align="center">
+	<tr class="AppletButtons">
+		<swe:include file="CCButtons.swt"/>	
+		<td width="100%" class="AppletButtons" align="right">&nbsp;</td>	
+		<swe:include file="CCListButtonsTopRight.swt"/>	
+	</tr>
+</table>
+	
+<!-- Template End: CCListButtonsTopNoRecNav.swt -->	

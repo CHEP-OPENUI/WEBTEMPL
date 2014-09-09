@@ -1,0 +1,66 @@
+<!-- Template Start: dCCError.swt -->
+<swe:include file="CCHTMLHeader.swt"/>
+
+	<img src="images/spacer.gif" width="5" height="15" alt=""><br>
+	<table datatable="0" summary="" class="AppletStyle1" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+	<tr valign="top"><td class="AppletStyle1">
+
+	
+		<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+			<tr class="AppletBlank">
+				<td class="AppletTitle" nowrap><img src="images/spacer.gif" width="6" height="1" alt=""><swe:pageitem id="101" property="DisplayName"/></td>
+				<td width="100%" class="AppletTitle" align="right">&nbsp;</td>
+			</tr>
+		</table>
+		
+		<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">		
+			<!--button row-->
+			<tr class="AppletButtons">
+				<td><img src="images/spacer.gif" height="1" width="10" alt=""></td>
+				<td colspan="2">
+					 <swe:pageitem id="2">
+				     	 <!-- Back Button, 136 -->
+				        <td class="rAppletButtons" valign="absmiddle">
+				        <swe:this property="FormattedHtml"/>
+				        </td>
+						<td>&nbsp;</td>
+			     	 </swe:pageitem>	
+				</td>		
+				<td width="100%"><img src="images/spacer.gif" height="1" width="10" alt=""></td>
+			</tr>
+		
+		</table>		
+	
+	
+		<table datatable="0" summary="" class="AppletBorder" width="100%" cellpadding="2" cellspacing="0" border="0" align="center"><tr><td>
+		<table datatable="0" summary="" class="AppletBack"  cellpadding="5" cellspacing="0" border="0" width="100%">
+			<tr valign="top">
+				<td>
+					<table datatable="0" summary="" border="0" cellspacing="2" cellpadding="1">
+				        <tr>
+						  <td><span class="error"><swe:pageitem id="102" property="DisplayName" /><br>&nbsp;</span></td>
+				        </tr>
+				        <tr>
+						  <td><swe:pageitem id="1" property="FormattedHtml" /><p></p>&nbsp;</td>
+						</tr>
+						
+						<swe:pageitem id="4">
+						  <!-- Link -->
+				          <tr>
+						    <td class="Row2"><swe:this property="FormattedHtml"/><br>&nbsp;</td>
+						  </tr>
+						</swe:pageitem>
+					</table>
+				</td>
+			</tr>		
+		</table>
+		</td></tr></table>
+		
+	<swe:include file="CCBottomApplet.swt"/>
+
+	  
+</td></tr></table>
+
+<p></p>
+<swe:include file="CCHTMLFooter.swt"/>
+<!-- Template End: dCCError.swt -->

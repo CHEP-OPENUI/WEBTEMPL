@@ -1,0 +1,7 @@
+<swe:include file="CCHTMLHeader.swt"/>
+<swe:include file="CCThreadbar.swt"/>
+<swe:scripts/>
+<!--WebIntelligence Applet -->
+<swe:applet id="101" hintText="WebIntelligence Display Area"/>
+</body>
+</html>

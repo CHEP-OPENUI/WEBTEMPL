@@ -1,0 +1,12 @@
+<!-- Template Start CCAppletFormButtons_Right_ss.swt -->   
+<!-- Place holder for the button to place on the top right of the applet -->
+<div class="siebui-ss-btn-ctrl-right-align">
+    <swe:for-each count="4" startValue="171" iteratorName="currentId">
+        <swe:control id="swe:currentId">
+            <div class="siebui-ss-rightbutton">
+                <swe:this property="FormattedHtml" hintMapType="Control" hintText="New"/>
+            </div>
+        </swe:control>
+    </swe:for-each>
+ </div>
+<!-- Template End CCAppletFormButtons_Right_ss.swt -->

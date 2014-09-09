@@ -1,0 +1,29 @@
+<!-- Template Start: CCPopupList.swt -->
+<!-- Oliver: code redesign, new classes -->
+
+<swe:form>
+	
+	<div class="AppletStylePopup">
+
+		<swe:error>
+			<div class="siebui-popup-error-text"><swe:this property="FormattedHtml"/></div>
+		</swe:error>	
+
+		<swe:include file="CCPopupListButtonsTop_oui.swt"/>
+		<div class="swe:this.SelectStyle">
+			<swe:list>
+				<table width="100%" datatable="1" summary="swe:this.ListSummary">
+					<swe:include file="CCListHeader.swt"/>
+					<swe:include file="CCListBody.swt"/>
+				</table>
+			</swe:list>
+		</div>
+		<div class="siebui-popup-btm">
+			<swe:include file="CCButtons_Popup_oui.swt"/>
+		</div>
+
+	</div>
+
+</swe:form>	
+<swe:scripts/>
+<!-- Template End: CCPopupList.swt -->

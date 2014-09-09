@@ -1,0 +1,40 @@
+<!--  Template Start: ePortalNavBarAppletDeptPage_LeftNav.swt -->
+<swe:layout viewDisplayMode="Layout">
+<swe:include file="CCApplet_Spacer.swt"/>
+	<swe:include file="CCLayoutTitlePortal.swt"/>
+</swe:layout>
+
+<swe:layout viewDisplayMode="Show" appletDisplayMode="Show">
+
+	<swe:control id="1100">
+	  <div class=CmdTxt><swe:this property="FormattedHtml" hintText="Outside Applet Help Text" hintMapType="Control"/></div><p>
+	</swe:control>
+
+	<swe:form>
+		<table datatable="0" summary="" class='mmRootLevel' valign="top" width="100%"  cellpadding="0" cellspacing="0" border="0">
+			<tr>
+				<td valign=top width=2></td>
+				<td valign=top width="100%">
+					<swe:for-each-row>
+					<span class="SubviewOn">
+						<swe:control id="501">
+							<swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/>
+						</swe:control>
+						<swe:control id="502">
+							<swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/>
+						</swe:control>
+					</span><BR>
+					</swe:for-each-row>
+				</td>
+			</tr>
+		</table>
+		<table datatable="0" summary="" height="100%" width="100%" bgColor=#D5E0F4 border="0">
+			<tr>
+				<td></td>
+			</tr>
+		</table>
+		
+	</swe:form>
+
+</swe:layout>
+<!--  Template End: ePortalNavBarAppletDeptPage_LeftNav.swt -->

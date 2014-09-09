@@ -1,0 +1,17 @@
+<!--  Template Start: CCAppletScreenHomepageBanner.swt -->
+
+<span class="AppletStyleParent77">
+<swe:layout viewDisplayMode="Show" appletDisplayMode="Show">
+<swe:form>
+
+<table datatable="0" summary="" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0" >
+	<tr>
+		<td><span class="ScreenHomePageBannerTitle"><swe:this property="Title"/></span></td>		
+	</tr>
+</table>
+
+
+</swe:form>
+</swe:layout>
+</span>
+<!--  Template End: CCAppletScreenHomepageBanner.swt -->

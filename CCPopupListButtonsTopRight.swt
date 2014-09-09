@@ -1,0 +1,49 @@
+<!-- Template Start: CCPopupListButtonsTopRight.swt -->
+
+	<!-- Buttons (Optional, Optional) --->
+
+	<swe:control id="160">
+		<td Class="swe:class AppletTitle" valign="middle" nowrap>
+			<b><swe:this property="FormattedHtml" hintMapType="Control" hintText="Find (Label)"/></b>
+        </td>
+    </swe:control>
+	  
+	<swe:control id="161">
+        <td Class="swe:class AppletTitle" valign="middle" nowrap>
+			<swe:this property="FormattedHtml" hintMapType="Control"  hintText="PopupQueryCombo"/>
+        </td>
+    </swe:control>
+
+	<swe:control id="162">
+        <td Class="swe:class AppletTitle" valign="middle" nowrap>
+			<b><swe:this property="FormattedHtml" hintMapType="Control"  hintText="Start (Label)"/></b>
+        </td>
+    </swe:control>
+	  
+	<swe:control id="163">
+        <td Class="swe:class AppletTitle" valign="middle" nowrap>
+			<swe:this property="FormattedHtml" hintMapType="Control"  hintText="PopupQuerySearch"/>
+        </td>
+    </swe:control>
+	  
+	<swe:control id="164">
+        <td valign="middle" nowrap>
+			<swe:this property="FormattedHtml" hintMapType="Control"  hintText="PopupQueryExecute"/>
+        </td>
+    </swe:control>
+
+    <swe:control id="150">
+		<!-- optional control -->
+        <td valign="middle" nowrap>
+			<swe:this property="FormattedHtml" hintMapType="Control"/>
+		</td>
+    </swe:control>
+	  
+	<swe:control id="151">
+		<!-- optional control -->
+        <td valign="middle" nowrap>
+			<swe:this property="FormattedHtml" hintMapType="Control"/>
+        </td>
+	</swe:control>
+
+<!-- Template End: CCPopupListButtonsTopRight.swt -->

@@ -1,0 +1,80 @@
+<!--  Template Start: CCFormButtonsTop.swt -->
+<!--  Change background color by setting style for table. -->
+<!--  Add 101 and 102 control for Name and Signature. -->  
+<!--  Add <td> &nbsp; </td> between 101 and 102 (space between Name and Signature button). -->
+<!--  Add <td width="100%">&nbsp;</td> after 102 to separate it from the rest buttons. -->
+<!--  Change name="Child" to name="Child2" to turn off MenuBttn on applet. -->
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="background-color:#ccccff;color : #333399;">		
+		
+<!-- button row-->
+<tr class="AppletButtons">
+
+<td><img src="images/spacer.gif" height="1" width="10" alt=""></td>
+
+<swe:control id="101"><!-- optional control  --><td class="scLabelRight" nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+<td>&nbsp;</td>
+<swe:control id="102"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+
+<swe:control id="801"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+<swe:control id="802"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+
+<td width="100%">&nbsp;</td>
+
+<td colspan="2">
+	<table cellpadding="2" cellspacing="0" border="0">
+		<tr class="AppletButtons">	
+							
+						<swe:if-var name="Parent">			     
+						    <td valign="middle" nowrap><swe:menu type="Button" bitmap="MenuBttn" width="38" height="16" bgcolor="#6666cc" fgcolor="#ffffff" /></td>
+					  	</swe:if-var>
+						
+						<swe:if-var name="ParentWithPointer">			     
+						    <td valign="middle" nowrap><swe:menu type="Button" bitmap="MenuBttn" width="38" height="16" bgcolor="#6666cc" fgcolor="#ffffff" /></td>
+					  	</swe:if-var>	
+						
+						<swe:if-var name="Child2">			     
+						    <td valign="middle" nowrap><swe:menu type="Button" bitmap="MenuBttn" width="38" height="16" bgcolor="#ccccff" fgcolor="#000000" /></td>
+					  	</swe:if-var>	
+						
+						<swe:if-var name="ChildWithPointer">			     
+						    <td valign="middle" nowrap><swe:menu type="Button" bitmap="MenuBttn" width="38" height="16" bgcolor="#ccccff" fgcolor="#000000" /></td>
+					  	</swe:if-var>	
+						
+						<swe:if-var name="Grandchild">			     
+						    <td valign="middle" nowrap><swe:menu type="Button" bitmap="MenuBttn" width="38" height="16" bgcolor="#ccccff" fgcolor="#000000" /></td>
+					  	</swe:if-var>							
+							
+						<swe:include file="CCButtons.swt"/>											
+						
+						<td><swe:include file="CCTogglebar_drop.swt"/></td>			
+						<td nowrap>&nbsp;<b><swe:message type="Query Message" /></b></td>
+			</tr>
+		</table>		
+</td>		
+			
+			
+<td valign="top" align="right">
+				<swe:if-var name="Parent">			     
+					<img src="images/rnd_top_cls_d.gif" valign="top" width="6" height="6" alt="">		
+				</swe:if-var>	
+				<swe:if-var name="ParentWithPointer">			     
+					<img src="images/rnd_top_cls_d.gif" valign="top" width="6" height="6" alt="">	
+				</swe:if-var>	
+				<swe:if-var name="Child">			     
+					<img src="images/spacer.gif" valign="top" width="6" height="6" alt="">			
+				</swe:if-var>	
+				<swe:if-var name="ChildWithPointer">			     
+					<img src="images/spacer.gif" valign="top" width="6" height="6" alt="">		
+				</swe:if-var>	
+				<swe:if-var name="Grandchild">			     
+					<img src="images/rnd_top_cls_d.gif" valign="top" width="6" height="6" alt="">		
+				</swe:if-var>	
+			</td>				
+
+			
+		</tr>
+	
+	</table>
+	
+<!--  Template End: CCFormButtonsTop.swt -->	

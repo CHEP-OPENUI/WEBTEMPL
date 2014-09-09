@@ -1,0 +1,44 @@
+<!--  Template Start: LSCCAppletSalutationGraphical.swt -->
+<swe:form>
+	<swe:include file="LSStdAppletHeader.swt"/>
+	<swe:layout viewDisplayMode="Show" appletDisplaySize="Max">
+		<table width="100%" cellpadding="1" cellspacing="0" border="0" align="center">
+			<tr>
+				<td>
+					<table class="AppletBack" valign="top" width="100%" cellpadding="3" cellspacing="0" border="0">
+						<tr>
+							<td>
+								<!-- Body Starts Here -->
+								<table valign="top" width="100%" cellpadding="0" cellspacing="0" border="0" class="AppletStyle8" background="images/greeting.jpg">
+									<tr valign="bottom">
+										<td>
+											<swe:control id="89" property="FormattedHtml" hintText="Image" hintMapType="Control"/>
+										</td>
+									</tr>
+									<tr valign="bottom">
+										<swe:control id="1">
+											<td class="pad4" width="100%">
+												<FONT COLOR="white">
+													<swe:this property="FormattedHtml" hintText="Salutation"/>
+												</FONT>
+											</td>
+										</swe:control>
+									</tr>
+									<tr>
+										<td colspan="2" class="AppletButtons">
+											<img src="images/spacer.gif" width="1" height="5" alt="">
+										</td>
+									</tr>
+									</tr>
+								</table>
+								<!-- Body Ends Here -->
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</swe:layout>
+	<!-- swe:include file="LSStdAppletTail.swt"/ -->
+</swe:form>	
+<!--  Template End: LSCCAppletSalutationGraphical.swt -->

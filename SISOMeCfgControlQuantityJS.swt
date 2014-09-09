@@ -1,0 +1,26 @@
+<!-- Template Start: SISOMeCfgControlQuantityJS.swt -->
+<swe:include file="eCfgPort_HeaderJS.swt"/>
+
+<tr>
+   <td colspan=3>
+      <swe:for-each id="500" CfgLoopType="DomainAndChildren" startValue="1500" count="Dynamic" iteratorName="111Id" 
+       Usage="QuantityList" 
+       CfgFieldList="CfgFieldName:Quantity, CfgUIControl:lblQuantity, HtmlAttrib_align:left, HtmlAttrib_width:50, Default:Y*
+                     CfgFieldName:Name, CfgUIControl:lblName, HtmlAttrib_width:300, Default:Y*
+                     CfgFieldName:RequireMoreChild, Default:Y*
+                     CfgFieldName:Service Id, CfgUIControl:lblServiceId, HtmlAttrib_align:center, HtmlAttrib_width:80*
+                     CfgFieldName:Service Point Id, CfgUIControl:lblServicePoint, HtmlAttrib_align:center, HtmlAttrib_width:80*
+                     CfgFieldName:Explanation, CfgUIControl:lblExplanation, HtmlAttrib_align:center, HtmlAttrib_width:70*
+                     CfgFieldName:Customize, CfgUIControl:lblCustomize, HtmlAttrib_align:center, HtmlAttrib_width:70"
+                     >
+
+          <swe:control id="swe:111Id + 4000" CfgHtmlType="CfgQuantity"
+           CfgJSShow="showQuantityList" CfgJSUpdateExclusion="updateExcludedItemForPort" CfgJSUpdateSelection="updatePortItemsForQuantityList"/>
+      </swe:for-each>
+
+   </td>
+</tr>
+
+<swe:include file="eCfgPort_FooterJS.swt"/>
+
+<!-- Template End: SISOMeCfgControlQuantityJS.swt -->

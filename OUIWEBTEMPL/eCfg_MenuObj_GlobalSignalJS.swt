@@ -1,0 +1,270 @@
+<!-- Template Start: eCfg_MenuObj_GlobalSignalJS.swt -->
+
+<script>
+
+   var helpVisible = false;
+
+   function ShowHelp()
+   {
+      var objHelp = document.getElementById("HELP_BOX");
+
+      if (helpVisible == false)
+      {
+         var xPos, yPos;
+         var objHelpPos = document.getElementById("HELP_POS");
+
+         xPos = objHelpPos.offsetLeft;
+         yPos = objHelpPos.offsetTop;
+
+         //show the help box
+         objHelp.style.left = xPos;
+         objHelp.style.top = yPos;
+         objHelp.style.width = 250;
+         objHelp.style.visibility = "visible";
+
+         helpVisible = true;
+      }
+      else
+      {
+         //hide the help box
+         objHelp.style.left = -1000;
+         objHelp.style.top = -1000;
+         objHelp.style.visibility = "hidden";
+         helpVisible = false;
+      }
+   }
+
+
+   function updateMenuSignal (sigPropSet)
+   {
+      var addPS            = null;
+      var bGetFirst        = true;
+      var delPS            = null;
+      var j                = 0;
+      var spanId           = "";
+      var tdObj            = null;
+      var trObj            = null; 
+      var tableObj         = null;
+      var type             = "";
+      
+      type = sigPropSet.GetType ();      
+      //1. Add
+      addPS = sigPropSet.GetChildByType ("Add");
+      
+      if (addPS != null)
+      {
+         tableObj = null;
+         if (type == "Signal")
+         {
+            tableObj = document.getElementById ("CfgSignal");
+
+            if (tableObj == null)
+            {
+               spanObj = document.getElementById ("SPAN_CfgSignal");
+               spanObj.innerHTML = '<table datatable="0" summary="" id="CfgSignal"></table>';
+               tableObj = document.getElementById ("CfgSignal");
+            }
+         }
+         else if (type == "$.Signal")
+         {
+            tableObj = document.getElementById ("CfgGlobalSignal");
+
+            if (tableObj == null)
+            {         
+               spanObj = document.getElementById ("SPAN_CfgGlobalSignal");
+               spanObj.innerHTML = '<table datatable="0" summary="" id="CfgGlobalSignal"></table>';
+               tableObj = document.getElementById ("CfgGlobalSignal");
+            }
+         }
+            
+         if (tableObj != null)
+         {               
+            nPropertyCount = addPS.GetPropertyCount ();
+            for (bGetFirst = true, spanId = null, j = 0; j < nPropertyCount; j++, bGetFirst = false, spanId = null)
+            {
+               if (bGetFirst)
+                  spanId = addPS.GetFirstProperty ();
+               else
+                  spanId     = addPS.GetNextProperty (); 
+
+               if (spanId != null)
+               {
+                  trObj = tableObj.insertRow ();
+                  trObj.id = spanId;
+                  tdObj = trObj.insertCell ();
+                  tdObj.innerHTML = '<img src="IMAGES/bullet_green.gif" width="9" height="14" border="0" alt="">';
+                  tdObj.width = "1%";
+                  tdObj.vAlign = "top";
+                  tdObj = trObj.insertCell ();
+                  tdObj.innerHTML = spanId;
+                  tdObj.width = "99%";
+                  tdObj.colSpan = "2";
+               }
+            }
+         }
+      }
+
+      //3. Delete
+      delPS = sigPropSet.GetChildByType ("Delete");
+      
+      if (delPS != null)
+      {       
+         nPropertyCount = delPS.GetPropertyCount ();
+         for (bGetFirst = true, spanId = null, j = 0; j < nPropertyCount; j++, bGetFirst = false, spanId = null)
+         {
+            if (bGetFirst)
+               spanId = delPS.GetFirstProperty ();
+            else
+               spanId = delPS.GetNextProperty ();
+
+            if (spanId != null)
+            {
+               trObj = document.getElementById (spanId);
+               if (trObj != null)
+                  if (document.all)
+                     trObj.removeNode (true);
+                  else
+                     trObj.parentNode.removeChild(trObj); 
+            }
+         }
+      }
+   }
+   
+   function showMenuSignal (id)
+   {
+      var propSet       = null;
+      var expl          = "";
+      var iCount        = 0;
+      var i             = 0;
+      var signalPropSet = null;
+      var spanObj       = null;
+      var tableObj      = null;
+      var tr            = null;
+      var trArray       = null;
+      var td            = null;
+
+      propSet = m_UIFramework.m_controlPropSet.GetChildByType (id);
+      if (id == "CfgGlobalSignal")
+         signalPropSet = propSet.GetChildByType ("$.Signal");
+      else
+         signalPropSet = propSet.GetChildByType ("Signal");
+         
+      if (signalPropSet != null && signalPropSet.GetPropertyCount () > 0)
+      {
+         iCount = signalPropSet.GetPropertyCount ();
+         spanObj = document.getElementById ("SPAN_" + id);
+         spanObj.innerHTML = '<table datatable="0" summary="" id="' + id + '"></table>';
+         tableObj = document.getElementById (id);
+
+         if (tableObj != null)
+         {
+            //first deletes the old error messages     					     
+            trArray = tableObj.getElementsByTagName ("tr");
+            for (i = trArray.length - 1; i >= 0; i--)
+               tableObj.deleteRow (i);
+                  
+            for (i = 0; i < iCount; i++)
+            {
+               expl = "";
+               expl = signalPropSet.GetProperty (i.toString ());
+               
+               tr = tableObj.insertRow ();
+               tr.id = expl;
+               td = tr.insertCell ();
+               td.innerHTML = '<img src="IMAGES/bullet_green.gif" width="9" height="14" border="0" alt="">';
+               td.width = "1%";
+               td.vAlign = "top";
+               td = tr.insertCell ();
+               td.innerHTML = expl;
+               td.width = "99%";
+               td.colSpan = "2";
+            }   
+         }
+      }
+   }
+   
+</script>
+
+<table datatable="0" summary="" width="100%" height="100%" cellspacing="3" cellpadding="2" border="0" class="AppletBorder">
+<tr>
+
+	<td class="AppletBack" valign="top">
+		<table datatable="0" summary="" width="100%" cellspacing="1" cellpadding="1" border="0" height="100%">
+		<tr>
+
+			<td valign="top">
+				<table datatable="0" summary="" width="100%" cellspacing="1" cellpadding="1" border="0">
+				<tr>
+					<td colspan="2">
+				    <b><swe:control id="Message" CfgUIControl="lblMessage" property="DisplayName" CfgHtmlType="CfgLabel"/></b>
+				    </td>
+					<!-- Help Button -->
+					<td align="right">
+						<table datatable="0" summary="" cellpadding="0" cellspacing="3" border="0">
+						<tr>
+						<td valign="middle">
+								<a href="javascript:ShowHelp();"><div class="help"><swe:control id="StringQuestionMark" CfgUIControl="lblQuestionMark" property="DisplayName" /></div></a>
+							</td>
+							<td valign="middle">
+								<a href="javascript:ShowHelp();"><swe:control id="StringHelp" CfgUIControl="lblHelp" property="DisplayName" /></a>
+							</td>
+						</tr>
+						</table>
+						<DIV id="HELP_BOX" class="eCfgHelpPos">
+						<table datatable="0" summary="" cellpadding="3" cellspacing="3" border="0" width="100%" class="eCfgAppBorder">
+						<tr>
+							<td class="appletBack">
+								<table datatable="0" summary="" cellpadding="2" cellspacing="0" border="0" width="100%">
+								<tr>
+									<td>
+										<b>Siebel eProduct Configurator Help</b>
+									</td>
+									<td align="right">
+										<a href="javascript:ShowHelp();"><img src="IMAGES/btn_aplt_hide_1.gif" width="24" height="15" border="0" alt=""></a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						</table>
+						</DIV>
+					</td>
+					<!-- END Help Button -->
+				</tr>
+				<tr>
+					<td><DIV id="HELP_POS" class="eCfgHelpPos2"></DIV></td>
+				</tr>
+
+				<tr>
+					<td valign="top">
+				              <swe:for-each id="200" CfgLoopType="$.Signal" startValue="1500" count="Dynamic" iteratorName="102Id">
+                                                 <swe:control id="swe:102Id+220" CfgHtmlType="CfgSignal" 
+                                                  CfgJSShow="showMenuSignal" CfgJSUpdateSignal="updateMenuSignal"/>
+                                              </swe:for-each>
+					</td>
+				</tr>
+
+				<tr>
+					<td valign="top">
+				              <swe:for-each id="200" CfgLoopType="Signal" startValue="1500" count="Dynamic" iteratorName="102Id">
+                                                 <swe:control id="swe:102Id+220" CfgHtmlType="CfgSignal" 
+                                                  CfgJSShow="showMenuSignal" CfgJSUpdateSignal="updateMenuSignal"/>
+                                              </swe:for-each>
+					</td>
+				</tr>
+
+				</table>
+			</td>
+
+		</tr>
+		</table>
+	</td>
+
+</tr>
+</table>
+
+<!-- Template End: eCfg_MenuObj_GlobalSignalJS.swt -->

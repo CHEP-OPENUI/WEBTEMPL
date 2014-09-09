@@ -1,0 +1,55 @@
+<!-- Template Start: CCPopupList.swt -->
+<!-- Oliver: slight code redesign, fixes -->
+
+<swe:form>
+	
+	<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+	<!--transfer owner title-->
+	<tr><td>
+	   <table datatable="0" summary=""><tr>
+	      <swe:control id="9991">
+            <td class="scLabel"><swe:this property="FormattedHtml" hintText="Inbox Transfer Owner Label" hintMapType="Label"/></td>
+         </swe:control></tr>
+	   </table>
+	</td></tr>
+	
+	<!--list bobdy-->
+	<tr valign="top"><td class="AppletStylePopup">
+		<swe:include file="CCPopupListButtonsTop.swt"/>
+		<swe:error>
+			<table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="4" cellspacing="0" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/><br>&nbsp;</td></tr></table>
+		</swe:error>	
+		<swe:list>
+			<table valign="top" width="100%" cellpadding="2" cellspacing="0" border="1"class="test3" datatable="1" summary="swe:this.ListSummary">
+				<swe:include file="CCListHeader.swt"/>
+				<swe:include file="CCListBody.swt"/>
+			</table>
+		</swe:list>
+	</td></tr>	
+	
+	<!--comments area-->
+	<tr><td>
+		<table datatable="0" summary=""><tr>
+            <td valign="top" class="scLabel"><swe:control id="9992"><swe:this property="FormattedHtml" hintText="Inbox Transfer Comments Label" hintMapType="Label"/></swe:control></td></tr><tr>
+            <td><swe:control id="9993"><swe:this property="FormattedHtml" hintText="Inbox Transfer Comments Field" hintMapType="Control"/></swe:control></td>
+         </tr>
+	   </table>
+	</td></tr>
+	
+	<!--button row-->
+	<tr><td>
+
+		<table datatable="0" summary="" width="100%">		
+			<tr class="AppletButtons">
+				<td class="siebui-popup-action siebui-align-right">
+					<swe:include file="CCButtons_Popup_oui.swt"/>
+				</td>
+			</tr>
+		</table>
+
+	</td></tr></table>
+	
+
+</swe:form>	
+<swe:scripts/>
+<!-- Template End: CCPopupList.swt -->

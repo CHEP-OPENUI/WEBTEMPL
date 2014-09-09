@@ -1,0 +1,157 @@
+<!--  Template Start: CCListButtonsTopNoMenu.swt -->
+
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="2" border="0" align="center">
+	<tr class="AppletButtons" align="left">	
+
+		<!-- Applet Filter Area -->
+      <swe:switch>
+         <swe:case condition="Web Engine State Properties, IsPrintOn">
+            <td class="swe:class AppletTitle" nowrap>
+               &nbsp;
+               <swe:this property="Title"/>
+               &nbsp;
+            </td>
+         </swe:case>
+      
+         <swe:default>        
+		<swe:if-var name="Parent">			     
+			<td class="swe:class AppletTitle" nowrap>
+				<swe:if condition="Web Engine State Properties, IsHighInteractive">		
+					<swe:switch>
+					<swe:case condition="Web Engine State Properties, IsViewPosition, 'Position:2'">
+						<img src="images/spacer.gif" width="1" height="1" alt=""></td>
+						<td><swe:nav-control type="Category View" style="Select"/></td>
+						<td>
+						<img src="images/spacer.gif" width="8" height="1" alt="">
+						<swe:if condition="Task UI Service (SWE),IsNotInTask">
+							<img src="images/btn_div_gray.gif" height="13" align="middle" alt="">
+						</swe:if>
+						<img src="images/spacer.gif" width="8" height="1" alt="">
+					</swe:case>
+					<swe:default>
+						&nbsp;
+						<swe:this property="Title"/>
+						&nbsp;&nbsp;
+						<swe:if condition="Task UI Service (SWE),IsNotInTask">
+							<img src="images/btn_div_gray.gif" height="13" 
+						align="middle" alt="">
+						</swe:if>
+						&nbsp;
+					</swe:default>
+					</swe:switch>
+				</swe:if>
+				<swe:if condition="Web Engine State Properties, IsLowInteractive">		
+					&nbsp;
+					<swe:this property="Title"/>
+					&nbsp;&nbsp;
+					<img src="images/btn_div_gray.gif" height="13" align="middle" alt="">
+					&nbsp;
+				</swe:if>
+			</td>
+		</swe:if-var>
+
+		<swe:if-var name="ParentWithPointer">			     
+			<td class="swe:class AppletTitle" nowrap>
+				<swe:if condition="Web Engine State Properties, IsHighInteractive">		
+					<swe:switch>
+					<swe:case condition="Web Engine State Properties, IsViewPosition, 'Position:2'">
+						<img src="images/spacer.gif" width="1" height="1" alt=""></td>
+						<td><swe:nav-control type="Category View" style="Select"/></td>
+						<td>
+						<img src="images/spacer.gif" width="8" height="1" alt="">
+						<swe:if condition="Task UI Service (SWE),IsNotInTask">
+							<img src="images/btn_div_gray.gif" height="13" 
+						align="middle" alt="">
+						</swe:if>
+						<img src="images/spacer.gif" width="8" height="1" alt="">
+					</swe:case>
+					<swe:default>
+						&nbsp;
+						<swe:this property="Title"/>
+						&nbsp;&nbsp;
+						<swe:if condition="Task UI Service (SWE),IsNotInTask">
+							<img src="images/btn_div_gray.gif" height="13" align="middle" alt="">
+						</swe:if>
+						&nbsp;
+					</swe:default>
+					</swe:switch>
+				</swe:if>
+				<swe:if condition="Web Engine State Properties, IsLowInteractive">		
+					&nbsp;
+					<swe:this property="Title"/>
+					&nbsp;&nbsp;
+					<img src="images/btn_div_gray.gif" height="13" align="middle" alt="">
+					&nbsp;
+				</swe:if>
+			</td>
+		</swe:if-var>
+
+		<swe:if-var name="AppletFilter-No">			     
+			<td class="swe:class AppletTitle" nowrap>
+				&nbsp;
+				<swe:this property="Title"/>
+				&nbsp;&nbsp;
+				<swe:if condition="Task UI Service (SWE),IsNotInTask">
+					<img src="images/btn_div_gray.gif" height="13" align="middle" alt="">
+				</swe:if>
+				&nbsp;
+			</td>
+		</swe:if-var>		
+
+		<swe:if-var name="Grandchild">
+			<td class="swe:class AppletTitle" nowrap>
+				&nbsp;
+				<swe:this property="Title"/>
+				&nbsp;&nbsp;
+				<swe:if condition="Task UI Service (SWE),IsNotInTask">
+				<img src="images/btn_div_gray.gif" height="13" align="middle" alt="">
+				</swe:if>
+				&nbsp;
+			</td>
+		</swe:if-var>
+
+         </swe:default>
+      </swe:switch>
+  
+      <swe:if condition="Web Engine State Properties, IsPrintOff">
+		
+		<!-- No applet menu on Task Views -->
+		<swe:if condition="Task UI Service (SWE),IsNotInTask">
+		   	<!-- Menu Button Area -->
+										
+
+			<!-- Other Buttons Area -->			
+			<td><img src="images/spacer.gif" width="4" height="1" alt=""></td>
+		</swe:if>
+
+		<swe:include file="CCButtons.swt"/>											
+		
+		<!-- Toggle Bar Area -->			
+		<td>
+			<swe:include file="CCTogglebar_drop.swt"/>
+		</td>			
+
+		<!-- Query Message Area -->			
+		<td nowrap>
+			&nbsp;<b><swe:message type="Query Message" /></b>
+		</td>
+     </swe:if>
+   	<!-- Record Navigation Area -->					
+
+		<!-- Corner (if needed) -->			
+		<td valign="top" align="right">
+			<swe:if-var name="Parent">			     
+			</swe:if-var>	
+			<swe:if-var name="ParentWithPointer">			     
+			</swe:if-var>	
+			<swe:if-var name="Child">			     
+			</swe:if-var>	
+			<swe:if-var name="ChildWithPointer">			     
+			</swe:if-var>	
+			<swe:if-var name="Grandchild">			     
+			</swe:if-var>	
+		</td>
+	
+</tr>
+</table>
+<!--  Template End: CCListButtonsTop.swt -->	

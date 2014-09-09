@@ -1,0 +1,50 @@
+<!-- Template Start ePortalLinkListApplet.swt (from: CCAppletListPortal.swt) -->
+
+<!-- Remove all 3 swe:layout, including 2 nested, just keep nested tables in new style -->
+<!-- include FINSDBAppletTitle.swt, which has control id 201 and 202 -->
+<!-- remove class="mceField" within <td> for field in order to show in small font. -->
+<!-- include file="FINSDBFormButtons.swt" to show 801 and 802 (More link). -->
+
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="background-color:#ccccff;color:#333399;">
+ <tr valign="top">
+  <td>
+    <swe:form>
+     <swe:include file="FINSDBAppletTitle.swt"/>
+    </swe:form>	
+	
+    <table  width="100%" border="0" cellpadding="1" cellspacing="0" bgcolor="#ccccff">
+      <tr>
+        <td>
+           <table bgcolor="#ccccff" valign="top" width="100%"  cellpadding="2" cellspacing="0" border="0">
+             <tr>
+                <td>
+                   <swe:for-each-row>
+                       <table>
+                          <tr valign="top">
+                              <td><img src="images/bullet_black.gif"></td>
+                              <td>
+                                  <swe:control id="501" property="FormattedHtml"  hintText="Field" hintMapType="ListItem"/>
+                                    <swe:control id="502" property="FormattedHtml" hintText="Field" hintMapType="ListItem"/> &nbsp;
+                                    <swe:control id="503"><span class="LinkListInfo"><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></span></swe:control>
+                                   
+                               </td>
+                           </tr>
+                       </table>
+                    </swe:for-each-row>
+
+                </td>
+             </tr>
+           </table>
+        </td>
+      </tr>
+     </table>
+  </td>
+ </tr>
+</table>
+
+
+<swe:include file="FINSDBFormButtons.swt"/>
+
+
+<!-- Template End ePortalLinkListApplet.swt -->

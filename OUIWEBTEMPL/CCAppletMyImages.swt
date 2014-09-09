@@ -1,0 +1,33 @@
+<!--  Template Start: CCAppletMyImages.swt -->
+
+<swe:layout viewDisplayMode="Layout">
+<swe:include file="CCTitle.swt"/>
+
+<swe:include-script file="D:\eService_OpenUI\siebel\eapps\public\enu\22314\scripts\3rdParty\jcarousel\lib\jquery-1.4.2.min.js"/>
+<swe:include-script file="D:\eService_OpenUI\siebel\eapps\public\enu\22314\scripts\3rdParty\jcarousel\lib\jquery.jcarousel.min.js"/>
+
+<link href="D:\eService_OpenUI\siebel\eapps\public\enu\22314\scripts\3rdParty\jcarousel\style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="D:\eService_OpenUI\siebel\eapps\public\enu\22314\scripts\3rdParty\jcarousel\lib\jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="D:\eService_OpenUI\siebel\eapps\public\enu\22314\scripts\3rdParty\jcarousel\lib\jquery.jcarousel.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="D:\eService_OpenUI\siebel\eapps\public\enu\22314\scripts\3rdParty\jcarousel\skins\tango\skin.css"/>
+
+<!-- <swe:include-script file="D:\eService_OpenUI\siebel\eapps\public\enu\22314\scripts\mycarousel.js"/> -->
+</swe:layout>
+
+
+<body bgcolor="#ffffff">
+
+<a href="http://www.oracle.com">
+<img src="http://www.chain-sys.com/images/collab12logo.sq.315.png" border="1" hspace="30px" vspace="50px" align="bottom" />
+</a>
+		
+ <!--<ul> -->
+ <!-- <IFrame src="http://www.chain-sys.com/images/collab12logo.sq.315.png" width="360" height="280" alt="" name="myframe" /> -->
+<!--	<a href="http://www.w3schools.com" target="myframe">W3Schools.com</a> -->
+ <!-- </ul>  -->
+		
+</body> 
+
+<!--  Template Start: CCAppletMyImages.swt -->

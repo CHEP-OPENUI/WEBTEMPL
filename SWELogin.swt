@@ -1,0 +1,228 @@
+<html dir="swe:dir">
+    <head>
+        <title><swe:this property="Title"/></title>
+        <link href="files/main.css" rel="stylesheet">
+        <swe:include-script file="login.js"/>
+    </head>
+    <body class="loginBody" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onunload="pwdcleaner()">
+        <table class="loginImage" width="871px" height="619px" align="center" border="0"  cellspacing="0" cellpadding="0">
+            <tr><td>
+                <table border="0" cellspacing="0" cellpadding="0"> <!-- This is to use up the space until the right height for Oracle logo -->
+                    <tr height="220"> 
+                        <td width="871px"><img src="images/spacer.gif"></td>
+                    </tr>
+                </table>
+            </td></tr>
+            <tr><td>
+                <table border="0" cellspacing="0" cellpadding="0"> <!-- display the Oracle logo -->
+                    <tr height="20">
+                        <swe:switch>
+                            <swe:case condition="Web Engine State Properties, IsRTL">
+                                <td width="66px"><img src="images/spacer.gif"></td>
+                            </swe:case>
+                            <swe:default>
+                                <td width="460px"><img src="images/spacer.gif"></td>
+                            </swe:default>
+                        </swe:switch>
+                        <td width="345px"><img src="images/oracle_transparent.gif"></td>
+                        <swe:switch>
+                            <swe:case condition="Web Engine State Properties, IsRTL">
+                                <td width="460px"><img src="images/spacer.gif"></td>
+                            </swe:case>
+                            <swe:default>
+                                <td width="66px"><img src="images/spacer.gif"></td>
+                            </swe:default>
+                        </swe:switch>
+                    </tr>
+                </table>
+            </td></tr>
+            <tr><td>
+                <table border="0" cellspacing="0" cellpadding="0"> <!-- display Siebel splash text -->
+                    <tr height="95"> 
+                        <swe:switch>
+                            <swe:case condition="Web Engine State Properties, IsRTL">
+                                <td width="66px"><img src="images/spacer.gif"></td>
+                            </swe:case>
+                            <swe:default>
+                                <td width="460px"><img src="images/spacer.gif"></td>
+                            </swe:default>
+                        </swe:switch>
+                        <td width="345px" class=loginAppTitle><swe:this property="SplashText"/></td>
+                        <swe:switch>
+                            <swe:case condition="Web Engine State Properties, IsRTL">
+                                <td width="460px"><img src="images/spacer.gif"></td>
+                            </swe:case>
+                            <swe:default>
+                                <td width="66px"><img src="images/spacer.gif"></td>
+                            </swe:default>
+                        </swe:switch>
+                    </tr>
+                </table>
+            </td></tr>	
+            <tr><td>
+                <swe:form method="post" name="SWEEntryForm" htmlAttr="target='_top'">
+                <table border="0" cellspacing="0" cellpadding="0">	<!-- display the username and password prompt -->
+                    <tr height="12"> 
+                        <swe:switch>
+                            <swe:case condition="Web Engine State Properties, IsRTL">
+                                <td width="66px"><img src="images/spacer.gif"></td>
+                                <td class="loginLabel" style="text-align: right;"><swe:pageitem id="7" property="DisplayName" />:</td> <!-- Username prompt-->
+                                <td width="7px"><img src="images/spacer.gif"></td>
+                                <td class="loginLabel" style="text-align: right;"><swe:pageitem id="8" property="DisplayName" />:</td> <!-- Password prompt-->
+                                <td width="76px"><img src="images/spacer.gif"></td>
+                            </swe:case>
+                            <swe:default>
+                                <td width="460px"><img src="images/spacer.gif"></td>
+                                <td class="loginLabel"><swe:pageitem id="7" property="DisplayName" />:</td> <!-- Username prompt-->
+                                <td width="7px"><img src="images/spacer.gif"></td>
+                                <td class="loginLabel"><swe:pageitem id="8" property="DisplayName" />:</td> <!-- Password prompt-->
+                                <td width="76px"><img src="images/spacer.gif"></td>
+                            </swe:default>
+                        </swe:switch>
+                    </tr>
+                </table>
+            </td></tr>
+            <tr><td>
+                <table border="0" cellspacing="0" cellpadding="0">	
+                    <tr height="12"> <!-- display the username and password fields -->
+                        <swe:switch>
+                            <swe:case condition="Web Engine State Properties, IsRTL">
+                                <td width="66px"><img src="images/spacer.gif"></td>
+                            </swe:case>
+                            <swe:default>
+                                <td width="460px"><img src="images/spacer.gif"></td>
+                            </swe:default>
+                        </swe:switch>
+                        <td class="loginField" valign="middle"><swe:pageitem id="1" property="FormattedHtml" /></td> <!-- Username field-->
+                        <td width="7px"><img src="images/spacer.gif"></td>
+                        <td class="loginField" valign="middle"><swe:pageitem id="2" property="FormattedHtml" /></td> <!-- Password field-->
+                        <td width="7px"><img src="images/spacer.gif"></td>
+                        <td valign="middle"><swe:pageitem id="22" property="FormattedHtml"/></td> <!-- Login Arrow -->
+                    </tr>
+                </table>
+            </td></tr>
+            <tr><td>
+                <table border="0" cellspacing="0" cellpadding="0"> <!-- display remember username and password text -->
+                    <tr height="15"> 
+                        <swe:switch>
+                            <swe:case condition="Web Engine State Properties, IsRTL">
+                                <td width="66px"><img src="images/spacer.gif"></td>
+                            </swe:case>
+                            <swe:default>
+                                <td width="460px"><img src="images/spacer.gif"></td>
+                            </swe:default>
+                        </swe:switch>
+                        <td><swe:pageitem id="3" property="FormattedHtml" />&nbsp;<swe:pageitem id="9" property="DisplayName" /></td>
+                    </tr>
+                </table>
+            </td></tr>
+            <swe:switch> <!-- display Accessibility info and help for SI+ and OpenUI Mode -->
+                <swe:case condition="Web Engine State Properties, IsAccessibleEnchanced"> <!-- display Accessibility help for SI+ and OpenUI Mode -->
+                    <tr><td>
+                        <table height="50" border="0" cellspacing="0" cellpadding="0"> 
+                            <tr height="15"> 
+                                <swe:switch>
+                                    <swe:case condition="Web Engine State Properties, IsRTL">
+                                        <td width="66px"><img src="images/spacer.gif"></td>
+                                    </swe:case>
+                                    <swe:default>
+                                        <td width="460px"><img src="images/spacer.gif"></td>
+                                    </swe:default>
+                                </swe:switch>
+                            <td><swe:pageitem id="12" property="FormattedHtml" /></td>
+                            </tr>
+                        </table>
+                    </td></tr>
+                </swe:case>
+                <swe:case condition="Web Engine State Properties, IsOpenUIMode">
+                    <tr><td>
+                        <table height="100" border="0" cellspacing="0" cellpadding="0"> <!-- display Accessibility info and help for OpenUI Mode -->
+                            <tr height="50" valign="bottom"> 
+                                <swe:switch>
+                                    <swe:case condition="Web Engine State Properties, IsRTL">
+                                        <td width="66px"><img src="images/spacer.gif"></td>
+                                    </swe:case>
+                                    <swe:default>
+                                        <td width="460px"><img src="images/spacer.gif"></td>
+                                    </swe:default>
+                                </swe:switch>
+                            <td><div tabindex="0" ><swe:pageitem id="13" property="DisplayName" /></div></td>
+                            </tr>
+                            <tr height="15"> 
+                                <swe:switch>
+                                    <swe:case condition="Web Engine State Properties, IsRTL">
+                                        <td width="66px"><img src="images/spacer.gif"></td>
+                                    </swe:case>
+                                    <swe:default>
+                                        <td width="460px"><img src="images/spacer.gif"></td>
+                                    </swe:default>
+                                </swe:switch>
+                            <td><swe:pageitem id="12" property="FormattedHtml" /></td>
+                            </tr>
+                        </table>
+                    </td></tr>
+                </swe:case>
+            </swe:switch>
+            <tr><td>
+                <table border="0" cellspacing="0" cellpadding="0"> <!-- display error message -->
+                    <tr height="75"> 
+                        <swe:switch>
+                            <swe:case condition="Web Engine State Properties, IsRTL">
+                                <td width="66px"><img src="images/spacer.gif"></td>
+                            </swe:case>
+                            <swe:default>
+                                <td width="460px"><img src="images/spacer.gif"></td>
+                            </swe:default>
+                        </swe:switch>
+                        <td class="loginError" width="345px"><swe:error>&nbsp;<swe:this property="FormattedHtml"/></swe:error></td>
+                        <swe:switch>
+                            <swe:case condition="Web Engine State Properties, IsRTL">
+                                <td width="460px"></td>
+                            </swe:case>
+                            <swe:default>
+                                <td width="66px"></td>
+                            </swe:default>
+                        </swe:switch>
+                    </tr>
+                </table>
+            </td></tr>
+            <tr><td>
+                <table border="0" cellspacing="0" cellpadding="0"> <!-- display copyright message -->
+                    <tr height="15"> 
+                        <swe:switch>
+                            <swe:case condition="Web Engine State Properties, IsRTL">
+                                <td width="66px"><img src="images/spacer.gif"></td>
+                            </swe:case>
+                            <swe:default>
+                                <td width="460px"><img src="images/spacer.gif"></td>
+                            </swe:default>
+                        </swe:switch>
+                        <td width="345px">
+                            <swe:pageitem id="31" property="DisplayName" /></td>
+                        <swe:switch>
+                            <swe:case condition="Web Engine State Properties, IsRTL">
+                                <td width="460px"><img src="images/spacer.gif"></td>
+                            </swe:case>
+                            <swe:default>
+                                <td width="66px"><img src="images/spacer.gif"></td>
+                            </swe:default>
+                        </swe:switch>
+                    </tr>
+                </table>
+            </td></tr>
+            <tr><td>
+                <swe:error><tr><td style="height:5px" colspan=5><IMG src="images/spacer.gif"></td></tr></swe:error>
+                </swe:form>
+            </td></tr>	
+            <tr><td>
+                <table border="0" cellspacing="0" cellpadding="0"> <!-- fill up -->
+                    <tr height="50"> 
+                        <td width="100%"><img src="images/spacer.gif"></td>
+                    </tr>
+                </table>
+            </td></tr>
+        </table>
+        <swe:scripts/>
+        <script language="JavaScript">userfocus()</script>
+    </body>
+</html>

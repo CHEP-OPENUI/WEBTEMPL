@@ -1,0 +1,71 @@
+<!--	Template Start: CCView_66_33.swt -->
+
+<swe:include file="CCHTMLHeader.swt"/>
+
+<swe:include file="CCTaskViewTitle.swt"/>
+
+<swe:layout viewDisplayMode="Layout">
+
+<table datatable="0" summary="" width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr valign="top"><td><img src="images/spacer.gif" width="1" height="6" alt=""></td></tr></table>
+
+<!------------ Start: View Layout Table ------------------------->
+<table datatable="0" summary="" width="100%"  align="center" cellspacing="0" cellpadding="0" border="0" class="LayoutView">
+	<swe:applet id="901" hintText="Layout Controls">
+		<!---------- Start: View Layout; Buttons --------->
+		<tr valign="top">
+		<td><swe:this property="FormattedHtml"/></td>
+		</tr>
+		<!-- -------- End: View Layout; Buttons --------->
+	</swe:applet>
+
+  <!---------- Start: View Layout; Applet Titles & Mover Controls --------->
+</table>
+<table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" border="1" borderColor="#333399"><tr><td class="AppletBack">
+</swe:layout>
+
+<swe:layout viewDisplayMode="Show">
+<table datatable="0" summary="" border="0" cellspacing="0" cellpadding="1" width="100%">
+  <tr>
+	<swe:if condition="Web Engine State Properties, IsLowInteractive">
+	<td width="50%">
+		<swe:include file="CCThreadbar.swt"/>
+		<img src="images/spacer.gif" width="1" height="1" alt="">
+	</td>
+	</swe:if>
+
+	<swe:applet id="901" hintText="Layout Controls">
+	<td align="right" width="50%"><swe:this property="FormattedHtml"/></td>
+	</swe:applet>
+  </tr>
+</table>
+</swe:layout>
+
+<!-- ---------- Main Content Area ---------------------------->
+<table datatable="0" summary="" width="100%" cellpadding="5" cellspacing="0" border="0">
+	<tr>
+		<!--Column 1 -->
+		<td valign="top" width="66%">
+			<swe:applet id="101" property="FormattedHtml" hintText="Salutation Applet"/>
+			<swe:for-each count="20" iteratorName="currentId" startValue="102">
+				<swe:applet hintMapType="Applet" id="swe:currentId" property="FormattedHtml" hintText="Applet" var="Grandchild"/>
+			</swe:for-each>
+		</td>
+		<!--Column 2 -->
+		<td valign="top" width="33%">
+			<swe:for-each count="20" iteratorName="currentId" startValue="201">
+				<swe:applet hintMapType="Applet" id="swe:currentId" property="FormattedHtml" hintText="Applet" var="Grandchild"/>
+			</swe:for-each>
+		</td>
+	</tr>
+</table>
+<!-- ---------- End Main Content Area ------------------------>
+
+<swe:layout viewDisplayMode="Layout">
+  <!---------- End: View Layout; Applet Titles & Mover Controls --------->
+  	</td></tr></table>
+<!------------ End: View Layout Table ------------------------>
+</swe:layout>
+
+<swe:include file="CCHTMLFooter.swt"/>
+
+<!--	Template End: CCView_66_33.swt -->

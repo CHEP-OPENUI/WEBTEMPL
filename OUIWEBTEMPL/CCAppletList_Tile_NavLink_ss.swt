@@ -1,0 +1,43 @@
+<!-- Template Start: CCAppletList_Tile_NavLink_ss.swt -->
+<swe:include file="CCApplet_NamedSpacer.swt"/>
+<div class="siebui-collapsible-applet siebui-ss-navlink-applet">
+    <div class="siebui-collapsible-applet-header siebui-ss-navlink-help-header">
+        <swe:control id="80">
+            <div  class="siebui-ss-navlink-list siebui-ss-navlink-caption">
+                <swe:this property="FormattedHtml" hintMapType="Control" hintText="Title" />
+            </div>
+            <div class="siebui-ss-navlink-img siebui-collapsible-applet-container"></div>
+        </swe:control>
+    </div>
+    <swe:control id="90">
+        <div class="siebui-ss-applt-header">
+            <swe:this property="FormattedHtml" hintMapType="Control" hintText="Title" />
+        </div>        
+    </swe:control>
+    <div class="siebui-collapsible-applet-content">
+        <div class="swe:this.SelectStyle">
+            <div class="AppletHIListBorder siebui-tile-container siebui-tile-container-navlink">
+                <swe:this property="NoGrid"/>
+                <swe:this property="Horizontal"/>
+                <swe:this property="ScrollVisibleTiles"/>
+                <swe:list>
+                    <swe:list-record>
+                        <div class="siebui-tile-navlink-img">
+                            <swe:control id="502" >
+                                <swe:this property="FormattedHtml" hintText="Field"/>
+                            </swe:control>
+                        </div>
+                        <div class="siebui-tile-navlink-desc">
+                            <swe:control id="503" >
+                                <span class="siebui-tile-navlink-desctext" align="swe:this.TextAlignment">
+                                    <swe:this property="FormattedHtml" hintText="Field"/>
+                                </span>
+                            </swe:control>
+                        </div>
+                    </swe:list-record>
+                </swe:list>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Template End: CCAppletList_Tile_NavLink_ss.swt -->

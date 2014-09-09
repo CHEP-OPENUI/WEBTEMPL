@@ -1,0 +1,22 @@
+	<!-- Template Start: CCAppletForm1ColLight_B_E_N.swt -->
+
+<swe:include file="CCApplet_NamedSpacer.swt"/>	
+
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+	<swe:form>
+	<tr valign="top">
+		<td>
+			<swe:include file="CCTitle_Named.swt"/>
+		
+			<swe:include file="CCForm1ColBodyLight.swt"/>
+			
+			<swe:include file="CCBottomApplet_NamedForm.swt"/>					
+		</td>
+	</tr>
+	</swe:form>
+</table>	
+
+<!-- Template End: CCAppletForm1ColLight_B_E_N.swt -->
+
+
+	

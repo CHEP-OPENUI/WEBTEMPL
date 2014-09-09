@@ -1,0 +1,17 @@
+<!--
+<table datatable="0" summary="">
+   <tr>
+      <swe:if condition="Web Engine State Properties, IsHighInteractive">
+         <td nowrap><swe:toolbar name="SearchToolbar"><swe:toolbaritem property="FormattedHtml"/></swe:toolbar></td>	
+         <td nowrap><swe:toolbar name="Task Assistant"><swe:toolbaritem property="FormattedHtml"/></swe:toolbar></td>	
+         <td nowrap><swe:toolbar name="Task Pane"><swe:toolbaritem property="FormattedHtml"/></swe:toolbar></td>	
+      </swe:if>
+      <swe:if condition="Web Engine State Properties, IsLowInteractive">
+         <td nowrap><swe:toolbar name="SearchToolbar Hybrid"><swe:toolbaritem property="FormattedHtml"/></swe:toolbar></td>	
+         <td nowrap><swe:toolbar name="Task Assistant Hybrid"><swe:toolbaritem property="FormattedHtml"/></swe:toolbar></td>	
+         	
+      </swe:if>
+   </tr>
+</table>
+
+-->

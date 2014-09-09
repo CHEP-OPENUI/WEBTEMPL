@@ -1,0 +1,128 @@
+<!-- Template Start: SISOMeCfgRelationContentsQuantity.swt -->
+
+
+<SCRIPT>
+   var iNumPortContents = 0;
+</SCRIPT>
+
+
+<swe:for-each id="500" CfgLoopType="Children" startValue="1500" count="Dynamic" iteratorName="101Id">
+   <swe:form>
+   <swe:if condition="Default, TestFieldValue, Operator:==, FieldName:LoopCount, FieldValue:0">
+      <table border="0" cellpadding="0" cellspacing="3" width="100%" bgcolor="white">
+            <td width="50" align="center">
+               <swe:control id="Quantity" CfgUIControl="lblQuantity" property="DisplayName" />
+            </td>
+            <td width="250">
+               <swe:control id="Name" CfgUIControl="lblName" property="DisplayName" />
+            </td>
+            <td width="80" align="right">
+               <swe:control id="ListPrice" CfgUIControl="lblListPrice" property="DisplayName" />
+            </td>
+            <td width="80" align="right">
+               <swe:control id="YourPrice" CfgUIControl="lblYourPrice" property="DisplayName" />
+            </td>
+            <td width="80" align="right">
+               <swe:control id="PromoName" CfgUIControl="lblPromotion" property="DisplayName" />
+            </td>
+            <td width="80" align="right">
+               <swe:control id="TierPrice" CfgUIControl="lblTierPrice" property="DisplayName" />
+            </td>
+            <td width="70" align="center">
+               <swe:control id="UnitOfMeasure" CfgUIControl="lblUnitOfMeasure" property="DisplayName" />
+            </td>
+            <td width="70" align="center">
+               <swe:control id="ServiceId" CfgUIControl="lblServiceId" property="DisplayName" />
+            </td>
+            <td width="70" align="center">
+               <swe:control id="ServicePoint" CfgUIControl="lblServicePoint" property="DisplayName" />
+            </td>
+            <td width="70" align="center">
+               <swe:control id="Explanation" CfgUIControl="lblExplanation" property="DisplayName" />
+            </td>
+            <td width="70" align="center">
+               <swe:control id="Customize" CfgUIControl="lblCustomize" property="DisplayName" />
+            </td>
+            <td width="70" align="center"> 
+               <swe:control id="Save" CfgUIControl="lblSave" property="DisplayName" />
+            </td>
+         </tr>
+         <SCRIPT>
+            iNumPortContents ++;
+         </SCRIPT>
+   </swe:if>
+         <tr>
+            
+               <td width="50" align="left">
+                  <table width="100%">
+                     <swe:control id="swe:101Id + 5600" CfgFieldName="Error@Quantity" CfgUIControl="CfgLabel" CfgHtmlType="Cfglabel" >
+                        <tr>
+                           <td valign="top" class="row">
+                              <span id="Error@Quantity"  class="eCfgSpanWarning" ><swe:this property="FormattedHtml" /></span>
+                           </td>
+                        </tr>
+                     </swe:control>
+                     <tr>
+                        <td width="100%" valign="top" class="row" align="center">
+                           <span id="Quantity" class="cxEdit">
+                           <swe:control id="swe:101Id+1800" CfgFieldName="Quantity" CfgUIControl="InstanceQTYAuto" property="FormattedHtml" CfgInvokeMethod="SubmitRequest" CfgRequest="ChangeQtyMin" />
+                           </span>
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+
+               <td width="250">
+                  <span id="CxObjName" class="cxLink">
+                  <swe:control id="swe:101Id" CfgUIControl="SetTopObj" property="FormattedHtml" CfgFieldName="CxObjName"/>
+                  </span>
+                  <span id="RequireMoreChild" class="cxImg">
+                  <swe:control id="swe:101Id+2000" CfgFieldName="RequireMoreChild" CfgUIControl="RequireMoreChild" property="FormattedHtml" />
+                  </span>
+               </td>
+               <td width="80" align="right">
+                  <span id="List Price" class="cxLabel">
+                  <swe:control id="swe:101Id+200"  CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" CfgFieldName="Original List Price" DataType="DTYPE_CURRENCY"/>
+                  </span>
+               </td>
+               <td width="80" align="right">
+                  <span id="Current Price" class="cxLabel">
+                  <swe:control id="swe:101Id+400"  CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" CfgFieldName="Current Price" DataType="DTYPE_CURRENCY"/>
+                  </span>
+               </td>
+               <td width="80" align="right">
+                  <swe:control id="swe:111Id+12000"  CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" CfgFieldName="Tier Price Info" DataType="DTYPE_TEXT"/>
+               </td>
+               <td width="80" align="right">
+                  <swe:control id="swe:111Id+13000"  CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" CfgFieldName="Unit of Measure" DataType="DTYPE_TEXT"/>
+               </td>
+               <td width="80" align="right">
+                  <swe:control id="swe:111Id+13200"  CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" CfgFieldName="Service Id" DataType="DTYPE_TEXT"/>
+               </td>
+               <td width="80" align="right">
+                  <swe:control id="swe:111Id+134000"  CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" CfgFieldName="Service Point Id" DataType="DTYPE_ID"/>
+               </td>
+               <td width="80" align="left">
+                  <swe:control id="swe:101Id+1600"  CfgUIControl="PromoCoupon" property="FormattedHtml" CfgFieldName="Prod Prom Name"/>
+               </td>
+               <td width="70" align="center">
+                  <swe:control id="swe:101Id+1600"  CfgUIControl="GetMoreExpl" property="FormattedHtml" CfgRequest="GetExpl" TemplateName= "eCfgObj_DetailExplanation.swt" CfgNodeType="DetailExpl" HideDisabled ="Y"/>
+               </td>
+               <td width="70" align="center">
+                  <swe:control id="swe:101Id+1200"  CfgUIControl="Customize" property="FormattedHtml" InvokeMethod="SetTopObj" HideDisabled ="Y"/>
+               </td>
+               <td width="70" align="center">
+                  <swe:control id="swe:101Id+800" CfgUIControl="ChangeInstanceQTY" InvokeMethod="SubmitRequest" CfgRequest="ChangeQuantity" property="FormattedHtml" />
+               </td>
+            
+         </tr>
+   </swe:form>
+</swe:for-each>
+
+      <SCRIPT>
+         if ( 0 != iNumPortContents )
+            document.write ( '</table>' );
+      </SCRIPT>
+ 
+ 
+<!-- Template End: SISOMeCfgRelationContentsQuantity.swt -->

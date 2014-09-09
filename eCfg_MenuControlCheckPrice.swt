@@ -1,0 +1,196 @@
+<!-- Template Start: eCfg_MenuControlCheckPrice.swt -->
+
+<script>
+	//div tag for content
+	document.write('<DIV id="Rel_' + visibleRelArray[currentRel] + '" class="eCfgContent">');
+</script>
+<!-- Formatting tables -->
+<table datatable="0" summary="" width="100%" height="100%" cellspacing="3" cellpadding="2" border="0" class="AppletBorder">
+<tr>
+
+<td class="AppletBack" valign="top">
+<table datatable="0" summary="" cellpadding="2" cellspacing="0" border="0" width="100%" bgcolor="#ffffff" height="100%">
+<tr>
+
+	<td valign="top">
+		<!-- Header -->
+		<table datatable="0" summary="" border="0" width="100%" cellpadding="2" cellspacing="0" bgcolor="#ffffff">
+	    <SCRIPT>
+	        var sImage = '<swe:control id="swe:IncId + 50" CfgFieldName=".Image" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+	        var sDescription = '<swe:control id="swe:IncId + 150" CfgFieldName=".Description" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+	        var sLearnMoreURL = '<swe:control id="swe:IncId + 250" CfgFieldName=".LearnMore" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+	        var sPortName = '<swe:control id="swe:IncId + 350" CfgFieldName="CxPortName" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" hintText="Port Name" property="FormattedHtml"/>';
+	        var sLearnMore = '<swe:control id="LearnMore" CfgUIControl="lblLearnMore" property="DisplayName"/>';
+	
+	        var iImageRowSpan = 2;
+	        var bText = true;
+	
+	        if ( 0 == sImage.length )
+	            sImage = 'images/eCfgInvisibleSpacer.gif';
+	
+	        if ( ( 0 == sDescription.length ) && ( 0 == sLearnMoreURL.length ) )
+	        {
+	        	iImageRowSpan = 1;
+	        	bText = false;
+			}
+
+	        if ( ! bText )
+	            document.write ( '<tr bgcolor="#ccccff"><td class="eCfgdCCSection0if"' );
+		else
+		    document.write ( '<tr bgcolor="#ccccff"><td class="eCfgdCCSection0"' );
+				
+	        document.write ( '><b>' + sPortName + '</b>');
+	
+	        var sRequireMoreChild = '<swe:control id="swe:IncId+4000" CfgFieldName="RequireMoreChild" CfgUIControl="RequireMoreChild" property="FormattedHtml" />';
+	        
+	        document.write (sRequireMoreChild + '</td>' );
+	        document.write ( '<td class="eCfgdCCSection1" rowspan="' + iImageRowSpan + '">' );
+	        document.write ( '<img border="0" alt="" src="' + sImage + '" align="right">' );
+	        document.write ( '</td></tr>' );
+	
+	        if ( bText )
+	        {
+	            document.write ( '<tr bgcolor="#ccccff">' );
+	            document.write ( '<td class="eCfgdCCSection2">' );
+	
+	            if ( 0 != sDescription.length )
+	                document.write ( '<span class="eCfgAuxText">' + sDescription + '&nbsp;&nbsp;' );
+	
+	            if ( 0 != sLearnMoreURL.length )
+	                document.write ( '<a href="' + sLearnMoreURL + '" TARGET="_blank">' + sLearnMore + '</a></span><img border="0" src="images/eCfgInvisibleSpacer.gif" alt="">' );
+	
+	            document.write ( '</td></tr>' );
+	        }
+	    </SCRIPT>
+		</table>
+		<!-- END Header -->
+	</td>
+</tr>
+<tr>
+	<td valign="top" height="99%">
+		<!-- Content table -->
+		<table datatable="0" summary="" cellpadding="1" cellspacing="4" border="0" width="100%">
+		<SCRIPT>
+	        var iNumPortContents = 0;
+	        var CheckBoxObjectName = '<swe:control id="swe:IncId+320" CfgFieldName="FieldName" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+	    </SCRIPT>
+		<swe:for-each id="500" CfgLoopType="DomainAndChildren" startValue="1500" count="Dynamic" iteratorName="101Id">
+			<SCRIPT>
+	
+	        	if ( 0 == iNumPortContents )
+	        	{
+	
+	            	sName = '<swe:control id="Name" CfgUIControl="lblName" property="DisplayName" />';
+	            	sListPrice = '<swe:control id="ListPrice" CfgUIControl="lblListPrice" property="DisplayName" />';
+	            	sExplanation = '<swe:control id="Explanation" CfgUIControl="lblExplanation" property="DisplayName" />';
+
+	            	document.write ( '<tr>' );
+	            	document.write ( '<td>&nbsp;</td>' );
+	            	document.write ( '<td><b> '+sName+' </b></td>' );
+	            	document.write ( '<td align="right"><b> '+sListPrice+' </b></td>' );
+					document.write ( '<td align="center"><b> '+sExplanation+' </b></td>' );
+	            	document.write ( '</tr>' );
+	        	}
+	        	iNumPortContents ++;
+	
+	      	</SCRIPT>
+			<tr><td height="1" colspan="4"><swe:form></td></tr>
+	      	<tr>
+        		<td valign="middle" align="center">
+      			<SCRIPT>
+                	var sAddItem = unescape('<swe:control id="swe:101Id + 3000" CfgUIControl="AutoPick" CfgRequest="AddItem" DisplayMode="EncodeData" CfgHtmlType="CfgAction" InvokeMethod="SubmitRequest" NoSelfData="Y" property="FormattedHtml"/>');
+                	var sRemoveItem = unescape('<swe:control id="swe:101Id + 5000" CfgUIControl="AutoPick" CfgRequest="RemoveItem" DisplayMode="EncodeData" CfgHtmlType="CfgAction" InvokeMethod="SubmitRequest" property="FormattedHtml"/>');
+                	var ID = '<swe:control id="swe:101Id+2000" CfgFieldName="Product Id" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+                	var DisplayValue  = '<swe:control id="swe:101Id+200" CfgFieldName="CxObjName" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+                	var Enabled  = '<swe:control id="swe:101Id+400" CfgFieldName="CxEnabled" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+                	var Selected = '<swe:control id="swe:101Id+600" CfgFieldName="Selected" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+                	var sSubmitReq;
+					
+                	if ( Selected == "Y" )
+                	{
+                    	sSubmitReq = sRemoveItem;
+                	}
+                	else
+                	{
+                    	sSubmitReq = sAddItem;
+                	}
+
+					var DispStyle = 'eCfgSpanAvailable';
+					if( Selected == "Y" )
+					{
+						DispStyle = 'eCfgSpanSelected';
+					}
+					else
+					{
+						if( Enabled == "Disabled" )
+							DispStyle = 'eCfgSpanExcluded';
+					}
+
+                	document.write ( '<input type="checkbox" name="' + CheckBoxObjectName + '" value="' + ID + '"  onClick="' + sSubmitReq + '"' );
+                	if ( Selected == "Y" )
+                    	document.write ( ' checked' );
+						
+                	document.write ( '>' );
+
+      			</SCRIPT>
+         		</td>
+	        	<td valign="middle">
+                        <span id="CxObjName" class="cxLink">
+				<SCRIPT>
+					document.write('<span class="' + DispStyle + '">');
+				</SCRIPT>
+	            	<swe:control id="swe:101Id+800" CfgUIControl="SetTopObj" property="FormattedHtml" CfgFieldName="CxObjName"/>
+					</span>
+                        </span>
+                        <span id="RequireMoreChild" class="cxImg">
+	            	<swe:control id="swe:101Id+2600" CfgFieldName="RequireMoreChild" CfgUIControl="RequireMoreChild" property="FormattedHtml" />
+                        </span>
+	        	</td>
+	        	<td align="right">
+                        <span id="List Price" class="cxLabel">
+	            	<swe:control id="swe:101Id+2200"  CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" CfgFieldName="Original List Price" DataType="DTYPE_CURRENCY" />
+                        </span>
+	        	</td>
+	        	<td valign="middle" align="center">
+	            	<swe:control id="swe:101Id+1600"  CfgUIControl="GetMoreExpl" CfgRequest="GetExpl" property="FormattedHtml" TemplateName= "eCfgObj_DetailExplanation.swt" CfgNodeType="DetailExpl" HideDisabled ="Y"/>
+	        	</td>
+	      	</tr>
+			<tr><td height="1" colspan="4"></swe:form></td></tr> 
+		</swe:for-each>
+		<tr><td colspan="5">&nbsp;</td></tr>
+		<tr>
+			<td colspan="5">
+				<!-- Menu button -->
+				<!--
+				<swe:control id="swe:ShowMenu" CfgUIControl="sShowMenu" CfgHtmlType="MiniButton" InvokeMethod="GotoUrl" property="FormattedHtml" />
+				-->
+
+				<SCRIPT>
+		  		var buttonName;
+
+		  		buttonName = "<swe:control id="swe:ShowMenu" CfgUIControl="sShowMenu" CfgHtmlType="MiniButton" InvokeMethod="GotoUrl" property="DisplayName" />";
+
+				document.write ('<input type="button"');
+				document.write (' value=');
+				document.write (buttonName);
+				document.write (' onClick="ShowMenu();" style="height:20;">');
+				</SCRIPT>				
+			</td>
+		</tr>
+		</table>
+		<!-- END Content table -->
+	</td>
+
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+<!-- END Formatting tables -->
+</DIV>
+<script>
+	currentRel++;
+</script>
+
+<!-- Template End: eCfg_MenuControlCheckPrice.swt -->

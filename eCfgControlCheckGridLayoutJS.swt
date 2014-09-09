@@ -1,0 +1,24 @@
+<!-- Template Start: eCfgControlCheckGridLayoutJS.swt -->
+
+<swe:include file="eCfgPort_HeaderJS.swt"/>
+         
+<tr>
+   <td colspan=3>
+      <swe:for-each id="500" CfgLoopType="DomainAndChildren" startValue="1500" count="Dynamic" iteratorName="101Id" 
+       Usage="CheckBox" 
+       CfgFieldList="CfgFieldName:Name, CfgUIControl:lblName, HtmlAttrib_width:310, Default:Y*
+                     CfgFieldName:RequireMoreChild, Default:Y*
+                     CfgFieldName:Explanation, CfgUIControl:lblExplanation*
+                     CfgFieldName:Customize, CfgUIControl:lblCustomize"
+      >
+          <swe:control id="swe:111Id + 4000" CfgHtmlType="CfgCheckBox"
+           CfgJSShow="showCheckBoxGrid" CfgJSUpdateExclusion="updateExcludedItemForPort" CfgJSUpdateSelection="updatePortItemsForCheckBox"/>
+
+      </swe:for-each>
+
+   </td>
+</tr>
+
+<swe:include file="eCfgPort_FooterJS.swt"/>
+
+<!-- Template End: eCfgControlCheckGridLayoutJS.swt -->

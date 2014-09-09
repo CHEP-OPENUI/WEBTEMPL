@@ -1,0 +1,7 @@
+<!-- Template Start: XmlAppletTree.swt -->
+<!-- Applet with a Tree Control -->
+<swe:all-controls>
+   <swe:control property="FormattedHtml"/>
+</swe:all-controls>
+<swe:for-each-node/>
+<!-- Template End: XmlAppletTree.swt -->

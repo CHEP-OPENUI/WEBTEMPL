@@ -1,0 +1,24 @@
+<!-- Template Start: TCCAppletFormordersummary.swt -->
+
+
+<swe:form>
+    <div class="siebui-csim-order">        
+        <span class="AppletTitle siebui-csim-order-title">
+            <swe:this property="Title"/>
+        </span>
+        <swe:for-each startValue="5000" count="12" iteratorName="currentId">
+            <swe:control id="swe:currentId" hintMapType="FormItem">
+                <div class="siebui-csim-order-sumry">
+                    <span class="mceGridLabel siebui-csim-order-sumry-text" align="swe:this.TextAlignmentLabel">
+                        <swe:this property="DisplayName" hintText="Label"/>:
+                    </span>
+                    <span class="mceGridField siebui-csim-order-sumry-text" align="swe:this.TextAlignment">
+                        <swe:this property="FormattedHtml" hintMapType="Control"/>
+                    </span>
+                </div>
+            </swe:control>
+        </swe:for-each>
+    </div>
+</swe:form>
+
+<!-- Template End: TCCAppletFormordersummary.swt -->

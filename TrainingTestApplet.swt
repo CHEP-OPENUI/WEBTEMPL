@@ -1,0 +1,90 @@
+<!-- Template Start: TrainingTestApplet.swt -->
+
+<swe:form>
+
+<swe:control id="1100">
+  <div class=CmdTxt><swe:this property="DisplayName"/></div><p>	
+</swe:control>
+
+<table datatable="0" summary="" class="Top" bgcolor="#333399"  valign="bottom" width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr class="Top">
+    <td valign="top" class="Top"><img src="images/table_corner.gif" width=7 height=22 border=0></td>
+    <td width="1%" valign="middle" class="top" nowrap><swe:control id="90" property="FormattedHtml"/></td>
+    <td width="98%" class="Top">&nbsp;</td>    
+  </tr>
+</table>
+
+<table datatable="0" summary="" bgcolor="#cccccc" valign="top" width="100%" cellpadding="2" cellspacing="0" border="0" class=FormBack>
+	<!-- Start of questions block -->
+	<swe:test>
+ 	<swe:testheader/>
+	<swe:questionList>
+    <tr>
+	<td width="5%">&nbsp;</td>
+	<td width="5%">&nbsp;</td>
+	<td width="75%">&nbsp;</td>
+	<td width="10%">&nbsp;</td>
+	<td width="5%">&nbsp;</td>
+	</tr>
+		
+	<tr>
+	<td width="5%" valign="top">&nbsp;</td>
+	<td width=5% class="smartDialog" valign="top" ><swe:questionSequence/></td>
+	<td class="smartDialog" valign="top"><swe:questionText/></td>
+	<td width="10%" class="smartDialog" valign="top">
+	<swe:control id="501"><span><swe:this property="DisplayName"/></span> </swe:control>
+     &nbsp;<swe:questionPoints></swe:questionPoints>
+    </td>
+	<td width=5%>&nbsp;</td>
+	</tr>
+	<swe:answerList>
+	<tr>
+	<td width="5%">&nbsp;</td>
+	<td width="5%">&nbsp;</td>
+	<td ><swe:answer/></td>
+	<td width="10%">&nbsp;</td>
+	<td width=5%>&nbsp;</td>
+	</tr>
+    </swe:answerList>
+	<tr>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	</tr>
+		
+		
+	</swe:questionList>
+	
+	</swe:test>
+	
+	<!-- End of questions block -->
+	
+	<!-- Page divider -->
+	<tr>
+		<td>&nbsp;</td>
+	        <td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<!-- End of page divider -->
+</table>
+
+<table datatable="0" summary="" class="Top" bgcolor="#333399"  valign="bottom" width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+    <td width="1%">&nbsp;</td>
+    <td width="98%">&nbsp;</td>
+    <swe:include file="CCButtons.swt"/>
+    <td width="1%">&nbsp;</td>
+  </tr>
+</table>
+
+<table datatable="0" summary="" bgcolor="#cccccc" valign="top" width="100%" cellpadding="2" cellspacing="0" border="0" class=FormBack>
+  <swe:testfooter/>
+</table>
+
+</swe:form>
+
+<!-- Template End: TrainingTestApplet.swt -->

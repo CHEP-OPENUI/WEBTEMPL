@@ -1,0 +1,52 @@
+<!-- Template Start: SearchFindHeaderResults.swt -->
+<swe:if condition="Web Engine State Properties, IsPrintOff">
+	<div class="swe:this.SelectStyle">	
+</swe:if>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" align="center" class="AppletBack"><tr><td class="AppletHIFormBorder">
+<table datatable="0" summary=""  border="0"  cellpadding="2" width="100%" bgcolor="#ffffff" cellspacing="0">
+	<tr>
+		<td align="right" valign="top" bgcolor="#d5e0f4" width="10%">
+		<swe:control id="2001">
+			<swe:this property="DisplayName"  hintMapType="Control" hintText="Label"/>
+		</swe:control>
+		</td>
+		
+		<td colspan="9" bgcolor="#d5e0f4" width="90%">
+		<swe:control id="2002">
+			<swe:this property="FormattedHtml" hintMapType="Control" hintText="Field"/>
+		</swe:control>
+		<!-- Lookin -->
+		<swe:control id="2010">
+			<swe:this property="FormattedHtml" hintMapType="Control" hintText="Label"/>
+		</swe:control>  &nbsp;
+		<!-- Data Source -->
+		<swe:control id="2011">
+			<swe:this property="FormattedHtml" hintMapType="Control" hintText="Label"/>
+		</swe:control>  &nbsp;
+		<!-- File Format -->
+		<swe:control id="2012">
+			<swe:this property="FormattedHtml" hintMapType="Control" hintText="Label"/>
+		</swe:control>  &nbsp;
+		</td>
+	</tr>
+
+	<tr>
+		<td align="right" valign="top" bgcolor="#d5e0f4" width="20%">
+		<swe:control id="2003">
+			<swe:this property="DisplayName"  hintMapType="Control" hintText="Label"/>
+		</swe:control>
+		</td>
+
+		<td colspan="9" bgcolor="#d5e0f4" width="80%">
+		<swe:control id="2004">
+			<swe:this property="FormattedHtml" hintMapType="Control" hintText="Field"/>
+		</swe:control>
+		</td>
+	</tr>
+
+</table>
+<swe:if condition="Web Engine State Properties, IsPrintOff">
+	</div>	
+</swe:if>
+
+<!-- Template End: SearchFindHeaderResults.swt -->

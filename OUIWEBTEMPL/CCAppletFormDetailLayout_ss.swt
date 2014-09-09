@@ -1,0 +1,14 @@
+<!-- Template Start CCAppletFormDetailLayout_ss.swt -->
+
+<swe:include file="CCApplet_NamedSpacer.swt"/>
+<swe:form>
+
+    <div class="siebui-ss-applt-container">
+        <swe:include file="CCAppletFormButtons_Right_ss.swt"/>
+        <swe:include file="CCAppletFormDetailSection_ss.swt"/>
+        <swe:include file="CCAppletFormButtons_ss.swt"/>
+    </div>
+
+</swe:form>
+
+<!-- Template End CCAppletFormDetailLayout_ss.swt -->

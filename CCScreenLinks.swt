@@ -1,0 +1,108 @@
+<!-- Template Start: CCScreenLinks.swt -->
+
+
+<table datatable="0" summary="" width="100%" cellpadding="2" cellspacing="0" border="0" align="center"><tr><td class="AppletBorder">
+<swe:error>
+<table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="2" cellspacing="0" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/></td></tr></table>
+</swe:error>
+
+<swe:control id="91">
+  <!-- Inside-applet help text -->
+  <table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="4" cellspacing="0" border="0"><tr><td><swe:this property="DisplayName" hintText="Inside Applet Help Text"/></td></tr></table>
+</swe:control>
+
+<table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr valign="top">
+		<td>
+			<table datatable="0" summary="">
+				<tr><td><b><swe:control id="1100" property="FormattedHtml" hintText="Group Label"/></b></td></tr>
+				<swe:for-each startValue="1101" count="20" iteratorName="currentId">
+				<swe:control id="swe:currentId"><tr><td>
+					<swe:this property="FormattedHtml" hintText="Link"/>
+				</td></tr></swe:control>		
+				</swe:for-each>			
+			</table>		
+		</td>
+		<td>
+			<table datatable="0" summary="">
+				<tr><td><b><swe:control id="1200" property="FormattedHtml" hintText="Group Label"/></b></td></tr>
+				<swe:for-each startValue="1201" count="20" iteratorName="currentId">
+				<swe:control id="swe:currentId"><tr><td>
+					<swe:this property="FormattedHtml" hintText="Link"/>
+				</td></tr></swe:control>	
+				</swe:for-each>						
+			</table>		
+		</td>	
+		<td>
+			<table datatable="0" summary="">
+				<tr><td><b><swe:control id="1300" property="FormattedHtml" hintText="Group Label"/></b></td></tr>
+				<swe:for-each startValue="1301" count="20" iteratorName="currentId">
+				<swe:control id="swe:currentId"><tr><td>
+					<swe:this property="FormattedHtml" hintText="Link"/>
+				</td></tr></swe:control>	
+				</swe:for-each>						
+			</table>		
+		</td>	
+		<td>
+			<table datatable="0" summary="">
+				<tr><td><b><swe:control id="1400" property="FormattedHtml" hintText="Group Label"/></b></td></tr>
+				<swe:for-each startValue="1401" count="20" iteratorName="currentId">
+				<swe:control id="swe:currentId"><tr><td>
+					<swe:this property="FormattedHtml" hintText="Link"/>
+				</td></tr></swe:control>	
+				</swe:for-each>						
+			</table>		
+		</td>				
+	</tr>
+	
+	<tr><td colspan="4"><hr size=1></td></tr>
+
+	<tr valign="top">
+		<td>
+			<table datatable="0" summary="">
+				<tr><td><b><swe:control id="2100" property="FormattedHtml" hintText="Group Label"/></b></td></tr>
+				<swe:for-each startValue="2101" count="20" iteratorName="currentId">
+				<swe:control id="swe:currentId"><tr><td>
+					<swe:this property="FormattedHtml" hintText="Link"/>
+				</td></tr></swe:control>	
+				</swe:for-each>						
+			</table>		
+		</td>
+		<td>
+			<table datatable="0" summary="">
+				<tr><td><b><swe:control id="2200" property="FormattedHtml" hintText="Group Label"/></b></td></tr>
+				<swe:for-each startValue="2201" count="20" iteratorName="currentId">
+				<swe:control id="swe:currentId"><tr><td>
+					<swe:this property="FormattedHtml" hintText="Link"/>
+				</td></tr></swe:control>
+				</swe:for-each>							
+			</table>		
+		</td>	
+		<td>
+			<table datatable="0" summary="">
+				<tr><td><b><swe:control id="2300" property="FormattedHtml" hintText="Group Label"/></b></td></tr>
+				<swe:for-each startValue="2301" count="20" iteratorName="currentId">
+				<swe:control id="swe:currentId"><tr><td>
+					<swe:this property="FormattedHtml" hintText="Link"/>
+				</td></tr></swe:control>	
+				</swe:for-each>						
+			</table>		
+		</td>	
+		<td>
+			<table datatable="0" summary="">
+				<tr><td><b><swe:control id="2400" property="FormattedHtml" hintText="Group Label"/></b></td></tr>
+				<swe:for-each startValue="2401" count="20" iteratorName="currentId">
+				<swe:control id="swe:currentId"><tr><td>
+					<swe:this property="FormattedHtml" hintText="Link"/>
+				</td></tr></swe:control>	
+				</swe:for-each>						
+			</table>		
+		</td>				
+	</tr>	
+	
+</table>
+
+</td></tr></table>
+
+
+<!-- Template End: CCScreenLinks.swt -->	

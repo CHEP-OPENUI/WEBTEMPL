@@ -1,0 +1,36 @@
+
+<!--  Template Start: CCAppletListMessage.swt -->
+<swe:layout viewDisplayMode="Layout">
+<swe:include file="CCApplet_Spacer.swt"/>
+	<swe:include file="CCLayoutTitlePortal.swt"/>
+</swe:layout>
+
+<swe:layout viewDisplayMode="Show" appletDisplayMode="Show">
+<swe:include file="CCApplet_Spacer.swt"/>
+
+<swe:control id="1100"><div class=CmdTxt><swe:this property="FormattedHtml" hintText="Outside Applet Help Text" hintMapType="Control"/></div><br></swe:control>
+
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center"><tr valign="top"><td>
+	<tr valign="top">
+		<td>
+				<span class="AppletStyle1">
+				<swe:include file="CCTitle_Portal.swt"/>
+				
+				<swe:layout viewDisplayMode="Show" appletDisplaySize="Max">
+				<swe:include file="CCListButtonsTopNoRecNav.swt"/>
+				
+				<table datatable="0" summary="" bgcolor="#cccccc" valign="top" width="100%" cellpadding="0" cellspacing="1" border="0" align="center"><tr><td>
+				<table datatable="0" summary="" valign="top" width="100%" cellpadding="3" cellspacing="0" border="0">
+				   <swe:include file="CCListBodyBullet.swt"/>
+				</table>	
+				</td></tr></table>
+				</swe:layout>
+				
+				<swe:include file="CCBottomApplet.swt"/>
+				</span>
+			
+		</td>
+	</tr>
+</table>
+</swe:layout>
+<!--  Template End: CCAppletListMessage.swt -->

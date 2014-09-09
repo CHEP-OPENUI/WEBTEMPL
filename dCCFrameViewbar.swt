@@ -1,0 +1,42 @@
+<!-- Template Start: dCCFrameViewbar.swt -->
+
+<HTML dir="swe:dir">
+<head>
+<title><swe:this property="Title"/></title>
+<swe:include file="CCStylesChoice.swt"/>
+</head>
+
+<BODY bgcolor="#ccccff" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+
+<!--Start: Toolbar row-->
+<table datatable="0" summary="" width="100%" class="tier2On" border="0" cellspacing="0" cellpadding="0">
+	<tr class="tier2On">		
+		<td width="100%" class="tier2On"><img src="images/spacer.gif" width="10" height="1" alt=""></td>
+
+		<td>
+		<swe:form>
+			<table datatable="0" summary="" cellpadding="0" cellspacing="0" border="0"><tr>
+			<swe:toolbar name="Search">					
+				<td nowrap>
+					<swe:toolbaritem property="FormattedHtml"/>
+				</td>		
+			</swe:toolbar>
+			</tr></table>
+		</swe:form>
+		</td>
+		<td width="10" class="tier2On"><img src="images/spacer.gif" width="10" height="1" alt=""></td>
+	</tr>
+</table>
+<!--End: Toolbar row-->
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+	<tr>
+		<td valign="top" class="tier2Rule" align="right"><img src="images/spacer.gif" width="1" height="1" alt=""></td>			
+	</tr>
+</table>
+<!-- End Tier2 nav & Search-->
+
+<swe:scripts/>
+</BODY>
+</HTML>
+
+<!-- Template End: dCCFrameViewbar.swt -->

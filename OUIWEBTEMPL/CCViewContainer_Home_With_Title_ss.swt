@@ -1,0 +1,52 @@
+<!--  Template Start: CCViewContainer_Home_With_Title_ss.swt -->
+<swe:include file="dCCHTMLHeader.swt"/>
+
+<!-- ---------- Main Content Area ---------------------------->
+
+<div class="siebui-view-main" >
+    <div class="siebui-ss-applet-container">
+
+        <!-- Applet which does not require applet divider -->
+        <swe:applet id="1">
+            <swe:this hintMapType="Applet" hintText="Applet" property="FormattedHtml" var="Parent"/>
+            <div class="siebui-applet-divider"> </div>
+        </swe:applet>
+        
+        <div class="siebui-ss-view-title">
+            <swe:this property="Title"/>
+        </div>
+
+        <!-- Applets which need applet divider goes here -->
+        <swe:for-each count=5 iteratorName="currentId" startValue="10">
+            <swe:applet id="swe:currentId">
+                <swe:this hintMapType="Applet" hintText="Applet" property="FormattedHtml" var="Parent"/>
+                <div class="siebui-applet-divider"> </div>
+            </swe:applet>
+        </swe:for-each> 
+    </div>
+    <!-- two column separator -->
+    <div class="siebui-ss-col-applet-container">
+        <div class="siebui-ss-applet-container-col1">
+            <swe:for-each count=3 iteratorName="currentId" startValue="20">
+                <swe:applet id="swe:currentId">
+                    <div class="siebui-applet-divider"> </div>
+                    <swe:this hintMapType="Applet" hintText="Applet" property="FormattedHtml" var="Parent"/>
+                </swe:applet>
+            </swe:for-each>
+        </div>
+        <div class="siebui-ss-applet-container-col2">
+            <swe:for-each count=3 iteratorName="currentId" startValue="30">
+                <swe:applet id="swe:currentId">
+                    <div class="siebui-applet-divider"> </div>
+                    <swe:this hintMapType="Applet" hintText="Applet" property="FormattedHtml" var="Parent"/>
+                </swe:applet>
+            </swe:for-each> 
+        </div>
+    </div>
+	<div class="siebui-clear-all"></div>
+</div>
+        
+
+<!-- ---------- End Main Content Area ------------------------>
+<swe:include file="dCCHTMLFooter.swt"/>
+<!--  Template End:  CCViewContainer_Home_With_Title_ss.swt -->

@@ -1,0 +1,30 @@
+<!-- Template Start: CCAppletForm4Col_B.swt -->
+<!-- remove body part.-->
+<!-- include file FINSDBFormButtonsTop.swt -->
+
+<swe:include file="CCApplet_NamedSpacer.swt"/>	
+
+<swe:form>
+
+<!-- div class="swe:this.SelectStyle" -->
+<div>		
+<!-- table width="100%" cellpadding="0" cellspacing="0" border="0" align="center" class="AppletBack"-->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" align="center">
+<tr>
+<!-- td class="AppletHIFormBorder" -->
+<td>
+
+	<!-- swe:include file="CCTitle_Named.swt"/ -->	
+	<swe:include file="FINSDBFormButtons.swt"/>
+	
+	</span>				
+</td></tr></table>
+</div>
+</swe:form>
+
+
+<!-- Template End: CCAppletFormBase4Col_B.swt -->
+
+
+
+	

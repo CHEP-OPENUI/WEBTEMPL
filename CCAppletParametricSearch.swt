@@ -1,0 +1,118 @@
+<!-- Template Start: CCAppletParametricSearch.swt -->
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0">
+	<swe:form htmlAttr="onsubmit='OnEnterKeyMethod (); return false;'">
+	<input type=image src="images/spacer.gif" tabindex="-1" hidefocus="true" alt="" title="Ignore Button"/>
+	<tr valign="top">
+		<td class="AppletStyle2">
+		<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="2" border="0" align="center">
+			<tr class="AppletTitle">			
+				<td class="AppletTitle" valign="absmiddle" nowrap><swe:control id="90" property="DisplayName"/></td>
+				<td class="AppletTitle" width="100%" class="AppletBlank" align="right">&nbsp;</td>
+				<swe:if condition="Web Engine State Properties, IsHighInteractive">
+					<swe:control id="141">
+					<!-- optional control -->
+					<td valign="middle" nowrap>
+					<swe:this property="FormattedHtml" hintMapType="Hide Icon"/>
+					</td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					</swe:control>
+				</swe:if>
+				<swe:if condition="Web Engine State Properties, IsLowInteractive">
+					<swe:control id="142">
+					<!-- optional control -->
+					<td valign="middle" nowrap>
+					<swe:this property="FormattedHtml" hintMapType="Hide Icon"/>
+					</td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					</swe:control>
+				</swe:if>
+	
+			</tr>	
+		<swe:include file="CCFormSearch.swt"/>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" style="background-color:#ff9933;"><img src="images/spacer.gif" width="1" height="2" alt=""></td>
+	</tr>
+	<tr valign="top">
+		<td class="AppletStyle2">
+			<!-- Start of categories block -->
+			<table datatable="0" summary=""  class="AppletBack" border="0" cellspacing="0" cellpadding="2">		
+			
+			<!-- srcCategoryList will do a for-loop over all categories -->
+		        <swe:srchCategoryList>
+				<tr valign="top">
+      		                        <swe:srchCategory>
+					  <td class="mceLabel2" align="right"><swe:srchCategoryText/>:&nbsp;</td>
+					  <td class="mceField"><swe:srchCategoryControl/></td>
+				        </swe:srchCategory>  
+				        <swe:srchCategory>
+                                          <td class="mceLabel2" align="right"><swe:srchCategoryText/>:&nbsp;</td>
+					  <td class="mceField"><swe:srchCategoryControl/></td>
+				        </swe:srchCategory>
+				</tr>										
+				</swe:srchCategoryList>
+				<!--alignment row-->
+				<tr><td><img src="images/spacer.gif" width="95" height="1" alt=""></td><td></td></tr>
+			</table>
+			<!-- End of categories block -->
+		</td>
+	</tr>
+	<tr><td class="AppletStyle2">
+		<table datatable="0" summary="" class="AppletBack" border="0" cellspacing="2" cellpadding="2">
+		<!--alignment row-->
+			<tr><td><img src="images/spacer.gif" width="95" height="1" alt=""></td><td></td></tr>	
+			<tr>
+				<td></td>
+				<td>
+					<table datatable="0" summary="" cellpadding="0" cellspacing="0" border="0"><tr>
+					 <swe:control id="132">
+				      <!-- EditRecord -->
+				        <td valign="middle" nowrap>
+				        <swe:this property="FormattedHtml" hintText="Menu" hintMapType="Control"/>
+				        </td>
+				      </swe:control>
+				      <swe:control id="133">
+				      <!-- DeleteRecord -->
+				        <td valign="middle" nowrap>
+				        <swe:this property="FormattedHtml" hintText="New" hintMapType="Control"/>
+				        </td>
+				      </swe:control>
+				      <swe:control id="151">
+				      <!-- optional control -->
+				        <td valign="middle" nowrap>
+				        <swe:this property="FormattedHtml" hintMapType="Control"/>
+				        </td>
+				      </swe:control>
+                                      <td>&nbsp;</td>
+				      <swe:control id="152">
+				      <!-- optional control -->
+				        <td valign="middle" nowrap>
+				        <swe:this property="FormattedHtml" hintMapType="Control"/>
+				        </td>
+				      </swe:control>
+                                      <td>&nbsp;</td>
+				      <swe:control id="153">
+				      <!-- optional control -->
+				        <td valign="middle" nowrap>
+				        <swe:this property="FormattedHtml" hintMapType="Control"/>
+				        </td>
+				      </swe:control>
+					  </tr></table>
+				</td>
+			</tr>
+		</table>
+	</td></tr>	
+	<swe:error>
+	<tr>
+		<td class="AppletStyle2">			
+			<table datatable="0" summary="" class="AppletBack" border="0" cellspacing="2" cellpadding="2">
+				<tr><td></td><td class="error"><swe:this property="FormattedHtml"/></td></tr>
+				<tr><td><img src="images/spacer.gif" width="95" height="1" alt=""></td><td></td></tr>	
+			</table>
+		</td>
+	</tr>
+	</swe:error>	
+	</swe:form>
+</table>	
+<table datatable="0" summary="" bgcolor="#ffffff" width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr valign="top"><td><img src="images/spacer.gif" width="1" height="5" alt=""></td></tr></table>
+<!-- Template End: CCAppletParametricSearch.swt -->

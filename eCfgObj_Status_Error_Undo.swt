@@ -1,0 +1,34 @@
+<!-- Template Start: eCfgObj_Status_Error_Info.swt -->
+<div id="eCfgObj_Status_Error_Info.swt" class="cxStatusTempl">
+<swe:form>
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+   <tr class="listRowOff">
+      <td>
+         <b><swe:control id="Status" CfgUIControl="lblStatus" property="DisplayName" /></b>
+      </td>
+   </tr>
+   <swe:for-each id="200" CfgLoopType="ErrorMsg" startValue="1500" count="Dynamic" iteratorName="101Id">
+      <tr class="listRowOff">
+         <td>
+             <span id="Message" class="cxLabel">
+             <swe:control id="swe:101Id+220" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" CfgFieldName="Message"/>
+             </span>
+         </td>
+      </tr>
+   </swe:for-each>
+
+   <tr class="listRowOff">
+      <td >
+         <swe:control id="ClearTheStatusUndo" 
+                      CfgUIControl="ClearTheStatusUndo"
+                      CfgHtmlType="MiniButton" 
+                      InvokeMethod="SubmitRequest"
+                      CfgRequest="ClearTheStatus"
+                      property="FormattedHtml" />
+      </td>
+   </tr>
+
+</table>
+</swe:form>
+</div>
+<!-- Template End: eCfgObj_Status_Error_Info.swt -->

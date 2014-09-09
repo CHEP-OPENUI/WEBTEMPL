@@ -1,0 +1,282 @@
+<!-- Template Start: eCfg_MenuProductThemeJS.swt -->
+
+<div  id="cxProdMenu" class="cxProdTheme">
+
+<script>
+    var iCounter = 0;
+    var _greenBullet              = '<img src="images/bullet_green.gif" width="9" height="14" border="0" space="0" hspace="0" alt=""  title="" ></img>';
+    var _blackBullet              = '<img src="images/bullet_black.gif" width="9" height="14" border="0" space="0" hspace="0" alt=""  title="" ></img>';
+</script>
+<swe:include-script file="cfgpropset.js"/>
+        
+<div id="Rel_REF" class="eCfgPosAbs"></div>
+<div id="Rel_0" class="eCfgPosAbs">
+<table datatable="0" summary="" width="100%" height="100%" cellspacing="3" cellpadding="2" border="0" class="AppletBorder">
+<tr>
+
+    <td class="AppletBack" valign="top">
+        <table datatable="0" summary="" cellpadding="0" cellspacing="0" border="0" width="100%" height="100%" bgcolor="#ffffff">
+        <tr>
+
+            <td valign="top">
+            <!-- Options Map -->
+            <table datatable="0" summary="" cellpadding="5" cellspacing="5" border="0" width="100%" bgcolor="#ffffff">
+            <swe:for-each id="110" CfgLoopType="Group" startValue="8100" count="Dynamic" iteratorName="100Id" >
+
+            <script>
+               iCounter++;
+               var sGroupName = '<swe:control id="swe:100Id+51"  CfgHtmlType="CfgLabel" CfgFieldName="CxGroupName" />';
+               var sIsCurrentGroup = '<swe:control id="swe:100Id+500" CfgFieldName="Selected" CfgHtmlType="CfgLabel" />';
+               var sGroupName = '<swe:control id="swe:100Id+51"  CfgHtmlType="CfgLabel" CfgFieldName="CxGroupName" />';
+
+               if (sGroupName == "&nbsp;")
+               {
+                  if (sIsCurrentGroup == 'N')
+                  {
+                     var methodName = "ChangeCurrentObj";
+                     var methodParamPropSet = new JSSCfgPropertySet ();
+                     var methodParam;
+                     var sGroupId  = '<swe:control id="swe:180Id + 350" CfgFieldName="CxGroupId" CfgHtmlType="CfgLabel" />';                  
+
+                     methodParamPropSet.SetType ("Group");
+                     methodParamPropSet.SetProperty ("CxGroupId", sGroupId);
+                     methodParam = methodParamPropSet.EncodeAsString ();
+                     methodName = methodName + "_" + methodParam;
+
+                     summaryLink = 'javascript:ChooseGroup("' + methodName + '",' + currentRel + ')'; 
+                     if (typeof (top.g_cfgMainFrame) != "undefined" && top.g_cfgMainFrame != null)   
+                        eval ("top.g_cfgMainFrame.summaryLink = '" + summaryLink + "';");                     
+                  }     
+                  else
+                  {
+                     bShowSummary = true;       
+                     if (typeof (top.g_cfgMainFrame) != "undefined" && top.g_cfgMainFrame != null)   
+                        eval ("top.g_cfgMainFrame.bShowSummary = true;");                                          
+                  }  
+                  currentRel++;                                     
+               }                  
+            </script>
+
+               <td width="33%" valign="top">
+                 <table datatable="0" summary="" cellpadding="1" cellspacing="0" border="0">
+
+                    <!--Header row-->
+                    <tr>
+                       <td colspan="2">
+                         <b>
+                           <swe:control id="swe:100Id+50" CfgHtmlType="CfgLabel" CfgFieldName="CxGroupName"/>
+                         </b>
+                       </td>
+                    </tr>
+
+                    <swe:switch>
+                       <swe:case condition="Default, TestFieldValue, Operator:==, FieldName:Selected, FieldValue:Y">
+
+                          <!-- Relationships -->
+                          <swe:for-each id="180" CfgLoopType="Children" startValue="410" count="Dynamic" iteratorName="IncId" >                       
+                          <tr>
+                             <td width="100%">
+
+                                <script>
+                                   var sLink     = 'javascript:ToggleContent(' + currentRel + ');';
+                                   var sPortName = '<swe:control id="swe:180Id + 350" CfgFieldName="CxPortName" CfgHtmlType="CfgLabel" />';
+                                   var sPortId = '<swe:control id="swe:180Id + 390" CfgFieldName="Port Item Id" CfgHtmlType="CfgLabel" />';                                                                  
+                                   var sHasChild = "";
+
+                                   if (sPortName == "")
+                                   {    //this is an attribute                                   
+                                      sPortName = '<swe:control id="swe:180Id+20" CfgFieldName="AttName" CfgHtmlType="CfgLabel" />';
+                                      sPortId = sPortName;
+                                   }
+
+                                   sHasChild = '<swe:control id="swe:180Id+280" CfgFieldName="HasChildren" CfgHtmlType="CfgLabel" />';
+                                   
+                                   if (sPortId != "" )
+                                   {
+                                      relationshipMap[sPortId] = currentRel;
+                                   }                                   
+
+                                   visibleRelArray[visibleArrayIndex] = currentRel;
+                                   visibleArrayIndex++;
+                                   currentRel++;
+
+                                   document.write('<span id = "MENUBUTTON_');
+                                   document.write(sPortId);
+                                   document.write('"></span>');
+                                   document.write('<a href=\'');
+                                   document.write(sLink);
+                                   document.write('\'>');
+                                   document.write(sPortName);
+                                   document.write('</a>');
+
+                                   if ((sPortId == null) || (sPortId == "undefined"))
+                                      alert ("Port ID is UNDEFINED");
+
+                                   var greenButtonId = "MENUBUTTON_" + sPortId;
+                                   var greenButtonDiv = document.getElementById (greenButtonId);
+                                   if (sHasChild == "N" || sHasChild == "n" || sHasChild == "No")
+                                   {
+                                      if (greenButtonDiv != null)
+                                         greenButtonDiv.innerHTML = _greenBullet;
+                                      else
+                                         alert ("Port Id NULL");
+                                   }
+                                   else
+                                   {
+                                      if (greenButtonDiv != null)
+                                         greenButtonDiv.innerHTML = _blackBullet;
+                                      else
+                                         alert ("Port Id NULL");
+                                   }
+
+                                </script>
+                              <swe:control id="swe:180Id + 2550" CfgHtmlType="CfgGenerics" />
+                             </td>
+                          </tr>
+                          </swe:for-each>
+
+                       </swe:case>
+                       <swe:default>
+
+                          <!-- Relationships -->
+                          <swe:for-each id="180" CfgLoopType="Children" startValue="410" count="Dynamic" iteratorName="IncId" >                       
+                          <tr>
+                             <td width="100%">
+
+                                <script>
+
+                                   var sPortName = '<swe:control id="swe:180Id + 350" CfgFieldName="CxPortName" CfgHtmlType="CfgLabel" />';
+                                   var sGroupId  = '<swe:control id="swe:180Id + 350" CfgFieldName="CxGroupId" CfgHtmlType="CfgLabel" />';
+                                   var sPortId = '<swe:control id="swe:180Id + 390" CfgFieldName="Port Item Id" CfgHtmlType="CfgLabel" />';
+                                   var sHasChild = "";                                                                  
+                                   
+                                   if (sPortName == "")
+                                   {    //this is an attribute                                   
+                                      sPortName = '<swe:control id="swe:180Id+20" CfgFieldName="AttName" CfgHtmlType="CfgLabel" />';
+                                      sPortId = sPortName;
+                                   }
+
+                                   sHasChild = '<swe:control id="swe:180Id+280" CfgFieldName="HasChildren" CfgHtmlType="CfgLabel" />';
+                                   
+                                   if (sPortId != "" )
+                                   {
+                                      relationshipMap[sPortId] = currentRel;
+                                   } 
+                                                                      
+                                   var methodName = "ChangeCurrentObj";
+                                   var methodParamPropSet = new JSSCfgPropertySet ();
+                                   var methodParam;
+
+                                   methodParamPropSet.SetType ("Group");
+                                   methodParamPropSet.SetProperty ("CxGroupId", sGroupId);
+                                   methodParam = methodParamPropSet.EncodeAsString ();
+                                   methodName = methodName + "_" + methodParam;
+
+                                   var sLink = 'javascript:ChooseGroup("' + methodName + '",' + currentRel + ')';                                   
+
+                                   document.write('<span id = "MENUBUTTON_');
+                                   document.write(sPortId);
+                                   document.write('"></span>');
+                                   document.write('<a href=\'');
+                                   document.write(sLink);
+                                   document.write('\'>');
+                                   document.write(sPortName);
+                                   document.write('</a>');
+
+                                   if ((sPortId == null) || (sPortId == "undefined"))
+                                      alert ("Port ID is UNDEFINED");
+
+                                   var greenButtonId = "MENUBUTTON_" + sPortId;
+                                   var greenButtonDiv = document.getElementById (greenButtonId);
+                                   if (sHasChild == "N" || sHasChild == "n" || sHasChild == "No")
+                                   {
+                                      if (greenButtonDiv != null)
+                                         greenButtonDiv.innerHTML = _greenBullet;
+                                      else
+                                         alert ("Port Id NULL");
+                                   }
+                                   else
+                                   {
+                                      if (greenButtonDiv != null)
+                                         greenButtonDiv.innerHTML = _blackBullet;
+                                      else
+                                         alert ("Port Id NULL");
+                                   }                                                               
+
+                                </script>
+                              <swe:control id="swe:180Id + 3550" CfgHtmlType="CfgGenerics" />
+                             </td>
+                             <script>
+                                currentRel++;
+                             </script>
+                          </tr>
+                          </swe:for-each>
+
+                       </swe:default>
+                    </swe:switch>
+
+                 </table>
+               </td>
+
+            <script>
+
+
+               if (iCounter % 3 == 0)
+               {    //multiple of three
+                  //end and begin new table row
+                  document.write('</tr><tr>');
+               }
+
+            </script>
+
+            </swe:for-each>
+
+            <script>
+
+               if (iCounter % 3 != 0)
+               {    //not a multiple of three
+                 if (iCounter % 3 == 2)
+                 {    //one relationship in last row
+                     //insert blank table definition and end table row
+                     document.write('<td>&nbsp;</td></tr>');
+                 }
+                 if (iCounter % 3 == 1)
+                 {    //two relationships in last row
+                     //insert two blank table definitions and end table row
+                     document.write('<td>&nbsp;</td><td>&nbsp;</td></tr>');
+                 } 
+               }
+
+            </script>
+            </table>
+            </td>
+
+        </tr>
+        </table>
+    </td>
+</tr>
+</table>
+</div>
+
+<table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" border="0" class="eCfgVisHid">
+  <tr>
+     <td align="right">
+        <div id="POSITION_REF" class="eCfgPosAbs"></div>
+     </td>
+  </tr>
+</table>
+
+<script>
+    //reset the loop index
+    currentRel = 0;
+</script>
+
+<!-- Loop for current group -->
+
+<swe:for-each id="120" CfgLoopType="CurrentGroup" startValue="210" count="Dynamic" iteratorName="150Id" >
+    <swe:include id="swe:151Id" CfgHtmlType="CurrentGroup"/>
+</swe:for-each>
+
+</div> <!-- end of product theme div -->
+
+<!-- Template Start: eCfg_MenuProductThemeJS.swt -->

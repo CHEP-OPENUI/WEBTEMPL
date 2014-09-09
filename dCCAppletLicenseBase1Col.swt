@@ -1,0 +1,116 @@
+<!-- Template Start: dCCAppletLicensceBase1Col.swt -->
+
+<swe:include file="CCApplet_NamedSpacer.swt"/>	
+
+<swe:form>
+
+	<swe:include file="dCCTitle_Named.swt"/>
+
+	<swe:include file="CCTogglebar_drop.swt"/>	
+		
+	<table datatable="0" summary="" width="100%" cellpadding="1" cellspacing="0" border="0" align="center"><tr><td class="AppletBorder">	
+	<table datatable="0" summary="" class="AppletBack" valign="top" width="100%" cellpadding="3" cellspacing="0" border="0">
+	<tr valign="top">
+		<td>
+			<swe:error>
+					<table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="4" cellspacing="0" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/></td></tr></table>
+			</swe:error>
+			<swe:control id="91">
+						<!-- Inside-applet help text -->
+	 			<table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="4" cellspacing="0" border="0"><tr><td><swe:this property="DisplayName" hintText="Inside Applet Help Text"/></td></tr></table>
+			</swe:control>
+			<table datatable="0" summary="" width="100%" border="0" cellpadding="0"  cellspacing="4">
+				<swe:for-each count="2" startValue="1100" iteratorName="currentId">
+					<swe:control id="swe:currentId+100">
+						<tr><td class="dCCItemLabelLeft"><swe:this property="FormattedHtml" hintText="Label"/></td></tr>
+					</swe:control>
+				</swe:for-each>
+				<tr>
+					<td>
+			        <!------------------------------------------------------->
+					<!--This is where we include the html license agreement-->
+						<div unselectable="on" class="ScrollingDiv"></div>
+                    <!------------------------------------------------------->
+                    </td>
+				</tr>
+				<swe:for-each count="2" startValue="1300" iteratorName="currentId">
+					<swe:control id="swe:currentId+100">
+						<tr><td class="dCCItemLabelLeft"><swe:this property="FormattedHtml" hintText="Label"/></td></tr>
+					</swe:control>
+				</swe:for-each>
+
+				<tr>
+					<td>
+						<table datatable="0" summary="" width="100%" cellpadding="4" cellspacing="0" border="0">
+						<tr>
+							<swe:control id="132">
+							  <td><img src='images/spacer.gif' height=1 width=100 alt=""></td>
+							</swe:control>
+
+							<swe:control id="133">
+							  <td><img src='images/spacer.gif' height=1 width=100 alt=""></td>
+							</swe:control>
+
+							<swe:control id="141">
+							  <td><img src='images/spacer.gif' height=1 width=100 alt=""></td>
+							</swe:control>
+
+							<swe:control id="142">
+							  <td><img src='images/spacer.gif' height=1 width=100 alt=""></td>
+							</swe:control>
+
+							<swe:control id="157">
+							  <td><img src='images/spacer.gif' height=1 width=100 alt=""></td>
+							</swe:control>
+
+							<swe:control id="158">
+							  <td><img src='images/spacer.gif' height=1 width=100 alt=""></td>
+							</swe:control>
+
+							<td width="100%"><img src='images/spacer.gif' height=1 width=1 alt=""></td>
+						</tr>
+						<tr>
+							<swe:control id="132">
+							<!-- Optional, 132 -->
+							  <td nowrap><swe:this property="FormattedHtml"  hintMapType="Control"/></td>
+							</swe:control>
+					
+							<swe:control id="133">
+							<!-- Optional, 143 -->
+							  <td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+							</swe:control>
+
+							<swe:control id="141">
+							<!-- Optional, 145 -->
+							  <td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+							</swe:control>
+
+							<swe:control id="142">
+							<!-- Optional, 146 -->
+							  <td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+							</swe:control>
+
+							<swe:control id="157">
+							<!-- Optional, 157 -->
+							  <td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+							</swe:control>
+
+							<swe:control id="158">
+							<!-- Optional, 158 -->
+							  <td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+							</swe:control>
+
+							<td width="100%">&nbsp;</td>
+						</tr>
+						</table>
+				</td>
+			</tr>			
+		</table>
+	</td></tr></table>
+	</td></tr></table>
+	
+	<swe:include file="CCBottomApplet_NamedList.swt"/>	
+			
+</swe:form>
+</span>
+<!-- Template End: dCCAppletLicenseBase1Col.swt -->

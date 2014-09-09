@@ -1,0 +1,216 @@
+<!-- Oliver: code fixes only -->
+
+<!-- link rel="stylesheet" href="files/reportpane.css"/ -->
+<swe:form>
+	
+	<div id="s_ReportPane" class="reportPane">
+
+		<!-- report list header -->
+		<div id="reportpaneHeader" class="siebui-report-header">
+			<span id="reportRUNNOW" class="reportCaption">
+				<swe:control id="100"><swe:this property="FormattedHtml" hintMapType="Control" hintText="ReportTitle" /></swe:control>
+			</span>
+			<a id="s_reportclose"></a>
+		</div>
+
+	    <div id="reportList" class="reportlist1">
+				<div id="reportNames" class="siebui-report-row">		
+					<swe:control id="1001" hintMapType="FormItem">
+						<div class="mceGridLabel" align="swe:this.TextAlignmentLabel">
+							<swe:this property="DisplayName" hintText="Label"/>
+								<swe:this property="RequiredIndicator" hintText="Required"/>
+						</div>
+						<div id="reportnamesCombo" class="mceGridField" align="swe:this.TextAlignment">
+							<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="1001"/>
+						</div>
+					</swe:control>						    
+				</div><!-- end of reportNames -->
+				<div id="CustomName" class="siebui-report-row">		
+					<swe:control id="1002" hintMapType="FormItem">
+						<div class="mceGridLabel" align="swe:this.TextAlignmentLabel">
+							<swe:this property="DisplayName" hintText="Label"/>
+							<swe:this property="RequiredIndicator" hintText="Required"/>
+						</div>
+						<div id="reportCustomName" class="mceGridField" align="swe:this.TextAlignment">
+							<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="1002"/>
+						</div>
+					</swe:control>						    
+				</div>
+				<div id="OutputType" class="siebui-report-row">				
+					<swe:control id="1003" hintMapType="FormItem">
+						<div class="mceGridLabel" align="swe:this.TextAlignmentLabel">
+							<swe:this property="DisplayName" hintText="Label"/>
+							<swe:this property="RequiredIndicator" hintText="Required"/>
+						</div>
+						<div id="reportOutputType" class="mceGridField" align="swe:this.TextAlignment">
+							<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="1003"/>
+						</div>
+					</swe:control>						    
+				</div>
+				<div id="LocaleName" class="siebui-report-row">				
+					<swe:control id="1004" hintMapType="FormItem">
+						<div class="mceGridLabel" align="swe:this.TextAlignmentLabel">
+							<swe:this property="DisplayName" hintText="Label"/>
+							<swe:this property="RequiredIndicator" hintText="Required"/>
+						</div>
+						<div id="reportLocaleNames" class="mceGridField" align="swe:this.TextAlignment">
+							<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="1004"/>
+						</div>
+					</swe:control>						    
+				</div>
+	</div>  <!--   end of reportList -->
+	
+		<div id="multiaccordion2" class="siebui-accordion siebui-report-header siebui-report-footer">
+		
+			<span id="ScheduleReport" >
+				<swe:control id="200"><swe:this property="FormattedHtml" hintMapType="Control" hintText="Schedule Title" /></swe:control>
+			</span>
+			<div id="multiaccordion2_icon" class="siebui-rptaccordion-exp"/>
+		</div>
+		<div id="ScheduleHeader" class="siebui-report-margin siebui-report-header siebui-report-footer"> 
+
+		<!-- start of schedule report layout  -->
+		<!-- <div id="reportScheduler" class="reportSchedulerClass"> -->
+				<div id="ReportFrequency" class="siebui-report-row">
+					<swe:control id="1005" hintMapType="FormItem">
+						<div class="mceGridLabel" align="swe:this.TextAlignmentLabel">
+							<swe:this property="DisplayName" hintText="Label"/>
+						</div>
+						<div id="scheduleFrequency" class="siebui-report-freq mceGridField" align="swe:this.TextAlignment">
+							<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="1005"/>
+						</div>
+					</swe:control>						    
+				</div>
+				<div id="ReportRunTime" class="siebui-report-row">				
+					<swe:control id="1015" hintMapType="FormItem">
+						<div  id="ReportRunTime" class="mceGridLabel" align="swe:this.TextAlignmentLabel">
+							<swe:this property="DisplayName" hintText="Label"/>
+							<img src="images/icon_req.gif" alt="Required">
+						</div>
+					</swe:control>
+					<swe:control id="1008" hintMapType="FormItem">
+						<div id="ReportRunTimeHour" class="mceGridField siebui-report-runhour" align="swe:this.TextAlignment">
+							<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="1008"/>
+						</div>
+					</swe:control>
+					<swe:control id="1009" hintMapType="FormItem">
+						<div id="ReportRunTimeMinute" class="mceGridField siebui-report-runmin" align="swe:this.TextAlignment">
+							<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="1009"/>
+						</div>
+					</swe:control>										
+				</div>
+				<div id="RunDate" class="siebui-report-row">				
+					<swe:control id="1010" hintMapType="FormItem">
+						<div class="mceGridLabel" align="swe:this.TextAlignmentLabel">
+							<swe:this property="DisplayName" hintText="Label"/>
+							<img src="images/icon_req.gif" alt="Required">
+						</div>
+						<div id="SchedulerRunDate" class="mceGridField" align="swe:this.TextAlignment">
+							<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="1010"/>
+						</div>
+					</swe:control>						    
+				</div>
+				<div id="StartDate" class="siebui-report-row">				
+					<swe:control id="1011" hintMapType="FormItem">
+						<div class="mceGridLabel" align="swe:this.TextAlignmentLabel">
+							<swe:this property="DisplayName" hintText="Label"/>
+							<img src="images/icon_req.gif" alt="Required">
+						</div>
+						<div id="SchedulerStartDate" class="mceGridField" align="swe:this.TextAlignment">
+							<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="1011"/>
+						</div>
+					</swe:control>						    
+				</div>
+				<div id="EndDate" class="siebui-report-row">				
+					<swe:control id="1012" hintMapType="FormItem">
+						<div class="mceGridLabel" align="swe:this.TextAlignmentLabel">
+							<swe:this property="DisplayName" hintText="Label"/>
+							<img src="images/icon_req.gif" alt="Required">
+						</div>
+						<div id="SchedulerEndDate" class="mceGridField" align="swe:this.TextAlignment">
+							<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="1012"/>
+						</div>
+					</swe:control>						    
+				</div>
+				<div id="ReportWeekDays" class="siebui-report-row">				
+					<!--table width="100%"-->
+							   <swe:control id="1013" hintMapType="FormItem">
+								<!--tr valign="middle"-->
+									<!--td class="siebui-reportLabel" width="50%"-->
+										<div class="mceGridLabel  siebui-reportwkdays-label" align="swe:this.TextAlignmentLabel">
+											<swe:this property="DisplayName" hintText="Label"/>
+											<img src="images/icon_req.gif" alt="Required">
+										</div>
+									<!--/td-->
+									<!--td class="siebui-reportField" width="50%"-->
+										<div id="SchedulerWeekDays" class="mceGridField siebui-report-weekdays" align="swe:this.TextAlignment">
+											<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="1013"/>
+										</div>
+									<!--/td-->
+								<!--/tr-->										
+							   </swe:control>						    
+					</table>
+				</div>
+				<div id="ReportMonths" class="siebui-report-row">				
+					<!--table width="100%"-->
+							   <swe:control id="1014" hintMapType="FormItem">
+								<!--tr valign="middle"-->
+									<!--td class="siebui-reportLabel" width="50%"-->
+										<div class="mceGridLabel siebui-reportmon-label" align="swe:this.TextAlignmentLabel">
+											<swe:this property="DisplayName" hintText="Label"/>
+											<img src="images/icon_req.gif" alt="Required">
+										</div>
+									<!--/td-->
+									<!--td class="siebui-reportField" width="50%"-->
+										<div id="SchedulerMonths" class="mceGridField siebui-report-mon" align="swe:this.TextAlignment">
+											<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="1014"/>
+										</div>
+									<!--/td-->
+								<!--/tr-->										
+							   </swe:control>						    
+					<!--/table-->
+				</div>
+				<div id="Dates" class="siebui-report-row">				
+					<swe:control id="1016" hintMapType="FormItem">
+						<div class="mceGridLabel" align="swe:this.TextAlignmentLabel">
+							<swe:this property="DisplayName" hintText="Label"/>
+							<img src="images/icon_req.gif" alt="Required">
+						</div>
+						<div id="SchedulerDates" class="mceGridField siebui-report-dates" align="swe:this.TextAlignment">
+							<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="1016"/>
+						</div>
+					</swe:control>						    
+				</div>
+		
+			<div id="schedulebuttonCtrl" class="siebui-report-button">    <!-- save data, save Output, Public Flag fields -->
+				<swe:control id="145"><!-- optional control  --><swe:this property="FormattedHtml" hintMapType="Control" hintText="Public"/></swe:control>
+
+				<swe:control id="146"><!-- optional control  --><swe:this property="FormattedHtml" hintMapType="Control" hintText="Save Data"/></swe:control>
+				
+				<swe:control id="147"><!-- optional control  --><swe:this property="FormattedHtml" hintMapType="Control" hintText="Save Output"/></swe:control>
+			</div>
+		<!--  </div>  ending scheduler accordian control --> 
+		</div>  <!-- Report scheduler tag end -->
+	
+	<!-- Report scheduler tag start -->
+	<div id="multiaccordion3" class="siebui-accordion siebui-report-header siebui-report-footer">
+	    <span id="ParameterReport" >
+			<swe:control id="201"><swe:this property="FormattedHtml" hintMapType="Control" hintText="Parameter Title" /></swe:control>
+		</span>
+		<div id="multiaccordion3_icon" class="siebui-rptaccordion-exp"/>
+	</div>
+	<div id="reportParameter" class="siebui-report-margin siebui-report-header siebui-report-footer"/>
+	<!-- Report scheduler tag end -->
+	
+			<div id="reportFooter" class="siebui-report-footer">
+
+			<swe:control id="142"><!-- optional control  --><swe:this property="FormattedHtml" hintMapType="Control" hintText="My BIP Reports"/></swe:control>
+
+			<swe:control id="143"><!-- optional control  --><swe:this property="FormattedHtml" hintMapType="Control" hintText="Submit"/></swe:control>
+		</div>
+
+	</div>
+
+	<!-- Template End: CCAppletFormGridLayout.swt -->
+
+</swe:form>

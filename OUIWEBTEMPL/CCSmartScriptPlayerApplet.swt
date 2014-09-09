@@ -1,0 +1,133 @@
+<!-- Start of the CCSmartScriptPlayerApplet.swt -->
+<!-- Oliver: code redesign -->
+
+<!-- SmartScriptForm (use onSubmit handler to cancel auto submissions through Enter key) -->
+
+<swe:form name="SmartScriptForm" htmlAttr="onSubmit='return false;'">
+
+	<div class="siebui-applet">
+		<div class="siebui-applet-title-row">
+			<div class="siebui-applet-title">
+				<swe:control id="s_SmartScriptLabel"/>
+				<swe:control id="6">
+					<span><swe:this property="FormattedHtml" hintText="Save Answers" hintMapType="Control"/></span>
+				</swe:control>
+			</div>
+		</div>
+		<div class="siebui-applet-content">
+			<div class="siebui-smsc-title">
+				<swe:control id="s_SSPageLabel"/>
+				 <span class="siebui-smsc-title-req">
+					 <swe:control id="1500">
+						<swe:this property="DisplayName" hintText="Required Label"/><img src="images/icon_req.gif"/>
+					 </swe:control>
+				 </span>
+			</div>
+			
+			<swe:error><div class="siebui-error-txt"><swe:this property="FormattedHtml"/></div></swe:error>
+ 
+			<!-- Start of questions block -->
+
+			<!--swe:ssQuestionList-->	
+			<swe:for-each id="SSQuestionList" Count="Dynamic" StartValue=1000 IteratorName="SSQuestionIndex">
+   
+				<swe:control id="SSInfoQuestion">
+				<table datatable="0" summary="" width="100%" class="AppletBack">
+					<tr>
+						<td>
+							<swe:this property="DisplayName"/>
+						</td>
+					</tr>
+				</table>
+				</swe:control>
+
+				<swe:control id="SSQuestion">
+				<table datatable="0" summary="" width="100%" class="AppletBack">
+					<tr>
+						<td>
+							<span class="questLabel" align="swe:this.TextAlignment">
+								<swe:this property="DisplayName"/>
+								<swe:this property="RequiredIndicator"/>
+							</span>
+							<span class="scField" align="swe:this.TextAlignment">
+								<swe:this property="FormattedHtml"/>
+							</span>        
+						</td>
+					</tr>
+				</table>
+				</swe:control>
+
+				<swe:control id="SSGroupTitle">
+				<table datatable="0" summary="" width="100%" class="AppletBack">
+					<tr>
+						<td>
+							<span class="questLabel" align="swe:this.TextAlignment">
+								<swe:this property="DisplayName"/>
+								<swe:this property="RequiredIndicator"/>
+							</span>
+						</td>
+					</tr>
+				</table>
+				</swe:control>
+
+				<swe:control id="SSGroupElement">
+				<table datatable="0" summary="" width="100%" class="AppletBack">
+					<tr>
+						<td>
+							<span class="scField" align="swe:this.TextAlignment">
+								<swe:this property="FormattedHtml"/>
+							</span> 
+							<span class="scField" align="swe:this.TextAlignment">
+								<swe:this property="DisplayName"/>
+							</span>    
+						</td>
+					</tr>
+				</table>				
+				</swe:control>
+
+		   </swe:for-each>
+			<!-- End of questions block -->
+
+		</div>
+		<div class="siebui-applet-btm-buttons">
+			<table datatable="0" summary="" width="100%">
+				<tr>
+					<!-- PreviousSection -->
+					<swe:control id="3">
+					<td><swe:this property="FormattedHtml" hintText="Previous Section" hintMapType="Control"/></td>
+					</swe:control>
+
+					<!-- NextSection -->
+					<swe:control id="4">
+					<td><swe:this property="FormattedHtml" hintText="Next Section" hintMapType="Control"/></td>
+					</swe:control>
+
+					<td class="siebui-td-sep100">&nbsp;</td>
+
+					<!-- Finish -->
+					<swe:control id="1">
+					<td><swe:this property="FormattedHtml" hintText="Finish Script" hintMapType="Control"/></td>
+					</swe:control>
+					
+					<!-- Save -->
+					<swe:control id="5">
+					<td><swe:this property="FormattedHtml" hintText="Save Script" hintMapType="Control"/></td>
+					</swe:control>
+
+					<!-- Cancel -->
+					<swe:control id="2">
+					<td><swe:this property="FormattedHtml" hintText="Cancel Script" hintMapType="Control"/></td>
+					</swe:control>
+
+					<!-- ActiveX Custom Control -->
+					<swe:control id="8" hintMapType="FormItem">
+					<td width="100%"><swe:this property="FormattedHtml" hintText="Field"/></td>
+					</swe:control>
+					</tr>
+			</table>
+		</div>
+	</div>
+
+</swe:form>
+
+<!-- End of CCSmartScriptPlayerApplet.swt-->

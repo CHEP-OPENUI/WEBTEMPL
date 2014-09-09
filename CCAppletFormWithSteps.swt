@@ -1,0 +1,298 @@
+<!-- Template Start: CCAppletFormWithSteps.swt -->
+
+<swe:include file="CCApplet_NamedSpacer.swt"/>	
+
+<swe:form>
+
+	<swe:include file="CCTitle_Named.swt"/>
+	
+	<swe:include file="CCFormButtonsTop.swt"/>
+	
+
+	<div class="swe:this.SelectStyle">	
+	
+	<table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" border="0" align="center" class="AppletBack"><tr><td class="AppletHIFormBorder">
+	<swe:error type="Popup">
+	<table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="0" cellspacing="5" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/></td></tr></table>
+	</swe:error>
+	
+	<table datatable="0" summary="" class="AppletBack" cellpadding="0" cellspacing="0" border="0" width="100%">
+	<!--Wide Step Label Row-->
+	<tr><td width="2%" valign="bottom">
+	      <swe:control id="1001">
+	      <div class="reportObjNum">
+		  	<swe:this property="DisplayName" hintText="Step Label" />
+		   </div>
+	      </swe:control> 
+	     </td>
+	    <td colspan="3">
+	      <swe:control id="1002">
+	      <div class="reportObjTitle">
+		  	<swe:this property="DisplayName" hintText="Step Title"/>
+		  </div>
+	      </swe:control>
+	    </td>
+	</tr>
+	
+	<!--Wide Field Rows - no labels-->
+	<swe:for-each startValue="1295" count="3" iteratorName="currentId">
+		<swe:control id="swe:currentId" hintMapType="FormItem">
+		<tr>
+			<td colspan="4">					
+					<table datatable="0" summary="" width="100%" cellpadding="0" class="mceWideFields" valign="top">	
+						<tr valign="top">
+							<td>
+								<span class="mceField" align="swe:this.TextAlignment">
+									<swe:this property="FormattedHtml" hintText="Wide Field - No Label" hintMapLabelId="swe:currentId"/>
+								</span>
+							</td>
+						</tr>		
+					</table>			
+			</td>
+		</tr>
+		</swe:control>	
+	</swe:for-each>	
+	
+	
+	<!--Wide Field Rows-->
+	<swe:for-each startValue="1300" count="3" iteratorName="currentId">
+		<swe:control id="swe:currentId" hintMapType="FormItem">
+		<tr>
+			<td colspan="4">					
+					<table datatable="0" summary="" width="100%" cellpadding="0" class="mceWideFields" valign="top">	
+						<tr valign="top">
+							<td>
+								<div class="mceLabel" align="swe:this.TextAlignmentLabel">
+									<swe:this property="DisplayName" hintText="Wide Label"/>:
+									<swe:this property="RequiredIndicator" hintText="Required"/>
+								</div>
+	
+								<span class="mceField" align="swe:this.TextAlignment">
+									<swe:this property="FormattedHtml" hintText="Wide Field" hintMapLabelId="swe:currentId"/>
+								</span>
+							</td>
+						</tr>		
+					</table>			
+			</td>
+		</tr>
+		</swe:control>	
+	</swe:for-each>
+	
+	<!--Side-by-Side Step Label Row-->
+	<tr><td width="2%" valign="bottom">
+	      <swe:control id="1011">
+	      <div class="reportObjNum">
+		  	<swe:this property="DisplayName" hintText="Step Label" />
+		   </div>
+	      </swe:control> 
+	     </td>
+	    <td>
+	      <swe:control id="1012">
+	      <div class="reportObjTitle">
+		  	<swe:this property="DisplayName" hintText="Step Title"/>
+		  </div>
+	      </swe:control>
+	    </td>
+		<td width="2%" class="Row" valign="bottom">
+	      <swe:control id="1013">
+	      <div class="reportObjNum">
+		  	<swe:this property="DisplayName" hintText="Step Label" />
+		   </div>
+	      </swe:control> 
+	     </td>
+	    <td>
+	      <swe:control id="1014">
+	      <div class="reportObjTitle">
+		  	<swe:this property="DisplayName" hintText="Step Title"/>
+		  </div>
+	      </swe:control>
+	    </td>	
+	</tr>
+	
+	<!--Sice-by-Side fields-->
+	<tr valign="top">
+		<td colspan="2">
+			<table datatable="0" summary="" width="100%" border="0" cellspacing="2" cellpadding="0" align="center">
+					
+					<swe:for-each startValue="1310" count="5" iteratorName="currentId">
+						<swe:control id="swe:currentId" hintMapType="FormItem">
+						<tr valign="top">
+							<td>
+								<div class="mceLabel" align="swe:this.TextAlignmentLabel">
+									<swe:this property="DisplayName" hintText="Label"/>:
+									<swe:this property="RequiredIndicator" hintText="Required"/>
+								</div>
+	
+								<span class="mceField" align="swe:this.TextAlignment">
+									<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+								</span>
+							</td>
+						</tr>										
+						</swe:control>									
+					</swe:for-each>						
+			
+			</table>
+		</td>
+		<td colspan="2">
+			<table datatable="0" summary="" width="100%" border="0" cellspacing="2" cellpadding="0">
+	
+					
+					<swe:for-each startValue="2310" count="5" iteratorName="currentId">
+						<swe:control id="swe:currentId" hintMapType="FormItem">
+						<tr valign="top">
+							<td>
+								<div class="mceLabel" align="swe:this.TextAlignmentLabel"
+									<swe:this property="DisplayName" hintText="Label"/>:
+									<swe:this property="RequiredIndicator" hintText="Required"/>
+								</div>
+	
+								<span class="mceField" align="swe:this.TextAlignment">
+									<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+								</span>
+							</td>
+						</tr>										
+						</swe:control>									
+					</swe:for-each>	
+					
+						
+			</table>
+		</td>
+	</tr>
+	
+	<!--Wide Step Label Row-->
+	<tr><td width="2%" valign="bottom">
+	      <swe:control id="1021">
+	      <div class="reportObjNum">
+		  	<swe:this property="DisplayName" hintText="Step Label" />
+		   </div>
+	      </swe:control> 
+	     </td>
+	    <td colspan="3">
+	      <swe:control id="1022">
+	      <div class="reportObjTitle">
+		  	<swe:this property="DisplayName" hintText="Step Title"/>
+		  </div>
+	      </swe:control>
+	    </td>
+	</tr>
+	
+	<!--Wide field rows-->
+	<swe:for-each startValue="1320" count="5" iteratorName="currentId">
+		<swe:control id="swe:currentId" hintMapType="FormItem">
+		<tr>
+			<td colspan="4">					
+					<table datatable="0" summary="" width="100%" cellpadding="0" class="mceWideFields" valign="top">	
+						<tr valign="top">
+							<td>
+								<div class="mceLabel" align="swe:this.TextAlignmentLabel">
+									<swe:this property="DisplayName" hintText="Wide Label"/>:
+									<swe:this property="RequiredIndicator" hintText="Required"/>
+								</div>
+	
+								<span class="mceField" align="swe:this.TextAlignment">
+									<swe:this property="FormattedHtml" hintText="Wide Field" hintMapLabelId="swe:currentId"/>
+								</span>
+							</td>
+						</tr>		
+					</table>			
+			</td>
+		</tr>
+		</swe:control>	
+	</swe:for-each>
+	
+	<!--Side-by-Side Step Label Row-->
+	<tr><td width="2%" valign="bottom">
+	      <swe:control id="1041">
+	      <div class="reportObjNum">
+		  	<swe:this property="DisplayName" hintText="Step Label" />
+		   </div>
+	      </swe:control> 
+	     </td>
+	    <td>
+	      <swe:control id="1042">
+	      <div class="reportObjTitle">
+		  	<swe:this property="DisplayName" hintText="Step Title"/>
+		  </div>
+	      </swe:control>
+	    </td>
+		<td width="2%" class="Row" valign="bottom">
+	      <swe:control id="1043">
+	      <div class="reportObjNum">
+		  	<swe:this property="DisplayName" hintText="Step Label" />
+		   </div>
+	      </swe:control> 
+	     </td>
+	    <td>
+	      <swe:control id="1044">
+	      <div class="reportObjTitle">
+		  	<swe:this property="DisplayName" hintText="Step Title"/>
+		  </div>
+	      </swe:control>
+	    </td>	
+	</tr>
+	
+	<!--Sice-by-Side fields-->
+	<tr valign="top">
+		<td colspan="2">
+			<table datatable="0" summary="" width="100%" border="0" cellspacing="2" cellpadding="0" align="center">
+					
+					<swe:for-each startValue="1330" count="5" iteratorName="currentId">
+						<swe:control id="swe:currentId" hintMapType="FormItem">
+						<tr valign="top">
+							<td>
+								<div class="mceLabel" align="swe:this.TextAlignmentLabel">
+									<swe:this property="DisplayName" hintText="Label"/>:
+									<swe:this property="RequiredIndicator" hintText="Required"/>
+								</div>
+	
+								<span class="mceField" align="swe:this.TextAlignment">
+									<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+								</span>
+							</td>
+						</tr>										
+						</swe:control>									
+					</swe:for-each>						
+			
+			</table>
+		</td>
+		<td colspan="2">
+			<table datatable="0" summary="" width="100%" border="0" cellspacing="2" cellpadding="0">
+	
+					
+					<swe:for-each startValue="2330" count="5" iteratorName="currentId">
+						<swe:control id="swe:currentId" hintMapType="FormItem">
+						<tr valign="top">
+							<td>
+								<div class="mceLabel" align="swe:this.TextAlignmentLabel">
+									<swe:this property="DisplayName" hintText="Label"/>:
+									<swe:this property="RequiredIndicator" hintText="Required"/>
+								</div>
+	
+								<span class="mceField" align="swe:this.TextAlignment">
+									<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+								</span>
+							</td>
+						</tr>										
+						</swe:control>									
+					</swe:for-each>	
+					
+						
+			</table>
+		</td>
+	</tr>	
+	</table>
+		
+	
+	
+	</td></tr></table>
+	
+	<!--end selection div-->
+	</div>
+<!--end applet span-->	
+</span>			
+
+</swe:form>
+
+
+
+<!-- Template End: CCAppletFormWithSteps.swt -->

@@ -1,0 +1,111 @@
+<!-- Template Start: eCfgControlCheckPriceMultiLevelJS.swt -->
+
+<swe:include file="eCfgPort_HeaderJS.swt"/>
+
+<tr>
+   <td colspan=3>
+      <swe:for-each id="500" CfgLoopType="DomainAndChildren" startValue="1500" count="Dynamic" iteratorName="101Id"
+       Usage="CheckBox"
+       CfgFieldList="CfgFieldName:Name, CfgUIControl:lblName, HtmlAttrib_width:310, Default:Y*
+                     CfgFieldName:RequireMoreChild, Default:Y*
+                     CfgFieldName:Original List Price, CfgUIControl:lblListPrice, DataType:DTYPE_CURRENCY, NeedRefresh:N, HtmlAttrib_align:center, HtmlAttrib_width:80*
+                     CfgFieldName:Current Price, CfgUIControl:lblYourPrice, DataType:DTYPE_CURRENCY, HtmlAttrib_align:center, HtmlAttrib_width:80*
+                     CfgFieldName:Explanation, CfgUIControl:lblExplanation, HtmlAttrib_align:center*
+                     CfgFieldName:Customize, CfgUIControl:lblCustomize, HtmlAttrib_align:center"
+                     >
+          <swe:control id="swe:111Id + 4000" CfgHtmlType="CfgCheckBox" ForceRefresh="Y"
+           CfgJSShow="showCheckBox" CfgJSUpdateExclusion="updateExcludedItemForPort" CfgJSUpdateSelection="updatePortItemsForCheckBox"/>
+
+      </swe:for-each>
+
+   </td>
+</tr>
+
+<!-- for each selected product of the current relationship, include full UI starting from group level -->
+<tr>
+   <td width="100%" colspan="4">
+      <table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" border="0">
+	      <swe:for-each id="500" CfgLoopType="Children" startValue="1500" count="Dynamic" iteratorName="101Id">
+
+            <tr>
+	            <td width="5%">
+		            &nbsp;
+	            </td>
+	            <td colspan="2" width="85%" class="dCCItemSectionTitle" style="border-left: 1 solid #808080; border-right: 1 solid #808080; border-top: 1 solid #808080 ; border-bottom: 1 solid #808080">
+	               <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<swe:control id="swe:100Id+50" CfgHtmlType="CfgLabel" CfgFieldName="Name"/></b>
+	            </td>
+                  <td width="10%">
+                  &nbsp;
+	            </td>
+            </tr>
+
+            <swe:switch>
+               <swe:case condition="Default, TestFieldValue, Operator:==, FieldName:HasGroup, FieldValue:Y">
+
+                  <swe:for-each id="110" CfgLoopType="CurrentGroup" startValue="8100" count="Dynamic" iteratorName="100Id">
+	                  <tr>
+		                  <td width="5%">
+			                  &nbsp;
+		                  </td>
+		                  <td width="5%">
+			                  &nbsp;
+		                  </td>
+		                  <td width="80%">
+			                  <swe:include id="swe:151Id" CfgHtmlType="CurrentGroup"/>
+		                  </td>
+		                  <td width="10%">
+			                  &nbsp;
+		                  </td>
+	                  </tr>
+                  </swe:for-each>
+
+               </swe:case>
+               <swe:default>
+
+                  <tr>
+	                  <td width="5%">
+		                  &nbsp;
+	                  </td>
+	                  <td width="5%">
+		                  &nbsp;
+	                  </td>
+	                  <td width="80%">
+                        <table datatable="0" summary="">
+                        <swe:for-each id="110" CfgLoopType="Attribute" startValue="1100" count="Dynamic" iteratorName="IncId" >
+                           <tr class="listRowOff">
+                              <td class="row" width="100%" class="AppletBlank">
+                                 <swe:include id="swe:151Id" CfgHtmlType="Children"/>
+                              </td>
+                           </tr>
+                        </swe:for-each>
+
+                        <tr><td width="100%" class="AppletBlank">&nbsp;</td></tr>
+                        <tr><td width="100%" class="AppletBlank">&nbsp;</td></tr>
+
+                        <swe:for-each id="100" CfgLoopType="Port" startValue="2100" count="Dynamic" iteratorName="IncId" >
+                           <tr class="listRowOff">
+                              <td width="100%" class="row" class="AppletBlank" >
+                                 <swe:include id="swe:151Id" CfgHtmlType="Children"/>
+                              </td>
+                           </tr>
+                        </swe:for-each>
+
+                        <tr><td width="100%" class="AppletBlank">&nbsp;</td></tr>
+                        <tr><td width="100%" class="AppletBlank">&nbsp;</td></tr>
+                        </table>
+	                  </td>
+	                  <td width="10%">
+		                  &nbsp;
+	                  </td>
+                  </tr>
+
+               </swe:default>
+            </swe:switch>
+	      </swe:for-each>
+      </table>
+   </td>
+</tr>
+
+<swe:include file="eCfgPort_FooterJS.swt"/>
+
+<!-- Template End: eCfgControlCheckPriceMultiLevelJS.swt -->

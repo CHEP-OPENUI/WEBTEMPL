@@ -1,0 +1,157 @@
+<!-- Template Start: CCPageContainer.swt -->
+
+<HTML>
+<head>
+<title><swe:this property="Title"/></title>
+
+<link href="files/main.css" rel="stylesheet">
+</head>
+
+<BODY bgcolor="#ffffff" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" background="images/views_back2.gif">
+<!---------------------------------------->
+
+<!-- Banner section, table 1 -->
+<table class="Banner" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#6666CC">
+  <tr>
+	<td width="5%"><swe:image name="SIEBEL_LOGO" category="HTML Control Icons"/></td>
+	<td width="90%">&nbsp;</td>
+	<td width="5%">
+		<table border=0 cellpadding=2 bgcolor="#6666CC">
+		<tr><td align=right><table border=0><tr><td>
+			<swe:image name=”POWERED_BY” category=”HTML Control Icons”/>						
+		</td></tr></table></td></tr>
+
+		<tr><td align=right><table border=0><tr>
+		<swe:pageitem id="11"><td class="Top" valign="middle" nowrap><swe:this property="FormattedHtml" /></td></swe:pageitem>
+		<swe:pageitem id="12"><td class="Top" valign="middle" nowrap><swe:this property="FormattedHtml" /></td></swe:pageitem>
+		<swe:pageitem id="13"><td class="Top" valign="middle" nowrap><swe:this property="FormattedHtml" /></td></swe:pageitem>
+		</tr></table></td></tr>
+		</table>
+	</td>
+  </tr>
+</table>
+
+<!-- End Banner section, table 1 -->
+
+<!-- Screenbar section, table 2 -->
+<table class="Screenbar" width=100% border="0" cellspacing="0" cellpadding="0">
+<tr valign="middle" bgcolor="#333399">
+    <td nowrap bgcolor="#6666CC" width=110><img src="images/spacer.gif" width="110" height="25" border="0" alt=""></td>
+    <td nowrap bgcolor="#333399" width=15 valign=top align=right><img src="images/corner2.gif" border="0" width="15" height="15"></td>
+    <td width=99%>
+    <swe:screenbar>
+        
+			<img src="images/spacer.gif" alt="" width="10" height="25" border="0" align="absmiddle">
+			<swe:screenlink state="Inactive" property="FormattedHtml" ><font color="#FFFFFF" class="tabOff"><span class="tabOff">&nbsp;<nobr><swe:screenname/></nobr>&nbsp;</span></font></swe:screenlink>
+	        <swe:screenlink state="Active" property="FormattedHtml" ><font color="red" class="tabOn"><span class="tabOn">&nbsp;<nobr><swe:screenname/></nobr>&nbsp;</span></font></swe:screenlink>
+		
+    </swe:screenbar>
+    <img src="images/spacer.gif" width="10" height="25" border="0" align="absmiddle" alt="">
+    </td>
+  </tr>
+</table>
+<!-- End Screenbar section, table 2 -->
+
+<!-- Viewbar section and View, table 3 -->
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr valign=top>
+    <!-- Viewbar -->
+    <td bgcolor="#6666CC" valign=top>
+      <table bgcolor="#6666cc" width="110" border="0" cellspacing="0" cellpadding="0">
+<!-- Page items -->
+      <swe:for-each count=10 iteratorName="CurrentId" startValue="30">
+      <swe:pageitem id="swe:CurrentId">
+      <tr>
+         <td class="viewOff" colspan=3><img src="images/button_div_top.gif" width=110 height=6 border=0></td>
+      </tr>
+      <tr nowrap>
+         <td class="viewOff" >&nbsp;</td>
+         <td class="viewOff"><swe:this property="FormattedHtml" /></td>
+         <td class="viewOff">&nbsp;</td>
+      </tr>
+      <tr>
+         <td class="viewOff" colspan=3><img src="images/button_div_bttm.gif" width=110 height=6 border=0></td>
+      </tr>
+      </swe:pageitem>
+      </swe:for-each>
+<!-- End Page Items -->
+
+      <swe:viewbar>
+		  <swe:viewlink state="Inactive">
+		    <tr><td class="viewOff" colspan=3><img src="images/button_div_top.gif" width=110 height=6 border=0></td></tr>
+          <tr nowrap>
+            <td class="viewOff" >&nbsp;</td>
+            <td class="viewOff">
+            <swe:this property="FormattedHtml">
+              <font color="#ffffff" class="viewOff">
+                <!--- viewname -->
+                <swe:viewname/>
+              </font>
+            </swe:this>
+            </td>
+            <td class="viewOff">&nbsp;</td>
+          </tr>
+          <tr><td class="viewOff" colspan=3><img src="images/button_div_bttm.gif" width=110 height=6 border=0></td></tr>
+		  </swe:viewlink>
+		  <swe:viewlink state="Active">
+		    <tr><td class="viewOn" colspan=3><img src="images/button_div_top.gif" width=110 height=6 border=0></td></tr>
+          <tr nowrap>
+            <td class="viewOn" >&nbsp;</td>
+            <td class="viewOn">
+            <swe:this property="FormattedHtml">
+              <font color="#ffffff" class="viewOn">
+                <!--- viewname -->
+                <swe:viewname/>
+              </font>
+            </swe:this>
+            </td>
+            <td class="viewOn">&nbsp;</td>
+          </tr>
+          <tr><td class="viewOn" colspan=3><img src="images/button_div_bttm.gif" width=110 height=6 border=0></td></tr>
+		  </swe:viewlink>
+      </swe:viewbar>
+
+<!-- Begin changes for special viewbar buttons to bring user directly to new mode -->
+      <swe:for-each count=10 iteratorName="CurrentId" startValue="20">
+      <swe:pageitem id="swe:CurrentId">
+      <tr>
+         <td class="viewOff" colspan=3><img src="images/button_div_top.gif" width=110 height=6 border=0></td>
+      </tr>
+      <tr nowrap>
+         <td class="viewOff" >&nbsp;</td>
+         <td class="viewOff"><swe:this property="FormattedHtml" /></td>
+         <td class="viewOff">&nbsp;</td>
+      </tr>
+      <tr>
+         <td class="viewOff" colspan=3><img src="images/button_div_bttm.gif" width=110 height=6 border=0></td>
+      </tr>
+      </swe:pageitem>
+      </swe:for-each>
+<!-- End changes for special viewbar buttons to bring user directly to new mode -->
+
+
+      <tr><td><img src="images/spacer.gif" width=100% height=0 border=0 alt=""></td></tr>
+    </table>
+  </td>
+    <!-- End Viewbar -->
+
+    <!-- vertical spacer, 15 pixels -->
+    <td width=15 valign=top><img src="images/spacer.gif" width="15" height="1" border="0" alt=""></td>
+
+    <!-- The actual view, second column of master page table -->
+    <td width="99%">
+      <br>
+      <swe:current-view/>
+    </td>
+
+    <!-- vertical spacer, 15 pixels -->
+    <td width=15 valign=top><img src="images/spacer.gif" width="15" height="1" border="0" alt=""></td>
+  </tr>
+</table>
+<!-- End Viewbar section and View, table 3 -->
+
+<swe:scripts/>
+</BODY>
+</HTML>
+
+<!-- Template End: CCPageContainer.swt -->

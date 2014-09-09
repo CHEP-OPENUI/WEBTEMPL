@@ -1,0 +1,42 @@
+<!-- Template Start: CCAppletListPSearchTail.swt  -->
+
+<swe:for-each-row count="30">
+
+<tr class="listRowOff">
+
+<!-- For the attribute name -->
+<swe:for-each startValue="501" count="1" iteratorName="currentId">
+  <swe:control id="swe:currentId">
+    <td class="Header" width="9%" align="right"><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></td>
+  </swe:control> 
+</swe:for-each>
+
+<!-- For the attribute value, there is specialized code which will show all the attribute value for this id -->
+<swe:for-each startValue="502" count="1" iteratorName="currentId">
+  <swe:control id="swe:currentId">
+    <td align="swe:this.TextAlignment" class="Row"><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></td>
+  </swe:control> 
+</swe:for-each>
+
+<!------------ Per-record Control Buttons ------------->
+</tr>
+
+<!------------ End Loop ------------->
+</swe:for-each-row>
+
+<!-- Template End: CCListBodyNoRowHilite.swt -->
+
+
+
+				</table>
+				</td></tr></table>
+				<swe:error>
+					<table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="4" cellspacing="0" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/><br>&nbsp;</td></tr></table>
+				</swe:error>
+
+				<swe:include file="CCBottomApplet.swt"/>
+		</td>
+	</tr>
+</table>
+
+<!-- Template End: CCAppletListPSearchTail.swt  -->

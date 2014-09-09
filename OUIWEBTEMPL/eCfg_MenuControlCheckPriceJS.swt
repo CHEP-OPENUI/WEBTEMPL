@@ -1,0 +1,186 @@
+<!-- Template Start: eCfg_MenuControlCheckPriceJS.swt -->
+
+<div id="eCfg_MenuControlCheckPriceJS_PUI_1" class="eCfgContent"></div>
+<script>
+   //div tag for content
+   // PUI CFG: Open Issue
+   if (typeof (IsOpenUI) != "undefined" && IsOpenUI())
+   {
+      // DO SOMETHING
+      var strId = "Rel_" + visibleRelArray[currentRel];
+      $("#eCfg_MenuControlCheckPriceJS_PUI_1")[0].id = strId;
+   }
+   else
+      document.write('<DIV id="Rel_' + visibleRelArray[currentRel] + '" class="eCfgContent">');
+</script>
+<!-- Formatting tables -->
+<table datatable="0" summary="" width="100%" height="100%" cellspacing="3" cellpadding="2" border="0" class="AppletBorder">
+<tr>
+
+<td class="AppletBack" valign="top">
+<table datatable="0" summary="" cellpadding="2" cellspacing="0" border="0" width="100%" height="100%">
+<tr>
+
+	<td valign="top">
+		<!-- Header -->
+		<table datatable="0" summary="" border="0" width="100%" cellpadding="2" cellspacing="0">
+		<div id="eCfg_MenuControlCheckPriceJS_PUI_2"></div>
+	    <SCRIPT>
+            var sImage = '<swe:control id="swe:IncId + 50" CfgFieldName=".Image" CfgHtmlType="CfgLabel"/>';
+            var sDescription = '<swe:control id="swe:IncId + 150" CfgFieldName=".Description" CfgHtmlType="CfgLabel" />';
+            var sLearnMoreURL = '<swe:control id="swe:IncId + 250" CfgFieldName=".LearnMore" CfgHtmlType="CfgLabel" />';
+            var sPortName = '<swe:control id="swe:IncId + 350" CfgFieldName="CxPortName" CfgHtmlType="CfgLabel" />';
+            var sLearnMore = '<swe:control id="LearnMore" CfgUIControl="lblLearnMore" CfgHtmlType="CfgLabel"/>';
+
+            var iImageRowSpan = 2;
+            var bText = true;
+
+            if ( 0 == sImage.length )
+               sImage = 'images/eCfgInvisibleSpacer.gif';
+
+            if ( ( 0 == sDescription.length ) && ( 0 == sLearnMoreURL.length ) )
+            {
+               iImageRowSpan = 1;
+               bText = false;
+            }
+
+            // PUI CFG: Open Issue
+            var strHTML = "";
+            if ( ! bText )
+               strHTML = '<tr><td class="eCfgdCCSection0if"';
+            else
+               strHTML = '<tr><td class="eCfgdCCSection0"';
+
+            strHTML += '><b>' + sPortName + '</b>';
+            strHTML += '<swe:control id="swe:IncId+4000" CfgHtmlType="CfgGenerics" />' + '</td>';
+            strHTML += '<td class="eCfgdCCSection1" rowspan="' + iImageRowSpan + '">';
+            strHTML += '<img border="0" src="' + sImage + '" alt="" align="right">';
+            strHTML += '</td></tr>';
+
+            if ( bText )
+            {
+               strHTML += '<tr>';
+               strHTML += '<td class="eCfgdCCSection2">';
+
+               if ( 0 != sDescription.length )
+                  strHTML += '<div class="eCfgAuxText">' + sDescription + '&nbsp;&nbsp;';
+
+               if ( 0 != sLearnMoreURL.length )
+                  strHTML += '<a href="' + sLearnMoreURL + '" TARGET="_blank">' + sLearnMore + '</a></div><img border="0" src="images/eCfgInvisibleSpacer.gif" alt="">';
+
+               strHTML += '</td></tr>';
+            }
+            if (typeof (IsOpenUI) != "undefined" && IsOpenUI())
+            {
+               // DO SOMETHING
+               var strId = "eCfg_MenuControlCheckPriceJS_PUI_2_" + sPortName;
+               $("#eCfg_MenuControlCheckPriceJS_PUI_2")[0].id = strId;
+               $("#"+strId).html(strHTML);
+            }
+            else
+            {
+               if ( ! bText )
+                  document.write ( '<tr><td class="eCfgdCCSection0if"' );
+               else
+                  document.write ( '<tr><td class="eCfgdCCSection0"' );
+
+               document.write ( '><b>' + sPortName + '</b>');
+               document.write ('<swe:control id="swe:IncId+4000" CfgHtmlType="CfgGenerics" />' + '</td>' );
+               document.write ( '<td class="eCfgdCCSection1" rowspan="' + iImageRowSpan + '">' );
+               document.write ( '<img border="0" src="' + sImage + '" alt="" align="right">' );
+               document.write ( '</td></tr>' );
+
+               if ( bText )
+               {
+                  document.write ( '<tr>' );
+                  document.write ( '<td class="eCfgdCCSection2">' );
+
+                  if ( 0 != sDescription.length )
+                     document.write ( '<div class="eCfgAuxText">' + sDescription + '&nbsp;&nbsp;' );
+
+                  if ( 0 != sLearnMoreURL.length )
+                     document.write ( '<a href="' + sLearnMoreURL + '" TARGET="_blank">' + sLearnMore + '</a></div><img border="0" src="images/eCfgInvisibleSpacer.gif" alt="">' );
+
+                  document.write ( '</td></tr>' );
+               }
+            }
+	    </SCRIPT>
+		</table>
+		<!-- END Header -->
+	</td>
+</tr>
+<tr>
+	<td valign="top" height="99%">
+		<!-- Content table -->
+		<table datatable="0" summary="" cellpadding="1" cellspacing="4" border="0" width="100%">
+                <tr>
+                   <td colspan="4">
+		     <swe:for-each id="500" CfgLoopType="DomainAndChildren" startValue="1500" count="Dynamic"
+                      iteratorName="111Id" Usage="CheckBox"
+                      CfgFieldList="CfgFieldName:Name, CfgUIControl:lblName, HtmlAttrib_width:310, Default:Y*
+                                    CfgFieldName:RequireMoreChild, Default:Y*
+                                    CfgFieldName:Original List Price, CfgUIControl:lblListPrice, DataType:DTYPE_CURRENCY, NeedRefresh:N, HtmlAttrib_align:center, HtmlAttrib_width:80*
+                                    CfgFieldName:Explanation, CfgUIControl:lblExplanation, HtmlAttrib_align:center"
+                      >
+
+                         <swe:control id="swe:111Id + 4000" CfgHtmlType="CfgCheckBox"
+                          CfgJSShow="showCheckBox" CfgJSUpdateExclusion="updateExcludedItemForPort" CfgJSUpdateSelection="updatePortItemsForCheckBox" />
+		      </swe:for-each>
+                   </td>
+                </tr>
+
+		<tr>
+                   <td colspan="4">
+                      &nbsp;
+                   </td>
+                </tr>
+
+		<tr>
+                  <td colspan="4">
+                     <!-- Menu button -->
+
+                     <div id="eCfg_MenuControlCheckPriceJS_PUI_3"></div>
+                     <SCRIPT>
+                     var buttonName;
+
+                     buttonName = "<swe:control id="swe:ShowMenu" CfgUIControl="sShowMenu" CfgHtmlType="CfgLabel" />";
+
+                     // PUI CFG: Open Issue
+                     var strHTML = '<input type="button"'
+                                 + ' value='
+                                 + buttonName
+                                 + ' onClick="ShowMenu();" style="height:20;">';
+                     if (typeof (IsOpenUI) != "undefined" && IsOpenUI())
+                     {
+                        // DO SOMETHING
+                        var strId = "eCfg_MenuControlCheckPriceJS_PUI_3_" + buttonName;
+                        $("#eCfg_MenuControlCheckPriceJS_PUI_3")[0].id = strId;
+                        $("#"+strId).html(strHTML);
+                     }
+                     else
+                     {
+                        document.write ('<input type="button"');
+                        document.write (' value=');
+                        document.write (buttonName);
+                        document.write (' onClick="ShowMenu();" style="height:20;">');
+                     }
+                     </SCRIPT>
+                  </td>
+		</tr>
+		</table>
+		<!-- END Content table -->
+	</td>
+
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+<!-- END Formatting tables -->
+</DIV>
+<script>
+	currentRel++;
+</script>
+
+<!-- Template End: eCfg_MenuControlCheckPriceJS.swt -->

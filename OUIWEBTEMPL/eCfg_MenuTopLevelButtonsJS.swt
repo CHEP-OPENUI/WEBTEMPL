@@ -1,0 +1,61 @@
+<!-- Template Start: eCfg_MenuTopLevelButtonsJS.swt -->
+
+
+<script>
+
+     m_UIFramework.m_preInvokeMethod ["DoneConfig"] = "CfgDoneConfig ()";
+     m_UIFramework.m_preInvokeMethod ["PrevView"] = "CfgCancelConfig ()";
+
+</script>
+
+<table datatable="0" summary="" border="0">
+<tr>
+<!--
+	<td>
+		<swe:control id="swe:CheckPrice"
+		CfgUIControl="Check the price"
+		CfgHtmlType="MiniButton"
+		InvokeMethod="SubmitRequest"
+		CfgRequest="CalculatePriceCX"
+		property="FormattedHtml" />
+	</td>
+-->
+	<td>
+<!--
+           <swe:switch> 
+               <swe:case condition="Default, AreEmptyFields, Operator:and, FieldName0:$.CxVersion">
+
+                     <swe:control id="swe:Cancel" CfgUIControl="sCancel" property="FormattedHtml" />
+               </swe:case>
+               <swe:default>
+                     <swe:control id="swe:disCancel" CfgUIControl="Cancel" CfgHtmlType="MiniButton" 
+                                  DisplayMode="EncodeData" InvokeMethod="SubmitRequest" 
+                                  CfgRequest="PrevView" property="FormattedHtml" />
+               </swe:default>
+           </swe:switch> 
+-->
+		<swe:control id="swe:Save"
+		CfgUIControl="Save" 
+		CfgHtmlType="MiniButton"
+		InvokeMethod="SyncInstance"
+		property="FormattedHtml" />
+	</td>
+	<td>
+
+		<swe:control id="swe:Cancel"
+		CfgUIControl="Cancel"
+		property="FormattedHtml"
+                CfgHtmlType = "MiniButton"
+                InvokeMethod = "PrevView" />
+	</td>
+	<td>
+		<swe:control id="swe:Done"
+		CfgUIControl="sDone"
+		property="FormattedHtml"
+                CfgHtmlType = "MiniButton"
+                InvokeMethod = "DoneConfig" />
+	</td>
+</tr>
+</table>
+
+<!-- Template End: eCfg_MenuTopLevelButtonsJS.swt -->

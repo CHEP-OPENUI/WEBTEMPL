@@ -1,0 +1,156 @@
+<!-- Template Start: dCCListBodyImgBulletDetailed.swt -->
+
+<style>
+  TR.hide {display: none}
+</style>
+
+        <tr class="hide" valign="top" >
+           <td>
+               <table>
+<swe:for-each-row> 
+
+    <swe:control id="5000"> 
+                   <tr class = "hide">
+    </swe:control>
+    <swe:control id="5001">
+	       </table>
+           </td>
+        </tr>
+        <tr valign="top" >
+           <td>
+               <table width="100%">
+	            <tr>
+    </swe:control>	
+       
+         <!-- This part will be shown when 5001 is mapped -->    
+                     <td colspan="3" width="100%" align="left">
+                        <table width="100%" border="0" cellpadding="0"  cellspacing="0"> 
+                           <tr>  
+                              <td nowrap>
+ 	                        <swe:for-each count="9" startValue="510" iteratorName="currentId">
+		                     <swe:control id="swe:currentId">
+			                  <div class="dCCitemTitle">
+                                       <swe:this property="FormattedHtml" hintText="Item Name" hintMapType="ListItem"/>
+                                    </div>
+	  	                     </swe:control>
+	                        </swe:for-each> 
+                              </td>
+	
+                              <td width="100%"> &nbsp;
+                              </td>
+
+                              <td nowrap align="Right" valign=bottom>
+ 	                         <swe:for-each count="4" startValue="560" iteratorName="currentId">
+	                            <swe:control id="swe:currentId">
+			               <td nowrap class="dCCItemLabel" valign=bottom><swe:this property="DisplayName" hintText="Label"/>:</td>
+                                       <td>&nbsp;</td>
+                                       <td class="dCCItemValue" valign=bottom>
+			                  <span style="width: 3.75em">
+			       	              <swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/>
+					  </span>
+				       </td>
+                                       <td>&nbsp;</td>		
+		                    </swe:control>
+	                         </swe:for-each>
+                              </td>
+                              <td nowrap align="Right" valign=bottom>
+	                         <swe:control id="565">
+                                    <td class="dCCItemValue" valign=bottom>
+			               <span style="width: 3.75em">
+		                          <swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/>
+				       </span>
+				    </td>
+                                    <td>&nbsp;</td>		
+		                 </swe:control>
+                              </td>
+                              <td nowrap align="Right">
+ 	                         <swe:for-each count="9" startValue="520" iteratorName="currentId">
+	                            <swe:control id="swe:currentId">
+			               <div align="Right">			
+				          <swe:this property="FormattedHtml" hintMapType="Control"/>
+			               </div>		
+		                    </swe:control>
+	                         </swe:for-each>
+                              </td>
+                           </tr>
+                        </table>
+                      </td> 
+    <swe:control id="5001"> 
+                     </tr> 
+    </swe:control>
+    <swe:control id="5000"> 
+                     </tr> 
+    </swe:control>
+
+    <swe:control id="5001"> 
+                     <tr class = "hide">
+    </swe:control>
+    <swe:control id="5000">
+	             <tr> 
+    </swe:control>	
+
+          <!-- This part will be shown when 5000 is mapped -->
+
+                         <td width="1" valign="top">
+                             <swe:control id="501">
+                                 <swe:this property="FormattedHtml" hintText="Small Image (30x30)"/>
+                             </swe:control>
+                         </td>
+
+                         <td colspan="2" width="95%">
+                            <table border="0" cellpadding="0"  cellspacing="0">
+                               <tr>
+                                  <td colspan="11" width="100%" align="Left">
+ 	                             <swe:for-each count="9" startValue="530" iteratorName="currentId">
+	                                 <swe:control id="swe:currentId">
+	                                    <div class="dCCItemValue">
+                                               <swe:this property="FormattedHtml" />
+                                            </div>	
+                                         </swe:control>	
+	                              </swe:for-each>			
+                                  </td> 
+                               </tr>
+  
+                               <tr>
+                                  <td nowrap colspan="11" width="100%" align="Left">
+                                  <table> <tr>
+	                          <swe:for-each count="9" startValue="540" iteratorName="currentId">
+	                              <swe:control id="swe:currentId">
+	                                 <td nowrap colspan="1" class="dCCItemLabel" valign=bottom><swe:this property="DisplayName" hintText="Label"/>:</td>
+                                         <td class="dCCItemValue" valign=bottom>
+			                     <span style="width: 3.75em">
+						<swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/>
+					     </span>
+				         </td>
+	                               </swe:control>
+	                          </swe:for-each>																
+
+                                  <td width="100%"> &nbsp;</td>
+
+	                          <swe:for-each count="9" startValue="550" iteratorName="currentId">
+	                             <swe:control id="swe:currentId">
+	                                 <td align="Right"><swe:this property="FormattedHtml"  hintMapType="Control"/></td>
+	                                 <td>&nbsp;</td>
+        	                     </swe:control>
+	                          </swe:for-each>
+	                          </tr> </table> 
+                                  </td>
+
+                               </tr>				
+		             </table>
+                          </td>
+
+     <swe:control id="5000"> 
+                      </tr> 
+     </swe:control>
+     <swe:control id="5001"> 
+                      </tr> 
+     </swe:control>
+            
+</swe:for-each-row>
+
+             </table>
+        </td>
+    </tr>
+
+<!-- Template End: dCCListBodyImgBulletDetailed.swt -->

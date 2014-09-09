@@ -1,0 +1,23 @@
+<!-- Template Start: CCGanttAppletTitle.swt -->	
+	<!-- Start of applet title -->
+	<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+		<tr class="AppletBlank">
+			<td class="AppletTitle" valign="top" width="8"><img src="images/aplt_opn_d.gif" width="8" height="10" alt=""></td>
+			<td>
+				<table datatable="0" summary="" cellspacing="0" cellpadding="0" border="0">
+					<tr>
+						<td class="AppletTitle" nowrap><swe:this property="Label"/></td>
+						<td class="AppletTitle" align="right" width="22"><img src="images/aplt_curve_d.gif" height="22" width="22" alt=""></img></td>	
+						
+						<td width="100%" class="AppletBlank" align="right">
+							<table datatable="0" summary="" width="100%"><tr>
+								<!--legends-->	
+							</tr></table>						
+						</td>						
+					</tr>
+				</table>
+			</td>		
+		</tr>
+	</table>
+	<!--End Applet Title-->
+<!-- Template Start: CCGanttAppletTitle.swt -->

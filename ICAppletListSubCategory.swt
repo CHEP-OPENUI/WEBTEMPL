@@ -1,0 +1,32 @@
+<!-- Template Start: ICAppletListSubCategory.swt -->
+
+<script language='JavaScript'>
+var i=-1;
+</script>
+
+
+<swe:for-each-row>
+
+<script>
+i++;
+if (i>0)
+{
+	document.write(" | ");
+}
+</script>
+
+<nobr>&nbsp;<swe:control id="502" property="FormattedHtml" hintText="Field" hintMapType="Subcategory name"/>
+      <swe:control id="503">&nbsp;(<swe:this property="FormattedHtml" hintText="Field" hintMapType="Count"/>)</swe:control>&#32;
+</nobr>
+<swe:switch>
+	<swe:case condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+	<!-- do nothing-->
+	</swe:case>
+	<swe:default>
+		<!-- in NS NOBR tags need extra space characters for proper parsing-->
+		&#32;&nbsp;&#32;
+	</swe:default>
+</swe:switch>
+</swe:for-each-row>
+
+<!-- Template End: ICAppletListSubCategory.swt -->

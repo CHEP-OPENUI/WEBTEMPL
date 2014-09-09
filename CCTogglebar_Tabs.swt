@@ -1,0 +1,13 @@
+<!-- Template Start: CCTogglebar_Tabs.swt -->
+	<table datatable="0" summary="" width="100%" align="center" cellpadding='0' cellspacing='0' border='0' class="tier3Back"><tr><td>
+	<table datatable="0" summary="" cellpadding='0' cellspacing='0' border='0'>
+		<tr>			
+			<swe:togglebar>
+				<swe:togglelink state="Active"><td __id="ToggleSelected" class='tier3On' nowrap><nobr><swe:this property="FormattedHtml">&nbsp;<swe:togglename/>&nbsp;</swe:this></nobr></td></swe:togglelink>
+				<swe:togglelink state="Inactive"><td class='tier3Off' nowrap><nobr><swe:this property="FormattedHtml">&nbsp;<swe:togglename/>&nbsp;</swe:this></nobr></td></swe:togglelink>
+			</swe:togglebar>
+		</tr>
+	</table>
+	</td></tr></table>	
+<!-- Template End: CCTogglebar_Tabs.swt -->
+               

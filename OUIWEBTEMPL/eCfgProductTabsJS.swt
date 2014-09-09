@@ -1,0 +1,33 @@
+<!-- Template Start: eCfgProductTabsJS.swt -->
+<!-- Oliver: [code redesign] -->
+ 
+<div id="cxProdTab" class="cxProdTheme">
+
+	<div class="siebui-ecfg-tabs">
+	   <swe:for-each id="110" CfgLoopType="Group" startValue="8100" count="Dynamic" iteratorName="100Id" >
+		  <swe:switch>
+			 <swe:case condition="Default, TestFieldValue, Operator:==, FieldName:Selected, FieldValue:Y">
+				<div class="siebui-ecfg-tab eCfgProductTabOn">
+				   <swe:control id="swe:100Id+50" CfgHtmlType="CfgLink" CfgFieldName="CxGroupName" InvokeMethod="ChangeCurrentObj" CfgRequest="Group"/>
+				   <swe:control id="RequireMoreChild" CfgHtmlType="CfgGenerics" />
+				</div>
+			 </swe:case>
+			 <swe:default>
+				<div class="siebui-ecfg-tab eCfgProductTabOff">
+				   <swe:control id="swe:100Id+50" CfgHtmlType="CfgLink" CfgFieldName="CxGroupName" InvokeMethod="ChangeCurrentObj" CfgRequest="Group"/>
+				   <swe:control id="RequireMoreChild" CfgHtmlType="CfgGenerics" />
+				</div>
+			 </swe:default>
+		  </swe:switch>
+	   </swe:for-each>
+	</div>
+
+	<div class="siebui-ecfg-products">
+		<swe:for-each id="120" CfgLoopType="CurrentGroup" startValue="210" count="Dynamic" iteratorName="150Id" >
+		   <swe:include id="swe:151Id" CfgHtmlType="CurrentGroup"/>
+		</swe:for-each>
+	</div>
+	
+</div>
+
+<!-- Template End: eCfgProductTabsJS.swt -->

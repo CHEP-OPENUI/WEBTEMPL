@@ -1,0 +1,29 @@
+<!-- Template Start: SWEHelp.swt -->
+
+<HTML>
+<head>
+<title><swe:this property="Title"/></title>
+<link href="files/main.css" rel="stylesheet">
+<script language="JavaScript">
+var count = 0;
+function SWEGotoHelpUrl ()
+{
+   var url = "<swe:pageitem id="19" property="DisplayName" />";
+   window.document.location = url;
+}
+</script>
+</head>
+<body onload="SWEGotoHelpUrl()">
+<swe:scripts/>
+
+<!-- Temporary workaround -->
+<script language="JavaScript"> SWEGotoHelpUrl(); </script>
+<!-- End of Temporary workaround -->
+
+</body>
+
+</HTML>
+
+
+
+<!-- Template End: SWEHelp.swt -->

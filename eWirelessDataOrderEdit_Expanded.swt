@@ -1,0 +1,23 @@
+<!-- Template Start: eWirelessDataOrderEdit_Expanded.swt -->
+
+<swe:include-script file="itemsdisplayed.js"/>
+
+<SCRIPT language="javascript">
+function SubmitSelection(formObj)
+{
+<!-- Defect 12-959ZY9 - There is a timing issue with the -->
+<!-- Mac OS. While the form is getting submitted, the -->
+<!-- formObj is restored and the method invoked is overwritten. -->
+<!--   SWESaveFormObj (formObj); -->
+
+   formObj.SWECmd.value = 'InvokeMethod';
+   formObj.SWEMethod.value = 'ChangeSelection';
+   formObj.submit();
+
+<!--   SWERestoreFormObj (formObj); -->
+}
+</SCRIPT>
+
+<swe:include file="CCAppletForm4Col_E_N_Expanded.swt"/>
+
+<!-- Template End: eWirelessDataOrderEdit_Expanded.swt -->

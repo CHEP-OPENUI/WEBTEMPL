@@ -1,0 +1,32 @@
+<!--  Template Start: dCCAppletListCategorizedNoTab.swt -->
+
+<span class="AppletStyle6">
+	<swe:form>
+
+			<table datatable="0" summary="" width="100%" cellpadding="1" cellspacing="0" border="0" align="center"><tr><td class="AppletBorder">
+			
+				<table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="1" cellspacing="0" border="0" align="center">
+					<tr><td class="AppletTitle" nowrap><swe:control id="90" property="FormattedHtml" hintText="Title" hintMapType="Control"/>&nbsp;</td></tr>
+				</table>	
+				
+				<table datatable="0" summary="" width="100%" class="AppletBack" valign="top" cellpadding="2" cellspacing="0" border="0">
+					  
+					<swe:for-each-row count="10">
+						<tr valign="top">
+							<td width="1">&nbsp;</td>
+							<td valign="bottom">
+								<swe:for-each-child>
+									<swe:child-applet/>
+								</swe:for-each-child>
+							</td>
+						</tr>
+					</swe:for-each-row>					  
+					  
+				</table>
+		
+			</td></tr></table>
+
+	</swe:form>
+</span>
+
+<!--  Template End: dCCAppletListCategorizedNoTab.swt -->

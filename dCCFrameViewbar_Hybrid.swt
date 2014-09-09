@@ -1,0 +1,174 @@
+<!-- Template Start: dCCFrameViewbar_Hybrid.swt -->
+
+<HTML dir="swe:dir">
+<head>
+<title><swe:this property="Title"/></title>
+<swe:include file="CCStylesChoice.swt"/>
+</head>
+
+<BODY topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+
+<!-- Start Tier2 Nav & Toolbars-->
+	<table datatable="0" summary="" class="tier2On" width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr class="tier2On" valign="top">
+	   <td class="tier2On"><img src="images/spacer.gif" width="10" alt=""></td>
+	   <td class="tier2On" valign="top">
+	      <swe:if condition="Web Engine State Properties, IsLowInteractive">
+	         <swe:form>
+	            <table datatable="0" summary="" cellpadding="1" cellspacing="0" border="0"><tr>
+	               <td class="tier2On" nowrap>
+	                  <swe:viewbar type="Select" mode="Context">
+	                     <swe:this property="FormattedHtml"/>
+	                  </swe:viewbar>
+	               </td>
+	               <td>&nbsp;</td>
+	            </tr></table>
+	        </swe:form>
+	      </swe:if>
+	   </td>
+
+	 	   <!-- Begin changes for special viewbar buttons to bring user directly to new mode -->
+		   <swe:pageitem id="21">
+		      <td class="tier2On">&nbsp;</td>
+		      <td class="tier2On" nowrap><swe:this property="FormattedHtml" />&nbsp;</td>
+		      <td class="tier2On">&nbsp;|</td>
+		   </swe:pageitem>
+		
+		   <swe:pageitem id="22">
+		      <td class="tier2On">&nbsp;</td>
+		      <td class="tier2On"  nowrap><swe:this property="FormattedHtml" /> &nbsp;</td>
+		      <td class="tier2On">&nbsp;|</td>
+		   </swe:pageitem>
+		
+		   <!-- End changes for special viewbar buttons to bring user directly to new mode -->
+		
+		   <!--BEGINNING SEPARATOR FOR SEARCH CENTER/IHELP/TASK PANE START-->
+		   <td class="tier2On" nowrap>&nbsp;&nbsp;<span class="TBdivider divider"><img src="images/spacer.gif" align="absmiddle" width="1" height="18" alt=""></span>&nbsp;&nbsp;&nbsp;</td>
+		   <!--BEGINNING SEPARATOR FOR SEARCH CENTER/IHELP/TASK PANE END-->
+		
+		   <td nowrap>
+			   <swe:toolbar name="SearchCenter Hybrid">
+				   <swe:toolbaritem property="FormattedHtml"/>
+			   </swe:toolbar>	
+		   </td>
+
+		   <!-- TASK ASSISTANT TOOLBAR START -->
+			<swe:if condition="Web Engine State Properties, IsHighInteractive">
+			   <td nowrap>
+				   <swe:toolbar name="Task Assistant">
+				      <swe:toolbaritem property="FormattedHtml"/>
+				   </swe:toolbar>	
+				</td>		
+
+            <!-- dropdown -->
+            <!--
+				<swe:if condition="Task Assistant UI Service, CanOpenTaskAssistant">
+				   <td nowrap>
+				      <span id='TaskList' style='cursor:hand;padding:0px 0px;border:0px solid #CCCCFF' onclick="_JMenu_Initialize(this, '', 'Tasks', 0, false)"><a id='TaskListImage' href='javascript:void(0)'><img src='images/icon_tasklist.gif' alt='TaskList' border="0"></a></span>
+				   </td>		
+				</swe:if>
+				<td>&nbsp;</td>	
+            -->
+         		</swe:if>
+
+         <swe:if condition="Web Engine State Properties, IsLowInteractive">
+			   <td nowrap>
+				   <swe:toolbar name="Task Assistant Hybrid">
+					   <swe:toolbaritem property="FormattedHtml"/>
+				   </swe:toolbar>	
+				   <td>&nbsp;</td>	
+				</td>
+	      </swe:if>
+		   <!-- TASK ASSISTANT TOOLBAR END -->
+
+         <!--ENDING SEPARATOR FOR SEARCH CENTER/IHELP/TASK PANE START-->
+            <td class="tier2On" nowrap>&nbsp;&nbsp;<span class="TBdivier divider"><img src="images/spacer.gif" align="absmiddle" width="1" height="18" alt=""></span>&nbsp;&nbsp;&nbsp;</td>
+		   <!--ENDING SEPARATOR FOR SEARCH CENTER/IHELP/TASK PANE END-->
+		
+		   <td nowrap>
+			   <swe:toolbar name="Synchronize Database">
+			      <table datatable="0" summary="" cellpadding="0" cellspacing="0" border="0">
+				      <tr>				
+					      <td valign="absmiddle"><img src="images/spacer.gif" width="1" height="21" alt=""></td>		
+					      <td nowrap>
+						      <swe:toolbaritem property="FormattedHtml"/>
+					      </td>	
+				      </tr>
+			      </table>		
+			   </swe:toolbar>	
+			   <img src="images/spacer.gif" width="1" height="1" border="0" align="top" alt="">
+		   </td>
+
+		   <swe:if condition="Web Engine State Properties, IsHighInteractive">
+			   <td class="tier2On" valign="middle" nowrap>
+				   <swe:reportselect>
+				   </swe:reportselect>
+			   </td><td class="tier2On">&nbsp;</td>
+		   </swe:if>
+		
+		   <td width="100%">&nbsp;</td>
+		
+		   <swe:if condition="Web Engine State Properties, IsLowInteractive">
+			   <td class="tier2On" valign="middle" nowrap>
+				   <swe:reportselect>
+				   </swe:reportselect>
+			   </td><td class="tier2On">&nbsp;</td>
+		   </swe:if>
+		
+		
+		   <swe:pageitem id="33">
+		   <td class="tier2On" valign="middle" nowrap><swe:this property="FormattedHtml" hintText="Control" /></td>
+		   <td class="tier2On">&nbsp;</td>		
+		   </swe:pageitem>
+		   <swe:pageitem id="34">
+		   <td class="tier2On" valign="middle" nowrap><swe:this property="FormattedHtml" hintText="Control"/></td>
+		   <td class="tier2On">&nbsp;</td>		
+		   </swe:pageitem>
+		
+		   <td class="tier2On">
+			   <swe:form>
+			      <swe:pdqbar>
+			         <table datatable="0" summary="" cellpadding="1" cellspacing="0" border="0">
+				         <tr>
+					      <!--Favorites Label-->
+					         <swe:pageitem id="35">
+					            <td class="tier2On" valign="middle" nowrap><swe:this property="FormattedHtml" />:&nbsp;</td>
+					         </swe:pageitem>
+					         <td class="tier2On" valign="middle">&nbsp;</td>
+					         <td class="tier2OnNormal" valign="middle"><swe:this property="FormattedHtml" /></td>
+				         </tr>
+			         </table>		
+			      </swe:pdqbar>
+			   </swe:form>
+		   </td>				
+		
+		   <swe:pageitem id="36">
+		      <td class="tier2On" valign="middle" nowrap><swe:this property="FormattedHtml" hintText="Control"/></td>
+		      <td class="tier2On">&nbsp;</td>		
+		   </swe:pageitem>
+		   <swe:pageitem id="37">
+		      <td class="tier2On" valign="middle" nowrap><swe:this property="FormattedHtml" hintText="Control"/></td>
+		      <td class="tier2On">&nbsp;</td>		
+		   </swe:pageitem>			
+		   <swe:pageitem id="38">
+		      <td class="tier2On" valign="middle" nowrap><swe:this property="FormattedHtml" hintText="Search Center"/></td>
+		      <td class="tier2On">&nbsp;</td>		
+		   </swe:pageitem>		
+		   <td>&nbsp;&nbsp;&nbsp;</td>	
+	</tr>
+</table>
+<!-- End: Tier2 Nav & Toolbars-->
+
+<!--Rule-->
+<table datatable="0" summary="" width="100%" class="tier1back" height="1" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="absmiddle">
+		<td width="10" class="tier1back"><img src="images/spacer.gif" width="10" height="1" alt=""></td>
+	</tr>
+</table>
+<!-- End Tier2 nav & Search-->
+
+<swe:scripts/>
+</BODY>
+</HTML>
+
+<!-- Template End: dCCFrameViewbar_Hybrid.swt -->

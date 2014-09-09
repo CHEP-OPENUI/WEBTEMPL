@@ -1,0 +1,209 @@
+<!-- Start template : AdvancedSearch.swt -->
+<swe:form htmlAttr="onsubmit='SubmitSearch(); return false;'">
+<swe:if condition="Web Engine State Properties, IsPrintOff">
+	 <div class="swe:this.SelectStyle"> 
+		 <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center" class="AppletBack"><tr><td class="AppletHIFormBorder">
+</swe:if>
+<!-- Table to display the top header -->
+<table datatable="0" summary="" border="0">
+<tr>
+<td width="30%">
+	<swe:control id="100">
+		<B><swe:this property="DisplayName" hintText="Label"/></B>
+	</swe:control>
+</td>
+<td align="right" width="10%"  nowrap>
+	<swe:control id="105">
+		<swe:this property="FormattedHtml" hintMapType="Control" hintText="ClearAll"/>
+	</swe:control>
+</td>
+<td>
+	<swe:control id="115">
+		<swe:this property="FormattedHtml" hintMapType="Control" hintText="Go"/>
+	</swe:control>
+</td>
+</tr>
+</table>
+<hr>
+<!--End Table to display the top header -->
+
+
+<!-- Display the search entry and criteria fields -->
+<table border="0" datatable="0">
+<tr>
+<td width="30%"  nowrap>
+	<swe:control id="120">
+	<B><swe:this property="DisplayName" hintMapType="Label"/></B>
+	</swe:control>
+</td>
+<td>
+	<swe:control id="235">
+		<swe:this property="FormattedHtml" hintMapType="Field"/>
+	</swe:control>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td width="30%" nowrap>
+	<swe:control id="145">
+		<B><swe:this property="DisplayName" hintMapType="Label"/></B>
+	</swe:control>
+</td>
+<td>
+	<swe:control id="238">
+		<swe:this property="FormattedHtml" hintMapType="Field"/>
+	</swe:control>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td width="30%" nowrap>
+	<swe:control id="125">
+		<B><swe:this property="DisplayName" hintMapType="Label"/></B>
+	</swe:control>
+</td>
+
+<td>
+	<swe:control id="236">
+		<swe:this property="FormattedHtml" hintMapType="Field"/>
+	</swe:control>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+
+</tr>
+
+<tr>
+<td width="30%" nowrap>
+	<swe:control id="239">
+		<B><swe:this property="DisplayName" hintMapType="Label"/></B>
+	</swe:control>
+</td>
+<td>
+	<swe:control id="237">
+		<swe:this property="FormattedHtml" hintMapType="Field"/>
+	</swe:control>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td width="30%">&nbsp;</td>
+<td colspan="4" width="70%"><hr></td>
+</tr>
+
+<!-- Display the lookin checkboxes -->
+<tr>
+<td width="30%" nowrap>
+	<swe:control id="155">
+		<B><swe:this property="DisplayName" hintText="Label"/></B>
+	</swe:control>
+</td>
+	<swe:control id="160">
+		<B><swe:this property="DisplayName"/></B>
+	</swe:control>
+
+<!-- The remaining part of the table is drawn in the code -->
+<!-- End display of the lookin checkboxes -->
+
+
+<tr>
+<td width="30%">&nbsp;</td>
+<td colspan="4" width="70%"><hr></td>
+</tr>
+
+
+<!-- Display the modified between fields -->
+
+<tr>
+<td width="30%" nowrap>
+	<swe:control id="165">
+		<B><swe:this property="DisplayName" hintText="Label"/></B>
+	</swe:control>
+</td>
+<td width="25%" align="left">
+	<swe:control id="170">
+		<B><swe:this property="FormattedHtml" hintMapType="Field"/></B>
+	</swe:control>
+</td>
+<td width="20%" align="center">
+	<swe:control id="175">
+		<B><swe:this property="DisplayName" hintText="Label"/></B>
+	</swe:control>
+</td>
+<td width="30%">
+	<swe:control id="180">
+		<B><swe:this property="FormattedHtml" hintMapType="Field"/></B>
+	</swe:control>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td width="30%">&nbsp;</td>
+<td colspan="4" width="70%"><hr></td>
+</tr>
+<!-- End display of the modified between fields -->
+
+
+<!-- Display the File Format checkboxes -->
+<tr>
+<td width="30%" nowrap>
+	<swe:control id="185">
+		<B><swe:this property="DisplayName" hintText="Label"/></B>
+	</swe:control>
+</td>
+	<swe:control id="190">
+		<B><swe:this property="DisplayName"/></B>
+	</swe:control>
+
+<!-- The remaining part of the table is drawn in the code -->
+
+<!-- End display of the File Format checkboxes -->
+
+
+<!-- Display the Data Sources checkboxes -->
+<tr>
+<td width="30%">&nbsp;</td>
+<td colspan="4" width="70%"><hr></td>
+</tr>
+<tr>
+<td width="30%" nowrap>
+	<swe:control id="195">
+		<B><swe:this property="DisplayName" hintText="Label"/></B>
+	</swe:control>
+</td>
+	<swe:control id="200">
+		<B><swe:this property="DisplayName"/></B>
+	</swe:control>
+
+
+<!-- The remaining part of the table is drawn in the code -->
+<tr>
+<td width="30%">&nbsp;</td>
+<td colspan="4" width="70%"><hr></td>
+</tr>
+
+</table>
+<!-- End  display of the Data Sources checkboxes -->
+<swe:if condition="Web Engine State Properties, IsPrintOff">
+	</div>
+</swe:if>
+</swe:form>
+
+<!-- End Template: Advanced Search -->

@@ -1,0 +1,24 @@
+<!-- Template Start: dCCForm1ColBodyLight.swt -->
+
+<swe:control id="91">
+	<!-- Inside-applet help text -->
+	<div class="AppletBack"><swe:this property="DisplayName" hintText="Inside Applet Help Text"/></div>
+</swe:control>
+		
+<swe:error>
+	<div class="AppletBack"><font class="error"><swe:this property="FormattedHtml"/></font></div>
+</swe:error>		
+
+<swe:for-each startValue="1101" count="30" iteratorName="currentId">
+	<swe:control id="swe:currentId+200" hintMapType="FormItem">
+			<div class="scLabel">
+				<swe:this property="DisplayName" hintText="Label"/>:
+				<swe:this property="RequiredIndicator" hintText="Required"/>
+			</div>
+			<span class="mceField" align="swe:this.TextAlignment">
+					<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+200"/>
+			</span><br>
+	</swe:control>									
+</swe:for-each>						
+
+<!-- Template End: dCCForm1ColBodyLight.swt -->	

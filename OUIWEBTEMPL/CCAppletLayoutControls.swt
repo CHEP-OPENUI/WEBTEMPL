@@ -1,0 +1,101 @@
+<!-- Template Start: CCAppletLayoutControls.swt -->
+
+<table datatable="0" summary="" height="16" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0">
+<swe:layout viewDisplayMode="Layout">
+ <tr valign="top">
+  <td class="AppletStyle1">
+   <swe:include file="CCTitle_Portal.swt"/>
+
+   <!-- Layout Buttons -->
+	<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">		
+		<!--button row-->
+		<tr class="AppletButtons">
+			<td><img src="images/spacer.gif" height="1" width="10" alt=""></td>
+			<td colspan="2">
+				<table datatable="0" summary="" cellpadding="2" cellspacing="0" border="0">
+					<tr class="AppletButtons">
+					<td valign="middle" nowrap>
+					<swe:form>		     
+					 <swe:menu type="Button" width="38" height="16" bgcolor="#333399" fgcolor="#ffffff" />
+					 </swe:form>
+					</td>
+					 <td><img src="images/btn_div.gif" height="13" align="middle" alt="">&nbsp;</td>					  	
+                  <!-- Layout Button Row -->
+					 <swe:control id="218"><!-- Done, 218 -->
+						<td  nowrap><swe:this property="FormattedHtml" hintText="Done" hintMapType="Control"/></td>
+					    <td>&nbsp;</td>
+						<td><img src="images/btn_div.gif" height="13" align="middle" alt=""></td>	
+						<td>&nbsp;</td>
+						</swe:control>
+					
+						<swe:control id="219"><!-- Reset, 219 -->
+					<td  nowrap><swe:this property="FormattedHtml" hintText="Reset" hintMapType="Control"/></td>
+					      <td>&nbsp;</td>
+						</swe:control>
+						
+						
+					</tr>
+				</table>		
+			</td>		
+			
+			<td align="right" width="100%">
+				<table datatable="0" summary="" cellpadding="2" cellspacing="0" border="0">
+					<tr class="AppletButtons">	
+						<td width="100%"><img src="images/spacer.gif" valign="top" width="1" height="1" alt=""></td>	
+					</tr>
+				</table>		
+			</td>			
+		</tr>
+	
+	</table>
+
+   <!-- End Layout Buttons -->
+
+  </td>
+ </tr>
+</swe:layout>
+
+<swe:layout viewDisplayMode="Show">
+ <tr>
+        <swe:switch>
+             <swe:case condition="Web Engine State Properties, IsRTL">
+             <!-- RTL case --> 
+
+                  <td align=left>
+
+             <!-- end of RTL case -->
+             </swe:case> 
+
+             <swe:default>
+             <!-- default, non-RTL --> 
+
+                  <td align=right>
+
+             <!-- end of default, non-RTL -->
+             </swe:default>
+        </swe:switch> 
+
+		<Table datatable="0" summary="" cellpadding=2 cellspacing=0 class="siebui-editLayout"><tr>
+			<swe:control id="600">
+				<td class="AppletButtons" nowrap>
+					<!-- ExtraButton  --><swe:this property="FormattedHtml" hintText="Extra Button" hintMapType="Control"/>
+				</td>
+			</swe:control>
+			<swe:control id="601">
+				<td class="AppletButtons" nowrap>
+					<!-- ExtraButton  --><swe:this property="FormattedHtml" hintText="Extra Button" hintMapType="Control"/>
+				</td>
+			</swe:control>
+			<swe:control id="215">
+				<td class="AppletButtons" nowrap>
+					<!-- EditLayout  --><swe:this property="FormattedHtml" hintText="Edit Layout" hintMapType="Control"/>
+				</td>
+			</swe:control>
+		</tr></table>
+	</td>
+</tr>
+</swe:layout>
+
+</table>
+
+<!-- Template End: CCAppletLayoutControls.swt -->

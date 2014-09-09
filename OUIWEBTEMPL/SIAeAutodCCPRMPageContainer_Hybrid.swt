@@ -1,0 +1,14 @@
+<!-- Template Start: SIAeAutodCCPRMFrameViewbar.swt -->
+
+<HTML dir="swe:dir">
+    <head>
+        <title><swe:this property="Title"/></title>
+        <swe:include file="CCStylesChoice.swt"/>
+    </head>
+    <BODY>
+        <swe:include file="CCPageContainer.swt" />
+        <swe:scripts/>
+    </BODY>
+</HTML>
+
+<!-- Template End: SIAeAutodCCPRMFrameViewbar.swt -->

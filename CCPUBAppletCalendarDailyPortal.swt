@@ -1,0 +1,120 @@
+<!-- Start of CCAppletCalendarDailyPortal.swt -->
+
+<script language="JavaScript">
+function CalendarJumpToTop ()
+{
+   if(typeof(document) != "undefined")
+   {
+     if(document.readyState == "complete")
+	 	   dvPortalCalendarDayScroll.scrollTop=AnchorStartDayAt.scrollDistance;
+	  else
+         setTimeout("CalendarJumpToTop()", 100);
+   }
+}
+</script>
+
+<swe:layout viewDisplayMode="Layout">
+   <swe:include file="CCApplet_Spacer.swt"/>
+	<swe:include file="CCLayoutTitlePortal.swt"/>
+</swe:layout>
+
+<swe:layout viewDisplayMode="Show" appletDisplayMode="Show">
+<!--Applet Body-->
+<swe:include file="CCApplet_Spacer.swt"/>
+<div class="swe:this.SelectStyle">
+
+<swe:include file="CCCalendarAppletTitleGraphical.swt"/>
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="AppletHIFormBorder">
+
+<swe:layout viewDisplayMode="Show" appletDisplaySize="Max">
+
+<table class="calendarBorder" valign="top" width="100%" cellpadding="1" cellspacing="0" border="0" style="table-layout:fixed"><tr><td valign="top">
+<table valign="top" width="100%" cellpadding="3" cellspacing="0" border="0">
+ <swe:form name=CalendarGotoDateForm>
+ <tr class="calendarBlank">
+  <td valign="top">
+   <table border="0">
+    <tr>
+     <td class="calendarLabel"><!-- Owner Label --><swe:control id="101" property="FormattedHtml" hintText="Label"/></td>
+     <td class="calendarField" colspan="4"><!-- Owner field --><swe:control id="102" property="FormattedHtml" hintText="Field" hintMapType="Control"/></td>
+    </tr>
+    <tr>
+     <td class="calendarLabel"><!-- Date Label --><swe:control id="103" property="FormattedHtml"/></td>
+     <td class="calendarField"><!-- Date Field (Month) --><swe:control id="105" property="FormattedHtml"/></td>
+     <td class="calendarField"><!-- Date Field (Day) --><swe:control id="104" property="FormattedHtml"/></td>
+     <td class="calendarField"><!-- Date Field (Year) --><swe:control id="106" property="FormattedHtml"/></td>
+     <td class="calendarField"><!-- Go --><swe:control id="130" property="FormattedHtml"/></td>
+     <td class="calendarLabel"><!-- Time Keeping link --><swe:control id="145" property="FormattedHtml"/></td>
+    </tr>
+
+	<tr>
+		<td class="calendarLabel"><swe:control id="107" property="FormattedHtml" hintText="TimeZoneLabel"/></td>
+		<td class="mceField" colspan="4">
+			<swe:control id="108" property="FormattedHtml" hintText="TimeZone" hintMapType="Control"/>
+		</td>
+	</tr>
+
+	
+
+   </table>
+  </td>
+ </tr>
+ </swe:form>
+</table>
+<table valign="top" width="100%" cellpadding="0" cellspacing="0" border="0">
+ <tr class="calendarBorder">
+  <td><img src="images/spacer.gif" width="2" height="2" alt=""></td>
+ </tr>
+</table>
+<table class="AppletStyle3" valign="top" width="100%" cellpadding="3" cellspacing="0" border="0">
+ <tr class="AppletButtons">
+  <td dir="ltr" class="AppletButtons" width="100%"><b><swe:calendar property="DateRange"></b></td>
+  <td class="AppletButtons" valign="middle" nowrap><!-- New Appt --><swe:control id=133 property="FormattedHtml"/></td>
+  <td class="AppletButtons" nowrap>&nbsp;|&nbsp;</td>
+
+  <td class="AppletButtons" valign="middle" nowrap><!-- Previous --><swe:control id=131 property="FormattedHtml"/></td>
+
+  <td class="AppletButtons" valign="middle" nowrap><!-- Next  --><swe:control id=132 property="FormattedHtml"/></td>
+
+ </tr>
+</table>
+</td></tr><tr><td>
+
+<div id=dvPortalCalendarDayScroll STYLE="width: 100%; height: 390px; overflow: auto;">
+<table class="calendarBorder2" valign="top" width="100%" cellpadding="3" cellspacing="0" border="0">
+
+<swe:calendarIntervalLoop>
+<swe:calendarInterval>
+
+<tr valign="top" style="height:18;">
+	<!-- Interval -->
+	<td class="calendarInterval" align="right" nowrap style="white-space:nowrap;">
+		<!-- Date Interval -->
+		<B><swe:this property="Interval"/></B>&nbsp;
+	</td>
+	<swe:calendarTiledActivity/>
+</tr>
+
+</swe:calendarInterval>
+</swe:calendarIntervalLoop>
+
+</table>
+
+</div>
+</td>
+</tr>
+</table>
+
+<img src="images/spacer.gif" width="1" height="1" alt="" onLoad= "CalendarJumpToTop()">
+
+</swe:calendar>
+</swe:layout>
+
+</td></tr></table>
+</div>
+
+</swe:layout>
+
+<!-- End of CCAppletCalendarDailyPortal.swt-->
+

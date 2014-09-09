@@ -1,0 +1,147 @@
+<!--  Template Start: ERMListBodyTotals.swt -->
+
+
+<!-- Begin totals row -->
+<table datatable="0" summary="" width="100%">
+   <tr>
+      <swe:control id="40">
+	      <td align="right"><div class="mceLabel" align="swe:this.TextAlignmentLabel">
+		      <swe:this property="DisplayName" hintText="Label"/>:
+	         </div>
+		</td>
+		<td><div class="mceField">
+	  	      <swe:this property="Total" hintText="Total"/>
+            	</div>
+            </td>
+      </swe:control>
+   </tr>
+</table>
+
+<hr SIZE=4 NOSHADE>
+
+
+<swe:for-each-row>
+<!------------ Per-record Control Buttons  ------------->
+<table datatable="0" summary="" width="100%">
+   <tr>
+      <swe:control id="144">
+      <!-- place holder for controls -->
+         <td><class="Row"><swe:this property="FormattedHtml" hintText="Selected Row" hintMapType="Control"/></td>
+      </swe:control>
+      <swe:control id="148">
+         <td><class = "Row"><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+      </swe:control>
+      <swe:control id="149">
+         <td><class = "Row"><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+      </swe:control>
+      <swe:control id="145">
+         <td><class = "Row"><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+      </swe:control>
+   </tr>
+
+<!-- ---------- List Field Values 4-column fields ------------->
+   <swe:for-each startValue="500" count="5" iteratorName="currentId">
+      <tr>
+         <swe:control id="swe:currentId">
+	         <td><div class="mceLabel" align="swe:this.TextAlignmentLabel">
+		         <swe:this property="DisplayName" hintText="Label"/>:
+		         <swe:this property="RequiredIndicator" hintText="Required"/>
+	            </div>
+	         </td>
+	         <td><div class="mceField">
+	  	         <swe:this property="FormattedHtml" hintText="Field" hintMapType="Hyperlinked Item"/>
+               </div>
+            </td>
+         </swe:control> 
+
+         <swe:control id="swe:currentId+10">
+      	   <td><div class="mceLabel" align="swe:this.TextAlignmentLabel">
+		         <swe:this property="DisplayName" hintText="Label"/>:
+		         <swe:this property="RequiredIndicator" hintText="Required"/>
+	            </div>
+	         </td>
+	         <td><div class="mceField">
+	  	         <swe:this property="FormattedHtml" hintText="Field" hintMapType="Hyperlinked Item"/>
+	            </div>
+	         </td>
+         </swe:control>
+         
+         <swe:control id="swe:currentId+20">
+	         <td><div class="mceLabel" align="swe:this.TextAlignmentLabel">
+		         <swe:this property="DisplayName" hintText="Label"/>:
+		         <swe:this property="RequiredIndicator" hintText="Required"/>
+	            </div>
+	         </td>
+               <td><div class="mceField">
+	  	         <swe:this property="FormattedHtml" hintText="Field" hintMapType="Hyperlinked Item"/>
+	            </div>
+	         </td>
+         </swe:control> 
+         
+         <swe:control id="swe:currentId+30">
+	         <td><div class="mceLabel" align="swe:this.TextAlignmentLabel">
+		         <swe:this property="DisplayName" hintText="Label"/>:
+		         <swe:this property="RequiredIndicator" hintText="Required"/>
+	            </div>
+	         </td>
+               <td><div class="mceField">
+	  	         <swe:this property="FormattedHtml" hintText="Field" hintMapType="Hyperlinked Item"/>
+	            </div>
+	         </td>
+         </swe:control> 
+      </tr>
+   </swe:for-each>
+</table>
+
+<!-- wide one-column fields -->
+<table datatable="0" summary="">
+   <swe:for-each startValue="700" count="5" iteratorName="currentId">
+      <swe:control id="swe:currentId" hintMapType="Control">
+         <tr>
+            <td><span class="mceLabel" align="swe:this.TextAlignmentLabel">
+	            <swe:this property="DisplayName" hintText="Label"/>:
+	            <swe:this property="RequiredIndicator" hintText="Required"/>
+               </span>
+            </td>
+         </tr>
+         <tr>
+            <td><span class="mceField" align="swe:this.TextAlignment">
+	            <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+               </span>
+            </td>
+         </tr>
+      </swe:control>
+      <swe:control id="swe:currentId+50">
+         <tr>
+               <td><class = "Row"><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+      	 </tr>
+      </swe:control>
+      <tr><td><img src="images/spacer.gif" width="1" height="10" alt=""></td></tr>
+   </swe:for-each>
+</table>
+<hr SIZE=4 NOSHADE>
+</swe:for-each-row>
+
+<!-- place holder for control and totals -->
+<table datatable="0" summary="" width="100%">
+   <tr>
+      <swe:control id="1148">
+         <td align="left" ><class = "Row"><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+      </swe:control>
+      <swe:control id="1149">
+         <td align="left" ><class = "Row"><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+      </swe:control>
+<!-- Begin totals row -->
+      <swe:control id="40">
+	      <td align="right"><div class="mceLabel" align="swe:this.TextAlignmentLabel">
+		      <swe:this property="DisplayName" hintText="Label"/>:
+	         </div>
+		</td>
+		<td><div class="mceField">
+	  	      <swe:this property="Total" hintText="Total"/>
+            	</div>
+            </td>
+      </swe:control>
+   </tr>
+</table>
+<!-- Template End: ERMListTotals.swt  -->

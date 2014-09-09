@@ -1,0 +1,94 @@
+<!-- Template Start: dCCListTitleNoRule.swt -->
+
+
+<table datatable="0" summary="" class="AppletBack" width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+	<tr valign="top">
+		<td nowrap><img src="images/spacer.gif" align="top" alt="">
+				<!--swe:this property="Title"/-->
+				<!-- Plain text title (90)--> <swe:control id="90" hintText="Title" hintMapType="Control"><span class="AppletTitle"><swe:this property="DisplayName" /></span></swe:control>
+				<!-- Drill-down title (184)--> <swe:control id="184" hintText="Drill-down Title" hintMapType="Control"><span class="AppletTitle"><swe:this property="DisplayName" /></span></swe:control>
+		</td>
+		<swe:control id="145">
+		<!-- CreateRecord,145 -->
+			<td valign="middle"><img src="images/spacer.gif" width="5" align="top" alt="">
+				<table datatable="0" summary="" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td valign="middle" nowrap>
+							<swe:this property="FormattedHtml" hintText="Optional" hintMapType="Control"/>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</swe:control>
+		<td><img src="images/spacer.gif" align="top" alt=""></td>
+		<td align="right" valign="middle"><img src="images/spacer.gif" align="top" alt="">
+			<table datatable="0" summary="" cellpadding="0" cellspacing="0" border="0"><tr>
+				 <swe:control id="131">
+			      <!-- CreateRecord,131 -->
+			        <td valign="middle" nowrap>
+			        <swe:this property="FormattedHtml" hintText="New" hintMapType="Control"/>
+			        </td>
+			      </swe:control>
+			
+			      <swe:control id="136">
+			      <!-- WriteRecord, 136 -->
+			        <td valign="middle" nowrap>
+			        <swe:this property="FormattedHtml" hintText="Save" hintMapType="Control"/>
+			        </td>
+			      </swe:control>
+			
+			      <swe:control id="134">
+			      <!-- Reset, 134 -->
+			        <td valign="middle" nowrap>
+			        <swe:this property="FormattedHtml" hintText="Reset" hintMapType="Control"/>
+			        </td>
+			      </swe:control>
+			
+			      <swe:control id="107">
+			      <!-- ExecuteQuery, 107 -->
+			        <td valign="middle" nowrap>
+			        <swe:this property="FormattedHtml" hintText="Search" hintMapType="Control"/>
+			        </td>
+			      </swe:control>
+			
+			      <swe:control id="135">
+			      <!-- Cancel, 135 -->
+			        <td valign="middle" nowrap>
+			        <swe:this property="FormattedHtml" hintText="Cancel" hintMapType="Control"/>
+			        </td>
+			      </swe:control>
+			
+			      <swe:control id="109">
+			      <!-- optional control, 109 -->
+			        <td valign="middle" nowrap>
+			        <swe:this property="FormattedHtml" hintMapType="Control"/>
+			        </td>
+			      </swe:control>
+			
+			      <swe:control id="110">
+			      <!-- optional control, 110 -->
+			        <td valign="middle" nowrap>
+			        <swe:this property="FormattedHtml" hintMapType="Control"/>
+			        </td>
+			      </swe:control>
+			
+			      <swe:control id="111">
+			      <!-- optional control, 111 -->
+			        <td valign="middle" nowrap>
+			        <swe:this property="FormattedHtml" hintMapType="Control"/>
+			        </td>
+			      </swe:control>
+				  
+				  <swe:control id="106">
+			      <!-- NewQuery, 106 -->
+			        <td valign="middle" nowrap>
+			        <swe:this property="FormattedHtml" hintText="Find" hintMapType="Control"/>
+			        </td>
+			      </swe:control>	
+				  	  
+			  </tr></table>
+		</td>
+	</tr>
+</table>
+
+<!-- Template End: dCCListTitleNoRule.swt -->

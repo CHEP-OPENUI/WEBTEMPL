@@ -1,0 +1,57 @@
+<!--  Template Start: CCViewDetail_Mobile_RelatedItems.swt -->
+<swe:include file="CCHTMLHeader.swt"/>
+<div>
+
+<!-- ---------- Main Content Area ---------------------------->
+
+<swe:if condition="Web Engine State Properties, IsPhoneMode">
+    <div id="_FormParentRelatedItemsOuterCont" class="SiebelDetailParentContainerRelatedItemsOuterCont" landscape="Hide" portrait="Hide">
+</swe:if>
+<swe:if condition="Web Engine State Properties, IsTabletMode">
+    <div id="_FormParentRelatedItemsOuterCont" class="SiebelDetailParentContainerRelatedItemsOuterCont" landscape="Default" portrait="Hide">
+</swe:if>
+
+   <div id="_FormParentRelatedItems" class="SiebelDetailParentContainerRelatedItems siebui-NoScrollFormContainer">
+      <swe:applet hintMapType="Applet" id="1" hintText="Parent Form Applet" property="FormattedHtml" var="ParentWithPointer"/>
+   </div>
+
+   <div id="_MobileViewTabContainer" class="SiebelMobileViewTabContainer">
+        <!-- ---------- Tier 3 & Tier 4 navigation ----------------->
+        <swe:include file="CCViewbar_Tabs_DropList_Mobile.swt"/>
+        <!-- ---------- End Tier 3 & Tier 4 navigation ------------->       
+    </div>
+</div>
+
+      <div id="SiebelMapContainer" name="SiebelMapContainer"  style="display:none;">
+         <div id="jqmMapCtrl" name="jqmMapCtrl" ></div>
+      </div>
+
+<swe:if condition="Web Engine State Properties, IsPhoneMode">
+    <div id="_AppletListRelatedItemsOuterCont" class="SiebelContentListContainerRelatedItemsOuterCont" landscape="Show" portrait="Show">
+</swe:if>
+<swe:if condition="Web Engine State Properties, IsTabletMode">
+    <div id="_AppletListRelatedItemsOuterCont" class="SiebelContentListContainerRelatedItemsOuterCont" landscape="Default" portrait="Show">
+</swe:if>
+
+    <div name="jqmToggleCtrl" id="jqmToggleCtrl" ctrltype="button" ctrllabel="IDS_SWE_MOBIIE_BACK" effect="blind" showoptions="{'direction': 'horizontal'}" hideoptions="{'direction': 'horizontal'}" style="display:none;"></div> 
+
+   <div id="_AppletFormRelatedItems1" class="SiebelContentDetailContainerRelatedItems1 ui-body-e">
+        <swe:applet hintMapType="Applet" id="3" hintText="Child Form Applet" property="FormattedHtml" var="Grandchild"/>
+   </div>
+   <div id="_AppletListRelatedItems" class="SiebelContentListContainerRelatedItems ListAppletContainer siebui-NoScrollFormContainer ui-body-b">
+        <swe:for-each count=2 iteratorName="currentId" startValue="4">         
+            <swe:applet hintMapType="Applet" id="swe:currentId" hintText="Child List Applet" property="FormattedHtml" var="ParentWithPointer" />
+        </swe:for-each>
+   </div>
+   <div id="_AppletFormRelatedItems" class="SiebelContentDetailContainerRelatedItems siebui-NoScrollFormContainer ui-body-e">
+        <swe:applet hintMapType="Applet" id="10" hintText="Child Form Applet" property="FormattedHtml" var="Grandchild"/>
+   </div>
+</div>
+<swe:include file="CCHTMLFooter.swt"/>
+
+<!-- ---------- End Main Content Area ------------------------>
+</div>
+<!--  Template End: CCViewDetail_Mobile_RelatedItems.swt -->
+
+
+

@@ -1,0 +1,50 @@
+<swe:switch>
+		<swe:case condition="Invoke Search,IsSrchCenterOn">
+			<swe:switch>
+			<swe:case condition="Persistent Customer Dashboard,IsDashboardOn">
+				<swe:switch>
+				<swe:case condition="Task Assistant UI Service,IsTaskAssistantOn">
+					<swe:include file="CCFrameContent_VSDT.swt"/>
+				</swe:case>
+				<swe:default>
+					<swe:include file="CCFrameContent_VSD.swt"/>
+				</swe:default>
+				</swe:switch>
+			</swe:case>
+	    		<swe:default>
+				<swe:switch>
+				<swe:case condition="Task Assistant UI Service,IsTaskAssistantOn">
+					<swe:include file="CCFrameContent_VST.swt"/>
+				</swe:case>
+				<swe:default>
+					<swe:include file="CCFrameContent_VS.swt"/>	
+				</swe:default>
+				</swe:switch>
+			</swe:default>
+			</swe:switch>
+    		</swe:case>
+		<swe:default>
+			<swe:switch>
+			<swe:case condition="Persistent Customer Dashboard,IsDashboardOn">
+				<swe:switch>
+				<swe:case condition="Task Assistant UI Service,IsTaskAssistantOn">
+					<swe:include file="CCFrameContent_VDT.swt"/>
+				</swe:case>
+				<swe:default>
+					<swe:include file="CCFrameContent_VD.swt"/>
+				</swe:default>
+				</swe:switch>
+	    		</swe:case>
+			<swe:default>
+				<swe:switch>
+				<swe:case condition="Task Assistant UI Service,IsTaskAssistantOn">
+					<swe:include file="CCFrameContent_VT.swt"/>
+				</swe:case>
+				<swe:default>
+					<swe:include file="CCFrameContent_V.swt"/>
+				</swe:default>
+				</swe:switch>
+			</swe:default>	
+			</swe:switch>
+		</swe:default>	
+</swe:switch>

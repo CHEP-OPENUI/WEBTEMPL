@@ -1,0 +1,5 @@
+<!-- Template Start: eCfgObj_Status_OK.swt -->
+<!-- We are not suppose to show any thing if everything is OK.
+<div id="eCfgObj_Status_OK.swt" class="cxStatusTempl">
+</div>
+<!-- Template End: eCfgObj_Status_OK.swt -->

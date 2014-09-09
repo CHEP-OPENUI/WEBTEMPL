@@ -1,0 +1,58 @@
+<!-- Template Start: ERMBusinessCardFormBasic.swt -->
+<swe:include file="ePortalAppletTitle.swt"/>
+
+<table datatable="0" summary="" width="100%" border="1" cellpadding="1" cellspacing="0">
+<tr><td>
+
+<table datatable="0" summary="" valign="top" width="100%" cellpadding="2" cellspacing="0" border="0" align="center">
+
+<!-- Begin Loop: Lines 1-30 -->
+
+	<tr valign="top">
+		<td>
+			<table datatable="0" summary="" border="0" cellspacing="2" cellpadding="1" align="center">
+				<!-- Begin Loop: Lines 1-30 -->
+				<swe:for-each startValue="1101" count="30" iteratorName="currentId">
+				<!-- New line -->
+					<swe:control id="swe:currentId+100">				  
+					  <tr valign="top">
+						  <td align="right" class="scLabel">
+						  <swe:this property="RequiredIndicator" hintText="Required"/>
+						  <swe:this property="FormattedHtml" hintText="Label"/></td>
+						  <td valign="bottom"  class="scField">
+					</swe:control>
+						  <swe:control id="swe:currentId+200" property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/>
+					<swe:control id="swe:currentId+100"></td>
+					  </tr>
+					</swe:control>				
+				</swe:for-each>
+				<!-- End Loop -->
+			</table>
+		</td>
+		<td>
+			<table datatable="0" summary="" border="0" cellspacing="2" cellpadding="1">
+				<!-- Begin Loop: Lines 1-30 -->
+				<swe:for-each startValue="2101" count="30" iteratorName="currentId">
+				<!-- New line -->
+					<swe:control id="swe:currentId+100">				  
+					  <tr valign="top">
+						  <td align="right" class="scLabel">
+						  <swe:this property="RequiredIndicator" hintText="Required"/>
+						  <swe:this property="FormattedHtml" hintText="Label"/></td>
+						  <td valign="bottom"  class="scField">
+					</swe:control>
+						  <swe:control id="swe:currentId+200" property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/>
+					<swe:control id="swe:currentId+100"></td>
+					  </tr>
+					</swe:control>				
+				</swe:for-each>
+			</table>
+		</td>		
+	</tr>
+			
+</table>
+
+</td></tr>
+</table>
+<p></p>
+<!-- Template End: ERMBusinessCardFormBasic.swt -->

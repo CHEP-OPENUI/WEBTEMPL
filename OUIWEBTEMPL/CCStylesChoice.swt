@@ -1,0 +1,70 @@
+<!-- Template Start: CCStylesChoice.swt -->
+<!-- Oliver: code adjustments -->
+
+<swe:switch>
+    <swe:case condition="Web Engine UI Preferences,HasUserPreference,'Category:UIPreferences','Name:stylesheet','Value:LargeType'">
+        <link href="files/main_largetype.css" rel="stylesheet"/>
+    </swe:case>
+    <swe:case condition="Web Engine UI Preferences,HasUserPreference,'Category:UIPreferences','Name:stylesheet','Value:Colorblind'">
+        <link href="files/main_colorblind.css" rel="stylesheet"/>
+    </swe:case>
+    <swe:case condition="Web Engine UI Preferences,HasApplicationPreference,'Category:UIPreferences','Name:stylesheet','Value:EmployeeFacing'">
+        <swe:switch> 
+            <swe:case condition="Web Engine State Properties, IsPrintOn">
+                <link href="files/printmain.css" rel="stylesheet"/>
+            </swe:case>
+            <swe:case condition="Web Engine State Properties, IsAccessibleEnchanced">
+                <swe:if condition="Web Engine State Properties, IsBrowserDefaults">
+                    <link href="files/dCCmain_browserdefault.css" rel="stylesheet"/>
+                </swe:if>
+                <swe:if condition="Web Engine State Properties, IsNotBrowserDefaults">
+                    <link href="files/dCCmain.css" rel="stylesheet"/> 
+                </swe:if>
+            </swe:case>
+            <swe:default>
+                <swe:if condition="Web Engine State Properties, IsBrowserDefaults">
+                    <link href="files/main_browserdefault.css" rel="stylesheet"/>
+                </swe:if>
+                <swe:if condition="Web Engine State Properties, IsNotBrowserDefaults">
+                    <!-- link href="files/ie8-compat.css" rel="stylesheet"/ -->
+                </swe:if>
+            </swe:default>
+        </swe:switch>
+        <swe:if condition="Task UI Service (SWE),IsInTask">
+            <!-- link href="files/main_task.css" rel="stylesheet"/ -->
+        </swe:if>
+        <swe:if condition="Web Engine User Agent, TestCapability, Parent:Mozilla 5.0">
+            <link href="files/dCCmainNS6and7.css" rel="stylesheet"/>
+        </swe:if>
+    </swe:case>
+    <swe:case condition="Web Engine UI Preferences,HasApplicationPreference,'Category:UIPreferences','Name:stylesheet','Value:CustomerFacing'">
+        <swe:if condition="Web Engine State Properties, IsBrowserDefaults">
+            <link href="files/dCCmain_browserdefault.css" rel="stylesheet"/>
+        </swe:if>
+        <swe:if condition="Web Engine State Properties, IsNotBrowserDefaults">
+            <link href="files/dCCmain.css" rel="stylesheet"/> 
+        </swe:if>
+        <swe:if condition="Web Engine User Agent, TestCapability, Parent:Mozilla 5.0">
+            <link href="files/dCCmainNS6and7.css" rel="stylesheet"/>
+        </swe:if>
+    </swe:case>
+    <swe:default>
+        <swe:switch> 
+            <swe:case condition="Web Engine State Properties, IsPrintOn">
+                <link href="files/printmain.css" rel="stylesheet"/>
+            </swe:case>
+            <swe:default>
+                <swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+                    <!-- link href="files/ie8-compat.css" rel="stylesheet"/ --> <!-- This is the one used in most(all?) applets -->
+                </swe:if>
+                <swe:if condition="Task UI Service (SWE),IsInTask">
+                    <!-- link href="files/main_task.css" rel="stylesheet"/ -->
+                </swe:if>
+            </swe:default>
+        </swe:switch>
+    </swe:default>
+</swe:switch>
+
+<!-- Template End: CCStylesChoice.swt -->
+
+

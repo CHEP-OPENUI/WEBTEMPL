@@ -1,0 +1,12 @@
+<!-- Template Start: CCButtons_Popup.swt -->
+<!-- Oliver: entirely new code base for popup buttons -->
+
+<swe:control id="154"><span class="siebui-popup-button"><swe:this property="FormattedHtml" hintMapType="Control"/></span></swe:control>
+<swe:control id="155"><span class="siebui-popup-button"><swe:this property="FormattedHtml" hintMapType="Control"/></span></swe:control>									
+<swe:control id="156"><span class="siebui-popup-button"><swe:this property="FormattedHtml" hintMapType="Control"/></span></swe:control>
+<swe:control id="157"><span class="siebui-popup-button"><swe:this property="FormattedHtml" hintMapType="Control"/></span></swe:control>
+<swe:control id="158"><!-- Clear  --><span class="siebui-popup-button"><swe:this property="FormattedHtml" hintMapType="Control" hintText="Clear (PickNone)"/></span></swe:control>							  
+<swe:control id="152"><!-- OK     --><span class="siebui-popup-button"><swe:this property="FormattedHtml" hintMapType="Control" hintText="OK (PickRecord)"/></span></swe:control>
+<swe:control id="153"><!-- Cancel --><span class="siebui-popup-button"><swe:this property="FormattedHtml" hintMapType="Control" hintText="Cancel (CloseApplet)"/></span></swe:control>						  
+
+<!-- Template End: CCButtons_Popup.swt -->

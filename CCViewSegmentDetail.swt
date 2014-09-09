@@ -1,0 +1,178 @@
+
+<!-- Template Start: CCSegmenDetailView.swt -->
+<html dir="swe:dir">
+<head></head>
+
+	<swe:frameset htmlAttr="rows='32%,68%' framespacing='2'">
+		
+		<!-- This frame contains the top list applet -->
+		<swe:frame type="Applet" name="Applet1" htmlAttr="topmargin='0' leftmargin='0' marginheight='0' marginwidth='0' frameborder='0'">
+		
+		<swe:include file="CCHTMLHeader.swt"/>
+
+		<!--local override of CSS-->
+		<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+			<style>	BODY {border-bottom:1px solid #000000;}		</style>
+		</swe:if>
+
+		
+		<!-- ---------- Threadbar and Mini-Applet ----------------->
+		<table datatable="0" summary="" border="0" cellspacing="0" cellpadding="1" width="100%">
+			<tr>
+			<swe:if condition="Web Engine State Properties, IsLowInteractive">
+			<td valign="absmiddle">
+			<swe:include file="CCThreadbar.swt"/>
+			</td>
+			</swe:if>
+				<swe:applet id="201" hintText="Mini-Applet">
+					<td align="right"><swe:this property="FormattedHTML"/></td>
+					<td>&nbsp;&nbsp;&nbsp;</td>
+				</swe:applet>	
+		
+			</tr>
+		</table> 
+		<!-- ---------- End Threadbar and Mini-Applet ------------->
+
+			<table datatable="0" summary="" width="100%" cellpadding="5" cellspacing="0" border="0">
+                  	<tr>
+					<!-- Parent Applet -->
+					<td valign="top" width="100%">
+					<swe:applet id="1" hintText="Parent Applet" property="FormattedHtml" var="Parent"/>
+					</td>
+ 				</tr>
+			</table>
+		<swe:include file="CCViewbar_Tabs.swt"/>
+
+		<swe:include file="CCHTMLFooter.swt"/>
+			
+		</swe:frame>
+
+
+		<swe:switch>
+		<swe:case condition="Web Engine State Properties, IsRTL">
+		<!-- RTL case -->
+
+		<!-- This frameset will contain the lower half with a tree and java-expression builder -->
+	    <swe:frameset htmlAttr="cols='65%,35%' framespacing='2'">
+		    
+			<swe:frame type="Applet" name="Applet3" id="3" hintText="Segment Java Expression-Builder Applet" htmlAttr="marginheight='0' marginwidth='0' frameborder='0'">
+
+			<swe:include file="CCHTMLHeader.swt"/>
+			
+			<!--local override of CSS-->
+			<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+				<style>	BODY {border-top:1px solid #000000; border-left:1px solid #000000;}	</style>
+			</swe:if>
+
+			
+	
+				<table datatable="0" summary="" width="100%" cellpadding="5" cellspacing="0" border="0">
+                  		<tr>
+						<!-- Segment Java Expression-Builder Applet -->
+						<td valign="top" width="100%">
+							<swe:if condition="Web Engine State Properties, IsHighInteractive">	
+								<swe:applet id="3" hintText="Java Applet (HI Display Only)" property="FormattedHtml" var="Grandchild"/>
+							</swe:if>
+                       	</td>
+ 					</tr>
+			      </table>
+			<swe:include file="CCHTMLFooter.swt"/>
+	
+			</swe:frame>
+			
+			
+			<swe:frame type="Applet" name="Applet2" id="2" hintText="Segment Tree Applet"  htmlAttr="topmargin='0' leftmargin='0' marginheight='0' marginwidth='0' frameborder='0'">
+
+			<swe:include file="CCHTMLHeader.swt"/>
+			<!--local override of CSS-->
+			<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+				<style>	BODY {border-top:1px solid #000000; border-right:1px solid #000000;}</style>
+			</swe:if>
+
+
+			<table datatable="0" summary="" width="100%" cellpadding="5" cellspacing="0" border="0">
+		           	<tr>
+					<!-- Tree And Measure Applets -->
+					<td valign="top" width="100%">
+					<swe:applet id="2" hintText="Tree Applet" property = "FormattedHtml" var="Grandchild"/>
+                              </td>
+ 				</tr>
+			</table>
+			
+			<swe:include file="CCHTMLFooter.swt"/>
+
+			</swe:frame>
+	 
+		 </swe:frameset> 
+		 <!-- End of Inner Frameset -->
+
+		<!-- end of RTL case -->
+		</swe:case>
+
+		<swe:default>
+		<!-- default, non-RTL -->
+
+		<!-- This frameset will contain the lower half with a tree and java-expression builder -->
+	    <swe:frameset htmlAttr="cols='35%,65%' framespacing='2'">
+		    
+			<swe:frame type="Applet" name="Applet2" id="2" hintText="Segment Tree Applet"  htmlAttr="topmargin='0' leftmargin='0' marginheight='0' marginwidth='0' frameborder='0'">
+
+			<swe:include file="CCHTMLHeader.swt"/>
+			<!--local override of CSS-->
+			<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+				<style>	BODY {border-top:1px solid #000000; border-right:1px solid #000000;}</style>
+			</swe:if>
+
+
+			<table datatable="0" summary="" width="100%" cellpadding="5" cellspacing="0" border="0">
+		           	<tr>
+					<!-- Tree And Measure Applets -->
+					<td valign="top" width="100%">
+					<swe:applet id="2" hintText="Tree Applet" property = "FormattedHtml" var="Grandchild"/>
+                              </td>
+ 				</tr>
+			</table>
+			
+			<swe:include file="CCHTMLFooter.swt"/>
+
+			</swe:frame>
+					
+			<swe:frame type="Applet" name="Applet3" id="3" hintText="Segment Java Expression-Builder Applet" htmlAttr="marginheight='0' marginwidth='0' frameborder='0'">
+
+			<swe:include file="CCHTMLHeader.swt"/>
+			
+			<!--local override of CSS-->
+			<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+				<style>	BODY {border-top:1px solid #000000; border-left:1px solid #000000;}	</style>
+			</swe:if>
+
+			
+	
+				<table datatable="0" summary="" width="100%" cellpadding="5" cellspacing="0" border="0">
+                  		<tr>
+						<!-- Segment Java Expression-Builder Applet -->
+						<td valign="top" width="100%">
+							<swe:if condition="Web Engine State Properties, IsHighInteractive">	
+								<swe:applet id="3" hintText="Java Applet (HI Display Only)" property="FormattedHtml" var="Grandchild"/>
+							</swe:if>
+                       	</td>
+ 					</tr>
+			      </table>
+			<swe:include file="CCHTMLFooter.swt"/>
+	
+			</swe:frame>
+		 
+		 </swe:frameset> 
+		 <!-- End of Inner Frameset -->
+
+		<!-- end of default, non-RTL -->
+		</swe:default>
+		</swe:switch>
+
+		
+	</swe:frameset> <!-- End of Main Frameset -->
+
+	<swe:scripts/>
+
+</html>
+<!-- Template End: CCSegmentDetailView.swt -->

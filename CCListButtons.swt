@@ -1,0 +1,82 @@
+<!-- Template Start: CCListButtons.swt -->
+
+      <swe:control id="131">
+      <!-- CreateRecord,131 -->
+        <td valign="middle" nowrap>
+        <swe:this property="FormattedHtml" hintText="New" hintMapType="Control"/>
+        </td>
+      </swe:control>
+	  
+	  <swe:control id="106">
+      <!-- NewQuery, 106 -->
+        <td valign="middle" nowrap>
+        <swe:this property="FormattedHtml" hintText="Query" hintMapType="Control"/>
+        </td>
+      </swe:control>	  
+	  
+      <swe:control id="136">
+      <!-- Save, 136 -->
+        <td valign="middle" nowrap>
+        <swe:this property="FormattedHtml" hintText="Save" hintMapType="Control"/>
+        </td>
+      </swe:control>
+	  
+      <swe:control id="134">
+      <!-- Reset, 134 -->
+        <td valign="middle" nowrap>
+        <swe:this property="FormattedHtml" hintText="Reset" hintMapType="Control"/>
+        </td>
+      </swe:control>  	  
+	  
+      <swe:control id="135">
+      <!-- Cancel, 135 -->
+        <td valign="middle" nowrap>
+        <swe:this property="FormattedHtml" hintText="Cancel" hintMapType="Control"/>
+        </td>
+      </swe:control>	
+
+      <swe:control id="107">
+      <!-- ExecuteQuery, 107 -->
+        <td valign="middle" nowrap>
+        <swe:this property="FormattedHtml" hintText="Go (ExecuteQuery)" hintMapType="Control"/>
+        </td>
+      </swe:control>
+	  
+	  <swe:control id="108">
+      <!-- CancelQuery, 108 -->
+        <td valign="middle" nowrap>
+        <swe:this property="FormattedHtml" hintText="Cancel (CancelQuery)" hintMapType="Control"/>
+        </td>
+      </swe:control>
+
+	  <swe:control id="126">
+      <!-- QueryAssistant, 126 -->
+        <td valign="middle" nowrap>
+        <swe:this property="FormattedHtml" hintText="Query Assistant" hintMapType="Control"/>
+        </td>
+      </swe:control>
+
+      <swe:control id="109">
+      <!-- optional control, 109 -->
+        <td valign="middle" nowrap>
+        <swe:this property="FormattedHtml" hintMapType="Control"/>
+        </td>
+      </swe:control>
+
+      <swe:control id="110">
+      <!-- optional control, 110 -->
+        <td valign="middle" nowrap>
+        <swe:this property="FormattedHtml" hintMapType="Control"/>
+        </td>
+      </swe:control>
+
+      <swe:control id="111">
+      <!-- optional control, 111 -->
+        <td valign="middle" nowrap>
+        <swe:this property="FormattedHtml" hintMapType="Control"/>
+        </td>
+      </swe:control>
+	  
+	  
+            
+<!-- Template End: CCListButtons.swt -->

@@ -1,0 +1,29 @@
+<!-- Template Start: eCfgResourceJS.swt -->
+
+<table datatable="0" summary="" class="AppletStyle1" width="100%" cellpadding="0" cellspacing="0" border="0">
+   <tr valign="top">
+      <td>
+         <table datatable="0" summary="" valign="top" width="100%" cellpadding="3" cellspacing="1" border="0">
+            <tr >
+               <td width="20%" align="center">
+                  <b><swe:control id="Resource" CfgUIControl="lblResource" CfgHtmlType="CfgLabel" /></b>
+               </td>  
+               <td width="20%" align="center"><swe:control id="Name" CfgUIControl="lblName" CfgHtmlType="CfgLabel" />&nbsp;&nbsp;
+                  <span id="CxResourceName" class="cxLabel">
+                  <swe:control id="swe:IncId+250" CfgFieldName="CxResourceName" CfgHtmlType="CfgLabel" />
+                  </span>
+               </td>
+               <td width="20%" align="center"><swe:control id="Value" CfgUIControl="lblValue" CfgHtmlType="CfgLabel" />&nbsp;&nbsp;
+                  <span id="CxResourceValue" class="cxLabel">
+                  <swe:control id="swe:IncId+350" CfgFieldName="CxResourceValue" CfgHtmlType="CfgText" />
+                  </span>
+               </td>  
+               <td width="20%" align="center">&nbsp;</td>
+               <td width="20%" align="center">&nbsp;</td>  
+            </tr>
+         </table>
+      </td>
+   </tr>
+</table>
+
+<!-- Template End: eCfgResourceJS.swt -->

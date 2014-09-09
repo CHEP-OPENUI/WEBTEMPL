@@ -1,0 +1,68 @@
+<!-- Template Start ePortalURLAppletForm.swt -->
+<script>
+if (document.layers) document.captureEvents(Event.KEYPRESS);
+function keyhandler(e) {
+   // this function suppresses the enter key for text boxes in the form
+   // if source elt is undefined, it's not a text box so let the event happen
+   var ev = e ? e : window.event;
+   if (ev.srcElement.value == undefined) return true;
+   if (ev.keyCode == 13) return false;
+}
+</script>
+
+<swe:layout viewDisplayMode="Layout">
+   <swe:include file="CCApplet_Spacer.swt"/>
+   <swe:include file="CCLayoutTitlePortal.swt"/>
+</swe:layout>
+
+<swe:layout viewDisplayMode="Show" appletDisplayMode="Show">
+   <swe:include file="CCApplet_Spacer.swt"/>
+   <swe:control id="1100">
+      <div class=CmdTxt>
+         <swe:this property="FormattedHtml" hintText="Outside Applet Help Text" hintMapType="Control"/>
+      </div>
+   </swe:control>
+   <span class="AppletStyle1">
+            <swe:include file="CCTitle_Portal.swt"/>
+            <!-- dwh: added -->
+            <swe:form htmlAttr="onkeypress='return keyhandler(event)'">
+               <!-- dwh: from CCListButtonsTop.swt -->
+               <swe:layout viewDisplayMode="Show" appletDisplaySize="Max">
+                  <table datatable="0" summary="" cellpadding="2" cellspacing="0" border="0" width="100%">
+						<tr class="AppletButtons">
+							<td><img src="images/spacer.gif" height="1" width="3" alt=""></td>
+							<!-- dwh: from CCButtons.swt, but we use property DisplayName instead of FormattedHtml for some -->
+							<swe:control id="109"><td nowrap><swe:this property="DisplayName" hintMapType="Label"/></td></swe:control>
+							<swe:control id="110"><td nowrap><swe:this property="DisplayName" hintMapType="Control"/></td></swe:control>
+							<swe:control id="111"><td nowrap><swe:this property="DisplayName" hintMapType="Control"/></td></swe:control>
+							<swe:control id="112"><td nowrap><swe:this property="DisplayName" hintMapType="Control"/></td></swe:control>
+							<swe:control id="113"><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+							<swe:control id="114"><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+							<swe:control id="115"><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+							<td width="100%"><img src="images/spacer.gif" height="1" width="1" alt=""></td>
+						</tr>
+                  </table>
+                  <!-- dwh: end add -->
+                  <table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                     <tr>
+                        <td class="AppletBorder">
+                           <img src="images/spacer.gif" width="1" height="1" alt="">
+                        </td>
+                     </tr>
+                  </table>
+
+                  <swe:include file="ePortalURLAppletInner.swt"/>
+
+               </swe:layout>
+            </swe:form>
+            <table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+               <tr>
+                  <td class="AppletBorder">
+                     <img src="images/spacer.gif" width="1" height="1" alt="">
+                  </td>
+               </tr>
+            </table>
+    </span>
+</swe:layout>
+
+<!-- Template End ePortalURLAppletForm.swt -->

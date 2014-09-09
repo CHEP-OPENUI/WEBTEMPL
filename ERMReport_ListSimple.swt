@@ -1,0 +1,40 @@
+<!-- Template Start: ERMReport_ListSimple.swt -->
+
+<span class="reportTxtMedium"><swe:this property="Title"/><br></span>
+
+<swe:control id="91" hintText="Description" property="FormattedHtml"/>
+<swe:control id="92" hintText="Description" property="FormattedHtml"/><p>
+
+<swe:for-each-row count="7">
+
+	<swe:for-each startValue="1201" count="5" iteratorName="currentId">
+		
+		<swe:control id="swe:currentId">
+			<span class="reportLbl"><swe:this property="FormattedHtml" hintText="Mappable Label"/></span>
+		</swe:control>
+		&nbsp;
+		<swe:control id="swe:currentId+100">
+			<span class="reportFld" style="white-space:nowrap;width:100"><swe:this property="FormattedHtml" hintText="Field"/></span>
+		</swe:control>
+	
+	</swe:for-each>
+	
+	<br><br>
+	<swe:for-each startValue="1210" count="4" iteratorName="currentId">
+		
+		<swe:control id="swe:currentId">
+			<span class="reportLbl"><swe:this property="FormattedHtml" hintText="Mappable Label "/></span><br>
+		</swe:control>
+		<swe:control id="swe:currentId+100">
+			<span class="reportFld"><swe:this property="FormattedHtml" hintText="Field"/></span><p>
+		</swe:control>
+
+	</swe:for-each>	
+	
+</swe:for-each-row>
+
+<p>
+<swe:control id="93" hintText="Description" property="FormattedHtml"/>
+<swe:control id="94" hintText="Description" property="FormattedHtml"/>
+<p>
+<!-- Template End: ERMReport_ListSimple.swt -->

@@ -1,0 +1,17 @@
+<!-- Template Start: dCCViewbar_Tabs.swt -->
+
+<!------------ Tier 3 navigation ----------------->	
+<swe:include file="CCApplet_Spacer.swt"/>
+	
+	<table datatable="0" summary="" cellpadding='0' cellspacing='0' border='0'>
+		<tr>	
+			<swe:viewbar mode="NonContext">				
+				<swe:viewlink state="Active"><td class='tier3On' nowrap><swe:this property="FormattedHtml">&nbsp;<swe:viewname/>&nbsp;</swe:this></td></swe:viewlink>
+				<swe:viewlink state="Inactive"><td class='tier3Off' nowrap><swe:this property="FormattedHtml">&nbsp;<swe:viewname/>&nbsp;</swe:this></td></swe:viewlink>
+			</swe:viewbar>
+		</tr>
+	</table>	
+	
+<!------------ End Tier 3 navigation ------------->
+<!-- Template End: dCCViewbar_Tabs.swt -->
+      

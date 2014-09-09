@@ -1,0 +1,81 @@
+<!-- Template Start CCAppletFormSection_Center_Align_ss.swt -->
+
+<div>
+    <!-- Applet Form Section -->
+    <!-- Applet Header Text is place under this section -->
+    <div class="siebui-ss-applt-header">
+        <swe:control id="90">
+            <span class="siebui-ss-applt-caption">
+                <swe:this property="FormattedHtml" hintMapType="Control" hintText="Title" />
+            </span>
+        </swe:control>
+    </div>
+
+    <!-- Applet Header Help Text is place under this section -->
+    <swe:control id="91">
+        <div class="siebui-ss-applt-helptext">
+            <span class="siebui-ss-applt-helptext-spn">
+                <swe:this property="DisplayName" hintText="Inside Applet Help Text"/>
+            </span>
+        </div>
+    </swe:control>
+
+	<!-- Form Body -->
+    <div class="siebui-ss-applt-list-middle-align">
+        <swe:for-each startValue="1201" count="15" iteratorName="currentId">
+            <!-- Place holder to place both Label and Field -->
+            <swe:control id="swe:currentId" hintMapType="FormItem">
+                <div class="siebui-ss-row-middle-align">
+                    <div class="siebui-ss-tbl-row">
+                        <div class="mceGridLabel siebui-ss-tbl-cell siebui-ss-label" align="swe:this.TextAlignmentLabel">
+                            <swe:this property="DisplayName" hintText="Label"/>
+                            <swe:this property="RequiredIndicator" hintText="Required"/>
+                        </div>
+                        <div class="mceGridField siebui-ss-tbl-cell siebui-ss-field" align="swe:this.TextAlignment">
+                            <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+                        </div>
+                    </div>
+                </div>
+            </swe:control>
+			
+            <!-- Place holder to place only Label -->
+            <swe:control id="swe:currentId+100" hintMapType="FormItem">
+                <div class="siebui-ss-row-middle-align">
+                    <div class="mceGridLabelOnly" align="swe:this.TextAlignmentLabel">
+                        <swe:this property="DisplayName" hintText="Label"/>
+                        <swe:this property="RequiredIndicator" hintText="Required"/>
+                    </div>
+                </div>
+            </swe:control>
+			
+            <!-- Place holder to place the form section divider line -->
+            <swe:control id="swe:currentId+200" hintMapType="FormItem">
+                <div class="siebui-ss-tbl-row">
+                    <div class="siebui-ss-form-divider-middle-align">
+                        <span></span>
+                    </div>
+                </div>
+            </swe:control>
+        </swe:for-each>
+        <swe:control id="190">
+            <div class="siebui-ss-row-middle-align">
+                <div class="siebui-ss-tbl-row">
+                    <div class="siebui-ss-tbl-cell siebui-ss-label" >
+                    </div>
+                    <div class="siebui-ss-tbl-cell siebui-ss-field siebui-ss-newuser-fgtpwd" align="swe:this.TextAlignment">
+                        <span ><swe:this property="FormattedHtml" hintMapType="Control"/></span>
+        </swe:control> 
+        <swe:control id="191">
+                        <span ><swe:this property="FormattedHtml" hintMapType="Control"/></span>
+        </swe:control>
+        <swe:control id="190">
+                    </div>
+                </div>
+            </div>
+        </swe:control> 
+      
+				
+    </div>
+</div>
+
+<!-- Template End CCAppletFormSection_Center_Align_ss.swt -->

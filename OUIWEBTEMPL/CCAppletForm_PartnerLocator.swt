@@ -1,0 +1,103 @@
+<!-- Oliver: code fixes only -->
+
+<swe:form>
+    
+    
+      <div id="s_locatorPane" class="siebui-locator-pane">
+       <div class="siebui-locator-header">
+            <span class="mceGridLabel">
+                <swe:control id="201"><swe:this property="FormattedHtml" hintMapType="Control" hintText="searchTitle" /></swe:control>
+            </span>
+            <a id="s_locatorclose"></a>
+        </div>
+        
+            <!--div id="LocatorFields"-->
+                <div class="locatorHeader">
+                <swe:for-each startValue="1301" count="10" iteratorName="currentId">
+                    <swe:control id="swe:currentId" hintMapType="FormItem">
+                        <div class="siebui-locator-row">
+                        <div class="mceGridLabel" align="swe:this.TextAlignmentLabel"><swe:this property="DisplayName" hintText="Label"/></div>
+                        <div class="mceGridField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/></div>
+                        </div>
+                    </swe:control>
+                </swe:for-each> 
+                </div>      
+            
+                
+                <!--City--InputString4-->
+                <div class="locatorHeader siebui-locator-row">
+                    <swe:control id="2001">
+                        <div class="mceGridLabel" align="swe:this.TextAlignmentLabel">
+                        <swe:this property="DisplayName" hintMapType="Label" hintText="Location"/></div>
+                    </swe:control>              
+                    
+                    <swe:control id="1351">
+                        <div class="locatorSearch mceGridField siebui-search-locator prsearch" align="swe:this.TextAlignment"><swe:this property="FormattedHtml"  hintMapType="Control" hintText="City" /></div>
+                    </swe:control>                          
+                    <!--State--InputString5-->                          
+                    <swe:control id="1352" >
+                        <div class="locatorSearch mceGridField siebui-search-locator prsearch" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintMapType="Control" hintText="State"/></div>
+                    </swe:control>                          
+                </div>
+                
+                <div id="OR" class="mceGridLabel">
+                    <swe:control id="4001" hintMapType="Label">
+                        <!--div id="LocatorSearch"  align="swe:this.TextAlignmentLabel"-->
+                        <swe:this property="DisplayName"  hintText="OR"/><!--/div-->
+                    </swe:control>
+                </div>  
+                
+                <swe:for-each startValue="1311" count="10" iteratorName="currentId">
+                    <swe:control id="swe:currentId" hintMapType="FormItem">
+                    <div id="LocatorSearchZipCountry" class="mceGridField prsearch" align="swe:this.TextAlignment">
+                    <div class="locatorHeader">
+                    <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+                    </div>
+                    </div>
+                    </swe:control>
+                </swe:for-each>                 
+            <!--/div-->  <!--   end of searchList -->
+           
+            
+            <div id="multiaccordion2" class="siebui-locator-footer siebui-locator-header" >
+                <span class="mceGridLabel" >
+                    <swe:control id="200"><swe:this property="FormattedHtml" hintMapType="Control" hintText="Schedule Title" /></swe:control>
+                </span>
+                <div id="multiaccordion2_icon" class="siebui-rptaccordion-exp"/>
+            </div>
+            
+            <div id="ShowMore"> 
+                <div class="locatorHeader">
+                <swe:for-each startValue="1321" count="10" iteratorName="currentId">
+                    <swe:control id="swe:currentId" hintMapType="FormItem">
+                    <div class="siebui-locator-row">
+                    <div class="mceGridLabel" align="swe:this.TextAlignmentLabel"><swe:this property="DisplayName" hintText="Label"/></div> 
+                    <div class="mceGridField" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/></div>
+                    </div>
+                    </swe:control>
+                </swe:for-each>
+                </div>
+                 
+                <div class="locatorHeader siebui-locator-row">
+                    <swe:control id="1353">
+                        <div class="mceGridLabel" align="swe:this.TextAlignmentLabel"><swe:this property="DisplayName" hintMapType="Label" hintText="SearchRange"/></div>
+                    </swe:control>  
+                    <swe:control id="1353">
+                        <div class="locatorSearch mceGridField siebui-search-locator" align="swe:this.TextAlignment"><swe:this property="FormattedHtml"  hintMapType="Control" hintText="SearchRange" /></div>
+                    </swe:control>                          
+                    <swe:control id="1354" >
+                        <div class="locatorSearch mceGridField siebui-search-locator" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintMapType="Control" hintText="DistanceIn"/></div>
+                    </swe:control>                          
+                </div>      
+            </div>
+                
+            <div class="siebui-locator-margin siebui-locator-header "/>
+                  <div id="locatorFooter" class="siebui-locator-footer">
+                    <swe:control id="112"><swe:this property="FormattedHtml" hintMapType="Control" hintText="Reset"/></swe:control>
+                    <swe:control id="111"><swe:this property="FormattedHtml" hintMapType="Control" hintText="submit"/></swe:control>
+                 </div>
+            </div>      
+    
+    
+    <!-- Template End: CCAppletFormGridLayout.swt -->
+</swe:form>

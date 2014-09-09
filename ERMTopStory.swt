@@ -1,0 +1,20 @@
+<!-- Template Start: ERMTopStory.swt -->
+<swe:for-each-row count="10">
+
+<tr valign="top">
+    <td width="1"><swe:control id="501"><swe:this property="FormattedHtml" hintText="Large Image (300x300)"/></swe:control>&nbsp;</td></tr>
+
+	<td valign="top"><swe:control id="502">
+		<tr><td width="100%" colspan="4" class="dCCItemTitle"><swe:this property="FormattedHtml" hintText="Item Name" hintMapType="ListItem"/></td></tr>
+			</swe:control>
+			
+	<swe:control id="503"><tr><td width="100%" colspan="4" class="dCCItemValue"><swe:this property="FormattedHtml" hintText="Item Name" hintMapType="ListItem"/></td></tr>
+			</swe:control>			
+			
+	</td>
+</tr>
+
+<tr><td colspan="2"><img src="images/spacer.gif" width="100%" height="3" alt=""></td></tr>
+
+</swe:for-each-row>
+<!-- Template End: ERMTopStory.swt -->

@@ -1,0 +1,67 @@
+<!--  Template Start: ePortal4Up.swt -->
+<swe:include file="CCHTMLHeader.swt"/>
+
+<!-- ========== Threadbar and Mini-Applet ===============-->
+<table datatable="0" summary="" border="0" cellspacing="0" cellpadding="1" width="100%">
+  <tr>
+	<swe:if condition="Web Engine State Properties, IsLowInteractive">
+    <td valign="absmiddle">
+      <swe:include file="CCThreadbar.swt" />
+    </td>
+	</swe:if>
+
+    <swe:applet id="201" hintText="Mini-Applet">
+      <td align="right">
+        <swe:this property="FormattedHTML" />
+      </td>
+
+      <td>&nbsp;&nbsp;&nbsp;</td>
+    </swe:applet>
+  </tr>
+</table>
+<!-- ========== End Threadbar and Mini-Applet ===========-->
+
+<!-- ========== Main Content Area ==========================-->
+
+<table datatable="0" summary="" width="100%" border="0" cellspacing="0" cellpadding="0">
+
+  <!-- top row -->
+  <tr>
+    <!-- column 1 -->
+    <td valign="top" width="50%">
+      <!-- <swe:include file="CCViewbar_Tabs.swt"/> --> <!-- tier 3 navigation -->
+      <!-- <swe:applet hintMapType="Applet" id="2" hintText="Child Applet" property="FormattedHtml" var="Child" /> -->
+      <swe:applet hintMapType="Applet" id="2" hintText="Parent Applet" property="FormattedHtml" var="Parent" />
+    </td>
+    <td rowspan="3" width="3">&nbsp;&nbsp;&nbsp;</td>
+   <span  class="AppletStyle1">
+    <td rowspan="3" width="3" class="AppletTitle">
+      <img src="images/spacer.gif" width="1" height="3" border="0" alt="">
+    </td>
+   </span>
+   <td rowspan="3" width="3">&nbsp;&nbsp;&nbsp;</td>
+   <!-- column 2 -->
+    <td valign="top" width="50%">
+      <swe:applet hintMapType="Applet" id="4" hintText="Parent Applet" property="FormattedHtml" var="Parent" />
+    </td>
+  </tr>
+
+  <!-- bottom row -->
+  <tr>
+    <!-- column 1 -->
+    <td valign="top" width="50%" valign="top">
+      <swe:applet hintMapType="Applet" id="3" hintText="Child Applet" property="FormattedHtml" var="Child" />
+    </td>
+    <!-- column 2 -->
+    <td valign="top" width="50%" valign="top">
+      <!-- <swe:applet hintMapType="Applet" id="1" hintText="Parent Applet" property="FormattedHtml" var="ParentWithPointer"/> -->
+      <swe:applet hintMapType="Applet" id="1" hintText="Parent Applet" property="FormattedHtml" var="Parent"/>
+    </td>
+  </tr>
+</table>
+
+<swe:include file="CCHTMLFooter.swt"/>
+<!-- ========== End Main Content Area ======================-->
+
+<!--  Template End: ePortal4Up.swt -->
+

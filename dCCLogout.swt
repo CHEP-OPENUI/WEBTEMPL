@@ -1,0 +1,163 @@
+<!--  Template Start: dCCLogout.swt -->
+
+<HTML dir="swe:dir">
+<head>
+<title><swe:this property="Title"/></title>
+	<swe:include file="CCStylesChoice.swt"/>
+	<swe:include-script file="login.js"/>
+</head>
+
+<BODY bgcolor="#ffffff" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" onunload="pwdcleaner()">
+
+<!-- Start Banner-->
+<table datatable="0" summary="" class="banner" cellpadding='0' cellspacing='0' border='0'>
+	<tr>
+		<td class="applicationMenu"><span valign="top"><swe:image name="BANNER_GLOBE_LOGO" category="HTML Control Icons"/></span></td>
+		<td width="100%" class="bannerFade">&nbsp;</td>
+		
+		<td align="center" valign="top">
+			<table datatable="0" summary="" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td align="right"><a href="http://www.siebel.com" target="_blank"><swe:image name="POWERED_BY" category="HTML Control Icons"/></a></td>
+				</tr>			
+				<tr>
+					<td class="banner">
+						<table datatable="0" summary="" border="0" cellspacing="0" cellpadding="0"><tr>
+							<td>&nbsp;</td>
+						</tr></table>
+					</td>
+				</tr>				
+			</table>
+		</td>				 
+	</tr>
+</table>
+<!--  End Banner -->
+
+<!------------ Tier 1 navigation ----------------->	
+<div class="tier1Back"><img src="images/spacer.gif" width="1" height="19" alt=""></div>
+<!------------ End Tier 1 navigation ------------->
+
+
+<!-- Start Tier2 Nav & Toolbars-->
+	<table datatable="0" summary="" class="tier2On" width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr class="tier2On">
+		<td class="tier2On"><img src="images/spacer.gif" height="10" width="10" alt=""></td>
+	</tr>
+</table>
+<!-- End: Tier2 Nav & Toolbars-->
+
+<!--Rule-->
+<div class="tier1back"><img src="images/spacer.gif" width="10" height="1" alt=""></div>
+<!-- End Tier2 nav & Search-->
+
+
+<table datatable="0" summary="" cellpadding="15"><tr><td>&nbsp;</td><td>
+
+
+
+<swe:pageitem id="91" property="DisplayName"/><br>
+<swe:pageitem id="92" property="FormattedHtml"/>
+<p>&nbsp;
+
+
+
+
+<table datatable="0" summary="" width="300" cellspacing="0" cellpadding="0" border="0">
+	<tr valign="top">
+		<td>			
+			<span class="AppletStyle1">
+			<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+				<tr class="AppletBlank">
+					<td class="AppletTitle" nowrap><img src="images/spacer.gif" width="6" height="1" alt=""><swe:pageitem id="90" property="DisplayName"/></td>
+					<td width="100%" class="AppletTitle" align="right">&nbsp;</td>
+				</tr>
+			</table>
+			
+			<table datatable="0" summary="" width="100%" cellpadding="1" cellspacing="0" border="0" align="center"><tr><td class="AppletBorder">
+			<table datatable="0" summary="" width="100%" cellpadding="1" cellspacing="0" border="0" align="center"><tr><td class="AppletBack">
+				<swe:form method="post" name="SWEEntryForm">
+					<table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="5" cellspacing="0" border="0">
+						<tr valign="top">
+							<td width="100%">
+									
+								<swe:error>
+									<table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="1" cellspacing="0" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/></td></tr></table>
+								</swe:error>		
+								
+								<table datatable="0" summary="" width="100%" border="0" cellspacing="2" cellpadding="1" align="center">
+						
+										<tr valign="top">
+											<td class="mceWideFields">
+												<div class="scLabel">
+													<swe:image name="ICON_REQUIRED" category="HTML Control Icons"/>
+													<swe:pageitem id="7" property="DisplayName"/>
+												</div>
+												<span class="mceField">
+													 <swe:pageitem id="1" property="FormattedHtml"/>
+												</span>
+											</td>
+										</tr>	
+										
+										<tr valign="top">
+											<td class="mceWideFields">
+												<div class="scLabel">
+													<swe:image name="ICON_REQUIRED" category="HTML Control Icons"/>
+													<swe:pageitem id="8" property="DisplayName"/>
+												</div>
+												<span class="mceField">
+													 <swe:pageitem id="2" property="FormattedHtml"/>
+												</span>
+											</td>
+										</tr>	
+										
+										<tr valign="top">
+											<td>
+												<swe:pageitem id="3" property="FormattedHtml" />&nbsp;<swe:pageitem id="9" property="DisplayName" />
+											</td>
+										</tr>	
+										
+										<tr valign="top">
+											<td>
+												<span class="minibuttonOn">
+													<nobr><swe:pageitem id="4" property="FormattedHtml"/></nobr>
+												</span>
+											</td>
+										</tr>	
+										
+										<tr valign="top">
+											<td>
+												<swe:pageitem id="5" property="FormattedHtml"/>								
+											</td>
+										</tr>		
+										
+										<tr valign="top">
+											<td>
+												<swe:pageitem id="6" property="FormattedHtml"/>										
+											</td>
+										</tr>																							
+										
+																																																
+								
+								</table>
+							</td>				
+						</tr>	
+					</table>	
+				</swe:form>
+					
+			</td></tr></table>
+			</td></tr></table>
+			
+			</span>
+					
+		</td>
+	</tr>
+</table>
+
+</td></tr></table>
+
+<swe:scripts/>
+<script language="JavaScript">userfocus()</script>
+</BODY>
+</HTML>
+
+<!--  Template End: dCCLogout.swt -->

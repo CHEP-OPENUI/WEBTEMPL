@@ -1,0 +1,29 @@
+<!-- Template Start: eCfgCompThreadJS.swt -->
+<!-- Oliver: [code redesign] -->
+
+<!-- qa automation -->
+<div  id="cxThread" class="cxThread">
+	<SCRIPT>
+		var iNumObjects  = 0;
+	</SCRIPT>
+
+	<swe:for-each id="250" CfgLoopType="Thread" startValue="2500" count="Dynamic" iteratorName="250Id" >
+		  <SCRIPT>
+			 iNumObjects ++;
+			 if ( 1 != iNumObjects )
+			 {
+				// PUI CFG: Open Issue
+				if (typeof (IsOpenUI) != "undefined" && IsOpenUI())
+				{
+				   // DO SOMETHING
+				}
+				else
+				   document.write ( ">>" );
+			 }
+		  </SCRIPT>
+	   <swe:control id="swe:250Id" CfgFieldName="CxObjName" CfgHtmlType="CfgLink" InvokeMethod="SetTopObj" />
+	</swe:for-each>
+
+</div>
+
+<!-- Template Start: eCfgCompThreadJS.swt -->

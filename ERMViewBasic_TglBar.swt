@@ -1,0 +1,86 @@
+<!--  Template Start: ERMViewBasic_TglBar.swt -->
+
+<swe:include file="CCHTMLHeader.swt"/>
+
+<swe:include file="CCTaskViewTitle.swt"/>
+
+<!-- ---------- Threadbar and Mini-Applet ----------------->
+<swe:layout viewDisplayMode="Show">
+<table datatable="0" summary="" border="0" cellspacing="0" cellpadding="1" width="100%">
+  <tr>
+	<swe:if condition="Web Engine State Properties, IsLowInteractive">
+	<td valign="absmiddle">
+		<swe:include file="CCThreadbar.swt"/>
+	</td>
+	</swe:if>
+	<swe:applet id="201" hintText="Mini-Applet">
+	 <td align="right"><swe:this property="FormattedHtml"/></td>
+	 <td>&nbsp;&nbsp;&nbsp;</td>
+	</swe:applet>
+  </tr>
+</table>
+</swe:layout>
+<!-- ---------- End Threadbar and Mini-Applet ------------->
+
+<swe:layout viewDisplayMode="Layout">
+
+<table datatable="0" summary="" width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr valign="top"><td><img src="images/spacer.gif" width="1" height="6" alt=""></td></tr></table>
+
+<!------------ Start: View Layout Table ------------------------->
+<table datatable="0" summary="" width="100%"  align="center" cellspacing="0" cellpadding="0" border="0" class="LayoutView">
+	<swe:applet id="901" hintText="Layout Controls">
+		<!---------- Start: View Layout; Buttons --------->
+		<tr valign="top">
+		<td><swe:this property="FormattedHtml"/></td>
+		</tr>
+		<!-- -------- End: View Layout; Buttons --------->
+	</swe:applet>
+
+  <!---------- Start: View Layout; Applet Titles & Mover Controls --------->
+  <tr valign="top">
+	<td><table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="AppletBorder">
+		<table datatable="0" summary="" width="100%" cellpadding="8" cellspacing="2" border="0"><tr><td class="AppletBack">
+
+</swe:layout>
+
+<swe:layout viewDisplayMode="Show">
+<!------------ Salutation & Layout Applets ---------------------------->
+<table datatable="0" summary="" border="0" cellspacing="0" cellpadding="8" width="100%">
+  <tr>
+	<td width="50%">
+		<swe:applet id="101" property="FormattedHtml" hintText="Salutation Applet"/>
+		<img src="images/spacer.gif" width="1" height="1" alt="">
+	</td>
+
+	<swe:applet id="901" hintText="Layout Controls">
+	<td align="right" width="50%"><swe:this property="FormattedHtml"/></td>
+	</swe:applet>
+  </tr>
+</table>
+<!------------ End Salutation & Layout Applets ------------------------>
+</swe:layout>
+
+<!-- ---------- Main Content Area ---------------------------->
+<swe:applet hintMapType="Applet" id="1" hintText="Parent Applet" property="FormattedHtml" var="Parent"/>
+<!--space-->
+<table datatable="0" summary="" width="99%" align="center" cellpadding="0" cellspacing="0" border="0"><tr valign="top"><td><img src="images/spacer.gif" width="1" height="10" alt=""></td></tr></table>
+<swe:for-each count="20" iteratorName="currentId" startValue="2">
+	<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Child Applet" property="FormattedHtml" var="Grandchild"/>
+</swe:for-each>
+<!-- ---------- End Main Content Area ------------------------>
+
+<swe:layout viewDisplayMode="Layout">
+  <!---------- End: View Layout; Applet Titles & Mover Controls --------->
+  	</td></tr></table>
+	</td></tr></table>
+  </td>
+ </tr>
+</table>
+<!------------ End: View Layout Table ------------------------>
+</swe:layout>
+
+<swe:scripts/>
+</body>
+</html>
+
+<!--  Template End: ERMViewBasic_TglBar.swt -->

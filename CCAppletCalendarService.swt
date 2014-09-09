@@ -1,0 +1,97 @@
+<!-- CCAppletCalendarService.swt -->
+<link href="files/gantt.css" rel="stylesheet">
+	
+<swe:include file="CCApplet_NamedSpacer.swt"/>	
+
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+	<tr valign="top">	
+	<td>
+	<swe:include file="CCTitle_Named.swt"/>
+		
+	<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">		
+		<!--button row-->
+		<tr class="AppletButtons">
+			<td><img src="images/spacer.gif" height="1" width="10" alt=""></td>
+			<td colspan="2">
+				<table datatable="0" summary="" cellpadding="2" cellspacing="0" border="0">
+					<tr class="AppletButtons">	
+			
+					</tr>
+				</table>		
+			</td>		
+			
+			<td align="right" width="100%">
+				<table datatable="0" summary="" cellpadding="2" cellspacing="0" border="0">
+					<tr class="AppletButtons">	
+						<td width="100%"><img src="images/spacer.gif" valign="top" width="1" height="1" alt=""></td>		
+						<!--swe:include file="CCFormButtonsTopRight.swt"/-->
+					</tr>
+				</table>		
+			</td>			
+			<td valign="top" align="right"><img src="images/rnd_top_cls_d.gif" valign="top" width="6" height="6" alt=""></td>			
+		</tr>	
+	</table>		
+
+
+	<table datatable="0" summary="" class="calendarBorder" valign="top" width="100%" cellpadding="0" cellspacing="1" border="0">
+				<!--Column Headers-->
+				<tr>		
+					<td class="Header" height="18" width="16%">&nbsp;</td>
+		
+					<td class="Header" width="12%" align="center"><!--- Sunday ---><swe:control id="301" property="FormattedHtml"/></td>
+			
+					<td class="Header" width="12%" align="center"><!--- Monday ---><swe:control id="302" property="FormattedHtml"/></td>
+			
+			        <td class="Header" width="12%" align="center"><!--- Tuesday ---><swe:control id="303" property="FormattedHtml"/></td>
+			
+			        <td class="Header" width="12%" align="center"><!--- Wednesday ---><swe:control id="304" property="FormattedHtml"/></td>
+			
+			        <td class="Header" width="12%" align="center"><!--- Thursday ---><swe:control id="305" property="FormattedHtml"/></td>
+			
+			        <td class="Header" width="12%" align="center"><!--- Friday ---><swe:control id="306" property="FormattedHtml"/></td>
+			
+			        <td class="Header" width="12%" align="center"><!--- Saturday ---><swe:control id="307" property="FormattedHtml"/></td>
+				</tr>
+
+
+		<swe:serviceCalendarMain>
+			<swe:serviceCalIntervalLoop>
+				<tr>	
+						<!-- Start of Interval Tag-->
+						<td class="calendarInterval" width="16%" align="right">
+							<table datatable="0" summary="" border="0" cellspacing="0" cellpadding="0">
+								<tr><td align="right"><B><swe:this property="Time"/></B></td><td>&nbsp;&nbsp;</td></tr>
+							</table>
+						</td>
+	
+						<swe:serviceCalDayLoop>
+	                        <swe:serviceCalActivityOff>
+							<td class="calendarServiceActivityOff" width="12%" align="center"><img src="images/spacer.gif" width="1%" height="20" alt=""></td>
+							</swe:serviceCalActivityOff>
+							
+							<swe:serviceCalActivityOn>
+							<td class="calendarServiceActivityOn" width="12%" align="center"><img src="images/spacer_serv_cal.gif" width="1%" height="100%" alt=""></td>
+						      </swe:serviceCalActivityOn>
+
+                                          <swe:serviceCalActivityOnOT>
+							<td class="GanttChartOT" width="12%" align="center"><img src="images/spacer_serv_cal.gif" width="1%" height="100%" alt=""></td>
+						      </swe:serviceCalActivityOnOT>
+						    
+						      <swe:serviceCalActivityOnEOT>
+							<td class="GanttChartExtendedOT" width="12%" align="center"><img src="images/spacer_serv_cal.gif" width="1%" height="100%" alt=""></td>
+						      </swe:serviceCalActivityOnEOT>
+								
+	                    </swe:serviceCalDayLoop>
+						
+				</tr>
+			</swe:serviceCalIntervalLoop>
+		</swe:serviceCalendarMain>
+	
+	</table>
+
+		
+	<swe:include file="CCBottomApplet.swt"/>
+	
+	
+	</span></td></tr></table>
+<!-- End of CCAppletCalendarService.swt -->	

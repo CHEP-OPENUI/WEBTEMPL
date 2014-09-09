@@ -1,0 +1,82 @@
+<!-- Template Start: FINSeCfgRelationApplicantContentsJS.swt -->
+
+<td>
+   <table border="0" cellpadding="0" cellspacing="1" width="100%">
+      <tr><td>&nbsp;</td></tr>
+      <tr><td>&nbsp;</td></tr>
+      <tr><td>&nbsp;</td></tr>
+      <tr><td>&nbsp;</td></tr>
+      <tr> 			
+         <swe:for-each id="500" CfgLoopType="Children" startValue="1500" count="Dynamic" iteratorName="101Id"
+          CfgFieldList="CfgFieldName:Quantity, CfgUIControl:lblEmpty, HtmlAttrib_width:80, HtmlAttrib_align:left, Default:Y*
+                        CfgFieldName:RequireMoreChild, Default:Y*
+                        CfgFieldName:Customize, CfgUIControl:lblCustomize, HtmlAttrib_width:70, HtmlAttrib_align:center*
+                        CfgFieldName:Remove, CfgUIControl:lblRemove, HtmlAttrib_width:70, HtmlAttrib_align:center, Default:Y"
+         >
+
+		      <td align="center">
+			      <swe:control id="Port Item" CfgHtmlType="CfgPortItem" ForceRefresh="Y"
+			      CfgJSShow="applicantShowPortItemsWithAttr" CfgJSUpdateSelection="applicantUpdatePortItemsForComboAddAttr"/>
+		      </td>
+		      
+		      <script>
+		         var sPortId = "";
+		         var sAttArr = null;
+		         sPortId = '<swe:control id="PrdId" CfgFieldName="Port Item Id" CfgHtmlType="CfgLabel"/>';
+		         sAttArr = m_UIFramework.m_grandChildAttrArray [sPortId];
+		         if (sAttArr == null || typeof (sAttArr) == 'undefined')
+		            m_UIFramework.m_grandChildAttrArray [sPortId] = new Array ();
+		      </script>
+		      
+				<swe:for-each id="181" CfgLoopType="Attribute" startValue="1409" count="Dynamic" iteratorName="IncId" >
+				   <swe:if condition="Default, TestFieldValue, Operator:==, FieldName:.Grandchild Enabled, FieldValue:Y">			   		      
+				   
+		         <script>
+		            var sAttName = "";
+		            var sAttArr = null;
+		            var bNewAtt = true;
+		            sAttName = '<swe:control id="AttrId" CfgFieldName="Attribute Display Name" CfgHtmlType="CfgLabel" DisplayMode="EncodeData"/>';
+		            sAttArr = m_UIFramework.m_grandChildAttrArray [sPortId];
+		            
+		            for (var i = 0; i < sAttArr.length; i++)
+		            {
+		               if (sAttName == sAttArr [i])
+		               {
+		                  bNewAtt = false;
+		                  break;
+		               }
+		            }
+		            
+		            if (bNewAtt)
+		               sAttArr.push (sAttName);
+		         </script>
+		      				   
+				      <swe:if condition="Default, TestFieldValue, Operator:==, FieldName:.Grandchild Type, FieldValue:text">
+                     <swe:control id="850" CfgFieldName="AttValue" CfgHtmlType="CfgTextBox" 
+                        CfgJSShow="showTextBoxAttr" CfgJSUpdateSelection="updateSelectionInfoForAttribute" />				      
+				      </swe:if>
+				      
+				      <swe:if condition="Default, TestFieldValue, Operator:==, FieldName:.Grandchild Type, FieldValue:combo">
+                     <swe:for-each id="550" CfgLoopType="Domain" Automation="N" startValue="1500" count="Dynamic" iteratorName="101Id" Usage="ComboBox" >
+                        <swe:control id="attCombo" CfgHtmlType="CfgCombo" CfgFieldName="AttValue" 
+                           CfgJSShow="showComboAttr" CfgJSUpdateExclusion="updateExcludedItemForAttribute" CfgJSUpdateSelection="updateSelectionInfoForAttribute"/>                     
+                     </swe:for-each>  				      
+				      </swe:if>
+				      
+				      <swe:if condition="Default, TestFieldValue, Operator:==, FieldName:.Grandchild Type, FieldValue:radio">
+                     <swe:for-each id="500" CfgLoopType="Domain" startValue="1500" count="Dynamic" iteratorName="101Id" >
+                     <swe:control id="attRadio" CfgHtmlType="CfgRadio" 
+                        CfgJSShow="showRadioAttr" CfgJSUpdateExclusion="updateExcludedItemForAttribute" CfgJSUpdateSelection="updateSelectionInfoForAttribute"/>
+                     </swe:for-each>		      
+				      </swe:if>
+				      				      				      
+				   </swe:if>
+				</swe:for-each>
+							      
+	      </swe:for-each>
+      </tr>
+   </table> 
+
+</td>
+
+<!-- Template End: FINSeCfgRelationApplicantContentsJS.swt -->

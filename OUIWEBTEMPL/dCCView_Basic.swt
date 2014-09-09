@@ -1,0 +1,12 @@
+<!--  Template Start: dCCView_Basic.swt -->
+<swe:include file="CCHTMLHeader.swt"/>
+<div class="siebui-compareproduct-table">
+	<swe:for-each count=9 iteratorName="currentId" startValue="103">
+		<!-- start applet-->
+		<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" property="FormattedHtml" var="Parent"/>
+		</swe:applet>
+		<!-- end applet-->
+	</swe:for-each>
+</div>
+<!--  Template End: dCCView_Basic.swt -->
+<swe:include file="CCHTMLFooter.swt"/>

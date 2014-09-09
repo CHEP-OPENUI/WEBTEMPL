@@ -1,0 +1,30 @@
+<!-- Template Start: Search_ListHeader.swt -->
+  <tr>
+
+     <swe:control id="501">
+      <td bgcolor="#B0C4DE" align="swe:this.TextAlignment">
+      <font color="#FFFFFF"><swe:this property="DisplayName"/></font></td>  
+     </swe:control>
+	
+    <swe:select-row>
+     <td  align="center"><swe:this property="DisplayName"/></th>
+    </swe:select-row>
+
+     <swe:control id="502">
+      <td bgcolor="#B0C4DE" align="swe:this.TextAlignment" width="swe:this.HtmlWidth" scope="col" abbr="swe:this.HeaderAbbr">
+      <font color="#FFFFFF"><swe:this property="ListHeader"/></font></td>  
+     </swe:control>
+     <swe:control id="503">
+      <td bgcolor="#B0C4DE" align="swe:this.TextAlignment" width="swe:this.HtmlWidth" scope="col" abbr="swe:this.HeaderAbbr">
+      <font color="#FFFFFF"><swe:this property="ListHeader"/></font></td>  
+     </swe:control>
+
+     <swe:control id="504">
+      <td bgcolor="#B0C4DE" align="swe:this.TextAlignment" width="swe:this.HtmlWidth" scope="col" abbr="swe:this.HeaderAbbr">
+      <font color="#FFFFFF"><swe:this property="ListHeader"/></font></td>  
+     </swe:control>
+
+
+   </tr>
+<!-- Template End: Search_ListHeader.swt -->
+

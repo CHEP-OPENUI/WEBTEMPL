@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+<!-- Edit Template Header -->
+<wml> 
+
+<template>
+<do type="prev" label="Back">
+<prev/>
+</do>
+</template>
+
+<card id="edit">
+<p>
+
+<!-- Start Detail Template Body -->
+
+
+
+<!-- reserved for Applet Title -->
+
+<swe:control id="1">
+
+<swe:this property="DisplayName"/>
+
+</swe:control>
+
+
+<!-- reserved for Applet Title with data -->
+
+
+<!-- reserved for controls with link -->
+<swe:for-each count=9 iteratorName="CurrentId" startValue="2">
+<swe:form>
+<swe:control id="swe:CurrentId">
+
+<swe:this property="FormattedHtml"/>
+
+</swe:control>
+</swe:form>
+</swe:for-each>
+
+<swe:form>
+<swe:for-each count=10 iteratorName="CurrentId" startValue="41">
+
+<swe:control id="swe:CurrentId">
+
+<swe:this property="FormattedHtml"/>
+
+</swe:control>
+
+</swe:for-each>
+</swe:form>
+<!-- End Detail Template Body -->
+
+</p>
+</card>
+
+</wml> 
+

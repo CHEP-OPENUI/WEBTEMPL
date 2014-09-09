@@ -1,0 +1,59 @@
+<!-- Template Start: CCAppletForm_Login_prm.swt -->
+<swe:form>
+    <div class="AppletHIListBorder">
+        <swe:control id="1001">
+            <div class="titleLabel" align="swe:this.TextAlignmentLabel">
+                <swe:this property="DisplayName" hintMapType="Label" hintText="AppletTitle"/>
+            </div>
+        </swe:control> 
+        <div  class="siebui-loginprm-col1">
+            <swe:for-each startValue="1501" count="10" iteratorName="currentId">
+                <swe:control id="swe:currentId" hintMapType="FormItem">
+                    <div class="registrationheader siebui-locator-row">
+                        <div class="mceGridLabel" align="swe:this.TextAlignmentLabel">
+                            <swe:this property="DisplayName" hintText="Label"/>
+                        </div>
+                        <div class="mceGridField" align="swe:this.TextAlignment">
+                             <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+                        </div>                          
+                    </div>
+                </swe:control>
+            </swe:for-each> 
+
+            <!-- Remember user id checkbox-->
+            <swe:control id="2002" hintMapType="FormItem">
+                <div class="registrationheader siebeui-rememberuserid-check">
+                    <div class="mceGridField" align="swe:this.TextAlignment">
+                         <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+                    </div>
+                    <div class="mceGridLabel" align="swe:this.TextAlignmentLabel">
+                        <swe:this property="DisplayName" hintText="Label"/>
+                    </div>
+                </div>   
+            </swe:control>
+            <div class="siebui-locator-row">
+                <swe:control id="110">
+                    <div class="siebui-loginbuttonprm">
+                         <swe:this property="FormattedHtml" hintMapType="Control" hintText="Login"/>
+                    </div>
+                </swe:control>
+                <swe:control id="1552">
+                    <div class="siebui-ctrl-link" align="swe:this.TextAlignment">
+                        <swe:this property="FormattedHtml" hintText="link" hintMapLabelId="1552"/>
+                    </div>
+                </swe:control>
+            </div>
+        </div>  
+    
+        <div  class="siebui-loginprm-col2">
+            <swe:for-each startValue="1553" count="10" iteratorName="currentId">
+                <swe:control id="swe:currentId" hintMapType="FormItem">
+                    <div class="siebui-ctrl-link" align="swe:this.TextAlignment">
+                         <swe:this property="FormattedHtml" hintText="link" hintMapLabelId="swe:currentId"/>
+                    </div>          
+                </swe:control>
+            </swe:for-each>         
+        </div>  
+    </div/>
+</swe:form>
+<!-- Template End: CCAppletForm_Login_prm.swt -->

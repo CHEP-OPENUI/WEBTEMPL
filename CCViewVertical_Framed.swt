@@ -1,0 +1,112 @@
+<!--  Template Start: CCViewVertical_Framed.swt -->
+<HTML dir="swe:dir">
+<head></head>
+
+
+<swe:frameset htmlAttr="rows='117px,*' framespacing='2'">
+
+
+<!-- ---------- Top Frame (25%) ---------------------------->
+
+
+
+
+<swe:frame type="Applet" name="Applet1" htmlAttr="topmargin='0' leftmargin='0' marginwidth='0' marginheight='0' frameborder='0'">
+
+<swe:include file="CCHTMLHeader.swt"/>
+
+
+<!-- ---------- Threadbar and Mini-Applet ----------------->
+<!--
+<table datatable="0" summary="" border="0" cellspacing="0" cellpadding="1" width="100%">
+  <tr>
+	<swe:if condition="Web Engine State Properties, IsLowInteractive">
+    <td valign="absmiddle">
+		<swe:include file="CCThreadbar.swt"/>
+	</td>
+	</swe:if>
+	<swe:applet id="201" hintText="Mini-Applet">
+	    <td align="right"><swe:this property="FormattedHTML"/></td>
+		<td>&nbsp;&nbsp;&nbsp;</td>
+	</swe:applet>	
+		
+  </tr>
+</table> 
+-->
+<!-- ---------- End Threadbar and Mini-Applet ------------->
+
+<!--local override of CSS-->
+<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+	<style>BODY {border-right:1px solid #000000;}.mceField, .mceField INPUT, .mceField TEXTAREA, .mceField SELECT{width:130px;}	</style>
+</swe:if>
+
+
+<table datatable="0" summary="" width="100%" cellpadding="5" cellspacing="0" border="0">
+	<tr>	
+		<!--  Column 1 -->
+		<td valign="top" width="100%">
+			<swe:for-each count=5 iteratorName="currentId" startValue="102">
+			<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" var="Parent">
+				<!-- start applet-->
+				<swe:this property="FormattedHtml"/>
+				<!-- end applet-->
+			</swe:applet>
+			</swe:for-each>
+			<swe:for-each count=5 iteratorName="currentId" startValue="108">
+			<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" var="Grandchild">
+				<!-- start applet-->
+				<swe:this property="FormattedHtml"/>
+				<!-- end applet-->
+			</swe:applet>
+                  </swe:for-each>			
+			
+		</td>
+		<!--  End Column 1 -->
+	</tr>
+</table>
+
+<swe:include file="CCHTMLFooter.swt"/>
+
+</swe:frame>
+
+<swe:frame type="Applet" name="Applet2" htmlAttr="topmargin='0' leftmargin='0' marginwidth='0' marginheight='0'  frameborder='0'">
+
+<swe:include file="CCHTMLHeader.swt"/>
+
+<!--local override of CSS-->
+<swe:if condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+	<style>BODY {border-left:1px solid #000000;} .mceField, .mceField INPUT, .mceField TEXTAREA, .mceField SELECT{width:130px;}</style>
+</swe:if>
+
+
+
+<!-- ---------- Bottom Frame (75%) ------------------------->
+
+
+<!-- ---------- Main Content ------------------------------>
+<table datatable="0" summary="" width="100%" cellpadding="5" cellspacing="0" border="0">		
+		<!--  Column 2 -->
+		<td valign="top" width="100%">
+			<swe:applet-tree-list var="Parent"/>
+			<swe:for-each count=10 iteratorName="currentId" startValue="202">
+			<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" var="Parent">
+				<!-- start applet-->
+				<swe:this property="FormattedHtml"/>
+				<!-- end applet-->
+			</swe:applet>
+			</swe:for-each>
+		</td>
+		<!--  End Column 2 -->
+</tr>
+</table>
+
+<swe:include file="CCHTMLFooter.swt"/>
+
+</swe:frame>
+
+</swe:frameset>
+
+<swe:scripts/>
+
+</html>
+<!--  Template End: CCViewVertical_Framed.swt -->

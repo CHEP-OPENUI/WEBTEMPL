@@ -1,0 +1,39 @@
+<swe:switch>
+  <swe:case condition="Web Engine User Agent, TestCapability, WirelessStyle:WML">
+    <swe:xsl-stylesheet name="SWLSError_wml.xsl" mode="process"/>
+  </swe:case>
+  <swe:case condition="Web Engine User Agent, TestCapability, WirelessStyle:CHTML">
+    <swe:xsl-stylesheet name="SWLSError_chtml.xsl" mode="process"/>
+  </swe:case>
+  <swe:case condition="Web Engine User Agent, TestCapability, WirelessStyle:XHTML">
+    <swe:xsl-stylesheet name="SWLSError_1c_xhtml.xsl" mode="process"/>
+  </swe:case>
+  <swe:default>
+    <swe:xsl-stylesheet name="SWLSError_2c_html.xsl" mode="process"/>
+  </swe:default>
+</swe:Switch>
+
+<swe:threadbar>
+  <swe:for-each-thread>
+    <span class="threadbar">
+      <swe:threadlink property="FormattedHtml">
+        <swe:this property="Title"/>
+      </swe:threadlink>
+    </span>
+  </swe:for-each-thread>
+</swe:threadbar>
+
+<!-- Start Error Template Body -->
+<!-- Application Error -->
+An error has occurred.<br/>
+<swe:pageitem id="1" property="FormattedHtml" />
+<br/>
+<!-- Main Menu -->
+<swe:form>
+<swe:pageitem id="2" property="FormattedHtml" />
+<swe:pageitem id="3" property="FormattedHtml" />
+</swe:form>
+<do type="prev" label="Back">
+   <prev/>
+</do>
+<!-- End Error Template Body -->

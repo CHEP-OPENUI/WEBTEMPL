@@ -1,0 +1,18 @@
+<!--  Template Start: CCAppletSalutationGraphical.swt -->
+
+<swe:control id="1">
+<swe:include file="CCApplet_Spacer.swt"/>
+
+<table datatable="0" summary="" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0" class="AppletStyle3">
+  <tr valign="bottom">
+  	<td></swe:control><swe:control id="89" property="FormattedHtml" hintText="Image" hintMapType="Control"/><swe:control id="1"></td>
+    <td class="pad4" width="100%"><swe:this property="FormattedHtml" hintText="Salutation"/></td>
+  </tr>
+  <tr><td colspan="2" class="AppletButtons"><img src="images/spacer.gif" width="1" height="5" alt=""></td></tr>
+</table>
+</swe:control>
+
+<!--  Template End: CCAppletSalutationGraphical.swt -->
+
+
+

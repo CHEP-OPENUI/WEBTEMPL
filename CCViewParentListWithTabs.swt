@@ -1,0 +1,79 @@
+<!--  Template Start: CCViewParentListWithTabs.swt -->
+<swe:include file="CCHTMLHeader.swt"/>
+
+<!-- ---------- Threadbar and Mini-Applet ----------------->
+<table datatable="0" summary="" border="0" cellspacing="0" cellpadding="1" width="100%">
+  <tr>
+    <swe:if condition="Web Engine State Properties, IsLowInteractive">
+    <td valign="absmiddle">
+		<swe:include file="CCThreadbar.swt"/>
+	</td>
+	</swe:if>
+	<swe:applet id="201" hintText="Mini-Applet">
+	    <td align="right"><swe:this property="FormattedHTML"/></td>
+		<td>&nbsp;&nbsp;&nbsp;</td>
+	</swe:applet>
+		
+  </tr>
+</table> 
+<!-- ---------- End Threadbar and Mini-Applet ------------->
+
+<!-- ---------- Main Content Area ---------------------------->
+
+<swe:include file="CCSubordinateAppletsBorderStart.swt"/>
+
+<swe:applet hintMapType="Applet" id="1" hintText="Parent Applet" property="FormattedHtml" var="Parent"/>
+
+<!-- ---------- Tier 3 & Tier 4 navigation ----------------->
+<!-- ---------- Will display regardless of view type ------->
+<swe:include file="CCViewbar_Tabs_DropList_Always.swt"/>
+<!-- ---------- End Tier 3 & Tier 4 navigation ------------->
+
+<swe:for-each count=1 iteratorName="currentId" startValue="2">
+<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Child Applet" property="FormattedHtml" var="Child"/>
+</swe:for-each>
+
+<swe:if condition="Web Engine State Properties, IsHighInteractive">
+	<swe:for-each count=1 iteratorName="currentId" startValue="702">
+	<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Child Applet (HI Display Only)" property="FormattedHtml" var="Child"/>
+	</swe:for-each>
+</swe:if>
+
+<swe:for-each count=3 iteratorName="currentId" startValue="3">
+	<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Child or Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+</swe:for-each>
+
+<swe:if condition="Web Engine State Properties, IsHighInteractive">
+	<swe:for-each count=3 iteratorName="currentId" startValue="703">
+		<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Child or Grandchild Applet (HI Display Only)" property="FormattedHtml" var="Grandchild"/>
+	</swe:for-each>
+</swe:if>
+
+<table datatable="0" summary="" width="100%" border="0" cellspacing="0" cellpadding="3">
+	<tr valign="top">
+		<td>
+			<swe:for-each count=2 iteratorName="currentId" startValue="6">
+				<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+			</swe:for-each>
+		</td>
+
+		<td>
+			<swe:for-each count=2 iteratorName="currentId" startValue="8">
+				<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+			</swe:for-each>
+		</td>
+	</tr>
+</table>
+
+<swe:for-each count="11" iteratorName="currentId" startValue="10">
+	<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+</swe:for-each>
+
+<swe:include file="CCSubordinateAppletsBorderEnd.swt"/>
+
+<swe:include file="CCHTMLFooter.swt"/>
+
+<!-- ---------- End Main Content Area ------------------------>
+
+<!--  Template End: CCViewParentListWithTabs.swt -->
+

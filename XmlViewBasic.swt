@@ -1,0 +1,12 @@
+<!-- Template Start: XmlViewBasic.swt -->
+
+<!------------ Tier 2 Nav and Search Applet ----------------->
+<swe:include file="CCThreadbar.swt"/>
+
+<!------------ End Tier 2 Nav and Search Applet ------------->
+<!------------ Main Content Area ---------------------------->
+<swe:all-applets/>
+
+<!------------ End Main Content Area ------------------------>
+
+<!-- Template End: XmlViewBasic.swt -->

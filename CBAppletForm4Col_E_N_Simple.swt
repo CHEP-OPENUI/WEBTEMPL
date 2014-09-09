@@ -1,0 +1,48 @@
+<!-- Template Start: CBAppletFormCol_E_N_Simple.swt -->
+
+<div class="swe:this.SelectStyle">	
+<table datatable="0" summary="" class="AppletStyle7" width="100%" cellpadding="0" cellspacing="0" border=0 align="center" class="AppletBack"><tr><td border="0"><!-- class="AppletHIFormBorder" -->
+<swe:error type="Popup">
+<table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="0" cellspacing="5" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/></td></tr></table>
+</swe:error>
+
+<swe:control id="91">
+  <!-- Inside-applet help text -->
+  <table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="0" cellspacing="5" border="0"><tr><td><swe:this property="DisplayName" hintText="Inside Applet Help Text"/></td></tr></table>
+</swe:control>
+
+<table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" border="0"><!-- class="AppletBack"-->
+	<swe:control id="1020">
+		<tr><td colspan="2"><swe:this property="FormattedHtml" hintText="FormSection" hintMapType="FormSection"/></td></tr>
+	</swe:control>
+	<swe:for-each startValue="1336" count="5" iteratorName="currentId">
+		<swe:control id="swe:currentId" hintMapType="FormItem">
+		<!--4 column wide-->
+		<tr>
+			<td colspan="2">					
+					<table datatable="0" summary="" width="100%" cellpadding="0" class="mceWideFields" valign="top">	
+						<tr valign="top">
+							<td>
+								<div class="mceLabel" align="swe:this.TextAlignmentLabel">
+									<swe:this property="DisplayName" hintText="4-Column Wide Label"/>:
+									<swe:this property="RequiredIndicator" hintText="Required"/>
+								</div>
+	
+								<span class="mceField" align="swe:this.TextAlignment">
+									<swe:this property="FormattedHtml" hintText="4-Column Wide Field" hintMapLabelId="swe:currentId"/>
+								</span>
+	
+							</td>
+						</tr>		
+					</table>			
+			</td>
+		</tr>
+		</swe:control>	
+	</swe:for-each>
+</table>
+</td></tr></table>
+
+</div>
+
+
+<!-- Template End: CBAppletFormCol_E_N_Simple.swt -->

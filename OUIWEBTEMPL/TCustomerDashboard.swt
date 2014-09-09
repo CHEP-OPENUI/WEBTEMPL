@@ -1,0 +1,68 @@
+<!--  Template Start: TCustomerDashboard.swt -->
+
+<swe:include file="CCHTMLHeader.swt"/>
+<swe:include file="CCTaskViewTitle.swt"/>
+    <swe:layout viewDisplayMode="Layout">
+</swe:layout>
+<div class="siebui-telco-view1">
+  <div class="siebui-telco-view1Row1">
+        <div class="siebui-telco-view1Row1Col1 siebui-telco-view1Applet">
+            <swe:applet hintMapType="Applet" id="101" hintText="Applet" var="Parent">
+            <!-- start applet-->
+                <swe:this property="FormattedHtml"/>
+            <!-- end applet-->
+            </swe:applet>
+        </div>
+        <div class="siebui-telco-view1Row1Col2 siebui-telco-view1Applet AppletHIListBorder siebui-applet">
+            <swe:applet id="102" hintText="Mini-Applet">
+            <!-- start applet-->
+                <swe:this property="FormattedHtml"/>
+            <!-- end applet-->
+            </swe:applet>
+        </div>
+        <div class="siebui-telco-view1Row1Col3 siebui-telco-view1Applet">
+            <swe:applet id="103" hintText="Layout Controls">
+            <!-- start applet-->
+                <swe:this property="FormattedHtml"/>
+            <!-- end applet-->
+            </swe:applet>
+        </div>
+    </div>
+    <div class="siebui-telco-view1Row2">
+        <div class="siebui-telco-view1Row2Col1 siebui-telco-view1Applet">
+            <swe:applet hintMapType="Applet" id="201" hintText="Applet" var="Parent">
+                <!-- start applet-->
+                    <swe:this property="FormattedHtml"/>
+                <!-- end applet-->
+            </swe:applet>
+        </div>
+        <div class="siebui-telco-view1Row2Col2 siebui-telco-view1Applet">
+            <swe:applet hintMapType="Applet" id="202" hintText="Applet" var="Parent">
+            <!-- start applet-->
+                <swe:this property="FormattedHtml"/>
+                <!-- end applet-->
+            </swe:applet>
+        </div>
+        <div class="siebui-telco-view1Row2Col3 siebui-telco-view1Applet">        
+            <swe:applet hintMapType="Applet" id="203" hintText="Applet" var="Parent">
+            <!-- start applet-->
+                <swe:this property="FormattedHtml"/>
+            <!-- end applet-->
+            </swe:applet>
+        </div>
+    </div>
+    <div class="siebui-telco-view1Row3">
+        <div class="siebui-telco-view1Row3Col1 siebui-telco-view1Applet">
+            <swe:applet hintMapType="Applet" id="301" hintText="Applet" var="Parent">
+            <!-- start applet-->
+                <swe:this property="FormattedHtml"/>
+            <!-- end applet-->
+             </swe:applet>
+        </div>
+    </div>
+</div>
+  <!------------ End: View Layout Table ------------------------>
+<!--</swe:layout>-->
+<swe:include file="CCHTMLFooter.swt"/>
+
+<!--  Template End: TCustomerDashboard.swt -->

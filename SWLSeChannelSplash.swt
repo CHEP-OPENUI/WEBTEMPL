@@ -1,0 +1,72 @@
+<swe:switch>
+  <swe:case condition="Web Engine User Agent, TestCapability, WirelessStyle:WML">
+    <swe:switch>
+      <swe:case condition="Web Engine User Agent, TestCapability, SelectOption:TRUE">
+        <swe:xsl-stylesheet name="SWLSMain_so_wml.xsl" mode="process"/>
+      </swe:case>
+      <swe:default>
+        <swe:xsl-stylesheet name="SWLSMain_wml.xsl" mode="process"/>
+      </swe:default>
+    </swe:Switch>
+  </swe:case>
+  <swe:case condition="Web Engine User Agent, TestCapability, WirelessStyle:CHTML">
+    <swe:xsl-stylesheet name="SWLSMain_chtml.xsl" mode="process"/>
+  </swe:case>
+  <swe:case condition="Web Engine User Agent, TestCapability, WirelessStyle:XHTML">
+    <swe:xsl-stylesheet name="SWLSMain_1c_xhtml.xsl" mode="process"/>
+  </swe:case>
+  <swe:default>
+    <swe:xsl-stylesheet name="SWLSMain_2c_html.xsl" mode="process"/>
+  </swe:default>
+</swe:Switch>
+
+
+<b><swe:pageitem id="1" property="DisplayName" /></b>
+
+<swe:switch>
+  <swe:case condition="Web Engine User Agent, TestCapability, 'SoftKeySupport:FALSE'"></swe:case>
+  <swe:default>
+    <swe:exitsoftkey property="Softkey" />
+  </swe:default>
+</swe:switch>
+
+<b><swe:pageitem id="2" property="DisplayName" /></b>
+
+<!-- Screen Bar -->
+<swe:switch>
+  <swe:case condition="Web Engine User Agent, TestCapability, 'SelectOption:TRUE'">
+    <select>
+      <swe:for-each-screen>
+        <swe:screenoptionlink>
+          <swe:screenname/>
+        </swe:screenoptionlink>
+      </swe:for-each-screen>
+      <swe:if condition="Web Engine User Agent, TestCapability, 'SoftKeySupport:FALSE'">
+        <swe:exitsoftkey property="Optionlink" />
+      </swe:if>
+    </select>
+  </swe:case>
+
+  <swe:default>
+    <br/>
+    <swe:for-each-screen>
+      <b><swe:screenlink property="FormattedHtml"><swe:screenname/></swe:screenlink></b><br/>
+    </swe:for-each-screen>
+    <swe:if condition="Web Engine User Agent, TestCapability, 'SoftKeySupport:FALSE'">
+      <b><swe:exitsoftkey property="Link" /></b>
+    </swe:if>
+  </swe:default>
+</swe:switch>
+
+<br/>
+<swe:switch>
+  <swe:case condition="Web Engine User Agent, TestCapability, 'DefaultMarkup:XML'">
+    <swe:pageitem id="3" property="FormattedHtml" />
+  </swe:case>
+  <swe:case condition="Web Engine User Agent, TestCapability, 'DefaultMarkup:HTML'">
+    <swe:pageitem id="3" property="FormattedHtml" />
+  </swe:case>
+  <swe:case condition="Web Engine User Agent, TestCapability, 'Browser:IE'">
+    <swe:pageitem id="3" property="FormattedHtml" />
+  </swe:case>
+</swe:switch>

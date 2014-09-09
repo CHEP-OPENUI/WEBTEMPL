@@ -1,0 +1,67 @@
+<!-- Template Start: dCCListBodyNoRowHilite.swt -->
+
+<!------------ Loop for all N records, DATA ------------->
+<swe:for-each-row count="7">
+
+<tr class="listRowOff">
+
+
+<swe:control id="144">
+  <!-- Select 144 -->
+  <td width="42" align="center" class="Row"><swe:this property="FormattedHtml" hintText="Selected Row" hintMapType="Control"/></td>
+</swe:control>
+
+<swe:control id="147">
+<!-- Pick 147 -->
+  <td width="42" align="center" class="Row"><swe:this property="FormattedHtml" hintText="Pick Control" hintMapType="Control"/></td>
+</swe:control>
+
+<swe:select-row>
+   <td width="42" align="center" class="Row"><swe:this property="FormattedHtml" /></td>
+</swe:select-row>
+
+<!------------ List Field Values (501-520) ------------->
+<swe:for-each startValue="501" count="20" iteratorName="currentId">
+  <swe:control id="swe:currentId">
+    <td align="swe:this.TextAlignment" class="Row" scope="swe:this.RowScope"><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/></td>
+  </swe:control> 
+</swe:for-each>
+
+<!------------ Per-record Control Buttons (Edit,Delete,Save / 132,133,146) ------------->
+<swe:control id="132">
+<!-- Edit, 132 -->
+  <td align="center" class="Row"><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+</swe:control>
+
+<swe:control id="133">
+<!-- Delete, 133 -->
+  <td align="center" class="Row"><swe:this property="FormattedHtml"  hintMapType="Control"/></td>
+</swe:control>
+
+<swe:control id="142">
+<!-- Optional, 142 -->
+  <td align="center" class="Row"><swe:this property="FormattedHtml"  hintMapType="Control"/></td>
+</swe:control>
+
+<swe:control id="143">
+<!-- Optional, 143 -->
+  <td align="center" class="Row"><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+</swe:control>
+
+<swe:control id="145">
+<!-- Optional, 145 -->
+  <td align="center" class="Row"><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+</swe:control>
+
+<swe:control id="146">
+<!-- Optional, 146 -->
+  <td align="center" class="Row"><swe:this property="FormattedHtml" hintText="Save" hintMapType="Control"/></td>
+</swe:control>
+
+</tr>
+
+
+<!------------ End Loop ------------->
+</swe:for-each-row>
+
+<!-- Template End: dCCListBodyNoRowHilite.swt -->

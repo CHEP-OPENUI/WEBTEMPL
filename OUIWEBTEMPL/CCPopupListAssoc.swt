@@ -1,0 +1,39 @@
+<!-- Template Start: CCPopupListAssoc.swt -->
+<!-- Oliver: code redesign, new classes -->
+
+<swe:switch>
+
+	<swe:case condition="Web Engine State Properties, IsMvgInShuttle">
+
+		<div id="sieb-ui-popup-mvg-available" class="AppletStylePopup">
+			<swe:form>
+
+				<swe:error>
+					<div class="siebui-popup-error-text"><swe:this property="FormattedHtml"/></div>
+				</swe:error>		
+
+				<swe:include file="CCPopupListAssocShuttleButtonsTop.swt"/>
+				<div class="swe:this.SelectStyle">
+					<swe:list>
+						<table width="100%" datatable="1" summary="swe:this.ListSummary">
+							<swe:include file="CCListHeader.swt"/>
+							<swe:include file="CCListBody.swt"/>
+						</table>
+					</swe:list>
+				</div>
+
+				<div class="siebui-popup-btm">
+					<swe:include file="CCButtons_Popup_oui.swt"/>
+				</div>
+
+			</swe:form>
+		</div>
+
+	</swe:case>
+
+	<swe:default>
+		<swe:include file="CCPopupList.swt"/>
+	</swe:default>
+
+</swe:switch>
+<!-- Template End: CCPopupListAssoc.swt -->

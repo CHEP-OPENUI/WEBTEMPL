@@ -1,0 +1,584 @@
+<!-- Template Start: eCfg_MenuBaseAutoRepriceJS.swt -->
+
+<!-- This is a hidden button that we use to submit any forms on this page -->
+<!-- Do not remove/change this section -->
+<div style="visibility:hidden">
+<table datatable="0" summary="">
+   <tr>
+      <swe:form>
+         <td>
+            <swe:control name ="Done" id="HiddenControl" property="FormattedHtml"/>
+         </td>
+      </swe:form>
+   </tr>
+</table>
+</div>
+
+<!-- div for qa automation -->
+<div  id="cxMenu" class="cxBaseTheme">
+
+<script>
+
+function CFGSetCurrent (iCurrent)
+{
+    if (typeof (window.top.currentVisibleJS) == "undefined" || window.top.currentVisibleJS == null)
+       window.top.currentVisibleJS = new Array ();
+    window.top.currentVisibleJS [window.top.currentProductJS] = iCurrent;
+}
+
+function CFGGetCurrent ()
+{
+    if (typeof (window.top.currentVisibleJS) != "undefined" && window.top.currentVisibleJS != null)
+       return (window.top.currentVisibleJS [window.top.currentProductJS]);
+    else
+       return (0);
+}
+
+function CFGSetProduct (sCurrent)
+{
+    window.top.currentProductJS = sCurrent;
+}
+
+function CFGGetProduct ()
+{
+    return window.top.currentProductJS;
+}
+
+function CFGSetSummaryFlag (showSummary)
+{
+    window.top.showSummaryJS = showSummary;
+}
+
+function CFGGetSummaryFlag ()
+{
+    return window.top.showSummaryJS;
+}
+
+</script>
+
+<script>
+    var sCustomizeLabel = CfgGetLocalString ("IDS_CXP_UI_CUSTOMIZE");
+    var sExplanationLabel = CfgGetLocalString ("IDS_CXP_UI_EXPLANATION");
+    var sEditFieldLabel = CfgGetLocalString ("IDS_CXP_UI_EDITFIELD");
+    var sRemoveLabel = CfgGetLocalString ("IDS_CXP_UI_REMOVE");
+
+    var currentRel = 1;
+    if (typeof (top.g_cfgMainFrame) != "undefined" && top.g_cfgMainFrame != null)
+       eval ("top.g_cfgMainFrame.currentRel = 1;");
+
+    var visibleRelArray = new Array();
+    if (typeof (top.g_cfgMainFrame) != "undefined" && top.g_cfgMainFrame != null)
+       eval ("top.g_cfgMainFrame.visibleRelArray = new Array();");
+
+    var visibleArrayIndex = 0;
+    if (typeof (top.g_cfgMainFrame) != "undefined" && top.g_cfgMainFrame != null)
+       eval ("top.g_cfgMainFrame.visibleArrayIndex = 0;");
+
+    var relationshipMap = new Array();
+    if (typeof (top.g_cfgMainFrame) != "undefined" && top.g_cfgMainFrame != null)
+       eval ("top.g_cfgMainFrame.relationshipMap = new Array();");
+
+    var xPos = 0;
+    if (typeof (top.g_cfgMainFrame) != "undefined" && top.g_cfgMainFrame != null)
+       eval ("top.g_cfgMainFrame.xPos = 0;");
+
+    var yPos = 0;
+    if (typeof (top.g_cfgMainFrame) != "undefined" && top.g_cfgMainFrame != null)
+       eval ("top.g_cfgMainFrame.yPos = 0;");
+
+    var iHeight = 0;
+    if (typeof (top.g_cfgMainFrame) != "undefined" && top.g_cfgMainFrame != null)
+       eval ("top.g_cfgMainFrame.iHeight = 0;");
+
+    var iWidth = 0;
+    if (typeof (top.g_cfgMainFrame) != "undefined" && top.g_cfgMainFrame != null)
+       eval ("top.g_cfgMainFrame.iWidth = 0;");
+
+    var positionInit = false;
+    if (typeof (top.g_cfgMainFrame) != "undefined" && top.g_cfgMainFrame != null)
+       eval ("top.g_cfgMainFrame.positionInit = false;");
+
+    var summaryLink  = "";
+    if (typeof (top.g_cfgMainFrame) != "undefined" && top.g_cfgMainFrame != null)
+       eval ("top.g_cfgMainFrame.summaryLink  = \"\";");
+
+    var summaryVisible = false;
+    if (typeof (top.g_cfgMainFrame) != "undefined" && top.g_cfgMainFrame != null)
+       eval ("top.g_cfgMainFrame.summaryVisible = false;");
+
+    var bShowSummary = false;    //will be set in the Product Theme, when the selected group is summary
+    if (typeof (top.g_cfgMainFrame) != "undefined" && top.g_cfgMainFrame != null)
+       eval ("top.g_cfgMainFrame.bShowSummary = false;");
+
+    var bError = false;
+    if (typeof (top.g_cfgMainFrame) != "undefined" && top.g_cfgMainFrame != null)
+       eval ("top.g_cfgMainFrame.bError = false;");
+
+    var currentVisible = 0;
+    if (typeof (top.g_cfgMainFrame) != "undefined" && top.g_cfgMainFrame != null)
+       eval ("top.g_cfgMainFrame.currentVisible = 0;");
+
+    var currentProduct = '<swe:control id="swe:CurrentRoot" CfgFieldName="CxObjName" CfgHtmlType="CfgLabel"/>';
+    if (typeof (top.g_cfgMainFrame) != "undefined" && top.g_cfgMainFrame != null)
+       eval ("top.g_cfgMainFrame.currentProduct = \"" + currentProduct + "\";");
+
+    if (top._sweclient != null)
+    {
+        var storedProduct = CFGGetProduct ();
+        if (typeof (top.g_cfgMainFrame) != "undefined" && top.g_cfgMainFrame != null)
+           eval ("top.g_cfgMainFrame.storedProduct = \"" + storedProduct + "\";");
+
+        if (storedProduct != currentProduct)
+        {
+            CFGSetProduct (currentProduct);
+            CFGSetCurrent ("0");
+        }
+        else
+            currentVisible = CFGGetCurrent (); //this will get the currentVisible for the previous product
+
+        if (typeof (top.g_cfgMainFrame) != "undefined" && top.g_cfgMainFrame != null)
+           eval ("top.g_cfgMainFrame.currentVisible = " + currentVisible + ";");
+    }
+
+    function SetCurrent (iCurrent, bTopFrameOnly)
+    {
+        if (!bTopFrameOnly)
+        {
+            currentVisible = iCurrent;
+            if (typeof (top.g_cfgMainFrame) != "undefined" && top.g_cfgMainFrame != null)
+               eval ("top.g_cfgMainFrame.currentVisible = " + currentVisible + ";");
+        }
+
+        if (top._sweclient != null)
+        {
+            CFGSetCurrent (iCurrent);
+        }
+    }
+
+    function ChooseGroup (methodName, iCurrent)
+    {
+        SetCurrent (iCurrent, true);
+
+        SubmitToQueue ("m_UIFramework.CfgInvokeMethod (" +
+                       "\"" + methodName + "\"" +
+                       ", " +
+                       "null);");
+    }
+
+    //methods for showing and hiding content
+    function SetVars ()
+    {
+        if (typeof (top.g_cfgMainFrame) != "undefined" && top.g_cfgMainFrame != null)
+        {
+           var objTopLeft = top.g_cfgMainFrame.document.getElementById("Rel_REF");
+           var objBotRight = top.g_cfgMainFrame.document.getElementById("POSITION_REF");
+        }
+        else
+        {
+           var objTopLeft = document.getElementById("Rel_REF");
+           var objBotRight = document.getElementById("POSITION_REF");
+        }
+
+        if( objTopLeft )
+        {
+            if ((top.SWEIsHighInteract) && (objTopLeft.document.readyState != "complete"))
+               return (0);
+
+            xPos = objTopLeft.offsetLeft;
+            yPos = objTopLeft.offsetTop;
+
+            if (typeof (top.g_cfgMainFrame) != "undefined" && top.g_cfgMainFrame != null)
+            {
+               eval ("top.g_cfgMainFrame.xPos = " + xPos + ";");
+               eval ("top.g_cfgMainFrame.yPos = " + yPos + ";");
+            }
+        }
+        else
+        {
+            xPos = 0;
+            yPos = 0;
+            if (typeof (top.g_cfgMainFrame) != "undefined" && top.g_cfgMainFrame != null)
+            {
+               eval ("top.g_cfgMainFrame.xPos = 0;");
+               eval ("top.g_cfgMainFrame.yPos = 0;");
+            }
+        }
+
+        if( objBotRight )
+        {
+            iHeight = objBotRight.offsetTop - objTopLeft.offsetTop;
+            iWidth = objBotRight.offsetLeft - objTopLeft.offsetLeft;
+
+            if (typeof (top.g_cfgMainFrame) != "undefined" && top.g_cfgMainFrame != null)
+            {
+               eval ("top.g_cfgMainFrame.iHeight = " + iHeight + ";");
+               eval ("top.g_cfgMainFrame.iWidth = " + iWidth + ";");
+            }
+        }
+        else
+        {
+            iHeight = 0;
+            iWidth = 0;
+
+            if (typeof (top.g_cfgMainFrame) != "undefined" && top.g_cfgMainFrame != null)
+            {
+               eval ("top.g_cfgMainFrame.iHeight = 0;");
+               eval ("top.g_cfgMainFrame.iWidth = 0;");
+            }
+        }
+
+        positionInit = true;
+        if (typeof (top.g_cfgMainFrame) != "undefined" && top.g_cfgMainFrame != null)
+           eval ("top.g_cfgMainFrame.positionInit = true;");
+    }
+
+    function ToggleContent (index)
+    {
+        if (positionInit == false)
+        {
+            SetVars();
+        }
+
+        if (currentVisible != index)
+        {
+            var objOld = document.getElementById("Rel_" + currentVisible);
+
+            if( objOld )
+            {
+                HideContent (objOld);
+            }
+        }
+        if( currentVisible != 0 && index != 0 )
+        {
+            var objMenu = document.getElementById("Rel_0");
+
+            if (objMenu)
+            {
+               HideContent (objMenu);
+            }
+        }
+
+        var objNew = document.getElementById("Rel_" + index);
+
+        if( objNew )
+        {
+            ShowContent (objNew);
+            SetCurrent (index, false);
+        }
+    }
+
+    function ShowMenu ()
+    {
+        if (bError == false)
+        {
+            if (top._sweclient != null)
+            {
+               CFGSetSummaryFlag (false);
+            }
+
+            var obj;
+
+            if (positionInit == false)
+            {
+                SetVars ();
+            }
+            //the map is on the bottom layer so clear everything above it
+            //if the summary is on top, remove it
+            if (summaryVisible == true)
+            {
+                obj = document.getElementById ("SUMMARY");
+                summaryVisible = false;
+                if (typeof (top.g_cfgMainFrame) != "undefined" && top.g_cfgMainFrame != null)
+                   eval ("top.g_cfgMainFrame.summaryVisible = false;");
+            }
+            else
+            {
+                obj = document.getElementById ("Rel_" + currentVisible);
+            }
+            if( obj )
+            {
+                HideContent (obj);
+            }
+
+            SetCurrent (0, false);
+            ToggleContent (currentVisible);
+        }
+    }
+
+    function ShowSummary()
+    {
+        if (bError == false)
+        {
+            if (top._sweclient != null)
+            {
+                CFGSetSummaryFlag (true);
+            }
+
+            if (summaryLink == "")
+            {
+                //summary is selected
+	             if (summaryVisible == false)
+                {
+                    if (positionInit == false)
+                    {
+                        SetVars ();
+                    }
+
+                    var objSummary = document.getElementById("SUMMARY");
+                    var objOld = document.getElementById("Rel_" + currentVisible);
+
+                    if (objOld)
+                    {
+                        HideContent (objOld);
+                    }
+
+                    var objMenu = document.getElementById("Rel_0");
+
+                    if (objMenu)
+                    {
+                        HideContent (objMenu);
+                    }
+
+                    SetCurrent (0, false);
+
+                    if (objSummary != null)
+                    {
+                       objSummary.style.left = xPos;
+                       objSummary.style.top = yPos;
+                       objSummary.style.width = iWidth;
+                       objSummary.style.height = iHeight;
+                       objSummary.style.visibility = "visible";
+                    }
+
+                    summaryVisible = true;
+                    if (typeof (top.g_cfgMainFrame) != "undefined" && top.g_cfgMainFrame != null)
+                       eval ("top.g_cfgMainFrame.summaryVisible = true;");
+                }
+            }
+            else
+            {
+               var inPS;
+               var strInputArgs;
+               var strInvokeMethod;
+
+               inPS = new JSSCfgPropertySet();
+
+               inPS.SetProperty ("RequestType", "CloseExplanation");
+               strInputArgs = inPS.EncodeAsString ();
+               strInvokeMethod = "SubmitRequest_" + strInputArgs;
+
+               SubmitToQueue ("SubmitWithHiddenFrame (\"" + strInvokeMethod + "\");");
+
+                //select the summary
+                //This will send back the request to the server to change the group Id to summary
+                eval (summaryLink);
+            }
+        }
+    }
+
+    function ShowContent (obj)
+    {
+        if (positionInit == true)
+        {
+           obj.style.left = xPos;
+           obj.style.top = yPos;
+           obj.style.width = iWidth;
+           obj.style.height = iHeight;
+           obj.style.visibility = "visible";
+        }
+    }
+
+    function HideContent (obj)
+    {
+        obj.style.left = -100000;
+        obj.style.top = -100000;
+        obj.style.visibility = "hidden";
+    }
+
+    function CfgDoneConfig ()
+    {
+        var sWarning = CfgGetLocalString ("IDS_CXP_UI_INCOMPLETE_CONFIG");
+        var i = 0;
+
+        if (m_UIFramework.m_topRequireMoreChild == "Y" || m_UIFramework.m_missingReqAttrArray.length > 0)
+        {
+           if (m_UIFramework.m_missingReqAttrArray.length > 0)
+           {
+              sWarning += "\nPlease fill in these required attributes:";
+              for (i = 0; i < m_UIFramework.m_missingReqAttrArray.length; i++)
+              {
+                 sWarning += "\n";
+                 sWarning += m_UIFramework.m_missingReqAttrArray[i];
+              }
+           }
+
+           if( confirm (sWarning))
+           {
+              m_UIFramework.m_topRequireMoreChild = "";
+              m_UIFramework.m_bRequestLock = false;
+              SetCurrent (0, false);
+              CFGSetSummaryFlag (false);
+              return true;
+           }
+           else
+           {
+              m_UIFramework.m_bRequestLock = false;
+              return false;
+           }
+        }
+        else
+        {
+           m_UIFramework.m_bRequestLock = false;
+           SetCurrent (0, false);
+           CFGSetSummaryFlag (false);
+           return true;
+        }
+    }
+
+    function CfgCancelConfig ()
+    {
+        SetCurrent (0, false);
+        CFGSetSummaryFlag (false);
+        return true;
+    }
+
+    function CfgGetLocalString (str)
+    {
+       //acquire handle to translatable string function
+       var appObj = (window.opener != null) ? window.opener : this;
+
+       //HI mode acccessor
+       if (top.SWEIsHighInteract )
+       {
+           var sString = top.App ().GetLocalString (str);
+       }
+       else
+       {
+           var sString = appObj._SWEgetMessage (str);
+       }
+
+       return sString;
+    }
+
+</script>
+
+<swe:control id="swe:CFGPARAMETER" AutoReprice="Y" property="FormattedHtml" />
+
+<span class="AppletStyle5">
+<table datatable="0" summary="" width="100%" cellpadding="2" cellspacing="5" border="0" bgcolor="white" height="90%">
+<!-- Header row -->
+<tr valign="top">
+    <td width="66%" valign="top">
+        <table datatable="0" summary="" cellpadding="0" cellspacing="4" border="0" width="100%">
+        <tr>
+            <td valign="top" colspan="2">
+                <!--Product Title-->
+                <span class="eCfgProductTitle">
+                <span id="CxObjName" class="cxLabel">
+                <swe:control id="swe:CurrentRoot" CfgFieldName="CxObjName" CfgHtmlType="CfgLabel" property="FormattedHtml" />
+		    <swe:control id="RequireMoreChild" CfgHtmlType="CfgGenerics" />
+                </span>
+                </span>
+                <br>
+                <!--Product Threadbar-->
+                <span class="threadbar"><swe:include id="swe:Thread" CfgHtmlType="eCfgCompThreadJS.swt" CfgNodeType="Thread" /></span>               
+            </td>
+        </tr>
+        <tr>
+            <td valign="middle">
+                <b><swe:control id="TotalPrice" CfgUIControl="lblTotalPrice" property="DisplayName" CfgHtmlType="CfgLabel" />
+                   <swe:control id="StringColon" CfgUIControl="lblColon" property="DisplayName" CfgHtmlType="CfgLabel" /></b>
+                &nbsp;&nbsp;
+                <span id="Rollup Amount" class="cxLabel">
+                <swe:control id="CurrentPrice" CfgHtmlType="CfgText" CfgFieldName="Rollup Item Price" DataType="DTYPE_CURRENCY" />
+                </span>
+            </td valign="middle">
+            <td align="right">
+                <table datatable="0" summary="">
+                  <tr>
+                     <td>
+                        <SCRIPT>
+                        var menuButtonName;
+
+                        menuButtonName = '<swe:control id="swe:ShowMenu" CfgUIControl="sShowMenu" CfgHtmlType="CfgLabel"/>';
+
+                        document.write ('<input type="button"');
+                        document.write (' value=');
+                        document.write (menuButtonName);
+                        document.write (' onClick="ShowMenu();" style="height:20;">');
+                        </SCRIPT>
+                     </td>
+                     <td>
+                        <SCRIPT>
+                        var summaryButtonName;
+
+                        summaryButtonName = '<swe:control id="swe:ShowSummary" CfgUIControl="sShowSummary" CfgHtmlType="CfgLabel" />';
+
+                        document.write ('<input type="button"');
+                        document.write (' value=');
+                        document.write (summaryButtonName);
+                        document.write (' onClick="ShowSummary();" style="height:20;">');
+                        </SCRIPT>
+
+                     </td>
+                  </tr>
+               </table>
+            </td>
+        </tr>
+        </table>
+    </td>
+    <td width="33%" valign="bottom" align="center">
+        <!-- Control Buttons -->
+        <swe:include file="eCfg_MenuTopLevelButtonsJS.swt"/>
+    </td>
+</tr>
+<tr>
+    <!-- Main Content -->
+    <td valign="top" height="95%">
+       <div id="Conflict Page" style="display:none">
+          <swe:include file="eCfgObj_Status_ConflictJS.swt" />
+       </div>
+
+       <div id="Explanation Page" style="display:none">
+          <swe:include file="eCfgObj_ExplanationJS.swt" />
+       </div>
+
+       <div id="Main Page">
+         <swe:include id="product" CfgHtmlType="Product Theme"/>
+       </div>
+    </td>
+    <!-- Message box -->
+    <td>
+        <swe:include file="eCfg_MenuObj_GlobalSignalJS.swt" />
+    </td>
+</tr>
+</table>
+</span>
+
+<script>
+
+    var bShow = false;
+    if (typeof (top.g_cfgMainFrame) != "undefined" && top.g_cfgMainFrame != null)
+       eval ("top.g_cfgMainFrame.bShow = false;");
+
+    if (top._sweclient != null)
+    {
+         bShow = CFGGetSummaryFlag ();
+         if (typeof (top.g_cfgMainFrame) != "undefined" && top.g_cfgMainFrame != null)
+            eval ("top.g_cfgMainFrame.bShow = " + bShow + ";");
+    }
+
+    if (bShowSummary == true && bShow == true )
+    {
+        ShowSummary ();
+    }
+    else
+    {
+        ToggleContent (currentVisible);
+    }
+
+</script>
+
+</div><!-- end of div id="cxMenu" -->
+
+<!-- Template End: eCfg_MenuBaseAutoRepriceJS.swt -->

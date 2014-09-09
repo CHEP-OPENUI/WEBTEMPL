@@ -1,0 +1,8 @@
+<!--  Template Start: dCCAppletCollabTeamSpace.swt -->
+<!--  Used by: Collaboration TeamSpace Applet      -->
+	
+		<swe:control id="501">
+			<swe:this property="FormattedHtml" hintText="SymbolicURL"/>
+		</swe:control>	
+
+<!--  Template End: dCCAppletCollabTeamSpace.swt -->

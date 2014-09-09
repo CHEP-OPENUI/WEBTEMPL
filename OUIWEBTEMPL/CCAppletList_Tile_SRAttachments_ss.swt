@@ -1,0 +1,89 @@
+<!-- Template Start: CCAppletList_Tile_SRAttachments_ss.swt -->
+<swe:include file="CCApplet_NamedSpacer.swt"/>
+<div class="siebui-collapsible-applet siebui-ss-tile-applet">
+    <swe:form>
+        <div class="siebui-collapsible-applet-header">
+            <swe:control id="80">
+                <div class=" siebui-ss-collapsible-header">
+                    <span  class="siebui-ss-navlink-list siebui-ss-collapsible-caption">
+                        <swe:this property="FormattedHtml" hintMapType="Control" hintText="Title" />
+                    </span>
+                    <div class="siebui-ss-navlink-list siebui-ss-navlink-img siebui-collapsible-applet-container"></div>
+                </div>
+            </swe:control>
+        </div>
+        <div class="siebui-collapsible-applet-content">
+            <swe:control id="90">
+                <div class="siebui-ss-list siebui-ss-applt-header">
+                    <swe:this property="FormattedHtml" hintMapType="Control" hintText="Title" />
+                </div>        
+            </swe:control>
+            <div class="siebui-ss-list siebui-ss-tile-aplt-btns-container">
+                <swe:for-each count="4" startValue="171" iteratorName="currentId">
+                    <swe:control id="swe:currentId">
+                        <div class="siebui-ss-tile-aplt-btn">
+                            <swe:this property="FormattedHtml" hintMapType="Control" hintText="New"/>
+                        </div>
+                    </swe:control>
+                </swe:for-each>
+            </div>
+            <div class="siebui-clear-all"></div>
+            <div class="swe:this.SelectStyle">
+                <div class="AppletHIListBorder siebui-tile-container siebui-tile-container-ss">
+                    <swe:this property="NoGrid"/>
+                    <swe:this property="Horizontal"/>
+                    <swe:this property="ScrollVisibleTiles"/>
+                    <swe:list>
+                        <swe:list-record>
+                            <ul>
+                                <!-- Placeholder for tile title with both label and field values -->
+                                <li class="siebui-tile-name-ss">
+                                    <swe:control id="500" hintMapType="FormItem">
+                                        <span class="siebui-tile-label" align="swe:this.TextAlignment">
+                                            <swe:this property="DisplayName" hintText="Label"/>:
+                                        </span>
+                                        <span class="siebui-tile-field" align="swe:this.TextAlignment">
+                                            <swe:this property="FormattedHtml" hintText="Field"/>
+                                        </span>
+                                    </swe:control>
+                                </li>
+                                <!-- Placeholder for tile header -->
+                                <li class="siebui-tile-header">
+                                    <span class="siebui-tile-header-data">
+                                        <swe:control id="501" hintMapType="FormItem">
+                                            <swe:this property="FormattedHtml" hintText="Field"/>
+                                        </swe:control>
+                                    </span>
+                                    <span class="siebui-tile-header-icon">
+                                        <swe:control id="502" hintMapType="FormItem">
+                                            <div class="siebui-tile-icon-image" align="swe:this.TextAlignment">
+                                                <swe:this property="FormattedHtml" hintText="Field"/>
+                                            </div>
+                                        </swe:control>
+                                    </span>
+                                </li>
+                                <!-- Placeholder for tile section divider -->
+                                <li class="siebui-tile-divider"> </li>
+                                <!-- Tile Detail Section -->
+                                <li class="siebui-tile-details">
+                                    <swe:for-each count="4" startValue="504" iteratorName="currentId">
+                                        <swe:control id="swe:currentId" hintMapType="FormItem">
+                                            <div class="siebui-tile-label-small" align="swe:this.TextAlignment">
+                                                <swe:this property="DisplayName" hintText="Label"/>:
+                                            </div>
+                                            <div class="siebui-tile-field" align="swe:this.TextAlignment">
+                                                <swe:this property="FormattedHtml" hintText="Field"/>
+                                            </div>
+                                          
+                                        </swe:control>
+                                    </swe:for-each>
+                                </li>
+                            </ul>
+                        </swe:list-record>
+                    </swe:list>
+                </div>
+            </div>
+        </div>
+    </swe:form>
+</div>
+<!-- Template End: CCAppletList_Tile_SRAttachments_ss.swt -->

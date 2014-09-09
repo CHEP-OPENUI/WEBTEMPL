@@ -1,0 +1,83 @@
+<!-- Template Start: CUTAppletFormEditLight_2_Col.swt -->
+
+<swe:include file="CCApplet_NamedSpacer.swt"/>
+<span class="AppletStyle5">
+<swe:form>
+
+	<table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" class="AppletTitle">
+		<!-- button row-->
+		<tr>
+			<td><img src="images/spacer.gif" height="1" width="6" alt=""></td>
+			<td colspan="2">
+				<table cellpadding="2" cellspacing="0" border="0">
+					<tr>
+						<td class="AppletTitle" nowrap><swe:this property="Title"/></td>
+                 	<td>&nbsp;&nbsp;</td>
+ 						<swe:control id="131"><!-- CreateRecord, 131 --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control" hintText="New"/></td></swe:control>
+                  <swe:control id="132"><!-- EditRecord, 132   --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control" hintText="Edit" /></td></swe:control>
+                  <swe:control id="133"><!-- DeleteRecord, 133 --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control" hintText="Delete"/></td></swe:control>
+                  <swe:control id="106"><!-- NewQuery, 106     --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control" hintText="Query" /></td></swe:control>
+                  <swe:control id="136"><!-- Save, 136         --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control" hintText="Save"  /></td></swe:control>
+                  <swe:control id="134"><!-- Reset, 134        --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control" hintText="Reset" /></td></swe:control>
+                  <swe:control id="135"><!-- Cancel, 135       --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control" hintText="Cancel"/></td></swe:control>
+                  <swe:control id="107"><!-- ExecuteQuery, 107 --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control" hintText="Go (ExecuteQuery)" /></td></swe:control>
+                  <swe:control id="108"><!-- CancelQuery, 108  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control" hintText="Cancel (Query)" /></td></swe:control>
+                  <swe:control id="126"><!-- QueryAssistant,126--><td nowrap><swe:this property="FormattedHtml" hintMapType="Control" hintText="Query Assistant" /></td></swe:control>
+                  	<td valign="middle"><img src="images/btn_div.gif" height="13" align="middle" alt=""></td>
+                  <swe:control id="109"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+                  <swe:control id="110"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+                  <swe:control id="139"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+                  <swe:control id="140"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+                  <swe:control id="141"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+                  <swe:control id="142"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+                  <swe:control id="143"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+                  <swe:control id="157"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+                  <swe:control id="158"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+                  <swe:pageitem id="2"> <!-- Back Button       --><td nowrap><swe:this property="FormattedHtml" hintText="Back" /></td></swe:pageitem>
+                  	<td>&nbsp;</td>
+                  </swe:control>
+					</tr>
+				</table>
+			</td>
+			<td class="AppletTitle" align="right">&nbsp;</td>
+			<td class="AppletTitle" style="color:#000000">&nbsp;</td>
+			<td class="AppletTitle">&nbsp;</td>
+	   </tr>
+   </table>
+	<table width="100%" cellpadding="1" cellspacing="0" border="0" align="center"><tr><td class="AppletBorder">
+	<table width="100%" cellpadding="3" cellspacing="1" border="0" class="AppletBack"><tr>
+		<swe:control id="1099">
+		<td class="AppletBack" valign="top"><swe:this property="FormattedHtml" hintText="Thematic Image"/></td>
+		</swe:control>
+		<td class="AppletBack" width="100%">
+		<swe:control id="1100">
+		<table width="100%" cellpadding="0" cellspacing="0" border="0" class="AppletBack">
+			<tr><td><swe:this property="FormattedHtml" hintText="Text"/></td></tr>
+		</table>
+		</swe:control>
+         <table valign="top" width="100%" cellpadding="2" cellspacing="0" border="0" bgcolor="#FFFFFF">
+         <swe:include file="CUTCCFormBody_2_Col_Light.swt"/>
+         </table>
+   </td></tr>
+      <table valign="top" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF">
+      <tr align="center">
+         <swe:control id="5140"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+         <swe:control id="5141"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+         <swe:control id="5142"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+         <swe:control id="5143"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+         <swe:control id="5144"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+         <swe:control id="5145"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+         <swe:control id="5146"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+         <swe:control id="5147"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+         <swe:control id="5148"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+         <swe:control id="5149"><!-- optional control  --><td nowrap><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+         </td><td>&nbsp;</td>
+         </swe:control>
+      </tr>
+      </table>
+   </tr></table>
+	</td></tr></table>
+
+</swe:form>
+</span>
+<!-- Template End: CUTAppletFormEditLight_2_Col.swt -->

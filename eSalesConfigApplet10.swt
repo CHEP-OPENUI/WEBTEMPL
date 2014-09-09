@@ -1,0 +1,22 @@
+<!-- Template Start: eSalesConfigApplet10.swt -->
+<swe:control id="1100">
+<swe:include file="CCApplet_Spacer.swt"/>
+<table datatable="0" summary="" width="100%" align="center" bgcolor="#ffffff" valign="top" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+    <td>
+      <span class="dCCAppletTitle"><swe:this property="FormattedHtml" hintText="Field"/></span>
+    </td>
+  </tr>
+</table>
+</swe:control>
+<swe:control id="1101">
+<swe:include file="CCApplet_Spacer.swt"/>
+<table datatable="0" summary="" bgcolor="#ffffff" valign="top" width="100%" cellpadding="2" cellspacing="0" border="0">
+  <tr>
+    <td>
+      <swe:this property="DisplayName" hintText="Description"/>
+    </td>
+  </tr>
+</table>
+</swe:control>
+<!-- Template End: eSalesConfigApplet10.swt -->

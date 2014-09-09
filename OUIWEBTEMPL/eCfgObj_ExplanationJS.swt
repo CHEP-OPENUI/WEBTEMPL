@@ -1,0 +1,22 @@
+<!-- Template Start: eCfgObj_ExplanationJS.swt -->
+<!-- Oliver: [code redesign] -->
+
+<div class="siebui-applet cxStatusTempl">
+
+	<div class="siebui-applet-title-row">
+		<swe:control id="Explanation" CfgUIControl="lblExplanation" CfgHtmlType="CfgLabel" property="DisplayName" />
+	</div>
+
+	<div class="siebui-applet-content">
+		<table datatable="0" summary="" id="CfgExplanationSpan"></table>
+		
+		<div class="siebui-applet-action siebui-align-right">
+			<span class="siebui-applet-button">
+				<swe:control id="CloseExplanation" CfgUIControl="ClearTheStatus" CfgHtmlType="MiniButton" InvokeMethod="CloseExplanation"/>
+			</span>
+		</div>
+	</div>
+
+</div>
+
+<!-- Template End: eCfgObj_ExplanationJS.swt -->

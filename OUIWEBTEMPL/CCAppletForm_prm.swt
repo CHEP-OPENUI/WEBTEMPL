@@ -1,0 +1,247 @@
+<!-- Template Start: CCAppletForm_prm.swt -->
+<swe:form>
+            <div id="s_registrationPane">
+                    <swe:control id="1001">
+                        <div class="titleLabel " align="swe:this.TextAlignmentLabel">
+                            <swe:this property="DisplayName" hintMapType="Label" hintText="AppletTitle"/>
+                        </div>
+                    </swe:control> 
+                    
+                    <div class="registrationPane">
+                        <swe:control id="1002">
+                            <div class="instructionLabel" align="swe:this.TextAlignmentLabel">
+                                <swe:this property="DisplayName" hintMapType="Label" hintText="Instruction"/>
+                            </div>
+                        </swe:control>
+                        
+                        <swe:for-each startValue="1501" count="20" iteratorName="currentId">
+                            <swe:control id="swe:currentId" hintMapType="FormItem">
+                                <div class="registrationheader siebui-locator-row">
+                                    <div class="mceGridLabel" align="swe:this.TextAlignmentLabel">
+                                        <swe:this property="DisplayName" hintText="Label"/>
+                                        <swe:this property="RequiredIndicator" hintText="Required"/>
+                                    </div>
+                                    <div class="mceGridField" align="swe:this.TextAlignment">
+                                         <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+                                    </div>                          
+                                </div>
+                            </swe:control>
+                        </swe:for-each> 
+                        <!-- divider -->
+                            <swe:control id="11" hintMapType="FormItem">
+                                <div id="prm_form_divider" class="siebui-prm-form-divider"></div>
+                            </swe:control>
+                                                        
+                        <swe:control id="1003">
+                            <div class="instructionLabel" align="swe:this.TextAlignmentLabel">
+                                <swe:this property="DisplayName" hintMapType="Label" hintText="Instruction"/>
+                            </div>
+                        </swe:control> 
+
+						<div class="registrationheader siebui-locator-row">
+							<swe:control id="1621">														
+								<div class="mceGridLabel" align="swe:this.TextAlignmentLabel">
+									<swe:this property="DisplayName" hintMapType="Label" hintText="Company URL"/>
+									<swe:this property="RequiredIndicator" hintText="Required"/>
+								</div>							
+							</swe:control>
+							<swe:control id="1521" hintMapType="FormItem">																
+								<div class="mceGridField" id="compURL" align="swe:this.TextAlignment">
+									 <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="1521"/>
+								</div>                          								
+							</swe:control>
+						</div>
+						<div class="registrationheader siebui-locator-row">
+							<swe:control id="1622">														
+								<div class="mceGridLabel" align="swe:this.TextAlignmentLabel">
+									<swe:this property="DisplayName" hintMapType="Label" hintText="Company Description"/>
+								</div>							
+							</swe:control>
+							<swe:control id="1522" hintMapType="FormItem">																
+								<div class="mceGridField" align="swe:this.TextAlignment">
+									 <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="1522"/>
+								</div>                          								
+							</swe:control>
+						</div>
+						<swe:control id="1523" hintMapType="FormItem">
+							<div class="registrationheader siebui-locator-row">
+								<div class="mceGridLabel" align="swe:this.TextAlignmentLabel">
+									<swe:this property="DisplayName" hintText="Label"/>
+									<swe:this property="RequiredIndicator" hintText="Required"/>
+								</div>
+								<div class="mceGridField" align="swe:this.TextAlignment">
+									 <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="1523"/>
+								</div>                          
+							</div>
+                        </swe:control>
+						<swe:control id="1524" hintMapType="FormItem">
+							<div class="registrationheader siebui-locator-row">
+								<div class="mceGridLabel" align="swe:this.TextAlignmentLabel">
+									<swe:this property="DisplayName" hintText="Label"/>
+									<swe:this property="RequiredIndicator" hintText="Required"/>
+								</div>
+								<div class="mceGridField" align="swe:this.TextAlignment">
+									 <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="1524"/>
+								</div>                          
+							</div>
+						</swe:control>
+						<div class="registrationheader siebui-locator-row">								
+							<swe:control id="1625">
+									<div class="mceGridLabel" align="swe:this.TextAlignmentLabel">
+										<swe:this property="DisplayName" hintMapType="Label" hintText="Growth Strategy"/>
+									</div>								
+							</swe:control>						
+							<swe:control id="1525" hintMapType="FormItem">								
+									<div class="mceGridField" align="swe:this.TextAlignment">
+										 <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="1525"/>
+									</div>                          								
+							</swe:control>
+						</div>
+						<swe:control id="1526" hintMapType="FormItem">
+							<div class="registrationheader siebui-locator-row">
+								<div class="mceGridLabel" align="swe:this.TextAlignmentLabel">
+									<swe:this property="DisplayName" hintText="Label"/>
+									<swe:this property="RequiredIndicator" hintText="Required"/>
+								</div>
+								<div class="mceGridField" align="swe:this.TextAlignment">
+									 <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="1526"/>
+								</div>                          
+							</div>
+                        </swe:control>		
+						<swe:control id="1527" hintMapType="FormItem">
+							<div class="registrationheader siebui-locator-row">
+								<div class="mceGridLabel" align="swe:this.TextAlignmentLabel">
+									<swe:this property="DisplayName" hintText="Label"/>
+									<swe:this property="RequiredIndicator" hintText="Required"/>
+								</div>
+								<div class="mceGridField" align="swe:this.TextAlignment">
+									 <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="1527"/>
+								</div>                          
+							</div>
+						</swe:control>
+						<div class="registrationheader siebui-locator-row">
+							<swe:control id="1628">								
+									<div class="mceGridLabel" align="swe:this.TextAlignmentLabel">
+										<swe:this property="DisplayName" hintMapType="Label" hintText="Routes to Market"/>
+									</div>								
+							</swe:control>						
+							<swe:control id="1528" hintMapType="FormItem">								
+									<div class="mceGridField" align="swe:this.TextAlignment">
+										 <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="1528"/>
+									</div>                          								
+							</swe:control>
+						</div>
+						<swe:control id="1529" hintMapType="FormItem">
+							<div class="registrationheader siebui-locator-row competitor_1">
+								<div class="mceGridLabel" align="swe:this.TextAlignmentLabel">
+									<swe:this property="DisplayName" hintText="Label"/>
+									<swe:this property="RequiredIndicator" hintText="Required"/>
+								</div>
+								<div class="mceGridField" align="swe:this.TextAlignment">
+									 <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+								</div> 
+								<div class="morecomp_1">
+									<a class="siebui-partnerreg-add"></a>
+								</div>
+							</div>
+						</swe:control>						
+						<swe:control id="1530" hintMapType="FormItem">
+							<div class="registrationheader siebui-locator-row competitor_2">
+								<div class="mceGridLabel" align="swe:this.TextAlignmentLabel">
+									<swe:this property="DisplayName" hintText="Label"/>
+									<swe:this property="RequiredIndicator" hintText="Required"/>
+								</div>
+								<div class="mceGridField" align="swe:this.TextAlignment">
+									 <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+								</div> 
+								<div class="morecomp_2">
+									<a class="siebui-partnerreg-add"></a>
+								</div>
+							</div>
+						</swe:control>
+						<swe:control id="1531" hintMapType="FormItem">
+							<div class="registrationheader siebui-locator-row competitor_3">
+								<div class="mceGridLabel" align="swe:this.TextAlignmentLabel">
+									<swe:this property="DisplayName" hintText="Label"/>
+									<swe:this property="RequiredIndicator" hintText="Required"/>
+								</div>
+								<div class="mceGridField" align="swe:this.TextAlignment">
+									 <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+								</div> 
+							</div>
+						</swe:control>						
+						<swe:control id="1532" hintMapType="FormItem">
+							<div class="registrationheader siebui-locator-row partner_1">
+								<div class="mceGridLabel" align="swe:this.TextAlignmentLabel">
+									<swe:this property="DisplayName" hintText="Label"/>
+									<swe:this property="RequiredIndicator" hintText="Required"/>
+								</div>
+								<div class="mceGridField" align="swe:this.TextAlignment">
+									 <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+								</div> 
+								<div class="morepart_1">
+									<a class="siebui-partnerreg-add"></a>
+								</div>
+							</div>
+						</swe:control>
+						<swe:control id="1533" hintMapType="FormItem">
+							<div class="registrationheader siebui-locator-row partner_2">
+								<div class="mceGridLabel" align="swe:this.TextAlignmentLabel">
+									<swe:this property="DisplayName" hintText="Label"/>
+									<swe:this property="RequiredIndicator" hintText="Required"/>
+								</div>
+								<div class="mceGridField" align="swe:this.TextAlignment">
+									 <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+								</div> 
+								<div class="morepart_2">
+									<a class="siebui-partnerreg-add"></a>
+								</div>
+							</div>
+						</swe:control>						
+						<swe:control id="1534" hintMapType="FormItem">
+							<div class="registrationheader siebui-locator-row partner_3">
+								<div class="mceGridLabel" align="swe:this.TextAlignmentLabel">
+									<swe:this property="DisplayName" hintText="Label"/>
+									<swe:this property="RequiredIndicator" hintText="Required"/>
+								</div>
+								<div class="mceGridField" align="swe:this.TextAlignment">
+									 <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+								</div> 
+							</div>
+						</swe:control>
+                        <swe:for-each startValue="1535" count="6" iteratorName="currentId">
+                            <swe:control id="swe:currentId" hintMapType="FormItem">
+                                <div class="registrationheader siebui-locator-row">
+                                    <div class="mceGridLabel" align="swe:this.TextAlignmentLabel">
+                                        <swe:this property="DisplayName" hintText="Label"/>
+                                        <swe:this property="RequiredIndicator" hintText="Required"/>
+                                    </div>
+                                    <div class="mceGridField" align="swe:this.TextAlignment">
+                                         <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+                                    </div>                          
+                                </div>
+                            </swe:control>
+                        </swe:for-each> 						
+                                            
+                        <swe:for-each startValue="1541" count="20" iteratorName="currentId">
+                            <swe:control id="swe:currentId" hintMapType="FormItem">
+                                <div class="registrationheader siebui-locator-row">
+                                    <div class="mceGridLabel" align="swe:this.TextAlignmentLabel">
+                                        <swe:this property="DisplayName" hintText="Label"/>
+                                        <swe:this property="RequiredIndicator" hintText="Required"/>
+                                    </div>
+                                    <div class="mceGridField" align="swe:this.TextAlignment">
+                                         <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+                                    </div>                          
+                                </div>
+                            </swe:control>
+                        </swe:for-each>
+                        
+                        <div class="regButton">
+                            <swe:control id="110"><swe:this property="FormattedHtml" hintMapType="Control" hintText="OK"/></swe:control>
+                            <swe:control id="111"><swe:this property="FormattedHtml" hintMapType="Control" hintText="Cancel"/></swe:control>
+                        </div>
+                    </div> 
+                </div>
+</swe:form>
+<!-- Template End: CCAppletForm_prm.swt -->

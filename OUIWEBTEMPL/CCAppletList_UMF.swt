@@ -1,0 +1,50 @@
+<!-- Template Start: CCAppletList_Tile.swt -->
+<swe:include file="CCApplet_NamedSpacer.swt"/>  
+<swe:control id="1100">
+  <div class="CmdTxt">
+    <swe:this property="FormattedHtml" hintText="Outside Applet Help Text" hintMapType="Control"/>
+  </div>
+</swe:control>
+<swe:form>
+    <swe:include file="CCTitle_Named.swt"/>   
+    <div class="swe:this.SelectStyle">  
+        <swe:switch>
+            <swe:case condition="Web Engine State Properties, IsMobileApplicationMode">
+                <swe:include file="CCListButtonsTop_Mobile.swt"/>
+            </swe:case>
+            <swe:default>
+                <swe:include file="CCListButtonsTopNoMenuButton.swt"/>
+            </swe:default>
+        </swe:switch>
+        <swe:error type="Popup">
+            <div class="swe:class AppletBack">
+                <div class="error">
+                    <swe:this property="FormattedHtml"/>
+                </div>
+            </div>
+        </swe:error>
+        <div class="AppletHIListBorder siebui-tile-container siebui-umf-tile-container">
+          <swe:this property="NoGrid"/>
+          <swe:this property="Vertical"/>
+          <swe:this property="ScrollVisibleTiles"/>
+          <swe:list>
+            <swe:list-record>
+                <!-- Image for the recommendation message -->
+                <div class="siebui-umf-tile-top">
+                    <swe:control id="501" hintMapType="FormItem">
+                        <div class="siebui-umf-tile-image" align="swe:this.TextAlignment">
+                            <swe:this property="FormattedHtml" hintText="Field"/>
+                        </div>
+                    </swe:control>
+                    <swe:control id="502" hintMapType="FormItem">
+                        <div class="siebui-form-data siebui-umf-tile-description" align="swe:this.TextAlignment">
+                            <swe:this property="FormattedHtml" hintText="Field"/>
+                        </div>
+                    </swe:control>
+                </div>    
+            </swe:list-record>
+          </swe:list>
+        </div>
+    </div>
+</swe:form> 
+<!-- Template End: CCAppletList_Tile.swt -->

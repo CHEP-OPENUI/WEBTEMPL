@@ -1,0 +1,87 @@
+<!-- Template Start CCAppletFormDetailSection_ss.swt -->
+    
+<div >
+    <!-- Applet Form Section -->
+    <ul class="siebui-unordered-list">
+        <!-- Applet Header Text is placed under this section -->
+        <div class="siebui-ss-form">
+            <swe:control id="90">
+                <li class="siebui-list-section1">
+                    <div  class="siebui-ss-applt-caption siebui-ss-applt-header">
+                        <swe:this property="FormattedHtml" hintMapType="Control" hintText="Title" />
+                    </div>
+                </li>
+            </swe:control>
+            <!-- Applet Header Help Text is placed under this section -->
+            <swe:control id="91">
+                <li class="siebui-list-section1">
+                    <div class="siebui-ss-applt-helptext">
+                        <span  class="siebui-ss-applt-helptext-spn">
+                            <swe:this property="DisplayName" hintText="Inside Applet Help Text"/>
+                        </span>
+                    </div>
+                </li>
+            </swe:control>
+            <!-- Placeholder to be used when field value is exposed as Applet Header Text -->
+            <swe:control id="92">
+                <li class="siebui-list-section1">
+                    <div  class="siebui-ss-applt-caption-small siebui-ss-applt-header">
+                        <swe:this property="FormattedHtml" hintMapType="Field" hintMapLabelId="swe:currentId"/>
+                    </div>
+                </li>
+            </swe:control>
+
+            <swe:include file="CCAppletForm3Col_ss.swt"/>
+
+            <li class="siebui-list-form-content siebui-list-padding">
+                <!-- Form Body -->
+                <ul class="siebui-unordered-list">
+                    <div class="siebui-ss-applt-list-left-align">
+                        <swe:for-each startValue="1401" count="5" iteratorName="currentId">
+                            <!-- Place holder to place both Label and Field -->
+                            <swe:control id="swe:currentId" hintMapType="FormItem">
+                                <li class="siebui-list-section1">
+                                    <div class="siebui-ss-tbl-row">
+                                        <div class="mceGridLabel siebui-ss-tbl-cell" align="swe:this.TextAlignmentLabel">
+                                            <swe:this property="DisplayName" hintText="Label"/>
+                                            <swe:this property="RequiredIndicator" hintText="Required"/>
+                                        </div>
+                                        <div class="mceGridField siebui-ss-tbl-cell siebui-ss-field" align="swe:this.TextAlignment">
+                                            <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+                                        </div>
+                                    </div>
+                                </li>
+                            </swe:control>
+                        </swe:for-each>
+                    </div>
+                </ul>
+            </li>
+
+            <li class="siebui-list-form-content siebui-list-padding">
+                <!-- Form Body -->
+                <ul class="siebui-unordered-list">
+                    <div class="siebui-ss-applt-list-left-align">
+                        <swe:for-each startValue="1406" count="5" iteratorName="currentId">
+                            <!-- Place holder to place both Label and Field -->
+                            <swe:control id="swe:currentId" hintMapType="FormItem">
+                                <li class="siebui-list-section1">
+                                    <div class="siebui-ss-tbl-row">
+                                        <div class="mceGridLabel siebui-ss-tbl-cell" align="swe:this.TextAlignmentLabel">
+                                            <swe:this property="DisplayName" hintText="Label"/>
+                                            <swe:this property="RequiredIndicator" hintText="Required"/>
+                                        </div>
+                                        <div class="mceGridField siebui-ss-tbl-cell siebui-ss-field" align="swe:this.TextAlignment">
+                                            <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+                                        </div>
+                                    </div>
+                                </li>
+                            </swe:control>
+                        </swe:for-each>
+                    </div>
+                </ul>
+            </li>
+        </div>
+    </ul>
+</div>
+
+<!-- Template End CCAppletFormDetailSection_ss.swt -->

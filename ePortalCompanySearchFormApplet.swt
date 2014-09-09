@@ -1,0 +1,119 @@
+<!-- Template Start ePortalCompanySearchFormApplet.swt (from: CCAppletListPortal.swt) -->
+
+<swe:layout viewDisplayMode="Layout">
+	<swe:include file="CCApplet_Spacer.swt"/>
+	<swe:include file="CCLayoutTitlePortal.swt"/>
+</swe:layout>
+
+<!-- Begin Show Mode -->
+<swe:layout viewDisplayMode="Show">
+<table datatable="0" summary="" width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr valign="top"><td><img src="images/spacer.gif" width="1" height="3" alt=""></td></tr></table>
+
+<swe:control id="1100">
+  <div class=CmdTxt><swe:this property="FormattedHtml" hintText="Outside Applet Help Text" hintMapType="Control"/></div><p>
+</swe:control>
+
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+ <tr valign="top">
+  <td class="AppletStyle1">
+
+	<swe:include file="ePortalAppletTitle.swt"/>
+	
+	<swe:layout appletDisplaySize="Max">
+
+   <!-- Begin Border -->
+   <table datatable="0" summary="" class="calendarBorder" valign="top" width="100%" cellpadding="1" cellspacing="0" border="0">
+    <tr>
+     <td valign="top">
+      <table datatable="0" summary="" valign="top" width="100%" cellpadding="3" cellspacing="0" border="0">
+       <tr class="calendarBlank">
+        <td valign="top">
+
+<!-- Begin Company Search form -->
+
+<form name="SICompanySearchForm" method="GET" onSubmit="SISubmitEvent(); return false;">
+
+<input type="hidden" name="OneShot" value="1">
+<swe:control id="509" property="DisplayName" hintText="Label" hintMapType="Control"/>
+<swe:control id="508" property="DisplayName" hintText="Label" hintMapType="Control"/>
+<swe:control id="507" property="DisplayName" hintText="Label" hintMapType="Control"/>
+<swe:control id="510" property="DisplayName" hintText="Label" hintMapType="Control"/>
+<swe:control id="511" property="DisplayName" hintText="Label" hintMapType="Control"/>
+
+<swe:if condition="Web Engine State Properties, IsLowInteractive">
+
+   <swe:control id="511"><!-- only do this for ATM in LI mode -->
+   
+   <input type="hidden" name="SWEMethod" value="AddMID">
+   <input type="hidden" name="SWEApplet" value="ePortal Account Topic Account List Applet">
+   <input type="hidden" name="SWECmd" value="InvokeMethod">
+   </swe:control>
+
+</swe:if>
+<!-- Label: company search blurb -->
+<br>
+<swe:control id="501">
+<swe:this property="DisplayName" hintText="Long Label"/>
+<p></p>
+</swe:control>
+
+<table datatable="0" summary="">
+ <!-- Company Search Text -->
+ <tr>
+  <td class="FormLabel">
+   <swe:control id="502" property="DisplayName" hintText="Label"/>
+  </td>
+  <td>
+   <input type="text" name="Find" size="30">
+  </td>
+  <td nowrap>
+   <span height="16" class="minibuttonOn"><a href='JavaScript:SISubmitEvent()'>&nbsp;&nbsp;<swe:control id="504" property="DisplayName" hintText="Label" hintMapType="Control"/>&nbsp;&nbsp;</a></span>
+  </td>
+ </tr>
+</table>
+</form>
+<!-- End Company Search form -->
+
+        </td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>
+   <!-- End Border -->
+
+	</swe:layout>
+	
+  	<swe:include file="CCBottomApplet.swt"/>
+  </td>
+ </tr>
+</table>
+
+<!-- Begin Specialized Javascript -->
+<swe:layout appletDisplaySize="Max">
+<script language="javascript">
+
+function SISubmitEvent()
+{
+
+   SWEPersonalizationGotoview(document.SICompanySearchForm.SWEView.value, "OneShot=1&Find=" + document.SICompanySearchForm.Find.value);
+	
+   <swe:if condition="Web Engine State Properties, IsLowInteractive">
+
+      <swe:control id="511"><!-- only do this for ATM in LI mode -->
+
+      </swe:control>
+
+   </swe:if>
+
+}
+
+</script>
+</swe:layout>
+<!-- Begin End Javascript -->
+
+</swe:layout>
+<!-- End Show Mode -->
+
+<!-- Template End ePortalCompanySearchFormApplet.swt -->
+

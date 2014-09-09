@@ -1,0 +1,196 @@
+<!-- Template Start: eCfgControlComboPriceMultiLevelJS.swt -->
+
+<script>
+   function ExpandCollapseCtrl (sPath)
+   {                      
+      var CtrlObj = document.getElementById (sPath + '_CECTRL');
+      var ImgObj = document.getElementById (sPath + '_CEIMG');
+      
+      if (CtrlObj.style.display == 'none')      
+      {
+         CtrlObj.style.display = '';
+         ImgObj.src = 'images/arrow_up_sm.gif';
+         
+         for (var i = 0; i < window.top.m_collapsedCtrl.length; i++)
+         {
+            if (window.top.m_collapsedCtrl [i] == sPath)
+            {
+               window.top.m_collapsedCtrl.splice (i, 1);
+               break;
+            }
+         }
+      }
+      else
+      {
+         CtrlObj.style.display = 'none';
+         ImgObj.src = 'images/arrow_down_sm.gif';
+         window.top.m_collapsedCtrl.push (sPath);
+      }
+   }
+</script>
+
+<swe:include file="eCfgPort_HeaderJS.swt"/>
+
+<tr>
+   <td width=100% colspan=4>
+      <table cellpadding=0 cellspacing=0 border=0 width=100%>
+         <tr>
+            <td>
+               <script>
+                  var sAddItemLabel = '<swe:control id="AddItem" CfgUIControl="AddItem" CfgHtmlType="CfgLabel"/>';
+                  var sComboAddNameLabel = '<swe:control id="Name" CfgUIControl="lblName" CfgHtmlType="CfgLabel"/>';                     
+               </script>
+               <swe:for-each id="1100" CfgLoopType="Domain" Automation="N" startValue="1000" count="Dynamic" iteratorName="1100Id" >
+                  <swe:control id="ComboAdd" CfgHtmlType="CfgComboAdd" ForceRefresh="Y"
+                   CfgJSShow="showSelectAndOptionsWithoutQtyCtrl" CfgJSUpdateExclusion="updateExcludedItemForPort" CfgJSUpdateSelection="updatePortItemsForComboAddWithoutQtyCtrl"/>
+               </swe:for-each>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="3">                                     
+               <table border="0" cellpadding="0" cellspacing="3" width="100%">
+                  <swe:for-each id="500" CfgLoopType="Children" startValue="1500" count="Dynamic" iteratorName="101Id"
+                  CfgFieldList="CfgFieldName:Name, CfgUIControl:lblName, HtmlAttrib_width:250, HtmlAttrib_align:left, Default:Y*
+                                CfgFieldName:RequireMoreChild, Default:Y*
+                                CfgFieldName:Original List Price, CfgUIControl:lblListPrice, DataType:DTYPE_CURRENCY, NeedRefresh:N, HtmlAttrib_align:center, HtmlAttrib_width:80*
+                                CfgFieldName:Current Price, CfgUIControl:lblYourPrice, DataType:DTYPE_CURRENCY, HtmlAttrib_align:center, HtmlAttrib_width:80*                                 
+                                CfgFieldName:Explanation, CfgUIControl:lblExplanation, HtmlAttrib_width:70, HtmlAttrib_align:center*                                 
+                                CfgFieldName:Remove, CfgUIControl:lblRemove, HtmlAttrib_width:70, HtmlAttrib_align:center*
+                                CfgFieldName:Customize, CfgUIControl:lblCustomize, HtmlAttrib_width:70, HtmlAttrib_align:center"
+                  >
+                     <tr>
+                        <td align="center">
+                           <swe:control id="Port Item" CfgHtmlType="CfgPortItem" 
+                           CfgJSShow="showPortItemsWithoutQtyCtrl" CfgJSUpdateSelection="updatePortItemsForComboAddWithoutQtyCtrl"/>
+                        </td>
+                     </tr>
+                  </swe:for-each>
+               </table>                   
+            </td>
+         </tr>            
+      </table>
+   </td>
+</tr>
+
+<!-- for each selected product of the current relationship, include full UI starting from group level -->
+<tr>
+   <td width="100%" colspan="4">   
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+         <swe:for-each id="500" CfgLoopType="Children" startValue="1500" count="Dynamic" iteratorName="101Id">
+            
+            <script>
+               var sCtrlPath = '<swe:control id="swe:100Id+50" CfgHtmlType="CfgLabel" CfgFieldName="Path"/>';
+               var sCollapseExpandImgId = sCtrlPath + '_CEIMG';
+               var sCollapseExpandCtrlId = sCtrlPath + '_CECTRL';
+            </script>
+            
+            <tr>
+               <td width="5%">
+                  &nbsp;
+               </td>
+               <td colspan="2" width="80%" class="dCCItemSectionTitle" style="border-left: 1 solid #808080; border-right: 1 solid #808080; border-top: 1 solid #808080 ; border-bottom: 1 solid #808080">
+                  <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<swe:control id="swe:100Id+50" CfgHtmlType="CfgLabel" CfgFieldName="Name"/></b>
+               </td>
+               <td width="10%">                  
+                  <script>
+                     document.write ('<img id="' + sCollapseExpandImgId + '" src ="images/arrow_up_sm.gif" onClick=ExpandCollapseCtrl("' + sCtrlPath + '")>');                         
+                  </script>
+               </td>
+            </tr>
+                        
+            <script>
+               document.write ('<tr id="' + sCollapseExpandCtrlId + '"><td colspan="4"><table>');               
+            </script>
+            
+               <swe:switch>
+                  <swe:case condition="Default, TestFieldValue, Operator:==, FieldName:HasGroup, FieldValue:Y">
+
+                     <swe:for-each id="110" CfgLoopType="CurrentGroup" startValue="8100" count="Dynamic" iteratorName="100Id">
+                        <tr>
+                           <td width="5%">
+                              &nbsp;
+                           </td>
+                           <td width="5%">
+                              &nbsp;
+                           </td>
+                           <td width="80%">
+                              <swe:include id="swe:151Id" CfgHtmlType="CurrentGroup"/>
+                           </td>
+                           <td width="10%">
+                              &nbsp;
+                           </td>
+                        </tr>
+                     </swe:for-each>
+
+                  </swe:case>
+                  <swe:default>
+
+                        <tr>
+                        <td width="5%">
+                           &nbsp;
+                        </td>
+                        <td width="5%">
+                           &nbsp;
+                        </td>
+                        <td width="80%">
+                           <table>
+                           <swe:for-each id="110" CfgLoopType="Attribute" startValue="1100" count="Dynamic" iteratorName="IncId" >
+                              <tr class="listRowOff">
+                                 <td class="row" width="100%" class="AppletBlank">
+                                    <swe:include id="swe:151Id" CfgHtmlType="Children"/>
+                                 </td>
+                              </tr>
+                           </swe:for-each>
+
+                              <tr><td width="100%" class="AppletBlank">&nbsp;</td></tr>
+                              <tr><td width="100%" class="AppletBlank">&nbsp;</td></tr>
+
+                           <swe:for-each id="100" CfgLoopType="Port" startValue="2100" count="Dynamic" iteratorName="IncId" >
+                              <tr class="listRowOff">
+                                 <td width="100%" class="row" class="AppletBlank" >
+                                    <swe:include id="swe:151Id" CfgHtmlType="Children"/>
+                                 </td>
+                              </tr>
+                           </swe:for-each>
+
+                              <tr><td width="100%" class="AppletBlank">&nbsp;</td></tr>
+                              <tr><td width="100%" class="AppletBlank">&nbsp;</td></tr>
+                           </table>
+                        </td>
+                        <td width="10%">
+                           &nbsp;
+                        </td>
+                     </tr>
+
+                  </swe:default>
+               </swe:switch>
+          
+            <script>
+               document.write ('</table></td></tr>');            
+            </script>
+            
+         </swe:for-each>
+      </table>
+   </td>
+</tr>
+
+<script>
+if (window.top.m_collapsedCtrl.length > 0)
+{
+   for (var i = 0; i < window.top.m_collapsedCtrl.length; i ++)
+   {
+      var ObjCtrl = document.getElementById (window.top.m_collapsedCtrl [i] + '_CECTRL');
+      var ImgCtrl = document.getElementById (window.top.m_collapsedCtrl [i] + '_CEIMG');
+
+      if (ObjCtrl != null && ImgCtrl != null)
+      {
+         ObjCtrl.style.display = "none";  
+         ImgCtrl.src = "images/arrow_down_sm.gif";
+      }
+   }
+}
+</script>
+
+<swe:include file="eCfgPort_FooterJS.swt"/>
+
+<!-- Template End: eCfgControlComboPriceMultiLevelJS.swt -->

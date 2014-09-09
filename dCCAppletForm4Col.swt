@@ -1,0 +1,22 @@
+<!-- Template Start: dCCAppletForm4Col.swt -->
+
+<swe:include file="CCApplet_NamedSpacer.swt"/>	
+
+<swe:form>
+
+	<swe:include file="dCCTitle_Named.swt"/>
+
+	<swe:include file="CCTogglebar_drop.swt"/>			
+	<swe:include file="dCCFormButtonsTop.swt"/>
+	<swe:include file="CCForm4ColBody.swt"/>
+	
+	</span>			
+
+</swe:form>
+
+
+
+<!-- Template End: dCCAppletForm4Col.swt -->
+
+
+	

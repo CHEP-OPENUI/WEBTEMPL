@@ -1,0 +1,32 @@
+<!-- Template Start: CCAppletListPSearchTail.swt  -->
+<swe:for-each-row count="30">
+    <tr class="siebui-comparelist-row">
+        <!-- For the attribute name -->
+        <swe:for-each startValue="501" count="1" iteratorName="currentId">
+            <swe:control id="swe:currentId">
+                <th class="siebui-comparelist-attrname">
+                    <span class="mceGridField siebui-comparelist-hide">
+                    <swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/>
+                    </span>
+                </th>
+            </swe:control>
+        </swe:for-each>
+        <!-- For the attribute value, there is specialized code which will show all the attribute value for this id -->
+        <swe:for-each startValue="502" count="1" iteratorName="currentId">
+            <swe:control id="swe:currentId">
+                <td align="swe:this.TextAlignment" property="FormattedHtml" class="siebui-comparelist-attrvaluecell">
+                    <span class="mceGridField">
+                    <swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/>
+                    </span>
+                </td>
+            </swe:control>
+        </swe:for-each>
+        <!------------ Per-record Control Buttons ------------->
+    </tr>
+    <!------------ End Loop ------------->
+</swe:for-each-row>
+<!-- Template End: CCListBodyNoRowHilite.swt -->
+</table>
+</div>
+</div>
+<!-- Template End: CCAppletListPSearchTail.swt  -->

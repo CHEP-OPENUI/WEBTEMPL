@@ -1,0 +1,178 @@
+<!-- Template Start: eCfgBaseAutoRepriceJS.swt -->
+
+<swe:control id="swe:CFGPARAMETER" AutoReprice="Y" property="FormattedHtml" />
+
+<div id="cxAutoReprice" class="cxBaseTheme">
+<span class="AppletStyle5">
+   <table class="AppletBack" width="95%" cellpadding="0" cellspacing="0" border="0" align="center">
+      <tr>
+         <td>
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="white">
+               <tr>
+                  <td colspan="2" align="left">
+                     <!-- Product Threadbar -->
+                     <span class="threadbar">
+                        <swe:include file="eCfgCompThreadJS.swt" />
+                     </span>
+                  </td>
+                  <td align="center">
+                     <div id="TopLevelButtons1">
+                        <swe:include file="eCfgTopLevelButtonsJS.swt"/>
+                     </div>
+                  </td>
+               </tr>
+
+               <tr>
+                  <td colspan=3>
+                     &nbsp;
+                  </td>
+               </tr>
+
+               <tr>
+                  <td id="imageHolder" width="25%" height="100%" valign="top">
+                     <SCRIPT>
+                        var sImage = '<swe:control id="swe:10" CfgFieldName=".ProductHeaderImage" CfgHtmlType="CfgLabel"/>';
+
+                        if ( 0 == sImage.length )
+                           sImage = 'images/hm_pg_subscribe.gif';
+
+                        document.write ( '<img border="0" width="200" height="100" src="' + sImage + '">' );
+                     </SCRIPT>
+                  </td>
+
+                  <td width="25%" height="100%" valign="top">
+                     <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="white">
+                        <tr>
+                           <td>
+                              <!-- Product Title -->
+                              <span class="dCCItemTitle">
+                                 <span id="CxObjName" class="cxLabel">
+                                    <swe:control id="swe:CurrentRoot" CfgFieldName="CxObjName" CfgHtmlType="CfgLabel"  />
+                                 </span>
+                                 <swe:control id="RequireMoreChild" CfgHtmlType="CfgGenerics" />
+                              </span>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td class="error">
+                              <swe:control id="YourPriceLbl" CfgUIControl="lblYourPrice" CfgHtmlType="CfgLabel"/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td class="Required">
+                              <swe:control id="YourPrice" CfgHtmlType="CfgText" CfgFieldName="Rollup Item Price" DataType="DTYPE_CURRENCY"/>
+                           </td>
+                        </tr>
+                     </table>
+                  </td>
+                  <td width="50%" height="100%" valign="top">
+                     <div class="AppletStyle3">
+                        <table width="100%" height="100%" cellspacing="1" cellpadding="0" bgcolor="#f2f6ff" style="border-left:1px solid #cccccc;border-right:1px solid #cccccc;border-top:1px solid #cccccc"  >
+                           <tr>
+                              <td valign="top">
+                                 <swe:include file="eCfgObj_GlobalSignalJS.swt" />
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <img src="IMAGES/bullet_green.gif" width="9" height="14" border="0" alt="">
+                        <script>
+                           var sPD = '<swe:control id="ProdDetails" CfgUIControl="lblProdDetails" CfgHtmlType="CfgLabel"/>';
+                           document.write ("<b><a href='Javascript:showProdDetails()'>" + sPD + "</a></b>");
+                        </script>
+                  </td>
+                  <td>
+                     &nbsp;
+                  </td>
+                  <td>
+                     <table width="100%" cellspacing="1" cellpadding="0" bgcolor="#f2f6ff" style="border-left:1px solid #cccccc;border-right:1px solid #cccccc;border-bottom:1px solid #cccccc" >
+                        <tr>
+                           <script>
+                              var sPrev = '<swe:control id="swe:10" CfgUIControl="lblPrevious" CfgHtmlType="CfgLabel"/>';
+                              var sNext = '<swe:control id="swe:10" CfgUIControl="lblNext" CfgHtmlType="CfgLabel"/>';
+                              var sAllMsg = '<swe:control id="swe:10" CfgUIControl="lblMsgDetails" CfgHtmlType="CfgLabel"/>';
+                           </script>
+
+                           <td id="CfgPrevMsg" width="33%" align="left">
+                              <b>
+                                 <script>
+                                    document.write (sPrev);
+                                 </script>
+                              </b>
+                           </td>
+                           <td id="CfgAllMsg" width="33%" align="middle">
+                              <b>
+                                 <script>
+                                    document.write (sAllMsg);
+                                 </script>
+                              </b>
+                           </td>
+                           <td id="CfgNextMsg" width="33%" align="right">
+                              <b>
+                                 <script>
+                                    document.write (sNext);
+                                 </script>
+                              </b>
+                           </td>
+                        </tr>
+                     </table>
+                  </td>
+               </tr>
+            </table>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <div id="Messages Page">
+               <swe:include file="eCfgObj_MessagesJS.swt" />
+            </div>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <div id="Conflict Page" style="display:none">
+               <swe:include file="eCfgObj_Status_ConflictJS.swt" />
+            </div>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <div id="Explanation Page" style="display:none">
+               <swe:include file="eCfgObj_ExplanationJS.swt" />
+            </div>
+         </td>
+      </tr>
+
+      <tr>
+         <td>&nbsp;</td>
+      </tr>
+
+      <tr>
+         <td>
+            <div id="Main Page">
+               <swe:include id="product" CfgHtmlType="Product Theme"/>
+            </div>
+         </td>
+      </tr>
+   </table>
+</span>
+</div>
+
+<div id="CfgTip" style="display:none;position:absolute;z-index:1000;top:-100"></div>
+<div style="display:none">
+<table>
+   <tr>
+      <swe:form>
+         <td>
+            <swe:control name ="Done" id="HiddenControl" property="FormattedHtml"/>
+         </td>
+      </swe:form>
+   </tr>
+</table>
+</div>
+
+<!-- Template End: eCfgBaseAutoRepriceJS.swt -->

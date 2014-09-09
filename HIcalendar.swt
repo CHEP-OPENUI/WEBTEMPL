@@ -1,0 +1,89 @@
+
+<!-- Template Start: HIcalendar.swt -->
+
+<swe:include file="CCApplet_NamedSpacer.swt"/>  
+
+<swe:form>
+
+<!-- Mapped buttons here -->
+
+<div ID=divCalendarBar STYLE='display:block'>
+
+<swe:include file="CCTitle_Named.swt"/>
+
+<table datatable="0" summary="" ID=tbBar CLASS="AppletBack" ALIGN=center WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+
+<tr>
+    
+<td id="tbMainCalCtrls" STYLE=width:100%>
+	
+    <!-- Outlook Calendar Standard buttons -->
+    <table datatable="0" summary="" id="tbControls1">
+            
+        <tr class="AppletBack" align="left">
+        <td><img src="images/spacer.gif" height="1" width="10" alt=""></td>
+        
+        <!-- Mapped Buttons here -->        
+        <swe:control id="110"><!-- New, 110 --><td nowrap align=center><swe:this property="FormattedHtml" hintMapType="Control" hintText="New"/></td></swe:control>
+        <swe:control id="111"><!-- Print,111 --><td nowrap align=center><swe:this property="FormattedHtml" hintMapType="Control" hintText="Print"/></td></swe:control>
+        <swe:control id="112"><!-- Delete, 112  --><td nowrap align=center><swe:this property="FormattedHtml" hintMapType="Control" hintText="Delete"/></td></swe:control>
+                
+        <td nowrap align=center>&nbsp;&nbsp;&nbsp;<span class="divider"><img src="images/spacer.gif" align="absmiddle" width="1" height="18" alt=""></span>&nbsp;&nbsp;&nbsp;
+        </td>
+        
+        <swe:control id="113"><!-- Today,113  --><td nowrap align=center><swe:this property="FormattedHtml" hintMapType="Control" hintText="Today"/></td></swe:control>          
+                
+        <td nowrap align=center>&nbsp;&nbsp;&nbsp;<span class="divider"><img src="images/spacer.gif" align="absmiddle" width="1" height="18" alt=""></span>&nbsp;&nbsp;&nbsp;
+        </td>
+            
+        <swe:control id="114"><!-- Day, 114  --><td nowrap align=center><swe:this property="FormattedHtml" hintMapType="Control" hintText="Day"/></td></swe:control>
+        <swe:control id="115"><!-- 5 Day Week, 115 --><td nowrap align=center><swe:this property="FormattedHtml" hintMapType="Control" hintText="5 Day Week"/></td></swe:control>
+        <swe:control id="116"><!-- 7 Day Week, 116 --><td nowrap align=center><swe:this property="FormattedHtml" hintMapType="Control" hintText="7 Day Week"/></td></swe:control>
+        <swe:control id="117"><!-- Month, 117 --><td nowrap align=center><swe:this property="FormattedHtml" hintMapType="Control" hintText="Month"/></td></swe:control>                     
+            
+                
+        <td nowrap align=center>&nbsp;&nbsp;&nbsp;<span class="divider"><img src="images/spacer.gif" align="absmiddle" width="1" height="18" alt=""></span>&nbsp;&nbsp;&nbsp;
+        </td>
+                                
+        <swe:control id="118"><!-- Optional Control --><td nowrap align=center><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+        <swe:control id="119"><!-- Optional Control --><td nowrap align=center><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+        <swe:control id="120"><!-- Optional Control --><td nowrap align=center><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+            
+        </tr>
+    </table>
+
+    <!-- Outlook Calendar View and Owner Dropdowns -->
+    <table datatable="0" summary="" id="tbControls2">
+        <tr class="AppletBack" align="left">
+        <td><img src="images/spacer.gif" height="1" width="10" alt=""></td>
+        
+        <!-- Mapped Other Controls here -->
+        <swe:control id="121"><!-- Optional Control --><td nowrap align=center><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+        <swe:control id="122"><!-- Optional Control --><td nowrap align=center><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+        <swe:control id="123"><!-- Optional Control --><td nowrap align=center><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control>
+        <swe:control id="124"><!-- Optional Control --><td nowrap align=center><swe:this property="FormattedHtml" hintMapType="Control"/></td></swe:control> 
+        
+        </tr>
+    </table>
+         
+</td>
+</tr>
+</table> 
+</span>
+</div>
+    
+<!-- Mapped control container here -->
+    
+<table datatable="0" summary="" ID=tbCal ALIGN=center WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0> 
+   <tr valign="top">
+      <swe:control id="1001">
+         <td align="left">
+            <swe:this property="FormattedHtml" hintText="Calendar Custom Control" hintMapType="FormItem"/>
+         </td>
+      </swe:control>        
+   </tr>   
+</table>
+
+</swe:form>
+
+<!-- Template End: HIcalendar.swt -->

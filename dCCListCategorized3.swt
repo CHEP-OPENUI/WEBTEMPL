@@ -1,0 +1,30 @@
+<!-- Template Start: dCCListCategorized3.swt -->
+<swe:for-each-row count="10">
+<tr valign="top">
+    <td width="1"><swe:control id="501"><img src="images/bullet_green.gif" alt=""></swe:control>&nbsp;</td>
+	<td>
+	
+		<table datatable="0" summary="" width="100%" border="0" cellpadding="2"  cellspacing="0">
+			<swe:control id="502">
+				<tr><td width="100%" colspan="4" class="dCCItemTitle"><swe:this property="FormattedHtml" hintText="Item Name" hintMapType="ListItem"/></td></tr>
+			</swe:control>
+
+			<swe:control id="503">
+				<tr><td colspan="1" class="dCCItemValue"><swe:this property="FormattedHtml" hintText="Item Name" hintMapType="ListItem"/></td></tr>
+			</swe:control>
+		</table>
+	</td>
+    
+</tr>
+
+<tr valign="top">
+    <td width="1"><img src="images/spacer.gif" alt=""></td>
+	<td valign="bottom"><img src="images/spacer.gif" align="top" alt="">
+		<swe:for-each-child>
+			<swe:child-applet/>
+		</swe:for-each-child>
+	</td>
+</tr>
+</swe:for-each-row>
+
+<!-- Template End: dCCListCategorized3.swt -->

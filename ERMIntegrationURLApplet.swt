@@ -1,0 +1,35 @@
+<!-- Template Start ePortalURLApplet.swt -->
+
+<swe:layout viewDisplayMode="Layout">
+
+</swe:layout>
+
+<swe:layout viewDisplayMode="Show" appletDisplayMode="Show">
+   
+   <swe:control id="1100">
+      <div>
+         <swe:this property="FormattedHtml" hintText="Outside Applet Help Text" hintMapType="Control"/>
+      </div>
+   </swe:control>
+   <table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+      <tr valign="top">
+         <td>
+
+
+               <swe:layout viewDisplayMode="Show" appletDisplaySize="Max">
+	            <swe:include file="ePortalURLAppletInner.swt"/>
+               </swe:layout>
+
+            <table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+               <tr>
+                  <td class="AppletBorder">
+                     <img src="images/spacer.gif" width="1" height="1" alt="">
+                  </td>
+               </tr>
+            </table>
+         </td>
+      </tr>
+   </table>
+</swe:layout>
+
+<!-- Template End ePortalURLApplet.swt -->

@@ -1,0 +1,24 @@
+<!-- Template Start: WebCollabAckApplet.swt -->
+
+<img src="images/spacer.gif" width="5" height="10" border="0" alt="" /><br/>
+<table datatable="0" summary="" width="95%" cellspacing="0" cellpadding="0" border="0" align="center">
+	<swe:form>
+	<tr valign="top">
+		<td class="AppletStyle1">
+		<swe:include file="CCTitle.swt"/>
+
+			<table datatable="0" summary="" width="100%" cellpaddng="2" cellspacing="0" border="0" align="center"><tr><td class="AppletBorder">
+			<table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="5" cellspacing="0" border="0">
+				<tr valign="top"><td class="Row2"><swe:control id="102" property="DisplayName" /><br>&nbsp;</td></tr>
+				<tr valign="top"><td class="Row2"><swe:control id="103" property="DisplayName" /><br>&nbsp;</td></tr>
+			</table>
+			</td></tr></table>
+
+		<swe:include file="CCAppletFormBottom.swt"/></td>
+	</tr>
+	</swe:form>
+</table>
+
+<swe:form name="WebCollabCallerAckForm"></swe:form>
+
+<!-- Template End: WebCollabAckApplet.swt -->

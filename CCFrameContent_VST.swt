@@ -1,0 +1,54 @@
+<!-- Template Start: CCFrameContent_VS.swt -->
+
+
+<swe:switch>
+<swe:case condition="Web Engine State Properties, IsRTL">
+<!-- RTL case -->
+
+<!--Content frame shows search center frame to the right of view frame-->
+<swe:frameset htmlAttr="cols='66%,34%' border='0' frameborder='No' framespacing='6'">
+	<swe:frameset htmlAttr="cols='80%,20%' border='0' frameborder='No'">
+		<swe:frame type="View" htmlAttr="marginheight='0' marginwidth='0' scrolling='Yes' frameborder='0'">
+			<swe:current-view/>
+		</swe:frame>
+		
+		<swe:frame type="AltView" name="TaskAssistant" htmlAttr="marginheight='0' marginwidth='0' scrolling='No' frameborder='1'">
+			<swe:view name="TaskAssistant" id="TaskAssistant" />
+		</swe:frame>
+	</swe:frameset>
+	
+	<swe:frame type="AltView" name="SS_SearchCenter" htmlAttr="marginheight='0' marginwidth='0' scrolling='Yes'  frameborder='0'">
+		<swe:view name="Search Looking View" id="SS_SearchCenter" />
+	</swe:frame>
+</swe:frameset>
+
+<!-- end of RTL case -->
+</swe:case>
+
+<swe:default>
+<!-- default, non-RTL -->
+
+<!--Content frame shows search center frame to the right of view frame-->
+<swe:frameset htmlAttr="cols='34%,66%' border='0' frameborder='No' framespacing='6'">
+	<swe:frame type="AltView" name="SS_SearchCenter" htmlAttr="marginheight='0' marginwidth='0' scrolling='Yes'  frameborder='0'">
+		<swe:view name="Search Looking View" id="SS_SearchCenter" />
+	</swe:frame>	 
+
+	<swe:frameset htmlAttr="cols='20%,80%' border='0' frameborder='No'">
+		<swe:frame type="AltView" name="TaskAssistant" htmlAttr="marginheight='0' marginwidth='0' scrolling='No' frameborder='1'">
+			<swe:view name="TaskAssistant" id="TaskAssistant" />
+		</swe:frame>
+
+		<swe:frame type="View" htmlAttr="marginheight='0' marginwidth='0' scrolling='Yes' frameborder='0'">
+			<swe:current-view/>
+		</swe:frame>
+	</swe:frameset>
+</swe:frameset>
+
+<!-- end of default, non-RTL -->
+</swe:default>
+</swe:switch>
+
+
+<!-- Template Start: CCFrameContent_VS.swt -->
+

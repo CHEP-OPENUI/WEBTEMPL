@@ -1,0 +1,60 @@
+<!-- Template Start: eCfgPort_HeaderJS.swt -->
+
+<SCRIPT>
+        var sParentPath = '<swe:control id="swe:IncId+520" CfgFieldName="Parent Path" CfgHtmlType="CfgLabel" />';
+        var sRelationshipId = '<swe:control id="swe:IncId+520" CfgFieldName="Port Item Id" CfgHtmlType="CfgLabel" />';        
+        document.write ( '<A Name="' +  sParentPath + "_" + sRelationshipId + '"></A>');
+</SCRIPT>  
+
+<table datatable="0" summary="" border="0" width="100%" cellpadding="2" cellspacing="0">
+   <swe:switch>
+      <swe:case condition="Default, AreEmptyFields, Operator:and, FieldName0:.Description, FieldName1:.LearnMore">
+         <tr bgcolor="#ccccff">
+            <td class="dCCItemSectionTitle" style="border-left: 1px solid #808080; border-top: 1px solid #808080 ; border-bottom: 1px solid #808080">
+               <b><swe:control id="swe:IncId + 350" CfgFieldName="CxPortName" CfgHtmlType="CfgLabel" /></b>
+                  <swe:control id="swe:IncId + 2550" CfgHtmlType="CfgGenerics" />
+            </td>
+            <td class="dCCItemSectionTitle" style="border-right: 1px solid #808080; border-top: 1px solid #808080; border-bottom: 1px solid #808080" rowspan="1">
+      </swe:case>
+      <swe:default>
+         <tr bgcolor="#ccccff">
+            <td class="dCCItemSectionTitle" style="border-left: 1px solid #808080; border-top: 1px solid #808080">
+               <b><swe:control id="swe:IncId + 350" CfgFieldName="CxPortName" CfgHtmlType="CfgLabel" /></b>
+                  <swe:control id="swe:IncId + 2550" CfgHtmlType="CfgGenerics" />
+            </td>
+            <td class="dCCItemSectionTitle" style="border-right: 1px solid #808080; border-top: 1px solid #808080; border-bottom: 1px solid #808080" rowspan="2">
+      </swe:default>
+   </swe:switch>
+               <SCRIPT>
+                  var sImage        = '<swe:control id="swe:IncId + 50" CfgFieldName=".Image" CfgHtmlType="CfgLabel" />';
+                  var sParentPath = '<swe:control id="swe:IncId+520" CfgFieldName="Parent Path" CfgHtmlType="CfgLabel" />';
+                  var sRelationshipId = '<swe:control id="swe:IncId+520" CfgFieldName="Port Item Id" CfgHtmlType="CfgLabel" />';
+                  if ( 0 == sImage.length )
+                     sImage = 'images/eCfgInvisibleSpacer.gif';
+                  document.write ( '<img id="img_' + sParentPath + "_" + sRelationshipId + '" border="0" src="' + sImage + '" alt="" align="right">' );
+               </SCRIPT>
+            </td>
+         </tr>
+   <swe:switch>
+      <swe:case condition="Default, AreEmptyFields, Operator:and, FieldName0:.Description, FieldName1:.LearnMore">
+      </swe:case>
+      <swe:default>
+         <tr bgcolor="#ccccff">
+            <td class="dCCItemSection" style="border-left: 1px solid #808080; border-bottom: 1px solid #808080">
+               <font size="2"  color="#333399">
+                  <swe:control id="swe:IncId + 150" CfgFieldName=".Description" CfgHtmlType="CfgLabel" />
+               </font>
+               <font size="2">&nbsp;&nbsp;
+                  <SCRIPT>
+                     var sLearnMoreURL = '<swe:control id="swe:IncId + 250" CfgFieldName=".LearnMore" CfgHtmlType="CfgLabel" />';
+                     var sLearnMore    = '<swe:control id="LearnMore" CfgUIControl="lblLearnMore" CfgHtmlType="CfgLabel"/>';
+                     if ( 0 != sLearnMoreURL.length )
+                        document.write ( '(<a href="' + sLearnMoreURL + '" TARGET="_blank"><img border="0" src="images/icon_watching.gif"><img border="0" src="images/eCfgInvisibleSpacer.gif" alt="">' + sLearnMore + '</a>)' );
+                  </SCRIPT>
+               </font>
+            </td>
+          </tr>
+      </swe:default>
+   </swe:switch>
+
+<!-- Template End: eCfgPort_HeaderJS.swt -->

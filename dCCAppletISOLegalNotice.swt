@@ -1,0 +1,26 @@
+<!-- Template Start: dCCAppletISOLegalNotice.swt -->
+
+<swe:form>
+	<swe:include file="dCCTitle_Named.swt"/>	
+	<table width="100%" cellpadding="1" cellspacing="0" border="0" align="center"><tr><td class="AppletBorder">	
+	<table class="AppletBack" valign="top" width="100%" cellpadding="3" cellspacing="0" border="0">
+	<tr valign="top">
+		<td>
+			<swe:error>
+					<table class="AppletBack" width="100%" cellpadding="4" cellspacing="0" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/></td></tr></table>
+			</swe:error>
+			<table width="100%" border="0" cellpadding="0"  cellspacing="4">
+				<swe:for-each count="2" startValue="1100" iteratorName="currentId">
+					<swe:control id="swe:currentId+100">
+						<tr><td class="dCCItemLabelLeft"><swe:this property="FormattedHtml" hintText="Label"/></td></tr>
+					</swe:control>
+				</swe:for-each>
+				<swe:control id="1400">
+					<tr><td class="dCCItemLabelLeft"><swe:this property="FormattedHtml" hintText="Label"/></td></tr>
+				</swe:control>
+			</table>
+		</td></tr></table>
+	</td></tr></table>
+</swe:form>
+
+<!-- Template End: dCCAppletISOLegalNotice.swt -->

@@ -1,0 +1,39 @@
+<table datatable="0" summary="" valign="top" border="0" width="100%">
+<tr valign="top">
+<td align="center" valign="top" bgcolor="#B0C4DE" valign="top">
+	<swe:control id="1000">
+	<B>
+		<swe:this property="FormattedHtml"  hintMapType="Control" hintText="Label"/>
+	</B>
+	</swe:control>
+</td>
+</tr>
+<tr><td>&nbsp;</td></tr>
+<tr>
+<td align="left" valign="top">
+	<swe:control id="1005">
+		<swe:this property="FormattedHtml" hintMapType="Hide Icon"/>
+	</swe:control>
+</td>
+</tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td><hr></td></tr>
+<tr valign="top">
+<td  align="center" valign="top" wrap bgcolor="#B0C4DE">
+	<swe:control id="1010">
+	<B>
+		<swe:this property="FormattedHtml"  hintMapType="Control" hintText="Label"/>
+	</B>
+	</swe:control>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top">
+	<swe:control id="1015">
+		<swe:this property="FormattedHtml" hintMapType="Hide Icon"/>
+	</swe:control>
+</td>
+</tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+

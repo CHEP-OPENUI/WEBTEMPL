@@ -1,0 +1,172 @@
+<!-- Template Start: ISSAppletListEPUICustom.swt -->
+
+<swe:include file="CCApplet_NamedSpacer.swt"/>	
+
+<swe:control id="1100"><div class=CmdTxt><swe:this property="FormattedHtml" hintText="Outside Applet Help Text" hintMapType="Control"/></div><p></swe:control>
+
+
+<swe:form>
+<div class="siebui-epui-detail-applet">
+    <div class="swe:this.SelectStyle">	
+        <div class="siebui-epui-tab" name="EditPromDetailTab" >
+            <div class="siebui-epui-tr" id="EPUIRecordTemplate">
+                <div class="siebui-epui-td">
+                    <!-- Fields that correspond to Promotion Rule-->
+                    <div class="seibui-epui-rule-rec siebui-epui-rule-tab" data-role="rule">
+                        <div class="siebui-epui-rule-tr">
+                            <div class="siebui-epui-rule-td-la">
+                                <!-- Promotion Rule, and one extra item   [Value] -->
+                                <swe:for-each startValue="501" count="2" iteratorName="currentId">
+                                    <swe:control id="swe:currentId">
+                                        <span class="siebui-epui-rule-head">
+                                            <swe:this property="FormattedHtml" hintText="RuleHeadField" hintMapType="ListItem"/>
+                                        </span>
+                                    </swe:control> 
+                                </swe:for-each>                              
+                            </div>
+                            <div class="siebui-epui-rule-td-ra">
+                                <!-- Min, Max, Default, Cardinality sts, One Extra item [Label : value] -->
+                                <swe:for-each startValue="506" count="5" iteratorName="currentId">
+                                    <swe:control id="swe:currentId">
+                                        <div class="siebui-epui-inline mceGridLabel">
+                                            <swe:this property="DisplayName" hintText="Label"/>:
+                                        </div>
+                                        <div class="siebui-epui-inline mceGridField">
+                                            <swe:this property="FormattedHtml" hintText="RuleField" hintMapType="ListItem"/>
+                                        </div>
+                                    </swe:control>                                 
+                                </swe:for-each>      
+                                <swe:for-each startValue="535" count="3" iteratorName="currentId">
+                                    <swe:control id="swe:currentId">
+                                        <div class="siebui-epui-inline mceGridField">
+                                            <swe:this property="FormattedHtml" hintText="RuleFieldNoLabel" hintMapType="ListItem"/>
+                                        </div>
+                                    </swe:control>                                 
+                                </swe:for-each> 
+                                <!-- Add button, one extra button [Control] -->
+                                <swe:for-each startValue="551" count="2" iteratorName="currentId">
+                                    <swe:control id="swe:currentId">
+                                        <span class="siebui-epui-reg-elem">
+                                            <swe:this property="FormattedHtml"  hintText="RuleRowControl" hintMapType="Control"/>
+                                        </span>
+                                    </swe:control>                                
+                                </swe:for-each>  
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Fields that correspond to the actual product in line item -->
+                    <div class="siebui-epui-comp-rec siebui-epui-comp-tab" data-role="comp">
+                        <div class="siebui-epui-comp-tr">
+                            <!-- Special place for Product image -->
+                            <div class="siebui-epui-comp-td-la">
+                                <swe:control id="511">
+                                    <swe:this property="FormattedHtml" hintText="Small Image (30x30)"/>
+                                </swe:control>
+                            </div>
+                            <!-- Middle place for Product Name, Desc, Attributes etc 
+                                    Total 5 lines. 
+                                    3 lines - single fields  [ Product, Product desc, Attributes]
+                                    2 lines - two fields each  [ NRC, MRC in one line, other is extra]
+                            -->
+                            <div class="siebui-epui-comp-td-la">
+                                <swe:for-each startValue="521" count="1" iteratorName="currentId">
+                                    <swe:control id="swe:currentId">
+                                        <div class="siebui-epui-prod-head mceGridField">
+                                            <swe:this property="FormattedHtml" hintText="PrdHeadField" hintMapType="ListItem"/>
+                                        </div>
+                                    </swe:control>                                
+                                </swe:for-each>       
+                                <swe:for-each startValue="522" count="1" iteratorName="currentId">
+                                    <swe:control id="swe:currentId">
+                                        <div class="mceGridField">
+                                            <swe:this property="FormattedHtml" hintText="PrdDescField" hintMapType="ListItem"/>
+                                        </div>
+                                    </swe:control>                                
+                                </swe:for-each>  
+                                <swe:for-each startValue="523" count="1" iteratorName="currentId">
+                                    <swe:control id="swe:currentId">
+                                        <div class="mceGridField">
+                                            <swe:this property="FormattedHtml" hintText="PrdOptionsField" hintMapType="ListItem"/>
+                                        </div>
+                                    </swe:control>                                
+                                </swe:for-each>         
+                                <div>
+                                    <swe:for-each startValue="526" count="2" iteratorName="currentId">
+                                        <swe:control id="swe:currentId">
+                                            <div class="siebui-epui-inline mceGridLabel">
+                                                <swe:this property="DisplayName" hintText="Label"/>:
+                                            </div>
+                                            <div class="siebui-epui-inline mceGridField">
+                                                <swe:this property="FormattedHtml" hintText="MRCNRCField" hintMapType="ListItem"/>
+                                            </div>
+                                        </swe:control>                                 
+                                    </swe:for-each>   
+                                </div> 
+                                <div>
+                                    <swe:for-each startValue="528" count="2" iteratorName="currentId">
+                                        <swe:control id="swe:currentId">
+                                            <div class="siebui-epui-inline mceGridLabel">
+                                                <swe:this property="DisplayName" hintText="Label"/>:
+                                            </div>
+                                            <div class="siebui-epui-inline mceGridField">
+                                                <swe:this property="FormattedHtml" hintText="MRCNRCField" hintMapType="ListItem"/>
+                                            </div>
+                                        </swe:control>                                 
+                                    </swe:for-each>   
+                                </div>                                 
+                            </div>
+                            <!-- Controls and fields at the right for product level -->
+                            <div class="siebui-epui-comp-td-ra">
+                                <div class="siebui-epui-inline">
+                                    <swe:for-each startValue="531" count="2" iteratorName="currentId">
+                                        <swe:control id="swe:currentId">
+                                            <div class="siebui-epui-inline mceGridLabel">
+                                                <swe:this property="DisplayName" hintText="Label"/>:
+                                            </div>
+                                            <div class="siebui-epui-inline mceGridField">
+                                                <swe:this property="FormattedHtml" hintText="QtyField" hintMapType="ListItem"/>
+                                            </div>
+                                        </swe:control>                                 
+                                    </swe:for-each> 
+                                </div>
+                                <div class="siebui-epui-inline">
+                                    <swe:for-each startValue="555" count="2" iteratorName="currentId">
+                                        <swe:control id="swe:currentId">
+                                            <span class="siebui-epui-reg-elem">
+                                                <swe:this property="FormattedHtml"  hintText="RowLevelControl" hintMapType="Control"/>
+                                            </span>
+                                        </swe:control>                                
+                                    </swe:for-each>   
+                                </div>
+                                <div>
+                                    <swe:for-each startValue="561" count="2" iteratorName="currentId">
+                                        <swe:control id="swe:currentId">
+                                            <span class="siebui-epui-reg-elem">
+                                                <swe:this property="FormattedHtml"  hintText="RowLevelControl" hintMapType="Control"/>
+                                            </span>
+                                        </swe:control>                                
+                                    </swe:for-each>                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hidden fields Open UI does not send these info to client unless mapped.-->
+                    <div class="siebui-epui-hidden">
+                            <swe:for-each startValue="601" count="10" iteratorName="currentId">
+                                <swe:control id="swe:currentId">
+                                    <span class="siebui-epui-reg-elem">
+                                        <swe:this property="DisplayName" hintText="Label"/>:
+                                        <swe:this property="FormattedHtml" hintText="HiddenField" hintMapType="ListItem"/>
+                                    </span>
+                                </swe:control>                                 
+                            </swe:for-each>                          
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</swe:form>	
+
+<!-- Template End: ISSAppletListEPUICustom.swt -->

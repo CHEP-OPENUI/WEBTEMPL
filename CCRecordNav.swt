@@ -1,0 +1,59 @@
+<!-- Template Start: CCRecordNav.swt -->
+   <td valign="middle" nowrap>
+      <swe:message type="Applet Control Message"/>
+   </td>
+    
+	<swe:control id="121">
+		<!-- GotoFirst, 121 -->
+		<td class="swe:class AppletTitle" valign="middle" nowrap>
+		<swe:this property="FormattedHtml" hintText="First" hintMapType="Control"/>
+		</td><td>&nbsp;</td>
+	</swe:control>	
+		
+	<swe:control id="122">
+		<!-- GotoPrevious, 122 -->
+		<td class="swe:class AppletTitle" valign="middle" nowrap>
+			<swe:this property="FormattedHtml" hintText="Previous" hintMapType="Control"/>
+		</td>
+	</swe:control>
+
+	<!-- RowCounter -->
+	<td class="swe:class AppletTitle" valign="middle" nowrap>&nbsp;<swe:this property="RowCounter"/>&nbsp;</td>
+
+	<swe:control id="123">
+		<!-- GotoNext, 123 -->
+		<td class="swe:class AppletTitle" valign="middle" nowrap>
+			<swe:this property="FormattedHtml" hintText="Next" hintMapType="Control"/>
+		</td>
+	</swe:control>
+	
+	<swe:control id="124">
+		<!-- GotoLast, 124 -->
+		<td class="swe:class AppletTitle" valign="middle" nowrap>
+		<swe:this property="FormattedHtml" hintText="Last" hintMapType="Control"/>
+		</td><td>&nbsp;</td>
+	</swe:control>
+		
+	<swe:control id="151">
+		<td>&nbsp;</td>
+		<td class="swe:class AppletTitle" valign="middle"><img src="images/btn_div.gif" height="13" align="middle" alt=""></td>
+		<td>&nbsp;</td>
+	</swe:control>
+	
+	<swe:control id="161">
+		<td>&nbsp;</td>
+		<td class="swe:class AppletTitle" valign="middle"><img src="images/btn_div.gif" height="13" align="middle" alt=""></td>
+		<td>&nbsp;</td>
+	</swe:control>
+	
+	<swe:control id="152">
+		<td>&nbsp;</td>
+		<td class="swe:class AppletTitle" valign="middle"><img src="images/btn_div.gif" height="13" align="middle" alt=""></td>
+		<td>&nbsp;</td>
+	</swe:control>
+	
+<!-- Template End: CCRecordNav.swt -->
+
+
+
+

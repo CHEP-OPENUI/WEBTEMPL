@@ -1,0 +1,15 @@
+<!-- Template Start: eCfgControlAttributeText.swt -->
+
+<table datatable="0" summary=""  color="blue"  valign="center" width="100%" cellpadding="0" cellspacing="0" border="0">
+   <tr>
+      <td width="40%"  valign="top">
+         <swe:control id="swe:IncId + 20" CfgFieldName="AttName" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" />
+      </td>
+      <td  width="20%"  valign="top">&nbsp;</td>
+      <td width="40%"  valign="top">
+         <swe:control id="swe:IncId+100" CfgFieldName="AttValue" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" />
+      </td>
+   </tr>
+</table>
+
+<!-- Template End: eCfgControlAttributeText.swt -->

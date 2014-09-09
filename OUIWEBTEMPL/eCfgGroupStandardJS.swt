@@ -1,0 +1,12 @@
+<!-- Template Start: eCfgGroupStandardJS.swt -->
+<!-- Oliver: [code redesign], product modules -->
+
+<div  id="cxStd" class="cxGrpTheme">
+<swe:for-each id="180" CfgLoopType="Children" startValue="410" count="Dynamic" iteratorName="IncId" >
+	<div class="siebui-ecfg-feature-group">
+		<swe:include id="swe:180Id" CfgHtmlType="Children"/> 
+	</div>
+</swe:for-each>
+</div>
+
+<!-- Template End: eCfgGroupStandardJS.swt -->

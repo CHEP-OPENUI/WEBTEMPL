@@ -1,0 +1,31 @@
+<!-- Template Start: CCFormSearch.swt -->
+
+<!-- This template will share a table with CCAppletFormSearchTop.swt -->
+
+		<!--alignment row-->
+		<tr><td><img src="images/spacer.gif" width="95" height="1" alt=""></td></tr>
+		<swe:control id="91">
+		  <!-- Inside-applet help text -->
+		  <tr><!--td><img src="images/spacer.gif" width="95" height="1" alt=""></td-->
+        <td>&nbsp;<swe:this property="DisplayName" hintText="Inside Applet Help Text"/></td></tr>
+		</swe:control>		
+		<swe:for-each startValue="1101" count="30" iteratorName="currentId">
+			<swe:control id="swe:currentId+100">
+			<tr valign="top">
+				<td colspan="3" align="left">&nbsp;<swe:this property="FormattedHtml" hintText="Label"/></td>
+			</tr>
+			<tr valign="top">
+				<td td colspan="3" align="left">&nbsp;
+			</swe:control>
+			<swe:control id="swe:currentId+200">
+				<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/>
+			</swe:control>
+			<swe:control id="swe:currentId+100">
+				</td>
+			</tr>										
+			</swe:control>									
+		</swe:for-each>		
+
+
+
+<!-- Template End: CCFormSearch.swt -->	

@@ -1,0 +1,30 @@
+<!-- Template Start: CCAppletFormGridLayout.swt -->
+
+<swe:include file="CCApplet_NamedSpacer.swt"/>	
+
+<swe:form>
+<swe:if condition="Web Engine State Properties, IsPrintOff">
+	<div class="swe:this.SelectStyle">	
+</swe:if>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" align="center" class="AppletBack"><tr><td class="AppletHIFormBorder">
+	<swe:include file="CCTitle_Named.swt"/>
+		<swe:include file="LS_AppletFormButtonsTop_withGI.swt"/>
+
+		<swe:error type="Popup">
+			<table class="AppletBack" width="100%" cellpadding="0" cellspacing="5" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/></td></tr></table>
+		</swe:error>
+
+		<swe:form-applet-layout>
+		</swe:form-applet-layout>
+	</span>
+</td></tr></table>
+<swe:if condition="Web Engine State Properties, IsPrintOff">
+	</div>	
+</swe:if>
+</swe:form>
+
+<!-- Template End: CCAppletFormGridLayout.swt -->
+
+
+
+	

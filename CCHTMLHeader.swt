@@ -1,0 +1,16 @@
+<!-- Template Start: CCHTMLHeader.swt -->
+<swe:switch>
+	<swe:case condition="Web Engine State Properties, IsFrameless">
+		<span/>
+	</swe:case>
+
+	<swe:default>
+		<HTML dir="swe:dir">
+		<head>
+			<title><swe:this property="Title"/></title>
+			<swe:include file="CCStylesChoice.swt"/>
+		</head>
+		<body leftmargin=8 topmargin=2 marginwidth=20 marginheight=2 class="swe:class ScreenBack">
+	</swe:default>
+</swe:switch>
+<!-- Template End: CCHTMLHeader.swt -->

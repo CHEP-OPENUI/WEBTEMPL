@@ -1,0 +1,13 @@
+<!-- Template Start: CCTaskViewTitle.swt -->
+<!-- Oliver: code redesign -->
+
+<swe:if condition="Task UI Service (SWE),IsInTask">
+
+<div class="siebui-applet-taskui-h">
+	<swe:taskviewtitle></swe:taskviewtitle>: <span class="siebui-taskui-title"><swe:tasksteptitle></swe:tasksteptitle></span>
+</div>
+<div class="siebui-applet-taskui-spacer"></div>
+
+</swe:if>
+
+<!-- Template End: CCTaskViewTitle.swt -->

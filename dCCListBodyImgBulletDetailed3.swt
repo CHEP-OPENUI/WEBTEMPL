@@ -1,0 +1,48 @@
+<!-- Template Start: dCCListBodyImgBulletDetailed3.swt -->
+<swe:error>
+   <tr>
+      <td colSpan="3" class="error"><swe:this property="FormattedHtml" /></td>
+   </tr>
+</swe:error>
+<swe:for-each-row count="10">
+   <tr valign="top">
+      <swe:select-row>
+         <td width="42" align="center" class="Row"><swe:this property="FormattedHtml" /></td>
+      </swe:select-row>
+   </tr>
+   <tr>
+      <td colspan="4">
+         <swe:control id="501">
+            <div class="dCCitemTitle"><swe:this property="FormattedHtml" hintText="Item Name" hintMapType="ListItem" /></div>
+         </swe:control>
+      </td>
+   </tr>
+        
+   <tr>
+      <td width="1">
+         <swe:control id="502"><swe:this property="FormattedHtml" hintText="Small Image (30x30)" />
+         </swe:control>&nbsp;
+      </td>
+      <td>
+         <swe:control id="503">
+            <div class="dCCItemValue"><swe:this property="FormattedHtml" hintText="Item Desc" hintMapType="ListItem" /></div>
+         </swe:control>
+      </td>
+      <td>
+      <swe:control id="504">
+         <div align="center">
+            <swe:this property="FormattedHtml" hintMapType="Control" />
+         </div>
+      </swe:control>
+      </td>
+      <td class="dCCItemValue">
+         <swe:control id="505">
+            <swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/>
+		   </swe:control>
+	   </td>
+   </tr>
+   <tr>
+      <td colspan="3"><img src="images/spacer.gif" width="100%" height="3" alt=""></td>
+   </tr>
+</swe:for-each-row>
+<!-- Template End: dCCListBodyImgBulletDetailed3.swt -->

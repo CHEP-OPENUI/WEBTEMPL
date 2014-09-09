@@ -1,0 +1,112 @@
+<!-- Template Start: CCPageContainer.swt -->
+
+<HTML dir="swe:dir">
+<head>
+<title><swe:this property="Title"/></title>
+<swe:include file="CCStylesChoice.swt"/>
+</head>
+
+<BODY bgcolor="#ffffff" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+<!---------------------------------------->
+
+<!--Begin Top Wrapping Table-->
+<table datatable="0" summary="" class="tier1Back" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
+
+<!--Start Banner-->
+<table datatable="0" summary="" cellpadding='0' cellspacing='0' border='0' class='banner'>
+	<tr>
+		<td width="50%"><swe:image name="SIEBEL_LOGO" category="HTML Control Icons"/></td>
+		<td width="50%"><img src="images/spacer.gif" width="100%" height="58" alt=""></td>	
+		
+		<td align="center" valign="top">
+			<table datatable="0" summary="" width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td><nobr>
+						<swe:pageitem id="11"><swe:this property="FormattedHtml" /><span class="bannerDiv">&nbsp;|&nbsp;</span></swe:pageitem>
+						<swe:pageitem id="12"><swe:this property="FormattedHtml" /><span class="bannerDiv">&nbsp;|&nbsp;</span></swe:pageitem>
+						<swe:pageitem id="13"><swe:this property="FormattedHtml" /><span class="bannerDiv">&nbsp;|&nbsp;</span></swe:pageitem>
+					</nobr></td>
+				</tr>
+				<tr>
+					<td class="bannerDiv2"><img src="images/spacer.gif" width="1" height="1" alt=""></td>
+				</tr>
+				<tr>			
+					<td align="right"><a href="http://www.siebel.com" target="_blank"><swe:image name="POWERED_BY" category="HTML Control Icons"/></a></td>
+				</tr>				
+			</table>
+		</td>				 
+	</tr>
+</table>
+
+<!-- End Banner -->
+
+<!-- ---------- Tier 1 navigation ----------------->	
+<swe:screenbar>
+<table datatable="0" summary="" class="tier1Back" width="100%" align="center" cellpadding='0' cellspacing='0' border='0'><tr><td>
+	<table datatable="0" summary="" ID="swe:this.TableId" style="position:relative;left:0px" cellpadding="0" cellspacing="0" border='0'><tr>
+		<swe:for-each-screen>		
+			<swe:screenlink state="Active"><td nowrap id="swe:this.Id" class='tier1On'><nobr><swe:this property="FormattedHtml">&nbsp;<swe:screenname/>&nbsp;</swe:this></nobr></td></swe:screenlink>
+			<swe:screenlink state="Inactive"><td nowrap id="swe:this.Id" class='tier1Off'><nobr><swe:this property="FormattedHtml">&nbsp;<swe:screenname/>&nbsp;</swe:this></nobr></td></swe:screenlink>
+		</swe:for-each-screen>
+	</tr></table>
+</td></tr></table>	
+</swe:screenbar>
+<!-- ---------- End Tier 1 navigation ------------->
+
+
+<!-- End Tier1 Nav section -->
+
+<!-- Start Tier2 Nav & Search Applet-->
+	<table datatable="0" summary="" class="tier2On" width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr class="tier2On">
+		<td><img src="images/spacer.gif" height="22" width="10" alt=""></td>
+		<td valign="top"> <swe:pageitem id="1" property="DisplayName" /></td>		
+		<swe:form>
+		<td nowrap><swe:viewbar type="Select" mode="Context"><swe:this property="FormattedHtml"/></swe:viewbar></td>
+		</swe:form>
+
+		<!-- Begin changes for special viewbar buttons to bring user directly to new mode -->
+		<swe:pageitem id="21">
+		   <td class="tier2On">&nbsp;</td>
+		   <td class="tier2On" nowrap><swe:this property="FormattedHtml" />&nbsp;</td>
+		   <td class="tier2On">&nbsp;|</td>
+		</swe:pageitem>
+		
+		<swe:pageitem id="22">
+		   <td class="tier2On">&nbsp;</td>
+		   <td class="tier2On"  nowrap><swe:this property="FormattedHtml" /> &nbsp;</td>
+		   <td class="tier2On">&nbsp;|</td>
+		</swe:pageitem>
+		
+		<!-- End changes for special viewbar buttons to bring user directly to new mode -->
+		<td class="tier2On" width="100%">&nbsp;</td>
+		
+
+		<td>&nbsp;&nbsp;&nbsp;</td>	
+	</tr>
+</table>
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+	<tr>
+		<td valign="top" class="tier2Rule" align="right"><img src="images/spacer.gif" width="1" height="1" alt=""></td>			
+	</tr>
+</table>
+<!-- End Tier2 nav & Search-->
+
+
+<swe:if condition="Web Engine State Properties, IsLowInteractive">
+<swe:include file="CCThreadbar.swt"/>
+</swe:if>
+
+
+</td></tr></table>
+<!-- End Top Wrapping Table -->
+
+<!-- Start View -->
+<swe:current-view/>
+<!-- End View -->
+
+<swe:scripts/>
+</BODY>
+</HTML>
+
+<!-- Template End: CCPageContainer.swt -->

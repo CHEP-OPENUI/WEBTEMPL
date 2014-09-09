@@ -1,0 +1,48 @@
+<!--  Template Start: CCPopupListAssocShuttleButtonsTop.swt -->
+<!-- Oliver: cleaned up code base for popup buttons, minimaly intrusive, still needs redesign though -->
+
+	<table datatable="0" summary="" width="100%">		
+		
+		<tr class="AppletButtons">
+			<td class="siebui-popup-action" width="100%">
+
+				<span class="siebui-popup-menu">
+					<swe:if-var name="Parent">			     
+						<swe:menu type="Button" width="38" height="16"/>
+					</swe:if-var>
+					
+					<swe:if-var name="ParentWithPointer">			     
+						<swe:menu type="Button" width="38" height="16"/>
+					</swe:if-var>	
+					
+					<swe:if-var name="Child">			     
+						<swe:menu type="Button" width="38" height="16"/>
+					</swe:if-var>	
+					
+					<swe:if-var name="ChildWithPointer">			     
+						<swe:menu type="Button" width="38" height="16"/>
+					</swe:if-var>	
+					
+					<swe:if-var name="Grandchild">			     
+						<swe:menu type="Button" width="38" height="16"/>
+					</swe:if-var>				
+				</span>			
+				<swe:include file="CCButtons_oui.swt"/>
+				<swe:include file="CCTogglebar_drop_oui.swt"/>
+				<span class="siebui-popup-query-msg"><swe:message type="Query Message" /></span>			
+
+			</td>		
+			<td class="siebui-popup-filter">
+				<swe:include file="CCPopupListButtonsTopRight_oui.swt"/>	
+				<span class="siebui-popup-row-counter"><swe:this property="RowCounter"/></span>												
+			</td>			
+		</tr>
+		<tr>
+			<td class="siebui-popup-title" colspan="2">
+				<swe:control id="1097"><swe:this property="FormattedHtml" hintText="Title"/></swe:control>
+			</td>
+		</tr>
+		
+	</table>
+	
+<!--  Template End: CCPopupListAssocShuttleButtonsTop.swt -->

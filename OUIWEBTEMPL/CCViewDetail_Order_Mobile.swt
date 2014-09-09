@@ -1,0 +1,39 @@
+<!--  Template Start: CCViewDetail_Order_Mobile.swt -->
+<swe:include file="CCHTMLHeader.swt"/>
+<div>
+
+<!-- ---------- Main Content Area ---------------------------->
+
+<swe:if condition="Web Engine State Properties, IsPhoneMode">
+<div id="_Parentapplet_List" class="SiebelContentListContainer ListAppletContainer ui-body-b" landscape="Show" portrait="Show">
+</swe:if>
+<swe:if condition="Web Engine State Properties, IsTabletMode">
+<div id="_Parentapplet_List" class="SiebelContentListContainer ListAppletContainer ui-body-b" landscape="Default" portrait="Show">
+</swe:if>
+
+   <div enabletoggle="true"></div>
+
+<swe:applet hintMapType="Applet" id="1" hintText="Parent List Applet" property="FormattedHtml" var="ParentWithPointer" />
+</div>
+
+<swe:if condition="Web Engine State Properties, IsPhoneMode">
+       <div id="_Parentapplet_Form" class="SiebelContentDetailContainer" landscape="Hide" portrait="Hide">
+</swe:if>
+<swe:if condition="Web Engine State Properties, IsTabletMode">
+       <div id="_Parentapplet_Form" class="SiebelContentDetailContainer" landscape="Default" portrait="Hide">
+</swe:if>
+   
+        <div name="jqmToggleCtrl" id="jqmToggleCtrl" ctrltype="button" ctrllabel="IDS_SWE_MOBIIE_BACK" effect="blind" showoptions="{'direction': 'horizontal'}" hideoptions="{'direction': 'horizontal'}" style="display:none;"></div> 
+
+      <div id="_ParentFormContainer" class="SiebelContentDetailParentFormContainer siebui-NoScrollFormContainer">
+      <swe:applet hintMapType="Applet" id="2" hintText="Parent Form Applet" property="FormattedHtml" var="ParentWithPointer"/>
+      </div>
+      <div id="_ChildrenContainer" class="SiebelContentDetailChildrenContainer ListAppletContainer ui-body-b siebui-NoScrollFormContainer">         
+         <swe:applet hintMapType="Applet" id="3" hintText="Child List Applet"  property="FormattedHtml" var="Grandchild"/>                     
+      </div>
+   </div>
+<swe:include file="CCHTMLFooter.swt"/>
+
+<!-- ---------- End Main Content Area ------------------------>
+</div>
+<!--  Template End: CCViewDetail_Order_Mobile.swt -->

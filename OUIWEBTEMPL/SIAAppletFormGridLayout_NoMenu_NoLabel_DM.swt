@@ -1,0 +1,10 @@
+<!-- Template Start: SIAAppletFormGridLayout_NoMenu_NoLabel_DM.swt -->
+
+<div>
+    <div><swe:include file="CCTitle_Named.swt"/></div>
+    <div><swe:control id="139" property="FormattedHtml"/></div>
+    <div  class="siebui-logs"><swe:control id="3003" property="FormattedHtml"/></div>
+</div>
+
+
+<!-- Template End:SIAAppletFormGridLayout_NoMenu_NoLabel_DM.swt.swt-->

@@ -1,0 +1,34 @@
+<!-- Template Start: FINSeCfgControlApplicantAddJS.swt -->
+
+<swe:include file="eCfgPort_HeaderJS.swt"/>
+
+<tr>
+   <td width=100% colspan=2>
+      <table cellpadding=0 cellspacing=0 border=0 width=100%>
+            <tr>
+               <td>
+                  <script>
+                     var sAddItemLabel = '<swe:control id="AddItem" CfgUIControl="AddRelationship" CfgHtmlType="CfgLabel"/>';
+                  </script>
+
+                  <swe:for-each id="1100" CfgLoopType="Domain" Automation="N" startValue="1000" count="Dynamic" iteratorName="1100Id">
+                      <swe:control id="ComboAdd" CfgHtmlType="CfgComboAdd" ForceRefresh="Y"
+                       CfgJSShow="applicantShowSelectAndOptions" CfgJSUpdateExclusion="updateExcludedItemForPort" CfgJSUpdateSelection="applicantUpdatePortItemsForComboAddAttr"/>
+                  </swe:for-each>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="3">
+                   <swe:include file="FINSeCfgRelationApplicantContentsJS.swt"/>
+               </td>
+
+            </tr>
+
+      </table>
+   </td>
+</tr>
+
+<swe:include file="eCfgPort_FooterJS.swt"/>
+
+<!-- Template End: FINSeCfgControlApplicantAddJS.swt -->
+

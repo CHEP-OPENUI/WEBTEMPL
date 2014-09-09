@@ -1,0 +1,36 @@
+<!-- Template Start: CCViewContainer_Search.swt --> 
+
+<swe:switch>
+<swe:case condition="Web Engine State Properties, IsRTL">
+<!-- RTL case -->
+
+	<swe:frameset htmlAttr="cols='66%,33%' framespacing='2' frameborder='1'">
+		<swe:frame type="View" htmlAttr="marginheight='0' marginwidth='0' scrolling='Yes'">
+			<swe:current-view/>
+		</swe:frame>	
+		<swe:frame type="AltView" name="SS_SearchCenter" htmlAttr="marginheight='0' marginwidth='0' scrolling='Yes'">
+			<swe:view name="Search Selection View" id="SS_SearchCenter" />
+		</swe:frame>	 
+	</swe:frameset>
+
+<!-- end of RTL case -->
+</swe:case>
+
+<swe:default>
+<!-- default, non-RTL -->
+
+	<swe:frameset htmlAttr="cols='33%,66%' framespacing='2' frameborder='1'">
+		<swe:frame type="AltView" name="SS_SearchCenter" htmlAttr="marginheight='0' marginwidth='0' scrolling='Yes'">
+			<swe:view name="Search Selection View" id="SS_SearchCenter" />
+		</swe:frame>	 
+		<swe:frame type="View" htmlAttr="marginheight='0' marginwidth='0' scrolling='Yes'">
+			<swe:current-view/>
+		</swe:frame>	 
+	</swe:frameset>
+
+<!-- end of default, non-RTL -->
+</swe:default>
+</swe:switch>
+
+
+<!-- Template End: CCViewContainer_Search.swt -->

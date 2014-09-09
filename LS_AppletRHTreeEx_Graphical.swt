@@ -1,0 +1,75 @@
+<!-- Template Start: LS_AppletRHTreeEx_Graphical.swt -->
+<!-- Applet with a Tree Control -->
+<!-- Use the custom html type of "Tree" for this control -->
+
+<!-- <swe:include file="CCApplet_NamedSpacer.swt"/>	-->
+
+<swe:layout viewDisplayMode="Layout"> 	
+<!--<swe:include file="CCApplet_Spacer.swt"/> -->
+	<swe:include file="CCLayoutTitlePortal.swt"/>
+</swe:layout>
+
+
+<span class="AppletStyle8">
+ <swe:form>
+	<div class="swe:this.SelectStyle">	
+	
+	<swe:include file="LSStdAppletHeader.swt"/>
+	<swe:include file="CCListButtons.swt"/>
+	
+	<swe:if condition="Web Engine State Properties, IsHighInteractive">
+	<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="AppletHIFormBorder">
+	</swe:if>
+  
+   <swe:layout viewDisplayMode="Show" appletDisplaySize="Max">
+        <swe:error>
+		<table class="AppletBack" width="100%" cellpadding="4" cellspacing="0" border="0"><tr><td 
+                 class="error"><swe:this property="FormattedHtml"/><br>&nbsp;</td></tr></table>
+	</swe:error> 
+
+	<div style="height:140; overflow:auto;  border-width: 1 1 1 0 ;border-style: solid; border-color: #cccccc;          	         background-color: #ffffff; position:relative; padding:5; width:100%">
+	  <span class="treeBack">
+		<table border=0 cellspacing=0 cellpadding=0>
+		<swe:for-each-node>
+			<tr valign=top>
+				<td nowrap>
+				<swe:for-each-indent>
+					<swe:indent-img/>
+				</swe:for-each-indent>
+				<swe:node type="DisplayName" state="Active">
+					<span class="treeInactive"><swe:this property="FormattedHtml"/></span>
+				</swe:node>
+				<swe:node type="DisplayName" state="Inactive">
+					<span class="treeInactive"><swe:this property="FormattedHtml"/></span>
+				</swe:node>
+				<swe:node type="FieldValue" state="Active">
+					<span class="treeInactive"><swe:this property="FormattedHtml"/></span>
+				</swe:node>
+				<swe:node type="FieldValue" state="Inactive">
+					<span class="treeInactive"><swe:this property="FormattedHtml"/></span>
+				</swe:node>
+				</td>
+			</tr>
+		</swe:for-each-node>
+		</table>
+	  </span>
+        </div>
+    </swe:layout>
+
+  <swe:include file="CCBottomApplet.swt"/>
+
+  <swe:if condition="Web Engine State Properties, IsHighInteractive">
+  </td></tr></table>
+ </swe:if>
+	
+ </div>
+	
+ </swe:form>
+</span>
+</swe:layout>
+
+
+
+<!-- Template End: LS_AppletRHTreeEx_Graphical.swt-->
+
+

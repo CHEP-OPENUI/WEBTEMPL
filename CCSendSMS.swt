@@ -1,0 +1,86 @@
+
+<!-- Template Start: CCSendSMS.swt -->
+<swe:include file="CCStylesChoice.swt"/>
+
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+	<swe:form>	
+	<tr valign="top">
+		<td class="AppletStyle1">
+				<table datatable="0" summary="" class="AppletBack" valign="top" width="100%" cellpadding="2" cellspacing="1" border="0">
+						<tr valign="top">
+							<td>
+								<swe:error>
+									<table datatable="0" summary="" class="AppletBack" cellpadding="2" cellspacing="0" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/></td></tr></table>
+								</swe:error>
+								<swe:control id="91">
+						  			<!-- Inside-applet help text -->
+						  			<table datatable="0" summary="" class="AppletBack" cellpadding="4" cellspacing="0" border="0"><tr><td><swe:this property="DisplayName" hintText="Inside Applet Help Text"/></td></tr></table>
+								</swe:control>	
+								<table datatable="0" summary="" class="AppletBack" border="0" cellpadding="0"  cellspacing="4">
+									<tr valign="top">
+										<td>
+											<table datatable="0" summary="" border="0" cellspacing="2" cellpadding="1" align="center">
+													<swe:control id="1200">				  
+													  <tr valign="top">
+														  <td align="right" class="mceLabel2">&nbsp;<swe:this property="FormattedHtml" hintText="Label"/></td>
+														  <td class="mceField"><table datatable="0" summary="" cellpadding="0" cellspacing="0" border="0"><tr>
+													</swe:control>
+														  <swe:control id="1300"><td align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="Field"/></td></swe:control>
+														  <swe:control id="1800"><td align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="Field"/></td></swe:control>
+													<swe:control id="1200"></tr></table></td>
+													  </tr>		
+													  <tr><td colspan="2"><hr size="1"></td></tr>
+													</swe:control>		
+											
+												<!-- Begin Loop: Lines 1-15 -->
+												<swe:for-each startValue="1101" count="15" iteratorName="currentId">
+												<!-- New line -->
+													<swe:control id="swe:currentId+100">				  
+													  <tr valign="top">
+														  <td align="right" class="mceLabel2">&nbsp;<swe:this property="FormattedHtml" hintText="Label"/></td>
+														  <td class="mceField"><table datatable="0" summary="" cellpadding="0" cellspacing="0" border="0"><tr>
+													</swe:control>
+														  <swe:control id="swe:currentId+200"><td align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="Field"/></td></swe:control>
+														  <swe:control id="swe:currentId+700"><td align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="Field"/></td></swe:control>
+													<swe:control id="swe:currentId+100"></tr></table></td>
+													  </tr>
+													</swe:control>				
+												</swe:for-each>
+												<!-- End Loop -->
+											</table>
+										</td>
+										<td>
+											<table datatable="0" summary="" border="0" cellspacing="2" cellpadding="1">
+												<!-- Begin Loop: Lines 1-15 -->
+												<swe:for-each startValue="2101" count="15" iteratorName="currentId">
+												<!-- New line -->
+													<swe:control id="swe:currentId+100">				  
+													  <tr valign="top">
+														  <td align="right" class="mceLabel2">&nbsp;<swe:this property="FormattedHtml" hintText="Label"/></td>
+														  <td class="mceField"><table datatable="0" summary="" cellpadding="0" cellspacing="0" border="0"><tr>
+													</swe:control>
+														  <swe:control id="swe:currentId+200"><td align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="Field"/></td></swe:control>
+														  <swe:control id="swe:currentId+700"><td align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="Field"/></td></swe:control>
+													<swe:control id="swe:currentId+100"></tr></table></td>
+													  </tr>		
+													 </swe:control>		 	
+												</swe:for-each>
+											</table>
+										</td>		
+									</tr>	
+								</table>
+							</td>	
+							
+						
+						</tr>
+						
+						
+				</table>
+
+				<swe:include file="CCPopupButtonsBottom.swt"/>
+		</td>
+	</tr>
+	</swe:form>	
+</table>
+<swe:scripts/>
+<!-- Template End: CCSendSMS.swt -->

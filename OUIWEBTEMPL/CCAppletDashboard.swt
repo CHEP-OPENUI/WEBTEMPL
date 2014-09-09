@@ -1,0 +1,222 @@
+<!-- Template Start: CCAppletDashboard.swt -->
+
+<div class="siebui-dashboard-container">
+   <swe:form>
+     <div class="siebui-dashboard-row">
+         <div class="siebui-dashboard-cell">
+            <div class="mceGridLabel" align="Right">
+               <swe:control id="1200">
+                   <!--placeholder for required-->
+                   <span>
+                     <swe:this property="FormattedHtml" hintText="Label"/>
+                   </span>
+               </swe:control>
+            </div>
+         </div>
+         <div class="siebui-dashboard-cell">
+               <swe:control id="1300">
+                   <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/>
+               </swe:control>
+         </div>
+         <div class="siebui-dashboard-cell">
+            <div class="mceGridLabel" align="Right">
+               <swe:control id="1700">
+                   <!--placeholder for required-->
+                   <span>
+                     <swe:this property="FormattedHtml" hintText="Label"/>
+                   </span>
+               </swe:control>
+            </div>
+         </div>
+         <div class="siebui-dashboard-cell">
+               <swe:control id="1800">
+                   <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/>
+               </swe:control>
+         </div>
+         <div class="siebui-dashboard-cell">
+            <div class="mceGridLabel" align="Right">
+               <swe:control id="2200">
+                   <!--placeholder for required-->
+                   <span>
+                     <swe:this property="FormattedHtml" hintText="Label"/>
+                   </span>
+               </swe:control>
+            </div>
+         </div>
+         <div class="siebui-dashboard-cell">
+               <swe:control id="2300">
+                   <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/>
+               </swe:control>
+         </div>
+         <div class="siebui-dashboard-cell">
+            <div class="mceGridLabel" align="Right">
+               <swe:control id="2700">
+                   <!--placeholder for required-->
+                   <span>
+                     <swe:this property="FormattedHtml" hintText="Label"/>
+                   </span>
+               </swe:control>
+            </div>
+         </div>
+         <div class="siebui-dashboard-navigation">
+               <swe:control id="2800">
+                   <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/>
+               </swe:control>
+         </div>
+         <div class="siebui-dashboard-update" align="right">
+            <swe:control id="209">
+               <img src="images/btn_div.gif" height="13" align="middle" alt="">
+            </swe:control>
+            <swe:control id="209" property="FormattedHtml" hintText="Previous"/>
+            <swe:control id="210" property="FormattedHtml" hintText="Next"/>
+            <swe:control id="210">
+               <img src="images/btn_div.gif" height="13" align="middle" alt="">
+            </swe:control>
+            <a id="s_dashboardclose" role="link" tabindex="0" aria-label="Close Dashboard" alt="Close">
+               <!--swe:control id="211" property="FormattedHtml" hintText="Hide"/-->
+            </a>
+         </div>
+      </div>
+      <div class="siebui-dashboard-row">
+         <div class="siebui-dashboard-cell">
+            <div class="mceGridLabel" align="Right">
+               <swe:control id="1201">
+                   <!--placeholder for required-->
+                   <span>
+                     <swe:this property="FormattedHtml" hintText="Label"/>
+                   </span>
+               </swe:control>
+            </div>
+         </div>
+         <div class="siebui-dashboard-cell">
+               <swe:control id="1301">
+                   <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/>
+               </swe:control>
+         </div>
+         <div class="siebui-dashboard-cell">
+            <div class="mceGridLabel" align="Right">
+               <swe:control id="1701">
+                   <!--placeholder for required-->
+                   <span>
+                     <swe:this property="FormattedHtml" hintText="Label"/>
+                   </span>
+               </swe:control>
+            </div>
+         </div>
+         <div class="siebui-dashboard-cell">
+               <swe:control id="1801">
+                   <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/>
+               </swe:control>
+         </div>
+         <div class="siebui-dashboard-cell">
+            <div class="mceGridLabel" align="Right">
+               <swe:control id="2201">
+                   <!--placeholder for required-->
+                   <span>
+                     <swe:this property="FormattedHtml" hintText="Label"/>
+                   </span>
+               </swe:control>
+            </div>
+         </div>
+         <div class="siebui-dashboard-cell">
+               <swe:control id="2301">
+                   <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/>
+               </swe:control>
+         </div>
+         <div class="siebui-dashboard-cell">
+            <div class="mceGridLabel" align="Right">
+               <swe:control id="2701">
+                   <!--placeholder for required-->
+                   <span>
+                     <swe:this property="FormattedHtml" hintText="Label"/>
+                   </span>
+               </swe:control>
+            </div>
+         </div>
+         <div class="siebui-dashboard-navigation">
+            <div class="mceGridField">
+               <swe:control id="2801">
+                   <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/>
+               </swe:control>
+               <swe:control id="2901">
+                  <swe:this property="FormattedHtml" hintText="Button"/>
+               </swe:control>
+            </div>
+         </div>
+         <div class="siebui-dashboard-update">
+            <div class="mceGridField" align="Right">
+               <swe:control id="207" property="FormattedHtml" />
+               <swe:control id="208" property="FormattedHtml" hintText="Update"/>
+            </div>
+         </div>
+      </div>
+
+      <div class="siebui-dashboard-row">
+         <div class="siebui-dashboard-cell">
+            <div class="mceGridLabel" align="Right">
+               <swe:control id="1202">
+                   <!--placeholder for required-->
+                   <span>
+                     <swe:this property="FormattedHtml" hintText="Label"/>
+                   </span>
+               </swe:control>
+            </div>
+         </div>
+         <div class="siebui-dashboard-cell">
+               <swe:control id="1302">
+                   <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/>
+               </swe:control>
+         </div>
+         <div class="siebui-dashboard-cell">
+            <div class="mceGridLabel" align="Right">
+               <swe:control id="1702">
+                   <!--placeholder for required-->
+                   <span>
+                     <swe:this property="FormattedHtml" hintText="Label"/>
+                   </span>
+               </swe:control>
+            </div>
+         </div>
+         <div class="siebui-dashboard-cell">
+               <swe:control id="1802">
+                   <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/>
+               </swe:control>
+         </div>
+         <div class="siebui-dashboard-cell">
+            <div class="mceGridLabel" align="Right">
+               <swe:control id="2202">
+                   <!--placeholder for required-->
+                   <span>
+                     <swe:this property="FormattedHtml" hintText="Label"/>
+                   </span>
+               </swe:control>
+            </div>
+         </div>
+         <div class="siebui-dashboard-cell">
+               <swe:control id="2302">
+                   <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/>
+               </swe:control>
+         </div>
+         <div class="siebui-dashboard-navigation">
+            <div class="mceGridLabel" align="Right">
+               <swe:control id="2702">
+                   <!--placeholder for required-->
+                   <span>
+                     <swe:this property="FormattedHtml" hintText="Label"/>
+                   </span>
+               </swe:control>
+            </div>
+         </div>
+         <div class="siebui-dashboard-update" align="Right">
+               <swe:control id="2802">
+                   <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/>
+               </swe:control>
+               <swe:control id="2902">
+                  <swe:this property="FormattedHtml" hintText="Button"/>
+               </swe:control>
+         </div>
+      </div>
+   </swe:form>
+</div>
+
+<!-- Template End: CCAppletDashboard.swt -->

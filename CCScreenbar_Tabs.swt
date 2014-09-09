@@ -1,0 +1,36 @@
+<!--  Template Start: CCScreenbar_Tabs.swt -->
+<!-- ---------- Tier 1 navigation ----------------->	
+<div class="tier1Back" style="width:100%">
+
+<swe:if condition="Web Engine State Properties, IsHighInteractive">
+	<swe:switch>
+		<swe:case condition="Web Engine State Properties, IsHtmlMarkup">
+	    		<swe:nav-control type="Screen With Category" style="Tab" indentWidth="8"/>
+		</swe:case>
+		<swe:default>
+	   	 	<swe:screenbar>
+				<table datatable="0" summary="" ID="swe:this.TableId" style="position:relative;left:16px" cellspacing="0" cellpadding="0" border='0'><tr>
+					<swe:for-each-screen>		
+						<swe:screenlink state="Active"><td nowrap valign="bottom" id="swe:this.Id" class='tier1On'><swe:this property="FormattedHtml">&nbsp;<swe:screenname/>&nbsp;</swe:this></td></swe:screenlink>
+						<swe:screenlink state="Inactive"><td nowrap valign="bottom" id="swe:this.Id" class='tier1Off'><swe:this property="FormattedHtml">&nbsp;<swe:screenname/>&nbsp;</swe:this></td></swe:screenlink>
+					</swe:for-each-screen>
+				</tr></table>
+		    </swe:screenbar>
+		</swe:default>	
+	</swe:switch>
+</swe:if>
+
+<swe:if condition="Web Engine State Properties, IsLowInteractive">
+    <swe:screenbar>
+	<table datatable="0" summary="" ID="swe:this.TableId" style="position:relative;left:0px" cellspacing="0" cellpadding="0" border='0'><tr>
+		<swe:for-each-screen>		
+			<swe:screenlink state="Active"><td nowrap valign="bottom" id="swe:this.Id" class='tier1On'><swe:this property="FormattedHtml">&nbsp;<swe:screenname/>&nbsp;</swe:this></td></swe:screenlink>
+			<swe:screenlink state="Inactive"><td nowrap valign="bottom" id="swe:this.Id" class='tier1Off'><swe:this property="FormattedHtml">&nbsp;<swe:screenname/>&nbsp;</swe:this></td></swe:screenlink>
+		</swe:for-each-screen>
+	</tr></table>
+    </swe:screenbar>
+</swe:if>
+</div>
+<!-- ---------- End Tier 1 navigation ------------->
+<!--  Template End: CCScreenbar_Tabs.swt -->
+               

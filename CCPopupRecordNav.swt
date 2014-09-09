@@ -1,0 +1,42 @@
+<!-- Template Start: CCPopupRecordNav.swt -->
+
+	<swe:control id="122">
+		<!-- Condition the display of ButtonDiv on the mapping of Gotoprevious, 122 -->
+		<td>&nbsp;</td>
+		<td Class="swe:class AppletTitle" valign="middle"><img src="images/btn_div.gif" height="13" align="middle" alt=""></td>
+		<td>&nbsp;</td>
+	</swe:control>
+
+	<swe:control id="121">
+		<!-- GotoFirst, 121 -->
+		<td Class="swe:class AppletTitle" valign="middle" nowrap>
+		<swe:this property="FormattedHtml" hintText="First" hintMapType="Control"/>
+		</td><td>&nbsp;</td>
+	</swe:control>
+	
+	<swe:control id="122">
+		<!-- GotoPrevious, 122 -->
+		<td Class="swe:class AppletTitle" valign="middle" nowrap>
+			<swe:this property="FormattedHtml" hintText="Previous" hintMapType="Control"/>
+		</td>	
+	</swe:control>
+	
+	<!-- RowCounter -->
+	<td Class="swe:class AppletTitle" valign="middle" nowrap>&nbsp;<swe:this property="RowCounter"/>&nbsp;</td>
+		
+	<swe:control id="123">
+		<!-- GotoNext, 123 -->
+		<td Class="swe:class AppletTitle" valign="middle" nowrap>
+			<swe:this property="FormattedHtml" hintText="Next" hintMapType="Control"/>
+		</td>
+	</swe:control>
+	
+	<swe:control id="124">
+		<!-- GotoLast, 124 -->
+		<td Class="swe:class AppletTitle" valign="middle" nowrap>
+		<swe:this property="FormattedHtml" hintText="Last" hintMapType="Control"/>
+		</td><td>&nbsp;</td>
+	</swe:control>
+		
+
+<!-- Template End: CCPopupRecordNav.swt -->

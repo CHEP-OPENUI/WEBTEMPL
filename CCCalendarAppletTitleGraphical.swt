@@ -1,0 +1,32 @@
+<!-- TemplateStart: CCCalendarAppletTitleGraphical.swt -->
+
+<table datatable="0" summary="" class="AppletStyle8" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+
+<tr class="AppletButtons">
+  <td valign="bottom"><swe:control id="89" property="FormattedHtml" hintText="Image" hintMapType="Control"/></td>
+   <td nowrap width="100%" valign="bottom">
+	   <table datatable="0" summary="" cellspacing="0" cellpadding="3" border="0"><tr><td class="AppletTitle">
+	   <!-- Plain text title (90) --><swe:control id="90" property="DisplayName" hintText="Title" hintMapType="Control"/>
+	   <!-- GotoView (184) --><swe:control id="184" property="FormattedHtml" hintText="DrillDown Title" hintMapType="Control"/> 
+           <swe:control id="999"><!-- Today --><td valign="middle" nowrap></swe:control><swe:control id="999" property="FormattedHtml" hintText="GoToToday" hintMapType="Control"/><swe:control id="999"></td></swe:control>
+	   <swe:control id="158"><!-- Weekly --><td valign="middle" nowrap></swe:control><swe:control id="158" property="FormattedHtml" hintText="GoToWeeklyView" hintMapType="Control"/><swe:control id="158"></td></swe:control>
+	   <swe:control id="159"><!-- Monthly --><td valign="middle" nowrap></swe:control><swe:control id="159" property="FormattedHtml" hintText="GoToMonthlyView" hintMapType="Control"/><swe:control id="159"></td></swe:control>
+
+	    </td></tr></table>     
+   </td>
+   <td width="100%" align="right" valign="bottom">
+   		<table datatable="0" summary="" cellpadding="3" cellspacing="0" border="0"><tr><td>
+
+			<swe:include file="CCLayoutButtons.swt"/>
+		
+		</td></tr></table>					
+	</td>		
+</tr>
+</table>
+
+<swe:layout viewDisplayMode="Layout"></swe:layout>
+
+<swe:layout viewDisplayMode="Show" appletDisplayMode="Show" appletDisplaySize="Min"></swe:layout>
+
+<swe:layout viewDisplayMode="Show" appletDisplayMode="Show"></swe:layout>
+<!-- Template End: CCCalendarAppletTitleGraphical.swt -->

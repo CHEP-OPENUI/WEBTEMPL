@@ -1,0 +1,58 @@
+<!--  Template Start: dCCView_25_50_25_home.swt -->
+<swe:include file="dCCHTMLHeader.swt"/>
+<!-- ---------- Tier 2 Nav and Search Applet ----------------->
+
+<!-- ---------- Threadbar And/Or Greeting ----------------->
+<swe:if condition="Web Engine State Properties, IsLowInteractive">
+<swe:include file="CCThreadbar.swt"/>
+</swe:if>
+<!-- ---------- Threadbar And/Or Greeting  ------------->
+
+<!-- ---------- Main Content Area ---------------------------->
+<table datatable="0" summary="" width="100%" border="0" cellspacing="0" cellpadding="5" cols="1">
+	<tr valign="top">	
+		<!--  2-Column Wide -->
+		<td valign="top">
+			<swe:applet id="101" hintText="Salutation Applet"/>
+			<swe:applet id="201" hintMapType="Applet"/>
+		</td>
+		<!--  2-Column Wide -->	
+	</tr>
+</table>
+
+<table datatable="0" summary="" width="100%" border="0" cellspacing="0" cellpadding="5" cols="3">
+<tr>
+		<!--  Column 1 -->
+		<td valign="top" width="25%">
+			<swe:for-each count=10 iteratorName="currentId" startValue="102">
+				<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" property="FormattedHtml" var="Parent"/>
+			</swe:for-each>
+		</td>
+		<!--  End Column 1 -->
+		
+		<!--  Column 2 -->
+		<td valign="top" width="50%">
+			<swe:for-each count=10 iteratorName="currentId" startValue="202">
+				<!-- start applet-->
+				<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" property="FormattedHtml" var="Parent"/>
+				<!-- end applet-->
+			</swe:for-each>
+		</td>
+		<!--  End Column 2 -->
+		
+		<!--  Column 3 -->
+		<!--  width set to 24% because in NS 4.78 at 1024x768 the home page has horizontal scroll bars (defect # 12-9B8G2Z) -->
+		<td valign="top" width="24%">
+			<swe:for-each count=10 iteratorName="currentId" startValue="302">
+				<!-- start applet-->
+				<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" property="FormattedHtml" var="Parent"/>
+				<!-- end applet-->
+			</swe:for-each>
+		</td>
+		<!--  End Column 3 -->			
+</tr>
+
+</table>
+<!-- ---------- End Main Content Area ------------------------>
+<swe:include file="dCCHTMLFooter.swt"/>
+<!--  Template End: dCCView_25_50_25_home.swt -->

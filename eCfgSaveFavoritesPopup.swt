@@ -1,0 +1,64 @@
+<!-- Template Start: eCfgSaveFavoritesPopup.swt -->
+<swe:include file="CCStylesChoice.swt"/>
+
+<swe:form>	
+
+<table datatable="0" summary="" border="0" cellpadding="2" cellspacing="1" width="100%">
+    <tr>
+        <td width="100%">
+            <swe:control id="0" property="DisplayName" hintText="Help Text"/>
+        </td>
+    </tr>
+    
+    <tr>
+        <td width="100%">
+            &nbsp;
+        </td>
+    </tr>
+    
+    <tr>
+        <td width="100%">
+            <swe:control id="1" property="FormattedHtml" hintText="Name"/>
+        </td>
+    <tr>
+    
+    <tr>
+        <td width="100%">
+            <swe:control id="2" property="FormattedHtml" hintText="NameEditField"/>            
+        </td>
+    </tr>
+
+    <tr>
+        <td width="100%">
+            &nbsp;
+        </td>
+    </tr>
+    
+    <tr>
+        <td width="100%">
+            &nbsp;
+        </td>
+    </tr>
+
+    <tr>
+        <td width="100%">
+            <swe:control id="3" property="FormattedHtml" hintText="PrivateCheckBox"/>
+            <swe:control id="8" property="FormattedHtml" hintText="Description"/>
+        </td>
+    </tr>
+
+    <tr>
+        <td width="100%">
+            <swe:control id="4" property="FormattedHtml" hintText="PublicCheckBox"/>
+            <swe:control id="9" property="FormattedHtml" hintText="Description"/>
+        </td>
+    </tr>
+    
+</table>
+
+<p>
+
+<swe:include file="CCPopupButtonsBottom.swt"/>
+
+</swe:form>	
+<!-- Template End: eCfgSaveFavoritesPopup.swt -->

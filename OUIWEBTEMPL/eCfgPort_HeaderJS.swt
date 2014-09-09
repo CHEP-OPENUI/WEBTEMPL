@@ -1,0 +1,81 @@
+<!-- Template Start: eCfgPort_HeaderJS.swt -->
+<!-- Oliver: [code redesign], product modules header-->
+
+<div id='eCfgPort_HeaderJS_PUI_1' class="siebui-ecfg-header-ext"></div>
+<SCRIPT>
+        var sParentPath = '<swe:control id="swe:IncId+520" CfgFieldName="Parent Path" CfgHtmlType="CfgLabel" />';
+        var sRelationshipId = '<swe:control id="swe:IncId+520" CfgFieldName="Port Item Id" CfgHtmlType="CfgLabel" />';
+
+        var strId = "eCfgPort_HeaderJS_PUI_1" + sParentPath + "_" + sRelationshipId;
+        $("#eCfgPort_HeaderJS_PUI_1")[0].id = strId;
+        $("#"+strId).append ('<A Name="' +  sParentPath + "_" + sRelationshipId + '"></A>');
+</SCRIPT>
+
+<div class="NotSelected siebui-ecfg-module">
+   <table datatable="0" summary="" width="100%">
+
+   <swe:switch>
+      <swe:case condition="Default, AreEmptyFields, Operator:and, FieldName0:.Description, FieldName1:.LearnMore">
+
+      <tr class="AppletButtons">
+         <td>
+            <div class="siebui-ecfg-header-title">
+               <div class="siebui-ecfg-header-label"><swe:control id="swe:IncId + 350" CfgFieldName="CxPortName" CfgHtmlType="CfgLabel" /></div>
+               <div class="siebui-ecfg-header-label-ext"><swe:control id="swe:IncId + 2550" CfgHtmlType="CfgGenerics" /></div>
+             </div>
+
+      </swe:case>
+      <swe:default>
+
+      <tr class="AppletButtons">
+        <td>
+            <div class="siebui-ecfg-header-title">
+               <div class="siebui-ecfg-header-label"><swe:control id="swe:IncId + 350" CfgFieldName="CxPortName" CfgHtmlType="CfgLabel" /></div>
+               <div class="siebui-ecfg-header-label-ext"><swe:control id="swe:IncId + 2550" CfgHtmlType="CfgGenerics" /></div>
+            </div>
+
+      </swe:default>
+   </swe:switch>
+
+
+            <div id='eCfgPort_HeaderJS_PUI_2' class="siebui-ecfg-header-ext"></div>
+            <SCRIPT>
+               var sImage        = '<swe:control id="swe:IncId + 50" CfgFieldName=".Image" CfgHtmlType="CfgLabel" />';
+               var sParentPath   = '<swe:control id="swe:IncId+520" CfgFieldName="Parent Path" CfgHtmlType="CfgLabel" />';
+               var sRelationshipId = '<swe:control id="swe:IncId+520" CfgFieldName="Port Item Id" CfgHtmlType="CfgLabel" />';
+               if ( 0 == sImage.length )
+                  sImage = 'images/eCfgInvisibleSpacer.gif';
+
+               var strId = "eCfgPort_HeaderJS_PUI_2" + sParentPath + "_" + sRelationshipId;
+               $("#eCfgPort_HeaderJS_PUI_2")[0].id = strId;
+               $("#"+strId).append ('<img id="img_' + sParentPath + "_" + sRelationshipId + '" border="0" src="' + sImage + '" alt="" align="right">');
+            </SCRIPT>
+
+
+   <swe:switch>
+      <swe:case condition="Default, AreEmptyFields, Operator:and, FieldName0:.Description, FieldName1:.LearnMore">
+      </swe:case>
+      <swe:default>
+            <div class="siebui-ecfg-header-subtitle">
+               <swe:control id="swe:IncId + 150" CfgFieldName=".Description" CfgHtmlType="CfgLabel" />
+               <div id='eCfgPort_HeaderJS_PUI_3'></div>
+               <SCRIPT>
+                  var sLearnMoreURL = '<swe:control id="swe:IncId + 250" CfgFieldName=".LearnMore" CfgHtmlType="CfgLabel" />';
+                  var sLearnMore    = '<swe:control id="LearnMore" CfgUIControl="lblLearnMore" CfgHtmlType="CfgLabel"/>';
+                  if ( 0 != sLearnMoreURL.length )
+                  {
+                     var strId = "eCfgPort_HeaderJS_PUI_3" + sParentPath + "_" + sRelationshipId;
+                     $("#eCfgPort_HeaderJS_PUI_3")[0].id = strId;
+                     $("#"+strId).append ('(<a href="' + sLearnMoreURL + '" TARGET="_blank"><img border="0" src="images/icon_opensearch.gif">' + sLearnMore + '</a>)');
+                  }
+               </SCRIPT>
+            </div>
+      </swe:default>
+   </swe:switch>
+
+      </td>
+   </tr>
+ </table>
+ <table class="siebui-ecfg-module-content" datatable="0" summary="" width="100%"> <!-- DIV & TABLE closed in ecfg-footer... -->
+
+<!-- Template End: eCfgPort_HeaderJS.swt -->

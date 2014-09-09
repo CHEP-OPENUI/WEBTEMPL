@@ -1,0 +1,58 @@
+<!-- Template Start: eCfgAttributeList.swt -->
+		
+<table datatable="0" summary="" bgcolor="#cccccc" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0">
+   <tr valign="top">
+      <td>
+         <table datatable="0" summary="" valign="top" width="100%" cellpadding="1" cellspacing="1" border="0">
+            
+            <swe:include file="eCfgTrSwitch.swt"/>
+            
+               <swe:control id="swe:IncId + 102" CfgUIControl="Active Row" >
+                  <td width="42" align="center">
+                     <swe:this property="FormattedHtml"/>
+                  </td>
+               </swe:control>
+
+               <swe:control id="swe:IncId" CfgFieldName="AttName" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel">
+                  <td width="20%" valign="top">
+                     <swe:this property="FormattedHtml"/>
+                  </td>
+               </swe:control>
+
+               <swe:control id="swe:IncId+3000" CfgFieldName="AttValue" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" >
+                  <td width="20%" valign="top">
+                     <swe:this property="FormattedHtml"/>
+                  </td>
+               </swe:control>
+            </tr>
+            
+            <tr>
+               <td width="20%" align="center">&nbsp;</td>
+               <td align="center">
+                  <table datatable="0" summary="" width="100%" cellpadding="0" cellspacing="0" border="0">
+                     <swe:for-each id="120" CfgLoopType="Domain" startValue="1200" count="Dynamic" iteratorName="120Id" >
+                        <swe:include file="eCfgTrSwitch.swt"/>
+
+                           <swe:control id="swe:120Id + 102" CfgUIControl="Active Row" >
+                              <td width="42" align="center">
+                                 <swe:this property="FormattedHtml"/>
+                              </td>
+                           </swe:control>
+                              
+                           <swe:control id="swe:120Id"  CfgUIControl="CfgLabel" CfgFieldName="AttValue">
+                              <td width="20%" align="center" >   
+                                 <swe:this property="FormattedHtml"/>
+                              </td>
+                           </swe:control>
+                        </tr>
+                     </swe:for-each>
+                  </table>
+               </td>    
+	       <td width="20%">&nbsp;</td>   
+            </tr>
+         </table>
+      </td>
+   </tr>
+</table>		
+
+<!-- Template End: eCfgAttributeList.swt -->

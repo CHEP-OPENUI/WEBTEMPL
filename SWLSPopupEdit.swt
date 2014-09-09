@@ -1,0 +1,80 @@
+<swe:switch>
+  <swe:case condition="Web Engine User Agent, TestCapability, WirelessStyle:WML">
+    <swe:xsl-stylesheet name="SWLSEdit_wml.xsl" mode="process"/>
+  </swe:case>
+  <swe:case condition="Web Engine User Agent, TestCapability, WirelessStyle:CHTML">
+    <swe:xsl-stylesheet name="SWLSEdit_chtml.xsl" mode="process"/>
+  </swe:case>
+  <swe:case condition="Web Engine User Agent, TestCapability, WirelessStyle:XHTML">
+    <swe:xsl-stylesheet name="SWLSEdit_1c_xhtml.xsl" mode="process"/>
+  </swe:case>
+  <swe:default>
+    <swe:xsl-stylesheet name="SWLSEdit_2c_html.xsl" mode="process"/>
+  </swe:default>
+</swe:Switch>
+
+<template>
+  <do type="prev" label="Back">
+    <prev/>
+  </do>
+</template>
+
+<onevent type="onenterbackward">
+  <prev/>
+</onevent>
+
+<!-- Start Edit Template Body -->
+<b>
+<swe:control id="1" hintMapType="Control">
+  <swe:this property="DisplayName" hintText="Label"/>
+</swe:control>
+</b>
+
+<swe:form>
+  <swe:control id="2" hintMapType="Control">  
+    <swe:this property="DisplayName" hintText="Label"/>
+  </swe:control>
+  <swe:control id="3" hintMapType="FormItem">
+    <swe:this property="FormattedHtml" hintText="FormItem"/>
+  </swe:control>
+  <swe:control id="4" hintMapType="Control">  
+    <swe:this property="DisplayName" hintText="Label"/>
+  </swe:control>
+  <swe:control id="5" hintMapType="FormItem">
+    <swe:this property="FormattedHtml" hintText="FormItem"/>
+  </swe:control>
+  <swe:control id="6" hintMapType="Control">  
+    <swe:this property="DisplayName" hintText="Label"/>
+  </swe:control>
+  <swe:control id="7" hintMapType="FormItem">
+    <swe:this property="FormattedHtml" hintText="FormItem"/>
+  </swe:control>
+  <swe:control id="8" hintMapType="Control">  
+    <swe:this property="DisplayName" hintText="Label"/>
+  </swe:control>
+  <swe:control id="9" hintMapType="FormItem">
+    <swe:this property="FormattedHtml" hintText="FormItem"/>
+  </swe:control>
+  <swe:control id="10" hintMapType="Control">  
+    <swe:this property="DisplayName" hintText="Label"/>
+  </swe:control>
+  <swe:control id="11" hintMapType="FormItem">
+    <swe:this property="FormattedHtml" hintText="FormItem"/>
+  </swe:control>
+  <swe:control id="12" hintMapType="Control">  
+    <swe:this property="DisplayName" hintText="Label"/>
+  </swe:control>
+  <swe:control id="13" hintMapType="FormItem">
+    <swe:this property="FormattedHtml" hintText="FormItem"/>
+  </swe:control>
+  <swe:control id="41" hintMapType="Control">
+    <swe:this property="FormattedHtml" hintText="Save"/>
+  </swe:control>
+</swe:form>
+
+<swe:form>
+  <swe:control id="42" hintMapType="Control">
+    <swe:this property="FormattedHtml" hintText="Cancel"/>
+  </swe:control>
+</swe:form>
+<!-- End Edit Template Body -->

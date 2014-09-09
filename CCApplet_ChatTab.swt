@@ -1,0 +1,11 @@
+<!-- Template Start: CCApplet_ChatTab.swt -->
+
+<link href="files/chat.css" rel="stylesheet"/>
+<swe:form>
+
+<swe:control id="3000">
+	<swe:this property="FormattedHtml" hintMapType="Control" hintText="ChatTabActiveX" />
+</swe:control>
+
+</swe:form>
+<!--Template End: CCApplet_ChatTab.swt -->

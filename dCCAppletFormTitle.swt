@@ -1,0 +1,5 @@
+<!-- Template Start: dCCAppletFormTitle.swt -->
+
+<span class="dCCAppletTitle"><swe:this property="Title"/></span>
+
+<!-- Template End: dCCAppletFormTitle.swt -->

@@ -1,0 +1,23 @@
+<!--  Template Start: CCThreadbar.swt -->
+<swe:switch>
+<!-- start of IsThreadbarHidden -->
+<swe:case condition="Web Engine State Properties, IsThreadbarHidden">
+</swe:case>
+<!-- end of IsThreadbarHidden -->
+<!-- default, Show Threadbar -->
+<swe:default>
+	<swe:threadbar>
+	<ul id="siebui-threadbar">
+		<swe:for-each-thread>
+		<li>
+			<span class="siebui-crumb">
+	        	<swe:threadlink property="FormattedHtml"><swe:this property="Title"/></swe:threadlink>
+			</span>
+		</li>
+		</swe:for-each-thread>
+	</li>
+	</swe:threadbar>
+</swe:default>
+<!-- end of show Threadbar -->
+</swe:switch>
+<!--  Template End: CCThreadbar.swt -->

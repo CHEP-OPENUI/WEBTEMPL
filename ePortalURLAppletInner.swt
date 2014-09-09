@@ -1,0 +1,19 @@
+<!-- Template Start ePortalURLAppletInner.swt -->
+
+                  <!-- Begin Border -->
+                  <table datatable="0" summary="" class="AppletBorder" valign="top" width="100%" cellpadding="1" cellspacing="0" border="0">
+                     <tr>
+                        <td valign="top">
+                           <table datatable="0" summary="" valign="top" width="100%" cellpadding="3" cellspacing="0" border="0">
+                              <tr class="AppletBlank">
+                                 <td valign="top">
+                                    <swe:include file="SIPlainApplet.swt"/>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+                  <!-- End Border -->
+
+<!-- Template End ePortalURLAppletInner.swt -->

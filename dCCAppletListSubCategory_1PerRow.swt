@@ -1,0 +1,14 @@
+<!--  Template Start: dCCAppletListSubCategory_1PerRow.swt -->
+
+<table datatable="0" summary="">
+<swe:for-each-row>
+	  <tr>
+			<td><swe:control id="501" property="FormattedHtml" hintText="Image" hintMapType="Image"/></td>
+			<td><swe:control id="502" property="FormattedHtml" hintText="Subcategory" hintMapType="Subcategory"/></td>
+      		<td><swe:control id="503">(<swe:this property="FormattedHtml" hintText="Count" hintMapType="Count"/>)</swe:control>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	  </tr>	
+</swe:for-each-row>
+</table>
+
+
+<!--  Template End: dCCAppletListSubCategory_1PerRow.swt -->

@@ -1,0 +1,38 @@
+
+<!-- Template Start: CCAppletTail.swt -->
+      <td>
+	<swe:include file="CCRecordNav.swt"/></td>				
+					</tr>
+				</table>		
+			</td>		
+			
+			<td align="right" width="100%">
+				<table datatable="0" summary="" cellpadding="2" cellspacing="0" border="0">
+					<tr class="AppletButtons">	
+						<td width="100%"><img src="images/spacer.gif" valign="top" width="1" height="1" border="0" alt=""/></td>		
+						<swe:include file="CCFormButtonsTopRight.swt"/>
+					</tr>
+				</table>		
+			</td>			
+			<td valign="top" align="right"><img src="images/rnd_top_cls_d.gif" valign="top" width="6" height="6" border="0" alt=""/></td>			
+		</tr>
+	
+	</table>
+</td></tr>
+	<tr valign="top">
+		<td class="AppletStyle1">
+     <swe:form>
+				<table datatable="0" summary="" bgcolor="#cccccc" valign="top" width="100%" cellpadding="0" cellspacing="0" border="0" align="center"><tr><td>
+				<table valign="top" width="100%" cellpadding="3" cellspacing="1" border="0" datatable="1" summary="swe:this.ListSummary">
+				   <swe:include file="CCListHeader.swt"/>
+				   <swe:include file="CCListBody.swt"/>
+				</table>	
+				</td></tr></table>
+
+				<swe:include file="CCBottomApplet.swt"/>
+	</swe:form>	
+</td></tr>
+</table>
+<swe:scripts/>
+
+<!-- Template End: CCAppletTail.swt -->

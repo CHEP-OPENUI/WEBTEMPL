@@ -1,0 +1,34 @@
+<!--  Template Start: dCCSubViewbar_Tabs.swt -->
+<!-- ---------- Tier 4 navigation ----------------->
+<swe:include file="CCApplet_Spacer.swt"/>
+
+<swe:switch>
+	<swe:case condition="Web Engine User Agent, TestCapability, 'Browser:IE'">		
+		<!-- Handle tabs in LI Mode IE browsers -->
+		<swe:subviewbar>
+			<div width="100%" align="center">
+				<table datatable="0" summary="" ID="swe:this.TableId" style="position:relative;left:0px" cellpadding="0" cellspacing="0" border='0'><tr>
+					<swe:for-each-subview>
+						<swe:viewlink state="Active"><td id="swe:this.Id" class='tier3On' nowrap><swe:this property="FormattedHtml">&nbsp;<swe:viewname/>&nbsp;</swe:this></td></swe:viewlink>
+						<swe:viewlink state="Inactive"><td id="swe:this.Id" class='tier3Off' nowrap><swe:this property="FormattedHtml">&nbsp;<swe:viewname/>&nbsp;</swe:this></td></swe:viewlink>
+					</swe:for-each-subview>
+				</tr></table>
+			</div>
+		</swe:subviewbar>
+	</swe:case>
+	<swe:default>
+		<!-- Handle tabs in LI Mode nonIE browsers -->
+		<swe:subviewbar>
+			<table datatable="0" summary="" cellpadding="0" cellspacing="0" border='0'><tr>
+				<swe:for-each-subview>
+					<swe:viewlink state="Active"><td class='tier3On' nowrap><swe:this property="FormattedHtml">&nbsp;<swe:viewname/>&nbsp;</swe:this></td></swe:viewlink>
+					<swe:viewlink state="Inactive"><td  class='tier3Off' nowrap><swe:this property="FormattedHtml">&nbsp;<swe:viewname/>&nbsp;</swe:this></td></swe:viewlink>
+				</swe:for-each-subview>
+			</tr></table>
+		</swe:subviewbar>
+	</swe:default>
+</swe:switch>
+
+<!-- ---------- End Tier 4 navigation ------------->
+<!--  Template End: dCCSubViewbar_Tabs.swt -->
+      

@@ -1,0 +1,63 @@
+<!-- Template Start: ERMReport_ListForm.swt -->
+
+
+<span class="reportTxtLarge"><swe:this property="Title"/><p></span>
+
+
+<swe:for-each-row count="7">
+
+
+<table datatable="0" summary="" class="reportBox">	
+	<tr valign="top">
+	
+	<swe:for-each startValue="1201" count="9" iteratorName="currentId">
+		
+		<swe:control id="swe:currentId">
+			<td class="reportLbl"><swe:this property="FormattedHtml" hintText="Mappable Label"/></td>
+		</swe:control>
+		<swe:control id="swe:currentId+100">
+			<td width="100" class="reportFld" style="white-space:nowrap"><swe:this property="FormattedHtml" hintText="Field"/></td>
+		</swe:control>
+	</swe:for-each>
+		
+	</tr>	
+</table>
+<br>
+
+<swe:for-each-child> 
+<swe:child-applet/> <!-- Show the child applet --> 
+</swe:for-each-child> 
+
+<br>
+
+<table datatable="0" summary="" class="reportBox" width="60%" >	
+	<tr valign="top" align="left">	
+	<swe:for-each startValue="1501" count="9" iteratorName="currentId">
+		<swe:control id="swe:currentId">		
+			<td valign="top"><div class="reportLbl" align="swe:this.TextAlignmentLabel">
+			 <swe:this property="DisplayName" hintText="Label"/>:
+	            </div></td>
+	         <td valign="top"><div class="reportFld" align="swe:this.TextAlignment">
+	  	  <swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId"/>
+                 </div></td>
+	       </swe:control>
+	</swe:for-each>	
+	</tr>	
+</table>
+<br>
+
+<swe:for-each startValue="1210" count="20" iteratorName="currentId">
+		
+	<swe:control id="swe:currentId">
+		<span class="reportLbl"><swe:this property="FormattedHtml" hintText="Mappable Label"/></span><br>
+	</swe:control>
+	<swe:control id="swe:currentId+100">
+		<span class="reportFld"><swe:this property="FormattedHtml" hintText="Field"/></span><br>
+	</swe:control>
+	
+</swe:for-each>	
+<br>
+</swe:for-each-row>
+<p>
+
+<!-- Template End: ERMReport_ListForm.swt -->

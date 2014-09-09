@@ -1,0 +1,19 @@
+<!-- Template Start: CCError.swt -->
+<swe:include file="CCHTMLHeader.swt"/>
+
+        <h1><span class="AppletTitle"><swe:pageitem id="101" property="DisplayName" /></span></h1>
+        <h4><span class="error"><swe:pageitem id="102" property="DisplayName" /></span></h4>
+        <ul>
+            <li><span class="error"><swe:pageitem id="103" property="DisplayName" /></span></li>
+            <li><span class="error"><swe:pageitem id="104" property="DisplayName" />&nbsp;</span>
+                <span class="error"><swe:pageitem id="1" property="DisplayName" />&nbsp;</span>
+                <swe:pageitem id="2" property="FormattedHtml" />
+            </li>
+            <li><span class="error"><swe:pageitem id="105" property="DisplayName" />&nbsp;</span>
+                <span class="error"><swe:pageitem id="1" property="DisplayName" />&nbsp;</span>
+                <swe:pageitem id="2" property="FormattedHtml" />
+            </li>
+        </ul>
+
+
+<!-- Template End: CCError.swt -->

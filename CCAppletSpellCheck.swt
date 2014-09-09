@@ -1,0 +1,288 @@
+<!-- Template Start: CCAppletSpellCheck.swt -->
+<swe:form>
+<table datatable="0" summary="" width="100%" bgcolor="#F7F3F7" cellpadding="2" cellspacing="0" border="0" align="center">
+	<tr>
+		<td>
+			<swe:error>
+			<table datatable="0" summary="" class="AppletBack" width="100%" bgcolor="#F7F3F7" cellpadding="2" cellspacing="0" border="0">
+			<tr>
+			<td class="error"><swe:this property="FormattedHtml"/>
+			</td>
+			</tr>
+			</table>
+			</swe:error>
+
+			<!--swe:control id="91"-->
+  			<!-- Inside-applet help text -->
+  			<table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="4" cellspacing="0" border="0">
+  			<tr>
+  			<td><b>
+  			<swe:control id="91">
+  			<swe:this property="DisplayName" hintText="Inside Applet Help Text"/>
+  			</swe:control></b>
+  			</td>
+  			</tr>
+  			</table>
+			<!--/swe:control-->
+
+			<table datatable="0" summary="" width="100%" border="0">
+				<tr bgcolor="#DEDFDE">
+				<td colspan="2">
+				<div style="width:100%;height:125px;overflow:auto;padding:2px;">
+				<swe:control id="1300">
+				<swe:this property="FormattedHtml" hintText="Text Segment"/>						
+				</swe:control>
+				</div>
+				</td>
+				</tr>
+			</table> <!-- sanjeev -->
+
+	
+	<tr>
+		<td colspan="2">
+			<table datatable="0" summary=""  cellpadding="0" cellspacing="0" border="0" class="mceWideFields">
+			<tr >
+			<td class="scLabelRight">	
+			<swe:control id="1201" >				
+			<!--span class="mceLabel"-->
+			<!--placeholder for required-->
+			<swe:this property="FormattedHtml" hintText="Replacement Word Label"/>
+			<!--/span-->				
+			</swe:control> 
+			</td>
+			<swe:control id="1301">
+			<td colspan="3" class="mceWideFields" align="swe:this.TextAlignment">
+			<span class="mceField"><swe:this property="FormattedHtml" hintText="Replacement Word" hintMapLabelId="1201"/></span>
+			</td>	
+			</swe:control>
+			</tr>
+			<tr>
+			<td >
+			<span class="mceField">
+			<img src="images/spacer.gif" valign="top" width="1" height="3" border="0" alt="">
+			</span>
+			</td>
+			</tr>
+			<tr >
+			<td class="scLabelRight">
+			<swe:control id="1211">				
+			<swe:this property="FormattedHtml" hintText="Suggested Word Label"/>
+			</swe:control>
+			</td>
+			<swe:control id="1311">
+			<td colspan="3" class="mceWideFields" align="swe:this.TextAlignment">
+			<span class="mceField"><swe:this property="FormattedHtml" hintText="Suggested Word" hintMapLabelId="1211"/></span>
+			</td>
+			</swe:control>
+			</tr>
+			<tr>
+			<td>
+			<span class="mceField">
+			<img src="images/spacer.gif" valign="top" width="1" height="3" border="0" alt="">
+			</span>
+			</td>
+			</tr>
+			<tr>
+			<td class="scLabelRight">
+			<swe:control id="2211">				
+			<swe:this property="FormattedHtml" hintText="Language Label"/>
+			</swe:control>
+			</td>
+			<swe:control id="2311">
+			<td colspan="3" class="mceWideFields" align="swe:this.TextAlignment">
+			<span class="mceField"><swe:this property="FormattedHtml" hintText="Language" hintMapLabelId="2211"/></span>		
+			</td>
+			</swe:control>
+			</tr>	
+			</table>
+		</td>
+	</tr>
+	
+	<tr>	
+		<td   width="100%"><br/><br/> </td>
+			<table datatable="0" summary="" width="100%" cellpadding="2" cellspacing="0" border="0">
+			   <tr  bgcolor="#DEDFDE"> 
+			   <td width="100%"><img src="images/spacer.gif" valign="top" width="3" height="30" border="0" alt="">
+			   </td>
+			   <td width="100%">
+			   <!-------------- -->
+			   <table datatable="0" summary="" width="100%" cellpadding="2" cellspacing="0" border="0">
+			   <tr bgcolor="#DEDFDE"> 
+			          <td width="100%"><img src="images/spacer.gif" valign="top" width="1" height="1" border="0" alt="">
+			          </td>    
+			          <!-- -------->
+			   <swe:control id="132">
+			   <!-- OK, 132 -->
+			   <td valign="bottom" nowrap>
+			   <swe:this property="FormattedHtml" hintText="Control" hintMapType="Control"/>
+			   </td>
+			   </swe:control>
+			
+			   <swe:control id="133">
+			   <!-- Cancel, 133 -->
+			   <td valign="middle" nowrap>
+			   <swe:this property="FormattedHtml" hintText="Control" hintMapType="Control"/>
+			   </td>
+			   </swe:control> 
+			
+			   <swe:control id="134">
+			   <!-- Cancel, 134 -->
+			   <td valign="middle" nowrap>
+			   <swe:this property="FormattedHtml" hintText="Div" hintMapType="Control"/>
+			   </td>
+			   </swe:control> 
+			
+			   <swe:control id="135">
+			   <!-- OK, 135 -->
+			   <td valign="middle" nowrap>
+			   <swe:this property="FormattedHtml" hintText="Control" hintMapType="Control"/>
+			   </td>
+			   </swe:control>
+			
+			   <swe:control id="136">
+			   <!-- Cancel, 136 -->
+			   <td valign="middle" nowrap>
+			   <swe:this property="FormattedHtml" hintText="Control" hintMapType="Control"/>
+			   </td>
+			   </swe:control> 
+			
+			   <swe:control id="137">
+			   <!-- Cancel, 137 -->
+			   <td valign="middle" nowrap>
+			   <swe:this property="FormattedHtml" hintText="Div" hintMapType="Control"/>
+			   </td>
+			   </swe:control> 
+			
+			   <swe:control id="138">
+			   <!-- OK, 138 -->
+			   <td valign="middle" nowrap>
+			   <swe:this property="FormattedHtml" hintText="Control" hintMapType="Control"/>
+			   </td>
+			   </swe:control>
+			
+			   <swe:control id="139">
+			   <!-- Cancel, 139 -->
+			   <td valign="middle" nowrap>
+			   <swe:this property="FormattedHtml" hintText="Control" hintMapType="Control"/>
+			   </td>
+			   </swe:control> 
+			
+			   <swe:control id="140">
+			   <!-- Cancel, 140 -->
+			   <td valign="middle" nowrap>
+			   <swe:this property="FormattedHtml" hintText="Div" hintMapType="Control"/>
+			   </td>
+			   </swe:control>  
+			
+			   <swe:control id="141">
+			   <!-- OK, 141 -->
+			   <td valign="middle" nowrap>
+			   <swe:this property="FormattedHtml" hintText="Control" hintMapType="Control"/>
+			   </td>
+			   </swe:control>
+			
+			   <swe:control id="142">
+			   <!-- Cancel, 142 -->
+			   <td valign="middle" nowrap>
+			   <swe:this property="FormattedHtml" hintText="Control" hintMapType="Control"/>
+			   </td>
+			   </swe:control> 
+			
+			   <swe:control id="143">
+			   <!-- Cancel, 143 -->
+			   <td valign="middle" nowrap>
+			   <swe:this property="FormattedHtml" hintText="Div" hintMapType="Control"/>
+			   </td>
+			   </swe:control>  
+			
+			   <swe:control id="144">
+			   <!-- OK, 144 -->
+			   <td valign="middle" nowrap>
+			   <swe:this property="FormattedHtml" hintText="Control" hintMapType="Control"/>
+			   </td>
+			   </swe:control>
+			
+			   <swe:control id="145">
+			   <!-- Cancel, 145 -->
+			   <td valign="middle" nowrap>
+			   <swe:this property="FormattedHtml" hintText="Control" hintMapType="Control"/>
+			   </td>
+			   </swe:control> 
+			
+			   <swe:control id="146">
+			   <!-- Cancel, 146 -->
+			   <td valign="middle" nowrap>
+			   <swe:this property="FormattedHtml" hintText="Div" hintMapType="Control"/>
+			   </td>
+			   </swe:control> 
+			   <!--/td--> 
+			   <!--sanjeev -->
+			   <swe:control id="152">
+			   <!-- OK, 152 -->
+			   <td valign="middle" nowrap>
+			   <swe:this property="FormattedHtml" hintText="Control" hintMapType="Control"/>
+			   </td>
+			   </swe:control>
+			
+			   <swe:control id="153">
+			   <!-- Cancel, 153 -->
+			   <td valign="middle" nowrap>
+			   <swe:this property="FormattedHtml" hintText="Control" hintMapType="Control"/>
+			   </td>
+			   </swe:control> 
+			
+			   <swe:control id="154">
+			   <!-- Cancel, 154 -->
+			   <td valign="middle" nowrap>
+			   <swe:this property="FormattedHtml" hintText="Div" hintMapType="Control"/>
+			   </td>
+			   </swe:control> 
+			
+			   <swe:control id="155">
+			   <!-- Cancel, 155 -->
+			   <td valign="middle" nowrap>
+			   <swe:this property="FormattedHtml" hintText="Control" hintMapType="Control"/>
+			   </td>
+			   </swe:control> 
+			
+			   <swe:control id="156">
+			   <!-- Cancel, 156 -->
+			   <td valign="middle" nowrap>
+			   <swe:this property="FormattedHtml" hintText="Control" hintMapType="Control"/>
+			   </td>
+			   </swe:control> 
+			   <td valign="bottom">
+			   <swe:control id="1221">    
+			   <span class="mceLabel" align="swe:this.TextAlignmentLabel">
+			   <!--placeholder for required-->
+			   <swe:this property="FormattedHtml" hintText="Dictionary Label"/>
+			   </span>    
+			   </swe:control>
+			   <swe:control id="1321">
+			   <span class="mceField">
+			   <br />
+			   <swe:this property="FormattedHtml" hintText="Dictionary" hintMapLabelId="1221"/>
+			   </span>
+			   </swe:control>
+			   </td>
+			
+			   <!-- sanjeev-->
+			           
+			   <!-----------------------    -->         
+			   </tr>
+			            
+			   </table>
+			   <!--   ------------------------->
+			   </tr>
+   </table>  
+				
+	</tr>
+	
+	<!--/swe:form-->
+		
+	
+</table>
+</td></tr></table>
+</swe:form>
+
+<!-- Template End: CCAppletSpellCheck.swt -->	

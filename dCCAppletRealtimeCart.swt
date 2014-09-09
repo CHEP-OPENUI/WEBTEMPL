@@ -1,0 +1,64 @@
+
+<!-- Template Start: dCCAppletRealtimeCart.swt-->
+<table datatable="0" summary="" width="100%" cellpadding="2" cellspacing="0"><tr><td class="RealTimeCart">
+<table datatable="0" summary="" width="100%" cellpadding="2" cellspacing="0">
+
+<tr>
+	<td><swe:control id="140" property="FormattedHtml" hintText="Icon"/></td>
+	<td colspan="5"><b><swe:control id="500" property="FormattedHtml" hintText="Mapped Title"/></b></td>
+</tr>
+
+<tr>
+	<td>&nbsp;</td>
+	<td colspan="5"><swe:control id="501" property="FormattedHtml" hintText="Item Name"/>&nbsp;<swe:control id="502" property="FormattedHtml" hintText="Quantity"/></td>
+</tr>
+
+<tr>
+	<td>&nbsp;</td>
+	<td nowrap><b><swe:control id="1222" property="FormattedHtml" hintText="Line Items Label"/></b></td>
+	<td valign="bottom" nowrap><swe:control id="1322" property="FormattedHtml" hintText="Line Items Field"/></td>
+	<td nowrap>&nbsp;&nbsp;&nbsp;</td>
+	<td nowrap><b><swe:control id="1223" property="FormattedHtml" hintText="Total Price Label"/></b></td>
+	<td valign="bottom" nowrap><swe:control id="1323" property="FormattedHtml" hintText="Total Price Field"/></td>
+</tr>
+
+
+<tr>
+	<td><img src="images/spacer.gif" width="1" height="1" alt=""></td>
+	<td nowrap><b><swe:control id="2222" property="FormattedHtml" hintText="Label"/></b></td>
+	<td valign="bottom" nowrap><swe:control id="2322" property="FormattedHtml" hintText="Field"/></td>
+	<td><img src="images/spacer.gif" width="1" height="1" alt=""></td>
+	<td nowrap><b><swe:control id="2223" property="FormattedHtml" hintText="Label"/></b></td>
+	<td valign="bottom" nowrap><swe:control id="2323" property="FormattedHtml" hintText="Field"/></td>
+</tr>
+
+
+<tr>
+	<td>&nbsp;</td>
+	<td colspan="5">
+		<table datatable="0" summary="" border="0" cellpadding="0"  cellspacing="0">
+			<tr>
+				<swe:control id="132">
+				<!-- Optional, 142 -->
+				  <td align="center"><swe:this property="FormattedHtml"  hintMapType="Control"/></td>
+				</swe:control>
+				
+				<swe:control id="133">
+				<!-- Optional, 143 -->
+				  <td align="center"><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+				</swe:control>
+				
+				<swe:control id="141">
+				<!-- Optional, 145 -->
+				  <td align="center"><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+				</swe:control>					
+			</tr>					
+		</table>	
+	</td>
+</tr>
+
+</table>
+</td></tr></table>
+
+<!-- Template End: dCCAppletRealtimeCart.swt -->
+	

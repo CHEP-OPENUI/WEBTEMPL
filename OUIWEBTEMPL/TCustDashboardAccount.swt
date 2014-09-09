@@ -1,0 +1,45 @@
+<!-- Template Start: TCustDasboardAccount.swt -->
+
+<div class="siebui-view1-row1col3-hdr siebui-collapsible-applet AppletHIFormBorder AppletStyleChild77">
+    <div class="swe:this.SelectStyle">
+        <div class="siebui-view1-row1col3-row1 siebui-collapsible-applet-header">
+            <div class="siebui-view1-row1col3-img">
+                <swe:control id="2018"><swe:this property="FormattedHtml" hintText="Image"/></swe:control> 
+            </div>
+        
+            <div class="siebui-view1-row1col3-row1col2">
+                <swe:for-each startValue="1000" count="5" iteratorName="currentId">
+                    <swe:control id="swe:currentId">
+                        <div class="swe:class mceLabel siebui-view1-row1col3-text">
+                            <swe:this property="FormattedHtml"/>
+                        </div>
+                    </swe:control>
+                </swe:for-each>
+            </div>
+            <div class="siebui-view1-row1col3-row1col3 siebui-collapsible-applet-container"></div>
+        </div>
+        
+        <div class="siebui-view1-row1col3-row2 siebui-collapsible-applet-content">
+            <div class="siebui-view1-row1col3-row2col1">
+                <swe:for-each startValue="1100" count="3" iteratorName="currentId">
+                    <swe:control id="swe:currentId">
+                        <div class="swe:class mceLabel siebui-view1-row1col3-text" align="swe:this.TextAlignmentLabel">
+                            <swe:this property="FormattedHtml"/>
+                        </div>
+                    </swe:control>
+                </swe:for-each>
+            </div>
+            <div class="siebui-view1-row1col3-row2col2">
+                <swe:for-each startValue="1105" count="3" iteratorName="currentId">
+                    <swe:control id="swe:currentId">
+                        <div class="swe:class mceLabel siebui-view1-row1col3-text" align="swe:this.TextAlignmentLabel">
+                            <swe:this property="FormattedHtml"/>
+                        </div>
+                    </swe:control>
+                </swe:for-each>
+            </div>
+        </div>
+    </div>    
+</div>
+
+<!-- Template End: TCustDasboardAccount.swt -->

@@ -1,0 +1,37 @@
+<!-- Template Start: eCfgTopLevelButtons.swt -->
+<script>
+var sDone = '<swe:control id="swe:sDone"  CfgUIControl="Done" CfgHtmlType="CfgAction" property="FormattedHtml" DisplayMode="DontEncodeData" InvokeMethod="SubmitRequest" CfgRequest="DoneConfig"/>';
+var sInComplete = '<swe:control id="swe:InComplete" CfgFieldName="$.RequireMoreChild" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" />';
+var sRefreshUI = '&SWEApplet=Cfg+Cx+Runtime+Instance+Frame';
+var bAttrDirty = false;
+</script>
+<swe:form>
+<table datatable="0" summary="" border="0" bgcolor="white" width="100%">
+   <tr>
+      <td>
+         <swe:control id="swe:CheckPrice" CfgUIControl="Check the price" CfgHtmlType="MiniButton"
+                      InvokeMethod="SubmitRequest" CfgRequest="CalculatePriceCX" property="FormattedHtml" />
+      </td>
+      <td>
+         <swe:control id="swe:Save" CfgUIControl="Save" CfgHtmlType="MiniButton" InvokeMethod="SubmitRequest"
+                      CfgRequest="SyncInstance" property="FormattedHtml" />
+      </td>
+      <td>
+         <swe:control id="swe:Cancel" CfgUIControl="Cancel" CfgHtmlType="MiniButton" InvokeMethod="SubmitRequest"
+                      CfgRequest="PrevView" property="FormattedHtml" />
+      </td>
+      <td>
+         <swe:control id="swe:Done" CfgUIControl="sDone" property="FormattedHtml" />
+      </td>
+      <td>
+         <swe:control id="swe:FinishIt" CfgUIControl="FinishIt" CfgHtmlType="MiniButton" InvokeMethod="SubmitRequest"
+                      CfgRequest="FinishIt" property="FormattedHtml" />
+      </td>
+      <td>
+         <swe:control id="swe:CheckErrors" CfgUIControl="lblCheckErrors" CfgHtmlType="MiniButton" 
+			InvokeMethod="SubmitRequest" CfgRequest="ExternalValidate" property="FormattedHtml" />
+      </td>
+   </tr>
+</table>
+</swe:form>
+<!-- Template End: eCfgTopLevelButtons.swt -->

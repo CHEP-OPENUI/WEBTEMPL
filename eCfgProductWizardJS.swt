@@ -1,0 +1,83 @@
+<!-- Template Start: eCfgProductWizardJS.swt -->
+
+<div  id="cxProdWzd" class="cxProdTheme">
+
+<table datatable="0" summary="" cellpadding='0' cellspacing='0' border='0' bgcolor="white" width="100%">
+   <tr class="listRowOff">
+      <td class="AppletBlank">
+         <table datatable="0" summary="" cellpadding='0' cellspacing='0' border="0" bgcolor="white">
+            <tr class="listRowOff">
+               <swe:for-each id="110" CfgLoopType="Group" startValue="8100" count="Dynamic" iteratorName="100Id" >
+
+                  <swe:switch>
+                     <swe:case condition="Default, TestFieldValue, Operator:==, FieldName:Selected, FieldValue:Y">
+                        <td class="tier3On" nowrap>
+                           <a href="JavaScript:function DoNothing(){return false;}">
+                              <swe:control id="swe:100Id+50" CfgHtmlType="CfgLabel" CfgFieldName="CxGroupName"/>
+                           </a>
+                        </td>
+                     </swe:case>
+                     <swe:default>
+                        <!-- display nothing -->
+                     </swe:default>
+                  </swe:switch>
+
+               </swe:for-each>
+            </tr>
+         </table>
+      </td>
+      <td class = "AppletBlank">&nbsp;</td>
+   </tr>
+</table>
+
+<span class="AppletStyle3">
+   <swe:for-each id="120" CfgLoopType="CurrentGroup" startValue="210" count="Dynamic" iteratorName="150Id" >
+   
+      <table datatable="0" summary="" border="0" width="100%" cellspacing="2" cellpadding="10" class="AppletBorder">
+         <tr>
+            <td class="AppletBlank" width="100%">
+               <table datatable="0" summary="" border="0" width="50%" cellpadding="0">
+                  <tr>
+                     <td>
+                        <swe:control id="swe:100Id+250"  CfgUIControl="PreviousNode" CfgHtmlType="MiniButton"
+                                    CfgRequest="Group" InvokeMethod="PreviousNode"/>
+                     </td>
+                     <td>
+                     <swe:control id="swe:100Id+350"  CfgUIControl="NextNode" CfgHtmlType="MiniButton"
+                                    CfgRequest="Group" InvokeMethod="NextNode"/>
+                     </td>
+                     <td class = "AppletBlank">&nbsp;</td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td class="AppletBlank" width="100%" >
+               <swe:include id="swe:151Id" CfgHtmlType="CurrentGroup"/>
+            </td>
+         </tr>
+         <tr>
+            <td class="AppletBlank" width="100%">
+               <table datatable="0" summary="" border="0" width="50%" cellpadding="0">
+                  <tr>
+                     <td>
+                        <swe:control id="swe:100Id+250"  CfgUIControl="PreviousNode" CfgHtmlType="MiniButton"
+                                    CfgRequest="Group" InvokeMethod="PreviousNode"/>
+                     </td>
+                     <td>
+                     <swe:control id="swe:100Id+350"  CfgUIControl="NextNode" CfgHtmlType="MiniButton"
+                                    CfgRequest="Group" InvokeMethod="NextNode"/>
+                     </td>
+                     <td class = "AppletBlank">&nbsp;</td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+      </table>
+      
+   </swe:for-each>
+</span>
+
+</div> <!-- end of product theme div -->
+
+<!-- Template End: eCfgProductWizardJS.swt -->

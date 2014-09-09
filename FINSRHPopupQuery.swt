@@ -1,0 +1,65 @@
+
+<!-- Template Start: CCPopupQuery.swt -->
+<swe:include file="CCStylesChoice.swt"/>
+	
+<swe:control id="1500" hintText="Required Legend" hintMapType="Control">	
+<table width="100%" cellspacing="0" cellpadding="2" border="0"><tr>	
+<td nowrap valign="absmiddle" class="legend" align="right">
+<swe:image name="ICON_REQUIRED" category="HTML Control Icons"/><swe:this property="DisplayName"/></td>
+</tr></table>	
+</swe:control>		
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+	<swe:form>	
+	<tr valign="top">
+		<td class="AppletStyle1">
+		
+				<table class="AppletBack" valign="top" width="100%" cellpadding="2" cellspacing="1" border="0">
+						<tr valign="top">
+							<td>
+								<swe:error>
+									<table class="AppletBack" width="100%" cellpadding="2" cellspacing="0" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/></td></tr></table>
+								</swe:error>
+								<swe:control id="91">
+						  			<!-- Inside-applet help text -->
+						  			<table class="AppletBack" width="100%" cellpadding="4" cellspacing="0" border="0"><tr><td><swe:this property="DisplayName" hintText="Inside Applet Help Text"/></td></tr></table>
+								</swe:control>		
+								<table class="AppletBack" border="0" cellpadding="0"  cellspacing="4">
+								<swe:for-each count="15" startValue="1100" iteratorName="currentId">
+									<swe:control id="swe:currentId+200" hintMapType="FormItem">
+										<tr>				
+										<td NOWRAP class="scLabelRight">
+											<swe:this property="RequiredIndicator" hintText="Required"/>
+											<swe:this property="DisplayName" hintText="Label"/>:
+										</td>
+										<td class="scField" align="swe:this.TextAlignment">
+											<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+200"/>
+										</td>
+										</tr>
+									</swe:control>
+								</swe:for-each>		
+								
+								</table>
+							</td>							
+						</tr>
+				</table>
+
+				
+				<!--button row-->
+				<table width="100%" cellpadding="2" cellspacing="0" border="0"  bgcolor="#cccccc">
+					<tr>	
+						<td width="100%"><img src="images/spacer.gif" valign="top" width="10" height="20" alt=""></td>
+								
+						  <swe:include file="CCButtons.swt"/>		
+						  <swe:include file="CCButtons_Popup.swt"/>
+						
+						<td><img src="images/spacer.gif" valign="top" width="10" height="20" alt=""></td>									
+					</tr>
+				</table>		
+	
+		</td>
+	</tr>
+	</swe:form>	
+</table>
+<swe:scripts/>
+<!-- Template End: CCPopupQuery.swt -->

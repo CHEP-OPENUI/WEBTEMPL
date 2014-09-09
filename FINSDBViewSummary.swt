@@ -1,0 +1,99 @@
+<!--  Template Start: CCView_25_50_25.swt -->
+<!--  Template Start: CCViewDetail.swt -->
+<!--  FINSDBViewSummary.swt -->
+
+<!--  1. Include FINSDBHTMLHeader.swt to remove margin space --> 
+<!--  2. Remove Threadbar and Mini-Applet --> 
+<!--  3. For Parent Applet, set var="Child" to show it in pink  -->
+<!--  3. Add div tag before CCViewbar_Tabs.swt to show darkblue bgcolor -->
+<!--  4. Adjust the % of each column to get better layout -->
+<!--  5. set style in table tag to show view in pink color -->
+
+<!--swe:include file="CCHTMLHeader.swt"/-->
+<swe:include file="FINSDBHTMLHeader.swt"/>
+
+<!-- ---------- Main Content Area ---------------------------->
+
+<swe:applet hintMapType="Applet" id="1" hintText="Parent Applet" property="FormattedHtml" var="Child"/>
+
+
+<!-- ---------- Tier 3 & Tier 4 navigation ----------------->
+<swe:include file="CCViewbar_Tabs_DropList.swt"/>
+<!-- ---------- End Tier 3 & Tier 4 navigation ------------->
+
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#ccccff;color:#333399;">
+	<tr height="100">	
+		<!--  Column 1 -->
+		<td valign="top" width="5%">
+			<swe:for-each count=10 iteratorName="currentId" startValue="102">
+			<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" var="Child">
+				<!-- start applet-->
+				<swe:this property="FormattedHtml"/>
+				<!-- end applet-->
+			</swe:applet>
+			</swe:for-each>
+		</td>
+		<!--  End Column 1 -->
+		
+		<!--  Column 2 -->
+		<td valign="top" width="45%">
+			<swe:applet id="101" hintText="Salutation Applet"/>
+			<swe:for-each count=10 iteratorName="currentId" startValue="202">
+			<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" var="Child">
+
+				<!-- start applet-->
+				<swe:this property="FormattedHtml"/>
+				<!-- end applet-->
+			</swe:applet>
+			</swe:for-each>
+		</td>
+		<!--  End Column 2 -->
+		
+		<!--  Column 3 -->
+		<td valign="top" width="25%">
+			<swe:for-each count=10 iteratorName="currentId" startValue="302">
+			<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" var="Child">
+
+				<!-- start applet-->
+				<swe:this property="FormattedHtml"/>
+				<!-- end applet-->
+			</swe:applet>
+			</swe:for-each>
+		</td>
+		<!--  End Column 3 -->		
+
+		<!--  Column 4 -->
+		<td valign="top" width="25%">
+			<swe:for-each count=10 iteratorName="currentId" startValue="402">
+			<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" var="Child">
+
+				<!-- start applet-->
+				<swe:this property="FormattedHtml"/>
+				<!-- end applet-->
+			</swe:applet>
+			</swe:for-each>
+		</td>
+		<!--  End Column 4 -->		
+
+		<!--  Column 5 -->
+		<td  valign="top" width="0%">
+			<swe:for-each count=10 iteratorName="currentId" startValue="502">
+			<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Applet" var="Child">
+
+				<!-- start applet-->
+				<swe:this property="FormattedHtml"/>
+				<!-- end applet-->
+			</swe:applet>
+			</swe:for-each>
+		</td>
+		<!--  End Column 5 -->		
+
+
+
+</tr>
+</table>
+<!-- ---------- End Main Content Area ------------------------>
+
+<swe:include file="CCHTMLFooter.swt"/>
+<!--  Template End: CCView_25_75.swt -->

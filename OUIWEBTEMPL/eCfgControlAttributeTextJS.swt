@@ -1,0 +1,15 @@
+<!-- Template Start: eCfgControlAttributeTextJS.swt -->
+
+<table datatable="0" summary="" valign="center" width="100%" cellpadding="0" cellspacing="0" border="0">
+   <tr>
+      <td width="40%"  valign="top">
+         <swe:control id="swe:IncId + 20" CfgFieldName="Attribute Display Name" CfgHtmlType="CfgLabel" />
+      </td>
+      <td  width="20%"  valign="top">&nbsp;</td>
+      <td width="40%"  valign="top">
+         <swe:control id="swe:IncId+100" CfgFieldName="AttValue" CfgHtmlType="CfgLabel" />
+      </td>
+   </tr>
+</table>
+
+<!-- Template End: eCfgControlAttributeTextJS.swt -->

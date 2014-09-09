@@ -1,0 +1,23 @@
+<!-- Template Start: eCfgCompThreadJS.swt -->
+
+<!-- qa automation -->
+<div  id="cxThread" class="cxThread">
+
+<SCRIPT>
+    var iNumObjects  = 0;
+</SCRIPT>
+
+<swe:for-each id="250" CfgLoopType="Thread" startValue="2500" count="Dynamic" iteratorName="250Id" >
+
+
+      <SCRIPT>
+         iNumObjects ++;
+         if ( 1 != iNumObjects )
+            document.write ( ">>" );
+      </SCRIPT>
+   <swe:control id="swe:250Id" CfgFieldName="CxObjName" CfgHtmlType="CfgLink" InvokeMethod="SetTopObj" />    
+</swe:for-each>
+
+</div>
+
+<!-- Template Start: eCfgCompThreadJS.swt -->

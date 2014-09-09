@@ -1,0 +1,38 @@
+<!--  Template Start: ERMViewBasic.swt -->
+
+<img src="images/spacer.gif" width="5" height="15" border="0" alt="" /><br/>
+<swe:form>
+
+<table datatable="0" summary="" width="100%" cellspacing="0" cellpadding="0" border="0" align="center" valign="top" bgcolor="#ffffff">
+<swe:for-each-row>
+<table datatable="0" summary="" width="100%" cellspacing="0" celpadding="0" border="0" align="center">
+
+<tr><td width="2%" class="Row" valign="bottom">
+      <swe:control id="501">
+      <b><swe:this property="FormattedHtml" hintText="Field" hintMapType="Hyperlinked Item"/></b>
+      </swe:control> 
+     </td>
+    <td>
+      <swe:control id="502">
+      <b><swe:this property="FormattedHtml" hintText="Field" hintMapType="Hyperlinked Item"/></b>
+      </swe:control>
+      <br>
+    </td>
+</tr>
+
+<tr><td width="2%" class="Row" valign="bottom"></td>
+    <td><swe:for-each startValue="503" count="10" iteratorName="currentId">
+        <swe:control id="swe:currentId"><swe:this property="FormattedHtml" hintText="Field" hintMapType="ListItem"/>
+        <br>
+        </swe:control>
+        </swe:for-each>
+     </td>
+</tr>
+
+</table>
+</swe:for-each-row>
+</table>
+
+</swe:form>
+
+<!--  Template End: ERMViewBasic.swt -->

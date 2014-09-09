@@ -1,0 +1,24 @@
+<!-- Template Start: dCCFrameScreenbar_Hybrid.swt -->
+
+<HTML dir="swe:dir">
+<head>
+<title><swe:this property="Title"/></title>
+<swe:include file="CCStylesChoice.swt"/>
+</head>
+
+<BODY background="images/dccscrnbar_back.gif" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+
+<swe:switch>
+    <swe:case condition="Web Engine User Agent, TestCapability, 'JumpTab:TRUE'">
+        <swe:include file="dCCScreenbar_Tabs_Hybrid.swt" />
+    </swe:case>
+    <swe:default>
+        <swe:include file="dCCScreenbar_Tabs.swt" />
+    </swe:default>
+</swe:switch>
+
+<swe:scripts/>
+</BODY>
+</HTML>
+
+<!-- Template End: dCCFrameScreenbar_Hybrid.swt -->

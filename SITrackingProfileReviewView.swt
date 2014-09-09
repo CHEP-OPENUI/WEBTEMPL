@@ -1,0 +1,89 @@
+<!-- Template Start: SITrackingProfileReviewView.swt -->
+<swe:include file="CCHTMLHeader.swt"/>
+
+<!-- header -->
+<table datatable="0" summary="" width="98%">
+<tr>
+    <td>
+        <swe:for-each startValue="501" count="1" iteratorName="currentId"> 
+           <swe:applet id="swe:currentId" hintText="Applet" var="Parent"/>
+        </swe:for-each>
+    </td>
+</tr>
+</table>
+
+<!-- four-column area -->
+<table datatable="0" summary="" width="98%">
+<tr>
+   
+    <!-- gutter -->
+    <!--<td valign="top">&nbsp;&nbsp;</td>-->
+
+    <!-- 1st column -->
+    <td valign="top" width="25%">
+	<!-- All Preferred Accounts applet: 101 -->
+        <swe:for-each startValue="101" count="1" iteratorName="currentId"> 
+           <swe:applet id="swe:currentId" hintText="Applet"/>
+        </swe:for-each>
+    </td>
+
+    <!-- gutter -->
+    <td valign="top">&nbsp;&nbsp;</td>
+
+    <!-- 2nd column -->
+    <td valign="top" width="25%">
+	<!-- All Preferred Competitors applet: 201 -->
+        <swe:for-each startValue="201" count="1" iteratorName="currentId"> 
+           <swe:applet id="swe:currentId" hintText="Applet"/>
+        </swe:for-each>
+    </td>
+
+    <!-- gutter -->
+    <td valign="top">&nbsp;&nbsp;</td>
+
+    <!-- 3rd column -->
+    <td valign="top" width="25%">
+	<!-- All Preferred Industries applet: 301 -->
+        <swe:for-each startValue="301" count="1" iteratorName="currentId"> 
+           <swe:applet id="swe:currentId" hintText="Applet"/>
+        </swe:for-each>
+    </td>
+
+    <!-- gutter -->
+    <td valign="top">&nbsp;&nbsp;</td>
+
+    <!-- 4th column -->
+    <td valign="top" width="25%">
+	<!-- All Preferred Products applet: 401 -->
+        <swe:for-each startValue="401" count="1" iteratorName="currentId"> 
+           <swe:applet id="swe:currentId" hintText="Applet"/>
+        </swe:for-each>
+    </td>
+</tr>
+<tr>
+    <!-- gutter -->
+    <!--<td valign="top">&nbsp;&nbsp;</td>-->
+
+    <td valign="top" width="25%">
+	<!-- News Topics: 601 -->
+        <swe:for-each startValue="601" count="1" iteratorName="currentId"> 
+           <swe:applet id="swe:currentId" hintText="Applet"/>
+        </swe:for-each>
+    </td>
+    
+    <!-- gutter -->
+    <td valign="top">&nbsp;&nbsp;</td>
+    <td valign="top" width="25%">&nbsp;</td>
+
+    <!-- gutter -->
+    <td valign="top">&nbsp;&nbsp;</td>
+    <td valign="top" width="25%">&nbsp;</td>
+
+    <!-- gutter -->
+    <td valign="top">&nbsp;&nbsp;</td>
+    <td valign="top" width="25%">&nbsp;</td>
+</tr>
+</table>
+<swe:include file="CCHTMLFooter.swt"/>
+
+<!-- Template End: SITrackingProfileReviewView.swt -->

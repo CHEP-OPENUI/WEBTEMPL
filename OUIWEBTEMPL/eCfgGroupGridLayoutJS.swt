@@ -1,0 +1,406 @@
+<!-- Template Start: eCfgGroupGridLayoutJS_OUI.swt -->
+
+<div id="cxStd" class="cxGrpTheme">
+
+<script>    
+   var strCellHTML         = "";
+   // If UI Property "NumofCol" is defined on the root product level, please retrieve/populate this variable from base theme.
+   var sNumofCol     = '<swe:control id="swe:IncId+51" CfgHtmlType="CfgLabel" CfgFieldName=".NumofCol" />';
+   var iNumofCol     = parseInt (sNumofCol);    // Number of columns shown in the grid table
+
+   if (isNaN (iNumofCol) || (iNumofCol < 1))
+      iNumofCol = 1;
+
+   var iRowStart              = 1;              // The start row number of the next control
+   var iColStart              = 1;              // The start column number of the next control
+   var iRowEnd                = 1;              // The end row number of the next control
+   var iColEnd                = 1;              // The end column number of the next control
+   var iRowSpan               = 1;              // Calculated value of iRowEnd - iRowStart, which is the control rowspan
+   var iColSpan               = 1;              // Calculated value of iColEnd - iColStart, which is the control colspan
+   var iCurRow                = 1;              // The start row position of where we currently stand in the table. It's the iRowStart of the last processed control or empty cell
+   var iCurCol                = 0;              // The end column position of where we currently stand in the table. It's the iColEnd of the last processed control or empty cell
+   var bCorrectUIPropSyntax   = true;           // If there is any syntax error defined in the UI property
+   var GridMap                = new Array ();   // The map to record all occupied cells in the table
+   var iRelatedCtrl           = 0;              // The number of related controls that should be put into a single cell
+
+
+   // The function is used to parse the UI property definition.
+   // The input arguments are UI propery value of UI property "GridBegin" and "GridEnd".
+   // The function returns false if the UI property value is not defined correctly, especially focus on the syntax validation.
+   function ParseGridUIProp (sGridBegin, sGridEnd)
+   {
+      var tmpStr = "";
+      var tmpArr = new Array ();
+
+      tmpStr = sGridBegin.substring (sGridBegin.indexOf ('{') + 1, sGridBegin.indexOf ('}'));
+      tmpArr = tmpStr.split (',');
+      if (tmpArr.length != 2)
+         return false;
+      iRowStart = parseInt (tmpArr [0]);
+      iColStart = parseInt (tmpArr [1]);
+
+      if ((iRowStart < 1) || (iColStart < 1) || (iColStart > iNumofCol))
+         return false;
+
+      tmpStr = sGridEnd.substring (sGridEnd.indexOf ('{') + 1, sGridEnd.indexOf ('}'));
+      tmpArr = tmpStr.split (',');
+      if (tmpArr.length != 2)
+         return false;
+      iRowEnd = parseInt (tmpArr [0]);
+      iColEnd = parseInt (tmpArr [1]);
+
+      if ((iRowEnd < 1) || (iColEnd < 1) || (iColEnd > iNumofCol))
+         return false;
+
+      // ending position should be bigger or equal to starting position
+      if ((iRowStart > iRowEnd) || (iColStart > iColEnd))
+         return false;
+
+      return true;
+   }
+
+
+   // The function is used to find the next available cell and set iRowStart/iRowEnd/iColStart/iColEnd to the available cell position
+   function SetToNextAvailableCell ()
+   {
+      var bFindNext     = false;
+      var curRow        = iCurRow;
+      var curCol        = iCurCol;
+
+      while (!bFindNext)
+      {
+         // the current row is not occupied by any control yet
+         if (GridMap [curRow -1] == undefined)
+         {
+            bFindNext = true;
+            break;
+         }
+
+         for (var i = 0; i < GridMap [curRow -1].length; i++)
+         {
+            // occupied cell unit is before or on the current control end position, skip it
+            if (GridMap [curRow-1][i].iEnd <= curCol)
+               continue;
+
+            // if a space bigger or equal to one unit is between the current control end position and the next occupied cell unit,
+            // we utilize this space. If no, reset current control end position to this occupied cell unit end position, and
+            // check if there is a space after the occupied cell unit.
+            if (GridMap [curRow-1][i].iStart - curCol > 1)
+            {
+               bFindNext = true;
+               break;
+            }
+            else
+            {
+               curCol = GridMap [curRow-1][i].iEnd;
+            }
+         }
+
+         if (!bFindNext)
+         {
+            // if we have run through all occupied cell units, but we still have not reached the table border in the row,
+            // it means there is some space here. Otherwise, we need to find a space starting from next row since this row is all consumed.
+            if (curCol < iNumofCol)
+            {
+               bFindNext = true;
+               break;
+            }
+            else
+            {
+               curRow ++;
+               curCol = 0;
+            }
+         }
+      }
+
+      // Set iRowStart and iColStart to the next available position. The default behavior here will only allocate one unit
+      //    for conflict control. Original defined colspan or rowspan is ignored. Customers can reset how many units to allocate 
+      //    the conflict control here.
+      iRowStart = iRowEnd = curRow;
+      iColStart = iColEnd = curCol + 1;
+   }
+
+
+   // The function is used to check if the position UI properties are defined correctly, especially focus on semantic validation.
+   // The function returns true if any conflict happens.
+   function IsConflictDef ()
+   {
+      // The next control Start position is before the current position
+      if ((iRowStart < iCurRow) || ((iRowStart == iCurRow) && (iColStart <= iCurCol)))
+         return true;
+
+      // The next control position overlaps occupied cell
+      if (GridMap [iRowStart-1] != undefined)
+      {
+         for (var i = 0; i < GridMap [iRowStart-1].length; i++)
+         {
+            var unitColStart  = GridMap [iRowStart-1][i].iStart;
+            var unitColEnd    = GridMap [iRowStart-1][i].iEnd;
+
+            if ( ((iColStart <= unitColStart) && ((iColEnd >= unitColStart)&&(iColEnd <= unitColEnd))) ||
+               ((iColEnd >= unitColEnd) && ((iColStart >= unitColStart) && (iColStart <= unitColEnd))) ||
+               ((iColStart >= unitColStart) && (iColEnd <= unitColEnd)) ||
+               ((iColStart <= unitColStart) && (iColEnd >= unitColEnd)))
+               return true;
+         }
+      }
+      return false;
+   }
+
+
+   // The function is used to finalize where to paint the next control, and calculate rowspan and colspan of next control
+   function DecideCtrlLocation ()
+   {
+      // If there is any syntax error in UI property or any conflict on definition,
+      // the default behavior is to find the next available cell to render this control.
+      // Customers can develop/call their own function for conflict resolution to fit their own business rules.
+      if ((!bCorrectUIPropSyntax) || (IsConflictDef ()))
+         SetToNextAvailableCell ();
+
+      iRowSpan = iRowEnd - iRowStart + 1;
+      iColSpan = iColEnd - iColStart + 1;
+   }
+
+
+   // The function is treated as an object class.
+   // Each object is a unit in GridMap. Each object saves the start column position and end column position of an occupied cell in a row.
+   function occupiedUnit (iStart, iEnd)
+   {
+      this.iStart = iStart;
+      this.iEnd = iEnd;
+   }
+
+
+   // This is a helper function, to sort element of occupiedUnit objects in the GridMap array.
+   function sortGrid (a, b)
+   {
+      return a.iStart - b.iStart;
+   }
+
+
+   // The function is used to update GridMap after a control is rendered to the table.
+   // The GridMap is designed to be like an array of linked list. The first dimention is each row. 
+   // For each row, if any cell is occupied, we create an occupiedUnit object, push the object to the row, and sorted all objects in the row.
+   function UpdateGridMap ()
+   {
+      for (var i = 0; i < iRowSpan; i++)
+      {
+         if (GridMap [iCurRow + i -1] == undefined)
+            GridMap [iCurRow + i -1] = new Array ();
+
+         var newUnit = new occupiedUnit(iColStart, iColEnd);
+         GridMap [iCurRow + i -1].push (newUnit);
+         GridMap [iCurRow + i -1].sort (sortGrid);
+      }
+
+      iCurCol = iColEnd;
+   }
+
+
+   // The function is used to write a TD object to the document.
+   // The input arguments are row span number, column span number, and the style class (optional).
+   // To optimize the layout, we also calculate the width percentage based on the column span number.
+   function PopulateTD (rowSpan, colSpan, cellClass)
+   {
+      var strHTML = "";
+      var sWidthPercent = parseInt(parseFloat(colSpan)/parseFloat(iNumofCol)*100) + '%';
+
+      strHTML = '<td valign="top" align="left" rowspan="' + rowSpan + '" colspan="' + colSpan+ '" width="' + sWidthPercent+ '" class="' + cellClass + '"><div id="eCfgGroupGridLayoutJS_OUI_Cell"></div>';
+      return strHTML;
+   }
+
+
+   // The function is used to fill in empty cells:
+   // from the current position (iCurRow, iCurCol) to the target position (ToRow, ToCol)
+   function FillInEmptyCell (ToRow, ToCol)
+   {
+      var strHTML = "";
+      var empColSpan = 1;
+
+      // If the current position row number (iCurRow) is smaller than the target row number (ToRow),
+      // we first should fill in empty td to all free cell: 
+      // from the current row and current col to the end of the row before target row.
+      while (iCurRow < ToRow)
+      {
+         if (GridMap [iCurRow-1] == undefined)
+         {
+            strHTML += PopulateTD (1, iNumofCol);
+            strHTML = strHTML.slice (0, strHTML.lastIndexOf('<div'));
+            strHTML += "&nbsp;</TD>";
+         }
+         else
+         {
+            for (var i = 0; i < GridMap [iCurRow-1].length; i++)
+            {
+               if (GridMap [iCurRow-1][i].iEnd <= iCurCol)
+                  continue;
+
+               empColSpan = GridMap [iCurRow-1][i].iStart - iCurCol - 1;
+               if (empColSpan > 0)
+               {
+                  strHTML += PopulateTD (1, empColSpan);
+                  strHTML = strHTML.slice (0, strHTML.lastIndexOf('<div'));
+                  strHTML += "&nbsp;</TD>";
+               }
+
+               iCurCol = GridMap [iCurRow-1][i].iEnd;
+            }
+
+            // there is still free space in the row, fill empty cell to the border
+            empColSpan = iNumofCol - iCurCol;
+            if (empColSpan > 0)
+            {
+               strHTML += PopulateTD (1, empColSpan);
+               strHTML = strHTML.slice (0, strHTML.lastIndexOf('<div'));
+               strHTML += "&nbsp;</TD>";
+            }
+         }
+
+         strHTML += "</tr><tr>";
+         iCurRow ++;
+         iCurCol = 0;
+      }
+
+      // when the current row is the same as target row, fill in empty cell to the unit before target col
+      if (GridMap [iCurRow-1] == undefined)
+      {
+         empColSpan = ToCol - iCurCol -1;
+         if (empColSpan > 0)
+         {
+            strHTML += PopulateTD (1, empColSpan);
+            strHTML = strHTML.slice (0, strHTML.lastIndexOf('<div'));
+            strHTML += "&nbsp;</TD>";
+            iCurCol = ToCol - 1;
+         }
+      }
+      else
+      {
+         for (var i = 0; i < GridMap [iCurRow-1].length; i++)
+         {
+            if (GridMap [iCurRow-1][i].iEnd <= iCurCol)
+               continue;
+
+            if (GridMap[iCurRow-1][i].iStart > ToCol)
+               break;
+
+            empColSpan = GridMap [iCurRow-1][i].iStart - iCurCol - 1;
+            if (empColSpan > 0)
+            {
+               strHTML += PopulateTD (1, empColSpan);
+               strHTML = strHTML.slice (0, strHTML.lastIndexOf('<div'));
+               strHTML += "&nbsp;</TD>";
+            }
+
+            iCurCol = GridMap [iCurRow-1][i].iEnd;
+         }
+
+         empColSpan = ToCol - iCurCol -1;
+         if (empColSpan > 0)
+         {
+            strHTML += PopulateTD (1, empColSpan);
+            strHTML = strHTML.slice (0, strHTML.lastIndexOf('<div'));
+            strHTML += "&nbsp;</TD>";
+            iCurCol = ToCol -1;
+         }
+      }
+      return strHTML;
+   }
+</script>
+
+
+<table valign="top" width="100%" cellpadding="0" cellspacing="0">
+   <tr id="eCfgGroupGridLayoutJS_OUI_Canvas">
+   </tr>
+</table>
+
+<div id="eCfgGroupGridLayoutJS_OUI_Buffer" style="display:none">
+
+   <swe:for-each id="180" CfgLoopType="Children"
+      startValue="410" count="Dynamic" iteratorName="IncId" >
+
+      <script>
+         var sGridBegin          = '<swe:control id="swe:IncId+52" CfgHtmlType="CfgLabel" CfgFieldName=".GridBegin" />';
+         var sGridEnd            = '<swe:control id="swe:IncId+53" CfgHtmlType="CfgLabel" CfgFieldName=".GridEnd" />';
+         var sCellClass          = '<swe:control id="swe:IncId+54" CfgHtmlType="CfgLabel" CfgFieldName=".CellClass" />';
+         var sRelatedCtrl        = '<swe:control id="swe:IncId+55" CfgHtmlType="CfgLabel" CfgFieldName=".RelatedCtrl" />';
+         var bFirstRelatedCtrl   = false; // If this control has RelatedCtrl UI property defined and this control is not a related control of other controls rendered already
+
+         var iTmpRelatedCtrl     = parseInt (sRelatedCtrl);
+         if (iRelatedCtrl == 0 && (isNaN(iTmpRelatedCtrl) == false && iTmpRelatedCtrl > 1))
+         {
+            bFirstRelatedCtrl = true;
+            iRelatedCtrl = iTmpRelatedCtrl;
+         }
+
+         if (bFirstRelatedCtrl || iRelatedCtrl == 0)
+         {
+            bCorrectUIPropSyntax = ParseGridUIProp (sGridBegin, sGridEnd);
+            DecideCtrlLocation ();
+            strCellHTML += FillInEmptyCell (iRowStart, iColStart);
+         }
+
+         strCellHTML += PopulateTD (iRowSpan, iColSpan, sCellClass);
+
+         if (bFirstRelatedCtrl || iRelatedCtrl == 0)
+         {
+            UpdateGridMap ();
+         }
+
+         if (iRelatedCtrl > 0)
+         {
+            if (bFirstRelatedCtrl)
+            {
+               strCellHTML += "<table>";
+            }
+            strCellHTML += "<tr><td>";
+         }
+      </script>
+
+      <div id="eCfgGroupGridLayoutJS_OUI_Child">
+         <swe:include id="swe:180Id" CfgHtmlType="Children"/>
+      </div>
+
+      <script>
+         var strChildId = '<swe:control id="swe:IncId+520" CfgFieldName="XA Id" CfgHtmlType="CfgLabel" DisplayMode="EncodeData" />';
+         var strId = "eCfgGroupGridLayoutJS_OUI_Child_" + strChildId;
+         $("#eCfgGroupGridLayoutJS_OUI_Child")[0].id = strId;
+
+         if (iRelatedCtrl > 0)
+         {
+            strCellHTML += "</td></tr>";
+            if (iRelatedCtrl == 1)
+            {
+               strCellHTML += "</table></td>";
+            }
+            iRelatedCtrl --;
+         }
+         else
+         {
+            strCellHTML += "</td>";
+         }
+      </script>
+   </swe:for-each>
+
+   <script>
+      // If all controls are rendered, but the current row is not the max row, we need to fill in empty cells to optimize the table layout.
+      if (iCurRow <= GridMap.length)
+      {
+         strCellHTML += FillInEmptyCell (GridMap.length, iNumofCol+1);
+      }
+      $("#eCfgGroupGridLayoutJS_OUI_Canvas")[0].outerHTML = "<tr>" + strCellHTML + "</tr>";
+      for (var i=0; i < $("#eCfgGroupGridLayoutJS_OUI_Buffer")[0].children.length; i++)
+      {
+         var strId = $("#eCfgGroupGridLayoutJS_OUI_Buffer")[0].children[i].id;
+         $("#eCfgGroupGridLayoutJS_OUI_Cell")[0].outerHTML = $("#eCfgGroupGridLayoutJS_OUI_Buffer")[0].children[i].innerHTML;
+      }
+      while ($("#eCfgGroupGridLayoutJS_OUI_Buffer")[0].hasChildNodes())
+      {
+         $("#eCfgGroupGridLayoutJS_OUI_Buffer")[0].removeChild($("#eCfgGroupGridLayoutJS_OUI_Buffer")[0].lastChild);
+      }
+   </script>
+
+</div>
+
+</div>
+
+<!-- Template End: eCfgGroupGridLayoutJS_OUI.swt -->

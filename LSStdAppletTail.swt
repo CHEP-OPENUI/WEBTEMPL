@@ -1,0 +1,24 @@
+<!--  Template Start: LSStdAppletTail.swt -->
+<span class="AppletStyle5">
+	<swe:layout viewDisplayMode="Hide">
+		<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="0" WIDTH="100%">
+			<swe:layout viewDisplayMode="Show" appletDisplaySize="Max">
+			<TR CELLSPACING="0" WIDTH="100%" HEIGHT="1">
+				<TD>
+					<TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="0" BORDER="0" ALIGN="CENTER" BGCOLOR="#FFFFFF">
+						<tr bgcolor="d5e0f4">
+							<td>
+								<img src="images/spacer.gif" width="100%" height="1" alt="">
+							</td>
+						</tr>
+					</TABLE>
+				</TD>
+			</TR>
+			</swe:layout>
+			<TR CELLSPACING="0" WIDTH="100%" HEIGHT="2">
+				<TD></TD>
+			</TR>
+		</TABLE>
+	</swe:layout>
+</span>
+<!--  Template End: LSStdAppletTail.swt -->

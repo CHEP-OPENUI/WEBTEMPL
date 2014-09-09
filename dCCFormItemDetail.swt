@@ -1,0 +1,129 @@
+<!-- Template Start: dCCFormItemDetail.swt -->
+
+<swe:control id="1301">
+	<tr><td width="100%" colspan="3" class="dCCitemTitle"><swe:this property="FormattedHtml" hintText="Item Name"/></td></tr>
+</swe:control>
+
+
+<tr valign="top">
+    <td rowSpan="22">
+		<swe:control id="1300"><swe:this property="FormattedHtml" hintText="Large Image (120x120)"/><br></swe:control>
+		<div><img src="images/spacer.gif" width="120" height="1" alt=""></div>
+		<swe:for-each count="5" startValue="1112" iteratorName="currentId">
+			<swe:control id="swe:currentId+100">
+				<div class="dCCItemLabelLeft"><nowrap>
+					<img src="images/spacer.gif" width="4" height="1" alt=""><swe:this property="FormattedHtml" hintText="Label"/>
+				</nowrap></div>
+				<img src="images/spacer.gif" width="4" height="1" alt="">
+			</swe:control>
+			<swe:control id="swe:currentId+200">
+				<div class="dCCItemValue" align="swe:this.TextAlignment"><nowrap>
+					<img src="images/spacer.gif" width="4" height="1" alt=""><swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/>
+				</nowrap></div>
+				<img src="images/spacer.gif" width="1" height="4" alt="">
+			</swe:control>			
+		</swe:for-each>							
+		<img src="images/spacer.gif" width="100%" height="3" alt="">
+	</td>
+	<td colSpan="2">
+		<swe:error>
+			<table datatable="0" summary="" class="AppletBack" width="100%" cellpadding="2" cellspacing="0" border="0"><tr><td class="error"><swe:this property="FormattedHtml"/></td></tr></table>
+		</swe:error>
+		<img src="images/spacer.gif" align="top" alt="">
+	</td>
+</tr>
+<swe:for-each count="6" startValue="1102" iteratorName="currentId">
+	<swe:control id="swe:currentId+100">
+	<tr>
+		<td class="dCCItemLabel"><swe:this property="FormattedHtml" hintText="Label"/></td>
+	</swe:control>
+	<swe:control id="swe:currentId+200">
+		<td class="dCCItemValue" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/></td>
+	</swe:control>
+	<swe:control id="swe:currentId+100">
+	</tr>
+	</swe:control>
+</swe:for-each>						
+<swe:for-each count="12" startValue="1122" iteratorName="currentId">
+	<swe:control id="swe:currentId+100">
+	<tr>
+		<td class="dCCItemLabel"><swe:this property="FormattedHtml" hintText="Label"/></td>
+	</swe:control>
+	<swe:control id="swe:currentId+200">
+		<td class="dCCItemValue" align="swe:this.TextAlignment"><swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/></td>
+	</swe:control>
+	<swe:control id="swe:currentId+100">
+	</tr>
+	</swe:control>
+</swe:for-each>							
+<tr>
+	<td colSpan="2">
+		<img src="images/spacer.gif" width="1" height="2" alt="">
+	</td>
+</tr>
+<tr valign="top">
+	<td colSpan=2>
+		<table datatable="0" summary="" border="0" cellpadding="0"  cellspacing="0">
+			<tr>
+				<swe:control id="132">
+				<!-- Optional, 142 -->
+					<td align="center"><swe:this property="FormattedHtml"  hintMapType="Control"/></td>
+					<td>&nbsp;</td>
+				</swe:control>
+				
+				<swe:control id="133">
+				<!-- Optional, 143 -->
+					<td align="center"><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+					<td>&nbsp;</td>
+				</swe:control>
+				
+				<swe:control id="141">
+				<!-- Optional, 145 -->
+					<td align="center"><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+					<td>&nbsp;</td>
+				</swe:control>
+				
+				<swe:control id="160">
+				<!-- Optional, 158 -->
+					<td align="center"><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+					<td>&nbsp;</td>
+				</swe:control>						
+				
+			</tr>					
+		</table>
+	</td>
+</tr>
+<tr valign="top">
+	<td colSpan=2>
+		<table datatable="0" summary="" border="0" cellpadding="0"  cellspacing="0">
+			<tr>
+				<swe:control id="142">
+				<!-- Optional, 146 -->
+					<td align="center"><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+					<td>&nbsp;</td>
+				</swe:control>
+				
+				<swe:control id="157">
+				<!-- Optional, 157 -->
+					<td align="center"><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+					<td>&nbsp;</td>
+				</swe:control>
+				
+				<swe:control id="158">
+				<!-- Optional, 158 -->
+					<td align="center"><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+					<td>&nbsp;</td>
+				</swe:control>
+				
+				<swe:control id="159">
+				<!-- Optional, 158 -->
+					<td align="center"><swe:this property="FormattedHtml" hintMapType="Control"/></td>
+					<td>&nbsp;</td>
+				</swe:control>						
+			</tr>					
+		</table>
+		<img src="images/spacer.gif" width="100%" height="3" alt="">
+	</td>
+</tr>			
+
+<!-- Template End: dCCFormItemDetail.swt -->

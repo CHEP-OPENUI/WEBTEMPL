@@ -1,0 +1,53 @@
+<!-- Template Start: eCfgAttributeRadio.swt -->
+<swe:include file="eCfgAtt_Header.swt"/>
+
+<tr>
+   <td colspan=3>
+      <table datatable="0" summary="" valign="center" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="white">
+         <tr>
+            <td width="100%">
+               <table datatable="0" summary="" width="100%" border=0>
+               
+               <SCRIPT>
+                  var RadioObjectName = '<swe:control id="swe:IncId+320" CfgFieldName="FieldName" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+               </SCRIPT>
+               
+               
+                  <swe:for-each id="500" CfgLoopType="Domain" startValue="1500" count="Dynamic" iteratorName="101Id" >
+                     <swe:form>
+                     <tr>
+                        <td width="100%">
+                        <SCRIPT>
+                           var sSubmitReq    = unescape('<swe:control id="swe:101Id + 3000" CfgUIControl="AttrAutoPick" CfgRequest="ChangeAttribute" DisplayMode="EncodeData" CfgHtmlType="CfgAction" InvokeMethod="SubmitRequest" NoSelfData="Y" property="FormattedHtml"/>');
+                           var ID            = unescape('<swe:control id="swe:101Id+2000" CfgFieldName="AttValue" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" DisplayMode="EncodeData" property="FormattedHtml"/>');
+                           var Enabled       = '<swe:control id="swe:101Id+400" CfgFieldName="CxEnabled" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+                           var Selected      = '<swe:control id="swe:101Id+600" CfgFieldName="Selected" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+                           var DispStyle     = 'eCfgRadioAvailable';
+                           
+                           if( Enabled == "Disabled" )
+                              DispStyle = 'eCfgRadioExcluded';
+                
+                           document.write ( '<input type="radio" name="' + RadioObjectName + '" value="' + ID + '" onClick="' + sSubmitReq + '"' );
+                           
+                           if ( Selected == "Y" )
+                              document.write ( ' checked' );
+                           
+                           document.write ( '> ');
+                           document.write ( '<span class="'+ DispStyle + '">' + ID + '</span>');
+                        </SCRIPT>
+                        </td>
+                     </tr>
+                     </swe:form>
+                  </swe:for-each>
+               
+               </table>
+            </td>
+         </tr>
+      </table>
+   </td>
+</tr>
+
+<swe:include file="eCfgPort_Footer.swt"/>
+
+
+<!-- Template End: eCfgAttributeRadio.swt -->

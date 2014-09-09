@@ -1,0 +1,20 @@
+<!-- Template Start: TNTdCCAppletForm1Col.swt -->
+
+<swe:include file="CCApplet_NamedSpacer.swt"/>	
+
+<swe:form>
+
+	<swe:include file="TNTdCCTitle_Named.swt"/>
+
+	<swe:include file="CCTogglebar_drop.swt"/>
+
+	<table class="AppletBack" valign="top" width="100%" cellpadding="3" cellspacing="0" border="0">
+	   <swe:include file="dCCForm1Col.swt"/>
+	</table>	
+	
+	</span>			
+
+</swe:form>
+
+	
+<!-- Template End: TNTdCCAppletForm1Col.swt -->

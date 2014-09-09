@@ -1,0 +1,17 @@
+<!-- Template Start: XmlViewTree.swt -->
+
+<!------------ Tier 2 Nav and Search Applet ----------------->
+<swe:include file="CCThreadbar.swt"/>
+
+<!------------ Main Content Area ---------------------------->
+<swe:all-applets/>
+
+<!-- swe:applet-tree-list -->
+<swe:applet-tree-list/>
+
+<!------------ Tier 3 & Tier 4 navigation ----------------->
+<swe:include file="CCViewbar_Tabs.swt"/>
+<swe:include file="CCSubViewbar_Drop.swt"/>
+
+<!------------ End Main Content Area ------------------------>
+<!-- Template End: XmlViewTree.swt -->

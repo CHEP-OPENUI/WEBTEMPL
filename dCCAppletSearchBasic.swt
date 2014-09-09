@@ -1,0 +1,91 @@
+<!-- Template Start: dCCAppletSearchBasic.swt -->
+<span class="AppletStyle2">
+	<swe:form htmlAttr="onsubmit='SubmitSearch(); return false;'">
+		<swe:for-each startValue="1101" count="30" iteratorName="currentId">
+			<swe:control id="swe:currentId+100">
+			<tr valign="top">
+				<td class="mceLabel2" align="right"><swe:this property="FormattedHtml" hintText="Label"/>&nbsp;</td>
+				<td class="mceField">
+			</swe:control>
+			<swe:control id="swe:currentId+200">
+				<swe:this property="FormattedHtml" hintText="Field" hintMapLabelId="swe:currentId+100"/>
+			</swe:control>
+			<swe:control id="swe:currentId+100">
+				</td>
+			</tr>										
+			</swe:control>									
+		</swe:for-each>
+	</table></td>
+	<td><table datatable="0" summary=""><tr><td>
+		<swe:control id="91">
+		 <!-- Inside-applet help text -->
+		<swe:this property="DisplayName" hintText="Inside Applet Help Text"/>
+		</swe:control>	
+	</td><td width="40%"></td></tr>
+	</table></td>
+	</tr>
+		<!--spacer row--><tr><td><img src="images/spacer.gif" width="110" height="1" alt=""></td><td></td></tr>
+			
+				<table datatable="0" summary="" class="AppletBack" border="0" cellspacing="0" cellpadding="2">
+
+					<tr>
+						<td></td>
+						<td>
+							<table datatable="0" summary="" cellpadding="0" cellspacing="0" border="0"><tr>
+							 <swe:control id="132">
+						      <!-- EditRecord -->
+						        <td valign="middle" nowrap>
+						        <swe:this property="FormattedHtml" hintText="Menu" hintMapType="Control"/>
+						        </td>
+						      </swe:control>
+						
+						      <swe:control id="133">
+						      <!-- DeleteRecord -->
+						        <td valign="middle" nowrap>
+						        <swe:this property="FormattedHtml" hintText="New" hintMapType="Control"/>
+						        </td>
+						      </swe:control>
+						
+						      <swe:control id="141">
+						      <!-- optional control -->
+						        <td valign="middle" nowrap>
+						        <swe:this property="FormattedHtml" hintMapType="Control"/>
+						        </td>
+						      </swe:control>
+						
+						      <swe:control id="142">
+						      <!-- optional control -->
+						        <td valign="middle" nowrap>
+						        <swe:this property="FormattedHtml" hintMapType="Control"/>
+						        </td>
+						      </swe:control>
+						
+						      <swe:control id="143">
+						      <!-- optional control -->
+						        <td valign="middle" nowrap>
+						        <swe:this property="FormattedHtml" hintMapType="Control"/>
+						        </td>
+						      </swe:control>
+							  </tr></table>
+						</td>
+					</tr>
+					
+				<!--alignment row-->
+					<tr><td><img src="images/spacer.gif" width="110" height="1" alt=""></td><td></td></tr>						
+				</table>
+				
+				
+				<swe:error>
+				<table datatable="0" summary="" class="AppletBack" border="0" cellspacing="2" cellpadding="2">
+					<tr><td></td><td class="error"><swe:this property="FormattedHtml"/></td></tr>
+					<tr><td><img src="images/spacer.gif" width="110" height="1" alt=""></td><td></td></tr>	
+				</table>
+				</swe:error>	
+			
+	</swe:form>
+</table>
+</span>
+<!-- Template End: dCCAppletSearchBasic.swt -->
+
+
+	

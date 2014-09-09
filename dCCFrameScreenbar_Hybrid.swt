@@ -1,0 +1,33 @@
+<!-- Template Start: dCCFrameScreenbar_Hybrid.swt -->
+
+<HTML dir="swe:dir">
+<head>
+<title><swe:this property="Title"/></title>
+<swe:include file="CCStylesChoice.swt"/>
+</head>
+
+<BODY background="images/dccscrnbar_back.gif" alt="" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+<swe:switch>
+	<swe:case condition="Web Engine State Properties, IsLowInteractive">
+		<div class="bannerDiv2"><img src="images/spacer.gif" height="1" width="10" alt=""></div>
+		<div class="tier1Back"><img src="images/spacer.gif" height="2" width="10" alt=""></div>
+	</swe:case>
+	<swe:default>
+		<div class="tier1Back"><img src="images/spacer.gif" height="3" width="10" alt=""></div>
+	</swe:default>
+</swe:switch>
+
+<swe:switch>
+	<swe:case condition="Web Engine User Agent, TestCapability, 'JumpTab:TRUE'">
+		<swe:include file="dCCScreenbar_Tabs_Hybrid.swt" />
+	</swe:case>
+	<swe:default>
+		<swe:include file="dCCScreenbar_Tabs.swt" />
+	</swe:default>
+</swe:switch>
+
+<swe:scripts/>
+</BODY>
+</HTML>
+
+<!-- Template End: dCCFrameScreenbar_Hybrid.swt -->

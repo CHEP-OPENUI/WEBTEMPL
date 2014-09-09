@@ -1,0 +1,15 @@
+<!-- Template Start: SISOMeCfgControlText.swt-->
+
+<swe:include file="eCfgPort_Header.swt"/>
+
+<tr>
+   <td>
+      <swe:for-each id="500" CfgLoopType="Children" startValue="1500" count="Dynamic" iteratorName="101Id">
+         <swe:include file="SISOMeCfgObj_Text.swt" />
+      </swe:for-each>
+   </td>
+</tr>
+
+<swe:include file="eCfgPort_Footer.swt"/>
+
+<!-- Template End: SISOMeCfgControlText.swt -->

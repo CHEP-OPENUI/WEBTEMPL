@@ -1,0 +1,54 @@
+<!-- Template Start: dCCRecordNav.swt -->
+
+	<swe:control id="125">
+		<td valign="middle"><img src="images/btn_div.gif" height="13" align="middle" alt=""></td>
+		<!-- Info-Button, 125 -->
+		<td valign="middle" nowrap>
+		<swe:this property="FormattedHtml" hintText="Info-Button" hintMapType="Control"/>
+		</td><td>&nbsp;</td>
+	</swe:control>		
+	
+	<swe:control id="121">
+		<!-- GotoFirst, 121 -->
+		<td valign="middle" nowrap>
+		<swe:this property="FormattedHtml" hintText="First" hintMapType="Control"/>
+		</td><td>&nbsp;</td>
+	</swe:control>
+	
+	<swe:control id="122">
+		<!-- Gotoprevious, 122 -->
+		<td valign="middle" nowrap>
+		<swe:this property="FormattedHtml" hintText="Previous" hintMapType="Control"/>
+		</td><!--td>&nbsp;</td-->
+	</swe:control>
+	
+	<!-- RowCounter -->
+	<td valign="middle"><nobr><swe:this property="RowCounter"/></nobr></td>
+			
+	<swe:control id="123">
+		<!-- GotoNext, 123 -->
+		<td valign="middle" nowrap>
+		<swe:this property="FormattedHtml" hintText="Next" hintMapType="Control"/>
+		</td><td>&nbsp;</td>
+	</swe:control>
+	
+	<swe:control id="124">
+		<!-- GotoLast, 124 -->
+		<td valign="middle" nowrap>
+		<swe:this property="FormattedHtml" hintText="Last" hintMapType="Control"/>
+		</td><td>&nbsp;</td>
+	</swe:control>
+	
+	<td>&nbsp;</td>
+	
+	<swe:control id="152">
+		<td>&nbsp;</td>
+		<td valign="middle"><img src="images/btn_div.gif" height="13" align="middle" alt=""></td>
+		<td>&nbsp;</td>
+	</swe:control>
+
+<!-- Template End: dCCRecordNav.swt -->
+
+
+
+

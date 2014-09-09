@@ -1,0 +1,125 @@
+<!-- Template Start: eCfgControlCheckPrice.swt -->
+
+<swe:include file="eCfgPort_Header.swt"/>
+         
+<tr>
+   <td colspan=3>
+      <SCRIPT>
+         var iNumPortContents = 0;
+         var CheckBoxObjectName = '<swe:control id="swe:IncId+320" CfgFieldName="FieldName" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+      </SCRIPT>
+
+      <swe:for-each id="500" CfgLoopType="DomainAndChildren" startValue="1500" count="Dynamic" iteratorName="101Id">
+
+         <swe:if condition="Default, TestFieldValue, Operator:==, FieldName:LoopCount, FieldValue:0">
+            <table datatable="0" summary="" border="0" cellpadding="0" cellspacing="3" width="100%" border=0 bgcolor="white">
+               <tr>
+                  <td width="20">&nbsp;</td>
+                  <td width="280">
+                     <swe:control id="Name" CfgUIControl="lblName" property="DisplayName" />
+                  </td>
+                  <td width="80" align="right">
+                     <swe:control id="ListPrice" CfgUIControl="lblListPrice" property="DisplayName" />
+                  </td>
+                  <td width="80" align="right">
+                     <swe:control id="YourPrice" CfgUIControl="lblYourPrice" property="DisplayName" />
+                  </td>
+                  <td width="70" align="center">
+                     <swe:control id="Explanation" CfgUIControl="lblExplanation" property="DisplayName" />
+                  </td>
+                  <td width="70" align="center">
+                     <swe:control id="Customize" CfgUIControl="lblCustomize" property="DisplayName" />
+                  </td>
+                  <td width="20">&nbsp;</td>
+               </tr>
+         </swe:if>
+         <SCRIPT>   
+            iNumPortContents ++;
+         </SCRIPT>
+
+         <swe:form>
+         <tr>
+            <td>
+               <SCRIPT>
+                  var sAddItem    = unescape('<swe:control id="swe:101Id + 3000" CfgUIControl="AutoPick" CfgRequest="AddItem" DisplayMode="EncodeData" CfgHtmlType="CfgAction" InvokeMethod="SubmitRequest" NoSelfData="Y" property="FormattedHtml"/>');
+                  var sRemvoeItem    = unescape('<swe:control id="swe:101Id + 5000" CfgUIControl="AutoPick" CfgRequest="RemoveItem" DisplayMode="EncodeData" CfgHtmlType="CfgAction" InvokeMethod="SubmitRequest" property="FormattedHtml"/>');
+                  var ID            = '<swe:control id="swe:101Id+2000" CfgFieldName="Product Id" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+                  var Enabled  = '<swe:control id="swe:101Id+400" CfgFieldName="CxEnabled" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+                  var Selected = '<swe:control id="swe:101Id+600" CfgFieldName="Selected" CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml"/>';
+                  var sSubmitReq;
+                  if ( Selected == "Y" )
+                  {
+                     sSubmitReq = sRemvoeItem;
+                  }
+                  else
+                  {
+                     sSubmitReq = sAddItem;
+                  }
+
+                  var DispStyle = 'eCfgSpanAvailable';
+                  if( Selected == "Y" )
+                  {
+                     DispStyle = 'eCfgSpanSelected';
+                  }
+                  else
+                  {
+                     if( Enabled == "Disabled" )
+                        DispStyle = 'eCfgSpanExcluded';
+                  }
+
+                  document.write ( '<input type=\"checkbox\" name=\"' + CheckBoxObjectName + '\" value=\"' + ID + '\"  onClick=\"' + sSubmitReq + '\"' );
+                  if ( Selected == "Y" )
+                     document.write ( ' checked' );
+                  document.write ( '>' );
+
+               </SCRIPT>
+            </td>
+
+            <td>
+               <span id="CxObjName" class="cxLink">
+               <SCRIPT>
+                  document.write('<span class="' + DispStyle + '">');
+               </SCRIPT>            
+                  <swe:control id="swe:101Id+800" CfgUIControl="SetTopObj" property="FormattedHtml" CfgFieldName="CxObjName"/>
+                  </span>
+               </span>
+               <span id="RequireMoreChild" class="cxImg">
+               <swe:control id="swe:101Id+2600" CfgFieldName="RequireMoreChild" CfgUIControl="RequireMoreChild" property="FormattedHtml" />
+               </span>
+            </td>
+            <td align="right">
+               <span id="List Price" class="cxLabel">
+               <swe:control id="swe:101Id+2200"  CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" CfgFieldName="Original List Price" DataType="DTYPE_CURRENCY" />
+               </span>
+            </td>
+            <td align="right" >
+               <span id="Current Price" class="cxLabel">
+               <swe:control id="swe:101Id+2400"  CfgUIControl="CfgLabel" CfgHtmlType="CfgLabel" property="FormattedHtml" CfgFieldName="Current Price" DataType="DTYPE_CURRENCY" />
+               </span>
+            </td>
+            <td align="center">
+               <swe:control id="swe:101Id+1600"  CfgUIControl="GetMoreExpl" CfgRequest="GetExpl" property="FormattedHtml" TemplateName= "eCfgObj_DetailExplanation.swt" CfgNodeType="DetailExpl" HideDisabled ="Y"/>
+            </td>
+            <td align="center">
+               <swe:control id="swe:101Id+1200"  CfgUIControl="Customize" property="FormattedHtml" InvokeMethod="SetTopObj" HideDisabled ="Y"/>
+            </td>
+            <td>
+               &nbsp;
+            </td>
+         </tr>
+         </swe:form>
+      </swe:for-each>
+
+         <SCRIPT>
+            if ( 0 != iNumPortContents )
+               document.write ( '</table>' );
+         </SCRIPT>
+   </td>
+</tr>
+
+
+
+<swe:include file="eCfgPort_Footer.swt"/>
+
+
+<!-- Template End: eCfgControlCheckPrice.swt -->

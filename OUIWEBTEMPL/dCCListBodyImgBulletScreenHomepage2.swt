@@ -1,0 +1,34 @@
+<!--  Template Start: dCCListBodyImgBulletScreenHomepage.swt -->
+<!-- Oliver:   HOME SCREENS added classes, amendments -->
+
+<swe:for-each-row count="10">
+<tr valign="top">
+	<td>
+		<swe:control id="1" property="FormattedHtml" hintText="Anchor"/>
+		
+		<swe:control id="502">
+		    <div class="siebui-screen-hp-title"><swe:this property="FormattedHtml" hintText="Title"/></div>
+		</swe:control> 
+		
+		<swe:control id="503">
+		    <div class="siebui-screen-hp-desc"><swe:this property="FormattedHtml" hintText="Description" /></div>
+		</swe:control> 
+		
+		<swe:for-each startValue="504" count="10" iteratorName="currentId">
+		  <swe:control id="swe:currentId">
+		    <div class="siebui-bullet-item"><swe:this property="FormattedHtml" hintText="Other Text"/></div>
+		  </swe:control> 
+		</swe:for-each>
+
+	  <table datatable="0" summary="" class="siebui-screen-hp-table"><tr>
+		<swe:for-each startValue="520" count="10" iteratorName="currentId">
+			<swe:control id="swe:currentId">
+		 		<td><swe:this property="FormattedHtml" hintText="Other"/></td>
+			</swe:control> 
+		</swe:for-each>
+        </tr></table>
+	</td>
+</tr>
+</swe:for-each-row>
+
+<!--  Template End: dCCListBodyImgBulletScreenHomepage.swt -->
