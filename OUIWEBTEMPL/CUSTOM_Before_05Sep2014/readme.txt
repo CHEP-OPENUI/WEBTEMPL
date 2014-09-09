@@ -1,1 +1,0 @@
-Put your Open UI custom web templates in this folder.
