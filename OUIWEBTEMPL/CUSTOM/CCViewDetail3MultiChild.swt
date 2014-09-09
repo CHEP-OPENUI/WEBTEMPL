@@ -63,7 +63,7 @@
         </tr>
     </table>
     </td></tr>
-<table datatable="0" summary="">
+</table>
 
 <swe:include file="CCHTMLFooter.swt"/>
 
