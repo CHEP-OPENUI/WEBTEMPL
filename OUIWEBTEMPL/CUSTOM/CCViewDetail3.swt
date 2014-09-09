@@ -40,7 +40,11 @@
 </swe:for-each>
 
 <div class="siebui-view-multi-column">
-    <table datatable="0" summary="" width="100%" border="0" cellspacing="0" cellpadding="3">
+    <!-- <table datatable="0" summary="" width="100%" border="0" cellspacing="0" cellpadding="3"> --> 
+    <!----------------BADLIS - List Applet strech issue fix - added below line----------------->
+    <table datatable="0" summary="" border="0" cellspacing="0" cellpadding="0" style="width:100%;table-layout:fixed">
+
+
         <tr valign="top">
             <td width="50%">
                 <swe:for-each count=2 iteratorName="currentId" startValue="6">
