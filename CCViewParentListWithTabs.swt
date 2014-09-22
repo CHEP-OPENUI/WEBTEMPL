@@ -48,22 +48,25 @@
 		<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Child or Grandchild Applet (HI Display Only)" property="FormattedHtml" var="Grandchild"/>
 	</swe:for-each>
 </swe:if>
-
-<table datatable="0" summary="" width="100%" border="0" cellspacing="0" cellpadding="3">
+<!--CHAMARS 22 Sep 2014 Commented the below line and added table definition-->
+<!--table datatable="0" summary="" width="100%" border="0" cellspacing="0" cellpadding="3"-->
+<table datatable="0" summary="" style="width:100%;table-layout:fixed">
 	<tr valign="top">
-		<td>
+      <!--td-->
+		<td width="50%">
 			<swe:for-each count=2 iteratorName="currentId" startValue="6">
 				<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
 			</swe:for-each>
 		</td>
-
-		<td>
+        <!--td-->
+		<td width="50%">
 			<swe:for-each count=2 iteratorName="currentId" startValue="8">
 				<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
 			</swe:for-each>
 		</td>
 	</tr>
 </table>
+<!--CHAMARS 22 Sep 2014 End-->
 
 <swe:for-each count="11" iteratorName="currentId" startValue="10">
 	<swe:applet hintMapType="Applet" id="swe:currentId" hintText="Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
