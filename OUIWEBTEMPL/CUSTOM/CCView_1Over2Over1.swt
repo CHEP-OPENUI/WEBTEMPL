@@ -46,7 +46,11 @@
 <!-- ---------- End Tier 3 navigation end new code------------->
 
 <!-- ---------- Mid Two Applet Region ------------------------>
-<table width="100%" cellpadding="3" border="0" cellspacing="0">
+
+<!-- <table width="100%" cellpadding="3" border="0" cellspacing="0"> --> <!--BADLIS - List Applet strech issue fix -->
+
+<!----------------BADLIS - List Applet strech issue fix - added below line----------------->
+<table cellpadding="3" border="0" cellspacing="0" style="width:100%;table-layout:fixed">
 	<tr>
 	<td width="50%" valign="top">
 	<!--  Column 1 -->
@@ -94,7 +98,11 @@
 <!-- ---------- End Mid One Applet Region ----------------------->
 
 <!-- ---------- Bottom Two Applet Region ------------------------>
-<table width="100%" cellpadding="3" border="0" cellspacing="0">
+
+<!-- <table width="100%" cellpadding="3" border="0" cellspacing="0"> --> <!--BADLIS - List Applet strech issue fix -->
+
+<!----------------BADLIS - List Applet strech issue fix - added below line----------------->
+<table cellpadding="3" border="0" cellspacing="0" style="width:100%;table-layout:fixed">
 	<tr>
 		<td width="50%" valign="top">
 		<!--  Column 1 -->

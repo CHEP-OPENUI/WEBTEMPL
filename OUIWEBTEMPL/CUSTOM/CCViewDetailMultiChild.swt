@@ -50,31 +50,38 @@
             
       <table datatable="0" summary="" width="100%"><tr><td>
       <div class="siebui-view-multi-column">
-      <table datatable="0" summary="" width="100%">
-      <tr>
-         <td colspan="2">
-            <swe:for-each count=1 iteratorName="currentId" startValue="2">
-            <swe:applet hintMapType="Applet" id="swe:currentId" hintText="Child Applet" property="FormattedHtml" var="Child"/>
-            </swe:for-each>
+      <!--      <table datatable="0" summary="" width="100%">  --> <!--BADLIS - List Applet strech issue fix -->
+          <!----------------BADLIS - List Applet strech issue fix - added below line----------------->
+            <table datatable="0" summary="" style="width:100%;table-layout:fixed"> 
+                <tr>
+                    <td colspan="2">
+                    <swe:for-each count=1 iteratorName="currentId" startValue="2">
+                    <swe:applet hintMapType="Applet" id="swe:currentId" hintText="Child Applet" property="FormattedHtml" var="Child"/>
+                    </swe:for-each>
             
-            <swe:for-each count=3 iteratorName="currentId" startValue="3">
-               <swe:applet hintMapType="Applet" id="swe:currentId" hintText="Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
-            </swe:for-each>
-         </td>
-      </tr>
-      <tr valign="top">
-         <td width="50%">
-            <swe:applet hintMapType="Applet" id="6" hintText="Child or Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
-            <swe:applet hintMapType="Applet" id="7" hintText="Child or Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
-            <swe:applet hintMapType="Applet" id="10" hintText="Child or Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
-         </td>
-         <td width="50%"><swe:applet-tree-list var="Grandchild"/>
-            <swe:applet hintMapType="Applet" id="8" hintText="Child or Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
-            <swe:applet hintMapType="Applet" id="9" hintText="Child or Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
-            <swe:applet hintMapType="Applet" id="11" hintText="Child or Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
-         </td>
-      </tr>
-      </table>
+                    <swe:for-each count=3 iteratorName="currentId" startValue="3">
+                        <swe:applet hintMapType="Applet" id="swe:currentId" hintText="Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+                    </swe:for-each>
+                    </td>
+                </tr>
+          <!----------------BADLIS - List Applet strech issue fix - added below line----------------->
+          </table>
+
+          <!----------------BADLIS - List Applet strech issue fix - added below line----------------->
+            <table datatable="0" summary="" style="width:100%;table-layout:fixed"> 
+                <tr valign="top">
+                    <td width="50%">
+                    <swe:applet hintMapType="Applet" id="6" hintText="Child or Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+                    <swe:applet hintMapType="Applet" id="7" hintText="Child or Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+                    <swe:applet hintMapType="Applet" id="10" hintText="Child or Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+                    </td>
+                    <td width="50%"><swe:applet-tree-list var="Grandchild"/>
+                    <swe:applet hintMapType="Applet" id="8" hintText="Child or Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+                    <swe:applet hintMapType="Applet" id="9" hintText="Child or Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+                    <swe:applet hintMapType="Applet" id="11" hintText="Child or Grandchild Applet" property="FormattedHtml" var="Grandchild"/>
+                    </td>
+                </tr>
+          </table>
       </div>
       </td></tr></table>
       
